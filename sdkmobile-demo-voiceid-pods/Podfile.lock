@@ -1,0 +1,71 @@
+PODS:
+  - FPBTokenizer (1.1.0)
+  - FPHICORElicensingLite (1.1.0)
+  - FPHILottieSDKFramework (4.4.0)
+  - FPHISDKCoreComponent (1.4.5):
+    - FPHISDKLicenseCheckerComponent (~> 1.4.0)
+  - FPHISDKLicenseCheckerComponent (1.4.0):
+    - FPHICORElicensingLite (~> 1.1.0)
+  - FPHISDKLicensingComponent (1.4.1):
+    - FPHISDKCoreComponent (~> 1.4.5)
+  - FPHISDKMainComponent (1.4.4):
+    - FPHISDKCoreComponent (~> 1.4.5)
+    - FPHISDKLicensingComponent (~> 1.4.1)
+  - FPHISDKTokenizeComponent (1.4.2):
+    - FPBTokenizer (~> 1.1.0)
+    - FPHISDKCoreComponent (~> 1.4.5)
+  - FPHISDKTrackingComponent (1.4.3):
+    - FPHISDKCoreComponent (~> 1.4.5)
+  - FPHISDKVoiceIDComponent (1.4.6):
+    - FPHILottieSDKFramework (~> 4.0)
+    - FPHISDKCoreComponent (~> 1.4.5)
+    - FPHIVoiceSDK (~> 3.12.1)
+  - FPHIVoiceSDK (3.12.1)
+  - IQKeyboardManagerSwift (7.0.2)
+  - SwiftLint (0.54.0)
+
+DEPENDENCIES:
+  - FPHISDKLicenseCheckerComponent (~> 1.4.0)
+  - FPHISDKLicensingComponent (~> 1.4.0)
+  - FPHISDKMainComponent (~> 1.4.0)
+  - FPHISDKTokenizeComponent (~> 1.4.0)
+  - FPHISDKTrackingComponent (~> 1.4.0)
+  - FPHISDKVoiceIDComponent (~> 1.4.0)
+  - IQKeyboardManagerSwift (~> 7.0.1)
+  - SwiftLint
+
+SPEC REPOS:
+  https://facephicorp.jfrog.io/artifactory/api/pods/cocoa-dev-fphi:
+    - FPBTokenizer
+    - FPHICORElicensingLite
+    - FPHILottieSDKFramework
+    - FPHISDKCoreComponent
+    - FPHISDKLicenseCheckerComponent
+    - FPHISDKLicensingComponent
+    - FPHISDKMainComponent
+    - FPHISDKTokenizeComponent
+    - FPHISDKTrackingComponent
+    - FPHISDKVoiceIDComponent
+    - FPHIVoiceSDK
+  trunk:
+    - IQKeyboardManagerSwift
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  FPBTokenizer: 827b7e0f110cba2ed1b217889c565a69af20d787
+  FPHICORElicensingLite: 3016033a7c30e44d795703db291f16f994772f24
+  FPHILottieSDKFramework: fc10f5752a3c650a659c075d8c9e42aff0c35bc4
+  FPHISDKCoreComponent: afbb57b4ba70c555567ec14c3bfe5bfc54b4d8b5
+  FPHISDKLicenseCheckerComponent: 4c60700e8eb22fee0841c34aa6731504de065369
+  FPHISDKLicensingComponent: 26b616a9f126620dd245f69e440743acfe80cb8f
+  FPHISDKMainComponent: d40a93930a6dff51fa99416c011790d98147c48f
+  FPHISDKTokenizeComponent: 3dc9edc82aa26ae62e43dbdbf01c1b368a7bb7be
+  FPHISDKTrackingComponent: 1755e74c6477961d7684d0bf7739cb1997c79a5a
+  FPHISDKVoiceIDComponent: 7cf0ccada0a6974f6ae469a530bbd6a647d36f5d
+  FPHIVoiceSDK: b9eb0cb927f29270b82bfb52e1429026de29e61c
+  IQKeyboardManagerSwift: d338c11a896e9f29603443700c4567e32f830c22
+  SwiftLint: c1de071d9d08c8aba837545f6254315bc900e211
+
+PODFILE CHECKSUM: 170a897f987650b5fa26b2a0175122608c32ae37
+
+COCOAPODS: 1.13.0

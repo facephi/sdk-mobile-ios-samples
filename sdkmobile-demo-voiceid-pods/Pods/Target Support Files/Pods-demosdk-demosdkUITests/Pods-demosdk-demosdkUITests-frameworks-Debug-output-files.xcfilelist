@@ -1,0 +1,12 @@
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FPBTokenizer.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/licensingLite.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/core.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/licenseCheckerComponent.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/licensingComponent.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/sdk.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/tokenizeComponent.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/trackingComponent.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/voiceIDComponent.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VoiceSdk.framework

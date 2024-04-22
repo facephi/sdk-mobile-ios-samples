@@ -1,0 +1,264 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name core
+import Foundation
+import Swift
+import SystemConfiguration
+import UIKit
+import _Concurrency
+import _StringProcessing
+import licenseCheckerComponent
+public enum HTTPErrorType : Swift.String, Swift.Error, Swift.Equatable {
+  case deprecated
+  case generic
+  case unauthorized
+  case noContent
+  case badRequest
+  case noConnection
+  case notFound
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum HTTPMethod : Swift.String {
+  case POST
+  case GET
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+final public class DataSource {
+  final public let requester: core.NetworkManagerProtocol
+  final public let router: core.RouterProtocol
+  public init(requester: core.NetworkManagerProtocol = NetworkManager(), router: core.RouterProtocol)
+  @objc deinit
+}
+final public class NetworkManager : core.NetworkManagerProtocol {
+  public init(_ session: Foundation.URLSession = .shared)
+  final public func send<T>(with endpoint: T) throws -> T.Response where T : core.EndpointProtocol
+  final public func sendExpectString<T>(with endpoint: T) throws -> Swift.String where T : core.EndpointProtocol
+  @objc deinit
+}
+final public class Router : core.RouterProtocol {
+  public init(baseUrl: Foundation.URL)
+  public init?(baseUrl: Swift.String)
+  final public func routeEndpoint<T>(_ endpoint: T) -> T where T : core.EndpointProtocol
+  @objc deinit
+}
+public protocol EndpointProtocol {
+  associatedtype Response : Swift.Decodable
+  var path: Swift.String { get set }
+  var method: core.HTTPMethod { get }
+  var parameters: [Swift.String : Swift.AnyObject] { get }
+  var headers: [Swift.String : Swift.String] { get }
+  var body: Foundation.Data? { get }
+  var isFile: Swift.Bool { get }
+}
+public protocol NetworkManagerProtocol {
+  func send<T>(with endpoint: T) throws -> T.Response where T : core.EndpointProtocol
+  func sendExpectString<T>(with endpoint: T) throws -> Swift.String where T : core.EndpointProtocol
+}
+public protocol RouterProtocol {
+  func routeEndpoint<T>(_ endpoint: T) -> T where T : core.EndpointProtocol
+}
+public protocol IBehaviorController : core.IMethodableController {
+  func registerPosition(position: Swift.String)
+  func registerTextField(textView: UIKit.UITextField, textId: Swift.String)
+  func registerUserTextField(textView: UIKit.UITextField)
+  func registerPasswordTextField(textView: UIKit.UITextField)
+  func closeSession()
+}
+public protocol ILicensableController {
+  var license: Swift.String { get set }
+}
+public protocol IStartableController {
+  func start(operationController: core.IOperationableController)
+}
+public protocol IMethodableController : core.ILicensableController, core.IStartableController {
+}
+public protocol IBehaviorableController {
+  var behaviorController: core.IBehaviorController? { get set }
+}
+public protocol ITrackableController : core.IBehaviorableController {
+  var trackingController: core.ITrackingController? { get set }
+}
+public protocol ITrackMethodableController : core.IMethodableController, core.ITrackableController {
+}
+public protocol ITokenizableController {
+  var tokenizeController: core.ITokenizeController? { get set }
+}
+public protocol ITokenMethodableController : core.IMethodableController, core.ITokenizableController {
+}
+public protocol ITrackTokenMethodableController : core.IMethodableController, core.ITokenizableController, core.ITrackableController {
+}
+public protocol IOperationableController {
+  func hasOperationCreated() -> Swift.Bool
+  func getOperationId() -> Swift.String
+  func getCustomerId() -> Swift.String
+}
+public protocol ITokenizeController : core.ILicensableController {
+  func tokenizeByteArray(byteArray: Foundation.Data, key: Swift.String) -> core.SdkResult<Swift.String>
+  func tokenizeStringMapData(data: Swift.String, key: Swift.String) -> core.SdkResult<Swift.String>
+  func tokenizeOCRResults(ocr: Swift.Dictionary<Swift.String, Swift.String>) -> core.SdkResult<Swift.String>
+}
+public protocol ITrackingController : core.ILicensableController {
+  func setupLicenseAndToken(output: @escaping (core.SdkResult<Swift.String>) -> ())
+  func sendStep(step: Swift.String)
+  func initOperation(steps: [Swift.String]?)
+  func setCustomerId(customerId: Swift.String)
+  func operationCancelledEvent(reason: Swift.String)
+  func sendDataTracking(data: Foundation.Data?, assetType: Swift.String, contentType: Swift.String)
+  func sendOcrData(personalData: core.PersonalData, ocrMap: [Swift.String : Swift.String]?)
+  func operationDeniedEvent()
+  func operationSuccessEvent()
+  func closeSession()
+  func getComponentType() -> Swift.String
+  func getExtraDataJSONString() -> core.SdkResult<Swift.String>
+  var trackingConfigurationData: core.TrackingConfigurationData? { get set }
+  var trackingError: ((Swift.String) -> ())? { get set }
+}
+extension core.ITrackingController {
+  public func sendDataTracking(data: Foundation.Data?, assetType: Swift.String, contentType: Swift.String = "image/jpeg")
+  public func initOperation(steps: [Swift.String]? = nil)
+}
+extension Swift.String {
+  public func formatDateString(inFormat: Swift.String, outFormat: Swift.String) -> Swift.String
+}
+@_hasMissingDesignatedInitializers public class Log {
+  public class func d(_ tag: Swift.String, _ msg: Swift.String)
+  public class func printComponentInfo(_ libraryPackageName: Swift.String, _ libraryPackageVersion: Swift.String)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Reachability {
+  @objc deinit
+}
+public enum ThemeManager {
+  public static func registerFonts(bundle: Foundation.Bundle)
+}
+public struct TrackingConfigurationData {
+  public var sessionId: Swift.String
+  public var operationId: Swift.String
+  public var type: Swift.String
+  public var customerId: Swift.String
+  public init(sessionId: Swift.String, operationId: Swift.String, type: Swift.String, customerId: Swift.String)
+}
+public protocol ApiResultProtocol {
+  associatedtype T
+}
+@_hasMissingDesignatedInitializers public class ApiResult : core.ApiResultProtocol {
+  public typealias T = Swift.AnyObject
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ApiSuccess<T2> : core.ApiResult {
+  final public let data: T2
+  public init(_ data: T2)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ApiError : core.ApiResult {
+  final public let code: Swift.Int
+  final public let message: Swift.String?
+  public init(code: Swift.Int, message: Swift.String)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ApiException<T2> : core.ApiResult {
+  final public let e: T2
+  public init(_ e: T2)
+  @objc deinit
+}
+public struct PersonalData : Swift.Codable {
+  public var issuer: Swift.String
+  public var documentNumber: Swift.String
+  public var issueDate: Swift.String
+  public var expiryDate: Swift.String
+  public var name: Swift.String
+  public var surname: Swift.String
+  public var fullName: Swift.String
+  public var gender: Swift.String
+  public var birthDate: Swift.String
+  public var birthPlace: Swift.String
+  public var nationality: Swift.String
+  public var address: Swift.String
+  public var nfcKey: Swift.String
+  public var numSupport: Swift.String
+  public var mrz: Swift.String
+  public init()
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public class SdkResult<T> {
+  public var finishStatus: core.FinishStatus
+  public var errorType: core.ErrorType
+  public var data: T?
+  public init(data: T?)
+  public init()
+  convenience public init(finishStatus: core.FinishStatus, errorType: core.ErrorType, data: T? = nil)
+  public init(errorType: core.ErrorType)
+  public static func getComponentControllerError(_ object: T? = nil) -> core.SdkResult<T>
+  public static func getNoOperationCreatedError(_ object: T? = nil) -> core.SdkResult<T>
+  @objc deinit
+}
+public enum ErrorType : Swift.String, Swift.Error {
+  case CANCEL_BY_USER
+  case TIMEOUT
+  case COMPONENT_CONTROLLER_ERROR
+  case COMPONENT_CONTROLLER_DATA_ERROR
+  case NETWORK_CONNECTION
+  case UNKNOWN_ERROR
+  case NFC_ERROR
+  case NFC_INVALID_MRZ_KEY
+  case CAPTURE_ERROR
+  case NO_ERROR
+  case CAMERA_PERMISSION_DENIED
+  case PERMISSION_DENIED
+  case SETTINGS_PERMISSION_ERROR
+  case HARDWARE_ERROR
+  case EXTRACTION_LICENSE_ERROR
+  case UNEXPECTED_CAPTURE_ERROR
+  case CONTROL_NOT_INITIALIZATED_ERROR
+  case BAD_EXTRACTOR_CONFIGURATION_ERROR
+  case TOKEN_ERROR
+  case PHINGERS_ERROR_CAPTURE
+  case LICENSING_ERROR_PACKAGE_NAME
+  case LICENSING_ERROR_APPID_INVALID
+  case LICENSING_ERROR_APIKEY_FORBIDDEN
+  case LICENSING_ERROR_LICENSE_NOT_FOUND
+  case VIDEO_SOCKET_TIMEOUT
+  case VIDEO_ERROR
+  case LICENSE_CHECKER_ERROR_INVALID_LICENSE
+  case LICENSE_CHECKER_ERROR_INVALID_COMPONENT_LICENSE
+  case NO_OPERATION_CREATED_ERROR
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension licenseCheckerComponent.LicenseFinishStatus {
+  public func toErrorType() -> core.ErrorType
+}
+public enum FinishStatus {
+  case STATUS_OK
+  case STATUS_ERROR
+  public static func == (a: core.FinishStatus, b: core.FinishStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension core.HTTPErrorType : Swift.Hashable {}
+extension core.HTTPErrorType : Swift.RawRepresentable {}
+extension core.HTTPMethod : Swift.Equatable {}
+extension core.HTTPMethod : Swift.Hashable {}
+extension core.HTTPMethod : Swift.RawRepresentable {}
+extension core.ErrorType : Swift.Equatable {}
+extension core.ErrorType : Swift.Hashable {}
+extension core.ErrorType : Swift.RawRepresentable {}
+extension core.FinishStatus : Swift.Equatable {}
+extension core.FinishStatus : Swift.Hashable {}

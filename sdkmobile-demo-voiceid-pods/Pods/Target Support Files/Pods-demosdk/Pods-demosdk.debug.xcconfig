@@ -1,0 +1,15 @@
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
+CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift" "${PODS_ROOT}/FPBTokenizer" "${PODS_ROOT}/FPHICORElicensingLite" "${PODS_ROOT}/FPHILottieSDKFramework" "${PODS_ROOT}/FPHISDKCoreComponent" "${PODS_ROOT}/FPHISDKLicenseCheckerComponent" "${PODS_ROOT}/FPHISDKLicensingComponent" "${PODS_ROOT}/FPHISDKMainComponent" "${PODS_ROOT}/FPHISDKTokenizeComponent" "${PODS_ROOT}/FPHISDKTrackingComponent" "${PODS_ROOT}/FPHISDKVoiceIDComponent" "${PODS_ROOT}/FPHIVoiceSDK" "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPBTokenizer" "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHICORElicensingLite" "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHILottieSDKFramework" "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKCoreComponent" "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKLicenseCheckerComponent" "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKLicensingComponent" "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKMainComponent" "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKTokenizeComponent" "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKTrackingComponent" "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKVoiceIDComponent" "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHIVoiceSDK"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) /usr/lib/swift '@executable_path/Frameworks' '@loader_path/Frameworks'
+LIBRARY_SEARCH_PATHS = $(inherited) "${TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}" /usr/lib/swift $(SDKROOT)/usr/lib/swift
+OTHER_LDFLAGS = $(inherited) -l"c++" -l"swiftCoreGraphics" -framework "CoreGraphics" -framework "FPBTokenizer" -framework "Foundation" -framework "IQKeyboardManagerSwift" -framework "Lottie" -framework "QuartzCore" -framework "UIKit" -framework "VoiceSdk" -framework "core" -framework "licenseCheckerComponent" -framework "licensingComponent" -framework "licensingLite" -framework "sdk" -framework "tokenizeComponent" -framework "trackingComponent" -framework "voiceIDComponent"
+OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods
+PODS_XCFRAMEWORKS_BUILD_DIR = $(PODS_CONFIGURATION_BUILD_DIR)/XCFrameworkIntermediates
+USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES

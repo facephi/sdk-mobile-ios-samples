@@ -1,0 +1,13 @@
+${PODS_ROOT}/Target Support Files/Pods-demosdk-demosdkUITests/Pods-demosdk-demosdkUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/FPBTokenizer/FPBTokenizer.framework/FPBTokenizer
+${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHICORElicensingLite/licensingLite.framework/licensingLite
+${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHILottieSDKFramework/Lottie.framework/Lottie
+${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKCoreComponent/core.framework/core
+${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKLicenseCheckerComponent/licenseCheckerComponent.framework/licenseCheckerComponent
+${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKLicensingComponent/licensingComponent.framework/licensingComponent
+${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKMainComponent/sdk.framework/sdk
+${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKTokenizeComponent/tokenizeComponent.framework/tokenizeComponent
+${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKTrackingComponent/trackingComponent.framework/trackingComponent
+${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKVoiceIDComponent/voiceIDComponent.framework/voiceIDComponent
+${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHIVoiceSDK/VoiceSdk.framework/VoiceSdk

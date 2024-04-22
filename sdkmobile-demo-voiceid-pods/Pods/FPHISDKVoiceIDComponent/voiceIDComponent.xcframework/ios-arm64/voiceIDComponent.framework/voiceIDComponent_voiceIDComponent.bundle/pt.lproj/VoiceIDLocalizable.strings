@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  
+
+  Created by Daniel Eloy-García Gómez on 20/6/23.
+  
+*/
+
+"voice_component_success_records_message" = "%d/%d gravações bem sucedidas";
+"voice_component_read_message" = "Diga em voz alta:";
+"voice_component_speech_message" = "Fale claramente e perto do microfone";
+"voice_component_speech_noisy_message" = "Há muito barulho. Tente estar em um ambiente tranquilo.";
+"voice_component_success_message" = "Gravação registrada";
+"voice_component_phrase_generic_error_feedback" = "Por favor, repita a frase.";
+"voice_component_phrase_long_silence_feedback" = "Fale por 2 segundos ou mais.";
+"voice_component_phrase_long_reverberation_feedback" = "Muito eco. Tente em outro ambiente.";
+"voice_component_tutorial_title" = "Reconhecimento de voz";
+"voice_component_tutorial_message" = "Fale claramente e perto do microfone.\n\nTente estar em um ambiente tranquilo.";
+"voice_component_tutorial_button" = "Início";
+"voice_component_success_button" = "Continuar";
+"voice_component_ok"="Ok";
+"voice_component_cancel"="Cancel";
+"voice_component_end_confirmation_title" = "Tem a certeza de que vai concluir o processo?";
+"voice_component_text_results_finish_button" = "Terminar";
+"voice_component_agree" = "Aceitar";

@@ -1,0 +1,100 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name trackingComponent
+import Combine
+import CoreLocation
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import core
+import licenseCheckerComponent
+public typealias TrackingErrorType = (Swift.String) -> ()
+public class TrackingController {
+  public var tenantIdDemo: Swift.String?
+  public var trackingError: trackingComponent.TrackingErrorType?
+  public var license: Swift.String
+  public var trackingConfigurationData: core.TrackingConfigurationData?
+  public init(trackingError: trackingComponent.TrackingErrorType? = nil, enableLocation: Swift.Bool = true)
+  public func setTenantId(newTenantId: Swift.String)
+  @objc deinit
+}
+extension trackingComponent.TrackingController : core.ITrackingController {
+  public func setupLicenseAndToken(output: @escaping (core.SdkResult<Swift.String>) -> ())
+  public func getComponentType() -> Swift.String
+  public func sendStep(step: Swift.String)
+  public func initOperation(steps: [Swift.String]?)
+  public func closeSession()
+  public func sendOcrData(personalData: core.PersonalData, ocrMap: [Swift.String : Swift.String]?)
+  public func externalEvent(trackingData: trackingComponent.TrackingData)
+  public func operationCancelledEvent(reason: Swift.String)
+  public func operationDeniedEvent()
+  public func operationSuccessEvent()
+  public func setCustomerId(customerId: Swift.String)
+  public func sendDataTracking(data: Foundation.Data?, assetType: Swift.String, contentType: Swift.String = EventManager.contentType)
+  public func getExtraDataJSONString() -> core.SdkResult<Swift.String>
+}
+extension trackingComponent.TrackingController : trackingComponent.LocationServiceDelegate {
+  public func didUpdateLocation(latitude: Swift.String, longitude: Swift.String)
+}
+@_hasMissingDesignatedInitializers public class EventManager {
+  public static let contentType: Swift.String
+  @objc deinit
+}
+public struct AssetResponse : Swift.Codable {
+  public init()
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct AuthResponse : Swift.Codable {
+  public init(access_token: Swift.String, expires_in: Swift.Int)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct Event : Swift.Codable {
+  public init(payload: trackingComponent.Payload)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct Payload : Swift.Codable {
+  public init(type: Swift.String? = nil, screen: Swift.String? = nil, event: Swift.String? = nil, value: Swift.String? = nil, model: Swift.String? = nil, osVersion: Swift.String? = nil, brand: Swift.String? = nil, deviceId: Swift.String? = nil, deviceType: Swift.String? = nil, latitude: Swift.Double? = nil, longitude: Swift.Double? = nil, url: Swift.String? = nil, assetType: Swift.String? = nil, contentType: Swift.String? = nil, status: Swift.String? = nil, reason: Swift.String? = nil, source: Swift.String? = nil, dataMap: [Swift.String : Swift.String]? = nil, personalInformation: core.PersonalData? = nil, hash: Swift.String? = nil)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TrackingData {
+  public var event: Swift.String
+  public var screen: Swift.String
+  public var value: Swift.String
+  public init(event: Swift.String, screen: Swift.String, value: Swift.String)
+}
+public struct TrackingEvent : Swift.Codable {
+  public init(family: Swift.String, sessionId: Swift.String, operationId: Swift.String, events: [trackingComponent.Event], tenantId: Swift.String)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public enum TrackingStep : Swift.String {
+  case START
+  case FINISH
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol LocationServiceDelegate {
+  func didUpdateLocation(latitude: Swift.String, longitude: Swift.String)
+}
+public protocol ILocationManager {
+  var location: (latitude: Swift.String, longitude: Swift.String)? { get }
+  func startUpdatingLocation(delegate: trackingComponent.LocationServiceDelegate?)
+  func isLocationPermissionAccepted() -> Swift.Bool
+}
+public protocol IRepository {
+  func sendEvent<T>(token: Swift.String, event: trackingComponent.TrackingEvent) -> T where T : core.ApiResultProtocol
+  func getToken<T>(clientId: Swift.String, clientSecret: Swift.String) -> T where T : core.ApiResultProtocol
+  func uploadAsset<T>(token: Swift.String, contentType: Swift.String, family: Swift.String, tenantId: Swift.String, operationId: Swift.String, assetType: Swift.String, bodyData: Foundation.Data) -> T where T : core.ApiResultProtocol
+}
+extension trackingComponent.TrackingStep : Swift.Equatable {}
+extension trackingComponent.TrackingStep : Swift.Hashable {}
+extension trackingComponent.TrackingStep : Swift.RawRepresentable {}

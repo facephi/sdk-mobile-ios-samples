@@ -1,0 +1,278 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "core",
+        "printedName": "core",
+        "declKind": "Import",
+        "moduleName": "licensingComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "licensingComponent"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LicensingController",
+        "printedName": "LicensingController",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(licensingUrl:apiKey:repository:output:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LicensingController",
+                "printedName": "licensingComponent.LicensingController",
+                "usr": "s:18licensingComponent19LicensingControllerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "licensingComponent.IRepository?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IRepository",
+                    "printedName": "licensingComponent.IRepository",
+                    "usr": "s:18licensingComponent11IRepositoryP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(core.SdkResult<Swift.String>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SdkResult",
+                    "printedName": "core.SdkResult<Swift.String>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:4core9SdkResultC"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18licensingComponent19LicensingControllerC0A3Url6apiKey10repository6outputAC10Foundation3URLV_SSAA11IRepository_pSgy4core9SdkResultCySSGctcfc",
+            "mangledName": "$s18licensingComponent19LicensingControllerC0A3Url6apiKey10repository6outputAC10Foundation3URLV_SSAA11IRepository_pSgy4core9SdkResultCySSGctcfc",
+            "moduleName": "licensingComponent",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "start",
+            "printedName": "start()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18licensingComponent19LicensingControllerC5startyyF",
+            "mangledName": "$s18licensingComponent19LicensingControllerC5startyyF",
+            "moduleName": "licensingComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:18licensingComponent19LicensingControllerC",
+        "mangledName": "$s18licensingComponent19LicensingControllerC",
+        "moduleName": "licensingComponent",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "core",
+        "printedName": "core",
+        "declKind": "Import",
+        "moduleName": "licensingComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "licensingComponent"
+      },
+      {
+        "kind": "Import",
+        "name": "core",
+        "printedName": "core",
+        "declKind": "Import",
+        "moduleName": "licensingComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "licensingComponent"
+      },
+      {
+        "kind": "Import",
+        "name": "core",
+        "printedName": "core",
+        "declKind": "Import",
+        "moduleName": "licensingComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "licensingComponent"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "IRepository",
+        "printedName": "IRepository",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "getLicense",
+            "printedName": "getLicense(apiKey:appId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18licensingComponent11IRepositoryP10getLicense6apiKey5appIdqd__SS_SSt4core17ApiResultProtocolRd__lF",
+            "mangledName": "$s18licensingComponent11IRepositoryP10getLicense6apiKey5appIdqd__SS_SSt4core17ApiResultProtocolRd__lF",
+            "moduleName": "licensingComponent",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : licensingComponent.IRepository, τ_1_0 : core.ApiResultProtocol>",
+            "sugared_genericSig": "<Self, T where Self : licensingComponent.IRepository, T : core.ApiResultProtocol>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:18licensingComponent11IRepositoryP",
+        "mangledName": "$s18licensingComponent11IRepositoryP",
+        "moduleName": "licensingComponent",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Licensing-SPM\/SDK-Licensing-SPM\/Sources\/licensingComponent\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 137,
+      "length": 33,
+      "value": "\"com.facephi.licensing_component\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Licensing-SPM\/SDK-Licensing-SPM\/Sources\/licensingComponent\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 210,
+      "length": 7,
+      "value": "\"1.4.1\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Licensing-SPM\/SDK-Licensing-SPM\/Sources\/licensingComponent\/Service\/GetLicenseEndpoint.swift",
+      "kind": "StringLiteral",
+      "offset": 240,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Licensing-SPM\/SDK-Licensing-SPM\/Sources\/licensingComponent\/Service\/GetLicenseEndpoint.swift",
+      "kind": "Dictionary",
+      "offset": 333,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Licensing-SPM\/SDK-Licensing-SPM\/Sources\/licensingComponent\/Service\/GetLicenseEndpoint.swift",
+      "kind": "Dictionary",
+      "offset": 380,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Licensing-SPM\/SDK-Licensing-SPM\/Sources\/licensingComponent\/Service\/GetLicenseEndpoint.swift",
+      "kind": "BooleanLiteral",
+      "offset": 441,
+      "length": 5,
+      "value": "false"
+    }
+  ]
+}

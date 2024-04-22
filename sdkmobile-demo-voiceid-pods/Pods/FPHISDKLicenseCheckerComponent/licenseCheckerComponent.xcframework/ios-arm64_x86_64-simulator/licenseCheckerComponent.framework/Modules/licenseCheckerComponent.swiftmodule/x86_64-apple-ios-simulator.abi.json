@@ -1,0 +1,488 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "licensingLite",
+        "printedName": "licensingLite",
+        "declKind": "Import",
+        "moduleName": "licenseCheckerComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LicenseCheckerController",
+        "printedName": "LicenseCheckerController",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(license:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LicenseCheckerController",
+                "printedName": "licenseCheckerComponent.LicenseCheckerController",
+                "usr": "s:23licenseCheckerComponent07LicenseB10ControllerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:23licenseCheckerComponent07LicenseB10ControllerC0A0ACSS_tcfc",
+            "mangledName": "$s23licenseCheckerComponent07LicenseB10ControllerC0A0ACSS_tcfc",
+            "moduleName": "licenseCheckerComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "isValid",
+            "printedName": "isValid()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23licenseCheckerComponent07LicenseB10ControllerC7isValidSbyF",
+            "mangledName": "$s23licenseCheckerComponent07LicenseB10ControllerC7isValidSbyF",
+            "moduleName": "licenseCheckerComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getLicenseByComponentType",
+            "printedName": "getLicenseByComponentType(component:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ComponentLicenseChecked",
+                "printedName": "licenseCheckerComponent.ComponentLicenseChecked<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:23licenseCheckerComponent0C14LicenseCheckedC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23licenseCheckerComponent07LicenseB10ControllerC03getd2ByC4Type9componentAA0cD7CheckedCyxGSS_tSeRzlF",
+            "mangledName": "$s23licenseCheckerComponent07LicenseB10ControllerC03getd2ByC4Type9componentAA0cD7CheckedCyxGSS_tSeRzlF",
+            "moduleName": "licenseCheckerComponent",
+            "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable>",
+            "sugared_genericSig": "<T where T : Swift.Decodable>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:23licenseCheckerComponent07LicenseB10ControllerC",
+        "mangledName": "$s23licenseCheckerComponent07LicenseB10ControllerC",
+        "moduleName": "licenseCheckerComponent",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LicenseFinishStatus",
+        "printedName": "LicenseFinishStatus",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "STATUS_OK",
+            "printedName": "STATUS_OK",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(licenseCheckerComponent.LicenseFinishStatus.Type) -> licenseCheckerComponent.LicenseFinishStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LicenseFinishStatus",
+                    "printedName": "licenseCheckerComponent.LicenseFinishStatus",
+                    "usr": "s:23licenseCheckerComponent19LicenseFinishStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "licenseCheckerComponent.LicenseFinishStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LicenseFinishStatus",
+                        "printedName": "licenseCheckerComponent.LicenseFinishStatus",
+                        "usr": "s:23licenseCheckerComponent19LicenseFinishStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:23licenseCheckerComponent19LicenseFinishStatusO9STATUS_OKyA2CmF",
+            "mangledName": "$s23licenseCheckerComponent19LicenseFinishStatusO9STATUS_OKyA2CmF",
+            "moduleName": "licenseCheckerComponent"
+          },
+          {
+            "kind": "Var",
+            "name": "STATUS_ERROR_LICENSE",
+            "printedName": "STATUS_ERROR_LICENSE",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(licenseCheckerComponent.LicenseFinishStatus.Type) -> licenseCheckerComponent.LicenseFinishStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LicenseFinishStatus",
+                    "printedName": "licenseCheckerComponent.LicenseFinishStatus",
+                    "usr": "s:23licenseCheckerComponent19LicenseFinishStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "licenseCheckerComponent.LicenseFinishStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LicenseFinishStatus",
+                        "printedName": "licenseCheckerComponent.LicenseFinishStatus",
+                        "usr": "s:23licenseCheckerComponent19LicenseFinishStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:23licenseCheckerComponent19LicenseFinishStatusO20STATUS_ERROR_LICENSEyA2CmF",
+            "mangledName": "$s23licenseCheckerComponent19LicenseFinishStatusO20STATUS_ERROR_LICENSEyA2CmF",
+            "moduleName": "licenseCheckerComponent"
+          },
+          {
+            "kind": "Var",
+            "name": "STATUS_ERROR_LICENSE_COMPONENT",
+            "printedName": "STATUS_ERROR_LICENSE_COMPONENT",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(licenseCheckerComponent.LicenseFinishStatus.Type) -> licenseCheckerComponent.LicenseFinishStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LicenseFinishStatus",
+                    "printedName": "licenseCheckerComponent.LicenseFinishStatus",
+                    "usr": "s:23licenseCheckerComponent19LicenseFinishStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "licenseCheckerComponent.LicenseFinishStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "LicenseFinishStatus",
+                        "printedName": "licenseCheckerComponent.LicenseFinishStatus",
+                        "usr": "s:23licenseCheckerComponent19LicenseFinishStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:23licenseCheckerComponent19LicenseFinishStatusO30STATUS_ERROR_LICENSE_COMPONENTyA2CmF",
+            "mangledName": "$s23licenseCheckerComponent19LicenseFinishStatusO30STATUS_ERROR_LICENSE_COMPONENTyA2CmF",
+            "moduleName": "licenseCheckerComponent"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LicenseFinishStatus",
+                "printedName": "licenseCheckerComponent.LicenseFinishStatus",
+                "usr": "s:23licenseCheckerComponent19LicenseFinishStatusO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "LicenseFinishStatus",
+                "printedName": "licenseCheckerComponent.LicenseFinishStatus",
+                "usr": "s:23licenseCheckerComponent19LicenseFinishStatusO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23licenseCheckerComponent19LicenseFinishStatusO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s23licenseCheckerComponent19LicenseFinishStatusO2eeoiySbAC_ACtFZ",
+            "moduleName": "licenseCheckerComponent",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23licenseCheckerComponent19LicenseFinishStatusO9hashValueSivp",
+            "mangledName": "$s23licenseCheckerComponent19LicenseFinishStatusO9hashValueSivp",
+            "moduleName": "licenseCheckerComponent",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23licenseCheckerComponent19LicenseFinishStatusO9hashValueSivg",
+                "mangledName": "$s23licenseCheckerComponent19LicenseFinishStatusO9hashValueSivg",
+                "moduleName": "licenseCheckerComponent",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:23licenseCheckerComponent19LicenseFinishStatusO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s23licenseCheckerComponent19LicenseFinishStatusO4hash4intoys6HasherVz_tF",
+            "moduleName": "licenseCheckerComponent",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:23licenseCheckerComponent19LicenseFinishStatusO",
+        "mangledName": "$s23licenseCheckerComponent19LicenseFinishStatusO",
+        "moduleName": "licenseCheckerComponent",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ComponentLicenseChecked",
+        "printedName": "ComponentLicenseChecked",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "licenseStatus",
+            "printedName": "licenseStatus",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LicenseFinishStatus",
+                "printedName": "licenseCheckerComponent.LicenseFinishStatus",
+                "usr": "s:23licenseCheckerComponent19LicenseFinishStatusO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23licenseCheckerComponent0C14LicenseCheckedC0A6StatusAA0d6FinishF0Ovp",
+            "mangledName": "$s23licenseCheckerComponent0C14LicenseCheckedC0A6StatusAA0d6FinishF0Ovp",
+            "moduleName": "licenseCheckerComponent",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LicenseFinishStatus",
+                    "printedName": "licenseCheckerComponent.LicenseFinishStatus",
+                    "usr": "s:23licenseCheckerComponent19LicenseFinishStatusO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23licenseCheckerComponent0C14LicenseCheckedC0A6StatusAA0d6FinishF0Ovg",
+                "mangledName": "$s23licenseCheckerComponent0C14LicenseCheckedC0A6StatusAA0d6FinishF0Ovg",
+                "moduleName": "licenseCheckerComponent",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<T>",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "data",
+            "printedName": "data",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "τ_0_0?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:23licenseCheckerComponent0C14LicenseCheckedC4dataxSgvp",
+            "mangledName": "$s23licenseCheckerComponent0C14LicenseCheckedC4dataxSgvp",
+            "moduleName": "licenseCheckerComponent",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "τ_0_0?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:23licenseCheckerComponent0C14LicenseCheckedC4dataxSgvg",
+                "mangledName": "$s23licenseCheckerComponent0C14LicenseCheckedC4dataxSgvg",
+                "moduleName": "licenseCheckerComponent",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<T>",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:23licenseCheckerComponent0C14LicenseCheckedC",
+        "mangledName": "$s23licenseCheckerComponent0C14LicenseCheckedC",
+        "moduleName": "licenseCheckerComponent",
+        "genericSig": "<τ_0_0>",
+        "sugared_genericSig": "<T>",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": []
+}

@@ -1,0 +1,1722 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OperationType",
+        "printedName": "OperationType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "ONBOARDING",
+            "printedName": "ONBOARDING",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(sdk.OperationType.Type) -> sdk.OperationType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OperationType",
+                    "printedName": "sdk.OperationType",
+                    "usr": "s:3sdk13OperationTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "sdk.OperationType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OperationType",
+                        "printedName": "sdk.OperationType",
+                        "usr": "s:3sdk13OperationTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:3sdk13OperationTypeO10ONBOARDINGyA2CmF",
+            "mangledName": "$s3sdk13OperationTypeO10ONBOARDINGyA2CmF",
+            "moduleName": "sdk"
+          },
+          {
+            "kind": "Var",
+            "name": "AUTHENTICATION",
+            "printedName": "AUTHENTICATION",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(sdk.OperationType.Type) -> sdk.OperationType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OperationType",
+                    "printedName": "sdk.OperationType",
+                    "usr": "s:3sdk13OperationTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "sdk.OperationType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OperationType",
+                        "printedName": "sdk.OperationType",
+                        "usr": "s:3sdk13OperationTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:3sdk13OperationTypeO14AUTHENTICATIONyA2CmF",
+            "mangledName": "$s3sdk13OperationTypeO14AUTHENTICATIONyA2CmF",
+            "moduleName": "sdk"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "sdk.OperationType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OperationType",
+                    "printedName": "sdk.OperationType",
+                    "usr": "s:3sdk13OperationTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:3sdk13OperationTypeO8rawValueACSgSS_tcfc",
+            "mangledName": "$s3sdk13OperationTypeO8rawValueACSgSS_tcfc",
+            "moduleName": "sdk",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:3sdk13OperationTypeO8rawValueSSvp",
+            "mangledName": "$s3sdk13OperationTypeO8rawValueSSvp",
+            "moduleName": "sdk",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:3sdk13OperationTypeO8rawValueSSvg",
+                "mangledName": "$s3sdk13OperationTypeO8rawValueSSvg",
+                "moduleName": "sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[sdk.OperationType]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "OperationType",
+                    "printedName": "sdk.OperationType",
+                    "usr": "s:3sdk13OperationTypeO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:3sdk13OperationTypeO8allCasesSayACGvpZ",
+            "mangledName": "$s3sdk13OperationTypeO8allCasesSayACGvpZ",
+            "moduleName": "sdk",
+            "static": true,
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[sdk.OperationType]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OperationType",
+                        "printedName": "sdk.OperationType",
+                        "usr": "s:3sdk13OperationTypeO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:3sdk13OperationTypeO8allCasesSayACGvgZ",
+                "mangledName": "$s3sdk13OperationTypeO8allCasesSayACGvgZ",
+                "moduleName": "sdk",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:3sdk13OperationTypeO",
+        "mangledName": "$s3sdk13OperationTypeO",
+        "moduleName": "sdk",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[sdk.OperationType]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "OperationType",
+                        "printedName": "sdk.OperationType",
+                        "usr": "s:3sdk13OperationTypeO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "core",
+        "printedName": "core",
+        "declKind": "Import",
+        "moduleName": "sdk"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Step",
+        "printedName": "Step",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "SELPHI",
+            "printedName": "SELPHI",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(sdk.Step.Type) -> sdk.Step",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Step",
+                    "printedName": "sdk.Step",
+                    "usr": "s:3sdk4StepO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "sdk.Step.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Step",
+                        "printedName": "sdk.Step",
+                        "usr": "s:3sdk4StepO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:3sdk4StepO6SELPHIyA2CmF",
+            "mangledName": "$s3sdk4StepO6SELPHIyA2CmF",
+            "moduleName": "sdk"
+          },
+          {
+            "kind": "Var",
+            "name": "SELPHID",
+            "printedName": "SELPHID",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(sdk.Step.Type) -> sdk.Step",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Step",
+                    "printedName": "sdk.Step",
+                    "usr": "s:3sdk4StepO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "sdk.Step.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Step",
+                        "printedName": "sdk.Step",
+                        "usr": "s:3sdk4StepO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:3sdk4StepO7SELPHIDyA2CmF",
+            "mangledName": "$s3sdk4StepO7SELPHIDyA2CmF",
+            "moduleName": "sdk"
+          },
+          {
+            "kind": "Var",
+            "name": "NFC",
+            "printedName": "NFC",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(sdk.Step.Type) -> sdk.Step",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Step",
+                    "printedName": "sdk.Step",
+                    "usr": "s:3sdk4StepO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "sdk.Step.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Step",
+                        "printedName": "sdk.Step",
+                        "usr": "s:3sdk4StepO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:3sdk4StepO3NFCyA2CmF",
+            "mangledName": "$s3sdk4StepO3NFCyA2CmF",
+            "moduleName": "sdk"
+          },
+          {
+            "kind": "Var",
+            "name": "PHINGERS",
+            "printedName": "PHINGERS",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(sdk.Step.Type) -> sdk.Step",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Step",
+                    "printedName": "sdk.Step",
+                    "usr": "s:3sdk4StepO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "sdk.Step.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Step",
+                        "printedName": "sdk.Step",
+                        "usr": "s:3sdk4StepO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:3sdk4StepO8PHINGERSyA2CmF",
+            "mangledName": "$s3sdk4StepO8PHINGERSyA2CmF",
+            "moduleName": "sdk"
+          },
+          {
+            "kind": "Var",
+            "name": "VIDEO_CALL",
+            "printedName": "VIDEO_CALL",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(sdk.Step.Type) -> sdk.Step",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Step",
+                    "printedName": "sdk.Step",
+                    "usr": "s:3sdk4StepO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "sdk.Step.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Step",
+                        "printedName": "sdk.Step",
+                        "usr": "s:3sdk4StepO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:3sdk4StepO10VIDEO_CALLyA2CmF",
+            "mangledName": "$s3sdk4StepO10VIDEO_CALLyA2CmF",
+            "moduleName": "sdk"
+          },
+          {
+            "kind": "Var",
+            "name": "VIDEO_ID",
+            "printedName": "VIDEO_ID",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(sdk.Step.Type) -> sdk.Step",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Step",
+                    "printedName": "sdk.Step",
+                    "usr": "s:3sdk4StepO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "sdk.Step.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Step",
+                        "printedName": "sdk.Step",
+                        "usr": "s:3sdk4StepO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:3sdk4StepO8VIDEO_IDyA2CmF",
+            "mangledName": "$s3sdk4StepO8VIDEO_IDyA2CmF",
+            "moduleName": "sdk"
+          },
+          {
+            "kind": "Var",
+            "name": "OTHER",
+            "printedName": "OTHER",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(sdk.Step.Type) -> (Swift.String) -> sdk.Step",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> sdk.Step",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Step",
+                        "printedName": "sdk.Step",
+                        "usr": "s:3sdk4StepO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "sdk.Step.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Step",
+                        "printedName": "sdk.Step",
+                        "usr": "s:3sdk4StepO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:3sdk4StepO5OTHERyACSScACmF",
+            "mangledName": "$s3sdk4StepO5OTHERyACSScACmF",
+            "moduleName": "sdk"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:3sdk4StepO8rawValueSSvp",
+            "mangledName": "$s3sdk4StepO8rawValueSSvp",
+            "moduleName": "sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:3sdk4StepO8rawValueSSvg",
+                "mangledName": "$s3sdk4StepO8rawValueSSvg",
+                "moduleName": "sdk",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:3sdk4StepO",
+        "mangledName": "$s3sdk4StepO",
+        "moduleName": "sdk",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "core",
+        "printedName": "core",
+        "declKind": "Import",
+        "moduleName": "sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "sdk"
+      },
+      {
+        "kind": "Import",
+        "name": "licenseCheckerComponent",
+        "printedName": "licenseCheckerComponent",
+        "declKind": "Import",
+        "moduleName": "sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "licensingComponent",
+        "printedName": "licensingComponent",
+        "declKind": "Import",
+        "moduleName": "sdk"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SDKController",
+        "printedName": "SDKController",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SDKController",
+                "printedName": "sdk.SDKController",
+                "usr": "s:3sdk13SDKControllerC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:3sdk13SDKControllerC6sharedACvpZ",
+            "mangledName": "$s3sdk13SDKControllerC6sharedACvpZ",
+            "moduleName": "sdk",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SDKController",
+                    "printedName": "sdk.SDKController",
+                    "usr": "s:3sdk13SDKControllerC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:3sdk13SDKControllerC6sharedACvgZ",
+                "mangledName": "$s3sdk13SDKControllerC6sharedACvgZ",
+                "moduleName": "sdk",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SDKController",
+                    "printedName": "sdk.SDKController",
+                    "usr": "s:3sdk13SDKControllerC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:3sdk13SDKControllerC6sharedACvsZ",
+                "mangledName": "$s3sdk13SDKControllerC6sharedACvsZ",
+                "moduleName": "sdk",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:3sdk13SDKControllerC6sharedACvMZ",
+                "mangledName": "$s3sdk13SDKControllerC6sharedACvMZ",
+                "moduleName": "sdk",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SDKController",
+                "printedName": "sdk.SDKController",
+                "usr": "s:3sdk13SDKControllerC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:3sdk13SDKControllerCACycfc",
+            "mangledName": "$s3sdk13SDKControllerCACycfc",
+            "moduleName": "sdk",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "launchMethod",
+            "printedName": "launchMethod(controller:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "IMethodableController",
+                "printedName": "core.IMethodableController",
+                "usr": "s:4core21IMethodableControllerP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:3sdk13SDKControllerC12launchMethod10controllery4core21IMethodableController_p_tF",
+            "mangledName": "$s3sdk13SDKControllerC12launchMethod10controllery4core21IMethodableController_p_tF",
+            "moduleName": "sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "launch",
+            "printedName": "launch(controller:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ITrackMethodableController",
+                "printedName": "core.ITrackMethodableController",
+                "usr": "s:4core26ITrackMethodableControllerP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:3sdk13SDKControllerC6launch10controllery4core26ITrackMethodableController_p_tF",
+            "mangledName": "$s3sdk13SDKControllerC6launch10controllery4core26ITrackMethodableController_p_tF",
+            "moduleName": "sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "launchTokenizableMethod",
+            "printedName": "launchTokenizableMethod(controller:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ITokenMethodableController",
+                "printedName": "core.ITokenMethodableController",
+                "usr": "s:4core26ITokenMethodableControllerP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:3sdk13SDKControllerC23launchTokenizableMethod10controllery4core26ITokenMethodableController_p_tF",
+            "mangledName": "$s3sdk13SDKControllerC23launchTokenizableMethod10controllery4core26ITokenMethodableController_p_tF",
+            "moduleName": "sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "launchTrackTokenizableMethod",
+            "printedName": "launchTrackTokenizableMethod(controller:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ITrackTokenMethodableController",
+                "printedName": "core.ITrackTokenMethodableController",
+                "usr": "s:4core31ITrackTokenMethodableControllerP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:3sdk13SDKControllerC28launchTrackTokenizableMethod10controllery4core31ITrackTokenMethodableController_p_tF",
+            "mangledName": "$s3sdk13SDKControllerC28launchTrackTokenizableMethod10controllery4core31ITrackTokenMethodableController_p_tF",
+            "moduleName": "sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "initSdk",
+            "printedName": "initSdk(license:output:trackingController:tokenizeController:behaviorController:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(core.SdkResult<Swift.String>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SdkResult",
+                    "printedName": "core.SdkResult<Swift.String>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:4core9SdkResultC"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "core.ITrackingController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ITrackingController",
+                    "printedName": "core.ITrackingController",
+                    "usr": "s:4core19ITrackingControllerP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "core.ITokenizeController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ITokenizeController",
+                    "printedName": "core.ITokenizeController",
+                    "usr": "s:4core19ITokenizeControllerP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "core.IBehaviorController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IBehaviorController",
+                    "printedName": "core.IBehaviorController",
+                    "usr": "s:4core19IBehaviorControllerP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:3sdk13SDKControllerC7initSdk7license6output18trackingController08tokenizeH008behaviorH0ySS_y4core0D6ResultCySSGcAJ09ITrackingH0_pSgAJ09ITokenizeH0_pSgAJ09IBehaviorH0_pSgtF",
+            "mangledName": "$s3sdk13SDKControllerC7initSdk7license6output18trackingController08tokenizeH008behaviorH0ySS_y4core0D6ResultCySSGcAJ09ITrackingH0_pSgAJ09ITokenizeH0_pSgAJ09IBehaviorH0_pSgtF",
+            "moduleName": "sdk",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "initSdk",
+            "printedName": "initSdk(licensingUrl:apiKey:output:trackingController:tokenizeController:behaviorController:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "URL",
+                "printedName": "Foundation.URL",
+                "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(core.SdkResult<Swift.String>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SdkResult",
+                    "printedName": "core.SdkResult<Swift.String>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:4core9SdkResultC"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "core.ITrackingController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ITrackingController",
+                    "printedName": "core.ITrackingController",
+                    "usr": "s:4core19ITrackingControllerP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "core.ITokenizeController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ITokenizeController",
+                    "printedName": "core.ITokenizeController",
+                    "usr": "s:4core19ITokenizeControllerP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "core.IBehaviorController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IBehaviorController",
+                    "printedName": "core.IBehaviorController",
+                    "usr": "s:4core19IBehaviorControllerP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:3sdk13SDKControllerC7initSdk12licensingUrl6apiKey6output18trackingController08tokenizeK008behaviorK0y10Foundation3URLV_SSy4core0D6ResultCySSGcAN09ITrackingK0_pSgAN09ITokenizeK0_pSgAN09IBehaviorK0_pSgtF",
+            "mangledName": "$s3sdk13SDKControllerC7initSdk12licensingUrl6apiKey6output18trackingController08tokenizeK008behaviorK0y10Foundation3URLV_SSy4core0D6ResultCySSGcAN09ITrackingK0_pSgAN09ITokenizeK0_pSgAN09IBehaviorK0_pSgtF",
+            "moduleName": "sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "newOperation",
+            "printedName": "newOperation(operationType:customerId:steps:output:enableTracking:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OperationType",
+                "printedName": "sdk.OperationType",
+                "usr": "s:3sdk13OperationTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[sdk.Step]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[sdk.Step]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Step",
+                        "printedName": "sdk.Step",
+                        "usr": "s:3sdk4StepO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(core.SdkResult<Swift.String>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SdkResult",
+                    "printedName": "core.SdkResult<Swift.String>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:4core9SdkResultC"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:3sdk13SDKControllerC12newOperation13operationType10customerId5steps6output14enableTrackingyAA0dF0O_SSSgSayAA4StepOGSgy4core9SdkResultCySSGcSbtF",
+            "mangledName": "$s3sdk13SDKControllerC12newOperation13operationType10customerId5steps6output14enableTrackingyAA0dF0O_SSSgSayAA4StepOGSgy4core9SdkResultCySSGcSbtF",
+            "moduleName": "sdk",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "resumeSdk",
+            "printedName": "resumeSdk(sessionId:operationId:operationType:customerId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OperationType",
+                "printedName": "sdk.OperationType",
+                "usr": "s:3sdk13OperationTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:3sdk13SDKControllerC9resumeSdk9sessionId09operationF00G4Type08customerF0ySS_SSAA09OperationH0OSStF",
+            "mangledName": "$s3sdk13SDKControllerC9resumeSdk9sessionId09operationF00G4Type08customerF0ySS_SSAA09OperationH0OSStF",
+            "moduleName": "sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getSessionId",
+            "printedName": "getSessionId()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:3sdk13SDKControllerC12getSessionIdSSyF",
+            "mangledName": "$s3sdk13SDKControllerC12getSessionIdSSyF",
+            "moduleName": "sdk",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getOperationId",
+            "printedName": "getOperationId()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:3sdk13SDKControllerC14getOperationIdSSyF",
+            "mangledName": "$s3sdk13SDKControllerC14getOperationIdSSyF",
+            "moduleName": "sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getCustomerId",
+            "printedName": "getCustomerId()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:3sdk13SDKControllerC13getCustomerIdSSyF",
+            "mangledName": "$s3sdk13SDKControllerC13getCustomerIdSSyF",
+            "moduleName": "sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getOperationType",
+            "printedName": "getOperationType()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OperationType",
+                "printedName": "sdk.OperationType",
+                "usr": "s:3sdk13OperationTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:3sdk13SDKControllerC16getOperationTypeAA0dE0OyF",
+            "mangledName": "$s3sdk13SDKControllerC16getOperationTypeAA0dE0OyF",
+            "moduleName": "sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setCustomerId",
+            "printedName": "setCustomerId(customerId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:3sdk13SDKControllerC13setCustomerId08customerE0ySS_tF",
+            "mangledName": "$s3sdk13SDKControllerC13setCustomerId08customerE0ySS_tF",
+            "moduleName": "sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setupTrackingError",
+            "printedName": "setupTrackingError(trackingError:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.String) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:3sdk13SDKControllerC18setupTrackingError08trackingE0yySSc_tF",
+            "mangledName": "$s3sdk13SDKControllerC18setupTrackingError08trackingE0yySSc_tF",
+            "moduleName": "sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "askForLocationPermission",
+            "printedName": "askForLocationPermission()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:3sdk13SDKControllerC24askForLocationPermissionyyF",
+            "mangledName": "$s3sdk13SDKControllerC24askForLocationPermissionyyF",
+            "moduleName": "sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "closeSession",
+            "printedName": "closeSession()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:3sdk13SDKControllerC12closeSessionyyF",
+            "mangledName": "$s3sdk13SDKControllerC12closeSessionyyF",
+            "moduleName": "sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getExtraData",
+            "printedName": "getExtraData()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SdkResult",
+                "printedName": "core.SdkResult<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:4core9SdkResultC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:3sdk13SDKControllerC12getExtraData4core9SdkResultCySSGyF",
+            "mangledName": "$s3sdk13SDKControllerC12getExtraData4core9SdkResultCySSGyF",
+            "moduleName": "sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "tokenize",
+            "printedName": "tokenize(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SdkResult",
+                "printedName": "core.SdkResult<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:4core9SdkResultC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:3sdk13SDKControllerC8tokenize4data4core9SdkResultCySSGSS_tF",
+            "mangledName": "$s3sdk13SDKControllerC8tokenize4data4core9SdkResultCySSGSS_tF",
+            "moduleName": "sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getTrackingController",
+            "printedName": "getTrackingController()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "core.ITrackingController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ITrackingController",
+                    "printedName": "core.ITrackingController",
+                    "usr": "s:4core19ITrackingControllerP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:3sdk13SDKControllerC21getTrackingController4core09ITrackingE0_pSgyF",
+            "mangledName": "$s3sdk13SDKControllerC21getTrackingController4core09ITrackingE0_pSgyF",
+            "moduleName": "sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:3sdk13SDKControllerC",
+        "mangledName": "$s3sdk13SDKControllerC",
+        "moduleName": "sdk",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Sdk-SPM\/SDK-Sdk-SPM\/Sources\/sdk\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 137,
+      "length": 17,
+      "value": "\"com.facephi.sdk\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Sdk-SPM\/SDK-Sdk-SPM\/Sources\/sdk\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 194,
+      "length": 7,
+      "value": "\"1.4.4\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Sdk-SPM\/SDK-Sdk-SPM\/Sources\/sdk\/Data\/SdkData.swift",
+      "kind": "StringLiteral",
+      "offset": 210,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Sdk-SPM\/SDK-Sdk-SPM\/Sources\/sdk\/Data\/SdkData.swift",
+      "kind": "StringLiteral",
+      "offset": 243,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Sdk-SPM\/SDK-Sdk-SPM\/Sources\/sdk\/Data\/SdkData.swift",
+      "kind": "StringLiteral",
+      "offset": 339,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Sdk-SPM\/SDK-Sdk-SPM\/Sources\/sdk\/Data\/TokenizerKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 154,
+      "length": 11,
+      "value": "\"ExtraData\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Sdk-SPM\/SDK-Sdk-SPM\/Sources\/sdk\/Data\/TokenizerKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 188,
+      "length": 11,
+      "value": "\"FaceImage\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Sdk-SPM\/SDK-Sdk-SPM\/Sources\/sdk\/Data\/TokenizerKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 232,
+      "length": 20,
+      "value": "\"DocumentFrontImage\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Sdk-SPM\/SDK-Sdk-SPM\/Sources\/sdk\/Data\/TokenizerKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 289,
+      "length": 23,
+      "value": "\"RawDocumentFrontImage\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Sdk-SPM\/SDK-Sdk-SPM\/Sources\/sdk\/Data\/TokenizerKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 344,
+      "length": 19,
+      "value": "\"DocumentBackImage\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Sdk-SPM\/SDK-Sdk-SPM\/Sources\/sdk\/Data\/TokenizerKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 399,
+      "length": 22,
+      "value": "\"RawDocumentBackImage\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Sdk-SPM\/SDK-Sdk-SPM\/Sources\/sdk\/Data\/TokenizerKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 154,
+      "length": 11,
+      "value": "\"ExtraData\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Sdk-SPM\/SDK-Sdk-SPM\/Sources\/sdk\/Data\/TokenizerKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 188,
+      "length": 11,
+      "value": "\"FaceImage\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Sdk-SPM\/SDK-Sdk-SPM\/Sources\/sdk\/Data\/TokenizerKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 232,
+      "length": 20,
+      "value": "\"DocumentFrontImage\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Sdk-SPM\/SDK-Sdk-SPM\/Sources\/sdk\/Data\/TokenizerKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 289,
+      "length": 23,
+      "value": "\"RawDocumentFrontImage\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Sdk-SPM\/SDK-Sdk-SPM\/Sources\/sdk\/Data\/TokenizerKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 344,
+      "length": 19,
+      "value": "\"DocumentBackImage\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Sdk-SPM\/SDK-Sdk-SPM\/Sources\/sdk\/Data\/TokenizerKeys.swift",
+      "kind": "StringLiteral",
+      "offset": 399,
+      "length": 22,
+      "value": "\"RawDocumentBackImage\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Sdk-SPM\/SDK-Sdk-SPM\/Sources\/sdk\/SDKController.swift",
+      "kind": "StringLiteral",
+      "offset": 457,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Sdk-SPM\/SDK-Sdk-SPM\/Sources\/sdk\/SDKController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 5372,
+      "length": 4,
+      "value": "true"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+framework module licensingLite {
+    umbrella header "FBLicenseLite.h"
+    export *
+    module * { export * }
+}

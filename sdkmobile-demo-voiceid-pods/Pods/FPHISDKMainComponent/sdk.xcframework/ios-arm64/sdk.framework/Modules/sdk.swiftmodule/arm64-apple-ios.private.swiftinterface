@@ -1,0 +1,65 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name sdk
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import core
+import licenseCheckerComponent
+import licensingComponent
+public enum OperationType : Swift.String, Swift.CaseIterable {
+  case ONBOARDING
+  case AUTHENTICATION
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [sdk.OperationType]
+  public typealias RawValue = Swift.String
+  public static var allCases: [sdk.OperationType] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum Step {
+  case SELPHI
+  case SELPHID
+  case NFC
+  case PHINGERS
+  case VIDEO_CALL
+  case VIDEO_ID
+  case OTHER(Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public class SDKController {
+  public static var shared: sdk.SDKController
+  public init()
+  @objc deinit
+}
+extension sdk.SDKController {
+  public func launchMethod(controller: core.IMethodableController)
+  public func launch(controller: core.ITrackMethodableController)
+  public func launchTokenizableMethod(controller: core.ITokenMethodableController)
+  public func launchTrackTokenizableMethod(controller: core.ITrackTokenMethodableController)
+  public func initSdk(license: Swift.String, output: @escaping (core.SdkResult<Swift.String>) -> (), trackingController: core.ITrackingController? = nil, tokenizeController: core.ITokenizeController? = nil, behaviorController: core.IBehaviorController? = nil)
+  public func initSdk(licensingUrl: Foundation.URL, apiKey: Swift.String, output: @escaping (core.SdkResult<Swift.String>) -> (), trackingController: core.ITrackingController? = nil, tokenizeController: core.ITokenizeController? = nil, behaviorController: core.IBehaviorController? = nil)
+  public func newOperation(operationType: sdk.OperationType, customerId: Swift.String?, steps: [sdk.Step]? = nil, output: @escaping (core.SdkResult<Swift.String>) -> (), enableTracking: Swift.Bool = true)
+  public func resumeSdk(sessionId: Swift.String, operationId: Swift.String, operationType: sdk.OperationType, customerId: Swift.String)
+  public func getSessionId() -> Swift.String
+  public func getOperationId() -> Swift.String
+  public func getCustomerId() -> Swift.String
+  public func getOperationType() -> sdk.OperationType
+  public func setCustomerId(customerId: Swift.String)
+  public func setupTrackingError(trackingError: @escaping (Swift.String) -> Swift.Void)
+  public func askForLocationPermission()
+  public func closeSession()
+  public func getExtraData() -> core.SdkResult<Swift.String>
+  public func tokenize(data: Swift.String) -> core.SdkResult<Swift.String>
+  public func getTrackingController() -> core.ITrackingController?
+}
+extension sdk.OperationType : Swift.Equatable {}
+extension sdk.OperationType : Swift.Hashable {}
+extension sdk.OperationType : Swift.RawRepresentable {}

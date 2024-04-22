@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  
+
+  Created by Javier Molina Lorente on 25/5/23.
+  
+*/
+
+"voice_component_success_records_message" = "%d/%d successful recordings";
+"voice_component_read_message" = "Say loudly:";
+"voice_component_speech_message" = "Speak clearly and close to the microphone";
+"voice_component_speech_noisy_message" = "There is too much noise. Try to be in a quiet environment.";
+"voice_component_success_message" = "Recording registred";
+"voice_component_phrase_generic_error_feedback" = "Please, repeat the sentence.";
+"voice_component_phrase_long_silence_feedback" = "Talk for 2 seconds or more.";
+"voice_component_phrase_long_reverberation_feedback" = "Too much echo. Try in another environment.";
+"voice_component_tutorial_title" = "Voice Recognition";
+"voice_component_tutorial_message" = "Speak clearly and aloud\n\nMake sure your surroundings are silent";
+"voice_component_tutorial_button" = "Start";
+"voice_component_success_button" = "Continue";
+"voice_component_ok"="Ok";
+"voice_component_cancel"="Cancel";
+"voice_component_end_confirmation_title" = "Are you sure you will finish the process?";
+"voice_component_text_results_finish_button" = "Finish";
+"voice_component_agree" = "Accept";

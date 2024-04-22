@@ -1,0 +1,345 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "tokenizeComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "FPBTokenizer",
+        "printedName": "FPBTokenizer",
+        "declKind": "Import",
+        "moduleName": "tokenizeComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "licenseCheckerComponent",
+        "printedName": "licenseCheckerComponent",
+        "declKind": "Import",
+        "moduleName": "tokenizeComponent"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "tokenizeComponent"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TokenizeController",
+        "printedName": "TokenizeController",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "license",
+            "printedName": "license",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17tokenizeComponent18TokenizeControllerC7licenseSSvp",
+            "mangledName": "$s17tokenizeComponent18TokenizeControllerC7licenseSSvp",
+            "moduleName": "tokenizeComponent",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17tokenizeComponent18TokenizeControllerC7licenseSSvg",
+                "mangledName": "$s17tokenizeComponent18TokenizeControllerC7licenseSSvg",
+                "moduleName": "tokenizeComponent",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17tokenizeComponent18TokenizeControllerC7licenseSSvs",
+                "mangledName": "$s17tokenizeComponent18TokenizeControllerC7licenseSSvs",
+                "moduleName": "tokenizeComponent",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17tokenizeComponent18TokenizeControllerC7licenseSSvM",
+                "mangledName": "$s17tokenizeComponent18TokenizeControllerC7licenseSSvM",
+                "moduleName": "tokenizeComponent",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TokenizeController",
+                "printedName": "tokenizeComponent.TokenizeController",
+                "usr": "s:17tokenizeComponent18TokenizeControllerC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17tokenizeComponent18TokenizeControllerCACycfc",
+            "mangledName": "$s17tokenizeComponent18TokenizeControllerCACycfc",
+            "moduleName": "tokenizeComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "tokenizeStringMapData",
+            "printedName": "tokenizeStringMapData(data:key:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SdkResult",
+                "printedName": "core.SdkResult<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:4core9SdkResultC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17tokenizeComponent18TokenizeControllerC0A13StringMapData4data3key4core9SdkResultCySSGSS_SStF",
+            "mangledName": "$s17tokenizeComponent18TokenizeControllerC0A13StringMapData4data3key4core9SdkResultCySSGSS_SStF",
+            "moduleName": "tokenizeComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "tokenizeByteArray",
+            "printedName": "tokenizeByteArray(byteArray:key:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SdkResult",
+                "printedName": "core.SdkResult<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:4core9SdkResultC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17tokenizeComponent18TokenizeControllerC0A9ByteArray04byteF03key4core9SdkResultCySSG10Foundation4DataV_SStF",
+            "mangledName": "$s17tokenizeComponent18TokenizeControllerC0A9ByteArray04byteF03key4core9SdkResultCySSG10Foundation4DataV_SStF",
+            "moduleName": "tokenizeComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "tokenizeOCRResults",
+            "printedName": "tokenizeOCRResults(ocr:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SdkResult",
+                "printedName": "core.SdkResult<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:4core9SdkResultC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17tokenizeComponent18TokenizeControllerC0A10OCRResults3ocr4core9SdkResultCySSGSDyS2SG_tF",
+            "mangledName": "$s17tokenizeComponent18TokenizeControllerC0A10OCRResults3ocr4core9SdkResultCySSGSDyS2SG_tF",
+            "moduleName": "tokenizeComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:17tokenizeComponent18TokenizeControllerC",
+        "mangledName": "$s17tokenizeComponent18TokenizeControllerC",
+        "moduleName": "tokenizeComponent",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ITokenizeController",
+            "printedName": "ITokenizeController",
+            "usr": "s:4core19ITokenizeControllerP",
+            "mangledName": "$s4core19ITokenizeControllerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ILicensableController",
+            "printedName": "ILicensableController",
+            "usr": "s:4core21ILicensableControllerP",
+            "mangledName": "$s4core21ILicensableControllerP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "core",
+        "printedName": "core",
+        "declKind": "Import",
+        "moduleName": "tokenizeComponent"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tokenize-SPM\/SDK-Tokenize-SPM\/Sources\/tokenizeComponent\/Data\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 146,
+      "length": 32,
+      "value": "\"com.facephi.tokenize_component\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tokenize-SPM\/SDK-Tokenize-SPM\/Sources\/tokenizeComponent\/Data\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 218,
+      "length": 7,
+      "value": "\"1.4.2\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tokenize-SPM\/SDK-Tokenize-SPM\/Sources\/tokenizeComponent\/TokenizeController.swift",
+      "kind": "StringLiteral",
+      "offset": 216,
+      "length": 2,
+      "value": "\"\""
+    }
+  ]
+}
