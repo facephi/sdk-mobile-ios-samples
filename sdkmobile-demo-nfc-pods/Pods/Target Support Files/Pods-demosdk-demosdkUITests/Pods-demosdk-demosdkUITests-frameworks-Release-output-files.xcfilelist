@@ -1,0 +1,11 @@
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/core.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/licenseCheckerComponent.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/licensingComponent.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/sdk.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nfcComponent.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/statusComponent.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/trackingComponent.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FPBLicensingFrontend.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework
+${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework

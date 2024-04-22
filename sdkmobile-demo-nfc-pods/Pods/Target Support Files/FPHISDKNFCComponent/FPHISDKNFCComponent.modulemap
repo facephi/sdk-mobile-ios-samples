@@ -1,0 +1,6 @@
+framework module nfcComponent {
+  umbrella header "FPHISDKNFCComponent-umbrella.h"
+
+  export *
+  module * { export * }
+}

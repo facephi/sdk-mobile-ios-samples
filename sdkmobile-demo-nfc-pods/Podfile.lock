@@ -1,0 +1,56 @@
+PODS:
+  - FPHICORElicensingLite (1.1.0)
+  - FPHISDKCoreComponent (1.4.2):
+    - FPHISDKLicenseCheckerComponent (~> 1.3.0)
+  - FPHISDKLicenseCheckerComponent (1.3.1):
+    - FPHICORElicensingLite (~> 1.1.0)
+  - FPHISDKLicensingComponent (1.4.0):
+    - FPHISDKCoreComponent (~> 1.4.0)
+  - FPHISDKMainComponent (1.4.1):
+    - FPHISDKCoreComponent (~> 1.4.2)
+    - FPHISDKLicensingComponent (~> 1.4.0)
+  - FPHISDKNFCComponent (2.5.2):
+    - FPHISDKCoreComponent (~> 1.4.2)
+    - OpenSSL-Universal (= 1.1.1100)
+  - FPHISDKTrackingComponent (1.4.0):
+    - FPHISDKCoreComponent (~> 1.4.0)
+  - IQKeyboardManagerSwift (6.5.12)
+  - OpenSSL-Universal (1.1.1100)
+  - SwiftLint (0.52.3)
+
+DEPENDENCIES:
+  - FPHISDKMainComponent (~> 1.4.0)
+  - FPHISDKNFCComponent (~> 2.5.1)
+  - FPHISDKTrackingComponent (~> 1.4.0)
+  - IQKeyboardManagerSwift
+  - SwiftLint
+
+SPEC REPOS:
+  https://facephicorp.jfrog.io/artifactory/api/pods/cocoa-dev-fphi:
+    - FPHICORElicensingLite
+    - FPHISDKCoreComponent
+    - FPHISDKLicenseCheckerComponent
+    - FPHISDKLicensingComponent
+    - FPHISDKMainComponent
+    - FPHISDKNFCComponent
+    - FPHISDKTrackingComponent
+  trunk:
+    - IQKeyboardManagerSwift
+    - OpenSSL-Universal
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  FPHICORElicensingLite: 3016033a7c30e44d795703db291f16f994772f24
+  FPHISDKCoreComponent: 6dbb9e297cc9c163eb4497baf223f9c56e6e57a0
+  FPHISDKLicenseCheckerComponent: 0d523fa424069f919f9a84106f19a4411fca656d
+  FPHISDKLicensingComponent: e2b6583ed9963b2d08054417ffb47db2435adcea
+  FPHISDKMainComponent: d93ed42da15679b1efdbe0bd2ab48c1620866108
+  FPHISDKNFCComponent: eb089d282a3e05ac74e0714701abd70ee23efd57
+  FPHISDKTrackingComponent: e0e1830e8f666e7c1993e4b85a3f4150b186a02c
+  IQKeyboardManagerSwift: 371b08cb39664fb56030f5345c815a4ffc74bbc0
+  OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
+  SwiftLint: 76ec9c62ad369cff2937474cb34c9af3fa270b7b
+
+PODFILE CHECKSUM: 0d8930fcca1825c401b9a66885dab7b0bc3e186f
+
+COCOAPODS: 1.12.0

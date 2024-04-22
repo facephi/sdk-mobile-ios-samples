@@ -1,0 +1,37 @@
+{
+  "name": "FPHISDKNFCComponent",
+  "module_name": "nfcComponent",
+  "version": "2.7.99",
+  "summary": "A short description of NOMBREDELPOD.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/facephi",
+  "authors": {
+    "facephi@facephi.com": "facephi@facephi.com"
+  },
+  "source": {
+    "git": "."
+  },
+  "platforms": {
+    "ios": "13.0"
+  },
+  "xcconfig": {
+    "ENABLE_BITCODE": "NO"
+  },
+  "source_files": "Sources/**/*.{swift}",
+  "resource_bundles": {
+    "nfcComponent": [
+      "Sources/nfcComponent/**/*.{xcassets,strings,ttf,TTF,otf,OTF,json,pem,xib}"
+    ]
+  },
+  "dependencies": {
+    "FPHISDKCoreComponent": [
+      "~> 2.0.0"
+    ],
+    "OpenSSL-Universal": [
+      "1.1.1100"
+    ],
+    "FPHILottieSDKFramework": [
+      "~> 4.0"
+    ]
+  }
+}

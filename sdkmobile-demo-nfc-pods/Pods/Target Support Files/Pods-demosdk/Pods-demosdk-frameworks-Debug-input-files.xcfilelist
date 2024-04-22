@@ -1,0 +1,12 @@
+${PODS_ROOT}/Target Support Files/Pods-demosdk/Pods-demosdk-frameworks.sh
+${BUILT_PRODUCTS_DIR}/FPHISDKCoreComponent/core.framework
+${BUILT_PRODUCTS_DIR}/FPHISDKLicenseCheckerComponent/licenseCheckerComponent.framework
+${BUILT_PRODUCTS_DIR}/FPHISDKLicensingComponent/licensingComponent.framework
+${BUILT_PRODUCTS_DIR}/FPHISDKMainComponent/sdk.framework
+${BUILT_PRODUCTS_DIR}/FPHISDKNFCComponent/nfcComponent.framework
+${BUILT_PRODUCTS_DIR}/FPHISDKStatusComponent/statusComponent.framework
+${BUILT_PRODUCTS_DIR}/FPHISDKTrackingComponent/trackingComponent.framework
+${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/FPBLicensingFrontend/FPBLicensingFrontend.framework/FPBLicensingFrontend
+${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHILottieSDKFramework/Lottie.framework/Lottie
+${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL-Universal/OpenSSL.framework/OpenSSL

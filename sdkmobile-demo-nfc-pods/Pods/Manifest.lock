@@ -1,0 +1,78 @@
+PODS:
+  - FPBLicensingFrontend (2.0.0)
+  - FPHILottieSDKFramework (4.4.0)
+  - FPHISDKCoreComponent (2.0.99):
+    - FPHISDKLicenseCheckerComponent (~> 2.0.0)
+  - FPHISDKLicenseCheckerComponent (2.0.99):
+    - FPBLicensingFrontend (~> 2.0.0)
+  - FPHISDKLicensingComponent (2.0.99):
+    - FPHISDKCoreComponent (~> 2.0.0)
+  - FPHISDKMainComponent (2.0.99):
+    - FPHISDKCoreComponent (~> 2.0.0)
+    - FPHISDKLicensingComponent (~> 2.0.0)
+  - FPHISDKNFCComponent (2.7.99):
+    - FPHILottieSDKFramework (~> 4.0)
+    - FPHISDKCoreComponent (~> 2.0.0)
+    - OpenSSL-Universal (= 1.1.1100)
+  - FPHISDKStatusComponent (2.0.99):
+    - FPHILottieSDKFramework (~> 4.4.0)
+    - FPHISDKCoreComponent (~> 2.0.0)
+  - FPHISDKTrackingComponent (2.0.99):
+    - FPHISDKCoreComponent (~> 2.0.0)
+  - IQKeyboardManagerSwift (7.0.2)
+  - OpenSSL-Universal (1.1.1100)
+  - SwiftLint (0.54.0)
+
+DEPENDENCIES:
+  - FPHISDKCoreComponent (from `../../SDK-Core-SPM/FPHISDKCoreComponent-Test.podspec`)
+  - FPHISDKLicenseCheckerComponent (from `../../SDK-LicenseChecker-SPM/FPHISDKLicenseCheckerComponent-Test.podspec`)
+  - FPHISDKLicensingComponent (from `../../SDK-Licensing-SPM/FPHISDKLicensingComponent-Test.podspec`)
+  - FPHISDKMainComponent (from `../../SDK-Sdk-SPM/FPHISDKMainComponent-Test.podspec`)
+  - FPHISDKNFCComponent (from `../../NFCDocumentReader/FPHISDKNFCComponent-Test.podspec`)
+  - FPHISDKStatusComponent (from `../../SDK-StatusComponent-SPM/FPHISDKStatusComponent-Test.podspec`)
+  - FPHISDKTrackingComponent (from `../../SDK-Tracking_component-SPM/FPHISDKTrackingComponent-Test.podspec`)
+  - IQKeyboardManagerSwift
+  - SwiftLint
+
+SPEC REPOS:
+  https://facephicorp.jfrog.io/artifactory/api/pods/cocoa-dev-fphi:
+    - FPBLicensingFrontend
+    - FPHILottieSDKFramework
+  trunk:
+    - IQKeyboardManagerSwift
+    - OpenSSL-Universal
+    - SwiftLint
+
+EXTERNAL SOURCES:
+  FPHISDKCoreComponent:
+    :path: "../../SDK-Core-SPM/FPHISDKCoreComponent-Test.podspec"
+  FPHISDKLicenseCheckerComponent:
+    :path: "../../SDK-LicenseChecker-SPM/FPHISDKLicenseCheckerComponent-Test.podspec"
+  FPHISDKLicensingComponent:
+    :path: "../../SDK-Licensing-SPM/FPHISDKLicensingComponent-Test.podspec"
+  FPHISDKMainComponent:
+    :path: "../../SDK-Sdk-SPM/FPHISDKMainComponent-Test.podspec"
+  FPHISDKNFCComponent:
+    :path: "../../NFCDocumentReader/FPHISDKNFCComponent-Test.podspec"
+  FPHISDKStatusComponent:
+    :path: "../../SDK-StatusComponent-SPM/FPHISDKStatusComponent-Test.podspec"
+  FPHISDKTrackingComponent:
+    :path: "../../SDK-Tracking_component-SPM/FPHISDKTrackingComponent-Test.podspec"
+
+SPEC CHECKSUMS:
+  FPBLicensingFrontend: f12838bde841f703f89d30666bbb801735a2441c
+  FPHILottieSDKFramework: fc10f5752a3c650a659c075d8c9e42aff0c35bc4
+  FPHISDKCoreComponent: 0de1643ee3d90bacd0efd8c5c548ec85855a700f
+  FPHISDKLicenseCheckerComponent: d4ad34613e5b9b4ec606d236fd66762ba6a11a6e
+  FPHISDKLicensingComponent: 26c3a89a33c0bba4dd8692d2ac9360e23183cc27
+  FPHISDKMainComponent: c808af9f89dc10eab756cd94cfd911acd00bf187
+  FPHISDKNFCComponent: 66dbba3ff55eb392d6dfa0ef1f595529c412a469
+  FPHISDKStatusComponent: 9bedc1584bcaa2b5adb13888c2d2a7cb0362aabe
+  FPHISDKTrackingComponent: 90c5f67a2f9f552b03400e0f32e5c2ec1b0e7e94
+  IQKeyboardManagerSwift: d338c11a896e9f29603443700c4567e32f830c22
+  OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
+  SwiftLint: c1de071d9d08c8aba837545f6254315bc900e211
+
+PODFILE CHECKSUM: 13875436ed964fc031dd29ebb3b13a21e1be2026
+
+COCOAPODS: 1.13.0

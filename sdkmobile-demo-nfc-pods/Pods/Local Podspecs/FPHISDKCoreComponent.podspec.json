@@ -1,0 +1,26 @@
+{
+  "name": "FPHISDKCoreComponent",
+  "version": "2.0.99",
+  "summary": "A short description of NOMBREDELPOD.",
+  "module_name": "core",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/facephi",
+  "authors": {
+    "facephi@facephi.com": "facephi@facephi.com"
+  },
+  "source": {
+    "git": "."
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "xcconfig": {
+    "ENABLE_BITCODE": "NO"
+  },
+  "source_files": "Sources/**/*.{swift}",
+  "dependencies": {
+    "FPHISDKLicenseCheckerComponent": [
+      "~> 2.0.0"
+    ]
+  }
+}

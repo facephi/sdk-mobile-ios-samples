@@ -1,0 +1,6 @@
+framework module licensingComponent {
+  umbrella header "FPHISDKLicensingComponent-umbrella.h"
+
+  export *
+  module * { export * }
+}

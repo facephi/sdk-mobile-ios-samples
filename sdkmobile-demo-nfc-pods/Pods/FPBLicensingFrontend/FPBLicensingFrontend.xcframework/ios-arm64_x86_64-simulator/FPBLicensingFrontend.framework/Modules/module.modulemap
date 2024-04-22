@@ -1,0 +1,5 @@
+framework module FPBLicensingFrontend {
+umbrella "."
+requires c99
+export *
+}

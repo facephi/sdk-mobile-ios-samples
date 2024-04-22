@@ -1,0 +1,13 @@
+CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
+ENABLE_BITCODE = NO
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/FPHISDKCoreComponent" "${PODS_CONFIGURATION_BUILD_DIR}/FPHISDKLicenseCheckerComponent" "${PODS_CONFIGURATION_BUILD_DIR}/FPHISDKLicensingComponent" "${PODS_CONFIGURATION_BUILD_DIR}/FPHISDKMainComponent" "${PODS_CONFIGURATION_BUILD_DIR}/FPHISDKNFCComponent" "${PODS_CONFIGURATION_BUILD_DIR}/FPHISDKStatusComponent" "${PODS_CONFIGURATION_BUILD_DIR}/FPHISDKTrackingComponent" "${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift" "${PODS_ROOT}/FPBLicensingFrontend" "${PODS_ROOT}/FPHILottieSDKFramework" "${PODS_ROOT}/OpenSSL-Universal/Frameworks" "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPBLicensingFrontend" "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHILottieSDKFramework" "${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL-Universal"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/FPHISDKCoreComponent/core.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/FPHISDKLicenseCheckerComponent/licenseCheckerComponent.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/FPHISDKLicensingComponent/licensingComponent.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/FPHISDKMainComponent/sdk.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/FPHISDKNFCComponent/nfcComponent.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/FPHISDKStatusComponent/statusComponent.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/FPHISDKTrackingComponent/trackingComponent.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers"
+LIBRARY_SEARCH_PATHS = $(inherited) $(SDKROOT)/usr/lib/swift
+OTHER_LDFLAGS = $(inherited) -l"c++" -l"swiftCoreGraphics" -framework "CoreGraphics" -framework "FPBLicensingFrontend" -framework "Foundation" -framework "IQKeyboardManagerSwift" -framework "Lottie" -framework "OpenSSL" -framework "QuartzCore" -framework "UIKit" -framework "core" -framework "licenseCheckerComponent" -framework "licensingComponent" -framework "nfcComponent" -framework "sdk" -framework "statusComponent" -framework "trackingComponent"
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods
+PODS_XCFRAMEWORKS_BUILD_DIR = $(PODS_CONFIGURATION_BUILD_DIR)/XCFrameworkIntermediates
+USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES

@@ -1,0 +1,6 @@
+framework module sdk {
+  umbrella header "FPHISDKMainComponent-umbrella.h"
+
+  export *
+  module * { export * }
+}
