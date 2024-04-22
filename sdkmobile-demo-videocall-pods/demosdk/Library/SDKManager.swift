@@ -7,19 +7,12 @@
 
 import core
 import Foundation
-import nfcComponent
-import captureComponent
-//import phingersComponent
 import sdk
-import selphiComponent
-import selphidComponent
 import trackingComponent
 import UIKit
 import videocallComponent
-import videoidComponent
 import tokenizeComponent
 import behaviorComponent
-import voiceIDComponent
 
 protocol SDKManagerDelegate: AnyObject {
     func log(msg: String)
@@ -85,93 +78,6 @@ class SDKManager {
         )
     }
     
-    public func launchSelphi(setTracking: Bool, viewController: UIViewController, selphiConfigurationData: SelphiConfigurationData, output: @escaping (SdkResult<SelphiResult>) -> Void) {
-        log("LAUNCH SELPHI")
-
-        let controller = SelphiController(data: selphiConfigurationData, output: output, viewController: viewController)
-        if setTracking {
-            SDKController.shared.launch(controller: controller)
-        } else {
-            SDKController.shared.launchMethod(controller: controller)
-        }
-    }
-    
-    public func launchSelphId(setTracking: Bool, viewController: UIViewController, selphIDConfigurationData: SelphIDConfigurationData, output: @escaping (SdkResult<SelphIDResult>) -> Void) {
-        log("LAUNCH SELPHID")
-        
-        let controller = SelphIDController(data: selphIDConfigurationData, output: output, viewController: viewController)
-        if setTracking {
-            SDKController.shared.launch(controller: controller)
-        } else {
-            SDKController.shared.launchMethod(controller: controller)
-        }
-    }
-    
-//    public func launchPhingers(setTracking: Bool, viewController: UIViewController, phingersConfigurationData: PhingersConfigurationData, output: @escaping (SdkResult<PhingersResult>) -> Void){
-//        log("LAUNCH PHINGERS")
-//        
-//        let controller = PhingersController(data: phingersConfigurationData, output: output, viewController: viewController)
-//        if setTracking {
-//            SDKController.shared.launch(controller: controller)
-//        } else {
-//            SDKController.shared.launchMethod(controller: controller)
-//        }
-//    }
-    
-//    public func matchPhinger(setTracking: Bool, phingersMatcherConfigurationData: PhingersMatcherConfigurationData, output: @escaping(SdkResult<FingersMatchResult>) -> Void)
-//    {
-//        log("LAUNCH MATCH")
-//        let controller = PhingersMatcherController(data: phingersMatcherConfigurationData, output: output)
-//        if setTracking{
-//            SDKController.shared.launch(controller: controller)
-//        } else {
-//            SDKController.shared.launchMethod(controller: controller)
-//        }
-//    }
-    
-    public func launchNfc(setTracking: Bool, viewController: UIViewController, nfcConfigurationData: NfcConfigurationData, output: @escaping (SdkResult<NfcResult>) -> Void) {
-        log("LAUNCH NFC")
-        
-        let controller = NfcController(data: nfcConfigurationData, viewController: viewController, output: output, stateDelegate: nil)
-        if setTracking {
-            SDKController.shared.launch(controller: controller)
-        } else {
-            SDKController.shared.launchMethod(controller: controller)
-        }
-    }
-    
-    public func launchQrGenerator(setTracking: Bool, viewController: UIViewController, qrGeneratorConfigurationData: QrGeneratorConfigurationData, output: @escaping (SdkResult<UIImage>) -> Void) {
-        log("LAUNCH QR GENERATOR")
-        let controller = QrGeneratorController(data: qrGeneratorConfigurationData, output: output, viewController: viewController)
-        if setTracking {
-            SDKController.shared.launch(controller: controller)
-        } else {
-            SDKController.shared.launchMethod(controller: controller)
-        }
-    }
-    
-    public func launchQrReader(setTracking: Bool, viewController: UIViewController, qrReaderConfigurationData: CaptureConfigurationData, output: @escaping (SdkResult<String>) -> Void) {
-        log("LAUNCH QR READER")
-        
-        let controller = QrReaderController(data: qrReaderConfigurationData, output: output, viewController: viewController)
-        if setTracking {
-            SDKController.shared.launch(controller: controller)
-        } else {
-            SDKController.shared.launchMethod(controller: controller)
-        }
-    }
-    
-    public func launchPhacturas(setTracking: Bool, viewController: UIViewController, output: @escaping (SdkResult<String>) -> Void) {
-        log("LAUNCH INVOICE")
-
-        let controller = InvoiceReaderController(output: output, viewController: viewController)
-        if setTracking {
-            SDKController.shared.launch(controller: controller)
-        } else {
-            SDKController.shared.launchMethod(controller: controller)
-        }
-    }
-    
     public func launchExtradata() -> SdkResult<String> {
         SDKController.shared.getExtraData()
     }
@@ -182,119 +88,6 @@ class SDKManager {
         
         let videocallController = VideoCallController(data: data, output: output, viewController: viewController)
         SDKController.shared.launch(controller: videocallController)
-    }
-    
-    public func launchVideoId(data: VideoIDConfigurationData, setTracking: Bool, viewController: UIViewController, output: @escaping (SdkResult<String>) -> Void)
-    {
-        log("LAUNCH VIDEO ID")
-        
-        let videoidController = VideoIdController(data: data, output: output, viewController: viewController)
-        SDKController.shared.launch(controller: videoidController)
-    }
-        
-    public func launchVoiceId(data: VoiceConfigurationData, setTracking: Bool, viewController: UIViewController, output: @escaping (SdkResult<VoiceResult>) -> Void)
-    {
-        log("LAUNCH VOICE ID")
-        
-        let controller = VoiceController(
-            data: data,
-            viewController: viewController,
-            output: { sdkResult in
-                let voiceIdSdkResult = SdkResult(finishStatus: sdkResult.finishStatus, errorType: sdkResult.errorType, data: sdkResult.data)
-                output(voiceIdSdkResult)
-            })
-        SDKController.shared.launchTrackTokenizableMethod(controller: controller)
-    }
-    
-    public func launchCheckLiveness(bestImage: String, extradata: String, baseUrl: String, methodPassiveLivenesTracking: String) -> String {
-        log("LAUNCH CHECKLIVENESS")
-        
-        var result = " "
-        let extraDataResult = SDKController.shared.getExtraData()
-        
-        if extraDataResult.finishStatus == .STATUS_OK,
-           let data = extraDataResult.data {
-            let parameters = "{\n\"image\": \"\(bestImage)\" ,\n \"extraData\": \"\(extradata)\"\n}"
-            let postData = parameters.data(using: .utf8)
-            
-            var request = URLRequest(url: URL(string: baseUrl + methodPassiveLivenesTracking)!, timeoutInterval: Double.infinity)
-            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.httpMethod = "POST"
-            request.httpBody = postData
-            
-            let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                guard let data = data else {
-                    print(String(describing: error))
-                    return
-                }
-                print("REQUEST CHECKLIVENESS")
-                print(String(data: data, encoding: .utf8)!)
-                result = String(data: data, encoding: .utf8)!
-            }
-            
-            task.resume()
-            
-            return result
-        } else {
-            log("LAUNCH CHECK LIVENESS -> KO")
-        }
-        return "Not implemented"
-    }
-    
-    public func launchCheckAuth(tokenFaceImage: String, bestImage: String, extradata: String, baseUrl: String, methodAuth: String) -> String {
-        log("LAUNCH AUTHENTICATION FACIAL")
-        var result = ""
-        let parameters = "{\n\t\"documentTemplate\": \"\(tokenFaceImage)\",\n    \"image1\": \"\(bestImage)\",\n    \"extraData\": \"\(extradata)\"\n}"
-        let postData = parameters.data(using: .utf8)
-        
-        var request = URLRequest(url: URL(string: baseUrl + methodAuth)!,timeoutInterval: Double.infinity)
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "POST"
-        request.httpBody = postData
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data else {
-                print(String(describing: error))
-                return
-            }
-            print("REQUEST AUTHENTICATION")
-            print(String(data: data, encoding: .utf8)!)
-            
-            result = String(data: data, encoding: .utf8)!
-        }
-        task.resume()
-        
-        return result
-    }
-    
-    public func launchVoiceEnrollment(audios: [String], baseVoiceUrl: String, methodAuth: String, output: @escaping (SdkResult<VoiceEnrollmentResult>) -> Void) {
-        log("LAUNCH VOICE MATCHING")
-        let voiceEnrollmentController = VoiceEnrollmentController(audios: audios, baseVoiceUrl: baseVoiceUrl, methodAuth: methodAuth, output: output)
-        SDKController.shared.launchMethod(controller: voiceEnrollmentController)
-    }
-    
-    public func launchVoiceMatching(audio: String, template: String, liveness_threshold: Double, baseVoiceUrl: String, methodAuth: String, output: @escaping (String) -> Void) {
-        log("LAUNCH VOICE MATCHING")
-        let voiceMatchingController = VoiceMatchingController(audio: audio,
-                                                              template: template,
-                                                              liveness_threshold: liveness_threshold,
-                                                              baseVoiceUrl: baseVoiceUrl,
-                                                              methodAuth: methodAuth,
-                                                              output: { sdkResult in
-            guard let matchingResult = sdkResult.data else {
-                output("launchVoiceMatching failed with error: \(sdkResult.errorType)")
-                return
-            }
-            output("launchVoiceMatching succeeded with:\n\(matchingResult)")
-        })
-        SDKController.shared.launchMethod(controller: voiceMatchingController)
-    }
-    
-    public func newOperation(operationType: OperationType, customerId: String, output: @escaping (SdkResult<String>) -> Void) {
-        log("newOperation - start, device, coordinates, customerId - \(customerId)")
-
-        SDKController.shared.newOperation(operationType: operationType, customerId: customerId, output: output)
-        behaviorController?.registerPosition(position: "MAIN_SCREEN")
     }
     
     public func closeSession() {
@@ -316,18 +109,11 @@ class SDKManager {
         log(finalMsg)
     }
     
-    public func launchGenerateRawTemplate() {
-        log("LAUNCH GENERATE RAW TEMPLATE")
-        
-        let controller = RawTemplateController(
-            base64: SdkConfigurationManager.base64,
-            output: { sdkResult in
-                self.showSdkResult(msg: "GENERATE RAW TEMPLATE - RESULT", sdkResultDict:
-                                ["FinishStatus": sdkResult.finishStatus,
-                                 "ErrorType": sdkResult.errorType,
-                                 "Data": sdkResult.data?.count])
-            })
-        SDKController.shared.launchMethod(controller: controller)
+    public func newOperation(operationType: OperationType, customerId: String, output: @escaping (SdkResult<String>) -> Void) {
+        log("newOperation - start, device, coordinates, customerId - \(customerId)")
+
+        SDKController.shared.newOperation(operationType: operationType, customerId: customerId, output: output)
+        behaviorController?.registerPosition(position: "MAIN_SCREEN")
     }
     
     func setCustomerId(customerId: String) {

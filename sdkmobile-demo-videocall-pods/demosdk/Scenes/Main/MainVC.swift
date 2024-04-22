@@ -10,10 +10,8 @@ import UIKit
 class MainVC: UIViewController {
     // MARK: - ENUM
     private enum ButtonTag: Int {
-        case setupEnvironment = 1, newOperation, checkLiveness, checkFaceAuth
-        case selphi, selphid, nfc, phingers, videoCall, videoId, generateRawTemplate,
-             tokenize, license, generateQr, launchQr, launchPhacturas, voiceId,
-             playAudios, voiceEnrollment, voiceMatching, matchPhinger, clearLogs
+        case newOperation = 1, videoCall,
+             tokenize, license, clearLogs
     }
 
     // MARK: - OUTLET
@@ -34,12 +32,6 @@ class MainVC: UIViewController {
     private func clearText() {
         show(msg: "")
     }
-    
-    private func loadAudiosView() {
-        let vc = AudioPlayVC(numberOfAudios: SdkConfigurationManager.voiceIDConfiguration.phrases.count)
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
-    }
 
     // MARK: - EVENTS
     // swiftlint:disable cyclomatic_complexity
@@ -49,48 +41,14 @@ class MainVC: UIViewController {
         }
         clearText()
         switch ButtonTag(rawValue: button.tag) {
-        case .setupEnvironment:
-            break
         case .newOperation:
             viewModel.newOperation()
-        case .checkLiveness:
-            viewModel.checkLiveness()
-        case .checkFaceAuth:
-            viewModel.checkAuth()
-        case .selphi:
-            viewModel.selphi()
-        case .selphid:
-            viewModel.selphID()
-        case .nfc:
-            viewModel.nfc()
-        case .phingers:
-            viewModel.phingers()
         case .videoCall:
             viewModel.videoCall()
-        case .videoId:
-            viewModel.videoId()
-        case .voiceId:
-            viewModel.voiceId()
-        case .playAudios:
-            loadAudiosView()
-        case .voiceEnrollment:
-            viewModel.voiceEnrollment()
-        case .voiceMatching:
-            viewModel.voiceMatching()
-        case .generateRawTemplate:
-            viewModel.generateRawTemplate()
         case .tokenize:
             viewModel.tokenizeExtradata()
         case .license:
             viewModel.getLicense()
-        case .generateQr:
-            viewModel.generateQr()
-        case .launchQr:
-            viewModel.launchQr()
-        case .launchPhacturas:
-            viewModel.launchPhacturas()
-        case .matchPhinger:
-            viewModel.matchPhinger()
         case .clearLogs:
             clearText()
         default:

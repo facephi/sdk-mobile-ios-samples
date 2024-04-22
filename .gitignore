@@ -1,7 +1,9 @@
 
 sdkmobile-demo-classic-pods/Pods/
 sdkmobile-demo-classic-pods/Podfile.lock
-sdkmobile-demo-classic-videocall/Pods/
-sdkmobile-demo-classic-videocall/Podfile.lock
-sdkmobile-demo-classic-voiceid/Pods/
-sdkmobile-demo-classic-voiceid/Podfile.lock
+sdkmobile-demo-nfc-pods/Pods/
+sdkmobile-demo-nfc-pods/Podfile.lock
+sdkmobile-demo-voiceid-pods/Pods/
+sdkmobile-demo-voiceid-pods/Podfile.lock
+sdkmobile-demo-videocall-pods/Pods/
+sdkmobile-demo-videocall-pods/Podfile.lock

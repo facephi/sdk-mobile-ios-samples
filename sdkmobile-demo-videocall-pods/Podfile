@@ -18,54 +18,32 @@ target 'demosdk' do
   
 ##### Remote Dependencies
   pod 'FPHISDKLicenseCheckerComponent', '~> 1.4.0'
-  pod 'FPHISDKCoreComponent', '~> 1.4.5'
-  pod 'FPHISDKLicensingComponent', '~> 1.4.1'
-  pod 'FPHISDKMainComponent', '~> 1.4.4'
-  pod 'FPHISDKTrackingComponent', '~> 1.4.3'
-  pod 'FPHISDKSelphIDComponent', '~> 1.4.5'
-  pod 'FPHISDKSelphiComponent', '~> 1.4.5'
-  pod 'FPHISDKNFCComponent', '~> 2.6.4'
-  pod 'FPHISDKVideoIDComponent', '~> 1.4.13'
-  pod 'FPHISDKVideoCallComponent', '~> 1.4.8'
+  pod 'FPHISDKCoreComponent', '~> 1.4.0'
+  pod 'FPHISDKLicensingComponent', '~> 1.4.0'
+  pod 'FPHISDKMainComponent', '~> 1.4.0'
+  pod 'FPHISDKTrackingComponent', '~> 1.4.0'
+  pod 'FPHISDKVideoCallComponent', '~> 1.4.0'
   pod 'FPHISDKTokenizeComponent', '~> 1.4.2'
-  pod 'FPHISDKPhingersComponent', '~> 1.4.7'
-  pod 'FPHISDKCaptureComponent', '~> 1.4.5'
   pod 'FPHISDKBehaviorComponent', '~> 1.4.1'
-  pod 'FPHISDKVoiceIDComponent', '~> 1.4.6'
   
 ##### Use with local Sources
 #  pod 'FPHISDKLicenseCheckerComponent', :path => "../../SDK-LicenseChecker-SPM/FPHISDKLicenseCheckerComponent-Test.podspec"
 #  pod 'FPHISDKCoreComponent', :path => "../../SDK-Core-SPM/FPHISDKCoreComponent-Test.podspec"
 #  pod 'FPHISDKLicensingComponent', :path => "../../SDK-Licensing-SPM/FPHISDKLicensingComponent-Test.podspec"
-#  pod 'FPHISDKMainComponent',:path => "../../SDK-Sdk-SPM/FPHISDKMainComponent-Test.podspec"
-#  pod 'FPHISDKSelphIDComponent',:path => "../../SDK-SelphidComponent/FPHISDKSelphIDComponent-Test.podspec"
-#  pod 'FPHISDKTrackingComponent', :path => "../../SDK-Tracking_component-SPM/FPHISDKTrackingComponent-Test.podspec"
-#  pod 'FPHISDKSelphiComponent',:path => "../../SDK-Selphi_component-SPM/FPHISDKSelphiComponent-Test.podspec"
-#  pod 'FPHISDKNFCComponent',:path => "../../NFCDocumentReader/FPHISDKNFCComponent-Test.podspec"
-#  pod 'FPHISDKVideoIDComponent', :path => "../../SDK-VideoID-SPM/FPHISDKVideoIDComponent-Test.podspec"
+#  pod 'FPHISDKMainComponent',:path => "../../SDK-Sdk-SPM/FPHISDKMainComponent-Test.podspec"#  pod 'FPHISDKTrackingComponent', :path => "../../SDK-Tracking_component-SPM/FPHISDKTrackingComponent-Test.podspec"
 #  pod 'FPHISDKVideoCallComponent', :path => "../../SDK-Videocall-SPM/FPHISDKVideoCallComponent-Test.podspec"
 #  pod 'FPHISDKTokenizeComponent', :path => "../../SDK-Tokenize-SPM/FPHISDKTokenizeComponent-Test.podspec"
-#  pod 'FPHISDKPhingersComponent', :path => "../../SDK-PhingersComponent/FPHISDKPhingersComponent-Test.podspec"
-#  pod 'FPHISDKCaptureComponent',:path => "../../SDK-Capture_component-SPM/FPHISDKCaptureComponent-Test.podspec"
 #  pod 'FPHISDKBehaviorComponent',:path => "../../SDK-BehaviorComponent-SPM/FPHISDKBehaviorComponent-Test.podspec"
-#  pod 'FPHISDKVoiceIDComponent', :path => "../../SDK-Voice-SPM/FPHISDKVoiceIDComponent-Test.podspec"
 
 ##### Use with local-compiled xcframeworks
 #  pod 'FPHISDKLicenseCheckerComponent', :path => "../../SDK-LicenseChecker-SPM/FPHISDKLicenseCheckerComponent-template.podspec"
 #  pod 'FPHISDKCoreComponent', :path => "../../SDK-Core-SPM/FPHISDKCoreComponent-template.podspec"
 #  pod 'FPHISDKLicensingComponent', :path => "../../SDK-Licensing-SPM/FPHISDKLicensingComponent-template.podspec"
 #  pod 'FPHISDKMainComponent',:path => "../../SDK-Sdk-SPM/FPHISDKMainComponent-template.podspec"
-#  pod 'FPHISDKSelphIDComponent',:path => "../../SDK-SelphidComponent/FPHISDKSelphIDComponent-template.podspec"
 #  pod 'FPHISDKTrackingComponent', :path => "../../SDK-Tracking_component-SPM/FPHISDKTrackingComponent-template.podspec"
-#  pod 'FPHISDKSelphiComponent',:path => "../../SDK-Selphi_component-SPM/FPHISDKSelphiComponent-template.podspec"
-# pod 'FPHISDKNFCComponent',:path => "../../NFCDocumentReader/FPHISDKNFCComponent-template.podspec"
-#  pod 'FPHISDKCaptureComponent',:path => "../../SDK-CaptureComponent-SPM/FPHISDKCaptureComponent-template.podspec"
-#  pod 'FPHISDKVideoIDComponent', :path => "../../SDK-VideoID-SPM/FPHISDKVideoIDComponent-template.podspec"
 #  pod 'FPHISDKVideoCallComponent', :path => "../../SDK-Videocall-SPM/FPHISDKVideoCallComponent-template.podspec"
 #  pod 'FPHISDKTokenizeComponent', :path => "../../SDK-Tokenize-SPM/FPHISDKTokenizeComponent-template.podspec"
-#  pod 'FPHISDKPhingersComponent', :path => "../../SDK-PhingersComponent/FPHISDKPhingersComponent-template.podspec"
 #  pod 'FPHISDKBehaviorComponent',:path => "../../SDK-BehaviorComponent-SPM/FPHISDKBehaviorComponent-template.podspec"
-#  pod 'FPHISDKVoiceIDComponent', :path => "../../SDK-Voice-SPM/FPHISDKVoiceIDComponent-template.podspec"
 
   target 'demosdkTests' do
     inherit! :search_paths
@@ -80,23 +58,12 @@ end
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
-      config.build_settings['EXPANDED_CODE_SIGN_IDENTITY'] = ""
-        config.build_settings['CODE_SIGNING_REQUIRED'] = "NO"
-        config.build_settings['CODE_SIGNING_ALLOWED'] = "NO"
-    end
-  end
-  installer.aggregate_targets.each do |target|
-    target.xcconfigs.each do |variant, xcconfig|
-      xcconfig_path = target.client_root + target.xcconfig_relative_path(variant)
-      IO.write(xcconfig_path, IO.read(xcconfig_path).gsub("DT_TOOLCHAIN_DIR", "TOOLCHAIN_DIR"))
-    end
-  end
-  installer.pods_project.targets.each do |target|
-    target.build_configurations.each do |config|
-      if config.base_configuration_reference.is_a? Xcodeproj::Project::Object::PBXFileReference
-        xcconfig_path = config.base_configuration_reference.real_path
-        IO.write(xcconfig_path, IO.read(xcconfig_path).gsub("DT_TOOLCHAIN_DIR", "TOOLCHAIN_DIR"))
+      if target.name == 'zipzap'
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.0'
       end
+      config.build_settings['EXPANDED_CODE_SIGN_IDENTITY'] = ""
+      config.build_settings['CODE_SIGNING_REQUIRED'] = "NO"
+      config.build_settings['CODE_SIGNING_ALLOWED'] = "NO"
     end
   end
 end
