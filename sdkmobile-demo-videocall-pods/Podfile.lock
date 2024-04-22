@@ -1,0 +1,325 @@
+PODS:
+  - AgoraRtcEngine_iOS (3.7.2):
+    - AgoraRtcEngine_iOS/AINS (= 3.7.2)
+    - AgoraRtcEngine_iOS/AV1Dec (= 3.7.2)
+    - AgoraRtcEngine_iOS/ContentInspect (= 3.7.2)
+    - AgoraRtcEngine_iOS/FullAudioFormat (= 3.7.2)
+    - AgoraRtcEngine_iOS/ReplayKit (= 3.7.2)
+    - AgoraRtcEngine_iOS/ROIEnc (= 3.7.2)
+    - AgoraRtcEngine_iOS/RtcBasic (= 3.7.2)
+    - AgoraRtcEngine_iOS/SpatialAudio (= 3.7.2)
+    - AgoraRtcEngine_iOS/SuperResolution (= 3.7.2)
+    - AgoraRtcEngine_iOS/VideoPreprocess (= 3.7.2)
+    - AgoraRtcEngine_iOS/VirtualBackground (= 3.7.2)
+  - AgoraRtcEngine_iOS/AINS (3.7.2)
+  - AgoraRtcEngine_iOS/AV1Dec (3.7.2)
+  - AgoraRtcEngine_iOS/ContentInspect (3.7.2)
+  - AgoraRtcEngine_iOS/FullAudioFormat (3.7.2)
+  - AgoraRtcEngine_iOS/ReplayKit (3.7.2)
+  - AgoraRtcEngine_iOS/ROIEnc (3.7.2)
+  - AgoraRtcEngine_iOS/RtcBasic (3.7.2)
+  - AgoraRtcEngine_iOS/SpatialAudio (3.7.2)
+  - AgoraRtcEngine_iOS/SuperResolution (3.7.2)
+  - AgoraRtcEngine_iOS/VideoPreprocess (3.7.2)
+  - AgoraRtcEngine_iOS/VirtualBackground (3.7.2)
+  - FPBTokenizer (1.1.0)
+  - FPHIBehaviorSDK (6.13.2)
+  - FPHICORElicensingLite (1.1.0)
+  - FPHILottieSDKFramework (4.2.0)
+  - FPhiMBWidgetiOS (5.20.0)
+  - FPHIOpenCV (4.5.3):
+    - TensorFlowLiteObjC (= 2.7.0)
+  - FPHIPhingersCamera (8.3.2):
+    - FPHIPhingersCore (= 8.1.1)
+    - TensorFlowLiteObjC (= 2.7.0)
+  - FPHIPhingersCore (8.1.1):
+    - FPHIOpenCV (= 4.5.3)
+  - FPHISDKBehaviorComponent (1.4.99):
+    - FPHIBehaviorSDK (= 6.13.2)
+    - FPHISDKCoreComponent (~> 1.4.5)
+  - FPHISDKCaptureComponent (1.4.99):
+    - FPHISDKCoreComponent (~> 1.4.5)
+  - FPHISDKCoreComponent (1.4.99):
+    - FPHISDKLicenseCheckerComponent (~> 1.3.0)
+  - FPHISDKLicenseCheckerComponent (1.3.99):
+    - FPHICORElicensingLite (~> 1.1.0)
+  - FPHISDKLicensingComponent (1.4.99):
+    - FPHISDKCoreComponent (~> 1.4.5)
+  - FPHISDKMainComponent (1.4.99):
+    - FPHISDKCoreComponent (~> 1.4.5)
+    - FPHISDKLicensingComponent (~> 1.4.0)
+  - FPHISDKNFCComponent (2.6.99):
+    - FPHILottieSDKFramework (~> 4.0)
+    - FPHISDKCoreComponent (~> 1.4.5)
+    - OpenSSL-Universal (= 1.1.1100)
+  - FPHISDKPhingersComponent (1.4.99):
+    - FPHILottieSDKFramework (~> 4.0)
+    - FPHIPhingersCamera (= 8.3.2)
+    - FPHISDKCoreComponent (~> 1.4.2)
+  - FPHISDKSelphiComponent (1.4.99):
+    - FPHISDKCoreComponent (~> 1.4.2)
+    - FPHISelphiFrameworks (~> 5.11.0)
+  - FPHISDKSelphIDComponent (1.4.99):
+    - FPHISDKCoreComponent (~> 1.4.2)
+    - FPhiSelphIDWidgetiOS (~> 1.21.0)
+  - FPHISDKTokenizeComponent (1.4.99):
+    - FPBTokenizer (~> 1.1.0)
+    - FPHISDKCoreComponent (~> 1.4.5)
+  - FPHISDKTrackingComponent (1.4.99):
+    - FPHISDKCoreComponent (~> 1.4.5)
+  - FPHISDKVideoCallComponent (1.4.99):
+    - AgoraRtcEngine_iOS (~> 3.7.1)
+    - FPHILottieSDKFramework (~> 4.0)
+    - FPHISDKCoreComponent (~> 1.4.2)
+    - Starscream (= 4.0.6)
+  - FPHISDKVideoIDComponent (1.4.99):
+    - AgoraRtcEngine_iOS (~> 3.7.1)
+    - FPHILottieSDKFramework (~> 4.0)
+    - FPHISDKCoreComponent (~> 1.4.5)
+    - Starscream (= 4.0.6)
+  - FPHISDKVoiceIDComponent (1.4.99):
+    - FPHILottieSDKFramework (~> 4.0)
+    - FPHISDKCoreComponent (~> 1.4.5)
+    - FPHIVoiceSDK (~> 3.12.1)
+  - FPhiSelphIDWidgetiOS (1.21.0):
+    - FPhiMBWidgetiOS (= 5.20.0)
+    - GoogleMLKit/TextRecognition (= 3.2.0)
+    - GoogleMLKit/TextRecognitionJapanese (= 3.2.0)
+    - GoogleMLKit/TextRecognitionKorean (= 3.2.0)
+    - zipzap
+  - FPHISelphiFrameworks (5.11.0.1):
+    - zipzap
+  - FPHIVoiceSDK (3.12.1)
+  - GoogleDataTransport (9.2.5):
+    - GoogleUtilities/Environment (~> 7.7)
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleMLKit/MLKitCore (3.2.0):
+    - MLKitCommon (~> 8.0.0)
+  - GoogleMLKit/TextRecognition (3.2.0):
+    - GoogleMLKit/MLKitCore
+    - MLKitTextRecognition (~> 1.4.0-beta6)
+  - GoogleMLKit/TextRecognitionJapanese (3.2.0):
+    - GoogleMLKit/MLKitCore
+    - MLKitTextRecognitionJapanese (~> 1.0.0-beta6)
+  - GoogleMLKit/TextRecognitionKorean (3.2.0):
+    - GoogleMLKit/MLKitCore
+    - MLKitTextRecognitionKorean (~> 1.0.0-beta6)
+  - GoogleToolboxForMac/DebugUtils (2.3.2):
+    - GoogleToolboxForMac/Defines (= 2.3.2)
+  - GoogleToolboxForMac/Defines (2.3.2)
+  - GoogleToolboxForMac/Logger (2.3.2):
+    - GoogleToolboxForMac/Defines (= 2.3.2)
+  - "GoogleToolboxForMac/NSData+zlib (2.3.2)":
+    - GoogleToolboxForMac/Defines (= 2.3.2)
+  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.3.2)":
+    - GoogleToolboxForMac/DebugUtils (= 2.3.2)
+    - GoogleToolboxForMac/Defines (= 2.3.2)
+    - "GoogleToolboxForMac/NSString+URLArguments (= 2.3.2)"
+  - "GoogleToolboxForMac/NSString+URLArguments (2.3.2)"
+  - GoogleUtilities/Environment (7.11.5):
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities/Logger (7.11.5):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/UserDefaults (7.11.5):
+    - GoogleUtilities/Logger
+  - GoogleUtilitiesComponents (1.1.0):
+    - GoogleUtilities/Logger
+  - GTMSessionFetcher/Core (1.7.2)
+  - IQKeyboardManagerSwift (6.5.15)
+  - MLImage (1.0.0-beta3)
+  - MLKitCommon (8.0.0):
+    - GoogleDataTransport (~> 9.0)
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
+    - GoogleUtilities/UserDefaults (~> 7.0)
+    - GoogleUtilitiesComponents (~> 1.0)
+    - GTMSessionFetcher/Core (~> 1.1)
+    - Protobuf (~> 3.12)
+  - MLKitTextRecognition (1.4.0-beta6):
+    - MLKitCommon (~> 8.0)
+    - MLKitTextRecognitionCommon (= 1.0.0-beta6)
+    - MLKitVision (~> 4.2)
+  - MLKitTextRecognitionCommon (1.0.0-beta6):
+    - MLKitCommon (~> 8.0)
+    - MLKitVision (~> 4.2)
+  - MLKitTextRecognitionJapanese (1.0.0-beta6):
+    - MLKitCommon (~> 8.0)
+    - MLKitTextRecognitionCommon (= 1.0.0-beta6)
+    - MLKitVision (~> 4.2)
+  - MLKitTextRecognitionKorean (1.0.0-beta6):
+    - MLKitCommon (~> 8.0)
+    - MLKitTextRecognitionCommon (= 1.0.0-beta6)
+    - MLKitVision (~> 4.2)
+  - MLKitVision (4.2.0):
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - GTMSessionFetcher/Core (~> 1.1)
+    - MLImage (= 1.0.0-beta3)
+    - MLKitCommon (~> 8.0)
+    - Protobuf (~> 3.12)
+  - nanopb (2.30909.0):
+    - nanopb/decode (= 2.30909.0)
+    - nanopb/encode (= 2.30909.0)
+  - nanopb/decode (2.30909.0)
+  - nanopb/encode (2.30909.0)
+  - OpenSSL-Universal (1.1.1100)
+  - PromisesObjC (2.3.1)
+  - Protobuf (3.24.4)
+  - Starscream (4.0.6)
+  - SwiftLint (0.53.0)
+  - TensorFlowLiteC (2.7.0):
+    - TensorFlowLiteC/Core (= 2.7.0)
+  - TensorFlowLiteC/Core (2.7.0)
+  - TensorFlowLiteObjC (2.7.0):
+    - TensorFlowLiteObjC/Core (= 2.7.0)
+  - TensorFlowLiteObjC/Core (2.7.0):
+    - TensorFlowLiteC (= 2.7.0)
+  - zipzap (8.1.1)
+
+DEPENDENCIES:
+  - FPHISDKBehaviorComponent (from `../../ios-sdk/SDK-BehaviorComponent-SPM/FPHISDKBehaviorComponent-Test.podspec`)
+  - FPHISDKCaptureComponent (from `../../ios-sdk/SDK-Capture_component-SPM/FPHISDKCaptureComponent-Test.podspec`)
+  - FPHISDKCoreComponent (from `../../ios-sdk/SDK-Core-SPM/FPHISDKCoreComponent-Test.podspec`)
+  - FPHISDKLicenseCheckerComponent (from `../../ios-sdk/SDK-LicenseChecker-SPM/FPHISDKLicenseCheckerComponent-Test.podspec`)
+  - FPHISDKLicensingComponent (from `../../ios-sdk/SDK-Licensing-SPM/FPHISDKLicensingComponent-Test.podspec`)
+  - FPHISDKMainComponent (from `../../ios-sdk/SDK-Sdk-SPM/FPHISDKMainComponent-Test.podspec`)
+  - FPHISDKNFCComponent (from `../../ios-sdk/NFCDocumentReader/FPHISDKNFCComponent-Test.podspec`)
+  - FPHISDKPhingersComponent (from `../../ios-sdk/SDK-PhingersComponent/FPHISDKPhingersComponent-Test.podspec`)
+  - FPHISDKSelphiComponent (from `../../ios-sdk/SDK-Selphi_component-SPM/FPHISDKSelphiComponent-Test.podspec`)
+  - FPHISDKSelphIDComponent (from `../../ios-sdk/SDK-SelphidComponent/FPHISDKSelphIDComponent-Test.podspec`)
+  - FPHISDKTokenizeComponent (from `../../ios-sdk/SDK-Tokenize-SPM/FPHISDKTokenizeComponent-Test.podspec`)
+  - FPHISDKTrackingComponent (from `../../ios-sdk/SDK-Tracking_component-SPM/FPHISDKTrackingComponent-Test.podspec`)
+  - FPHISDKVideoCallComponent (from `../../ios-sdk/SDK-Videocall-SPM/FPHISDKVideoCallComponent-Test.podspec`)
+  - FPHISDKVideoIDComponent (from `../../ios-sdk/SDK-VideoID-SPM/FPHISDKVideoIDComponent-Test.podspec`)
+  - FPHISDKVoiceIDComponent (from `../../ios-sdk/SDK-Voice-SPM/FPHISDKVoiceIDComponent-Test.podspec`)
+  - IQKeyboardManagerSwift
+  - SwiftLint
+
+SPEC REPOS:
+  https://facephicorp.jfrog.io/artifactory/api/pods/cocoa-dev-fphi:
+    - FPBTokenizer
+    - FPHIBehaviorSDK
+    - FPHICORElicensingLite
+    - FPHILottieSDKFramework
+    - FPHIOpenCV
+    - FPHIPhingersCamera
+    - FPHIPhingersCore
+    - FPHISelphiFrameworks
+    - FPHIVoiceSDK
+  trunk:
+    - AgoraRtcEngine_iOS
+    - FPhiMBWidgetiOS
+    - FPhiSelphIDWidgetiOS
+    - GoogleDataTransport
+    - GoogleMLKit
+    - GoogleToolboxForMac
+    - GoogleUtilities
+    - GoogleUtilitiesComponents
+    - GTMSessionFetcher
+    - IQKeyboardManagerSwift
+    - MLImage
+    - MLKitCommon
+    - MLKitTextRecognition
+    - MLKitTextRecognitionCommon
+    - MLKitTextRecognitionJapanese
+    - MLKitTextRecognitionKorean
+    - MLKitVision
+    - nanopb
+    - OpenSSL-Universal
+    - PromisesObjC
+    - Protobuf
+    - Starscream
+    - SwiftLint
+    - TensorFlowLiteC
+    - TensorFlowLiteObjC
+    - zipzap
+
+EXTERNAL SOURCES:
+  FPHISDKBehaviorComponent:
+    :path: "../../ios-sdk/SDK-BehaviorComponent-SPM/FPHISDKBehaviorComponent-Test.podspec"
+  FPHISDKCaptureComponent:
+    :path: "../../ios-sdk/SDK-Capture_component-SPM/FPHISDKCaptureComponent-Test.podspec"
+  FPHISDKCoreComponent:
+    :path: "../../ios-sdk/SDK-Core-SPM/FPHISDKCoreComponent-Test.podspec"
+  FPHISDKLicenseCheckerComponent:
+    :path: "../../ios-sdk/SDK-LicenseChecker-SPM/FPHISDKLicenseCheckerComponent-Test.podspec"
+  FPHISDKLicensingComponent:
+    :path: "../../ios-sdk/SDK-Licensing-SPM/FPHISDKLicensingComponent-Test.podspec"
+  FPHISDKMainComponent:
+    :path: "../../ios-sdk/SDK-Sdk-SPM/FPHISDKMainComponent-Test.podspec"
+  FPHISDKNFCComponent:
+    :path: "../../ios-sdk/NFCDocumentReader/FPHISDKNFCComponent-Test.podspec"
+  FPHISDKPhingersComponent:
+    :path: "../../ios-sdk/SDK-PhingersComponent/FPHISDKPhingersComponent-Test.podspec"
+  FPHISDKSelphiComponent:
+    :path: "../../ios-sdk/SDK-Selphi_component-SPM/FPHISDKSelphiComponent-Test.podspec"
+  FPHISDKSelphIDComponent:
+    :path: "../../ios-sdk/SDK-SelphidComponent/FPHISDKSelphIDComponent-Test.podspec"
+  FPHISDKTokenizeComponent:
+    :path: "../../ios-sdk/SDK-Tokenize-SPM/FPHISDKTokenizeComponent-Test.podspec"
+  FPHISDKTrackingComponent:
+    :path: "../../ios-sdk/SDK-Tracking_component-SPM/FPHISDKTrackingComponent-Test.podspec"
+  FPHISDKVideoCallComponent:
+    :path: "../../ios-sdk/SDK-Videocall-SPM/FPHISDKVideoCallComponent-Test.podspec"
+  FPHISDKVideoIDComponent:
+    :path: "../../ios-sdk/SDK-VideoID-SPM/FPHISDKVideoIDComponent-Test.podspec"
+  FPHISDKVoiceIDComponent:
+    :path: "../../ios-sdk/SDK-Voice-SPM/FPHISDKVoiceIDComponent-Test.podspec"
+
+SPEC CHECKSUMS:
+  AgoraRtcEngine_iOS: 35387cd8e2131e1e3c3ac6c196818072ad0b9b75
+  FPBTokenizer: 827b7e0f110cba2ed1b217889c565a69af20d787
+  FPHIBehaviorSDK: 43c2ed570278618539b784edab7cabcb25336561
+  FPHICORElicensingLite: 3016033a7c30e44d795703db291f16f994772f24
+  FPHILottieSDKFramework: 2b64d9545b1591f6d5e66f2b7b97ffafa103c0f6
+  FPhiMBWidgetiOS: 7197ab1803a36bcab4f366ca5d147f6fe6e742b4
+  FPHIOpenCV: 486a4f1d70e2b256520714081684427824f8d7ab
+  FPHIPhingersCamera: 87bef8cb8f508a5aabc259b685e4753357ba79b3
+  FPHIPhingersCore: 8cc542ab0e76610ae959d32fac44dd70bf259bf7
+  FPHISDKBehaviorComponent: 2cb1a6a92bae9b1fec4227020c7c52b0933c3c5f
+  FPHISDKCaptureComponent: 1196ebf8f537fd146667481618c7045ac48ddf45
+  FPHISDKCoreComponent: ce5dc8825496044cc344c4f1931073eea75f03ea
+  FPHISDKLicenseCheckerComponent: d7020815f3c92089d02afb65f863d0158cb5c0ed
+  FPHISDKLicensingComponent: a909bdbc799471d27820b82e0b46992dc6536b96
+  FPHISDKMainComponent: 82bdfa4c000842f4df50ab5c1f85fb2aa910d5c8
+  FPHISDKNFCComponent: c17fe9281f3348ed076dd290b36c3216495fc928
+  FPHISDKPhingersComponent: f1fe83536fd78bc0a1ed9aa4fa391276fda3560b
+  FPHISDKSelphiComponent: f6c0f4e1e2ae58d0d5d89708a00e303ad8649d57
+  FPHISDKSelphIDComponent: b61625664850e2ff6756543e41d9c0bafe542a86
+  FPHISDKTokenizeComponent: 20c4f90cbdad6d2b0359739809fd5d9afcb098d9
+  FPHISDKTrackingComponent: a10eab388a0a8eef24804660ad5211c366692c64
+  FPHISDKVideoCallComponent: 33fc60c7a49a4b595ac00c602ff8ad0f648861ad
+  FPHISDKVideoIDComponent: 47d0b5f1ef2e5bd9f9cd2c7b96c05430d4152d8c
+  FPHISDKVoiceIDComponent: a8342e3d09ff54087e1317206f12bb461678556e
+  FPhiSelphIDWidgetiOS: 902644f3f816cb092e7d1a777d71a2b6feb3bc6f
+  FPHISelphiFrameworks: 658006067c7f7252259b72d9dd603e5f8f567962
+  FPHIVoiceSDK: b9eb0cb927f29270b82bfb52e1429026de29e61c
+  GoogleDataTransport: 54dee9d48d14580407f8f5fbf2f496e92437a2f2
+  GoogleMLKit: 0017a6a8372e1a182139b9def4d89be5d87ca5a7
+  GoogleToolboxForMac: 8bef7c7c5cf7291c687cf5354f39f9db6399ad34
+  GoogleUtilities: 13e2c67ede716b8741c7989e26893d151b2b2084
+  GoogleUtilitiesComponents: 679b2c881db3b615a2777504623df6122dd20afe
+  GTMSessionFetcher: 5595ec75acf5be50814f81e9189490412bad82ba
+  IQKeyboardManagerSwift: 79fab21f451441935788dc5d80ded21c32685904
+  MLImage: 489dfec109f21da8621b28d476401aaf7a0d4ff4
+  MLKitCommon: f6da6c5659618c070b50a80db01248ebe2964175
+  MLKitTextRecognition: f6fda8923564f6cebe2bb952a1adb0414e1d731b
+  MLKitTextRecognitionCommon: 0c720ee45ffedb3a34f0e8b95764d2f57a108e71
+  MLKitTextRecognitionJapanese: 57d13d494e96328b293162e731b08150d720ffda
+  MLKitTextRecognitionKorean: dfc0fa67510d971f49c1c56641953c32d65d7b10
+  MLKitVision: 96c96571190b7f63eddf4a12068ce8a8689e0d2c
+  nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
+  OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
+  PromisesObjC: c50d2056b5253dadbd6c2bea79b0674bd5a52fa4
+  Protobuf: 351e9022fe13a6e2af00e9aefc22077cb88520f8
+  Starscream: fb2c4510bebf908c62bd383bcf05e673720e91fd
+  SwiftLint: 5ce4d6a8ff83f1b5fd5ad5dbf30965d35af65e44
+  TensorFlowLiteC: 50d75ed3640c15dcfbaf88ca4326297b445e00a1
+  TensorFlowLiteObjC: d9e20bf9a4c22994e480ebf57aa9693262ee49a2
+  zipzap: 940162d9c9c60472c2eab341385e4214da0fdf1c
+
+PODFILE CHECKSUM: 96405f225142685352f570fc0d9cadf51add5b4e
+
+COCOAPODS: 1.13.0

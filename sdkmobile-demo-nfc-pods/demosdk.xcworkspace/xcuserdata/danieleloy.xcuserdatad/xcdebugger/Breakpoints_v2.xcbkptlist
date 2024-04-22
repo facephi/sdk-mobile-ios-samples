@@ -16,7 +16,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "136"
             endingLineNumber = "136"
-            landmarkName = "manageError(error:showDiagnostic:)"
+            landmarkName = "manageError(error:showDiagnostic:viewController:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -32,7 +32,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "152"
             endingLineNumber = "152"
-            landmarkName = "manageError(error:showDiagnostic:)"
+            landmarkName = "manageError(error:showDiagnostic:viewController:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -47,9 +47,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "345"
-            endingLineNumber = "345"
-            landmarkName = "startScan(viewController:)"
-            landmarkType = "7">
+            endingLineNumber = "345">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
