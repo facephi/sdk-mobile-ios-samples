@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0A2879B915E913F31D299FC37DD78B53"
-               BuildableName = "nfcComponent.framework"
+               BuildableName = "FPHISDKNFCComponent"
                BlueprintName = "FPHISDKNFCComponent"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

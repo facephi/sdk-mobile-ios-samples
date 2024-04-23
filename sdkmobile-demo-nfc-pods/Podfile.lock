@@ -1,28 +1,31 @@
 PODS:
   - FPHICORElicensingLite (1.1.0)
-  - FPHISDKCoreComponent (1.4.2):
-    - FPHISDKLicenseCheckerComponent (~> 1.3.0)
-  - FPHISDKLicenseCheckerComponent (1.3.1):
+  - FPHISDKCoreComponent (1.4.5):
+    - FPHISDKLicenseCheckerComponent (~> 1.4.0)
+  - FPHISDKLicenseCheckerComponent (1.4.0):
     - FPHICORElicensingLite (~> 1.1.0)
-  - FPHISDKLicensingComponent (1.4.0):
-    - FPHISDKCoreComponent (~> 1.4.0)
-  - FPHISDKMainComponent (1.4.1):
-    - FPHISDKCoreComponent (~> 1.4.2)
-    - FPHISDKLicensingComponent (~> 1.4.0)
-  - FPHISDKNFCComponent (2.5.2):
+  - FPHISDKLicensingComponent (1.4.1):
+    - FPHISDKCoreComponent (~> 1.4.5)
+  - FPHISDKMainComponent (1.4.4):
+    - FPHISDKCoreComponent (~> 1.4.5)
+    - FPHISDKLicensingComponent (~> 1.4.1)
+  - FPHISDKNFCComponent (2.5.6):
     - FPHISDKCoreComponent (~> 1.4.2)
     - OpenSSL-Universal (= 1.1.1100)
-  - FPHISDKTrackingComponent (1.4.0):
-    - FPHISDKCoreComponent (~> 1.4.0)
-  - IQKeyboardManagerSwift (6.5.12)
+  - FPHISDKTrackingComponent (1.4.3):
+    - FPHISDKCoreComponent (~> 1.4.5)
+  - IQKeyboardManagerSwift (7.0.2)
   - OpenSSL-Universal (1.1.1100)
-  - SwiftLint (0.52.3)
+  - SwiftLint (0.54.0)
 
 DEPENDENCIES:
+  - FPHISDKCoreComponent (~> 1.4.0)
+  - FPHISDKLicenseCheckerComponent (~> 1.4.0)
+  - FPHISDKLicensingComponent (~> 1.4.0)
   - FPHISDKMainComponent (~> 1.4.0)
-  - FPHISDKNFCComponent (~> 2.5.1)
+  - FPHISDKNFCComponent (~> 2.5.0)
   - FPHISDKTrackingComponent (~> 1.4.0)
-  - IQKeyboardManagerSwift
+  - IQKeyboardManagerSwift (~> 7.0.1)
   - SwiftLint
 
 SPEC REPOS:
@@ -41,16 +44,16 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   FPHICORElicensingLite: 3016033a7c30e44d795703db291f16f994772f24
-  FPHISDKCoreComponent: 6dbb9e297cc9c163eb4497baf223f9c56e6e57a0
-  FPHISDKLicenseCheckerComponent: 0d523fa424069f919f9a84106f19a4411fca656d
-  FPHISDKLicensingComponent: e2b6583ed9963b2d08054417ffb47db2435adcea
-  FPHISDKMainComponent: d93ed42da15679b1efdbe0bd2ab48c1620866108
-  FPHISDKNFCComponent: eb089d282a3e05ac74e0714701abd70ee23efd57
-  FPHISDKTrackingComponent: e0e1830e8f666e7c1993e4b85a3f4150b186a02c
-  IQKeyboardManagerSwift: 371b08cb39664fb56030f5345c815a4ffc74bbc0
+  FPHISDKCoreComponent: afbb57b4ba70c555567ec14c3bfe5bfc54b4d8b5
+  FPHISDKLicenseCheckerComponent: 4c60700e8eb22fee0841c34aa6731504de065369
+  FPHISDKLicensingComponent: 26b616a9f126620dd245f69e440743acfe80cb8f
+  FPHISDKMainComponent: d40a93930a6dff51fa99416c011790d98147c48f
+  FPHISDKNFCComponent: d572c3241793f3769a9e1e405996b97e70961d23
+  FPHISDKTrackingComponent: 1755e74c6477961d7684d0bf7739cb1997c79a5a
+  IQKeyboardManagerSwift: d338c11a896e9f29603443700c4567e32f830c22
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
-  SwiftLint: 76ec9c62ad369cff2937474cb34c9af3fa270b7b
+  SwiftLint: c1de071d9d08c8aba837545f6254315bc900e211
 
-PODFILE CHECKSUM: 0d8930fcca1825c401b9a66885dab7b0bc3e186f
+PODFILE CHECKSUM: 6ec37a37079e1a8aec60e9d339cdb489b6f49d87
 
-COCOAPODS: 1.12.0
+COCOAPODS: 1.13.0

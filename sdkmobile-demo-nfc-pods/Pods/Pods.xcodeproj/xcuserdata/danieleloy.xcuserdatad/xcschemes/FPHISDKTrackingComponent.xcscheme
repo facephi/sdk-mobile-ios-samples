@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "574A4BC7AE5BE41EFD8BD1C7A36E9734"
-               BuildableName = "trackingComponent.framework"
+               BuildableName = "FPHISDKTrackingComponent"
                BlueprintName = "FPHISDKTrackingComponent"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

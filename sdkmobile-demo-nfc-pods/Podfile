@@ -14,7 +14,12 @@ target 'demosdk' do
   pod 'SwiftLint'
   
 ##### Remote Dependencies
-  pod 'FPHISDKPhingersComponent', '~> 1.4.0'
+  pod 'FPHISDKLicenseCheckerComponent', '~> 1.4.0'
+  pod 'FPHISDKCoreComponent', '~> 1.4.0'
+  pod 'FPHISDKLicensingComponent', '~> 1.4.0'
+  pod 'FPHISDKMainComponent', '~> 1.4.0'
+  pod 'FPHISDKTrackingComponent', '~> 1.4.0'
+  pod 'FPHISDKNFCComponent', '~> 2.5.0'
   
 ##### Use with local Sources
 #  pod 'FPHISDKLicenseCheckerComponent', :path => "../../SDK-LicenseChecker-SPM/FPHISDKLicenseCheckerComponent-Test.podspec"

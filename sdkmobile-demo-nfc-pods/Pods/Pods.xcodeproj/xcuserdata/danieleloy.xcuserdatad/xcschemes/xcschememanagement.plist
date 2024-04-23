@@ -4,12 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>FPBLicensingFrontend.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>FPHILottieSDKFramework.xcscheme</key>
+		<key>FPHICORElicensingLite.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -34,27 +29,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FPHISDKNFCComponent-nfcComponent.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>FPHISDKNFCComponent.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>FPHISDKStatusComponent-statusComponent.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>FPHISDKStatusComponent.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>FPHISDKTrackingComponent-trackingComponent.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

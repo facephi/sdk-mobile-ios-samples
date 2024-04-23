@@ -1,6 +1,0 @@
-framework module statusComponent {
-  umbrella header "FPHISDKStatusComponent-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -176,29 +176,25 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/FPHISDKCoreComponent/core.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/FPHISDKLicenseCheckerComponent/licenseCheckerComponent.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/FPHISDKLicensingComponent/licensingComponent.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/FPHISDKMainComponent/sdk.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/FPHISDKNFCComponent/nfcComponent.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/FPHISDKStatusComponent/statusComponent.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/FPHISDKTrackingComponent/trackingComponent.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPBLicensingFrontend/FPBLicensingFrontend.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHILottieSDKFramework/Lottie.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHICORElicensingLite/licensingLite.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKCoreComponent/core.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKLicenseCheckerComponent/licenseCheckerComponent.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKLicensingComponent/licensingComponent.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKMainComponent/sdk.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKNFCComponent/nfcComponent.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKTrackingComponent/trackingComponent.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL-Universal/OpenSSL.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/FPHISDKCoreComponent/core.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/FPHISDKLicenseCheckerComponent/licenseCheckerComponent.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/FPHISDKLicensingComponent/licensingComponent.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/FPHISDKMainComponent/sdk.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/FPHISDKNFCComponent/nfcComponent.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/FPHISDKStatusComponent/statusComponent.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/FPHISDKTrackingComponent/trackingComponent.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPBLicensingFrontend/FPBLicensingFrontend.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHILottieSDKFramework/Lottie.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHICORElicensingLite/licensingLite.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKCoreComponent/core.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKLicenseCheckerComponent/licenseCheckerComponent.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKLicensingComponent/licensingComponent.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKMainComponent/sdk.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKNFCComponent/nfcComponent.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKTrackingComponent/trackingComponent.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL-Universal/OpenSSL.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "637751159A5FEF8DC4CF5368C5B6EF2D"
-               BuildableName = "licensingComponent.framework"
+               BuildableName = "FPHISDKLicensingComponent"
                BlueprintName = "FPHISDKLicensingComponent"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "63679719F78DB625035C6BED2E5907C3"
-               BuildableName = "core.framework"
+               BuildableName = "FPHISDKCoreComponent"
                BlueprintName = "FPHISDKCoreComponent"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
