@@ -1,0 +1,120 @@
+
+/* Class = "UIButton"; normalTitle = "GET LICENSE"; ObjectID = "040-A2-jfl"; */
+"040-A2-jfl.normalTitle" = "GET LICENSE";
+
+/* Class = "UIButton"; normalTitle = "CONFIGURACIÓN ENTORNO"; ObjectID = "1eu-Fl-8Ni"; */
+"1eu-Fl-8Ni.normalTitle" = "CONFIGURACIÓN ENTORNO";
+
+/* Class = "UILabel"; text = "CustomerID"; ObjectID = "2Du-4h-GwB"; */
+"2Du-4h-GwB.text" = "CustomerID";
+
+/* Class = "UIButton"; normalTitle = "NUEVA OPERACIÓN"; ObjectID = "2JN-36-4Nm"; */
+"2JN-36-4Nm.normalTitle" = "NUEVA OPERACIÓN";
+
+/* Class = "UIButton"; normalTitle = "TOKENIZE"; ObjectID = "8QB-MF-wz0"; */
+"8QB-MF-wz0.normalTitle" = "TOKENIZE";
+
+/* Class = "UIButton"; normalTitle = "LIVENESS"; ObjectID = "AFk-NC-KX4"; */
+"AFk-NC-KX4.normalTitle" = "LIVENESS";
+
+/* Class = "UILabel"; text = "NFC"; ObjectID = "BMT-cS-WP7"; */
+"BMT-cS-WP7.text" = "NFC";
+
+/* Class = "UILabel"; text = "Issuer XX"; ObjectID = "Dh8-dn-jsy"; */
+"Dh8-dn-jsy.text" = "Issuer XX";
+
+/* Class = "UIButton"; normalTitle = "SELPHI"; ObjectID = "E5G-fR-wmt"; */
+"E5G-fR-wmt.normalTitle" = "SELPHI";
+
+/* Class = "UITextField"; text = "ES"; ObjectID = "ElT-4E-mE2"; */
+"ElT-4E-mE2.text" = "ES";
+
+/* Class = "UILabel"; text = "LANZAMIENTOS"; ObjectID = "FyV-xP-ad9"; */
+"FyV-xP-ad9.text" = "LANZAMIENTOS";
+
+/* Class = "UIButton"; normalTitle = "GENERATE RAW TEMPLATE"; ObjectID = "G9F-cO-mx6"; */
+"G9F-cO-mx6.normalTitle" = "GENERATE RAW TEMPLATE";
+
+/* Class = "UILabel"; text = "Tipo de documento"; ObjectID = "GNX-sI-QsH"; */
+"GNX-sI-QsH.text" = "Tipo de documento";
+
+/* Class = "UINavigationItem"; title = "CONFIGURACIÓN"; ObjectID = "HPl-eL-1Db"; */
+"HPl-eL-1Db.title" = "CONFIGURACIÓN";
+
+/* Class = "UILabel"; text = "GENERAL"; ObjectID = "KYa-Q5-QIg"; */
+"KYa-Q5-QIg.text" = "GENERAL";
+
+/* Class = "UILabel"; text = "Número de soporte de DNI XXXXXXXXX"; ObjectID = "KbO-DN-QYb"; */
+"KbO-DN-QYb.text" = "Número de soporte de DNI XXXXXXXXX";
+
+/* Class = "UILabel"; text = "IDENTITY PLATFORM"; ObjectID = "LNo-Dt-9hC"; */
+"LNo-Dt-9hC.text" = "IDENTITY PLATFORM";
+
+/* Class = "UINavigationItem"; title = "ACCIONES"; ObjectID = "M0V-Dl-rBx"; */
+"M0V-Dl-rBx.title" = "ACCIONES";
+
+/* Class = "UIButton"; normalTitle = "NFC"; ObjectID = "MBE-OF-Uwl"; */
+"MBE-OF-Uwl.normalTitle" = "NFC";
+
+/* Class = "UIButton"; normalTitle = "CLEAR LOGS"; ObjectID = "OLy-p5-4cF"; */
+"OLy-p5-4cF.normalTitle" = "CLEAR LOGS";
+
+/* Class = "UIButton"; normalTitle = "PHINGERS"; ObjectID = "PRG-sD-24y"; */
+"PRG-sD-24y.normalTitle" = "PHINGERS";
+
+/* Class = "UILabel"; text = "OTROS MÉTODOS"; ObjectID = "SF0-Pw-Z3C"; */
+"SF0-Pw-Z3C.text" = "OTROS MÉTODOS";
+
+/* Class = "UIButton"; normalTitle = "PHACTURAS READER"; ObjectID = "T9L-HQ-RD3"; */
+"T9L-HQ-RD3.normalTitle" = "PHACTURAS READER";
+
+/* Class = "UILabel"; text = "Operación"; ObjectID = "V9L-d4-Vvd"; */
+"V9L-d4-Vvd.text" = "Operación";
+
+/* Class = "UIButton"; configuration.title = "GUARDAR"; ObjectID = "f1K-CH-QsN"; */
+"f1K-CH-QsN.configuration.title" = "GUARDAR";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "f1K-CH-QsN"; */
+"f1K-CH-QsN.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "FACE AUTH"; ObjectID = "hSj-MR-5dZ"; */
+"hSj-MR-5dZ.normalTitle" = "FACE AUTH";
+
+/* Class = "UIButton"; normalTitle = "VIDEO ID"; ObjectID = "ikb-Hy-O7m"; */
+"ikb-Hy-O7m.normalTitle" = "VIDEO ID";
+
+/* Class = "UILabel"; text = "Fecha de expiración DD/MM/AAAA"; ObjectID = "n9m-Y1-NDV"; */
+"n9m-Y1-NDV.text" = "Fecha de expiración DD/MM/AAAA";
+
+/* Class = "UIButton"; normalTitle = "VIDEO CALL"; ObjectID = "ncG-PS-WNN"; */
+"ncG-PS-WNN.normalTitle" = "VIDEO CALL";
+
+/* Class = "UIButton"; normalTitle = "PHINGERS MATCHING"; ObjectID = "pzj-Fv-6Hb"; */
+"pzj-Fv-6Hb.normalTitle" = "PHINGERS MATCHING";
+
+/* Class = "UIButton"; normalTitle = "SELPHID"; ObjectID = "qtr-Os-i7i"; */
+"qtr-Os-i7i.normalTitle" = "SELPHID";
+
+/* Class = "UITextField"; text = "sdk-nativo-ios@facephi.com"; ObjectID = "rZM-gi-eQp"; */
+"rZM-gi-eQp.text" = "sdk-nativo-ios@facephi.com";
+
+/* Class = "UIButton"; normalTitle = "QR READER"; ObjectID = "sFH-rx-UN1"; */
+"sFH-rx-UN1.normalTitle" = "QR READER";
+
+/* Class = "UILabel"; text = "Fecha de nacimiento DD/MM/AAAA"; ObjectID = "sIX-l3-3Mt"; */
+"sIX-l3-3Mt.text" = "Fecha de nacimiento DD/MM/AAAA";
+
+/* Class = "UISegmentedControl"; t7P-wh-7ix.segmentTitles[0] = "ONBOARDING"; ObjectID = "t7P-wh-7ix"; */
+"t7P-wh-7ix.segmentTitles[0]" = "ONBOARDING";
+
+/* Class = "UISegmentedControl"; t7P-wh-7ix.segmentTitles[1] = "AUTHENTICATION"; ObjectID = "t7P-wh-7ix"; */
+"t7P-wh-7ix.segmentTitles[1]" = "AUTHENTICATION";
+
+/* Class = "UIButton"; normalTitle = "VOICE ID"; ObjectID = "uHx-rH-xmd"; */
+"uHx-rH-xmd.normalTitle" = "VOICE ID";
+
+/* Class = "UISegmentedControl"; zL3-e7-cOd.segmentTitles[0] = "First"; ObjectID = "zL3-e7-cOd"; */
+"zL3-e7-cOd.segmentTitles[0]" = "First";
+
+/* Class = "UISegmentedControl"; zL3-e7-cOd.segmentTitles[1] = "Second"; ObjectID = "zL3-e7-cOd"; */
+"zL3-e7-cOd.segmentTitles[1]" = "Second";
