@@ -27,10 +27,6 @@
 		9E2DEB142A1B75FC00E8FD9F /* SelphiConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DEB132A1B75FC00E8FD9F /* SelphiConfiguration.swift */; };
 		9E2DEB162A1B760200E8FD9F /* SelphIDConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DEB152A1B760200E8FD9F /* SelphIDConfiguration.swift */; };
 		9EFB343A2A4999E10005C31E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EFB343C2A4999E10005C31E /* Localizable.strings */; };
-		D95817E52A5EB722004A1C9B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95817E42A5EB722004A1C9B /* UIView.swift */; };
-		D95817EA2A5EC4AA004A1C9B /* LocalURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95817E92A5EC4AA004A1C9B /* LocalURLs.swift */; };
-		D9B8985D2AA76E2E000AD65F /* PrefManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B8985C2AA76E2E000AD65F /* PrefManager.swift */; };
-		D9B8985F2AA76E65000AD65F /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B8985E2AA76E65000AD65F /* Preference.swift */; };
 		E732ADCE17CA95B10D64040E /* Pods_demosdkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F39F5FBA150BB37BE6A98984 /* Pods_demosdkTests.framework */; };
 		F7FAF8058E9440689DE01734 /* Pods_demosdk_demosdkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCD5D6B0AC34ED95DA6D4FB5 /* Pods_demosdk_demosdkUITests.framework */; };
 /* End PBXBuildFile section */
@@ -86,10 +82,6 @@
 		9EFB343E2A499A0F0005C31E /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		A02C8BEDA86FA514045F51CD /* Pods-demosdk-demosdkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demosdk-demosdkUITests.debug.xcconfig"; path = "Target Support Files/Pods-demosdk-demosdkUITests/Pods-demosdk-demosdkUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B6C05961B387D0267621D4FE /* Pods-demosdkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demosdkTests.release.xcconfig"; path = "Target Support Files/Pods-demosdkTests/Pods-demosdkTests.release.xcconfig"; sourceTree = "<group>"; };
-		D95817E42A5EB722004A1C9B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		D95817E92A5EC4AA004A1C9B /* LocalURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalURLs.swift; sourceTree = "<group>"; };
-		D9B8985C2AA76E2E000AD65F /* PrefManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefManager.swift; sourceTree = "<group>"; };
-		D9B8985E2AA76E65000AD65F /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
 		F39F5FBA150BB37BE6A98984 /* Pods_demosdkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demosdkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD5D6B0AC34ED95DA6D4FB5 /* Pods_demosdk_demosdkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demosdk_demosdkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -127,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				130CD5B2285A0D19005C7BB1 /* UISegmentedControl.swift */,
-				D95817E42A5EB722004A1C9B /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -173,7 +164,6 @@
 		13F510B6281937A5001E3CF1 /* demosdk */ = {
 			isa = PBXGroup;
 			children = (
-				D95817E82A5EC4A2004A1C9B /* Helpers */,
 				13CCB5B2283F7D0C005BDC3D /* demosdk.entitlements */,
 				13F7576D2824152400A761D5 /* Library */,
 				130CD5B1285A0CF8005C7BB1 /* Extensions */,
@@ -238,8 +228,6 @@
 			children = (
 				9E2DEB102A1B75D100E8FD9F /* SDKConfigurations */,
 				13F7576A2823A2AA00A761D5 /* SDKManager.swift */,
-				D9B8985C2AA76E2E000AD65F /* PrefManager.swift */,
-				D9B8985E2AA76E65000AD65F /* Preference.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -276,14 +264,6 @@
 				F39F5FBA150BB37BE6A98984 /* Pods_demosdkTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D95817E82A5EC4A2004A1C9B /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				D95817E92A5EC4AA004A1C9B /* LocalURLs.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -586,14 +566,10 @@
 			files = (
 				9E2DEB142A1B75FC00E8FD9F /* SelphiConfiguration.swift in Sources */,
 				13F510BC281937A5001E3CF1 /* MainVC.swift in Sources */,
-				D95817E52A5EB722004A1C9B /* UIView.swift in Sources */,
 				13F84C49282500A6001E26A5 /* MainVM.swift in Sources */,
 				9E2DEB162A1B760200E8FD9F /* SelphIDConfiguration.swift in Sources */,
 				13F7576B2823A2AA00A761D5 /* SDKManager.swift in Sources */,
-				D9B8985D2AA76E2E000AD65F /* PrefManager.swift in Sources */,
 				9E2DEB122A1B75F000E8FD9F /* SdkConfigurationManager.swift in Sources */,
-				D9B8985F2AA76E65000AD65F /* Preference.swift in Sources */,
-				D95817EA2A5EC4AA004A1C9B /* LocalURLs.swift in Sources */,
 				13F510B8281937A5001E3CF1 /* AppDelegate.swift in Sources */,
 				13F510BA281937A5001E3CF1 /* SceneDelegate.swift in Sources */,
 				130CD5B3285A0D19005C7BB1 /* UISegmentedControl.swift in Sources */,
