@@ -10,11 +10,10 @@ import Foundation
 struct SdkConfigurationManager {
     static let base64 = " "
     static let email = "sdk-full-ios@ejemplo"
-    static let APIKEY_LICENSING = "501m8cAa1DeZfixuIRHAU1NHcSM4wQqTXveKLiaI"
+    static let APIKEY_LICENSING = ""
     static let LICENSING_URL = URL(string: "https://licensing.facephi.dev")!
     static let customerId = "sdk-full-ios"
-    static let CUSTOM_TENANT_ID = "e9b039fa-0a2f-4149-9acc-a7e20a46464e"
-    static let audiosDirectory = getDocumentsDirectory().appendingPathComponent("audios")
+    static let CUSTOM_TENANT_ID = ""
 
     // swiftlint:disable all
     static let license = """
