@@ -20,21 +20,13 @@
 		13F510CF281937A6001E3CF1 /* DemosdkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F510CE281937A6001E3CF1 /* DemosdkTests.swift */; };
 		13F510D9281937A6001E3CF1 /* DemosdkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F510D8281937A6001E3CF1 /* DemosdkUITests.swift */; };
 		13F510DB281937A6001E3CF1 /* DemosdkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F510DA281937A6001E3CF1 /* DemosdkUITestsLaunchTests.swift */; };
-		13F510EB281937E3001E3CF1 /* fphi-selphid-widget-resources-sdk.zip in Resources */ = {isa = PBXBuildFile; fileRef = 13F510E9281937E3001E3CF1 /* fphi-selphid-widget-resources-sdk.zip */; };
-		13F510EC281937E3001E3CF1 /* fphi-selphi-widget-resources-sdk.zip in Resources */ = {isa = PBXBuildFile; fileRef = 13F510EA281937E3001E3CF1 /* fphi-selphi-widget-resources-sdk.zip */; };
 		13F7576B2823A2AA00A761D5 /* SDKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7576A2823A2AA00A761D5 /* SDKManager.swift */; };
 		13F84C49282500A6001E26A5 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F84C48282500A6001E26A5 /* MainVM.swift */; };
 		33E960E4ABA4BC5C8113282E /* Pods_demosdkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9BFEA59123D2CE9C526C7EC /* Pods_demosdkTests.framework */; };
 		72304AFF12B557C51B6AD962 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		9E2DEB122A1B75F000E8FD9F /* SdkConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DEB112A1B75F000E8FD9F /* SdkConfigurationManager.swift */; };
 		9EFB343A2A4999E10005C31E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EFB343C2A4999E10005C31E /* Localizable.strings */; };
-		D95817DB2A5EAF26004A1C9B /* AudioPlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95817DA2A5EAF26004A1C9B /* AudioPlayVC.swift */; };
-		D95817DF2A5EAF6C004A1C9B /* AudioPlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D95817DE2A5EAF6C004A1C9B /* AudioPlayView.xib */; };
 		D95817E52A5EB722004A1C9B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95817E42A5EB722004A1C9B /* UIView.swift */; };
-		D95817E72A5EC074004A1C9B /* AudioPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95817E62A5EC074004A1C9B /* AudioPlayView.swift */; };
-		D95817EA2A5EC4AA004A1C9B /* LocalURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95817E92A5EC4AA004A1C9B /* LocalURLs.swift */; };
-		D9B8985D2AA76E2E000AD65F /* PrefManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B8985C2AA76E2E000AD65F /* PrefManager.swift */; };
-		D9B8985F2AA76E65000AD65F /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B8985E2AA76E65000AD65F /* Preference.swift */; };
 		D9D2E38C2AC2F08100501393 /* VideoIDConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2E38B2AC2F08100501393 /* VideoIDConfiguration.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,8 +65,6 @@
 		13F510D4281937A6001E3CF1 /* demosdkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = demosdkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13F510D8281937A6001E3CF1 /* DemosdkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemosdkUITests.swift; sourceTree = "<group>"; };
 		13F510DA281937A6001E3CF1 /* DemosdkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemosdkUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		13F510E9281937E3001E3CF1 /* fphi-selphid-widget-resources-sdk.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "fphi-selphid-widget-resources-sdk.zip"; sourceTree = "<group>"; };
-		13F510EA281937E3001E3CF1 /* fphi-selphi-widget-resources-sdk.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "fphi-selphi-widget-resources-sdk.zip"; sourceTree = "<group>"; };
 		13F7576A2823A2AA00A761D5 /* SDKManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKManager.swift; sourceTree = "<group>"; };
 		13F84C48282500A6001E26A5 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
 		3AEB455EA3FF6698B36B91CD /* Pods_demosdk_demosdkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demosdk_demosdkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,13 +77,7 @@
 		9EFB343D2A4999ED0005C31E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9EFB343E2A499A0F0005C31E /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		A2D96339BF4A5E2E77D1658D /* Pods-demosdkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demosdkTests.debug.xcconfig"; path = "Target Support Files/Pods-demosdkTests/Pods-demosdkTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D95817DA2A5EAF26004A1C9B /* AudioPlayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayVC.swift; sourceTree = "<group>"; };
-		D95817DE2A5EAF6C004A1C9B /* AudioPlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioPlayView.xib; sourceTree = "<group>"; };
 		D95817E42A5EB722004A1C9B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		D95817E62A5EC074004A1C9B /* AudioPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayView.swift; sourceTree = "<group>"; };
-		D95817E92A5EC4AA004A1C9B /* LocalURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalURLs.swift; sourceTree = "<group>"; };
-		D9B8985C2AA76E2E000AD65F /* PrefManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefManager.swift; sourceTree = "<group>"; };
-		D9B8985E2AA76E65000AD65F /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
 		D9D2E38B2AC2F08100501393 /* VideoIDConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoIDConfiguration.swift; sourceTree = "<group>"; };
 		DB1C984369EBBB501571C0FC /* Pods-demosdk-demosdkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demosdk-demosdkUITests.debug.xcconfig"; path = "Target Support Files/Pods-demosdk-demosdkUITests/Pods-demosdk-demosdkUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DCCF126A96070CCC9044CC97 /* Pods-demosdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demosdk.release.xcconfig"; path = "Target Support Files/Pods-demosdk/Pods-demosdk.release.xcconfig"; sourceTree = "<group>"; };
@@ -180,7 +164,6 @@
 		13F510B6281937A5001E3CF1 /* demosdk */ = {
 			isa = PBXGroup;
 			children = (
-				D95817E82A5EC4A2004A1C9B /* Helpers */,
 				13CCB5B2283F7D0C005BDC3D /* demosdk.entitlements */,
 				13F7576D2824152400A761D5 /* Library */,
 				130CD5B1285A0CF8005C7BB1 /* Extensions */,
@@ -216,25 +199,14 @@
 			isa = PBXGroup;
 			children = (
 				13F510C0281937A6001E3CF1 /* Assets.xcassets */,
-				13F510E8281937E3001E3CF1 /* WidgetResources */,
 				9EFB343C2A4999E10005C31E /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		13F510E8281937E3001E3CF1 /* WidgetResources */ = {
-			isa = PBXGroup;
-			children = (
-				13F510E9281937E3001E3CF1 /* fphi-selphid-widget-resources-sdk.zip */,
-				13F510EA281937E3001E3CF1 /* fphi-selphi-widget-resources-sdk.zip */,
-			);
-			path = WidgetResources;
-			sourceTree = "<group>";
-		};
 		13F7576C2823A5F100A761D5 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				D95817D92A5EAED2004A1C9B /* AudioPlay */,
 				13F510BD281937A5001E3CF1 /* Main.storyboard */,
 				130CD5B6285A1B6A005C7BB1 /* Main */,
 			);
@@ -246,8 +218,6 @@
 			children = (
 				9E2DEB102A1B75D100E8FD9F /* SDKConfigurations */,
 				13F7576A2823A2AA00A761D5 /* SDKManager.swift */,
-				D9B8985C2AA76E2E000AD65F /* PrefManager.swift */,
-				D9B8985E2AA76E65000AD65F /* Preference.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -283,24 +253,6 @@
 				E9BFEA59123D2CE9C526C7EC /* Pods_demosdkTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D95817D92A5EAED2004A1C9B /* AudioPlay */ = {
-			isa = PBXGroup;
-			children = (
-				D95817DE2A5EAF6C004A1C9B /* AudioPlayView.xib */,
-				D95817DA2A5EAF26004A1C9B /* AudioPlayVC.swift */,
-				D95817E62A5EC074004A1C9B /* AudioPlayView.swift */,
-			);
-			path = AudioPlay;
-			sourceTree = "<group>";
-		};
-		D95817E82A5EC4A2004A1C9B /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				D95817E92A5EC4AA004A1C9B /* LocalURLs.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,10 +370,7 @@
 				13F510C4281937A6001E3CF1 /* LaunchScreen.storyboard in Resources */,
 				9EFB343A2A4999E10005C31E /* Localizable.strings in Resources */,
 				13F510C1281937A6001E3CF1 /* Assets.xcassets in Resources */,
-				13F510EC281937E3001E3CF1 /* fphi-selphi-widget-resources-sdk.zip in Resources */,
-				13F510EB281937E3001E3CF1 /* fphi-selphid-widget-resources-sdk.zip in Resources */,
 				13F510BF281937A5001E3CF1 /* Main.storyboard in Resources */,
-				D95817DF2A5EAF6C004A1C9B /* AudioPlayView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,13 +519,8 @@
 				D95817E52A5EB722004A1C9B /* UIView.swift in Sources */,
 				13F84C49282500A6001E26A5 /* MainVM.swift in Sources */,
 				13F7576B2823A2AA00A761D5 /* SDKManager.swift in Sources */,
-				D9B8985D2AA76E2E000AD65F /* PrefManager.swift in Sources */,
-				D95817E72A5EC074004A1C9B /* AudioPlayView.swift in Sources */,
 				9E2DEB122A1B75F000E8FD9F /* SdkConfigurationManager.swift in Sources */,
-				D9B8985F2AA76E65000AD65F /* Preference.swift in Sources */,
 				13A43FBB286A014400C56A86 /* CustomThemeVideoId.swift in Sources */,
-				D95817EA2A5EC4AA004A1C9B /* LocalURLs.swift in Sources */,
-				D95817DB2A5EAF26004A1C9B /* AudioPlayVC.swift in Sources */,
 				13F510B8281937A5001E3CF1 /* AppDelegate.swift in Sources */,
 				D9D2E38C2AC2F08100501393 /* VideoIDConfiguration.swift in Sources */,
 				13F510BA281937A5001E3CF1 /* SceneDelegate.swift in Sources */,
@@ -875,18 +819,6 @@
 					"-framework",
 					"\"Accelerate\"",
 					"-framework",
-					"\"AgoraAIDenoiseExtension\"",
-					"-framework",
-					"\"AgoraCIExtension\"",
-					"-framework",
-					"\"AgoraCore\"",
-					"-framework",
-					"\"AgoraDav1dExtension\"",
-					"-framework",
-					"\"AgoraFDExtension\"",
-					"-framework",
-					"\"AgoraFullAudioFormatExtension\"",
-					"-framework",
 					"\"AgoraReplayKitExtension\"",
 					"-framework",
 					"\"AgoraRtcKit\"",
@@ -894,10 +826,6 @@
 					"\"AgoraSoundTouch\"",
 					"-framework",
 					"\"AgoraSpatialAudioExtension\"",
-					"-framework",
-					"\"AgoraSuperResolutionExtension\"",
-					"-framework",
-					"\"AgoraVideoProcessExtension\"",
 					"-framework",
 					"\"AgoraVideoSegmentationExtension\"",
 					"-framework",
@@ -1012,18 +940,6 @@
 					"-framework",
 					"\"Accelerate\"",
 					"-framework",
-					"\"AgoraAIDenoiseExtension\"",
-					"-framework",
-					"\"AgoraCIExtension\"",
-					"-framework",
-					"\"AgoraCore\"",
-					"-framework",
-					"\"AgoraDav1dExtension\"",
-					"-framework",
-					"\"AgoraFDExtension\"",
-					"-framework",
-					"\"AgoraFullAudioFormatExtension\"",
-					"-framework",
 					"\"AgoraReplayKitExtension\"",
 					"-framework",
 					"\"AgoraRtcKit\"",
@@ -1031,10 +947,6 @@
 					"\"AgoraSoundTouch\"",
 					"-framework",
 					"\"AgoraSpatialAudioExtension\"",
-					"-framework",
-					"\"AgoraSuperResolutionExtension\"",
-					"-framework",
-					"\"AgoraVideoProcessExtension\"",
 					"-framework",
 					"\"AgoraVideoSegmentationExtension\"",
 					"-framework",

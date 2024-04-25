@@ -12,6 +12,7 @@ import trackingComponent
 import UIKit
 import videoidComponent
 import tokenizeComponent
+import statusComponent
 
 protocol SDKManagerDelegate: AnyObject {
     func log(msg: String)
@@ -25,6 +26,7 @@ class SDKManager {
     private let TAG = "APP_MANAGER"
     public var mainVC: MainVMOutput!
    
+    let statusController = StatusController()
     // MARK: - INIT
     init() {
         let trackingController = TrackingController(trackingError: { trackingError in
@@ -46,7 +48,8 @@ class SDKManager {
 //                }
 //            },
 //            trackingController: trackingController,
-//            tokenizeController: tokenizeController
+//            tokenizeController: tokenizeController,
+//    statusController: statusController
 //        )
         
         // AUTO License
@@ -62,7 +65,8 @@ class SDKManager {
                 }
             },
             trackingController: trackingController,
-            tokenizeController: tokenizeController
+            tokenizeController: tokenizeController,
+            statusController: statusController
         )
     }
     

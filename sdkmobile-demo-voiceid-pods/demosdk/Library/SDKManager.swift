@@ -12,6 +12,7 @@ import trackingComponent
 import UIKit
 import voiceIDComponent
 import tokenizeComponent
+import statusComponent
 
 import ReplayKit //TODO: Check because we should move this
 
@@ -26,6 +27,8 @@ class SDKManager {
     private var sdkData: String = ""
     private let TAG = "APP_MANAGER"
     public var mainVC: MainVMOutput!
+    
+    let statusController = StatusController()
 
     // MARK: - INIT
     init() {
@@ -48,7 +51,7 @@ class SDKManager {
 //            },
 //            trackingController: trackingController,
 //            tokenizeController: tokenizeController,
-//            behaviorController: behaviorController
+//            statusController: statusController
 //        )
         
         // AUTO License
@@ -64,7 +67,8 @@ class SDKManager {
                 }
             },
             trackingController: trackingController,
-            tokenizeController: tokenizeController
+            tokenizeController: tokenizeController,
+            statusController: statusController
         )
     }
         

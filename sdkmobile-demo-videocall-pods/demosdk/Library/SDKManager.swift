@@ -12,6 +12,7 @@ import trackingComponent
 import UIKit
 import videocallComponent
 import tokenizeComponent
+import statusComponent
 
 protocol SDKManagerDelegate: AnyObject {
     func log(msg: String)
@@ -33,7 +34,7 @@ class SDKManager {
         trackingController.tenantIdDemo = SdkConfigurationManager.CUSTOM_TENANT_ID
         
         let tokenizeController = TokenizeController()
-
+        let statusController = StatusController()
         
         // MANUAL License
 //        SDKController.shared.initSdk(
@@ -45,9 +46,9 @@ class SDKManager {
 //                    self.log("La licencia manual no es correcta")
 //                }
 //            },
-//            trackingController: trackingController,
-//            tokenizeController: tokenizeController,
-//            behaviorController: behaviorController
+//    trackingController: trackingController,
+//    tokenizeController: tokenizeController,
+//    statusController: statusController
 //        )
         
         // AUTO License
@@ -63,7 +64,8 @@ class SDKManager {
                 }
             },
             trackingController: trackingController,
-            tokenizeController: tokenizeController
+            tokenizeController: tokenizeController,
+            statusController: statusController
         )
     }
     

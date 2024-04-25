@@ -9,7 +9,6 @@ import core
 import Foundation
 import UIKit
 import AVFoundation
-//import phingersComponent
 
 protocol MainVMInput {
     func newOperation()
@@ -33,12 +32,6 @@ class MainVM {
     private let baseUrl = "https://external-selphid-sdk.facephi.dev/"
     private let methodPassiveLivenesTracking = "api/v1/selphid/passive-liveness/evaluate"
     private let methodAuthenticateFacial = "api/v1/selphid/authenticate-facial/document/face-image"
-   
-    //VOICE Constants
-    private let baseVoiceUrl = "https://external-voice-sdk.facephi.dev/"
-    private let methodVoiceEnrollment = "api/v1/enrollment"
-    private let methodVoiceMatching = "api/v1/authentication"
-    private let liveness_threshold: Double = 0.5
 
     // TODO: Check what is this?
     private var tokenFaceImage = " "
@@ -82,7 +75,7 @@ extension MainVM: MainVMInput {
     }
     
     func newOperation() {
-        SDKManager.shared.newOperation(operationType: .ONBOARDING, customerId: SdkConfigurationManager.customerId, output: { sdkResult in
+        SDKManager.shared.newOperation(operationType: .ONBOARDING, customerId: SdkConfigurationManager.CUSTOMER_ID, output: { sdkResult in
             self.log(msg: sdkResult.data != nil ? "New Operation with ID: \(sdkResult.data)": "ERROR: NewOperation's data output is nil")
         })
     }

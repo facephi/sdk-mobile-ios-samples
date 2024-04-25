@@ -11,6 +11,7 @@ import phingersComponent
 import sdk
 import trackingComponent
 import UIKit
+import statusComponent
 
 protocol SDKManagerDelegate: AnyObject {
     func log(msg: String)
@@ -23,6 +24,8 @@ class SDKManager {
     private var sdkData: String = ""
     private let TAG = "APP_MANAGER"
     public var mainVC: MainVMOutput!
+    
+    let statusController = StatusController()
    
     // MARK: - INIT
     init() {
@@ -42,8 +45,7 @@ class SDKManager {
 //                }
 //            },
 //            trackingController: trackingController,
-//            tokenizeController: tokenizeController,
-//            behaviorController: behaviorController
+//            statusController: statusController
 //        )
         
         // AUTO License
@@ -58,7 +60,8 @@ class SDKManager {
                     self.log("Ha ocurrido un error al intentar obtener la licencia: \(sdkResult.errorType)")
                 }
             },
-            trackingController: trackingController
+            trackingController: trackingController,
+            statusController: statusController
         )
     }
 

@@ -12,13 +12,12 @@ extension SdkConfigurationManager {
     static var phingersConfiguration: PhingersConfigurationData{
         var configPhingers = PhingersConfigurationData()
         
-        configPhingers.useFlash = true
         configPhingers.returnProcessedImage = true
         configPhingers.returnFingerprintTemplate = .NONE
         configPhingers.returnWSQ = true
         configPhingers.showTutorial = true
         configPhingers.reticleOrientation = .LEFT
-        configPhingers.extractionTimeout = 90
+        configPhingers.extractionTimeout = 30000
         
         return configPhingers
     }

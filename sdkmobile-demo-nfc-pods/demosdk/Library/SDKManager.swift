@@ -11,6 +11,7 @@ import sdk
 import nfcComponent
 import trackingComponent
 import UIKit
+import statusComponent
 
 protocol SDKManagerDelegate: AnyObject {
     func log(msg: String)
@@ -21,6 +22,8 @@ class SDKManager {
     public static var shared: SDKManager = SDKManager()
     
     private let TAG = "APP_MANAGER"
+    
+    let statusController = StatusController()
     
     // MARK: - INIT
     init() {
@@ -36,7 +39,8 @@ class SDKManager {
 //            } else {
 //                self.log("La licencia manual no es correcta")
 //            }
-//        }, trackingController: trackingController)
+//        }, trackingController: trackingController,
+//        statusController: statusController)
         
         // AUTO License
         SDKController.shared.initSdk(licensingUrl: SdkConfigurationManager.LICENSING_URL, apiKey: SdkConfigurationManager.APIKEY_LICENSING, output: { sdkResult in
@@ -45,7 +49,8 @@ class SDKManager {
             } else {
                 self.log("Ha ocurrido un error al intentar obtener la licencia: \(sdkResult.errorType)")
             }
-        }, trackingController: trackingController)
+        }, trackingController: trackingController,
+        statusController: statusController)
     }
     
     // MARK: - LAUNCH FUNCS
