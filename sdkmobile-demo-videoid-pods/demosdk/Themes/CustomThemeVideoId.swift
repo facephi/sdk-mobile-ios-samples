@@ -12,7 +12,7 @@ import videoidComponent
 class CustomThemeVideoId: ThemeVideoIdProtocol {
     var images: [R.Image: UIImage?] = [:]
     
-    var colors: [R.Color: UIColor?] = [R.Color.sdkTitleTextColor: UIColor.red]
+    var colors: [R.Color: UIColor?] = [:]
     
     // var animations: [R.Animation: String] = [:]
     

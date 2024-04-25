@@ -244,7 +244,7 @@
       "kind": "StringLiteral",
       "offset": 210,
       "length": 7,
-      "value": "\"1.4.1\""
+      "value": "\"1.4.0\""
     },
     {
       "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Licensing-SPM\/SDK-Licensing-SPM\/Sources\/licensingComponent\/Service\/GetLicenseEndpoint.swift",

@@ -68,41 +68,18 @@ class SDKManager {
         )
     }
         
-    public func launchVoiceId(data: VoiceConfigurationData, setTracking: Bool, viewController: UIViewController, output: @escaping (SdkResult<VoiceResult>) -> Void)
+    public func launchVoiceId(data: EnvironmentAudioRecordingData, setTracking: Bool, viewController: UIViewController, output: @escaping (SdkResult<AudioRecordingResponseResult>) -> Void)
     {
         log("LAUNCH VOICE ID")
         
-        let controller = VoiceController(
+        let controller = VoiceIDController(
             data: data,
             viewController: viewController,
             output: { sdkResult in
-                let voiceIdSdkResult = SdkResult(finishStatus: sdkResult.finishStatus, errorType: sdkResult.errorType, data: sdkResult.data)
+                let voiceIdSdkResult = SdkResult<AudioRecordingResponseResult>(finishStatus: sdkResult.finishStatus, errorType: sdkResult.errorType, data: sdkResult.data)
                 output(voiceIdSdkResult)
             })
-        SDKController.shared.launchTrackTokenizableMethod(controller: controller)
-    }
-    
-    public func launchVoiceEnrollment(audios: [String], baseVoiceUrl: String, methodAuth: String, output: @escaping (SdkResult<VoiceEnrollmentResult>) -> Void) {
-        log("LAUNCH VOICE MATCHING")
-        let voiceEnrollmentController = VoiceEnrollmentController(audios: audios, baseVoiceUrl: baseVoiceUrl, methodAuth: methodAuth, output: output)
-        SDKController.shared.launchMethod(controller: voiceEnrollmentController)
-    }
-    
-    public func launchVoiceMatching(audio: String, template: String, liveness_threshold: Double, baseVoiceUrl: String, methodAuth: String, output: @escaping (String) -> Void) {
-        log("LAUNCH VOICE MATCHING")
-        let voiceMatchingController = VoiceMatchingController(audio: audio,
-                                                              template: template,
-                                                              liveness_threshold: liveness_threshold,
-                                                              baseVoiceUrl: baseVoiceUrl,
-                                                              methodAuth: methodAuth,
-                                                              output: { sdkResult in
-            guard let matchingResult = sdkResult.data else {
-                output("launchVoiceMatching failed with error: \(sdkResult.errorType)")
-                return
-            }
-            output("launchVoiceMatching succeeded with:\n\(matchingResult)")
-        })
-        SDKController.shared.launchMethod(controller: voiceMatchingController)
+        SDKController.shared.launch(controller: controller)
     }
     
     public func newOperation(operationType: OperationType, customerId: String, output: @escaping (SdkResult<String>) -> Void) {

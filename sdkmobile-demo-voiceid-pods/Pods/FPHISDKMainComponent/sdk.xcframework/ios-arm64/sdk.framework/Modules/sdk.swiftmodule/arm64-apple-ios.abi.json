@@ -1570,6 +1570,33 @@
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "registerScreenBehavior",
+            "printedName": "registerScreenBehavior(screen:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:3sdk13SDKControllerC22registerScreenBehavior6screenySS_tF",
+            "mangledName": "$s3sdk13SDKControllerC22registerScreenBehavior6screenySS_tF",
+            "moduleName": "sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -1597,7 +1624,7 @@
       "kind": "StringLiteral",
       "offset": 194,
       "length": 7,
-      "value": "\"1.4.4\""
+      "value": "\"1.4.3\""
     },
     {
       "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Sdk-SPM\/SDK-Sdk-SPM\/Sources\/sdk\/Data\/SdkData.swift",
@@ -1714,7 +1741,7 @@
     {
       "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Sdk-SPM\/SDK-Sdk-SPM\/Sources\/sdk\/SDKController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5372,
+      "offset": 5437,
       "length": 4,
       "value": "true"
     }

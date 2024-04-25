@@ -3,7 +3,7 @@
 
 
 plugin 'cocoapods-art', :sources => [
-  'cocoa-dev-fphi'
+  'cocoa-pro-fphi'
 ]
 
 source 'https://cdn.cocoapods.org/'
@@ -23,27 +23,7 @@ target 'demosdk' do
   pod 'FPHISDKMainComponent', '~> 1.4.0'
   pod 'FPHISDKTrackingComponent', '~> 1.4.0'
   pod 'FPHISDKVideoCallComponent', '~> 1.4.0'
-  pod 'FPHISDKTokenizeComponent', '~> 1.4.2'
-  pod 'FPHISDKBehaviorComponent', '~> 1.4.1'
-  
-##### Use with local Sources
-#  pod 'FPHISDKLicenseCheckerComponent', :path => "../../SDK-LicenseChecker-SPM/FPHISDKLicenseCheckerComponent-Test.podspec"
-#  pod 'FPHISDKCoreComponent', :path => "../../SDK-Core-SPM/FPHISDKCoreComponent-Test.podspec"
-#  pod 'FPHISDKLicensingComponent', :path => "../../SDK-Licensing-SPM/FPHISDKLicensingComponent-Test.podspec"
-#  pod 'FPHISDKMainComponent',:path => "../../SDK-Sdk-SPM/FPHISDKMainComponent-Test.podspec"#  pod 'FPHISDKTrackingComponent', :path => "../../SDK-Tracking_component-SPM/FPHISDKTrackingComponent-Test.podspec"
-#  pod 'FPHISDKVideoCallComponent', :path => "../../SDK-Videocall-SPM/FPHISDKVideoCallComponent-Test.podspec"
-#  pod 'FPHISDKTokenizeComponent', :path => "../../SDK-Tokenize-SPM/FPHISDKTokenizeComponent-Test.podspec"
-#  pod 'FPHISDKBehaviorComponent',:path => "../../SDK-BehaviorComponent-SPM/FPHISDKBehaviorComponent-Test.podspec"
-
-##### Use with local-compiled xcframeworks
-#  pod 'FPHISDKLicenseCheckerComponent', :path => "../../SDK-LicenseChecker-SPM/FPHISDKLicenseCheckerComponent-template.podspec"
-#  pod 'FPHISDKCoreComponent', :path => "../../SDK-Core-SPM/FPHISDKCoreComponent-template.podspec"
-#  pod 'FPHISDKLicensingComponent', :path => "../../SDK-Licensing-SPM/FPHISDKLicensingComponent-template.podspec"
-#  pod 'FPHISDKMainComponent',:path => "../../SDK-Sdk-SPM/FPHISDKMainComponent-template.podspec"
-#  pod 'FPHISDKTrackingComponent', :path => "../../SDK-Tracking_component-SPM/FPHISDKTrackingComponent-template.podspec"
-#  pod 'FPHISDKVideoCallComponent', :path => "../../SDK-Videocall-SPM/FPHISDKVideoCallComponent-template.podspec"
-#  pod 'FPHISDKTokenizeComponent', :path => "../../SDK-Tokenize-SPM/FPHISDKTokenizeComponent-template.podspec"
-#  pod 'FPHISDKBehaviorComponent',:path => "../../SDK-BehaviorComponent-SPM/FPHISDKBehaviorComponent-template.podspec"
+  pod 'FPHISDKTokenizeComponent', '~> 1.4.0'
 
   target 'demosdkTests' do
     inherit! :search_paths

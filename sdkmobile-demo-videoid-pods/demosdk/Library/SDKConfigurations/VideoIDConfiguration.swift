@@ -8,8 +8,8 @@
 import videoidComponent
 
 extension SdkConfigurationManager {
-    static var videoIDConfiguration: VideoIDConfigurationData{
-        var configVideoID = VideoIDConfigurationData(showCompletedTutorial: true)
+    static var videoIDConfiguration: EnvironmentVideoIdData{
+        var configVideoID = EnvironmentVideoIdData(showCompletedTutorial: true)
         
         return configVideoID
     }

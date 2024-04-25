@@ -13,7 +13,6 @@ import selphidComponent
 import trackingComponent
 import UIKit
 import tokenizeComponent
-import behaviorComponent
 
 
 protocol SDKManagerDelegate: AnyObject {
@@ -27,8 +26,7 @@ class SDKManager {
     private var sdkData: String = ""
     private let TAG = "APP_MANAGER"
     public var mainVC: MainVMOutput!
-    
-    private var behaviorController: BehaviorController?
+
    
     // MARK: - INIT
     init() {
@@ -39,13 +37,6 @@ class SDKManager {
         
         let tokenizeController = TokenizeController()
         
-        behaviorController = BehaviorController(autoLogoutAction: {
-                self.mainVC.showAlert(msg: "ACTIVE DEFENSE")
-                return true
-            },
-            behaviorError: { behaviorError in
-                self.log("BEHAVIOR ERROR: \(behaviorError)")
-            }, debugMode: true)
         
         // MANUAL License
 //        SDKController.shared.initSdk(
@@ -58,8 +49,7 @@ class SDKManager {
 //                }
 //            },
 //            trackingController: trackingController,
-//            tokenizeController: tokenizeController,
-//            behaviorController: behaviorController
+//            tokenizeController: tokenizeController
 //        )
         
         // AUTO License
@@ -75,8 +65,7 @@ class SDKManager {
                 }
             },
             trackingController: trackingController,
-            tokenizeController: tokenizeController,
-            behaviorController: behaviorController
+            tokenizeController: tokenizeController
         )
     }
     
@@ -172,7 +161,6 @@ class SDKManager {
         log("newOperation - start, device, coordinates, customerId - \(customerId)")
 
         SDKController.shared.newOperation(operationType: operationType, customerId: customerId, output: output)
-        behaviorController?.registerPosition(position: "MAIN_SCREEN")
     }
     
     public func closeSession() {

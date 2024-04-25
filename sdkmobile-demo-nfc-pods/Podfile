@@ -1,6 +1,6 @@
 # Uncomment the next line to define a global platform for your project
 plugin 'cocoapods-art', :sources => [
-  'cocoa-dev-fphi'
+  'cocoa-pro-fphi'
 ]
 
 source 'https://cdn.cocoapods.org/'

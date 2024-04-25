@@ -3,7 +3,7 @@
 
 
 plugin 'cocoapods-art', :sources => [
-  'cocoa-dev-fphi'
+  'cocoa-PRO-fphi'
 ]
 
 source 'https://cdn.cocoapods.org/'

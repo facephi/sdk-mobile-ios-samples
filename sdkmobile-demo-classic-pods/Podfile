@@ -3,7 +3,7 @@
 
 
 plugin 'cocoapods-art', :sources => [
-  'cocoa-dev-fphi'
+  'cocoa-pro-fphi'
 ]
 
 source 'https://cdn.cocoapods.org/'
@@ -25,7 +25,6 @@ target 'demosdk' do
   pod 'FPHISDKSelphIDComponent', '~> 1.4.0'
   pod 'FPHISDKSelphiComponent', '~> 1.4.0'
   pod 'FPHISDKTokenizeComponent', '~> 1.4.0'
-  pod 'FPHISDKBehaviorComponent', '~> 1.4.0'
   
 ##### Use with local Sources
 #  pod 'FPHISDKLicenseCheckerComponent', :path => "../../SDK-LicenseChecker-SPM/FPHISDKLicenseCheckerComponent-Test.podspec"

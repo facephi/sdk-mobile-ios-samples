@@ -8,8 +8,8 @@
 import videocallComponent
 
 extension SdkConfigurationManager {
-    static var videoCallConfiguration: VideoCallConfigurationData{
-        var configVideoCall = VideoCallConfigurationData()
+    static var videoCallConfiguration: EnvironmentVideoCallData{
+        var configVideoCall = EnvironmentVideoCallData()
         
         return configVideoCall
     }

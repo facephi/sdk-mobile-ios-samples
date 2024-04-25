@@ -8,8 +8,8 @@
 import voiceIDComponent
 
 extension SdkConfigurationManager {
-    static var voiceIDConfiguration: VoiceConfigurationData {
-        var configVoiceID = VoiceConfigurationData(
+    static var voiceIDConfiguration: EnvironmentAudioRecordingData {
+        var configVoiceID = EnvironmentAudioRecordingData(
             phrases: ["Facephi Biometría"],
             showTutorial: true)
         

@@ -1969,26 +1969,6 @@
 			};
 			name = Debug;
 		};
-		00F83A2F0B1230FBF140EB68DB85F792 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6DBE2F07A631A992CCFD137B0117D413 /* FPHISDKVoiceIDComponent.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
-				EXPANDED_CODE_SIGN_IDENTITY = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		04D94E285065FB766FE6D4118CF2D91A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B7E40DB1976C81C399991BBDEC78552E /* FPHIVoiceSDK.debug.xcconfig */;
@@ -2090,6 +2070,26 @@
 			};
 			name = Release;
 		};
+		330773A5ED2191B37CCEC709562DD969 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C45A101F1AB38CFED9995E165F9D2AEA /* FPHISDKVoiceIDComponent.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				EXPANDED_CODE_SIGN_IDENTITY = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		33D955CEA73DE7ED4AA478F06A6F8F1F /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8B15A7D31FCE1739F9A37A4B408C42AD /* Pods-demosdkTests.release.xcconfig */;
@@ -2131,6 +2131,45 @@
 			};
 			name = Release;
 		};
+		3B9796F351AAD32487266A38EB6CAEF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DBE2F07A631A992CCFD137B0117D413 /* FPHISDKVoiceIDComponent.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				EXPANDED_CODE_SIGN_IDENTITY = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3E9D2F18E14B0151964E6BB01AF49B1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A124033CAE5B759B2913284846BBFEF /* FPHISDKLicensingComponent.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				EXPANDED_CODE_SIGN_IDENTITY = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		443D8E7733C4EE331A12D2BA022B88DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C44D569E0C7786E9F9F5E034A4DB2E6D /* FPHISDKTrackingComponent.debug.xcconfig */;
@@ -2149,26 +2188,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
-		};
-		45CEADD5D22351419309E142BA4940AC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9EDF57F77D9D618132C92E1799F17C0A /* FPHISDKMainComponent.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
-				EXPANDED_CODE_SIGN_IDENTITY = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
 		};
 		4A4315F90D9CE166617B4A3AF67FB136 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2254,26 +2273,6 @@
 		78EA563457343D7257FB243349A36357 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CBF383D4032B1CA996089518416171CC /* FPHISDKCoreComponent.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
-				EXPANDED_CODE_SIGN_IDENTITY = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		848706112F52CBFB9B76483B24EB27F3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6FCC03DEF02B76277B8498EDCDA599A /* FPHISDKLicensingComponent.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -2418,6 +2417,25 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
+		};
+		A19B2762E7E4155D3C1FB8C70C1DE213 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F69D82E961D8D656C47992FBDB7A9B3 /* FPHISDKMainComponent.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				EXPANDED_CODE_SIGN_IDENTITY = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		B011E0274FE8F47E2091BFAD0535D94C /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2635,24 +2653,26 @@
 			};
 			name = Release;
 		};
-		DB980D1ADC38B2499D4ACD3661C84A7A /* Debug */ = {
+		D4216F31017AE44185C54EBC68F77A44 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A124033CAE5B759B2913284846BBFEF /* FPHISDKLicensingComponent.debug.xcconfig */;
+			baseConfigurationReference = C6FCC03DEF02B76277B8498EDCDA599A /* FPHISDKLicensingComponent.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
 				EXPANDED_CODE_SIGN_IDENTITY = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 		E0B61937093EA220B50231480DEA9B61 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2852,17 +2872,16 @@
 			};
 			name = Release;
 		};
-		F157C599B9E3876CE2272ABE8E699F19 /* Release */ = {
+		ED57DB1124B28FBE54C1360187FB2FF5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C45A101F1AB38CFED9995E165F9D2AEA /* FPHISDKVoiceIDComponent.release.xcconfig */;
+			baseConfigurationReference = 9EDF57F77D9D618132C92E1799F17C0A /* FPHISDKMainComponent.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
 				EXPANDED_CODE_SIGN_IDENTITY = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2872,25 +2891,6 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
-		};
-		F7E81018A076B13C0DEBB194A5DC7E1D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F69D82E961D8D656C47992FBDB7A9B3 /* FPHISDKMainComponent.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
-				EXPANDED_CODE_SIGN_IDENTITY = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
 		};
 		FD63AB8279B9B79FFE7DE4FC7FD0D6AB /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2917,8 +2917,8 @@
 		00D849B2C9BBF865DA4C08ACDCA06C00 /* Build configuration list for PBXAggregateTarget "FPHISDKLicensingComponent" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DB980D1ADC38B2499D4ACD3661C84A7A /* Debug */,
-				848706112F52CBFB9B76483B24EB27F3 /* Release */,
+				3E9D2F18E14B0151964E6BB01AF49B1F /* Debug */,
+				D4216F31017AE44185C54EBC68F77A44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2953,8 +2953,8 @@
 		24909EAD69A56912C1C0458A332343EE /* Build configuration list for PBXAggregateTarget "FPHISDKMainComponent" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F7E81018A076B13C0DEBB194A5DC7E1D /* Debug */,
-				45CEADD5D22351419309E142BA4940AC /* Release */,
+				A19B2762E7E4155D3C1FB8C70C1DE213 /* Debug */,
+				ED57DB1124B28FBE54C1360187FB2FF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2998,8 +2998,8 @@
 		4AC8000232B9B9BCD9E47DCA3549CE86 /* Build configuration list for PBXAggregateTarget "FPHISDKVoiceIDComponent" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				00F83A2F0B1230FBF140EB68DB85F792 /* Debug */,
-				F157C599B9E3876CE2272ABE8E699F19 /* Release */,
+				3B9796F351AAD32487266A38EB6CAEF1 /* Debug */,
+				330773A5ED2191B37CCEC709562DD969 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

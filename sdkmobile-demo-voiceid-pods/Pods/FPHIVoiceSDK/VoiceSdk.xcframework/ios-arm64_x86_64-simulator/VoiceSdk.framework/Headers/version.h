@@ -5,9 +5,9 @@
 
 #include <voicesdk/core/config.h>
 
-#define VOICESDK_PROJECT_VERSION "3.12.1"
+#define VOICESDK_PROJECT_VERSION "3.13.0"
 #define VOICESDK_COMPONENTS      "core media verify liveness"
-#define VOICESDK_GIT_INFO        "HEAD 6779c8f60 "
+#define VOICESDK_GIT_INFO        "HEAD 8305b532 "
 
 namespace voicesdk {
 

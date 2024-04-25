@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="746"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="h3Z-yo-QU3">
-                                        <rect key="frame" x="16" y="0.0" width="382" height="228"/>
+                                        <rect key="frame" x="16" y="0.0" width="382" height="189"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IDENTITY PLATFORM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNo-Dt-9hC">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="33"/>
@@ -51,7 +51,7 @@
                                                 <rect key="frame" x="0.0" y="117" width="382" height="33"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="50" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHx-rH-xmd" userLabel="VOICE ID">
-                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="33"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="33"/>
                                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -62,51 +62,10 @@
                                                             <action selector="buttonClickListener:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bBU-KA-TmH"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="51" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OA-MV-aYW">
-                                                        <rect key="frame" x="195" y="0.0" width="187" height="33"/>
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="PLAY AUDIOS">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="buttonClickListener:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3uZ-sJ-CM8"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8Jc-qp-FXc">
-                                                <rect key="frame" x="0.0" y="156" width="382" height="33"/>
-                                                <subviews>
-                                                    <button opaque="NO" tag="52" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ate-SG-peN" userLabel="VOICE ENROLLMENT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="33"/>
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="VOICE ENROLLMENT">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="buttonClickListener:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SD3-FG-Taw"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="53" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJV-v5-ORd" userLabel="VOICE MATCHING">
-                                                        <rect key="frame" x="195" y="0.0" width="187" height="33"/>
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="VOICE MATCHING">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="buttonClickListener:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MOL-Wk-1YP"/>
-                                                        </connections>
-                                                    </button>
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EiZ-qF-r5K">
-                                                <rect key="frame" x="0.0" y="195" width="382" height="33"/>
+                                                <rect key="frame" x="0.0" y="156" width="382" height="33"/>
                                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>

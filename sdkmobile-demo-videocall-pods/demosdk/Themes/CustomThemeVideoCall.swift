@@ -12,7 +12,7 @@ import videocallComponent
 class CustomThemeVideoCall: ThemeVideoCallProtocol {
     var images: [R.Image: UIImage?] = [:]
     
-    var colors: [R.Color: UIColor?] = [R.Color.sdkPrimaryColor: UIColor.red]
+    var colors: [R.Color: UIColor?] = [R.Color.Primary: UIColor.red]
     
     var animations: [R.Animation: String] = [:]
     

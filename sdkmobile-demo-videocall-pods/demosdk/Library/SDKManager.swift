@@ -12,7 +12,6 @@ import trackingComponent
 import UIKit
 import videocallComponent
 import tokenizeComponent
-import behaviorComponent
 
 protocol SDKManagerDelegate: AnyObject {
     func log(msg: String)
@@ -25,8 +24,6 @@ class SDKManager {
     private var sdkData: String = ""
     private let TAG = "APP_MANAGER"
     public var mainVC: MainVMOutput!
-    
-    private var behaviorController: BehaviorController?
    
     // MARK: - INIT
     init() {
@@ -36,14 +33,6 @@ class SDKManager {
         trackingController.tenantIdDemo = SdkConfigurationManager.CUSTOM_TENANT_ID
         
         let tokenizeController = TokenizeController()
-        
-        behaviorController = BehaviorController(autoLogoutAction: {
-                self.mainVC.showAlert(msg: "ACTIVE DEFENSE")
-                return true
-            },
-            behaviorError: { behaviorError in
-                self.log("BEHAVIOR ERROR: \(behaviorError)")
-            }, debugMode: true)
         
         // MANUAL License
 //        SDKController.shared.initSdk(
@@ -56,8 +45,7 @@ class SDKManager {
 //                }
 //            },
 //            trackingController: trackingController,
-//            tokenizeController: tokenizeController,
-//            behaviorController: behaviorController
+//            tokenizeController: tokenizeController
 //        )
         
         // AUTO License
@@ -73,8 +61,7 @@ class SDKManager {
                 }
             },
             trackingController: trackingController,
-            tokenizeController: tokenizeController,
-            behaviorController: behaviorController
+            tokenizeController: tokenizeController
         )
     }
     
@@ -82,7 +69,7 @@ class SDKManager {
         SDKController.shared.getExtraData()
     }
     
-    public func launchVideoCall(data: VideoCallConfigurationData, setTracking: Bool, viewController: UIViewController, output: @escaping (SdkResult<String>) -> Void)
+    public func launchVideoCall(data: EnvironmentVideoCallData, setTracking: Bool, viewController: UIViewController, output: @escaping (SdkResult<String>) -> Void)
     {
         log("LAUNCH VIDEO CALL")
         
@@ -113,7 +100,6 @@ class SDKManager {
         log("newOperation - start, device, coordinates, customerId - \(customerId)")
 
         SDKController.shared.newOperation(operationType: operationType, customerId: customerId, output: output)
-        behaviorController?.registerPosition(position: "MAIN_SCREEN")
     }
     
     func setCustomerId(customerId: String) {

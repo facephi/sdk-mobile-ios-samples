@@ -23,54 +23,47 @@ PODS:
   - AgoraRtcEngine_iOS/VideoPreprocess (3.7.2)
   - AgoraRtcEngine_iOS/VirtualBackground (3.7.2)
   - FPBTokenizer (1.1.0)
-  - FPHIBehaviorSDK (6.13.2)
   - FPHICORElicensingLite (1.1.0)
   - FPHILottieSDKFramework (4.4.0)
-  - FPHISDKBehaviorComponent (1.4.1):
-    - FPHIBehaviorSDK (= 6.13.2)
-    - FPHISDKCoreComponent (~> 1.4.5)
   - FPHISDKCoreComponent (1.4.5):
     - FPHISDKLicenseCheckerComponent (~> 1.4.0)
   - FPHISDKLicenseCheckerComponent (1.4.0):
     - FPHICORElicensingLite (~> 1.1.0)
-  - FPHISDKLicensingComponent (1.4.1):
-    - FPHISDKCoreComponent (~> 1.4.5)
-  - FPHISDKMainComponent (1.4.4):
-    - FPHISDKCoreComponent (~> 1.4.5)
-    - FPHISDKLicensingComponent (~> 1.4.1)
+  - FPHISDKLicensingComponent (1.4.0):
+    - FPHISDKCoreComponent (~> 1.4.0)
+  - FPHISDKMainComponent (1.4.3):
+    - FPHISDKCoreComponent (~> 1.4.2)
+    - FPHISDKLicensingComponent (~> 1.4.0)
   - FPHISDKTokenizeComponent (1.4.2):
     - FPBTokenizer (~> 1.1.0)
     - FPHISDKCoreComponent (~> 1.4.5)
   - FPHISDKTrackingComponent (1.4.3):
     - FPHISDKCoreComponent (~> 1.4.5)
-  - FPHISDKVideoCallComponent (1.4.8):
+  - FPHISDKVideoCallComponent (1.4.2):
     - AgoraRtcEngine_iOS (~> 3.7.1)
     - FPHILottieSDKFramework (~> 4.0)
-    - FPHISDKCoreComponent (~> 1.4.5)
-    - Starscream (= 4.0.6)
+    - FPHISDKCoreComponent (~> 1.4.2)
+    - Starscream (= 4.0.4)
   - IQKeyboardManagerSwift (7.0.2)
-  - Starscream (4.0.6)
+  - Starscream (4.0.4)
   - SwiftLint (0.54.0)
 
 DEPENDENCIES:
-  - FPHISDKBehaviorComponent (~> 1.4.1)
   - FPHISDKCoreComponent (~> 1.4.0)
   - FPHISDKLicenseCheckerComponent (~> 1.4.0)
   - FPHISDKLicensingComponent (~> 1.4.0)
   - FPHISDKMainComponent (~> 1.4.0)
-  - FPHISDKTokenizeComponent (~> 1.4.2)
+  - FPHISDKTokenizeComponent (~> 1.4.0)
   - FPHISDKTrackingComponent (~> 1.4.0)
   - FPHISDKVideoCallComponent (~> 1.4.0)
   - IQKeyboardManagerSwift
   - SwiftLint
 
 SPEC REPOS:
-  https://facephicorp.jfrog.io/artifactory/api/pods/cocoa-dev-fphi:
+  https://facephicorp.jfrog.io/artifactory/api/pods/cocoa-pro-fphi:
     - FPBTokenizer
-    - FPHIBehaviorSDK
     - FPHICORElicensingLite
     - FPHILottieSDKFramework
-    - FPHISDKBehaviorComponent
     - FPHISDKCoreComponent
     - FPHISDKLicenseCheckerComponent
     - FPHISDKLicensingComponent
@@ -86,22 +79,20 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AgoraRtcEngine_iOS: 35387cd8e2131e1e3c3ac6c196818072ad0b9b75
-  FPBTokenizer: 827b7e0f110cba2ed1b217889c565a69af20d787
-  FPHIBehaviorSDK: 43c2ed570278618539b784edab7cabcb25336561
-  FPHICORElicensingLite: 3016033a7c30e44d795703db291f16f994772f24
-  FPHILottieSDKFramework: fc10f5752a3c650a659c075d8c9e42aff0c35bc4
-  FPHISDKBehaviorComponent: cb1f2d2e82b5713d8c13fca8616a306c6f490653
-  FPHISDKCoreComponent: afbb57b4ba70c555567ec14c3bfe5bfc54b4d8b5
-  FPHISDKLicenseCheckerComponent: 4c60700e8eb22fee0841c34aa6731504de065369
-  FPHISDKLicensingComponent: 26b616a9f126620dd245f69e440743acfe80cb8f
-  FPHISDKMainComponent: d40a93930a6dff51fa99416c011790d98147c48f
-  FPHISDKTokenizeComponent: 3dc9edc82aa26ae62e43dbdbf01c1b368a7bb7be
-  FPHISDKTrackingComponent: 1755e74c6477961d7684d0bf7739cb1997c79a5a
-  FPHISDKVideoCallComponent: 53f65aedbae892ca3274ab9bfc5f6629dcbc05e8
+  FPBTokenizer: a8e592b1b8379f61fa4075faf33b2309c8f1dd6a
+  FPHICORElicensingLite: fb198f6326d8d8b8d92435ccd1872949d44abf71
+  FPHILottieSDKFramework: 05fa82f8f72aa37d51f74e353c27037300c2c8ea
+  FPHISDKCoreComponent: 720f2d9287b22b31fba529b408099a0dcad420f3
+  FPHISDKLicenseCheckerComponent: 78d25c1a16511ee2973e048344c5f19926eee78c
+  FPHISDKLicensingComponent: 74ce12872dbaae8f2b1ddd01135f3d170e057a72
+  FPHISDKMainComponent: ec4186e602deda7a6923a030f29b8592dd13637e
+  FPHISDKTokenizeComponent: 8e3e9b6706abda6574d1ce1937fb3b3c33a001dc
+  FPHISDKTrackingComponent: b2a447e9052440586b2cbdfacaeeff81d0d137f2
+  FPHISDKVideoCallComponent: 5658aa57138776cdd733062f739898459bfc427c
   IQKeyboardManagerSwift: d338c11a896e9f29603443700c4567e32f830c22
-  Starscream: fb2c4510bebf908c62bd383bcf05e673720e91fd
+  Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
   SwiftLint: c1de071d9d08c8aba837545f6254315bc900e211
 
-PODFILE CHECKSUM: 6bf028df7fc19d1c223317878dc183f5f84736f1
+PODFILE CHECKSUM: f7213a330c1cf95b5f959a82e0be4e06bee5379f
 
 COCOAPODS: 1.13.0

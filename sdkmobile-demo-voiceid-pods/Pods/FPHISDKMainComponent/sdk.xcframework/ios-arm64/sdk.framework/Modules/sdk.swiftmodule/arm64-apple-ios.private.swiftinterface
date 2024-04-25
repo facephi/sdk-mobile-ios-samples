@@ -59,6 +59,7 @@ extension sdk.SDKController {
   public func getExtraData() -> core.SdkResult<Swift.String>
   public func tokenize(data: Swift.String) -> core.SdkResult<Swift.String>
   public func getTrackingController() -> core.ITrackingController?
+  public func registerScreenBehavior(screen: Swift.String)
 }
 extension sdk.OperationType : Swift.Equatable {}
 extension sdk.OperationType : Swift.Hashable {}

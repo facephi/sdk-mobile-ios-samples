@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		5KgSIUwevV3gRXWrner/+lLAafo=
+		uvW7Gbnf3/JLgZJEQN+HU/nG7lU=
 		</data>
 		<key>Poppins-Regular.ttf</key>
 		<data>
@@ -18,19 +18,191 @@
 		</data>
 		<key>RecorderView.nib</key>
 		<data>
-		sy/YqKlUogR75bYoxOGviitoPck=
+		oXNx8quK7sNDGDB9Qcv2MoSREys=
 		</data>
-		<key>RecordingTutorialView.nib/objects-13.0+.nib</key>
+		<key>RecordingTutorialView.nib</key>
 		<data>
-		nhuzEHSbHE/dOl3sAQ7X8Dts5MY=
+		8yOC8+E5ICF6XoyObo5EyWpWZ/o=
 		</data>
-		<key>RecordingTutorialView.nib/runtime.nib</key>
+		<key>VoiceSDKResources/antispoof2/antispoof_calibration.json</key>
 		<data>
-		zPwnBYKozwUYvtKRVbyKkr++RlQ=
+		66sQ6xRduOEmdBA0ANBZv/+8DkU=
 		</data>
-		<key>VoiceSDKResources/media/speech_summary/features.json</key>
+		<key>VoiceSDKResources/antispoof2/audio_cut.json</key>
 		<data>
-		BI4ce9MTQkJFOVdZXiWAGbLK4Yo=
+		o4SZw1s9+i4fsn3dyFkTzaa62lY=
+		</data>
+		<key>VoiceSDKResources/antispoof2/fusions_chain.json</key>
+		<data>
+		jh431dOKPBY+7UikKw2kSQ5/LKY=
+		</data>
+		<key>VoiceSDKResources/antispoof2/pipeline.json</key>
+		<data>
+		0RjwKDrAWW/H8RJZeVFfF8awYFE=
+		</data>
+		<key>VoiceSDKResources/antispoof2/rawnet/antispoof_calibration.json</key>
+		<data>
+		eyXQHVkMTetg/KBDLdpFoMe8lhg=
+		</data>
+		<key>VoiceSDKResources/antispoof2/rawnet/graph.json</key>
+		<data>
+		yT8m+HFgfvwRv3s24pWU7T4pxQk=
+		</data>
+		<key>VoiceSDKResources/antispoof2/rawnet/model.tflite</key>
+		<data>
+		IO9UGCbUCMzWBXczEsGx19yCNLM=
+		</data>
+		<key>VoiceSDKResources/antispoof2/rawnet/nnet.json</key>
+		<data>
+		p5yStPbNP77ugVTFZ7quT3NcSYE=
+		</data>
+		<key>VoiceSDKResources/antispoof2/rawnet/pipeline.json</key>
+		<data>
+		H/VgbnClAopSybe7VAkwxjhO3oE=
+		</data>
+		<key>VoiceSDKResources/antispoof2/reduction.json</key>
+		<data>
+		MZ8jg4VmDs2bjh5UO/PLWE97wos=
+		</data>
+		<key>VoiceSDKResources/antispoof2/resampler_16k.json</key>
+		<data>
+		KaYzWEJRNMn+jgGw1rA/74EsYaE=
+		</data>
+		<key>VoiceSDKResources/antispoof2/rn125_vas_sn/antispoof_calibration.json</key>
+		<data>
+		eyXQHVkMTetg/KBDLdpFoMe8lhg=
+		</data>
+		<key>VoiceSDKResources/antispoof2/rn125_vas_sn/graph.json</key>
+		<data>
+		/vU7fF85MfxdMwcW3hYuQPuf2VQ=
+		</data>
+		<key>VoiceSDKResources/antispoof2/rn125_vas_sn/model.tflite</key>
+		<data>
+		5xQ/vikU+hoZ0dks0nbIo7cgytA=
+		</data>
+		<key>VoiceSDKResources/antispoof2/rn125_vas_sn/nnet.json</key>
+		<data>
+		kSiHqlf3YdgHEhdBYGwZOv7f9fI=
+		</data>
+		<key>VoiceSDKResources/antispoof2/rn125_vas_sn/pipeline.json</key>
+		<data>
+		H/VgbnClAopSybe7VAkwxjhO3oE=
+		</data>
+		<key>VoiceSDKResources/liveness/antispoof_calibration.json</key>
+		<data>
+		66sQ6xRduOEmdBA0ANBZv/+8DkU=
+		</data>
+		<key>VoiceSDKResources/liveness/audio_cut.json</key>
+		<data>
+		o4SZw1s9+i4fsn3dyFkTzaa62lY=
+		</data>
+		<key>VoiceSDKResources/liveness/fusions_chain.json</key>
+		<data>
+		jh431dOKPBY+7UikKw2kSQ5/LKY=
+		</data>
+		<key>VoiceSDKResources/liveness/pipeline.json</key>
+		<data>
+		0RjwKDrAWW/H8RJZeVFfF8awYFE=
+		</data>
+		<key>VoiceSDKResources/liveness/rawnet/antispoof_calibration.json</key>
+		<data>
+		eyXQHVkMTetg/KBDLdpFoMe8lhg=
+		</data>
+		<key>VoiceSDKResources/liveness/rawnet/graph.json</key>
+		<data>
+		yT8m+HFgfvwRv3s24pWU7T4pxQk=
+		</data>
+		<key>VoiceSDKResources/liveness/rawnet/model.tflite</key>
+		<data>
+		IO9UGCbUCMzWBXczEsGx19yCNLM=
+		</data>
+		<key>VoiceSDKResources/liveness/rawnet/nnet.json</key>
+		<data>
+		p5yStPbNP77ugVTFZ7quT3NcSYE=
+		</data>
+		<key>VoiceSDKResources/liveness/rawnet/pipeline.json</key>
+		<data>
+		H/VgbnClAopSybe7VAkwxjhO3oE=
+		</data>
+		<key>VoiceSDKResources/liveness/reduction.json</key>
+		<data>
+		MZ8jg4VmDs2bjh5UO/PLWE97wos=
+		</data>
+		<key>VoiceSDKResources/liveness/resampler_16k.json</key>
+		<data>
+		KaYzWEJRNMn+jgGw1rA/74EsYaE=
+		</data>
+		<key>VoiceSDKResources/liveness/rn125_vas_sn/antispoof_calibration.json</key>
+		<data>
+		eyXQHVkMTetg/KBDLdpFoMe8lhg=
+		</data>
+		<key>VoiceSDKResources/liveness/rn125_vas_sn/graph.json</key>
+		<data>
+		/vU7fF85MfxdMwcW3hYuQPuf2VQ=
+		</data>
+		<key>VoiceSDKResources/liveness/rn125_vas_sn/model.tflite</key>
+		<data>
+		5xQ/vikU+hoZ0dks0nbIo7cgytA=
+		</data>
+		<key>VoiceSDKResources/liveness/rn125_vas_sn/nnet.json</key>
+		<data>
+		kSiHqlf3YdgHEhdBYGwZOv7f9fI=
+		</data>
+		<key>VoiceSDKResources/liveness/rn125_vas_sn/pipeline.json</key>
+		<data>
+		H/VgbnClAopSybe7VAkwxjhO3oE=
+		</data>
+		<key>VoiceSDKResources/media/legacy/snr_computer/gvad_model.cbm</key>
+		<data>
+		pXaYEQuO1pA3sLdrzu60Dx4AvcI=
+		</data>
+		<key>VoiceSDKResources/media/legacy/snr_computer/vad.json</key>
+		<data>
+		XGmrtV1d+b4sJG9JT4qFYq3xlaE=
+		</data>
+		<key>VoiceSDKResources/media/legacy/speech_summary/gvad_model.cbm</key>
+		<data>
+		pXaYEQuO1pA3sLdrzu60Dx4AvcI=
+		</data>
+		<key>VoiceSDKResources/media/legacy/speech_summary/vad.json</key>
+		<data>
+		XGmrtV1d+b4sJG9JT4qFYq3xlaE=
+		</data>
+		<key>VoiceSDKResources/media/snr_computer/audio_cut.json</key>
+		<data>
+		hIjfFKhM1TDBc/ngPZdYHqSzGSk=
+		</data>
+		<key>VoiceSDKResources/media/snr_computer/melbank_extractor.json</key>
+		<data>
+		jC+eHtdPJlWIVk6MidQ5U4dJLiQ=
+		</data>
+		<key>VoiceSDKResources/media/snr_computer/nnet/graph.json</key>
+		<data>
+		tKC/XmkIy2srHcWIc5NxuJKjyB8=
+		</data>
+		<key>VoiceSDKResources/media/snr_computer/nnet/model.tflite</key>
+		<data>
+		Zb+gTIOvUNnczSjJZtLb/xMskvM=
+		</data>
+		<key>VoiceSDKResources/media/snr_computer/nnet/tfgraph.json</key>
+		<data>
+		kSiHqlf3YdgHEhdBYGwZOv7f9fI=
+		</data>
+		<key>VoiceSDKResources/media/snr_computer/pipeline.json</key>
+		<data>
+		3aZji7YBWW7LaYGdJHK0Fj7ZrEU=
+		</data>
+		<key>VoiceSDKResources/media/snr_computer/reduction.json</key>
+		<data>
+		MZ8jg4VmDs2bjh5UO/PLWE97wos=
+		</data>
+		<key>VoiceSDKResources/media/snr_computer/resampler.json</key>
+		<data>
+		KaYzWEJRNMn+jgGw1rA/74EsYaE=
+		</data>
+		<key>VoiceSDKResources/media/speech_summary/melbank_extractor.json</key>
+		<data>
+		UDpcibpfwfVA80ySrS1GeiiJ3Fc=
 		</data>
 		<key>VoiceSDKResources/media/speech_summary/nnet/graph.json</key>
 		<data>
@@ -40,21 +212,13 @@
 		<data>
 		UTbBYaNH1XP6lamOvRQuZ7gv4Ow=
 		</data>
-		<key>VoiceSDKResources/media/speech_summary/nnet_features/features.tflite</key>
-		<data>
-		fndpkTaTy1Od4tpTHf1o0yvgMoE=
-		</data>
-		<key>VoiceSDKResources/media/speech_summary/nnet_features/graph.json</key>
-		<data>
-		AcUGLSVdZYOgey97Tyud+HqYCg0=
-		</data>
 		<key>VoiceSDKResources/media/speech_summary/vad.json</key>
 		<data>
 		v8NoifYH1c9c222NK0DlsRL0yDQ=
 		</data>
 		<key>VoiceSDKResources/media/speech_summary/vad_nnet.json</key>
 		<data>
-		Bcz/Le+rU4SF/4cg+FsPb1O9cF0=
+		iFueIadrBh7dDx03n9wCaRsyEIk=
 		</data>
 		<key>VoiceSDKResources/verify/mic-v1/factory_init_data/R85SDNW/audio_cut.json</key>
 		<data>
@@ -78,11 +242,11 @@
 		</data>
 		<key>VoiceSDKResources/verify/mic-v1/factory_init_data/R85SDNW/nnet/nnet.json</key>
 		<data>
-		igjM42UFL9BexZxuyqUmxiyn684=
+		kSiHqlf3YdgHEhdBYGwZOv7f9fI=
 		</data>
 		<key>VoiceSDKResources/verify/mic-v1/factory_init_data/R85SDNW/pipeline.json</key>
 		<data>
-		1A9pnMLSicMEEmVb3jthmM+Vplo=
+		v1nxKiEPWRHsw1WdCaAJ06EU2jQ=
 		</data>
 		<key>VoiceSDKResources/verify/mic-v1/factory_init_data/R85SDNW/reduction.json</key>
 		<data>
@@ -108,9 +272,9 @@
 		<data>
 		hIjfFKhM1TDBc/ngPZdYHqSzGSk=
 		</data>
-		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/snr_computer/melbank_weights_provider.json</key>
+		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/snr_computer/melbank_extractor.json</key>
 		<data>
-		CrER8diysx0hxQuKtSs5ek2X1iQ=
+		jC+eHtdPJlWIVk6MidQ5U4dJLiQ=
 		</data>
 		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/snr_computer/nnet/graph.json</key>
 		<data>
@@ -122,23 +286,11 @@
 		</data>
 		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/snr_computer/nnet/tfgraph.json</key>
 		<data>
-		igjM42UFL9BexZxuyqUmxiyn684=
-		</data>
-		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/snr_computer/nnet_features/features.tflite</key>
-		<data>
-		4uvE5n6+6Bcr9bCFd/qXDgQIHEc=
-		</data>
-		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/snr_computer/nnet_features/graph.json</key>
-		<data>
-		Xp7e5Z6fJg9jfcTTEI61KbEgyNU=
-		</data>
-		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/snr_computer/nnet_features/tfgraph.json</key>
-		<data>
-		JBUC33xClpRFMvOPhJh74O9tbsA=
+		kSiHqlf3YdgHEhdBYGwZOv7f9fI=
 		</data>
 		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/snr_computer/pipeline.json</key>
 		<data>
-		2i2zkMQxzZeirMnETItbuPRNsq0=
+		3aZji7YBWW7LaYGdJHK0Fj7ZrEU=
 		</data>
 		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/snr_computer/reduction.json</key>
 		<data>
@@ -148,9 +300,9 @@
 		<data>
 		KaYzWEJRNMn+jgGw1rA/74EsYaE=
 		</data>
-		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/speech_summary/features.json</key>
+		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/speech_summary/melbank_extractor.json</key>
 		<data>
-		BI4ce9MTQkJFOVdZXiWAGbLK4Yo=
+		UDpcibpfwfVA80ySrS1GeiiJ3Fc=
 		</data>
 		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/speech_summary/nnet/graph.json</key>
 		<data>
@@ -160,21 +312,13 @@
 		<data>
 		UTbBYaNH1XP6lamOvRQuZ7gv4Ow=
 		</data>
-		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/speech_summary/nnet_features/features.tflite</key>
-		<data>
-		fndpkTaTy1Od4tpTHf1o0yvgMoE=
-		</data>
-		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/speech_summary/nnet_features/graph.json</key>
-		<data>
-		AcUGLSVdZYOgey97Tyud+HqYCg0=
-		</data>
 		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/speech_summary/vad.json</key>
 		<data>
 		v8NoifYH1c9c222NK0DlsRL0yDQ=
 		</data>
 		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/speech_summary/vad_nnet.json</key>
 		<data>
-		Bcz/Le+rU4SF/4cg+FsPb1O9cF0=
+		iFueIadrBh7dDx03n9wCaRsyEIk=
 		</data>
 		<key>VoiceSDKResources/verify/mic-v1/voice_template_factory.json</key>
 		<data>
@@ -234,11 +378,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5KgSIUwevV3gRXWrner/+lLAafo=
+			uvW7Gbnf3/JLgZJEQN+HU/nG7lU=
 			</data>
 			<key>hash2</key>
 			<data>
-			IvB4TZfTXoajdr8ydVb335qtZpRwgtQofTwzsoSZLus=
+			QUuxT0+JW4eaoMDFlHg/iau/Inf5Rqe8hogVpUQ2lRE=
 			</data>
 		</dict>
 		<key>Poppins-Regular.ttf</key>
@@ -267,44 +411,517 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			sy/YqKlUogR75bYoxOGviitoPck=
+			oXNx8quK7sNDGDB9Qcv2MoSREys=
 			</data>
 			<key>hash2</key>
 			<data>
-			stDFGTIZCv+JvHw1gUu+GF9O7Z0+OmoIIi96w8g78j4=
+			y3Oi6BkPq3BE3VptjpepqDyx2wWBxaqM2XtPcM/X5+s=
 			</data>
 		</dict>
-		<key>RecordingTutorialView.nib/objects-13.0+.nib</key>
+		<key>RecordingTutorialView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			nhuzEHSbHE/dOl3sAQ7X8Dts5MY=
+			8yOC8+E5ICF6XoyObo5EyWpWZ/o=
 			</data>
 			<key>hash2</key>
 			<data>
-			452Kj+GQoPAMMqxkhyIZKWft3sOHj5O9+pzLHqnVkRA=
+			BBuwGfIfQ0DeCXHxsS2zimb0mMF/Q6sBYk4/A3t+10s=
 			</data>
 		</dict>
-		<key>RecordingTutorialView.nib/runtime.nib</key>
+		<key>VoiceSDKResources/antispoof2/antispoof_calibration.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			zPwnBYKozwUYvtKRVbyKkr++RlQ=
+			66sQ6xRduOEmdBA0ANBZv/+8DkU=
 			</data>
 			<key>hash2</key>
 			<data>
-			mXueAfiKrBeS0xT1O/L9Nj/KdiOB269khzlOAv2gSzI=
+			5TmgvFCDRoAzJEYSpwwjkvOHRXvFhws1z4SJWQ9fY2M=
 			</data>
 		</dict>
-		<key>VoiceSDKResources/media/speech_summary/features.json</key>
+		<key>VoiceSDKResources/antispoof2/audio_cut.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BI4ce9MTQkJFOVdZXiWAGbLK4Yo=
+			o4SZw1s9+i4fsn3dyFkTzaa62lY=
 			</data>
 			<key>hash2</key>
 			<data>
-			EZC6Gl6NOp99tXoG/zT0VsBghjlaxu7feYoq4ZFW34A=
+			j0ZdYX/KaX6m0ogWMCg2yTQGARXZEirCIlQ/23VrLL8=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/antispoof2/fusions_chain.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jh431dOKPBY+7UikKw2kSQ5/LKY=
+			</data>
+			<key>hash2</key>
+			<data>
+			7IXYxxMEr9HK9x3paeeJ0XVcXjDMeuDorR9ISC70peY=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/antispoof2/pipeline.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			0RjwKDrAWW/H8RJZeVFfF8awYFE=
+			</data>
+			<key>hash2</key>
+			<data>
+			mMUaC6kaufaX09BRLkOyQy+NfKQtcixE454V+jUp9qQ=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/antispoof2/rawnet/antispoof_calibration.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			eyXQHVkMTetg/KBDLdpFoMe8lhg=
+			</data>
+			<key>hash2</key>
+			<data>
+			JzaRR+PNZd1xRj/9QB79ZkBJVO0U7vn7vXtdrHP48D4=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/antispoof2/rawnet/graph.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			yT8m+HFgfvwRv3s24pWU7T4pxQk=
+			</data>
+			<key>hash2</key>
+			<data>
+			Anq6h4rtc2lFwKozgteeshICa6IZ4zH4Kde921uTnfg=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/antispoof2/rawnet/model.tflite</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			IO9UGCbUCMzWBXczEsGx19yCNLM=
+			</data>
+			<key>hash2</key>
+			<data>
+			nf6EGim5JiYBBPU4zuc2saVkgTH3gnN/lHTPANEp7pE=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/antispoof2/rawnet/nnet.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			p5yStPbNP77ugVTFZ7quT3NcSYE=
+			</data>
+			<key>hash2</key>
+			<data>
+			5gTSjrvxYQiCxGQ+bgre7T4OMH2yUeIn8Lv2LbAjC5k=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/antispoof2/rawnet/pipeline.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			H/VgbnClAopSybe7VAkwxjhO3oE=
+			</data>
+			<key>hash2</key>
+			<data>
+			ubWXnT7UnPpVsPOh6/G5jW+E0wE7/8IrgIOoJ1ZoGoQ=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/antispoof2/reduction.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			MZ8jg4VmDs2bjh5UO/PLWE97wos=
+			</data>
+			<key>hash2</key>
+			<data>
+			YLe0uFN6DLh1Btc9RZAuep9HpgtnmieutHJmNxdN8k8=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/antispoof2/resampler_16k.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			KaYzWEJRNMn+jgGw1rA/74EsYaE=
+			</data>
+			<key>hash2</key>
+			<data>
+			zaLkbEvAqJiElUyq5LXjDjqh3iXehDDSGQpzdt/hwRU=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/antispoof2/rn125_vas_sn/antispoof_calibration.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			eyXQHVkMTetg/KBDLdpFoMe8lhg=
+			</data>
+			<key>hash2</key>
+			<data>
+			JzaRR+PNZd1xRj/9QB79ZkBJVO0U7vn7vXtdrHP48D4=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/antispoof2/rn125_vas_sn/graph.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			/vU7fF85MfxdMwcW3hYuQPuf2VQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			X0GWgYrP9R+rL/9CBUKODGMLhDwnyOkNdtVXJeYlYlQ=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/antispoof2/rn125_vas_sn/model.tflite</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5xQ/vikU+hoZ0dks0nbIo7cgytA=
+			</data>
+			<key>hash2</key>
+			<data>
+			1vTFAxIKhwHfyAvm3taEE8tOp+YNngOGcF5rq9VsFHI=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/antispoof2/rn125_vas_sn/nnet.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			kSiHqlf3YdgHEhdBYGwZOv7f9fI=
+			</data>
+			<key>hash2</key>
+			<data>
+			tIvtotEgzPPesVqeP2i7GgPSpQ1jvKZYDIliGXq9DsY=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/antispoof2/rn125_vas_sn/pipeline.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			H/VgbnClAopSybe7VAkwxjhO3oE=
+			</data>
+			<key>hash2</key>
+			<data>
+			ubWXnT7UnPpVsPOh6/G5jW+E0wE7/8IrgIOoJ1ZoGoQ=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/liveness/antispoof_calibration.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			66sQ6xRduOEmdBA0ANBZv/+8DkU=
+			</data>
+			<key>hash2</key>
+			<data>
+			5TmgvFCDRoAzJEYSpwwjkvOHRXvFhws1z4SJWQ9fY2M=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/liveness/audio_cut.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			o4SZw1s9+i4fsn3dyFkTzaa62lY=
+			</data>
+			<key>hash2</key>
+			<data>
+			j0ZdYX/KaX6m0ogWMCg2yTQGARXZEirCIlQ/23VrLL8=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/liveness/fusions_chain.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jh431dOKPBY+7UikKw2kSQ5/LKY=
+			</data>
+			<key>hash2</key>
+			<data>
+			7IXYxxMEr9HK9x3paeeJ0XVcXjDMeuDorR9ISC70peY=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/liveness/pipeline.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			0RjwKDrAWW/H8RJZeVFfF8awYFE=
+			</data>
+			<key>hash2</key>
+			<data>
+			mMUaC6kaufaX09BRLkOyQy+NfKQtcixE454V+jUp9qQ=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/liveness/rawnet/antispoof_calibration.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			eyXQHVkMTetg/KBDLdpFoMe8lhg=
+			</data>
+			<key>hash2</key>
+			<data>
+			JzaRR+PNZd1xRj/9QB79ZkBJVO0U7vn7vXtdrHP48D4=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/liveness/rawnet/graph.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			yT8m+HFgfvwRv3s24pWU7T4pxQk=
+			</data>
+			<key>hash2</key>
+			<data>
+			Anq6h4rtc2lFwKozgteeshICa6IZ4zH4Kde921uTnfg=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/liveness/rawnet/model.tflite</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			IO9UGCbUCMzWBXczEsGx19yCNLM=
+			</data>
+			<key>hash2</key>
+			<data>
+			nf6EGim5JiYBBPU4zuc2saVkgTH3gnN/lHTPANEp7pE=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/liveness/rawnet/nnet.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			p5yStPbNP77ugVTFZ7quT3NcSYE=
+			</data>
+			<key>hash2</key>
+			<data>
+			5gTSjrvxYQiCxGQ+bgre7T4OMH2yUeIn8Lv2LbAjC5k=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/liveness/rawnet/pipeline.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			H/VgbnClAopSybe7VAkwxjhO3oE=
+			</data>
+			<key>hash2</key>
+			<data>
+			ubWXnT7UnPpVsPOh6/G5jW+E0wE7/8IrgIOoJ1ZoGoQ=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/liveness/reduction.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			MZ8jg4VmDs2bjh5UO/PLWE97wos=
+			</data>
+			<key>hash2</key>
+			<data>
+			YLe0uFN6DLh1Btc9RZAuep9HpgtnmieutHJmNxdN8k8=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/liveness/resampler_16k.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			KaYzWEJRNMn+jgGw1rA/74EsYaE=
+			</data>
+			<key>hash2</key>
+			<data>
+			zaLkbEvAqJiElUyq5LXjDjqh3iXehDDSGQpzdt/hwRU=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/liveness/rn125_vas_sn/antispoof_calibration.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			eyXQHVkMTetg/KBDLdpFoMe8lhg=
+			</data>
+			<key>hash2</key>
+			<data>
+			JzaRR+PNZd1xRj/9QB79ZkBJVO0U7vn7vXtdrHP48D4=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/liveness/rn125_vas_sn/graph.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			/vU7fF85MfxdMwcW3hYuQPuf2VQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			X0GWgYrP9R+rL/9CBUKODGMLhDwnyOkNdtVXJeYlYlQ=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/liveness/rn125_vas_sn/model.tflite</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5xQ/vikU+hoZ0dks0nbIo7cgytA=
+			</data>
+			<key>hash2</key>
+			<data>
+			1vTFAxIKhwHfyAvm3taEE8tOp+YNngOGcF5rq9VsFHI=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/liveness/rn125_vas_sn/nnet.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			kSiHqlf3YdgHEhdBYGwZOv7f9fI=
+			</data>
+			<key>hash2</key>
+			<data>
+			tIvtotEgzPPesVqeP2i7GgPSpQ1jvKZYDIliGXq9DsY=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/liveness/rn125_vas_sn/pipeline.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			H/VgbnClAopSybe7VAkwxjhO3oE=
+			</data>
+			<key>hash2</key>
+			<data>
+			ubWXnT7UnPpVsPOh6/G5jW+E0wE7/8IrgIOoJ1ZoGoQ=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/media/legacy/snr_computer/gvad_model.cbm</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			pXaYEQuO1pA3sLdrzu60Dx4AvcI=
+			</data>
+			<key>hash2</key>
+			<data>
+			vvwpx3zVEryrSuT2uVm6y8JjTthCgYqRjSjkfFvIoyI=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/media/legacy/snr_computer/vad.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			XGmrtV1d+b4sJG9JT4qFYq3xlaE=
+			</data>
+			<key>hash2</key>
+			<data>
+			vzqzhWyaN+/R1kYINQrquUJduXwAfcb8u4gBFAuh0mI=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/media/legacy/speech_summary/gvad_model.cbm</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			pXaYEQuO1pA3sLdrzu60Dx4AvcI=
+			</data>
+			<key>hash2</key>
+			<data>
+			vvwpx3zVEryrSuT2uVm6y8JjTthCgYqRjSjkfFvIoyI=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/media/legacy/speech_summary/vad.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			XGmrtV1d+b4sJG9JT4qFYq3xlaE=
+			</data>
+			<key>hash2</key>
+			<data>
+			vzqzhWyaN+/R1kYINQrquUJduXwAfcb8u4gBFAuh0mI=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/media/snr_computer/audio_cut.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			hIjfFKhM1TDBc/ngPZdYHqSzGSk=
+			</data>
+			<key>hash2</key>
+			<data>
+			mRF/HobDAU684hRhyxD+apxwXrDcI4vbnpkDwRhfuaA=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/media/snr_computer/melbank_extractor.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jC+eHtdPJlWIVk6MidQ5U4dJLiQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			uqDP7UddwDt2XdN6awwAef0rxHwhnuCP7PdkDuby/u4=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/media/snr_computer/nnet/graph.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			tKC/XmkIy2srHcWIc5NxuJKjyB8=
+			</data>
+			<key>hash2</key>
+			<data>
+			x3R8ffP9e4agAf4I+9a372750CSJUF73EeYuUZ7RPSE=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/media/snr_computer/nnet/model.tflite</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Zb+gTIOvUNnczSjJZtLb/xMskvM=
+			</data>
+			<key>hash2</key>
+			<data>
+			b2/oTjEoxpOQ8pSQjY6cEAk0PQo8/QYbs4Fuk9hjoxY=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/media/snr_computer/nnet/tfgraph.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			kSiHqlf3YdgHEhdBYGwZOv7f9fI=
+			</data>
+			<key>hash2</key>
+			<data>
+			tIvtotEgzPPesVqeP2i7GgPSpQ1jvKZYDIliGXq9DsY=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/media/snr_computer/pipeline.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			3aZji7YBWW7LaYGdJHK0Fj7ZrEU=
+			</data>
+			<key>hash2</key>
+			<data>
+			jv4Ujl5BQxVp8Pu1TDrmXdlt+y6pbQ5RrQZ69rt6S98=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/media/snr_computer/reduction.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			MZ8jg4VmDs2bjh5UO/PLWE97wos=
+			</data>
+			<key>hash2</key>
+			<data>
+			YLe0uFN6DLh1Btc9RZAuep9HpgtnmieutHJmNxdN8k8=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/media/snr_computer/resampler.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			KaYzWEJRNMn+jgGw1rA/74EsYaE=
+			</data>
+			<key>hash2</key>
+			<data>
+			zaLkbEvAqJiElUyq5LXjDjqh3iXehDDSGQpzdt/hwRU=
+			</data>
+		</dict>
+		<key>VoiceSDKResources/media/speech_summary/melbank_extractor.json</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			UDpcibpfwfVA80ySrS1GeiiJ3Fc=
+			</data>
+			<key>hash2</key>
+			<data>
+			zDgIxifLcuNtgZDHWBRuTkJPiYAboPsOFE2R+7Hkbog=
 			</data>
 		</dict>
 		<key>VoiceSDKResources/media/speech_summary/nnet/graph.json</key>
@@ -329,28 +946,6 @@
 			QYTKtSi2KPEWdK+GVGBvXxWOy09Z1myv2+kWyeVctEc=
 			</data>
 		</dict>
-		<key>VoiceSDKResources/media/speech_summary/nnet_features/features.tflite</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			fndpkTaTy1Od4tpTHf1o0yvgMoE=
-			</data>
-			<key>hash2</key>
-			<data>
-			G7hzlZFfR/lmRwiT0lQgLuZmzLTo1nI2jyR+Z2eaaYE=
-			</data>
-		</dict>
-		<key>VoiceSDKResources/media/speech_summary/nnet_features/graph.json</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			AcUGLSVdZYOgey97Tyud+HqYCg0=
-			</data>
-			<key>hash2</key>
-			<data>
-			VgUIzJc8R92+468D4VPc3/vhW7efqzg8Q2qvBW35HDc=
-			</data>
-		</dict>
 		<key>VoiceSDKResources/media/speech_summary/vad.json</key>
 		<dict>
 			<key>hash</key>
@@ -366,11 +961,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Bcz/Le+rU4SF/4cg+FsPb1O9cF0=
+			iFueIadrBh7dDx03n9wCaRsyEIk=
 			</data>
 			<key>hash2</key>
 			<data>
-			gVF2O/eoYeF77zE5q7dEXBHZ6HEvZP/3yavniWIwLZU=
+			tm4Sv4W5kRiqDUvlNayBG5GGwRp3U4EAay4weJmrVHE=
 			</data>
 		</dict>
 		<key>VoiceSDKResources/verify/mic-v1/factory_init_data/R85SDNW/audio_cut.json</key>
@@ -432,22 +1027,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			igjM42UFL9BexZxuyqUmxiyn684=
+			kSiHqlf3YdgHEhdBYGwZOv7f9fI=
 			</data>
 			<key>hash2</key>
 			<data>
-			W3cVU9iKlN4NDRU2R0UmY2tG+dj6IZD97jj2CacZ3/U=
+			tIvtotEgzPPesVqeP2i7GgPSpQ1jvKZYDIliGXq9DsY=
 			</data>
 		</dict>
 		<key>VoiceSDKResources/verify/mic-v1/factory_init_data/R85SDNW/pipeline.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1A9pnMLSicMEEmVb3jthmM+Vplo=
+			v1nxKiEPWRHsw1WdCaAJ06EU2jQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			/QbG5W3wFOL5XLhvwji8dFl7/WLPLY3fO8ynGpfpO5A=
+			TaYyOu2zsZqAv4AZKMSp7tzuQCVplZtNmwg5BI5YEvs=
 			</data>
 		</dict>
 		<key>VoiceSDKResources/verify/mic-v1/factory_init_data/R85SDNW/reduction.json</key>
@@ -516,15 +1111,15 @@
 			mRF/HobDAU684hRhyxD+apxwXrDcI4vbnpkDwRhfuaA=
 			</data>
 		</dict>
-		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/snr_computer/melbank_weights_provider.json</key>
+		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/snr_computer/melbank_extractor.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CrER8diysx0hxQuKtSs5ek2X1iQ=
+			jC+eHtdPJlWIVk6MidQ5U4dJLiQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			p2bANlnxc77sO+/nvhNTMORqzO41E6CmvifTHrjsu1k=
+			uqDP7UddwDt2XdN6awwAef0rxHwhnuCP7PdkDuby/u4=
 			</data>
 		</dict>
 		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/snr_computer/nnet/graph.json</key>
@@ -553,55 +1148,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			igjM42UFL9BexZxuyqUmxiyn684=
+			kSiHqlf3YdgHEhdBYGwZOv7f9fI=
 			</data>
 			<key>hash2</key>
 			<data>
-			W3cVU9iKlN4NDRU2R0UmY2tG+dj6IZD97jj2CacZ3/U=
-			</data>
-		</dict>
-		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/snr_computer/nnet_features/features.tflite</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			4uvE5n6+6Bcr9bCFd/qXDgQIHEc=
-			</data>
-			<key>hash2</key>
-			<data>
-			/uu+Ugu76iiuzRlflLBVqYds82xfYnJvrbI4H5P/2Ww=
-			</data>
-		</dict>
-		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/snr_computer/nnet_features/graph.json</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			Xp7e5Z6fJg9jfcTTEI61KbEgyNU=
-			</data>
-			<key>hash2</key>
-			<data>
-			V493L7hXz8BDjRhXRcUTq3f+qzssZk15vPuevQOzHy8=
-			</data>
-		</dict>
-		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/snr_computer/nnet_features/tfgraph.json</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			JBUC33xClpRFMvOPhJh74O9tbsA=
-			</data>
-			<key>hash2</key>
-			<data>
-			ztFNXeZMnN+1hSak36CTQzVMMxVKFUXNgvQ4xZOGNaY=
+			tIvtotEgzPPesVqeP2i7GgPSpQ1jvKZYDIliGXq9DsY=
 			</data>
 		</dict>
 		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/snr_computer/pipeline.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2i2zkMQxzZeirMnETItbuPRNsq0=
+			3aZji7YBWW7LaYGdJHK0Fj7ZrEU=
 			</data>
 			<key>hash2</key>
 			<data>
-			sbX46tD355VrRbGoqbOlf6No1LtFCMvpDOlKx6TsPdY=
+			jv4Ujl5BQxVp8Pu1TDrmXdlt+y6pbQ5RrQZ69rt6S98=
 			</data>
 		</dict>
 		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/snr_computer/reduction.json</key>
@@ -626,15 +1188,15 @@
 			zaLkbEvAqJiElUyq5LXjDjqh3iXehDDSGQpzdt/hwRU=
 			</data>
 		</dict>
-		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/speech_summary/features.json</key>
+		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/speech_summary/melbank_extractor.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BI4ce9MTQkJFOVdZXiWAGbLK4Yo=
+			UDpcibpfwfVA80ySrS1GeiiJ3Fc=
 			</data>
 			<key>hash2</key>
 			<data>
-			EZC6Gl6NOp99tXoG/zT0VsBghjlaxu7feYoq4ZFW34A=
+			zDgIxifLcuNtgZDHWBRuTkJPiYAboPsOFE2R+7Hkbog=
 			</data>
 		</dict>
 		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/speech_summary/nnet/graph.json</key>
@@ -659,28 +1221,6 @@
 			QYTKtSi2KPEWdK+GVGBvXxWOy09Z1myv2+kWyeVctEc=
 			</data>
 		</dict>
-		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/speech_summary/nnet_features/features.tflite</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			fndpkTaTy1Od4tpTHf1o0yvgMoE=
-			</data>
-			<key>hash2</key>
-			<data>
-			G7hzlZFfR/lmRwiT0lQgLuZmzLTo1nI2jyR+Z2eaaYE=
-			</data>
-		</dict>
-		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/speech_summary/nnet_features/graph.json</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			AcUGLSVdZYOgey97Tyud+HqYCg0=
-			</data>
-			<key>hash2</key>
-			<data>
-			VgUIzJc8R92+468D4VPc3/vhW7efqzg8Q2qvBW35HDc=
-			</data>
-		</dict>
 		<key>VoiceSDKResources/verify/mic-v1/quality_checker_init_data/speech_summary/vad.json</key>
 		<dict>
 			<key>hash</key>
@@ -696,11 +1236,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Bcz/Le+rU4SF/4cg+FsPb1O9cF0=
+			iFueIadrBh7dDx03n9wCaRsyEIk=
 			</data>
 			<key>hash2</key>
 			<data>
-			gVF2O/eoYeF77zE5q7dEXBHZ6HEvZP/3yavniWIwLZU=
+			tm4Sv4W5kRiqDUvlNayBG5GGwRp3U4EAay4weJmrVHE=
 			</data>
 		</dict>
 		<key>VoiceSDKResources/verify/mic-v1/voice_template_factory.json</key>

@@ -39,12 +39,6 @@ class MainVC: UIViewController {
     private func clearText() {
         show(msg: "")
     }
-    
-    private func loadAudiosView() {
-        let vc = AudioPlayVC(numberOfAudios: SdkConfigurationManager.voiceIDConfiguration.phrases.count)
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
-    }
 
     // MARK: - EVENTS
     // swiftlint:disable cyclomatic_complexity
@@ -60,12 +54,6 @@ class MainVC: UIViewController {
             viewModel.newOperation()
         case .voiceId:
             viewModel.voiceId()
-        case .playAudios:
-            loadAudiosView()
-        case .voiceEnrollment:
-            viewModel.voiceEnrollment()
-        case .voiceMatching:
-            viewModel.voiceMatching()
         case .clearLogs:
             clearText()
         default:

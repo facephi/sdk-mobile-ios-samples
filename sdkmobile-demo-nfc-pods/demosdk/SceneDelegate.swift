@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // guard let _ = (scene as? UIWindowScene) else { return }
 
         IQKeyboardManager.shared.enable = true
-        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        IQKeyboardManager.shared.resignOnTouchOutside = true
 
         if (scene as? UIWindowScene) == nil {
             return

@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
-// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name voiceIDComponent
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name voiceIDComponent
 import AVFoundation
 import Foundation
 import Foundation/*.Bundle*/
@@ -14,68 +14,6 @@ import _Concurrency
 import _StringProcessing
 import core
 import licenseCheckerComponent
-public struct VoiceConfigurationData {
-  public var phrases: [Swift.String]
-  public var showTutorial: Swift.Bool
-  public var extractionTimeout: Swift.Int?
-  public init(phrases: [Swift.String], showTutorial: Swift.Bool = false, extractionTimeout: Swift.Int? = nil)
-}
-public struct VoiceEnrollmentResult : Swift.Decodable {
-  public let template: Swift.String
-  public let validate_audios_result: [voiceIDComponent.ValidatedAudiosResult]?
-  public init(from decoder: Swift.Decoder) throws
-}
-public struct ValidatedAudiosResult : Swift.Decodable {
-  public let audio_position: Swift.Int
-  public let result_code: voiceIDComponent.VoiceResultCode
-  public let spoof_file_result: Swift.Int
-  public init(from decoder: Swift.Decoder) throws
-}
-public enum VoiceResultCode : Swift.Int, Swift.Decodable {
-  case NOISY
-  case LONG_REVERBERATION
-  case SMALL_SPEECH
-  case OK
-  case NOT_EVALUATED
-  case SPOOF
-  case DUPLICATED_AUDIO
-  case DIFFERENT_VOICES
-  case EMPTY_AUDIO
-  case TOO_MANY_AUDIOS
-  case NOT_ENOUGH_GOOD_AUDIOS
-  case CONFIG_MANAGER_ERROR
-  case INVALID_LICENSE
-  case EXPIRED
-  case SUSPENDED
-  case E_SYSTEM_PERMISSION
-  case E_WMIC
-  case E_INET
-  case E_NET_PROXY
-  case E_REVOKED
-  case E_LICENSE_KEY
-  case E_ACTIVATION_LIMIT
-  case E_VM
-  case E_COUNTRY
-  case E_IP
-  case E_CONTAINER
-  case DATA_NOT_FOUND
-  case ENVIRONMENT_VARIABLE_NOT_FOUND
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public struct VoiceMatchingResult : Swift.Decodable {
-  public init(from decoder: Swift.Decoder) throws
-}
-public struct VoiceResult {
-  public var audios: [Foundation.Data]
-  public var tokenizedAudios: [Swift.String]
-}
-extension Swift.String {
-  public func toDate(inFormat: Swift.String) -> Foundation.Date?
-}
 extension voiceIDComponent.R {
   public enum Literals : Swift.String {
     case voice_component_success_records_message
@@ -101,15 +39,11 @@ extension voiceIDComponent.R {
     }
   }
 }
-public struct VoiceEnvironment {
-  public static var shared: voiceIDComponent.VoiceEnvironment
-  public var minSpeechLength: Swift.Float
-  public var maxSilenceLength: Swift.Float
-  public var minSnrDb: Swift.Float
-  public var minAudioForAnalysis: Swift.Float
-  public var minAudioLength: Swift.Float
-  public var minFeedbackTime: Swift.Double
-  public func update(minSpeechLength: Swift.String?, maxSilenceLength: Swift.String?, minSnrDb: Swift.String?, minAudioForAnalysis: Swift.String?, minAudioLength: Swift.String?, minFeedbackTime: Swift.String?)
+public struct AudioRecordingResponseResult {
+  public var audios: [Foundation.Data]
+}
+public struct EnvironmentAudioRecordingData {
+  public init(phrases: [Swift.String], showTutorial: Swift.Bool)
 }
 extension voiceIDComponent.R {
   public enum Animation : Swift.String, Swift.CaseIterable {
@@ -151,7 +85,6 @@ extension voiceIDComponent.R {
 }
 extension voiceIDComponent.R {
   public enum Dimension : CoreFoundation.CGFloat {
-    case fontSmall
     case fontRegular
     case fontBig
     case radiusCorner
@@ -192,10 +125,10 @@ extension voiceIDComponent.R {
 }
 public enum R {
 }
-public enum ThemeVoiceIDManager {
-  public static func setup(theme: voiceIDComponent.ThemeVoiceIDProtocol)
+public enum ThemeAudioRecordingManager {
+  public static func setup(theme: voiceIDComponent.ThemeAudioRecordingProtocol)
 }
-public protocol ThemeVoiceIDProtocol {
+public protocol ThemeAudioRecordingProtocol {
   var name: Swift.String { get }
   var fonts: [voiceIDComponent.R.Font : Swift.String] { get }
   var dimensions: [voiceIDComponent.R.Dimension : CoreFoundation.CGFloat] { get }
@@ -203,7 +136,7 @@ public protocol ThemeVoiceIDProtocol {
   var colors: [voiceIDComponent.R.Color : UIKit.UIColor?] { get }
   var animations: [voiceIDComponent.R.Animation : Swift.String] { get }
 }
-extension voiceIDComponent.ThemeVoiceIDProtocol {
+extension voiceIDComponent.ThemeAudioRecordingProtocol {
   public var images: [voiceIDComponent.R.Image : UIKit.UIImage?] {
     get
   }
@@ -214,37 +147,17 @@ extension voiceIDComponent.ThemeVoiceIDProtocol {
     get
   }
 }
-public class VoiceEnrollmentController {
-  public var license: Swift.String
-  public init(audios: [Swift.String], baseVoiceUrl: Swift.String, methodAuth: Swift.String, output: @escaping (core.SdkResult<voiceIDComponent.VoiceEnrollmentResult>) -> Swift.Void)
-  @objc deinit
-}
-extension voiceIDComponent.VoiceEnrollmentController : core.IMethodableController {
-  public func start(operationController: core.IOperationableController)
-}
-public class VoiceMatchingController {
-  public var license: Swift.String
-  public init(audio: Swift.String, template: Swift.String, liveness_threshold: Swift.Double, baseVoiceUrl: Swift.String, methodAuth: Swift.String, output: @escaping (core.SdkResult<voiceIDComponent.VoiceMatchingResult>) -> Swift.Void)
-  @objc deinit
-}
-extension voiceIDComponent.VoiceMatchingController : core.IMethodableController {
-  public func start(operationController: core.IOperationableController)
-}
-public class VoiceController {
+public class VoiceIDController {
   public var license: Swift.String
   public var trackingController: core.ITrackingController?
   public var operationController: core.IOperationableController?
   public var behaviorController: core.IBehaviorController?
-  public var tokenizeController: core.ITokenizeController?
-  public init(data: voiceIDComponent.VoiceConfigurationData, viewController: UIKit.UIViewController, output: @escaping (core.SdkResult<voiceIDComponent.VoiceResult>) -> Swift.Void)
+  public init(data: voiceIDComponent.EnvironmentAudioRecordingData, viewController: UIKit.UIViewController, output: @escaping (core.SdkResult<voiceIDComponent.AudioRecordingResponseResult>) -> Swift.Void)
   @objc deinit
 }
-extension voiceIDComponent.VoiceController : core.ITrackTokenMethodableController {
+extension voiceIDComponent.VoiceIDController : core.ITrackMethodableController {
   public func start(operationController: core.IOperationableController)
 }
-extension voiceIDComponent.VoiceResultCode : Swift.Equatable {}
-extension voiceIDComponent.VoiceResultCode : Swift.Hashable {}
-extension voiceIDComponent.VoiceResultCode : Swift.RawRepresentable {}
 extension voiceIDComponent.R.Literals : Swift.Equatable {}
 extension voiceIDComponent.R.Literals : Swift.Hashable {}
 extension voiceIDComponent.R.Literals : Swift.RawRepresentable {}

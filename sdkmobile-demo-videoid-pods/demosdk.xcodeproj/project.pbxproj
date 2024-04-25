@@ -27,13 +27,7 @@
 		72304AFF12B557C51B6AD962 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		9E2DEB122A1B75F000E8FD9F /* SdkConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DEB112A1B75F000E8FD9F /* SdkConfigurationManager.swift */; };
 		9EFB343A2A4999E10005C31E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EFB343C2A4999E10005C31E /* Localizable.strings */; };
-		D95817DB2A5EAF26004A1C9B /* AudioPlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95817DA2A5EAF26004A1C9B /* AudioPlayVC.swift */; };
-		D95817DF2A5EAF6C004A1C9B /* AudioPlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D95817DE2A5EAF6C004A1C9B /* AudioPlayView.xib */; };
 		D95817E52A5EB722004A1C9B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95817E42A5EB722004A1C9B /* UIView.swift */; };
-		D95817E72A5EC074004A1C9B /* AudioPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95817E62A5EC074004A1C9B /* AudioPlayView.swift */; };
-		D95817EA2A5EC4AA004A1C9B /* LocalURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95817E92A5EC4AA004A1C9B /* LocalURLs.swift */; };
-		D9B8985D2AA76E2E000AD65F /* PrefManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B8985C2AA76E2E000AD65F /* PrefManager.swift */; };
-		D9B8985F2AA76E65000AD65F /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B8985E2AA76E65000AD65F /* Preference.swift */; };
 		D9D2E38C2AC2F08100501393 /* VideoIDConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2E38B2AC2F08100501393 /* VideoIDConfiguration.swift */; };
 		EE9BF019F5D3E872AF6F0B5D /* Pods_demosdk_demosdkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD518FC8ABB66E75CEF68903 /* Pods_demosdk_demosdkUITests.framework */; };
 /* End PBXBuildFile section */
@@ -89,13 +83,7 @@
 		C444387C9E1AA3BD565956E3 /* Pods-demosdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demosdk.debug.xcconfig"; path = "Target Support Files/Pods-demosdk/Pods-demosdk.debug.xcconfig"; sourceTree = "<group>"; };
 		C50B40BF465627F5B39CB97D /* Pods_demosdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demosdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD518FC8ABB66E75CEF68903 /* Pods_demosdk_demosdkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demosdk_demosdkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D95817DA2A5EAF26004A1C9B /* AudioPlayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayVC.swift; sourceTree = "<group>"; };
-		D95817DE2A5EAF6C004A1C9B /* AudioPlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioPlayView.xib; sourceTree = "<group>"; };
 		D95817E42A5EB722004A1C9B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		D95817E62A5EC074004A1C9B /* AudioPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayView.swift; sourceTree = "<group>"; };
-		D95817E92A5EC4AA004A1C9B /* LocalURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalURLs.swift; sourceTree = "<group>"; };
-		D9B8985C2AA76E2E000AD65F /* PrefManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefManager.swift; sourceTree = "<group>"; };
-		D9B8985E2AA76E65000AD65F /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
 		D9D2E38B2AC2F08100501393 /* VideoIDConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoIDConfiguration.swift; sourceTree = "<group>"; };
 		DDCB85DDB17DBB1B8FD71BEA /* Pods-demosdk-demosdkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demosdk-demosdkUITests.debug.xcconfig"; path = "Target Support Files/Pods-demosdk-demosdkUITests/Pods-demosdk-demosdkUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,7 +168,6 @@
 		13F510B6281937A5001E3CF1 /* demosdk */ = {
 			isa = PBXGroup;
 			children = (
-				D95817E82A5EC4A2004A1C9B /* Helpers */,
 				13CCB5B2283F7D0C005BDC3D /* demosdk.entitlements */,
 				13F7576D2824152400A761D5 /* Library */,
 				130CD5B1285A0CF8005C7BB1 /* Extensions */,
@@ -234,7 +221,6 @@
 		13F7576C2823A5F100A761D5 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				D95817D92A5EAED2004A1C9B /* AudioPlay */,
 				13F510BD281937A5001E3CF1 /* Main.storyboard */,
 				130CD5B6285A1B6A005C7BB1 /* Main */,
 			);
@@ -246,8 +232,6 @@
 			children = (
 				9E2DEB102A1B75D100E8FD9F /* SDKConfigurations */,
 				13F7576A2823A2AA00A761D5 /* SDKManager.swift */,
-				D9B8985C2AA76E2E000AD65F /* PrefManager.swift */,
-				D9B8985E2AA76E65000AD65F /* Preference.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -283,24 +267,6 @@
 				0C2A2256CB527FFA0209B9DA /* Pods_demosdkTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D95817D92A5EAED2004A1C9B /* AudioPlay */ = {
-			isa = PBXGroup;
-			children = (
-				D95817DE2A5EAF6C004A1C9B /* AudioPlayView.xib */,
-				D95817DA2A5EAF26004A1C9B /* AudioPlayVC.swift */,
-				D95817E62A5EC074004A1C9B /* AudioPlayView.swift */,
-			);
-			path = AudioPlay;
-			sourceTree = "<group>";
-		};
-		D95817E82A5EC4A2004A1C9B /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				D95817E92A5EC4AA004A1C9B /* LocalURLs.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,7 +387,6 @@
 				13F510EC281937E3001E3CF1 /* fphi-selphi-widget-resources-sdk.zip in Resources */,
 				13F510EB281937E3001E3CF1 /* fphi-selphid-widget-resources-sdk.zip in Resources */,
 				13F510BF281937A5001E3CF1 /* Main.storyboard in Resources */,
-				D95817DF2A5EAF6C004A1C9B /* AudioPlayView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,13 +535,8 @@
 				D95817E52A5EB722004A1C9B /* UIView.swift in Sources */,
 				13F84C49282500A6001E26A5 /* MainVM.swift in Sources */,
 				13F7576B2823A2AA00A761D5 /* SDKManager.swift in Sources */,
-				D9B8985D2AA76E2E000AD65F /* PrefManager.swift in Sources */,
-				D95817E72A5EC074004A1C9B /* AudioPlayView.swift in Sources */,
 				9E2DEB122A1B75F000E8FD9F /* SdkConfigurationManager.swift in Sources */,
-				D9B8985F2AA76E65000AD65F /* Preference.swift in Sources */,
 				13A43FBB286A014400C56A86 /* CustomThemeVideoId.swift in Sources */,
-				D95817EA2A5EC4AA004A1C9B /* LocalURLs.swift in Sources */,
-				D95817DB2A5EAF26004A1C9B /* AudioPlayVC.swift in Sources */,
 				13F510B8281937A5001E3CF1 /* AppDelegate.swift in Sources */,
 				D9D2E38C2AC2F08100501393 /* VideoIDConfiguration.swift in Sources */,
 				13F510BA281937A5001E3CF1 /* SceneDelegate.swift in Sources */,
@@ -935,8 +895,6 @@
 					"-framework",
 					"\"QuartzCore\"",
 					"-framework",
-					"\"RevelockSdkFramework\"",
-					"-framework",
 					"\"Security\"",
 					"-framework",
 					"\"Starscream\"",
@@ -944,8 +902,6 @@
 					"\"SystemConfiguration\"",
 					"-framework",
 					"\"UIKit\"",
-					"-framework",
-					"\"behaviorComponent\"",
 					"-framework",
 					"\"core\"",
 					"-framework",
@@ -1076,8 +1032,6 @@
 					"-framework",
 					"\"QuartzCore\"",
 					"-framework",
-					"\"RevelockSdkFramework\"",
-					"-framework",
 					"\"Security\"",
 					"-framework",
 					"\"Starscream\"",
@@ -1085,8 +1039,6 @@
 					"\"SystemConfiguration\"",
 					"-framework",
 					"\"UIKit\"",
-					"-framework",
-					"\"behaviorComponent\"",
 					"-framework",
 					"\"core\"",
 					"-framework",
