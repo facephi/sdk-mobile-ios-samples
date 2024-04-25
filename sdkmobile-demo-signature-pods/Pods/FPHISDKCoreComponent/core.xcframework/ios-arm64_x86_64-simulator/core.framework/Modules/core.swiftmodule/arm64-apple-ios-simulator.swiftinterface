@@ -1,0 +1,312 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name core
+import AVFoundation
+import Foundation
+import Swift
+import SystemConfiguration
+import UIKit
+import _Concurrency
+import _StringProcessing
+import licenseCheckerComponent
+public enum HTTPErrorType : Swift.String, Swift.Error, Swift.Equatable {
+  case deprecated
+  case generic
+  case unauthorized
+  case noContent
+  case badRequest
+  case noConnection
+  case notFound
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum HTTPMethod : Swift.String {
+  case POST
+  case GET
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum HapticType : Swift.String {
+  case HEAVY
+  case SUCCESS
+  case WARNING
+  case ERROR
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+final public class DataSource {
+  final public let requester: core.NetworkManagerProtocol
+  final public let router: core.RouterProtocol
+  public init(requester: core.NetworkManagerProtocol = NetworkManager(), router: core.RouterProtocol)
+  @objc deinit
+}
+final public class NetworkManager : core.NetworkManagerProtocol {
+  public init(_ session: Foundation.URLSession = .shared)
+  final public func send<T>(with endpoint: T) throws -> T.Response where T : core.EndpointProtocol
+  final public func sendExpectString<T>(with endpoint: T) throws -> Swift.String where T : core.EndpointProtocol
+  @objc deinit
+}
+final public class Router : core.RouterProtocol {
+  public init(baseUrl: Foundation.URL)
+  public init?(baseUrl: Swift.String)
+  final public func routeEndpoint<T>(_ endpoint: T) -> T where T : core.EndpointProtocol
+  @objc deinit
+}
+public protocol EndpointProtocol {
+  associatedtype Response : Swift.Decodable
+  var path: Swift.String { get set }
+  var method: core.HTTPMethod { get }
+  var parameters: [Swift.String : Swift.AnyObject] { get }
+  var headers: [Swift.String : Swift.String] { get }
+  var body: Foundation.Data? { get }
+  var isFile: Swift.Bool { get }
+}
+public protocol NetworkManagerProtocol {
+  func send<T>(with endpoint: T) throws -> T.Response where T : core.EndpointProtocol
+  func sendExpectString<T>(with endpoint: T) throws -> Swift.String where T : core.EndpointProtocol
+}
+public protocol RouterProtocol {
+  func routeEndpoint<T>(_ endpoint: T) -> T where T : core.EndpointProtocol
+}
+public protocol IBehaviorController : core.IMethodableController {
+  func registerPosition(position: Swift.String)
+  func registerTextField(textView: UIKit.UITextField, textId: Swift.String)
+  func registerUserTextField(textView: UIKit.UITextField)
+  func registerPasswordTextField(textView: UIKit.UITextField)
+  func closeSession()
+}
+public protocol ILicensableController {
+  var license: Swift.String { get set }
+}
+public protocol IStartableController {
+  func start(operationController: core.IOperationableController)
+}
+public protocol IMethodableController : core.ILicensableController, core.IStartableController, core.IStatusableController, core.ITokenizableController {
+}
+public protocol IBehaviorableController {
+  var behaviorController: core.IBehaviorController? { get set }
+}
+public protocol ITrackableController : core.IBehaviorableController {
+  var trackingController: core.ITrackingController? { get set }
+  var trackingStep: Swift.String { get }
+}
+public protocol ITrackMethodableController : core.IMethodableController, core.ITrackableController {
+}
+public protocol IConfigurableController {
+  var dataString: Swift.String? { get set }
+}
+public protocol ICustomizableController {
+  var customizationString: Swift.String? { get set }
+}
+public protocol IFlowableController : core.IConfigurableController, core.ICustomizableController, core.ITrackMethodableController {
+  var flowController: core.IFlowController? { get set }
+  var flowStep: Swift.String { get }
+}
+public protocol ITokenizableController {
+  var tokenizeController: core.ITokenizeController? { get set }
+}
+public protocol IStatusableController {
+  var statusController: core.IStatusController? { get set }
+}
+public protocol IFlowController {
+  var flowExtraData: [Swift.String : Swift.String] { get set }
+  func startNextController(result: core.SdkResult<Any>)
+}
+public protocol IOperationableController {
+  func hasOperationCreated() -> Swift.Bool
+  func getOperationId() -> Swift.String
+  func getCustomerId() -> Swift.String
+  func getExtraParams() -> [Swift.String : Swift.String]
+}
+public protocol IDiagnosisView {
+  var imgStatus: UIKit.UIImage { get set }
+  var titleStatus: Swift.String { get set }
+  var descriptionStatus: Swift.String { get set }
+}
+public protocol IStatusController {
+  func launchDiagnostic(error: core.ErrorType, viewController: UIKit.UIViewController, closeAction: (() -> Swift.Void)?, retryAction: (() -> Swift.Void)?)
+  func launchDiagnostic(img: UIKit.UIImage, title: Swift.String, description: Swift.String, viewController: UIKit.UIViewController, closeAction: (() -> Swift.Void)?, retryAction: (() -> Swift.Void)?)
+  func launchDiagnostic(img: UIKit.UIImage, title: Swift.String, description: Swift.String, viewController: UIKit.UIViewController, closeAction: (() -> Swift.Void)?, primaryAction: (() -> Swift.Void)?, secundaryAction: (() -> Swift.Void)?, primaryText: Swift.String?, secundaryText: Swift.String?)
+  func launchPermissionCheck(error: core.ErrorType, viewController: UIKit.UIViewController, closeAction: (() -> Swift.Void)?)
+  func launchPermissionCheck(img: UIKit.UIImage?, title: Swift.String, description: Swift.String, viewController: UIKit.UIViewController, closeAction: (() -> Swift.Void)?)
+  func launchTutorial(title: Swift.String, description: Swift.String, launchButtonTitle: Swift.String, animation: Swift.String, viewController: UIKit.UIViewController, tipsConfiguration: core.TutorialTipsConfigurationData?, closeAction: (() -> Swift.Void)?, launchWidgetAction: ((UIKit.UIViewController) -> Swift.Void)?)
+}
+public protocol ITokenizeController : core.ILicensableController {
+  func tokenizeByteArray(byteArray: Foundation.Data, key: Swift.String) -> core.SdkResult<Swift.String>
+  func tokenizeStringMapData(data: Swift.String, key: Swift.String) -> core.SdkResult<Swift.String>
+  func tokenizeOCRResults(ocr: Swift.Dictionary<Swift.String, Swift.String>) -> core.SdkResult<Swift.String>
+}
+public protocol ITrackingController : core.ILicensableController {
+  func setupLicenseAndToken(output: @escaping (core.SdkResult<Swift.String>) -> ())
+  func sendStep(step: Swift.String, componentId: Swift.String, componentVersion: Swift.String, widgetId: Swift.String?, widgetVersion: Swift.String?)
+  func initOperation(steps: [Swift.String]?)
+  func setCustomerId(customerId: Swift.String)
+  func stepSuccessEvent()
+  func stepEvent(reason: Swift.String, operationEndStatus: Swift.String)
+  func sendDataTracking(data: Foundation.Data?, assetType: Swift.String, contentType: Swift.String)
+  func sendOcrData(personalData: [Swift.String : Swift.String], ocrMap: [Swift.String : Swift.String])
+  func sendFlowEvent(flowId: Swift.String)
+  func closeSession()
+  func getComponentType() -> Swift.String
+  func getExtraDataJSONString() -> core.SdkResult<Swift.String>
+  func signatureProofEvent(signatureResult: Swift.String)
+  var trackingConfigurationData: core.TrackingConfigurationData? { get set }
+  var trackingError: ((Swift.String) -> ())? { get set }
+}
+extension core.ITrackingController {
+  public func sendDataTracking(data: Foundation.Data?, assetType: Swift.String, contentType: Swift.String = "image/jpeg")
+  public func initOperation(steps: [Swift.String]? = nil)
+  public func sendStep(step: Swift.String, componentId: Swift.String, componentVersion: Swift.String, widgetId: Swift.String? = nil, widgetVersion: Swift.String? = nil)
+}
+extension Swift.String {
+  public init?(object: Swift.Encodable?, encoding: Swift.String.Encoding = .utf8)
+  public func formatDateString(inFormat: Swift.String, outFormat: Swift.String) -> Swift.String
+  public func decodeJsonString<T>() -> T? where T : Swift.Decodable
+  public func convertBase64StringToImage() -> UIKit.UIImage?
+}
+extension UIKit.UIColor {
+  convenience public init(hex: Swift.String, alpha: CoreFoundation.CGFloat = 1)
+}
+extension UIKit.UIImage {
+  convenience public init?(base64String: Swift.String)
+  public func toBase64String(compressionQuality: CoreFoundation.CGFloat = 1) -> Swift.String
+}
+@_hasMissingDesignatedInitializers public class CheckPermission {
+  public static func checkPermissionStatus(mediaType: AVFoundation.AVMediaType, output: @escaping (core.SdkResult<Swift.Bool>) -> Swift.Void)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class HapticNotification {
+  public static let shared: core.HapticNotification
+  public func LaunchHaptic(vibrationEnabled: Swift.Bool? = false, hapticType: core.HapticType)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Log {
+  public class func d(_ tag: Swift.String, _ msg: Swift.String)
+  public class func printComponentInfo(_ libraryPackageName: Swift.String, _ libraryPackageVersion: Swift.String)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Reachability {
+  @objc deinit
+}
+public enum ThemeManager {
+  public static func registerFonts(bundle: Foundation.Bundle)
+}
+public protocol ThemeProtocol {
+  var rawFonts: [Swift.String : Swift.String]? { get }
+  var rawDimensions: [Swift.String : Swift.Int]? { get }
+  var rawImages: [Swift.String : Swift.String]? { get }
+  var rawColors: [Swift.String : Swift.String]? { get }
+  var rawAnimations: [Swift.String : Swift.String]? { get }
+}
+public struct CommonCustomization : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SdkColor : Swift.Codable {
+  public func getColor() -> UIKit.UIColor
+  public func getLight() -> UIKit.UIColor
+  public func getDark() -> UIKit.UIColor
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TipViewConfigurationData {
+  public let tip: Swift.String
+  public let animation: Swift.String
+  public init(tip: Swift.String, animation: Swift.String)
+}
+public struct TutorialTipsConfigurationData {
+  public let tipsButtonTitle: Swift.String
+  public let views: [core.TipViewConfigurationData]
+  public init(title: Swift.String, views: [core.TipViewConfigurationData])
+}
+public struct TrackingConfigurationData {
+  public var sessionId: Swift.String
+  public var operationId: Swift.String
+  public var type: Swift.String
+  public var customerId: Swift.String
+  public init(sessionId: Swift.String, operationId: Swift.String, type: Swift.String, customerId: Swift.String)
+}
+public protocol ApiResultProtocol {
+  associatedtype T
+}
+@_hasMissingDesignatedInitializers public class ApiResult : core.ApiResultProtocol {
+  public typealias T = Swift.AnyObject
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ApiSuccess<T2> : core.ApiResult {
+  final public let data: T2
+  public init(_ data: T2)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ApiError : core.ApiResult {
+  final public let code: Swift.Int
+  final public let message: Swift.String?
+  public init(code: Swift.Int, message: Swift.String)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ApiException<T2> : core.ApiResult {
+  final public let e: T2
+  public init(_ e: T2)
+  @objc deinit
+}
+public class SdkResult<T> {
+  public var finishStatus: core.FinishStatus
+  public var errorType: core.ErrorType
+  public var data: T?
+  public init(data: T?)
+  public init()
+  convenience public init(finishStatus: core.FinishStatus, errorType: core.ErrorType, data: T? = nil)
+  public init(errorType: core.ErrorType)
+  public static func getNoOperationCreatedError(_ object: T? = nil) -> core.SdkResult<T>
+  public func toAnyResult<A>() -> core.SdkResult<A>
+  @objc deinit
+}
+public enum ErrorType : Swift.Equatable, Swift.Error {
+  case NO_ERROR
+  case UNKNOWN_ERROR
+  case OTHER(Swift.String)
+  case NO_DATA_ERROR
+  case NO_OPERATION_CREATED_ERROR
+  case NETWORK_CONNECTION
+  case CAMERA_PERMISSION_DENIED
+  case MIC_PERMISSION_DENIED
+  case LOCATION_PERMISSION_DENIED
+  case STORAGE_PERMISSION_DENIED
+  case CANCEL_BY_USER
+  case TIMEOUT
+  case LICENSE_CHECKER_ERROR(Swift.String)
+  case MISSING_COMPONENT_LICENSE_DATA
+  public func toString() -> Swift.String
+  public static func == (a: core.ErrorType, b: core.ErrorType) -> Swift.Bool
+}
+extension licenseCheckerComponent.LicenseStatus {
+  public func toErrorType() -> core.ErrorType
+}
+public enum FinishStatus {
+  case STATUS_OK
+  case STATUS_ERROR
+  public static func == (a: core.FinishStatus, b: core.FinishStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension core.HTTPErrorType : Swift.Hashable {}
+extension core.HTTPErrorType : Swift.RawRepresentable {}
+extension core.HTTPMethod : Swift.Equatable {}
+extension core.HTTPMethod : Swift.Hashable {}
+extension core.HTTPMethod : Swift.RawRepresentable {}
+extension core.HapticType : Swift.Equatable {}
+extension core.HapticType : Swift.Hashable {}
+extension core.HapticType : Swift.RawRepresentable {}
+extension core.FinishStatus : Swift.Equatable {}
+extension core.FinishStatus : Swift.Hashable {}

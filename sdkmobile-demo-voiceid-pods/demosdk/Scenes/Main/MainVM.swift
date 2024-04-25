@@ -25,33 +25,15 @@ protocol MainVMOutput {
 }
 
 class MainVM {
-    // MARK: - VARS
-    private let baseUrlV5 = "https://external-selphid-sdk.facephi.dev/v5/"
-    private let baseUrlV6 = "https://external-selphid-sdk.facephi.dev/v6/"
-    private let methodPassiveLivenesTracking = "api/v1/selphid/passive-liveness/evaluate"
-    private let methodAuthenticateFacial = "api/v1/selphid/authenticate-facial/document/face-image"
    
     //VOICE Constants
     private let baseVoiceUrl = "https://external-voice-sdk.facephi.dev/"
     private let methodVoiceEnrollment = "api/v1/enrollment"
     private let methodVoiceMatching = "api/v1/authentication"
     private let liveness_threshold: Double = 0.5
-
-    // TODO: Check what is this?
-    private var tokenFaceImage = " "
-    private var imageToken = " "
-    private var OCRToken = " "
-    private var bestImage = " "
-    private var bestImageData: Data = Data()
-    private var encodedReference: Data = Data()
-    private var encodedProbe: Data = Data()
-    private var ocr: [String: String] = [:]
     private var audios: [Data]?
     private var audioTemplate: String?
-    private var generatedQrImage: UIImage = UIImage()
-    // TODO: Check what is this?
 
-    
     private var delegate: MainVMOutput?
     
     private let viewController: UIViewController
@@ -72,14 +54,13 @@ class MainVM {
 // MARK: - MainVMInput
 extension MainVM: MainVMInput {
 
-    
     func getLicense() {
         // Initializes for the first time, so it launches the GetLicense functionality
         let _ = SDKManager.shared
     }
     
     func newOperation() {
-        SDKManager.shared.newOperation(operationType: .ONBOARDING, customerId: SdkConfigurationManager.customerId, output: { sdkResult in
+        SDKManager.shared.newOperation(operationType: .ONBOARDING, customerId: SdkConfigurationManager.CUSTOMER_ID, output: { sdkResult in
             self.log(msg: sdkResult.data != nil ? "New Operation with ID: \(sdkResult.data)": "ERROR: NewOperation's data output is nil")
         })
     }
@@ -158,7 +139,7 @@ extension MainVM: MainVMInput {
             }
             self.audioTemplate = enrollmentResult.template
             var validatedAudios = "Enrolled Audios:\n"
-            enrollmentResult.validate_audios_result?.forEach({
+            enrollmentResult.validate_audios_result.forEach({
                 validatedAudios.append("\($0.audio_position) - Result=\($0.result_code)")
             })
             self.log(msg: validatedAudios)

@@ -1,0 +1,165 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name sdk
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import core
+import licenseCheckerComponent
+import licensingComponent
+@_hasMissingDesignatedInitializers public class AIOcrController {
+  @objc deinit
+}
+public struct FlowConfigurationData {
+  public init(id: Swift.String, controllers: [core.IFlowableController], customerId: Swift.String? = nil)
+}
+public enum OperationType : Swift.String, Swift.CaseIterable {
+  case ONBOARDING
+  case AUTHENTICATION
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [sdk.OperationType]
+  public typealias RawValue = Swift.String
+  public static var allCases: [sdk.OperationType] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum SdkMainError : Swift.String {
+  case TRACKING_CONTROLLER_NOT_INITIALIZED
+  case TOKENIZE_CONTROLLER_NOT_INITIALIZED
+  case COULD_NOT_CREATE_WIDGET_INSTANCE
+  case FLOW_CONFIGURATION_DATA_MISSING
+  case FLOW_NEW_OPERATION_FAILED
+  case FLOW_STEP_CONTROLLER_NOT_FOUND
+  case FLOW_TARGET_STEP_NOT_FOUND
+  case INIT_AI_MODELS
+  case INIT_FLOW
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum Step : Swift.Equatable {
+  case SELPHI_WIDGET
+  case SELPHID_WIDGET
+  case NFC_WIDGET
+  case PHINGERS_WIDGET
+  case VIDEO_CALL_WIDGET
+  case VIDEO_ID_WIDGET
+  case CAPTURE_WIDGET
+  case VOICE_WIDGET
+  case EXTERNAL_STEP_WIDGET
+  case OTHER(Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+  public static func fromFlowStep(value: Swift.String) -> sdk.Step
+  public static func == (a: sdk.Step, b: sdk.Step) -> Swift.Bool
+}
+public class ExternalStepController {
+  public var license: Swift.String
+  public var trackingController: core.ITrackingController?
+  public var behaviorController: core.IBehaviorController?
+  public var statusController: core.IStatusController?
+  public var flowController: core.IFlowController?
+  public var tokenizeController: core.ITokenizeController?
+  public init(output: @escaping () -> Swift.Void)
+  @objc deinit
+}
+extension sdk.ExternalStepController : core.IFlowableController {
+  public var flowStep: Swift.String {
+    get
+  }
+  public var trackingStep: Swift.String {
+    get
+  }
+  public var dataString: Swift.String? {
+    get
+    set(newValue)
+  }
+  public var customizationString: Swift.String? {
+    get
+    set(newValue)
+  }
+}
+extension sdk.ExternalStepController : core.IMethodableController {
+  public func start(operationController: core.IOperationableController)
+}
+public class FlowController {
+  public var flowExtraData: [Swift.String : Swift.String]
+  public var license: Swift.String
+  public var trackingController: core.ITrackingController?
+  public var behaviorController: core.IBehaviorController?
+  public var statusController: core.IStatusController?
+  public var tokenizeController: core.ITokenizeController?
+  public static var flowData: [sdk.FlowData]?
+  public static var controllers: [core.IFlowableController]
+  public init(flowConfigurationData: sdk.FlowConfigurationData, output: @escaping (sdk.SdkFlowResult) -> Swift.Void)
+  public func launchNextStep(target: Swift.String? = nil)
+  public func cancelFlow()
+  public func start(operationController: core.IOperationableController)
+  @objc deinit
+}
+extension sdk.FlowController : core.IFlowController {
+  public func startNextController(result: core.SdkResult<Any>)
+}
+extension sdk.FlowController : core.ITrackMethodableController {
+  public var trackingStep: Swift.String {
+    get
+  }
+}
+@_inheritsConvenienceInitializers public class FlowPreviewController : sdk.FlowController {
+  override public func start(operationController: core.IOperationableController)
+  override public init(flowConfigurationData: sdk.FlowConfigurationData, output: @escaping (sdk.SdkFlowResult) -> Swift.Void)
+  @objc deinit
+}
+public struct FlowData : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct FlowOperation : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct FlowStep : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SdkFlowResult {
+  public var step: sdk.FlowStep?
+  public var result: core.SdkResult<Any>
+  public var flowFinish: Swift.Bool
+}
+public class SDKController {
+  public static var shared: sdk.SDKController
+  public init()
+  @objc deinit
+}
+extension sdk.SDKController {
+  public func launchMethod(controller: core.IMethodableController)
+  public func launch(controller: core.ITrackMethodableController)
+  public func initSdk(license: Swift.String, activateFlow: Swift.Bool = false, iaModels: Swift.Bool = false, output: @escaping (core.SdkResult<Swift.String>) -> (), trackingController: core.ITrackingController? = nil, tokenizeController: core.ITokenizeController? = nil, behaviorController: core.IBehaviorController? = nil, statusController: core.IStatusController? = nil)
+  public func initSdk(licensingUrl: Foundation.URL, apiKey: Swift.String, activateFlow: Swift.Bool = false, iaModels: Swift.Bool = false, output: @escaping (core.SdkResult<Swift.String>) -> (), trackingController: core.ITrackingController? = nil, tokenizeController: core.ITokenizeController? = nil, behaviorController: core.IBehaviorController? = nil, statusController: core.IStatusController? = nil)
+  public func newOperation(operationType: sdk.OperationType, customerId: Swift.String?, steps: [sdk.Step]? = nil, output: @escaping (core.SdkResult<Swift.String>) -> (), enableTracking: Swift.Bool = true)
+  public func resumeSdk(sessionId: Swift.String, operationId: Swift.String, operationType: sdk.OperationType, customerId: Swift.String)
+  public func getSessionId() -> Swift.String
+  public func getOperationId() -> Swift.String
+  public func clearOperationId()
+  public func getCustomerId() -> Swift.String
+  public func getOperationType() -> sdk.OperationType
+  public func setCustomerId(customerId: Swift.String)
+  public func setupTrackingError(trackingError: @escaping (Swift.String) -> Swift.Void)
+  public func askForLocationPermission()
+  public func closeSession()
+  public func getExtraData() -> core.SdkResult<Swift.String>
+  public func tokenize(data: Swift.String) -> core.SdkResult<Swift.String>
+  public func getTrackingController() -> core.ITrackingController?
+}
+extension sdk.OperationType : Swift.Equatable {}
+extension sdk.OperationType : Swift.Hashable {}
+extension sdk.OperationType : Swift.RawRepresentable {}
+extension sdk.SdkMainError : Swift.Equatable {}
+extension sdk.SdkMainError : Swift.Hashable {}
+extension sdk.SdkMainError : Swift.RawRepresentable {}

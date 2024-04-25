@@ -1,0 +1,157 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name statusComponent
+import AVFoundation
+import Foundation
+import Foundation/*.Bundle*/
+import Foundation/*.ProcessInfo*/
+import Foundation/*.URL*/
+import Lottie
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import core
+public class StatusController {
+  public init()
+  @objc deinit
+}
+extension statusComponent.StatusController : core.IStatusController {
+  public func launchPermissionCheck(error: core.ErrorType, viewController: UIKit.UIViewController, closeAction: (() -> Swift.Void)?)
+  public func launchPermissionCheck(img: UIKit.UIImage?, title: Swift.String, description: Swift.String, viewController: UIKit.UIViewController, closeAction: (() -> Swift.Void)?)
+  public func launchSuccessResult(img: UIKit.UIImage?, title: Swift.String?, viewController: UIKit.UIViewController, closeAction: (() -> Swift.Void)?, secondaryAction: (() -> Swift.Void)? = nil)
+  public func launchDiagnostic(error: core.ErrorType, viewController: UIKit.UIViewController, closeAction: (() -> Swift.Void)? = nil, retryAction: (() -> Swift.Void)? = nil)
+  public func launchDiagnostic(img: UIKit.UIImage, title: Swift.String, description: Swift.String, viewController: UIKit.UIViewController, closeAction: (() -> Swift.Void)? = nil, primaryAction: (() -> Swift.Void)? = nil, secundaryAction: (() -> Swift.Void)? = nil, primaryText: Swift.String? = nil, secundaryText: Swift.String? = nil)
+  public func launchDiagnostic(img: UIKit.UIImage, title: Swift.String, description: Swift.String, viewController: UIKit.UIViewController, closeAction: (() -> Swift.Void)? = nil, retryAction: (() -> Swift.Void)? = nil)
+  public func launchTutorial(title: Swift.String, description: Swift.String, launchButtonTitle: Swift.String, animation: Swift.String, viewController: UIKit.UIViewController, tipsConfiguration: core.TutorialTipsConfigurationData?, closeAction: (() -> Swift.Void)?, launchWidgetAction: ((UIKit.UIViewController) -> Swift.Void)?)
+}
+extension statusComponent.R {
+  public enum Color : Swift.String, Swift.CaseIterable {
+    case sdkBackgroundColor
+    case sdkTitleTextColor
+    case sdkBodyTextColor
+    case sdkPrimaryButtonTextColor
+    case sdkSuccessColor
+    case sdkPrimaryColor
+    case sdkPrimaryVariantColor
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [statusComponent.R.Color]
+    public typealias RawValue = Swift.String
+    public static var allCases: [statusComponent.R.Color] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+}
+extension statusComponent.R {
+  public enum Dimension : CoreFoundation.CGFloat {
+    case fontExtraSmall
+    case fontSmall
+    case fontRegular
+    case fontLarge
+    case fontExtraLarge
+    case radiusCorner
+    case radiusCornerSmall
+    public init?(rawValue: CoreFoundation.CGFloat)
+    public typealias RawValue = CoreFoundation.CGFloat
+    public var rawValue: CoreFoundation.CGFloat {
+      get
+    }
+  }
+}
+extension statusComponent.R {
+  public enum Font : Swift.String {
+    case regular
+    case bold
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+}
+extension statusComponent.R {
+  public enum Image : Swift.String, Swift.CaseIterable {
+    case ic_sdk_close
+    case ic_sdk_close_arrow
+    case ic_sdk_error_connection
+    case ic_sdk_error_timeout
+    case ic_sdk_unknown_error
+    case ic_sdk_permission_camera
+    case ic_sdk_permission_micro
+    case ic_sdk_permission_generic
+    case ic_sdk_logo
+    case ic_sdk_info
+    case ic_status_success
+    case ic_status_dot_primary
+    case ic_status_dot_variant
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [statusComponent.R.Image]
+    public typealias RawValue = Swift.String
+    public static var allCases: [statusComponent.R.Image] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+}
+public enum R {
+}
+public class ThemeStatus {
+  public init()
+  @objc deinit
+}
+extension statusComponent.ThemeStatus : statusComponent.ThemeStatusProtocol {
+  public var name: Swift.String {
+    get
+  }
+  public var fonts: [statusComponent.R.Font : Swift.String] {
+    get
+  }
+  public var dimensions: [statusComponent.R.Dimension : CoreFoundation.CGFloat] {
+    get
+  }
+}
+public enum ThemeStatusManager {
+  public static func setup(theme: statusComponent.ThemeStatusProtocol)
+}
+public protocol ThemeStatusProtocol {
+  var name: Swift.String { get }
+  var fonts: [statusComponent.R.Font : Swift.String] { get }
+  var dimensions: [statusComponent.R.Dimension : CoreFoundation.CGFloat] { get }
+  var images: [statusComponent.R.Image : UIKit.UIImage?] { get }
+  var colors: [statusComponent.R.Color : UIKit.UIColor?] { get }
+}
+extension statusComponent.ThemeStatusProtocol {
+  public var images: [statusComponent.R.Image : UIKit.UIImage?] {
+    get
+  }
+  public var colors: [statusComponent.R.Color : UIKit.UIColor?] {
+    get
+  }
+}
+public protocol TipsViewDelegate {
+  func goToPreviousPage()
+  func goToNextPage()
+  func goToTutorialPage()
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class TipsView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+extension statusComponent.R.Color : Swift.Equatable {}
+extension statusComponent.R.Color : Swift.Hashable {}
+extension statusComponent.R.Color : Swift.RawRepresentable {}
+extension statusComponent.R.Dimension : Swift.Equatable {}
+extension statusComponent.R.Dimension : Swift.Hashable {}
+extension statusComponent.R.Dimension : Swift.RawRepresentable {}
+extension statusComponent.R.Font : Swift.Equatable {}
+extension statusComponent.R.Font : Swift.Hashable {}
+extension statusComponent.R.Font : Swift.RawRepresentable {}
+extension statusComponent.R.Image : Swift.Equatable {}
+extension statusComponent.R.Image : Swift.Hashable {}
+extension statusComponent.R.Image : Swift.RawRepresentable {}

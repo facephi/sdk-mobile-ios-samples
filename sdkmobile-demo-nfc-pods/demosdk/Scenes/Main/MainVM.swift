@@ -26,11 +26,6 @@ class MainVM {
     private let viewController: UIViewController
     
     // MARK: - VARS
-    private var tokenFaceImage = " "
-    private var extradataToken = " "
-    private var bestImage = " "
-    private var bestImageData: Data = Data()
-    private var ocr: [String: String] = [:]
     private var delegate: MainVMOutput?
     
     init(viewController: UIViewController, delegate: MainVMOutput) {

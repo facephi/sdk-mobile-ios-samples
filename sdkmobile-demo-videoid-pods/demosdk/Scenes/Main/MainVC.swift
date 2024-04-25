@@ -11,7 +11,7 @@ class MainVC: UIViewController {
     // MARK: - ENUM
     private enum ButtonTag: Int {
         case newOperation = 1, videoId,
-             tokenize, license, clearLogs
+             license, clearLogs
     }
 
     // MARK: - OUTLET
@@ -45,8 +45,6 @@ class MainVC: UIViewController {
             viewModel.newOperation()
         case .videoId:
             viewModel.videoId()
-        case .tokenize:
-            viewModel.tokenizeExtradata()
         case .license:
             viewModel.getLicense()
         case .clearLogs:

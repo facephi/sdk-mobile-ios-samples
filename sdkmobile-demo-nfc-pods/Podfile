@@ -20,6 +20,7 @@ target 'demosdk' do
   pod 'FPHISDKMainComponent', '~> 2.0.0'
   pod 'FPHISDKTrackingComponent', '~> 2.0.0'
   pod 'FPHISDKNFCComponent', '~> 2.8.0'
+  pod 'FPHISDKStatusComponent', '~> 2.0.0'
 
   target 'demosdkTests' do
     inherit! :search_paths

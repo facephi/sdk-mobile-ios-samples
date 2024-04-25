@@ -1,0 +1,12 @@
+disabled_rules:
+- trailing_whitespace
+- opening_brace
+- identifier_name
+- type_name
+
+excluded:
+- Pods
+
+line_length:
+- 150 # warning
+- 200 # error

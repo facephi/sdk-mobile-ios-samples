@@ -1,0 +1,17 @@
+"network_error_description"="Verifique se a sua conexão está estável e tente novamente.";
+"network_error_title"="Verifique a sua conexão de internet";
+"status_retry"="TENTAR NOVAMENTE";
+"status_finish"="TERMINAR";
+"timeout_error_description"="";
+"timeout_error_title"="Tempo excedido";
+"unknown_error_description"="";
+"unknown_error_title"="Ocorreu um erro";
+"status_close"="Retornar";
+"generic_permission_title"="Permissão recusada";
+"generic_permission_description"="Para continuar, você precisa verificar as permissões.";
+"microphone_permission_title"="Ative o microfone";
+"microphone_permission_description"="A permissão de voz é necessária para fazer a gravação.";
+"camera_permission_title"="Permite o acesso à câmara";
+"camera_permission_description"="Para capturar as imagens, é necessário ativar esta autorização.";
+"status_settings"="Ir para permissões";
+"tutorial_message_skip"="Saltar";

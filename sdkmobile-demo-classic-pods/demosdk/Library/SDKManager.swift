@@ -13,6 +13,7 @@ import selphidComponent
 import trackingComponent
 import UIKit
 import tokenizeComponent
+import statusComponent
 
 
 protocol SDKManagerDelegate: AnyObject {
@@ -35,6 +36,7 @@ class SDKManager {
         trackingController.tenantIdDemo = SdkConfigurationManager.CUSTOM_TENANT_ID
         
         let tokenizeController = TokenizeController()
+        let statusController = StatusController()
         
         // MANUAL License
 //        SDKController.shared.initSdk(
@@ -63,7 +65,8 @@ class SDKManager {
                 }
             },
             trackingController: trackingController,
-            tokenizeController: tokenizeController
+            tokenizeController: tokenizeController,
+            statusController: statusController
         )
     }
     

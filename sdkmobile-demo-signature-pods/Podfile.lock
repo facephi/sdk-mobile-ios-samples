@@ -1,0 +1,131 @@
+PODS:
+  - AgoraRtcEngine_iOS (4.3.0):
+    - AgoraRtcEngine_iOS/AIAEC (= 4.3.0)
+    - AgoraRtcEngine_iOS/AINS (= 4.3.0)
+    - AgoraRtcEngine_iOS/AudioBeauty (= 4.3.0)
+    - AgoraRtcEngine_iOS/ClearVision (= 4.3.0)
+    - AgoraRtcEngine_iOS/ContentInspect (= 4.3.0)
+    - AgoraRtcEngine_iOS/FaceCapture (= 4.3.0)
+    - AgoraRtcEngine_iOS/FaceDetection (= 4.3.0)
+    - AgoraRtcEngine_iOS/ReplayKit (= 4.3.0)
+    - AgoraRtcEngine_iOS/RtcBasic (= 4.3.0)
+    - AgoraRtcEngine_iOS/SpatialAudio (= 4.3.0)
+    - AgoraRtcEngine_iOS/VideoAv1CodecDec (= 4.3.0)
+    - AgoraRtcEngine_iOS/VideoCodecDec (= 4.3.0)
+    - AgoraRtcEngine_iOS/VideoCodecEnc (= 4.3.0)
+    - AgoraRtcEngine_iOS/VirtualBackground (= 4.3.0)
+    - AgoraRtcEngine_iOS/VQA (= 4.3.0)
+  - AgoraRtcEngine_iOS/AIAEC (4.3.0)
+  - AgoraRtcEngine_iOS/AINS (4.3.0)
+  - AgoraRtcEngine_iOS/AudioBeauty (4.3.0)
+  - AgoraRtcEngine_iOS/ClearVision (4.3.0)
+  - AgoraRtcEngine_iOS/ContentInspect (4.3.0)
+  - AgoraRtcEngine_iOS/FaceCapture (4.3.0)
+  - AgoraRtcEngine_iOS/FaceDetection (4.3.0)
+  - AgoraRtcEngine_iOS/ReplayKit (4.3.0)
+  - AgoraRtcEngine_iOS/RtcBasic (4.3.0)
+  - AgoraRtcEngine_iOS/SpatialAudio (4.3.0)
+  - AgoraRtcEngine_iOS/VideoAv1CodecDec (4.3.0)
+  - AgoraRtcEngine_iOS/VideoCodecDec (4.3.0)
+  - AgoraRtcEngine_iOS/VideoCodecEnc (4.3.0)
+  - AgoraRtcEngine_iOS/VirtualBackground (4.3.0)
+  - AgoraRtcEngine_iOS/VQA (4.3.0)
+  - FPBLicensingFrontend (2.0.0)
+  - FPBTokenizer (1.1.0)
+  - FPHIFPBExtractoriOS (5.5.2)
+  - FPHILottieSDKFramework (4.4.0)
+  - FPHISDKCoreComponent (2.0.0):
+    - FPHISDKLicenseCheckerComponent (~> 2.0.0)
+  - FPHISDKLicenseCheckerComponent (2.0.0):
+    - FPBLicensingFrontend (~> 2.0.0)
+  - FPHISDKLicensingComponent (2.0.0):
+    - FPHISDKCoreComponent (~> 2.0.0)
+  - FPHISDKMainComponent (2.0.0):
+    - FPHISDKCoreComponent (~> 2.0.0)
+    - FPHISDKLicensingComponent (~> 2.0.0)
+  - FPHISDKSelphiComponent (2.0.1):
+    - FPHISDKCoreComponent (~> 2.0.0)
+    - FPHISelphiFrameworks (~> 5.12.1)
+  - FPHISDKStatusComponent (2.0.4):
+    - FPHILottieSDKFramework (~> 4.4.0)
+    - FPHISDKCoreComponent (~> 2.0.0)
+  - FPHISDKTokenizeComponent (2.0.0):
+    - FPBTokenizer (~> 1.1.0)
+    - FPHISDKCoreComponent (~> 2.0.0)
+  - FPHISDKTrackingComponent (2.0.0):
+    - FPHISDKCoreComponent (~> 2.0.0)
+  - FPHISDKVideoIDComponent (2.0.0):
+    - AgoraRtcEngine_iOS (~> 4.3.0)
+    - FPHILottieSDKFramework (= 4.4.0)
+    - FPHISDKCoreComponent (~> 2.0.0)
+    - Starscream (~> 4.0.8)
+  - FPHISelphiFrameworks (5.12.4):
+    - FPHIFPBExtractoriOS
+    - FPHISelphiResources
+    - zipzap
+  - FPHISelphiResources (1.2.0)
+  - IQKeyboardManagerSwift (7.0.2)
+  - Starscream (4.0.8)
+  - SwiftLint (0.54.0)
+  - zipzap (8.1.1)
+
+DEPENDENCIES:
+  - FPHISDKLicensingComponent (~> 2.0.0)
+  - FPHISDKMainComponent (~> 2.0.0)
+  - FPHISDKSelphiComponent (~> 2.0.0)
+  - FPHISDKStatusComponent (~> 2.0.0)
+  - FPHISDKTokenizeComponent (~> 2.0.0)
+  - FPHISDKTrackingComponent (~> 2.0.0)
+  - FPHISDKVideoIDComponent (~> 2.0.0)
+  - IQKeyboardManagerSwift (~> 7.0.1)
+  - SwiftLint
+
+SPEC REPOS:
+  https://facephicorp.jfrog.io/artifactory/api/pods/cocoa-dev-fphi:
+    - FPBLicensingFrontend
+    - FPBTokenizer
+    - FPHIFPBExtractoriOS
+    - FPHILottieSDKFramework
+    - FPHISDKCoreComponent
+    - FPHISDKLicenseCheckerComponent
+    - FPHISDKLicensingComponent
+    - FPHISDKMainComponent
+    - FPHISDKSelphiComponent
+    - FPHISDKStatusComponent
+    - FPHISDKTokenizeComponent
+    - FPHISDKTrackingComponent
+    - FPHISDKVideoIDComponent
+    - FPHISelphiFrameworks
+    - FPHISelphiResources
+  trunk:
+    - AgoraRtcEngine_iOS
+    - IQKeyboardManagerSwift
+    - Starscream
+    - SwiftLint
+    - zipzap
+
+SPEC CHECKSUMS:
+  AgoraRtcEngine_iOS: 267c0980c1fb97e056d05b850f8629b05b6e467a
+  FPBLicensingFrontend: f12838bde841f703f89d30666bbb801735a2441c
+  FPBTokenizer: 827b7e0f110cba2ed1b217889c565a69af20d787
+  FPHIFPBExtractoriOS: ef8d0e76c5a783e2fa0c6bae4d448385882c260b
+  FPHILottieSDKFramework: fc10f5752a3c650a659c075d8c9e42aff0c35bc4
+  FPHISDKCoreComponent: 2d3907f417b66ed7d53fe56437bd09c58e9dd3e5
+  FPHISDKLicenseCheckerComponent: cf3ea3321ea891d0b1ffdf1a691c041c9d0534c2
+  FPHISDKLicensingComponent: 64460cae15acbd144389683beafc164ffbf2775b
+  FPHISDKMainComponent: a813274bc7ac211edfe34e94c50dcf1babc4df80
+  FPHISDKSelphiComponent: 1e6142743a3f6e9740570599823ea88b582e1857
+  FPHISDKStatusComponent: 03eb8c196f7cfb98bd26def5f0e90a607ad55927
+  FPHISDKTokenizeComponent: 54c5e6d280292e173020253c38d68b8ccbf48c26
+  FPHISDKTrackingComponent: bc6f3f2b2bddffacc8069d8214ff2d2fe9a943cc
+  FPHISDKVideoIDComponent: f76e2c93f6cee8e414f7f481c699a8669ea38a18
+  FPHISelphiFrameworks: 179b25ac758f496256aca1da5bfcf4986f1d6dfd
+  FPHISelphiResources: aa6407a501883fbbf25ecd58d52d5dfdf10b85a3
+  IQKeyboardManagerSwift: d338c11a896e9f29603443700c4567e32f830c22
+  Starscream: 19b5533ddb925208db698f0ac508a100b884a1b9
+  SwiftLint: c1de071d9d08c8aba837545f6254315bc900e211
+  zipzap: 940162d9c9c60472c2eab341385e4214da0fdf1c
+
+PODFILE CHECKSUM: 168ff0364256ce11dcd28a94c2da8257b3c12324
+
+COCOAPODS: 1.13.0

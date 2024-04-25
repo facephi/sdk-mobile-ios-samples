@@ -45,8 +45,6 @@ class MainVC: UIViewController {
             viewModel.newOperation()
         case .videoCall:
             viewModel.videoCall()
-        case .tokenize:
-            viewModel.tokenizeExtradata()
         case .license:
             viewModel.getLicense()
         case .clearLogs:

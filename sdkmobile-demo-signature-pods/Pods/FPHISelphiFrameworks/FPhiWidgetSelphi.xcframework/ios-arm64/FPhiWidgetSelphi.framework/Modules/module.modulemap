@@ -1,0 +1,6 @@
+framework module FPhiWidgetSelphi {
+  umbrella header "FPhiWidgetSelphi.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,45 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name licenseCheckerComponent
+import FPBLicensingFrontend
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+public protocol ILicenseCheckerController {
+  func getStatus() -> licenseCheckerComponent.LicenseStatus
+  func getLicenseByComponentType<T>(component: Swift.String) -> licenseCheckerComponent.ComponentLicenseChecked<T> where T : Swift.Decodable
+}
+public class LicenseCheckerController : licenseCheckerComponent.ILicenseCheckerController {
+  public init(license: Swift.String)
+  public func getStatus() -> licenseCheckerComponent.LicenseStatus
+  public func getLicenseByComponentType<T>(component: Swift.String) -> licenseCheckerComponent.ComponentLicenseChecked<T> where T : Swift.Decodable
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ComponentLicenseChecked<T> {
+  final public let licenseStatus: licenseCheckerComponent.LicenseStatus
+  final public let data: T?
+  @objc deinit
+}
+public enum LicenseStatus : Swift.Int32 {
+  case STATUS_OK
+  case ERROR_LICENSE_EXPIRED
+  case ERROR_EMPTY_LICENSE
+  case ERROR_PARSING_LICENSE
+  case ERROR_SIGNATURE_NOT_VALID
+  case ERROR_COMPONENTS_EMPTY
+  case ERROR_PARSING_COMPONENTS
+  case ERROR_MISSING_BUNDLE_IDENTIFIER
+  case ERROR_PARSING_LICENSE_DATA
+  case ERROR_COMPONENT_LICENSE_EXPIRED
+  case ERROR_INVALID_COMPONENT
+  case ERROR_UNKNOWN
+  public init?(rawValue: Swift.Int32)
+  public typealias RawValue = Swift.Int32
+  public var rawValue: Swift.Int32 {
+    get
+  }
+}
+extension licenseCheckerComponent.LicenseStatus : Swift.Equatable {}
+extension licenseCheckerComponent.LicenseStatus : Swift.Hashable {}
+extension licenseCheckerComponent.LicenseStatus : Swift.RawRepresentable {}

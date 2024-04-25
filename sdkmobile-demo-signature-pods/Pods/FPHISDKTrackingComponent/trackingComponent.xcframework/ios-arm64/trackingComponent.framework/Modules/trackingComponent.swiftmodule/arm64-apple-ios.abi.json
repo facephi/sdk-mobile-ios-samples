@@ -1,0 +1,3938 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "trackingComponent"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "trackingComponent"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "trackingComponent"
+      },
+      {
+        "kind": "Import",
+        "name": "core",
+        "printedName": "core",
+        "declKind": "Import",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "trackingComponent"
+      },
+      {
+        "kind": "Import",
+        "name": "licenseCheckerComponent",
+        "printedName": "licenseCheckerComponent",
+        "declKind": "Import",
+        "moduleName": "trackingComponent"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TrackingController",
+        "printedName": "TrackingController",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "tenantIdDemo",
+            "printedName": "tenantIdDemo",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17trackingComponent18TrackingControllerC12tenantIdDemoSSSgvp",
+            "mangledName": "$s17trackingComponent18TrackingControllerC12tenantIdDemoSSSgvp",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17trackingComponent18TrackingControllerC12tenantIdDemoSSSgvg",
+                "mangledName": "$s17trackingComponent18TrackingControllerC12tenantIdDemoSSSgvg",
+                "moduleName": "trackingComponent",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17trackingComponent18TrackingControllerC12tenantIdDemoSSSgvs",
+                "mangledName": "$s17trackingComponent18TrackingControllerC12tenantIdDemoSSSgvs",
+                "moduleName": "trackingComponent",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17trackingComponent18TrackingControllerC12tenantIdDemoSSSgvM",
+                "mangledName": "$s17trackingComponent18TrackingControllerC12tenantIdDemoSSSgvM",
+                "moduleName": "trackingComponent",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "trackingError",
+            "printedName": "trackingError",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.String) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17trackingComponent18TrackingControllerC0A5ErrorySScSgvp",
+            "mangledName": "$s17trackingComponent18TrackingControllerC0A5ErrorySScSgvp",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.String) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17trackingComponent18TrackingControllerC0A5ErrorySScSgvg",
+                "mangledName": "$s17trackingComponent18TrackingControllerC0A5ErrorySScSgvg",
+                "moduleName": "trackingComponent",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((Swift.String) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17trackingComponent18TrackingControllerC0A5ErrorySScSgvs",
+                "mangledName": "$s17trackingComponent18TrackingControllerC0A5ErrorySScSgvs",
+                "moduleName": "trackingComponent",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17trackingComponent18TrackingControllerC0A5ErrorySScSgvM",
+                "mangledName": "$s17trackingComponent18TrackingControllerC0A5ErrorySScSgvM",
+                "moduleName": "trackingComponent",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "license",
+            "printedName": "license",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17trackingComponent18TrackingControllerC7licenseSSvp",
+            "mangledName": "$s17trackingComponent18TrackingControllerC7licenseSSvp",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17trackingComponent18TrackingControllerC7licenseSSvg",
+                "mangledName": "$s17trackingComponent18TrackingControllerC7licenseSSvg",
+                "moduleName": "trackingComponent",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17trackingComponent18TrackingControllerC7licenseSSvs",
+                "mangledName": "$s17trackingComponent18TrackingControllerC7licenseSSvs",
+                "moduleName": "trackingComponent",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17trackingComponent18TrackingControllerC7licenseSSvM",
+                "mangledName": "$s17trackingComponent18TrackingControllerC7licenseSSvM",
+                "moduleName": "trackingComponent",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "trackingConfigurationData",
+            "printedName": "trackingConfigurationData",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "core.TrackingConfigurationData?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TrackingConfigurationData",
+                    "printedName": "core.TrackingConfigurationData",
+                    "usr": "s:4core25TrackingConfigurationDataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17trackingComponent18TrackingControllerC0A17ConfigurationData4core0ceF0VSgvp",
+            "mangledName": "$s17trackingComponent18TrackingControllerC0A17ConfigurationData4core0ceF0VSgvp",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "core.TrackingConfigurationData?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TrackingConfigurationData",
+                        "printedName": "core.TrackingConfigurationData",
+                        "usr": "s:4core25TrackingConfigurationDataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17trackingComponent18TrackingControllerC0A17ConfigurationData4core0ceF0VSgvg",
+                "mangledName": "$s17trackingComponent18TrackingControllerC0A17ConfigurationData4core0ceF0VSgvg",
+                "moduleName": "trackingComponent",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "core.TrackingConfigurationData?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TrackingConfigurationData",
+                        "printedName": "core.TrackingConfigurationData",
+                        "usr": "s:4core25TrackingConfigurationDataV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17trackingComponent18TrackingControllerC0A17ConfigurationData4core0ceF0VSgvs",
+                "mangledName": "$s17trackingComponent18TrackingControllerC0A17ConfigurationData4core0ceF0VSgvs",
+                "moduleName": "trackingComponent",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17trackingComponent18TrackingControllerC0A17ConfigurationData4core0ceF0VSgvM",
+                "mangledName": "$s17trackingComponent18TrackingControllerC0A17ConfigurationData4core0ceF0VSgvM",
+                "moduleName": "trackingComponent",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(trackingError:enableLocation:retries:retryDelay:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TrackingController",
+                "printedName": "trackingComponent.TrackingController",
+                "usr": "s:17trackingComponent18TrackingControllerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.String) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17trackingComponent18TrackingControllerC0A5Error14enableLocation7retries10retryDelayACySScSg_SbS2itcfc",
+            "mangledName": "$s17trackingComponent18TrackingControllerC0A5Error14enableLocation7retries10retryDelayACySScSg_SbS2itcfc",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "setTenantId",
+            "printedName": "setTenantId(newTenantId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent18TrackingControllerC11setTenantId03newfG0ySS_tF",
+            "mangledName": "$s17trackingComponent18TrackingControllerC11setTenantId03newfG0ySS_tF",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setupLicenseAndToken",
+            "printedName": "setupLicenseAndToken(output:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(core.SdkResult<Swift.String>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SdkResult",
+                    "printedName": "core.SdkResult<Swift.String>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:4core9SdkResultC"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent18TrackingControllerC20setupLicenseAndToken6outputyy4core9SdkResultCySSGc_tF",
+            "mangledName": "$s17trackingComponent18TrackingControllerC20setupLicenseAndToken6outputyy4core9SdkResultCySSGc_tF",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getComponentType",
+            "printedName": "getComponentType()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent18TrackingControllerC03getB4TypeSSyF",
+            "mangledName": "$s17trackingComponent18TrackingControllerC03getB4TypeSSyF",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendStep",
+            "printedName": "sendStep(step:componentId:componentVersion:widgetId:widgetVersion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent18TrackingControllerC8sendStep4step11componentId0H7Version06widgetI00kJ0ySS_S3SSgAJtF",
+            "mangledName": "$s17trackingComponent18TrackingControllerC8sendStep4step11componentId0H7Version06widgetI00kJ0ySS_S3SSgAJtF",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "initOperation",
+            "printedName": "initOperation(steps:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent18TrackingControllerC13initOperation5stepsySaySSGSg_tF",
+            "mangledName": "$s17trackingComponent18TrackingControllerC13initOperation5stepsySaySSGSg_tF",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "closeSession",
+            "printedName": "closeSession()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent18TrackingControllerC12closeSessionyyF",
+            "mangledName": "$s17trackingComponent18TrackingControllerC12closeSessionyyF",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendFlowEvent",
+            "printedName": "sendFlowEvent(flowId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent18TrackingControllerC13sendFlowEvent6flowIdySS_tF",
+            "mangledName": "$s17trackingComponent18TrackingControllerC13sendFlowEvent6flowIdySS_tF",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendOcrData",
+            "printedName": "sendOcrData(personalData:ocrMap:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent18TrackingControllerC11sendOcrData08personalG06ocrMapySDyS2SG_AGtF",
+            "mangledName": "$s17trackingComponent18TrackingControllerC11sendOcrData08personalG06ocrMapySDyS2SG_AGtF",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "externalEvent",
+            "printedName": "externalEvent(trackingData:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TrackingData",
+                "printedName": "trackingComponent.TrackingData",
+                "usr": "s:17trackingComponent12TrackingDataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent18TrackingControllerC13externalEvent0A4DatayAA0cG0V_tF",
+            "mangledName": "$s17trackingComponent18TrackingControllerC13externalEvent0A4DatayAA0cG0V_tF",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stepEvent",
+            "printedName": "stepEvent(reason:operationEndStatus:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent18TrackingControllerC9stepEvent6reason18operationEndStatusySS_SStF",
+            "mangledName": "$s17trackingComponent18TrackingControllerC9stepEvent6reason18operationEndStatusySS_SStF",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stepSuccessEvent",
+            "printedName": "stepSuccessEvent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent18TrackingControllerC16stepSuccessEventyyF",
+            "mangledName": "$s17trackingComponent18TrackingControllerC16stepSuccessEventyyF",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setCustomerId",
+            "printedName": "setCustomerId(customerId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent18TrackingControllerC13setCustomerId08customerG0ySS_tF",
+            "mangledName": "$s17trackingComponent18TrackingControllerC13setCustomerId08customerG0ySS_tF",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendDataTracking",
+            "printedName": "sendDataTracking(data:assetType:contentType:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "hasDefaultArg": true,
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent18TrackingControllerC08sendDataC04data9assetType07contentI0y10Foundation0F0VSg_S2StF",
+            "mangledName": "$s17trackingComponent18TrackingControllerC08sendDataC04data9assetType07contentI0y10Foundation0F0VSg_S2StF",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "signatureProofEvent",
+            "printedName": "signatureProofEvent(signatureResult:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent18TrackingControllerC19signatureProofEvent0E6ResultySS_tF",
+            "mangledName": "$s17trackingComponent18TrackingControllerC19signatureProofEvent0E6ResultySS_tF",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getExtraDataJSONString",
+            "printedName": "getExtraDataJSONString()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SdkResult",
+                "printedName": "core.SdkResult<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:4core9SdkResultC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent18TrackingControllerC22getExtraDataJSONString4core9SdkResultCySSGyF",
+            "mangledName": "$s17trackingComponent18TrackingControllerC22getExtraDataJSONString4core9SdkResultCySSGyF",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didUpdateLocation",
+            "printedName": "didUpdateLocation(latitude:longitude:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent18TrackingControllerC17didUpdateLocation8latitude9longitudeySS_SStF",
+            "mangledName": "$s17trackingComponent18TrackingControllerC17didUpdateLocation8latitude9longitudeySS_SStF",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:17trackingComponent18TrackingControllerC",
+        "mangledName": "$s17trackingComponent18TrackingControllerC",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "ITrackingController",
+            "printedName": "ITrackingController",
+            "usr": "s:4core19ITrackingControllerP",
+            "mangledName": "$s4core19ITrackingControllerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ILicensableController",
+            "printedName": "ILicensableController",
+            "usr": "s:4core21ILicensableControllerP",
+            "mangledName": "$s4core21ILicensableControllerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LocationServiceDelegate",
+            "printedName": "LocationServiceDelegate",
+            "usr": "s:17trackingComponent23LocationServiceDelegateP",
+            "mangledName": "$s17trackingComponent23LocationServiceDelegateP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CoreTelephony",
+        "printedName": "CoreTelephony",
+        "declKind": "Import",
+        "moduleName": "trackingComponent"
+      },
+      {
+        "kind": "Import",
+        "name": "core",
+        "printedName": "core",
+        "declKind": "Import",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "trackingComponent"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "EventManager",
+        "printedName": "EventManager",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "contentType",
+            "printedName": "contentType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17trackingComponent12EventManagerC11contentTypeSSvpZ",
+            "mangledName": "$s17trackingComponent12EventManagerC11contentTypeSSvpZ",
+            "moduleName": "trackingComponent",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17trackingComponent12EventManagerC11contentTypeSSvgZ",
+                "mangledName": "$s17trackingComponent12EventManagerC11contentTypeSSvgZ",
+                "moduleName": "trackingComponent",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:17trackingComponent12EventManagerC",
+        "mangledName": "$s17trackingComponent12EventManagerC",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true
+      },
+      {
+        "kind": "Import",
+        "name": "CoreLocation",
+        "printedName": "CoreLocation",
+        "declKind": "Import",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AssetResponse",
+        "printedName": "AssetResponse",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AssetResponse",
+                "printedName": "trackingComponent.AssetResponse",
+                "usr": "s:17trackingComponent13AssetResponseV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17trackingComponent13AssetResponseVACycfc",
+            "mangledName": "$s17trackingComponent13AssetResponseVACycfc",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AssetResponse",
+                "printedName": "trackingComponent.AssetResponse",
+                "usr": "s:17trackingComponent13AssetResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17trackingComponent13AssetResponseV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s17trackingComponent13AssetResponseV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "trackingComponent",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent13AssetResponseV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s17trackingComponent13AssetResponseV6encode2toys7Encoder_p_tKF",
+            "moduleName": "trackingComponent",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:17trackingComponent13AssetResponseV",
+        "mangledName": "$s17trackingComponent13AssetResponseV",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AuthResponse",
+        "printedName": "AuthResponse",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(access_token:expires_in:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AuthResponse",
+                "printedName": "trackingComponent.AuthResponse",
+                "usr": "s:17trackingComponent12AuthResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17trackingComponent12AuthResponseV12access_token10expires_inACSS_Sitcfc",
+            "mangledName": "$s17trackingComponent12AuthResponseV12access_token10expires_inACSS_Sitcfc",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AuthResponse",
+                "printedName": "trackingComponent.AuthResponse",
+                "usr": "s:17trackingComponent12AuthResponseV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17trackingComponent12AuthResponseV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s17trackingComponent12AuthResponseV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "trackingComponent",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent12AuthResponseV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s17trackingComponent12AuthResponseV6encode2toys7Encoder_p_tKF",
+            "moduleName": "trackingComponent",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:17trackingComponent12AuthResponseV",
+        "mangledName": "$s17trackingComponent12AuthResponseV",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Event",
+        "printedName": "Event",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(payload:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Event",
+                "printedName": "trackingComponent.Event",
+                "usr": "s:17trackingComponent5EventV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Payload",
+                "printedName": "trackingComponent.Payload",
+                "usr": "s:17trackingComponent7PayloadV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17trackingComponent5EventV7payloadAcA7PayloadV_tcfc",
+            "mangledName": "$s17trackingComponent5EventV7payloadAcA7PayloadV_tcfc",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Event",
+                "printedName": "trackingComponent.Event",
+                "usr": "s:17trackingComponent5EventV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17trackingComponent5EventV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s17trackingComponent5EventV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "trackingComponent",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent5EventV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s17trackingComponent5EventV6encode2toys7Encoder_p_tKF",
+            "moduleName": "trackingComponent",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:17trackingComponent5EventV",
+        "mangledName": "$s17trackingComponent5EventV",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LibraryData",
+        "printedName": "LibraryData",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(id:version:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LibraryData",
+                "printedName": "trackingComponent.LibraryData",
+                "usr": "s:17trackingComponent11LibraryDataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17trackingComponent11LibraryDataV2id7versionACSSSg_AFtcfc",
+            "mangledName": "$s17trackingComponent11LibraryDataV2id7versionACSSSg_AFtcfc",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "LibraryData",
+                "printedName": "trackingComponent.LibraryData",
+                "usr": "s:17trackingComponent11LibraryDataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17trackingComponent11LibraryDataV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s17trackingComponent11LibraryDataV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "trackingComponent",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent11LibraryDataV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s17trackingComponent11LibraryDataV6encode2toys7Encoder_p_tKF",
+            "moduleName": "trackingComponent",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:17trackingComponent11LibraryDataV",
+        "mangledName": "$s17trackingComponent11LibraryDataV",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Payload",
+        "printedName": "Payload",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(stepId:stepType:type:screen:event:value:model:osName:osVersion:brand:deviceId:deviceType:latitude:longitude:url:assetType:contentType:status:reason:source:dataMap:personalInformation:hash:timestamp:result:isEmulated:isRooted:hasSimCard:packageId:component:widget:id:steps:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Payload",
+                "printedName": "trackingComponent.Payload",
+                "usr": "s:17trackingComponent7PayloadV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "trackingComponent.LibraryData?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LibraryData",
+                    "printedName": "trackingComponent.LibraryData",
+                    "usr": "s:17trackingComponent11LibraryDataV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "trackingComponent.LibraryData?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LibraryData",
+                    "printedName": "trackingComponent.LibraryData",
+                    "usr": "s:17trackingComponent11LibraryDataV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17trackingComponent7PayloadV6stepId0D4Type4type6screen5event5value5model6osName0L7Version5brand06deviceE00pF08latitude9longitude3url05assetF007contentF06status6reason6source7dataMap19personalInformation4hash9timestamp6result10isEmulated8isRooted10hasSimCard07packageE09component6widget2id5stepsACSSSg_A9_A9_A9_A9_A9_A9_A9_A9_A9_A9_A9_SdSgA10_A9_A9_A9_A9_A9_A9_SDyS2SGSgA12_A9_A9_A9_SbSgA13_A13_A9_AA11LibraryDataVSgA16_A9_A9_tcfc",
+            "mangledName": "$s17trackingComponent7PayloadV6stepId0D4Type4type6screen5event5value5model6osName0L7Version5brand06deviceE00pF08latitude9longitude3url05assetF007contentF06status6reason6source7dataMap19personalInformation4hash9timestamp6result10isEmulated8isRooted10hasSimCard07packageE09component6widget2id5stepsACSSSg_A9_A9_A9_A9_A9_A9_A9_A9_A9_A9_A9_SdSgA10_A9_A9_A9_A9_A9_A9_SDyS2SGSgA12_A9_A9_A9_SbSgA13_A13_A9_AA11LibraryDataVSgA16_A9_A9_tcfc",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Payload",
+                "printedName": "trackingComponent.Payload",
+                "usr": "s:17trackingComponent7PayloadV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17trackingComponent7PayloadV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s17trackingComponent7PayloadV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "trackingComponent",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent7PayloadV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s17trackingComponent7PayloadV6encode2toys7Encoder_p_tKF",
+            "moduleName": "trackingComponent",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:17trackingComponent7PayloadV",
+        "mangledName": "$s17trackingComponent7PayloadV",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TrackingData",
+        "printedName": "TrackingData",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "event",
+            "printedName": "event",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17trackingComponent12TrackingDataV5eventSSvp",
+            "mangledName": "$s17trackingComponent12TrackingDataV5eventSSvp",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17trackingComponent12TrackingDataV5eventSSvg",
+                "mangledName": "$s17trackingComponent12TrackingDataV5eventSSvg",
+                "moduleName": "trackingComponent",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17trackingComponent12TrackingDataV5eventSSvs",
+                "mangledName": "$s17trackingComponent12TrackingDataV5eventSSvs",
+                "moduleName": "trackingComponent",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17trackingComponent12TrackingDataV5eventSSvM",
+                "mangledName": "$s17trackingComponent12TrackingDataV5eventSSvM",
+                "moduleName": "trackingComponent",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "screen",
+            "printedName": "screen",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17trackingComponent12TrackingDataV6screenSSvp",
+            "mangledName": "$s17trackingComponent12TrackingDataV6screenSSvp",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17trackingComponent12TrackingDataV6screenSSvg",
+                "mangledName": "$s17trackingComponent12TrackingDataV6screenSSvg",
+                "moduleName": "trackingComponent",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17trackingComponent12TrackingDataV6screenSSvs",
+                "mangledName": "$s17trackingComponent12TrackingDataV6screenSSvs",
+                "moduleName": "trackingComponent",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17trackingComponent12TrackingDataV6screenSSvM",
+                "mangledName": "$s17trackingComponent12TrackingDataV6screenSSvM",
+                "moduleName": "trackingComponent",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "value",
+            "printedName": "value",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17trackingComponent12TrackingDataV5valueSSvp",
+            "mangledName": "$s17trackingComponent12TrackingDataV5valueSSvp",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17trackingComponent12TrackingDataV5valueSSvg",
+                "mangledName": "$s17trackingComponent12TrackingDataV5valueSSvg",
+                "moduleName": "trackingComponent",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17trackingComponent12TrackingDataV5valueSSvs",
+                "mangledName": "$s17trackingComponent12TrackingDataV5valueSSvs",
+                "moduleName": "trackingComponent",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17trackingComponent12TrackingDataV5valueSSvM",
+                "mangledName": "$s17trackingComponent12TrackingDataV5valueSSvM",
+                "moduleName": "trackingComponent",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(event:screen:value:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TrackingData",
+                "printedName": "trackingComponent.TrackingData",
+                "usr": "s:17trackingComponent12TrackingDataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17trackingComponent12TrackingDataV5event6screen5valueACSS_S2Stcfc",
+            "mangledName": "$s17trackingComponent12TrackingDataV5event6screen5valueACSS_S2Stcfc",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:17trackingComponent12TrackingDataV",
+        "mangledName": "$s17trackingComponent12TrackingDataV",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TrackingEvent",
+        "printedName": "TrackingEvent",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(family:sessionId:operationId:events:tenantId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TrackingEvent",
+                "printedName": "trackingComponent.TrackingEvent",
+                "usr": "s:17trackingComponent13TrackingEventV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[trackingComponent.Event]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Event",
+                    "printedName": "trackingComponent.Event",
+                    "usr": "s:17trackingComponent5EventV"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17trackingComponent13TrackingEventV6family9sessionId09operationG06events06tenantG0ACSS_S2SSayAA0D0VGSStcfc",
+            "mangledName": "$s17trackingComponent13TrackingEventV6family9sessionId09operationG06events06tenantG0ACSS_S2SSayAA0D0VGSStcfc",
+            "moduleName": "trackingComponent",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TrackingEvent",
+                "printedName": "trackingComponent.TrackingEvent",
+                "usr": "s:17trackingComponent13TrackingEventV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17trackingComponent13TrackingEventV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s17trackingComponent13TrackingEventV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "trackingComponent",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent13TrackingEventV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s17trackingComponent13TrackingEventV6encode2toys7Encoder_p_tKF",
+            "moduleName": "trackingComponent",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:17trackingComponent13TrackingEventV",
+        "mangledName": "$s17trackingComponent13TrackingEventV",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TrackingStep",
+        "printedName": "TrackingStep",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "START",
+            "printedName": "START",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(trackingComponent.TrackingStep.Type) -> trackingComponent.TrackingStep",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TrackingStep",
+                    "printedName": "trackingComponent.TrackingStep",
+                    "usr": "s:17trackingComponent12TrackingStepO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "trackingComponent.TrackingStep.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TrackingStep",
+                        "printedName": "trackingComponent.TrackingStep",
+                        "usr": "s:17trackingComponent12TrackingStepO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17trackingComponent12TrackingStepO5STARTyA2CmF",
+            "mangledName": "$s17trackingComponent12TrackingStepO5STARTyA2CmF",
+            "moduleName": "trackingComponent"
+          },
+          {
+            "kind": "Var",
+            "name": "FINISH",
+            "printedName": "FINISH",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(trackingComponent.TrackingStep.Type) -> trackingComponent.TrackingStep",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TrackingStep",
+                    "printedName": "trackingComponent.TrackingStep",
+                    "usr": "s:17trackingComponent12TrackingStepO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "trackingComponent.TrackingStep.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TrackingStep",
+                        "printedName": "trackingComponent.TrackingStep",
+                        "usr": "s:17trackingComponent12TrackingStepO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17trackingComponent12TrackingStepO6FINISHyA2CmF",
+            "mangledName": "$s17trackingComponent12TrackingStepO6FINISHyA2CmF",
+            "moduleName": "trackingComponent"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "trackingComponent.TrackingStep?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TrackingStep",
+                    "printedName": "trackingComponent.TrackingStep",
+                    "usr": "s:17trackingComponent12TrackingStepO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17trackingComponent12TrackingStepO8rawValueACSgSS_tcfc",
+            "mangledName": "$s17trackingComponent12TrackingStepO8rawValueACSgSS_tcfc",
+            "moduleName": "trackingComponent",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17trackingComponent12TrackingStepO8rawValueSSvp",
+            "mangledName": "$s17trackingComponent12TrackingStepO8rawValueSSvp",
+            "moduleName": "trackingComponent",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17trackingComponent12TrackingStepO8rawValueSSvg",
+                "mangledName": "$s17trackingComponent12TrackingStepO8rawValueSSvg",
+                "moduleName": "trackingComponent",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:17trackingComponent12TrackingStepO",
+        "mangledName": "$s17trackingComponent12TrackingStepO",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "String",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "LocationServiceDelegate",
+        "printedName": "LocationServiceDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "didUpdateLocation",
+            "printedName": "didUpdateLocation(latitude:longitude:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent23LocationServiceDelegateP09didUpdateC08latitude9longitudeySS_SStF",
+            "mangledName": "$s17trackingComponent23LocationServiceDelegateP09didUpdateC08latitude9longitudeySS_SStF",
+            "moduleName": "trackingComponent",
+            "genericSig": "<τ_0_0 where τ_0_0 : trackingComponent.LocationServiceDelegate>",
+            "sugared_genericSig": "<Self where Self : trackingComponent.LocationServiceDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:17trackingComponent23LocationServiceDelegateP",
+        "mangledName": "$s17trackingComponent23LocationServiceDelegateP",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ILocationManager",
+        "printedName": "ILocationManager",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "location",
+            "printedName": "location",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(latitude: Swift.String, longitude: Swift.String)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(latitude: Swift.String, longitude: Swift.String)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17trackingComponent16ILocationManagerP8locationSS8latitude_SS9longitudetSgvp",
+            "mangledName": "$s17trackingComponent16ILocationManagerP8locationSS8latitude_SS9longitudetSgvp",
+            "moduleName": "trackingComponent",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(latitude: Swift.String, longitude: Swift.String)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(latitude: Swift.String, longitude: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17trackingComponent16ILocationManagerP8locationSS8latitude_SS9longitudetSgvg",
+                "mangledName": "$s17trackingComponent16ILocationManagerP8locationSS8latitude_SS9longitudetSgvg",
+                "moduleName": "trackingComponent",
+                "genericSig": "<τ_0_0 where τ_0_0 : trackingComponent.ILocationManager>",
+                "sugared_genericSig": "<Self where Self : trackingComponent.ILocationManager>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "startUpdatingLocation",
+            "printedName": "startUpdatingLocation(delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "trackingComponent.LocationServiceDelegate?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "LocationServiceDelegate",
+                    "printedName": "trackingComponent.LocationServiceDelegate",
+                    "usr": "s:17trackingComponent23LocationServiceDelegateP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent16ILocationManagerP21startUpdatingLocation8delegateyAA0G15ServiceDelegate_pSg_tF",
+            "mangledName": "$s17trackingComponent16ILocationManagerP21startUpdatingLocation8delegateyAA0G15ServiceDelegate_pSg_tF",
+            "moduleName": "trackingComponent",
+            "genericSig": "<τ_0_0 where τ_0_0 : trackingComponent.ILocationManager>",
+            "sugared_genericSig": "<Self where Self : trackingComponent.ILocationManager>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isLocationPermissionAccepted",
+            "printedName": "isLocationPermissionAccepted()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent16ILocationManagerP28isLocationPermissionAcceptedSbyF",
+            "mangledName": "$s17trackingComponent16ILocationManagerP28isLocationPermissionAcceptedSbyF",
+            "moduleName": "trackingComponent",
+            "genericSig": "<τ_0_0 where τ_0_0 : trackingComponent.ILocationManager>",
+            "sugared_genericSig": "<Self where Self : trackingComponent.ILocationManager>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:17trackingComponent16ILocationManagerP",
+        "mangledName": "$s17trackingComponent16ILocationManagerP",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "core",
+        "printedName": "core",
+        "declKind": "Import",
+        "moduleName": "trackingComponent"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "trackingComponent"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "IRepository",
+        "printedName": "IRepository",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "sendEvent",
+            "printedName": "sendEvent(token:event:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "TrackingEvent",
+                "printedName": "trackingComponent.TrackingEvent",
+                "usr": "s:17trackingComponent13TrackingEventV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent11IRepositoryP9sendEvent5token5eventqd__SS_AA08TrackingE0Vt4core17ApiResultProtocolRd__lF",
+            "mangledName": "$s17trackingComponent11IRepositoryP9sendEvent5token5eventqd__SS_AA08TrackingE0Vt4core17ApiResultProtocolRd__lF",
+            "moduleName": "trackingComponent",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : trackingComponent.IRepository, τ_1_0 : core.ApiResultProtocol>",
+            "sugared_genericSig": "<Self, T where Self : trackingComponent.IRepository, T : core.ApiResultProtocol>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getToken",
+            "printedName": "getToken(clientId:clientSecret:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent11IRepositoryP8getToken8clientId0F6Secretqd__SS_SSt4core17ApiResultProtocolRd__lF",
+            "mangledName": "$s17trackingComponent11IRepositoryP8getToken8clientId0F6Secretqd__SS_SSt4core17ApiResultProtocolRd__lF",
+            "moduleName": "trackingComponent",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : trackingComponent.IRepository, τ_1_0 : core.ApiResultProtocol>",
+            "sugared_genericSig": "<Self, T where Self : trackingComponent.IRepository, T : core.ApiResultProtocol>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "uploadAsset",
+            "printedName": "uploadAsset(token:contentType:family:tenantId:operationId:assetType:bodyData:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_1_0"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17trackingComponent11IRepositoryP11uploadAsset5token11contentType6family8tenantId09operationK005assetH08bodyDataqd__SS_S5S10Foundation0O0Vt4core17ApiResultProtocolRd__lF",
+            "mangledName": "$s17trackingComponent11IRepositoryP11uploadAsset5token11contentType6family8tenantId09operationK005assetH08bodyDataqd__SS_S5S10Foundation0O0Vt4core17ApiResultProtocolRd__lF",
+            "moduleName": "trackingComponent",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 : trackingComponent.IRepository, τ_1_0 : core.ApiResultProtocol>",
+            "sugared_genericSig": "<Self, T where Self : trackingComponent.IRepository, T : core.ApiResultProtocol>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:17trackingComponent11IRepositoryP",
+        "mangledName": "$s17trackingComponent11IRepositoryP",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "core",
+        "printedName": "core",
+        "declKind": "Import",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "trackingComponent"
+      },
+      {
+        "kind": "Import",
+        "name": "core",
+        "printedName": "core",
+        "declKind": "Import",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "trackingComponent"
+      },
+      {
+        "kind": "Import",
+        "name": "core",
+        "printedName": "core",
+        "declKind": "Import",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "trackingComponent"
+      },
+      {
+        "kind": "Import",
+        "name": "core",
+        "printedName": "core",
+        "declKind": "Import",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "trackingComponent"
+      },
+      {
+        "kind": "Import",
+        "name": "core",
+        "printedName": "core",
+        "declKind": "Import",
+        "moduleName": "trackingComponent",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "trackingComponent"
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/build\/Build\/Intermediates.noindex\/ArchiveIntermediates\/trackingComponent\/IntermediateBuildFilesPath\/trackingComponent.build\/Release-iphoneos\/trackingComponent.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "kind": "StringLiteral",
+      "offset": 295,
+      "length": 37,
+      "value": "\"trackingComponent_trackingComponent\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/build\/Build\/Intermediates.noindex\/ArchiveIntermediates\/trackingComponent\/IntermediateBuildFilesPath\/trackingComponent.build\/Release-iphoneos\/trackingComponent.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "kind": "Array",
+      "offset": 621,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/build\/Build\/Intermediates.noindex\/ArchiveIntermediates\/trackingComponent\/IntermediateBuildFilesPath\/trackingComponent.build\/Release-iphoneos\/trackingComponent.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "kind": "StringLiteral",
+      "offset": 1148,
+      "length": 9,
+      "value": "\".bundle\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/build\/Build\/Intermediates.noindex\/ArchiveIntermediates\/trackingComponent\/IntermediateBuildFilesPath\/trackingComponent.build\/Release-iphoneos\/trackingComponent.build\/DerivedSources\/resource_bundle_accessor.swift",
+      "kind": "StringLiteral",
+      "offset": 1300,
+      "length": 65,
+      "value": "\"unable to find bundle named trackingComponent_trackingComponent\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 137,
+      "length": 32,
+      "value": "\"com.facephi.tracking_component\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 201,
+      "length": 20,
+      "value": "\"tracking_component\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 261,
+      "length": 7,
+      "value": "\"2.0.0\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 303,
+      "length": 18,
+      "value": "\"com.facephi.demo\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/Constants.swift",
+      "kind": "IntegerLiteral",
+      "offset": 349,
+      "length": 3,
+      "value": "200"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/TrackingController.swift",
+      "kind": "StringLiteral",
+      "offset": 583,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/TrackingController.swift",
+      "kind": "StringLiteral",
+      "offset": 746,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/TrackingController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 850,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/TrackingController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 871,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/TrackingController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 892,
+      "length": 4,
+      "value": "5000"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/TrackingController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1591,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/managers\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 300,
+      "length": 15,
+      "value": "\"EVENT_MANAGER\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/managers\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 351,
+      "length": 12,
+      "value": "\"sdk.mobile\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/managers\/EventManager.swift",
+      "kind": "StringLiteral",
+      "offset": 400,
+      "length": 12,
+      "value": "\"image\/jpeg\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/model\/ExtraData.swift",
+      "kind": "StringLiteral",
+      "offset": 411,
+      "length": 14,
+      "value": "\"\/api\/assets\/\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/model\/ExtraData.swift",
+      "kind": "StringLiteral",
+      "offset": 485,
+      "length": 22,
+      "value": "\"\/api\/tracking\/events\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/model\/ExtraData.swift",
+      "kind": "StringLiteral",
+      "offset": 565,
+      "length": 54,
+      "value": "\"\/auth\/realms\/inphinite\/protocol\/openid-connect\/token\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/model\/ExtraData.swift",
+      "kind": "StringLiteral",
+      "offset": 729,
+      "length": 13,
+      "value": "\"backend.sdk\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/model\/Payload.swift",
+      "kind": "StringLiteral",
+      "offset": 475,
+      "length": 8,
+      "value": "\"MOBILE\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/model\/Payload.swift",
+      "kind": "StringLiteral",
+      "offset": 867,
+      "length": 12,
+      "value": "\"sdk.mobile\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/model\/TrackingEvent.swift",
+      "kind": "IntegerLiteral",
+      "offset": 275,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/model\/TrackingEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 302,
+      "length": 12,
+      "value": "\"sdk.mobile\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/service\/Api.swift",
+      "kind": "IntegerLiteral",
+      "offset": 178,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/service\/Api.swift",
+      "kind": "IntegerLiteral",
+      "offset": 214,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/service\/Api.swift",
+      "kind": "StringLiteral",
+      "offset": 244,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/service\/Api.swift",
+      "kind": "StringLiteral",
+      "offset": 272,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/service\/Api.swift",
+      "kind": "IntegerLiteral",
+      "offset": 303,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/service\/Api.swift",
+      "kind": "IntegerLiteral",
+      "offset": 331,
+      "length": 4,
+      "value": "5000"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/service\/endpoints\/GetTokenEndpoint.swift",
+      "kind": "StringLiteral",
+      "offset": 242,
+      "length": 53,
+      "value": "\"auth\/realms\/inphinite\/protocol\/openid-connect\/token\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/service\/endpoints\/GetTokenEndpoint.swift",
+      "kind": "Dictionary",
+      "offset": 387,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/service\/endpoints\/GetTokenEndpoint.swift",
+      "kind": "Dictionary",
+      "offset": 434,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/service\/endpoints\/GetTokenEndpoint.swift",
+      "kind": "BooleanLiteral",
+      "offset": 495,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/service\/endpoints\/GetTokenEndpoint.swift",
+      "kind": "StringLiteral",
+      "offset": 530,
+      "length": 20,
+      "value": "\"client_credentials\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/service\/endpoints\/GetTokenEndpoint.swift",
+      "kind": "StringLiteral",
+      "offset": 575,
+      "length": 8,
+      "value": "\"openid\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/service\/endpoints\/SendEventEndpoint.swift",
+      "kind": "StringLiteral",
+      "offset": 245,
+      "length": 21,
+      "value": "\"api\/tracking\/events\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/service\/endpoints\/SendEventEndpoint.swift",
+      "kind": "Dictionary",
+      "offset": 358,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/service\/endpoints\/SendEventEndpoint.swift",
+      "kind": "Dictionary",
+      "offset": 405,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/service\/endpoints\/SendEventEndpoint.swift",
+      "kind": "BooleanLiteral",
+      "offset": 466,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/service\/endpoints\/UploadAssetEndpoint.swift",
+      "kind": "StringLiteral",
+      "offset": 249,
+      "length": 13,
+      "value": "\"api\/assets\/\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/service\/endpoints\/UploadAssetEndpoint.swift",
+      "kind": "Dictionary",
+      "offset": 354,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/service\/endpoints\/UploadAssetEndpoint.swift",
+      "kind": "Dictionary",
+      "offset": 401,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/service\/endpoints\/UploadAssetEndpoint.swift",
+      "kind": "BooleanLiteral",
+      "offset": 462,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/service\/endpoints\/UploadAssetEndpoint.swift",
+      "kind": "StringLiteral",
+      "offset": 496,
+      "length": 20,
+      "value": "\"client_credentials\""
+    },
+    {
+      "filePath": "\/Users\/jenkins\/actions-runner\/_work\/SDK-Tracking_component-SPM\/SDK-Tracking_component-SPM\/Sources\/trackingComponent\/service\/endpoints\/UploadAssetEndpoint.swift",
+      "kind": "StringLiteral",
+      "offset": 541,
+      "length": 8,
+      "value": "\"openid\""
+    }
+  ]
+}

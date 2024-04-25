@@ -1,0 +1,26 @@
+"video_id_text_waiting_agent_title"="Video recording";
+"video_id_exit_alert_cancel"="Cancel";
+"video_id_exit_alert_ok"="Ok";
+"video_id_init_message_face_docu_content_desc"="Place your face and the front of your document within the frame";
+"video_id_init_message_face_content_desc"="Place your face within the frame and start recording";
+"video_id_finish_message"="Video recording finished!";
+"video_id_finish_button"="FINISH";
+"video_id_restart"="REPEAT RECORDING";
+"video_id_record_init_button"="START RECORDING";
+"video_id_ready_button"="CONTINUE";
+"video_id_generic_error"="There has been an error during the recording";
+"video_id_third_message"="Now please say out loud \"I (name and surname) accept the terms and conditions\".";
+"video_id_second_message"="Place your face and the back of your document within the frame";
+"video_id_first_message"="Place your face and the front of your document within the frame";
+"video_id_ok"="Ok";
+"video_id_cancel"="Cancel";
+"video_id_end_confirmation_title" = "Are you sure you will finish the process?";
+"video_id_text_results_finish_button" = "Finish";
+"video_id_agree" = "Accept";
+"video_id_network_error_title"="Check your internet connection";
+"video_id_network_error_description"="Check that your connection is stable and try again.";
+"video_id_timeout_error_title"="Time exceeded";
+"video_id_timeout_error_description"="Make sure that the internet connection is correct.";
+"video_id_unknown_error_title"="An error has occurred";
+"video_id_unknown_error_description"="Let's try again.";
+

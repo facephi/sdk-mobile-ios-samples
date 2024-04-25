@@ -1,0 +1,6 @@
+framework module FPhiWidgetCore {
+  umbrella header "FPhiWidgetCore.h"
+
+  export *
+  module * { export * }
+}

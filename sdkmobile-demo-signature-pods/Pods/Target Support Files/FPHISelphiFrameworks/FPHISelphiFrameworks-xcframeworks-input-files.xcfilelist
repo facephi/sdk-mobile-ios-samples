@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/FPHISelphiFrameworks/FPHISelphiFrameworks-xcframeworks.sh
+${PODS_ROOT}/FPHISelphiFrameworks/FPhiWidgetSelphi.xcframework
+${PODS_ROOT}/FPHISelphiFrameworks/FPhiWidgetCore.xcframework

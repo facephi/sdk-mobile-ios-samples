@@ -1,0 +1,206 @@
+[
+    {
+        "id": "FLOW_A",
+        "operation": {
+            "operationType": "ONBOARDING",
+            "steps": [
+                "SELPHID_COMPONENT",
+                "NFC_COMPONENT",
+                "SELPHID_COMPONENT",
+                "NFC_COMPONENT",
+                "SELPHI_COMPONENT",
+                "QR_CAPTURE_COMPONENT",
+                "PHACTURA_CAPTURE_COMPONENT",
+                "PHINGERS_COMPONENT",
+                "VOICE_COMPONENT"
+            ]
+        },
+        "steps": [
+            {
+                "index": 0,
+                "key": "SELPHID_COMPONENT",
+                "data": "{\"debug\":true,\"wizardMode\":false,\"showResultAfterCapture\":false,\"showTutorial\":false,\"tutorialOnly\":false,\"scanMode\":\"MODE_SEARCH\",\"specificData\":\"ES|<ALL>\",\"fullscreen\":true,\"tokenImageQuality\":null,\"locale\":null,\"documentType\":\"ID_CARD\",\"documentSide\":\"BACK\",\"timeout\":\"LONG\",\"generateRawImages\":false,\"translationsContent\":null,\"viewsContent\":null,\"documentModels\":null,\"resourcesPath\":\"fphi-selphid-widget-resources-SelphID-1.2\",\"cameraId\":null,\"videoFilename\":null,\"tokenPreviousCaptureData\":null,\"params\":null}"
+            },
+            {
+                "index": 1,
+                "key": "NFC_COMPONENT",
+                "data": "{\"extractionTimeout\": 50000,\"vibrationEnabled\": true,\"showTutorial\": false,\"showReadingScreen\": true}"
+            },
+            {
+                "index": 2,
+                "key": "SELPHID_COMPONENT",
+                "data": "{\"debug\":false,\"wizardMode\":false,\"showResultAfterCapture\":true,\"showTutorial\":true,\"tutorialOnly\":false,\"scanMode\":\"MODE_GENERIC\",\"specificData\":\"ES|<ALL>\",\"fullscreen\":true,\"tokenImageQuality\":null,\"locale\":null,\"documentType\":\"PASSPORT\",\"documentSide\":\"FRONT\",\"timeout\":\"LONG\",\"generateRawImages\":false,\"translationsContent\":null,\"viewsContent\":null,\"documentModels\":null,\"resourcesPath\":\"fphi-selphid-widget-resources-SelphID-1.2\",\"cameraId\":null,\"videoFilename\":null,\"tokenPreviousCaptureData\":null,\"params\":null}"
+            },
+            {
+                "index": 3,
+                "key": "NFC_COMPONENT",
+                "data": "{\"extractionTimeout\": 50000,\"vibrationEnabled\": true,\"showTutorial\": true,\"showReadingScreen\": true}"
+            },
+            {
+                "index": 4,
+                "key": "SELPHI_COMPONENT",
+                "data": "{\"debug\":false,\"fullscreen\":true,\"cropPercent\":null,\"livenessMode\":null,\"locale\":null,\"stabilizationMode\":true,\"templateRawOptimized\":null,\"qrMode\":false,\"resourcesPath\":\"fphi-selphi-widget-resources-selphi-live-1.2\",\"videoFilename\":null,\"cameraId\":null,\"showTutorial\":true,\"viewsContent\":null,\"translationsContent\":null,\"cameraFlashEnabled\":false,\"showResultAfterCapture\":false}"
+            },
+            {
+                "index": 5,
+                "key": "QR_CAPTURE_COMPONENT",
+                "data": "{\"extractionTimeout\": 50000,\"cameraSelected\": \"BACK\",\"vibrationEnabled\": true,\"showStroke\": false,\"transparentBackground\": true,\"qrMode\": \"QR_READER_SQUARE\"}"
+            },
+            {
+                "index": 6,
+                "key": "PHACTURA_CAPTURE_COMPONENT",
+                "data": "{\"extractionTimeout\": 50000,\"cameraSelected\": \"BACK\",\"vibrationEnabled\": true,\"showStroke\": false,\"transparentBackground\": true,\"qrMode\": \"QR_READER_SQUARE\"}"
+            },
+            {
+                "index": 7,
+                "key": "PHINGERS_COMPONENT",
+                "data": "{\"reticleOrientation\": \"LEFT\",\"useFlash\": true,\"returnProcessedImage\": true,\"returnRawImage\": true,\"useLiveness\": true,\"returnWSQ\": true,\"returnFullFrameImage\": true,\"extractionTimeout\": 50000,\"showTutorial\": true,\"threshold\": 0.8,\"showSpinner\": false,\"cropWidth\": null,\"cropHeight\": null,\"cropFactor\": null}"
+            },
+            {
+                "index": 8,
+                "key": "VOICE_COMPONENT",
+                "data": "{\"phrases\": [\"Tu nombre, tu dirección y tu DNI con letra\"],\"vibrationEnabled\": true,\"showTutorial\": true}"
+            }
+        ]
+    },
+    {
+        "id": "FLOW_B",
+        "operation": {
+            "operationType": "ONBOARDING",
+            "steps": [
+                "SELPHI_COMPONENT",
+                "SELPHID_COMPONENT"
+            ]
+        },
+        "steps": [
+            {
+                "index": 0,
+                "key": "SELPHI_COMPONENT",
+                "data": "{\"debug\":false,\"fullscreen\":false,\"cropPercent\":null,\"livenessMode\":null,\"locale\":null,\"stabilizationMode\":true,\"templateRawOptimized\":null,\"qrMode\":false,\"resourcesPath\":\"fphi-selphi-widget-resources-selphi-live-1.2\",\"videoFilename\":null,\"cameraId\":null,\"tutorialFlag\":false,\"viewsContent\":null,\"translationsContent\":null,\"cameraFlashEnabled\":false,\"showResultAfterCapture\":false}"
+            },
+            {
+                "index": 1,
+                "key": "SELPHID_COMPONENT",
+                "data": "{\"debug\":false,\"wizardMode\":true,\"showResultAfterCapture\":true,\"showTutorial\":false,\"tutorialOnly\":false,\"scanMode\":\"MODE_SEARCH\",\"specificData\":\"ES|<ALL>\",\"fullscreen\":true,\"tokenImageQuality\":null,\"locale\":null,\"documentType\":\"ID_CARD\",\"documentSide\":\"FRONT\",\"timeout\":\"LONG\",\"generateRawImages\":false,\"translationsContent\":null,\"viewsContent\":null,\"documentModels\":null,\"resourcesPath\":\"fphi-selphid-widget-resources-SelphID-1.2\",\"cameraId\":null,\"videoFilename\":null,\"tokenPreviousCaptureData\":null,\"params\":null}"
+            }
+        ]
+    },
+    {
+        "id": "FLOW_C",
+        "operation": {
+            "operationType": "ONBOARDING",
+            "steps": [
+                "SELPHID_COMPONENT",
+                "NFC_COMPONENT",
+                "SELPHI_COMPONENT"
+            ]
+        },
+        "steps": [
+            {
+                "index": 0,
+                "key": "SELPHID_COMPONENT",
+                "data": "{\"debug\":false,\"wizardMode\":true,\"showResultAfterCapture\":true,\"showTutorial\":false,\"tutorialOnly\":false,\"scanMode\":\"MODE_SEARCH\",\"specificData\":\"ES|<ALL>\",\"fullscreen\":true,\"tokenImageQuality\":null,\"locale\":null,\"documentType\":\"ID_CARD\",\"documentSide\":\"FRONT\",\"timeout\":\"LONG\",\"generateRawImages\":false,\"translationsContent\":null,\"viewsContent\":null,\"documentModels\":null,\"resourcesPath\":\"fphi-selphid-widget-resources-SelphID-1.2\",\"cameraId\":null,\"videoFilename\":null,\"tokenPreviousCaptureData\":null,\"params\":null}"
+            },
+            {
+                "index": 1,
+                "key": "NFC_COMPONENT",
+                "data": "{\"extractionTimeout\": 50000,\"vibrationEnabled\": true,\"showTutorial\": true,\"showReadingScreen\": true}"
+            },
+            {
+                "index": 2,
+                "key": "SELPHI_COMPONENT",
+                "data": "{\"debug\":false,\"fullscreen\":false,\"cropPercent\":null,\"livenessMode\":null,\"locale\":null,\"stabilizationMode\":true,\"templateRawOptimized\":null,\"qrMode\":false,\"resourcesPath\":\"fphi-selphi-widget-resources-selphi-live-1.2\",\"videoFilename\":null,\"cameraId\":null,\"tutorialFlag\":false,\"viewsContent\":null,\"translationsContent\":null,\"cameraFlashEnabled\":false,\"showResultAfterCapture\":false}"
+            }
+        ]
+    },
+    {
+        "id": "FLOW_D",
+        "operation": {
+            "operationType": "ONBOARDING",
+            "steps": [
+                "SELPHI_COMPONENT",
+                "SELPHID_COMPONENT",
+                "NFC_COMPONENT"
+            ]
+        },
+        "steps": [
+            
+            {
+                "index": 0,
+                "key": "SELPHI_COMPONENT",
+                "data": "{\"debug\":false,\"fullscreen\":false,\"cropPercent\":null,\"livenessMode\":null,\"locale\":null,\"stabilizationMode\":true,\"templateRawOptimized\":null,\"qrMode\":false,\"resourcesPath\":\"fphi-selphi-widget-resources-selphi-live-1.2\",\"videoFilename\":null,\"cameraId\":null,\"tutorialFlag\":false,\"viewsContent\":null,\"translationsContent\":null,\"cameraFlashEnabled\":false,\"showResultAfterCapture\":false}"
+            },
+            {
+                "index": 1,
+                "key": "SELPHID_COMPONENT",
+                "data": "{\"debug\":false,\"wizardMode\":true,\"showResultAfterCapture\":true,\"showTutorial\":false,\"tutorialOnly\":false,\"scanMode\":\"MODE_SEARCH\",\"specificData\":\"ES|<ALL>\",\"fullscreen\":true,\"tokenImageQuality\":null,\"locale\":null,\"documentType\":\"ID_CARD\",\"documentSide\":\"FRONT\",\"timeout\":\"LONG\",\"generateRawImages\":false,\"translationsContent\":null,\"viewsContent\":null,\"documentModels\":null,\"resourcesPath\":\"fphi-selphid-widget-resources-SelphID-1.2\",\"cameraId\":null,\"videoFilename\":null,\"tokenPreviousCaptureData\":null,\"params\":null}"
+            },
+            {
+                "index": 2,
+                "key": "NFC_COMPONENT",
+                "data": "{\"extractionTimeout\": 50000,\"vibrationEnabled\": true,\"showTutorial\": true,\"showReadingScreen\": true}"
+            }
+        ]
+    },
+    {
+        "id": "FLOW_E",
+        "operation": {
+            "operationType": "ONBOARDING",
+            "steps": [
+                "NFC_COMPONENT",
+                "SELPHID_COMPONENT",
+                "SELPHI_COMPONENT"
+            ]
+        },
+        "steps": [
+            {
+                "index": 0,
+                "key": "NFC_COMPONENT",
+                "data": "{\"extractionTimeout\": 50000,\"vibrationEnabled\": true,\"showTutorial\": true,\"showReadingScreen\": true}"
+            },
+            {
+                "index": 1,
+                "key": "SELPHID_COMPONENT",
+                "data": "{\"debug\":false,\"wizardMode\":true,\"showResultAfterCapture\":true,\"showTutorial\":false,\"tutorialOnly\":false,\"scanMode\":\"MODE_SEARCH\",\"specificData\":\"ES|<ALL>\",\"fullscreen\":true,\"tokenImageQuality\":null,\"locale\":null,\"documentType\":\"ID_CARD\",\"documentSide\":\"FRONT\",\"timeout\":\"LONG\",\"generateRawImages\":false,\"translationsContent\":null,\"viewsContent\":null,\"documentModels\":null,\"resourcesPath\":\"fphi-selphid-widget-resources-SelphID-1.2\",\"cameraId\":null,\"videoFilename\":null,\"tokenPreviousCaptureData\":null,\"params\":null}"
+            },
+            {
+                "index": 2,
+                "key": "SELPHI_COMPONENT",
+                "data": "{\"debug\":false,\"fullscreen\":false,\"cropPercent\":null,\"livenessMode\":null,\"locale\":null,\"stabilizationMode\":true,\"templateRawOptimized\":null,\"qrMode\":false,\"resourcesPath\":\"fphi-selphi-widget-resources-selphi-live-1.2\",\"videoFilename\":null,\"cameraId\":null,\"tutorialFlag\":false,\"viewsContent\":null,\"translationsContent\":null,\"cameraFlashEnabled\":false,\"showResultAfterCapture\":false}"
+            }
+        ]
+    }, {
+        "id": "FLOW_VIDEO",
+        "operation" : {
+          "operationType": "ONBOARDING",
+          "steps" : [
+            "VIDEO_ID_COMPONENT",
+            "VIDEO_CALL_COMPONENT",
+            "SELPHID_COMPONENT",
+            "SELPHI_COMPONENT"
+          ]
+        },
+        "steps": [
+          {
+            "index": 0,
+            "key": "VIDEO_ID_COMPONENT",
+            "data": "{\"sectionTime\": 5000,\"mode\": \"FACE_DOCUMENT_FRONT_BACK\",\"showCompletedTutorial\": false,\"url\": null,\"apiKey\": null,\"tenantId\": null}"
+          },
+          {
+            "index": 1,
+            "key": "VIDEO_CALL_COMPONENT",
+            "data": "{\"url\": null,\"apiKey\": null,\"tenantId\": null}"
+          },
+          {
+            "index": 2,
+            "key": "SELPHID_COMPONENT",
+            "data": "{\"debug\":false,\"wizardMode\":true,\"showResultAfterCapture\":true,\"showTutorial\":false,\"tutorialOnly\":false,\"scanMode\":\"MODE_SEARCH\",\"specificData\":\"ES|<ALL>\",\"fullscreen\":true,\"tokenImageQuality\":null,\"locale\":null,\"documentType\":\"ID_CARD\",\"documentSide\":\"FRONT\",\"timeout\":\"LONG\",\"generateRawImages\":false,\"translationsContent\":null,\"viewsContent\":null,\"documentModels\":null,\"resourcesPath\":\"resources-selphid-2-0.zip\",\"cameraId\":null,\"videoFilename\":null,\"tokenPreviousCaptureData\":null,\"params\":null}"
+          },
+          {
+            "index": 3,
+            "key": "SELPHI_COMPONENT",
+            "data": "{\"debug\":false,\"fullscreen\":false,\"cropPercent\":null,\"livenessMode\":null,\"locale\":null,\"stabilizationMode\":null,\"templateRawOptimized\":null,\"qrMode\":false,\"resourcesPath\":\"resources-selphi-2-0.zip\",\"videoFilename\":null,\"cameraId\":null,\"tutorialFlag\":false,\"viewsContent\":null,\"translationsContent\":null,\"cameraFlashEnabled\":false,\"showResultAfterCapture\":false}"
+          }
+        ]
+      }
+]

@@ -1,0 +1,17 @@
+"network_error_description"="Comprueba que tu conexión es estable e inténtalo de nuevo.";
+"network_error_title"="Revisa tu conexión a internet";
+"status_retry"="REINTENTAR";
+"status_finish"="FINALIZAR";
+"timeout_error_description"="";
+"timeout_error_title"="Tiempo superado";
+"unknown_error_description"="";
+"unknown_error_title"="Se ha producido un error";
+"status_close"="Volver";
+"generic_permission_title"="Permiso denegado";
+"generic_permission_description"="Para continuar debe comprobar los permisos.";
+"microphone_permission_title"="Activa el micrófono";
+"microphone_permission_description"="El permiso de voz es necesario para realizar la grabación.";
+"camera_permission_title"="Permite el acceso a cámara";
+"camera_permission_description"="Para capturar las imágenes necesitamos que actives este permiso.";
+"status_settings"="Ir a permisos";
+"tutorial_message_skip"="Omitir";

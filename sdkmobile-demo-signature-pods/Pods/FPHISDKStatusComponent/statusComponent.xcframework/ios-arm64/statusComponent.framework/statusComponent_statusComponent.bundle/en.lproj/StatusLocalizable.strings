@@ -1,0 +1,17 @@
+"network_error_description"="Check that your connection is stable and try again.";
+"network_error_title"="Check your internet connection.";
+"status_retry"="RETRY";
+"status_finish"="FINISH";
+"timeout_error_description"="";
+"timeout_error_title"="Time exceeded";
+"unknown_error_description"="";
+"unknown_error_title"="An error has occurred";
+"status_close"="Return";
+"generic_permission_title"="Permission refused";
+"generic_permission_description"="In order to continue you need to check the permissions.";
+"microphone_permission_title"="Activate your microphone";
+"microphone_permission_description"="Voice permission is required to make the recording.";
+"camera_permission_title"="Allows access to the camera";
+"camera_permission_description"="To capture the images we need you to activate this permission.";
+"status_settings"="Go to permissions";
+"tutorial_message_skip"="Skip";

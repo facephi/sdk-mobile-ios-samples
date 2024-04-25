@@ -1,0 +1,6 @@
+framework module FPBExtractoriOS {
+  umbrella header "FPBExtractoriOS.h"
+  export *
+
+  module * { export * }
+}

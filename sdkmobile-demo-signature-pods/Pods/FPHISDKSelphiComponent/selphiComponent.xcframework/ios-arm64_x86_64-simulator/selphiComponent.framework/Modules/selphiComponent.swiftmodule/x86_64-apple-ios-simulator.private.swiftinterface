@@ -1,0 +1,134 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name selphiComponent
+import FPhiWidgetSelphi
+import Foundation
+import Foundation/*.Bundle*/
+import Foundation/*.ProcessInfo*/
+import Foundation/*.URL*/
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import core
+import licenseCheckerComponent
+extension Foundation.Bundle {
+  public static var selphiBundle: Foundation.Bundle
+}
+public enum SelphiFaceLivenessMode : Swift.String, Swift.Codable {
+  case PASSIVE
+  case NONE
+  case MOVE
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct SelphiConfigurationData : Swift.Codable {
+  public var resourcesPath: Swift.String?
+  public var showTutorial: Swift.Bool?
+  public var showDiagnostic: Swift.Bool?
+  public var showResultAfterCapture: Swift.Bool?
+  public var debug: Swift.Bool?
+  public var fullscreen: Swift.Bool?
+  public var cropPercent: Swift.Float?
+  public var locale: Swift.String?
+  public var livenessMode: selphiComponent.SelphiFaceLivenessMode?
+  public var stabilizationMode: Swift.Bool?
+  public var templateRawOptimized: Swift.Bool?
+  public var qrMode: Swift.Bool?
+  public var videoFilename: Swift.String?
+  public var cameraId: Swift.String?
+  public var cameraFlashEnabled: Swift.Bool?
+  public var logImages: Swift.Bool?
+  public var translationsContent: Swift.String?
+  public var viewsContent: Swift.String?
+  public var params: [Swift.String : Swift.String]?
+  public var cropRatio: Swift.Float?
+  public var vibrationEnabled: Swift.Bool?
+  public init()
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public enum SelphiError : Swift.String {
+  case EXTRACTION_FINISHED_WITH_NO_RESULTS
+  case COULD_NOT_CREATE_WIDGET_INSTANCE
+  case RESOURCES_FILE_NOT_FOUND
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct SelphiResult {
+  public var template: Foundation.Data?
+  public var templateRaw: Foundation.Data?
+  public var qrData: Swift.String
+  public var bestImageData: Foundation.Data?
+  public var bestImageCroppedData: Foundation.Data?
+  public var logImages: [UIKit.UIImage]?
+  public init()
+  public init(template: Foundation.Data, templateRaw: Foundation.Data, qrData: Swift.String, bestImageData: Foundation.Data? = nil, bestImageCroppedData: Foundation.Data? = nil, logImages: [UIKit.UIImage]? = nil)
+}
+public class RawTemplateController : core.IMethodableController {
+  public var license: Swift.String
+  public var statusController: core.IStatusController?
+  public var tokenizeController: core.ITokenizeController?
+  public init(base64: Swift.String, output: @escaping (core.SdkResult<Foundation.Data>) -> ())
+  public init(data: Foundation.Data, output: @escaping (core.SdkResult<Foundation.Data>) -> ())
+  public func start(operationController: core.IOperationableController)
+  @objc deinit
+}
+@objc public class SelphiController : ObjectiveC.NSObject {
+  public var license: Swift.String
+  public var trackingController: core.ITrackingController?
+  public var behaviorController: core.IBehaviorController?
+  public var statusController: core.IStatusController?
+  public var flowController: core.IFlowController?
+  public var tokenizeController: core.ITokenizeController?
+  public var trackingStep: Swift.String {
+    get
+  }
+  public var flowStep: Swift.String {
+    get
+  }
+  public init(data: selphiComponent.SelphiConfigurationData?, output: @escaping (core.SdkResult<selphiComponent.SelphiResult>) -> (), viewController: UIKit.UIViewController)
+  @objc deinit
+}
+extension selphiComponent.SelphiController : core.ITrackMethodableController {
+  public func start(operationController: core.IOperationableController)
+}
+extension selphiComponent.SelphiController : core.IFlowableController {
+  public var dataString: Swift.String? {
+    get
+    set(newValue)
+  }
+  public var customizationString: Swift.String? {
+    get
+    set(newValue)
+  }
+}
+extension selphiComponent.SelphiController : FPhiWidgetCore.FPhiWidgetProtocol {
+  @objc dynamic public func extractionCancelled()
+  @objc dynamic public func extractionFinished()
+  @objc dynamic public func extractionTimeout()
+  @objc dynamic public func extractionFailed(_ error: Swift.Error!)
+  @objc dynamic public func onEvent(_ time: Foundation.Date!, type: Swift.String!, info: Swift.String!)
+}
+@objc @_inheritsConvenienceInitializers public class SignatureSelphiController : selphiComponent.SelphiController {
+  override public var trackingStep: Swift.String {
+    get
+  }
+  override public var flowStep: Swift.String {
+    get
+  }
+  override public init(data: selphiComponent.SelphiConfigurationData?, output: @escaping (core.SdkResult<selphiComponent.SelphiResult>) -> (), viewController: UIKit.UIViewController)
+  @objc deinit
+}
+extension selphiComponent.SelphiFaceLivenessMode : Swift.Equatable {}
+extension selphiComponent.SelphiFaceLivenessMode : Swift.Hashable {}
+extension selphiComponent.SelphiFaceLivenessMode : Swift.RawRepresentable {}
+extension selphiComponent.SelphiError : Swift.Equatable {}
+extension selphiComponent.SelphiError : Swift.Hashable {}
+extension selphiComponent.SelphiError : Swift.RawRepresentable {}

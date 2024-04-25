@@ -1,0 +1,21 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name tokenizeComponent
+import FPBTokenizer
+import Foundation
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import core
+import licenseCheckerComponent
+public class TokenizeController {
+  public var license: Swift.String
+  public init()
+  @objc deinit
+}
+extension tokenizeComponent.TokenizeController : core.ITokenizeController {
+  public func tokenizeStringMapData(data: Swift.String, key: Swift.String) -> core.SdkResult<Swift.String>
+  public func tokenizeByteArray(byteArray: Foundation.Data, key: Swift.String) -> core.SdkResult<Swift.String>
+  public func tokenizeOCRResults(ocr: Swift.Dictionary<Swift.String, Swift.String>) -> core.SdkResult<Swift.String>
+}
