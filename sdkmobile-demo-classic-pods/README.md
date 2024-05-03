@@ -1,62 +1,199 @@
-# SDK-Mobile Cocoapods Demo Full Version
+# DEMO CLASSIC SELPHI/SELPHID
 
-Aplicación demo para testear internamente todos los componentes de la SDK Mobile implementados hasta la fecha (Full Version), descargando los componentes desde nuestro repositorios privados (Artifactory). 
 
-## Status:
+## 1. Introducción
 
- - FPHISDKCoreComponent (1.0.22) (Pod privado) - Version iOS (10)
- - FPHISDKMainComponent (1.0.15) (Pod privado) - Version iOS (10)
- - FPHISDKTrackingComponent (1.0.15) (Pod privado) - Version iOS (10)
- - FPHISelphIDComponent (1.15.1) (Pod público) - Version iOS (10)
- - FPHISDKSelphiComponent (1.0.7) (Pod privado) - Version iOS (13) 
- - FPHISDKNFCComponent - NOT WORKING (OpenSSL issue) - Version iOS (13)
- - FPHISDKQRComponent (1.0.0) (Pod privado) - Version iOS (10)
- - FPHISDKVideoIDComponent (1.0.11) (Pod privado) - Version iOS (10)
- - FPHISDKVideoCallComponent (1.0.5) (Pod privado) - Version iOS (10)
- - FPHISDKLicensingComponent (1.0.9) (Pod privado) - Version iOS (10)
- - FPHIPhingersComponent (1.0.1) (Pod público) - Version iOS (10)
+En esta demo se puede realizar un proceso Onboarding utilizando el SDK de Facephi.
+Los componentes utilizados son:
 
-## Instalación:
+  - FPHISDKLicenseCheckerComponent
+  - FPHISDKCoreComponent
+  - FPHISDKLicensingComponent 
+  - FPHISDKMainComponent
+  - FPHISDKTrackingComponent
+  - FPHISDKSelphIDComponent 
+  - FPHISDKSelphiComponent
+  - FPHISDKTokenizeComponent
 
-- Si es la **primera vez** que se va a utilizar el repositorio privado instalar Cocoapods para Artifactory:
+## 2. Detalle de la aplicación demo
 
-`sudo gem install cocoapods-art`
+### 2.1 Dependencias
 
-- Para acceder a los repos privados, se necesitará añadir el repositorio y las credenciales del usuario en la lista del fichero **netrc**:
- 
-`nano ~/.netrc`
+#### Cocoapod
 
-Y una vez abiertos se copian los siguientes datos:
- 
-`machine facephicorp.jfrog.io`
-`login <USERNAME>`
-`password <TOKEN>`
+- Si es la **primera vez** que se va a utilizar el repositorio privado instalar Cocoapods para Artifactory: 
 
-- Y finalmente se deberá añadir el repositorio donde se encuentran todos los paquetes:
+```
+sudo gem install cocoapods-art
+```
+Con un Mac M1 es posible que surjan errores en el futuro, de ser así, se recomienda usar en cambio el siguiente comando:
+```
+sudo arch -arm64 gem install ffi; sudo arch -arm64 gem install cocoapods-art
+```
+En caso de tener problemas con la instalación, desinstalar completamente cocoapods y todas sus dependencias para hacer una instalación limpia. El equipo de Facephi cuenta con un script que automatiza este proceso.
 
-`pod repo-art add cocoa-dev-fphi "https://facephicorp.jfrog.io/artifactory/api/pods/cocoa-dev-fphi"`
+Necesitaremos añadir el repositorio a la lista del fichero netrc.
 
-- Tras esto, ya se podrían instalar e integrar los paquetes en la app, ejecutando el Podfile y el siguiente comando:
+```
+$ nano ~/.netrc
+```
+
+Y en este copiamos lo siguiente con los datos correspondientes al final del fichero:
+
+```
+machine facephicorp.jfrog.io
+login <USERNAME>
+password <TOKEN>
+```
+Ahora añadiremos dos repos, los que contienen dependencias privadas y el que conecta con el exterior. Estos comandos se ponen en la consola:
+
+```
+pod repo-art add cocoa-pro-fphi "https://facephicorp.jfrog.io/artifactory/api/pods/cocoa-pro-fphi"
+```
+
+Tras esto, ya se podrían instalar e integrar los paquetes en la app, ejecutando el Podfile y el siguiente comando:
 
 `pod install`
 
-## Actualización de paquetes:
-
 En caso de liberarse una versión nueva de alguno de los componentes de la SDK Mobile, se deberá actualizar el repositorio añadido previamente, para que se actualicen los cambios que se han realizado. Para ello, se deberá ejecutar el siguiente comando:
 
-`pod repo-art update cocoa-dev-fphi`
+`pod repo-art update cocoa-pro-fphi`
 
 
-## Posibles problemas
+##### Cómo importar el pod
+
+Necesitaremos añadir unas lineas a nuestro Podfile para que pueda identificar el pod privado que queremos obtener
+
+```
+plugin 'cocoapods-art', :sources => [
+  'cocoa-pro-fphi’
+]
+Si fuésemos a importar selphi y selphid, el Podfile se quedaría tal que así:
+
+source 'https://cdn.cocoapods.org/'
+source '...'
+
+target 'Example' do
+  pod 'IQKeyboardManagerSwift'
+  pod 'SwiftLint'
+  pod 'FPHISDKLicenseCheckerComponent', '~> 1.4.0'
+  pod 'FPHISDKCoreComponent', '~> 1.4.0'
+  pod 'FPHISDKLicensingComponent', '~> 1.4.0'
+  pod 'FPHISDKMainComponent', '~> 1.4.0'
+  pod 'FPHISDKTrackingComponent', '~> 1.4.0'
+  pod 'FPHISDKSelphIDComponent', '~> 1.4.0'
+  pod 'FPHISDKSelphiComponent', '~> 1.4.0'
+  pod 'FPHISDKTokenizeComponent', '~> 1.4.0'
+...
+end
+```
+
+Cuando se quiera actualizar dependencias, antes del $ pod install hay que hacer el siguiente comando:
+
+```
+pod repo-art update cocoa-pro-fphi
+```
 
 
-- Si cocoapods fue instalado mediante homebrew, puede dar problemas.
+### 2.2 Uso del SDK
 
-- A veces hacer el update no hace que el Pod install apunte a la última versión.
+#### 2.2.1 Inicialización del SDK
 
-- Para hacer un CI la máquina tiene que tener instalado cocoapods art (Instalarlo en Jenkins o en un Runner de GitHub). (Solucionado) 
+La inicialización del SDK se hará con una única función [initSdk]. Existen 2 maneras de usarla en función de cómo se vaya a obtener la licencia. 
 
-- Interactuar con cocoa-remote toma demasiado tiempo. (Solucionado)
+A la función se le pasarán los siguientes datos:
 
-- No se sabe qué pasará si hay dos pods con el mismo nombre, uno en el apartado privado y otro en público. (Buscará la última versión, por lo que tendremos que crear un pod público con una versión mínima para que no roben el nombre y den problemas en el futuro)
+- Application
+
+- La licencia en String o los datos para obtenerla a través del servicio se tienen que incluir la URL y el API KEY del mismo (EnvironmentLicensingData).
+
+- El controlador de TrackingController si se quiere conectar con la plataforma
+
+#### 2.2.2 Creación de una operación
+
+```
+    public func newOperation(operationType: sdk.OperationType, customerId: String, output: @escaping (SdkResult<String>) -> ()) {
+        log("newOperation - start, device, coordinates, customerId - \(customerId)")
+        
+        SDKController.shared.newOperation(operationType: operationType, customerId: customerId, output: output)
+    }
+```
+
+#### 2.2.3 Lanzamiento de controladores
+
+Una vez creada la operación se podrán lanzar los controladores del SDK. 
+
+Formas de lanzamiento:
+```
+    SDKController.shared.launch(controller: controller)
+```
+    Es un lanzamiento que incluye el trackeo a la plataforma
+    
+```
+    SDKController.shared.launchMethod(controller: controller)
+```
+    Es un lanzamiento que NO incluye el trackeo a la plataforma
+
+#### 2.2.4 Captura Facial
+
+```java
+    public func launchSelphi(setTracking: Bool, viewController: UIViewController, selphiConfigurationData: SelphiConfigurationData, output: @escaping (SdkResult<SelphiResult>) -> Void) {
+        log("LAUNCH SELPHI")
+
+        let controller = SelphiController(data: selphiConfigurationData, output: output, viewController: viewController)
+        if setTracking {
+            SDKController.shared.launch(controller: controller)
+        } else {
+            SDKController.shared.launchMethod(controller: controller)
+        }
+    }
+```
+
+#### 2.2.5 Captura de Documentos
+```java
+    public func launchSelphId(setTracking: Bool, viewController: UIViewController, selphIDConfigurationData: SelphIDConfigurationData, output: @escaping (SdkResult<SelphIDResult>) -> Void) {
+        log("LAUNCH SELPHID")
+        
+        let controller = SelphIDController(data: selphIDConfigurationData, output: output, viewController: viewController)
+        if setTracking {
+            SDKController.shared.launch(controller: controller)
+        } else {
+            SDKController.shared.launchMethod(controller: controller)
+        }
+    }
+```
+
+#### 2.2.5 Cierre de sesión
+
+Debe lanzarse al destruir la App
+
+```
+        SDKController.shared.closeSession()     
+```
+#### 2.2.6 Datos necesarios para el uso del SDK
+
+Para que la aplicación funcione correctamente se deberán rellenar los siguientes datos.
+
+En la clase SdkConfigurationManager:
+
+- Datos necesarios si se va a utilizar un servicio para obtener las licencias:
+
+```
+    static let APIKEY_LICENSING = "...."
+    static let LICENSING_URL = URL(string: "https://...")!
+```
+
+- String de la licencia si no se va a utilizar un servicio:
+```
+    static let license = """
+    {
+    ...
+    }
+    """
+```
+
+- Identificador del cliente y tipo de operación que se va a utilizar en la inicialización:
+```
+static let CUSTOMER_ID = "sdk-classic-ios@ejemplo"
+```
 

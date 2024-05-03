@@ -11,7 +11,7 @@ struct SdkConfigurationManager {
     static let base64 = " "
     static let CUSTOMER_ID = "sdk-classic-ios@ejemplo"
     static let APIKEY_LICENSING = ""
-    static let LICENSING_URL = URL(string: "https://licensing.facephi.dev")!
+    static let LICENSING_URL = URL(string: "https://...")!
     static let CUSTOM_TENANT_ID = ""
 
     // swiftlint:disable all

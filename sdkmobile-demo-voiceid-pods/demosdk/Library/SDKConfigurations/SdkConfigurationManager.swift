@@ -11,7 +11,7 @@ struct SdkConfigurationManager {
     static let base64 = " "
     static let CUSTOMER_ID = "sdk-voiceid-ios@ejemplo"
     static let APIKEY_LICENSING = ""
-    static let LICENSING_URL = URL(string: "https://license.identity-platform.dev")!
+    static let LICENSING_URL = URL(string: "https://...")!
     static let CUSTOM_TENANT_ID = ""
     static let audiosDirectory = getDocumentsDirectory().appendingPathComponent("audios")
 

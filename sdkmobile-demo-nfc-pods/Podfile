@@ -20,16 +20,6 @@ target 'demosdk' do
   pod 'FPHISDKMainComponent', '~> 1.4.0'
   pod 'FPHISDKTrackingComponent', '~> 1.4.0'
   pod 'FPHISDKNFCComponent', '~> 2.5.0'
-  
-##### Use with local Sources
-#  pod 'FPHISDKLicenseCheckerComponent', :path => "../../SDK-LicenseChecker-SPM/FPHISDKLicenseCheckerComponent-Test.podspec"
-#  pod 'FPHISDKCoreComponent', :path => "../../SDK-Core-SPM/FPHISDKCoreComponent-Test.podspec"
-#  pod 'FPHISDKLicensingComponent', :path => "../../SDK-Licensing-SPM/FPHISDKLicensingComponent-Test.podspec"
-#  pod 'FPHISDKMainComponent',:path => "../../SDK-Sdk-SPM/FPHISDKMainComponent-Test.podspec"
-#  pod 'FPHISDKTrackingComponent', :path => "../../SDK-Tracking_component-SPM/FPHISDKTrackingComponent-Test.podspec"
-#  pod 'FPHISDKTokenizeComponent', :path => "../../SDK-Tokenize-SPM/FPHISDKTokenizeComponent-Test.podspec"
-#  pod 'FPHISDKPhingersComponent', :path => "../../SDK-PhingersComponent/FPHISDKPhingersComponent-Test.podspec"
-#  pod 'FPHISDKStatusComponent',:path => "../../SDK-StatusComponent-SPM/FPHISDKStatusComponent-Test.podspec"
 
   target 'demosdkTests' do
     inherit! :search_paths

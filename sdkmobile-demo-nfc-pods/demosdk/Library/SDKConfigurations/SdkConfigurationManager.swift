@@ -11,7 +11,7 @@ struct SdkConfigurationManager {
     static let base64 = " "
     static let CUSTOMER_ID = "sdk-nfc-ios@ejemplo"
     static let APIKEY_LICENSING: String = ""
-    static let LICENSING_URL = URL(string: "https://license.identity-platform.dev")!
+    static let LICENSING_URL = URL(string: "https://...")!
     static let LICENSE = ""
     static let CUSTOM_TENANT_ID = ""
 }
