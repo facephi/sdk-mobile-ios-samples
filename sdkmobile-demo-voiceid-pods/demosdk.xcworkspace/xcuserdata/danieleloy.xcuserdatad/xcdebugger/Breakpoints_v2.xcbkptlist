@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "AE022076-B7BF-4A0E-8552-657FF83D4D55"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EF36CA53-756C-4D12-B8F2-9391775AFC19"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../SDK-StatusComponent-SPM/Sources/statusComponent/UI/Views/DiagnosticView/DiagnosticView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "configure(imgStatus:titleStatus:descriptionStatus:closeAction:primaryAction:secondaryAction:primaryText:secondaryText:retryButtonShouldRetry:secondaryActionExists:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FEC6F4EC-92C9-4BC5-B98A-580C17335DE2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../SDK-StatusComponent-SPM/Sources/statusComponent/UI/Views/DiagnosticView/DiagnosticView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "secondaryTouchUpInside(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A64F8014-3016-47DE-A483-9675320E0F17"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../SDK-Voice-SPM/Sources/voiceIDComponent/Data/VoiceEnrollmentResult.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "VoiceResultCode"
+            landmarkType = "13">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "09BBF862-C6F7-49E6-91EB-C9027C7C4042"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../SDK-Voice-SPM/Sources/voiceIDComponent/ValidationServices/VoiceEnrollmentController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "launchVoiceEnrollment()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AC6524CA-C0E1-44C7-B2AB-1D4505D04659"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../SDK-Voice-SPM/Sources/voiceIDComponent/ValidationServices/VoiceEnrollmentController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "launchVoiceEnrollment()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AC6524CA-C0E1-44C7-B2AB-1D4505D04659 - 7a5de1a078c40ef6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "voiceIDComponent.VoiceEnrollmentController.launchVoiceEnrollment() -&gt; ()"
+                  moduleName = "voiceIDComponent"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danieleloy/GitHub/ios-sdk/SDK-Voice-SPM/Sources/voiceIDComponent/ValidationServices/VoiceEnrollmentController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41">
+               </Location>
+               <Location
+                  uuid = "AC6524CA-C0E1-44C7-B2AB-1D4505D04659 - 77a52fc8d74e5549"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in voiceIDComponent.VoiceEnrollmentController.launchVoiceEnrollment() -&gt; ()"
+                  moduleName = "voiceIDComponent"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danieleloy/GitHub/ios-sdk/SDK-Voice-SPM/Sources/voiceIDComponent/ValidationServices/VoiceEnrollmentController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "31080DC2-4F53-4A6D-B9DF-345A25E93431"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../SDK-Voice-SPM/Sources/voiceIDComponent/ValidationServices/VoiceEnrollmentController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "launchVoiceEnrollment()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AF8DFF35-4B05-4F6B-A436-8296D2BF9128"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "demosdk/Library/SDKManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "launchVoiceEnrollment(audios:baseVoiceUrl:methodAuth:output:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E1AA27B6-099E-4ED0-BE75-33986C35DDBD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../SDK-Voice-SPM/Sources/voiceIDComponent/VoiceController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "init(data:output:viewController:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E1AA27B6-099E-4ED0-BE75-33986C35DDBD - e53de30f0e8b3a5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "voiceIDComponent.VoiceController.init(data: Swift.Optional&lt;voiceIDComponent.VoiceConfigurationData&gt;, output: (core.SdkResult&lt;voiceIDComponent.VoiceResult&gt;) -&gt; (), viewController: __C.UIViewController) -&gt; voiceIDComponent.VoiceController"
+                  moduleName = "voiceIDComponent"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danieleloy/GitHub/ios-sdk/SDK-Voice-SPM/Sources/voiceIDComponent/VoiceController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34">
+               </Location>
+               <Location
+                  uuid = "E1AA27B6-099E-4ED0-BE75-33986C35DDBD - e24bd3e61f8d7280"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (core.SdkResult&lt;voiceIDComponent.VoiceResult&gt;) -&gt; () in voiceIDComponent.VoiceController.init(data: Swift.Optional&lt;voiceIDComponent.VoiceConfigurationData&gt;, output: (core.SdkResult&lt;voiceIDComponent.VoiceResult&gt;) -&gt; (), viewController: __C.UIViewController) -&gt; voiceIDComponent.VoiceController"
+                  moduleName = "voiceIDComponent"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danieleloy/GitHub/ios-sdk/SDK-Voice-SPM/Sources/voiceIDComponent/VoiceController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3AAA2A79-D641-46C4-B65C-63BDE1D1B1B5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../SDK-Voice-SPM/Sources/voiceIDComponent/Recording/RecordingViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "finishVoiceID(audios:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "903E2B51-9C07-4245-B634-FAADD26976D8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../SDK-Voice-SPM/Sources/voiceIDComponent/VoiceController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "successResponse(response:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "24F5DECB-6D06-4C28-A043-8C56939CD0F7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../SDK-Voice-SPM/Sources/voiceIDComponent/VoiceController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "failedResponse(error:viewController:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FA8AC5A9-C657-4814-B76A-9206F7DBF489"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../SDK-Voice-SPM/Sources/voiceIDComponent/VoiceController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "responseResult(error:viewController:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8FD5FA6D-BD3B-4C9E-95E9-13E568B875AC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../SDK-StatusComponent-SPM/Sources/statusComponent/StatusController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "launchDiagnostic(img:title:description:viewController:closeAction:primaryAction:secundaryAction:primaryText:secundaryText:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8FD5FA6D-BD3B-4C9E-95E9-13E568B875AC - 40f13dc0a84733f0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "statusComponent.StatusController.launchDiagnostic(img: __C.UIImage, title: Swift.String, description: Swift.String, viewController: __C.UIViewController, closeAction: Swift.Optional&lt;() -&gt; ()&gt;, primaryAction: Swift.Optional&lt;() -&gt; ()&gt;, secundaryAction: Swift.Optional&lt;() -&gt; ()&gt;, primaryText: Swift.Optional&lt;Swift.String&gt;, secundaryText: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "statusComponent"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danieleloy/GitHub/ios-sdk/SDK-StatusComponent-SPM/Sources/statusComponent/StatusController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52">
+               </Location>
+               <Location
+                  uuid = "8FD5FA6D-BD3B-4C9E-95E9-13E568B875AC - 9344a96545236c5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in statusComponent.StatusController.launchDiagnostic(img: __C.UIImage, title: Swift.String, description: Swift.String, viewController: __C.UIViewController, closeAction: Swift.Optional&lt;() -&gt; ()&gt;, primaryAction: Swift.Optional&lt;() -&gt; ()&gt;, secundaryAction: Swift.Optional&lt;() -&gt; ()&gt;, primaryText: Swift.Optional&lt;Swift.String&gt;, secundaryText: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "statusComponent"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danieleloy/GitHub/ios-sdk/SDK-StatusComponent-SPM/Sources/statusComponent/StatusController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3D48478A-4661-4157-B33A-50D3DF64AF1E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../SDK-StatusComponent-SPM/Sources/statusComponent/StatusController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "launchDiagnostic(img:title:description:viewController:closeAction:retryAction:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3D48478A-4661-4157-B33A-50D3DF64AF1E - 9ea7078f4816baa4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "statusComponent.StatusController.launchDiagnostic(img: __C.UIImage, title: Swift.String, description: Swift.String, viewController: __C.UIViewController, closeAction: Swift.Optional&lt;() -&gt; ()&gt;, retryAction: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "statusComponent"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danieleloy/GitHub/ios-sdk/SDK-StatusComponent-SPM/Sources/statusComponent/StatusController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87">
+               </Location>
+               <Location
+                  uuid = "3D48478A-4661-4157-B33A-50D3DF64AF1E - 95f23ba85fc69413"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in statusComponent.StatusController.launchDiagnostic(img: __C.UIImage, title: Swift.String, description: Swift.String, viewController: __C.UIViewController, closeAction: Swift.Optional&lt;() -&gt; ()&gt;, retryAction: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "statusComponent"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danieleloy/GitHub/ios-sdk/SDK-StatusComponent-SPM/Sources/statusComponent/StatusController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BE7500D5-34D8-45A4-AD59-4B6FA046A507"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../SDK-StatusComponent-SPM/Sources/statusComponent/UI/Views/DiagnosticView/DiagnosticView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "configure(imgStatus:titleStatus:descriptionStatus:closeAction:primaryAction:secondaryAction:primaryText:secondaryText:retryButtonShouldRetry:secondaryActionExists:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C2A8C940-5693-46A4-A263-CB1C5E618A4E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../SDK-StatusComponent-SPM/Sources/statusComponent/UI/Views/DiagnosticView/DiagnosticView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "configure(imgStatus:titleStatus:descriptionStatus:closeAction:primaryAction:secondaryAction:primaryText:secondaryText:retryButtonShouldRetry:secondaryActionExists:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2D0CBD50-E9A0-4CE7-B6B4-EAF382CED04F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../SDK-StatusComponent-SPM/Sources/statusComponent/UI/Views/DiagnosticView/DiagnosticView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "primaryTouchUpInside(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9FA64EDD-6B9D-421D-9B4C-9E577178BD5D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "demosdk/Scenes/Main/MainVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "manageEnrollment(tokenizedAudios:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9FA64EDD-6B9D-421D-9B4C-9E577178BD5D - 5156c4b158f65aab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "demosdk.MainVM.manageEnrollment(tokenizedAudios: Swift.Array&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "demosdk"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danieleloy/GitHub/ios-sdk/sdk-mobile-ios-samples/sdkmobile-demo-voiceid-pods/demosdk/Scenes/Main/MainVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154">
+               </Location>
+               <Location
+                  uuid = "9FA64EDD-6B9D-421D-9B4C-9E577178BD5D - d01d17967e2459a1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (core.SdkResult&lt;voiceIDComponent.VoiceEnrollmentResult&gt;) -&gt; () in demosdk.MainVM.manageEnrollment(tokenizedAudios: Swift.Array&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "demosdk"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danieleloy/GitHub/ios-sdk/sdk-mobile-ios-samples/sdkmobile-demo-voiceid-pods/demosdk/Scenes/Main/MainVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "155"
+                  endingLineNumber = "155">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
