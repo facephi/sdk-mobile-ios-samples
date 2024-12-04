@@ -1,0 +1,47 @@
+# Uncomment the next line to define a global platform for your project
+plugin 'cocoapods-art', :sources => [
+  'cocoa-pro-fphi'
+]
+
+source 'https://cdn.cocoapods.org/'
+
+target 'demosdk' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # TODO: Check why do we need this
+  pod 'IQKeyboardManagerSwift', '~> 7.0.1'
+  pod 'SwiftLint'
+  
+##### Remote Dependencies
+  pod 'FPHISDKTrackingComponent', '~> 2.1.0'
+  pod 'FPHISDKSelphiComponent', '~> 2.1.0'
+  pod 'FPHISDKVideoIDComponent', '~> 2.1.0'
+  pod 'FPHISDKTokenizeComponent', '~> 2.1.0'
+  pod 'FPHISDKStatusComponent', '~> 2.1.0'
+  pod 'FPHISDKMainComponent', '~> 2.1.0'
+  pod 'FPHISDKStatusComponent', '~> 2.1.0'
+  
+
+  target 'demosdkTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'demosdkUITests' do
+    # Pods for testing
+  end
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      if target.name == 'zipzap'
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.0'
+      end
+      config.build_settings['EXPANDED_CODE_SIGN_IDENTITY'] = ""
+      config.build_settings['CODE_SIGNING_REQUIRED'] = "NO"
+      config.build_settings['CODE_SIGNING_ALLOWED'] = "NO"
+    end
+  end
+end

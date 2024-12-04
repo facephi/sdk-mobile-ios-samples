@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  demosdk
+
+  Created by Jorge Poveda on 26/6/23.
+  
+*/
+
+//// VIDEOID
+//"video_id_record_init_button"="PRUEBA START RECORDING";
+//
+//
+////VIDEO CALL
+//
+//
+////NFC
+//"text_intro_chip_state_waiting_tag_text" = "PRUEBABring your device closer to the document";

@@ -1,0 +1,19 @@
+
+
+## User settings
+xcuserdata/
+
+sdkmobile-demo-classic-pods/Pods/
+sdkmobile-demo-classic-pods/Podfile.lock
+sdkmobile-demo-nfc-pods/Pods/
+sdkmobile-demo-nfc-pods/Podfile.lock
+sdkmobile-demo-signature-pods/Pods/
+sdkmobile-demo-signature-pods/Podfile.lock
+sdkmobile-demo-voiceid-pods/Pods/
+sdkmobile-demo-voiceid-pods/Podfile.lock
+sdkmobile-demo-videocall-pods/Pods/
+sdkmobile-demo-videocall-pods/Podfile.lock
+sdkmobile-demo-videoid-pods/Pods/
+sdkmobile-demo-videoid-pods/Podfile.lock
+sdkmobile-demo-phingers-pods/Pods/
+sdkmobile-demo-phingers-pods/Podfile.lock
