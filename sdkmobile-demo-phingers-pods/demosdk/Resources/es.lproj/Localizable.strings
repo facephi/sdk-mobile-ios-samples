@@ -1,0 +1,49 @@
+/*
+  Localizable.strings
+  demosdk
+
+  Created by Jorge Poveda on 26/6/23.
+  
+*/
+
+//// VIDEOID
+//"video_id_record_init_button"="PRUEBA START RECORDING";
+//
+//
+////VIDEO CALL
+//
+//
+////NFC
+//"nfc_component_start_message" = "PRUEBABring your device closer to the document";
+"label.frame" = "Mantenga los dedos firmes";
+"label.morethan_expected_fingers" = "Más de %d %@";
+"label.fingers" = "Dedos";
+"label.finger" = "Dedo";
+"label.hold_fingers_horizantally" = "Sostén %@ horizontalmente";
+"label.hold_fingers_vertically" = "Sostén %@ verticalmente";
+"label.tooFar" = "Por favor, acerca tu mano";
+"label.tooClose" = "Por favor, aleja tu mano";
+"label.lowFocus" = "Bajo enfoque. Intenta mover la mano";
+"label.goodFocus" = "Mantén tu mano firme";
+"label.right_4_fingers" = "4 dedos derechos";
+"label.left_4_fingers" = "4 dedos izquierdos";
+"label.thumbs" = "Pulgares";
+"label.right_thumb" = "Pulgar derecho";
+"label.left_thumb" = "Pulgar izquierdo";
+"label.right_index" = "Índice derecho";
+"label.right_middle" = "Medio derecho";
+"label.right_ring" = "Anular derecho";
+"label.right_little" = "Meñique derecho";
+"label.left_index" = "Índice izquierdo";
+"label.left_middle" = "Medio izquierdo";
+"label.left_ring" = "Anular izquierdo";
+"label.left_little" = "Meñique izquierdo";
+"label.progress" = "Procesando...";
+"label.right" = "Derecha";
+"label.left" = "Izquierda";
+"label.four_fingers" = "4 dedos";
+"label.left_or_right_num_fingers" = "%@ %d dedos";
+"label.thumb" = "Pulgar";
+"label.hand" = "Mano";
+"label.wronghand" = "Se ha detectado la mano incorrecta\nPor favor, presenta %@";
+"label.too_few_fingers_detected" = "Se han detectado muy pocos dedos";

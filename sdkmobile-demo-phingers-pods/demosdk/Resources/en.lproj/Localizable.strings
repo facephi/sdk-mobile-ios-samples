@@ -1,0 +1,49 @@
+/*
+  Localizable.strings
+  demosdk
+
+  Created by Jorge Poveda on 26/6/23.
+  
+*/
+
+//// VIDEOID
+//"video_id_record_init_button"="PRUEBA START RECORDING";
+//
+//
+////VIDEO CALL
+//
+//
+////NFC
+//"nfc_component_start_message" = "PRUEBABring your device closer to the document";
+"label.frame" = "Keep your fingers steady";
+"label.morethan_expected_fingers" = "More than %d %@";
+"label.fingers" = "Fingers";
+"label.finger" = "Finger";
+"label.hold_fingers_horizantally" = "Hold %@ horizontally";
+"label.hold_fingers_vertically" = "Hold %@ vertically";
+"label.tooFar" = "Please bring your hand closer";
+"label.tooClose" = "Please move your hand further";
+"label.lowFocus" = "Low focus. Try to move hand";
+"label.goodFocus" = "Hold your hand steady";
+"label.right_4_fingers" = "Right 4 fingers";
+"label.left_4_fingers" = "Left 4 fingers";
+"label.thumbs" = "Thumbs";
+"label.right_thumb" = "Right thumb";
+"label.left_thumb" = "Left thumb";
+"label.right_index" = "Right index finger";
+"label.right_middle" = "Right middle finger";
+"label.right_ring" = "Right ring finger";
+"label.right_little" = "Right little finger";
+"label.left_index" = "Left index finger";
+"label.left_middle" = "Left middle finger";
+"label.left_ring" = "Left ring finger";
+"label.left_little" = "Left little finger";
+"label.progress" = "Processing...";
+"label.right" = "Right";
+"label.left" = "Left";
+"label.four_fingers" = "4 fingers";
+"label.left_or_right_num_fingers" = "%@ %d fingers";
+"label.thumb" = "thumb";
+"label.hand" = "Hand";
+"label.wronghand" = "Wrong hand detected\nPlease present %@";
+"label.too_few_fingers_detected" = "Too few fingers detected";
