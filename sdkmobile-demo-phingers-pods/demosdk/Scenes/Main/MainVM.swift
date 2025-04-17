@@ -9,12 +9,11 @@ import core
 import Foundation
 import UIKit
 import AVFoundation
-import phingersComponent
+import phingersTFComponent
 
 protocol MainVMInput {
     func newOperation()
-    func phingers(reticleOrientation: Int)
-    func matchPhinger()
+    func phingers(reticleOrientation: Int, filterFinger: FingerFilter)
     func getLicense()
     func closeSession()
 }
@@ -29,29 +28,7 @@ class MainVM {
     private let baseUrl = "https://external-selphid-sdk.facephi.dev/"
     private let methodPassiveLivenesTracking = "api/v1/selphid/passive-liveness/evaluate"
     private let methodAuthenticateFacial = "api/v1/selphid/authenticate-facial/document/face-image"
-   
-    //VOICE Constants
-    private let baseVoiceUrl = "https://external-voice-sdk.facephi.dev/"
-    private let methodVoiceEnrollment = "api/v1/enrollment"
-    private let methodVoiceMatching = "api/v1/authentication"
-    private let liveness_threshold: Double = 0.5
 
-    // TODO: Check what is this?
-    private var tokenFaceImage = " "
-    private var extradataToken = " "
-    private var imageToken = " "
-    private var OCRToken = " "
-    private var bestImage = " "
-    private var bestImageData: Data = Data()
-    private var encodedReference: Data = Data()
-    private var encodedProbe: UIImage = UIImage()
-    private var ocr: [String: String] = [:]
-    private var audios: [Data]?
-    private var audioTemplate: String?
-    private var generatedQrImage: UIImage = UIImage()
-    // TODO: Check what is this?
-
-    
     private var delegate: MainVMOutput?
     
     private let viewController: UIViewController
@@ -71,7 +48,6 @@ class MainVM {
 
 // MARK: - MainVMInput
 extension MainVM: MainVMInput {
-    
     func getLicense() {
         // Initializes for the first time, so it launches the GetLicense functionality
         let _ = SDKManager.shared
@@ -83,10 +59,11 @@ extension MainVM: MainVMInput {
         })
     }
 
-    func phingers(reticleOrientation: Int) {
+    func phingers(reticleOrientation: Int, filterFinger: FingerFilter) {
         var reticle = configReticleOrientation(reticleOrientation: reticleOrientation)
         var phingersConfiguration = SdkConfigurationManager.phingersConfiguration
         phingersConfiguration.reticleOrientation = reticle
+        phingersConfiguration.fingerFilter = filterFinger
         SDKManager.shared.launchPhingers(setTracking: true, viewController: viewController, phingersConfigurationData: phingersConfiguration, output: { phingersResult in
             guard phingersResult.errorType == .NO_ERROR else {
                 self.log(msg: phingersResult.errorType.toString())
@@ -94,13 +71,6 @@ extension MainVM: MainVMInput {
             }
             
             if phingersResult.finishStatus == .STATUS_OK {
-                
-                if self.encodedReference.isEmpty && (phingersResult.data?.fingerprintTemplates.count)! > 0 {
-                    self.encodedReference = phingersResult.data?.fingerprintTemplates[1] ?? Data()
-                } else {
-                    self.encodedProbe = phingersResult.data?.processedFingerprintImages[1] ?? UIImage()
-                }
-    
                 self.log(msg: "Status OK")
                 print(phingersResult.finishStatus)
             } else {
@@ -110,15 +80,39 @@ extension MainVM: MainVMInput {
         })
     }
     
+    func configFilterFinger(filterFinger: Int) -> FingerFilter {
+        var fingerFilter: FingerFilter = .ALL_4_FINGERS_ONE_BY_ONE
+        
+        switch (filterFinger) {
+        case 1:
+            fingerFilter = .INDEX_FINGER
+        case 2:
+            fingerFilter = .MIDDLE_FINGER
+        case 3:
+            fingerFilter = .RING_FINGER
+        case 4:
+            fingerFilter = .LITTLE_FINGER
+        case 5:
+            fingerFilter = .THUMB_FINGER
+        case 6:
+            fingerFilter = .SLAP
+        case 7:
+            fingerFilter = .ALL_4_FINGERS_ONE_BY_ONE
+        case 8:
+            fingerFilter = .ALL_5_FINGERS_ONE_BY_ONE
+        default:
+            fingerFilter = .ALL_4_FINGERS_ONE_BY_ONE
+        }
+        
+        return fingerFilter
+    }
+    
     func configReticleOrientation(reticleOrientation: Int) -> CaptureOrientation {
             var reticle: CaptureOrientation = .LEFT
 
         switch (reticleOrientation) {
             case 1:
                 reticle = .RIGHT
-                break
-            case 2:
-                reticle = .THUMB_PORTRAIT
                 break
             default:
                 reticle = .LEFT
@@ -129,34 +123,6 @@ extension MainVM: MainVMInput {
 
     func setCustomerId() {
         SDKManager.shared.setCustomerId(customerId: "nuevoCustomerId")
-    }
-
-    func matchPhinger(){
-        var configMatching = PhingersMatcherConfigurationData()
-        
-        configMatching.encodedReference = self.encodedReference
-        //configMatching.encodedProbe = self.encodedProbe
-        configMatching.pyramidScale = [0.8, 1.0, 1.2]
-        configMatching.threshold = 34.0
-        
-        guard configMatching.encodedReference?.isEmpty == true else {
-            self.log(msg: "Debe tener una huella de referencia")
-            return
-        }
-        
-//        guard configMatching.encodedProbe.size.width > 0 else {
-//            self.log(msg: "Debe tener una huella para comparar")
-//            return
-//        }
-        
-        SDKManager.shared.matchPhinger(setTracking: true, phingersMatcherConfigurationData: configMatching, output: { matchResult in
-            if matchResult.finishStatus == .STATUS_OK,
-               let result = matchResult.data{
-                self.log(msg: "Status OK \(matchResult.finishStatus) \(matchResult.data?.score)")
-            }else{
-                self.log(msg: "Status KO \(matchResult.errorType)")
-            }
-        })
     }
 
     // Never used

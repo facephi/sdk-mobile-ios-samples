@@ -7,7 +7,7 @@
 
 import core
 import Foundation
-import phingersComponent
+import phingersTFComponent
 import sdk
 import trackingComponent
 import tokenizeComponent
@@ -75,17 +75,6 @@ class SDKManager {
         
         let controller = PhingersController(data: phingersConfigurationData, output: output, viewController: viewController)
         if setTracking {
-            SDKController.shared.launch(controller: controller)
-        } else {
-            SDKController.shared.launchMethod(controller: controller)
-        }
-    }
-    
-    public func matchPhinger(setTracking: Bool, phingersMatcherConfigurationData: PhingersMatcherConfigurationData, output: @escaping (SdkResult<FingersMatchResult>) -> Void)
-    {
-        log("LAUNCH MATCH")
-        let controller = PhingersMatcherController(data: phingersMatcherConfigurationData, output: output)
-        if setTracking{
             SDKController.shared.launch(controller: controller)
         } else {
             SDKController.shared.launchMethod(controller: controller)

@@ -51,7 +51,7 @@
                                                 <rect key="frame" x="0.0" y="117" width="382" height="33"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRG-sD-24y">
-                                                        <rect key="frame" x="0.0" y="0.0" width="187" height="33"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="33"/>
                                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -60,18 +60,6 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="buttonClickListener:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hew-r9-luJ"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsw-8g-SO1" userLabel="MATCH PHINGERS">
-                                                        <rect key="frame" x="195" y="0.0" width="187" height="33"/>
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="MATCH PHINGERS">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="buttonClickListener:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vvv-6V-CGr"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -103,10 +91,10 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yff-JV-WIj">
-                                        <rect key="frame" x="16" y="317" width="382" height="112"/>
+                                        <rect key="frame" x="16" y="317" width="382" height="348.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XGs-SV-sSJ">
-                                                <rect key="frame" x="16" y="16" width="350" height="80"/>
+                                                <rect key="frame" x="16" y="16" width="350" height="316.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PHINGER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIE-n3-w0G" userLabel="VOICE">
                                                         <rect key="frame" x="0.0" y="0.0" width="350" height="20.5"/>
@@ -115,7 +103,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="BGp-Bc-1K1">
-                                                        <rect key="frame" x="0.0" y="28.5" width="350" height="51.5"/>
+                                                        <rect key="frame" x="0.0" y="28.5" width="350" height="288"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select finger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jzn-nO-zhV" userLabel="ShowTutorial">
                                                                 <rect key="frame" x="0.0" y="0.0" width="350" height="20.5"/>
@@ -128,9 +116,17 @@
                                                                 <segments>
                                                                     <segment title="LEFT"/>
                                                                     <segment title="RIGHT"/>
-                                                                    <segment title="THUMP"/>
                                                                 </segments>
                                                             </segmentedControl>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select finger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PjG-6Q-RTj" userLabel="ShowTutorial">
+                                                                <rect key="frame" x="0.0" y="51.5" width="350" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAm-yt-KpF">
+                                                                <rect key="frame" x="0.0" y="72" width="350" height="216"/>
+                                                            </pickerView>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
@@ -182,6 +178,7 @@
                     <navigationItem key="navigationItem" title="ACCIONES" id="M0V-Dl-rBx"/>
                     <connections>
                         <outlet property="lbLog" destination="PLg-Bn-LiL" id="EyJ-pG-5h0"/>
+                        <outlet property="pckFilterFinger" destination="eAm-yt-KpF" id="a4z-9A-bdL"/>
                         <outlet property="segReticleOrientation" destination="Db7-HK-pbI" id="Tul-fS-aIo"/>
                     </connections>
                 </viewController>
@@ -216,10 +213,10 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

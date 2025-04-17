@@ -1,4 +1,4 @@
-/* 
+/*
   Localizable.strings
   demosdk
 
@@ -6,4 +6,44 @@
   
 */
 
-
+//// VIDEOID
+//"video_id_record_init_button"="PRUEBA START RECORDING";
+//
+//
+////VIDEO CALL
+//
+//
+////NFC
+//"nfc_component_start_message" = "PRUEBABring your device closer to the document";
+"label.frame" = "Mantenha os dedos firmes";
+"label.morethan_expected_fingers" = "Mais de %d %@";
+"label.fingers" = "Dedos";
+"label.finger" = "Dedo";
+"label.hold_fingers_horizantally" = "Segure %@ horizontalmente";
+"label.hold_fingers_vertically" = "Segure %@ verticalmente";
+"label.tooFar" = "Por favor, aproxime sua mão";
+"label.tooClose" = "Por favor, afaste sua mão";
+"label.lowFocus" = "Foco baixo. Tente mover a mão";
+"label.goodFocus" = "Mantenha sua mão firme";
+"label.right_4_fingers" = "4 dedos direitos";
+"label.left_4_fingers" = "4 dedos esquerdos";
+"label.thumbs" = "Polegares";
+"label.right_thumb" = "Polegar direito";
+"label.left_thumb" = "Polegar esquerdo";
+"label.right_index" = "Indicador direito";
+"label.right_middle" = "Médio direito";
+"label.right_ring" = "Anelar direito";
+"label.right_little" = "Mínimo direito";
+"label.left_index" = "Indicador esquerdo";
+"label.left_middle" = "Médio esquerdo";
+"label.left_ring" = "Anelar esquerdo";
+"label.left_little" = "Mínimo esquerdo";
+"label.progress" = "Processando...";
+"label.right" = "Direita";
+"label.left" = "Esquerda";
+"label.four_fingers" = "4 dedos";
+"label.left_or_right_num_fingers" = "%@ %d dedos";
+"label.thumb" = "Polegar";
+"label.hand" = "Mão";
+"label.wronghand" = "Mão errada detectada\nPor favor, apresente %@";
+"label.too_few_fingers_detected" = "Poucos dedos detectados";

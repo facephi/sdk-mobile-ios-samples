@@ -11,18 +11,14 @@ source 'https://cdn.cocoapods.org/'
 target 'demosdk' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
-  # TODO: Check why do we need this
-  pod 'IQKeyboardManagerSwift', '~> 7.0.1'
-  pod 'SwiftLint'
   
 ##### Remote Dependencies
-  pod 'FPHISDKCoreComponent', '~> 2.2.0'
-  pod 'FPHISDKLicensingComponent', '~> 2.2.0'
-  pod 'FPHISDKMainComponent', '~> 2.2.0'
-  pod 'FPHISDKTrackingComponent', '~> 2.2.0'
-  pod 'FPHISDKSelphiComponent', '~> 2.2.0'
-  pod 'FPHISDKStatusComponent', '~> 2.2.0'
+  pod 'FPHISDKCoreComponent', '~> 2.3.0'
+  pod 'FPHISDKLicensingComponent', '~> 2.3.0'
+  pod 'FPHISDKMainComponent', '~> 2.3.0'
+  pod 'FPHISDKTrackingComponent', '~> 2.3.0'
+  pod 'FPHISDKSelphiComponent', '~> 2.3.0'
+  pod 'FPHISDKStatusComponent', '~> 2.3.0'
 
   target 'demosdkTests' do
     inherit! :search_paths

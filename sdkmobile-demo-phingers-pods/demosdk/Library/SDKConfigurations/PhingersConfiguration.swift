@@ -6,15 +6,12 @@
 //
 
 import Foundation
-import phingersComponent
+import phingersTFComponent
 
 extension SdkConfigurationManager {
     static var phingersConfiguration: PhingersConfigurationData{
         var configPhingers = PhingersConfigurationData()
         
-        configPhingers.useFlash = true
-        configPhingers.returnProcessedImage = true
-        configPhingers.returnFingerprintTemplate = .NONE
         configPhingers.showTutorial = true
         configPhingers.reticleOrientation = .LEFT
         configPhingers.extractionTimeout = 60000
