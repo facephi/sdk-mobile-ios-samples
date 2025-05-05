@@ -27,7 +27,6 @@ extension SdkConfigurationManager {
         configSelphID.specificData = "ES|<ALL>"
         configSelphID.fullscreen = true
         configSelphID.tokenImageQuality = 0.5
-        configSelphID.locale = "es"
         configSelphID.documentType = SelphIDDocumentType.ID_CARD
         configSelphID.documentSide = SelphIDDocumentSide.FRONT
         configSelphID.timeout = SelphIDTimeout.LONG
