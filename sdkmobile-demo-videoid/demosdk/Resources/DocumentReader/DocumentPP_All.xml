@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selphid-widget-conf version="1.0">
+  <DocumentID id="IQ" iso="IRQ">
+    <Version id="PresetPp" type="TD1" document_type="PSP" document_id="IRQ-00-PSP-0000-000-03-00">
+      <Front>
+        <FACE/>
+        <MRZ>
+          <field id="DocumentCode" line="1" starts="1" count="2" regex="^P"/>
+          <field id="Issuer" line="1" starts="3" count="3" regex="IRQ"/>
+          <field id="LastName+FirstName" line="1" starts="6" count="39"/>
+          <field id="DocumentNumber" line="2" starts="1" count="9"/>
+          <field id="Nationality" line="2" starts="11" count="3" regex="[A-Z&lt;]{3}"/>
+          <field id="DateOfBirth" line="2" starts="14" count="6" regex="[0-9]{6}"/>
+          <field id="Gender" line="2" starts="21" count="1"/>
+          <field id="DateOfExpiry" line="2" starts="22" count="6" regex="(?:[0-9]{6})|(?:&lt;&lt;&lt;&lt;&lt;&lt;)"/>
+          <field id="Opt1" line="2" starts="29" count="14"/>
+          <field id="NfcKey" line="2" starts="1" count="9"/>
+        </MRZ>
+        <ML cols="5" c_separation="2" split_by="elements">
+          <findLineContent dst="occu" content="Occupation" threshold="0.30" overwrite="false"/>
+          <jumpIfValid src="occu" dst="END"/>
+
+          <findLineContent dst="motherStr" content="Mother@s@Name" threshold="0.30" overwrite="false"/>
+          <findLineContent dst="motherStr" content="Mother@Name" threshold="0.30" overwrite="false"/>
+          <findLineContent dst="motherStr" content="MOTHER@NAME" threshold="0.30" overwrite="false"/>
+          <findLineContent dst="belowMother" content="Date@of@Expiry#" threshold="0.30" overwrite="false"/>
+          <assignIfValid dst="mother" src="motherStr" offset="+1" overwrite="false"/>
+          <assignIfValid dst="mother" src="belowMother" offset="-1" overwrite="false"/>
+          <rejectIfNotValid src="mother"/>
+          <assignField src="mother" field="MotherName"/>
+          
+          <label src="END"/>
+        </ML>
+      </Front>
+    </Version>
+
+  </DocumentID>
+
+  <DocumentID id="000" iso="000">
+    <Version id="GenericPassport" type="TD1" document_type="PSP" document_id="000-00-PSP-0000-000-01-00">
+      <Front>
+        <FACE/>
+        <MRZ>
+          <field id="DocumentCode" line="1" starts="1" count="2" regex="^P"/>
+          <field id="Issuer" line="1" starts="3" count="3" regex="^(?!IRQ).*$"/>
+          <field id="LastName+FirstName" line="1" starts="6" count="39"/>
+          <field id="DocumentNumber" line="2" starts="1" count="9"/>
+          <field id="Nationality" line="2" starts="11" count="3" regex="[A-Z&lt;]{3}"/>
+          <field id="DateOfBirth" line="2" starts="14" count="6" regex="[0-9]{6}"/>
+          <field id="Gender" line="2" starts="21" count="1"/>
+          <field id="DateOfExpiry" line="2" starts="22" count="6" regex="(?:[0-9]{6})|(?:&lt;&lt;&lt;&lt;&lt;&lt;)"/>
+          <field id="Opt1" line="2" starts="29" count="14"/>
+          <field id="NfcKey" line="2" starts="1" count="9"/>
+        </MRZ>
+      </Front>
+    </Version>
+  </DocumentID>
+
+    <Supported
+        Front="ALL"
+        Back= "ALL"
+
+        Exceptions-Front=""
+        Exceptions-Back=""
+    />
+
+</selphid-widget-conf>
