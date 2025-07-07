@@ -13,8 +13,6 @@ target 'demosdk' do
   use_frameworks!
   
 ##### Remote Dependencies
-  pod 'FPHISDKCoreComponent', '~> 2.3.0'
-  pod 'FPHISDKLicensingComponent', '~> 2.3.0'
   pod 'FPHISDKMainComponent', '~> 2.3.0'
   pod 'FPHISDKTrackingComponent', '~> 2.3.0'
   pod 'FPHISDKSelphIDComponent', '~> 2.3.0'

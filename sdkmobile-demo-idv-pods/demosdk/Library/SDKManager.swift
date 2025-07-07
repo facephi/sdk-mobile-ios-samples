@@ -41,7 +41,7 @@ class SDKManager {
             SDKController.shared.initSdk(
                 licensingUrl: SdkConfigurationManager.LICENSING_URL,
                 apiKey: SdkConfigurationManager.APIKEY_LICENSING,
-                activateFlow: true,
+                activateFlow: SdkConfigurationManager.shouldDownloadFlows,
                 output: { sdkResult in
                     if sdkResult.finishStatus == .STATUS_OK {
                         self.log("Automatic license correctly setted")
@@ -56,7 +56,7 @@ class SDKManager {
             // MANUAL License
             SDKController.shared.initSdk(
                 license: SdkConfigurationManager.license,
-                activateFlow: true,
+                activateFlow: SdkConfigurationManager.shouldDownloadFlows,
                 output: { sdkResult in
                     if sdkResult.finishStatus == .STATUS_OK {
                         self.log("Manual license correctly setted")
@@ -106,12 +106,19 @@ class SDKManager {
             }
         }
         
-        let onlineController = FlowController(flowConfigurationData: flowConfigurationData, output: flowOutput)
-        let offlineController = FlowOfflineController(body: "", flowConfigurationData: flowConfigurationData, output: flowOutput) // Offline Controller takes the content from 'Resources/flow.json'
-
-        let flowController = SdkConfigurationManager.onlineConfiguration ? onlineController: offlineController
+        self.flowController = FlowController(flowConfigurationData: flowConfigurationData, output: flowOutput)
         
-        SDKController.shared.launch(controller: flowController)
+        SDKController.shared.launch(controller: self.flowController!)
+    }
+    
+    private var flowController: FlowController?
+    
+    private func cancelFlow() {
+        self.flowController?.cancelFlow()
+    }
+    
+    private func nextStep() {
+        self.flowController?.launchNextStep()
     }
     
     private func log(_ msg: String) {
