@@ -74,7 +74,7 @@ class SDKManager {
         SDKController.shared.getExtraData()
     }
     
-    public func launchVideoId(data: VideoIDConfigurationData, setTracking: Bool, viewController: UIViewController, output: @escaping (SdkResult<String>) -> Void)
+    public func launchVideoId(data: VideoIDConfigurationData, setTracking: Bool, viewController: UIViewController, output: @escaping (SdkResult<VideoIDResult>) -> Void)
     {
         log("LAUNCH VIDEO ID")
         
