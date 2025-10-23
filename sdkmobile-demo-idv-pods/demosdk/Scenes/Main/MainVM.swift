@@ -5,77 +5,90 @@
 //  Created by Faustino Flores García on 6/5/22.
 //
 
-import core
-import Foundation
 import UIKit
-import AVFoundation
+import sdk
+import core
+import selphiComponent
+import selphidComponent
 
 protocol MainVMInput {
-    func launchFlow()
+    func launchIdvFlow(id: String)
+    func nextStepFlow()
+    func cancelFlow()
+    func downloadFlows()
 }
 
-protocol MainVMOutput {
+protocol SdkManagerDelegate {
+    func setAvailableFlows(flows: [IntegrationFlowData])
     func show(msg: String)
+    func showImage(image: Data?)
 }
 
 class MainVM {
-    private var bestImage = " "
-    private var bestImageData: Data = Data()
-    private var ocr: [String: String] = [:]
-    private var delegate: MainVMOutput?
-    
+    // MARK: - LETS
     private let viewController: UIViewController
-
-    init(viewController: UIViewController, delegate: MainVMOutput) {
+    
+    // MARK: - VARS
+    private var delegate: SdkManagerDelegate
+    
+    init(viewController: UIViewController, delegate: SdkManagerDelegate) {
         self.delegate = delegate
         self.viewController = viewController
-        SDKManager.shared.mainVC = delegate
-        getLicense()
-    }
-
-    // MARK: - FUNC
-    func log(msg: String) {
-        delegate?.show(msg: msg)
-    }
-    
-    func getLicense() {
+        
         // Initializes for the first time, so it launches the GetLicense functionality
+        SDKManager.delegate = self.delegate
         let _ = SDKManager.shared
     }
 }
 
 // MARK: - MainVMInput
 extension MainVM: MainVMInput {
-    func launchFlow() {
-        SDKManager.shared.launchFlow(customerId: SdkConfigurationManager.CUSTOMER_ID, viewController: viewController, selphidOutput: { selphIDResult in
-            guard selphIDResult.errorType == .NO_ERROR else {
-                self.log(msg: selphIDResult.errorType.toString())
-                return
-            }
+    func launchIdvFlow(id: String) {
+        SDKManager.shared.launchFlow(flowId: id, viewController: viewController) { sdkFlowResult in
+            self.delegate.show(msg: "Flow Finish: \(sdkFlowResult.flowFinish)")
+            self.delegate.show(msg: "Flow Step: \(sdkFlowResult.step)")
             
-            if let dictionary = selphIDResult.data?.ocrResults {
-                self.ocr = Dictionary(uniqueKeysWithValues: dictionary.compactMap { (key, value) -> (String, String)? in
-                    return (key, value)
-                })
-                self.log(msg: self.ocr.debugDescription)
-            } else {
-                self.log(msg: "OCR is NIL")
+            switch (sdkFlowResult.result.data) {
+            case (let data as SelphIDResult):
+                self.parseSelphIDResult(data: data)
+            case (let data as SelphiResult):
+                self.parseSelphiResult(selphiResult: data)
+            default: break
             }
-            self.bestImageData = selphIDResult.data?.faceImageData ?? Data()
-        }, selphiOutput: { selphiResult in
-            guard selphiResult.errorType == .NO_ERROR else {
-                self.log(msg: selphiResult.errorType.toString())
-                return
-            }
-            guard let imageData = selphiResult.data?.bestImageData
-                    else
-            {
-                self.log(msg: "Selphi bestImage is nil")
-                return
-            }
-            
-            self.bestImage = imageData.base64EncodedString()
-            self.log(msg: "Selphi Image correctly fetched")
-        })
+        }
+    }
+    
+    func nextStepFlow() {
+        SDKManager.shared.flowNextStep()
+    }
+    
+    func cancelFlow() {
+        SDKManager.shared.cancelFlow()
+    }
+    
+    func downloadFlows() {
+        SDKManager.shared.initializeSDK()
+    }
+    
+    private func parseSelphiResult(selphiResult: SelphiResult){
+        guard let imageData = selphiResult.bestImageData else {
+            self.delegate.show(msg: "Selphi bestImage is nil")
+            return
+        }
+
+        self.delegate.showImage(image: imageData)
+    }
+
+    func parseSelphIDResult(data: SelphIDResult) {
+        if let dictionary = data.ocrResults {
+            let ocr = Dictionary(uniqueKeysWithValues: dictionary.flatMap { (key, value) -> (String, String)? in
+                return (key, value)
+            })
+            self.delegate.show(msg: "SelphID OCR: \(ocr)")
+        } else {
+            self.delegate.show(msg: "El OCR es nulo")
+        }
+        
+        self.delegate.showImage(image: data.faceImageData!)
     }
 }

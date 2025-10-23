@@ -11,7 +11,7 @@ import phingersTFComponent
 class MainVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     // MARK: - ENUM
     private enum ButtonTag: Int {
-        case newOperation = 1, phingers, license, clearLogs
+        case newOperation = 1, phingers, clearLogs
     }
 
     // MARK: - OUTLET
@@ -55,8 +55,6 @@ class MainVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
             viewModel.newOperation()
         case .phingers:
             viewModel.phingers(reticleOrientation: segReticleOrientation.selectedSegmentIndex, filterFinger: selectedFingerFilter ?? .ALL_4_FINGERS_ONE_BY_ONE)
-        case .license:
-            viewModel.getLicense()
         case .clearLogs:
             clearText()
         default:

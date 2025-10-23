@@ -25,7 +25,6 @@ extension SdkConfigurationManager {
         configSelphID.showTutorial = false
         configSelphID.scanMode = SelphIDScanMode.MODE_SEARCH
         configSelphID.specificData = "ES|<ALL>"
-        configSelphID.fullscreen = true
         configSelphID.tokenImageQuality = 0.5
         configSelphID.documentType = SelphIDDocumentType.ID_CARD
         configSelphID.documentSide = SelphIDDocumentSide.FRONT

@@ -13,7 +13,7 @@ extension SdkConfigurationManager {
         var configSelphID = SelphIDConfigurationData()
         
         let resourcesSelphID: String = {
-            let selphiZipName = "resources-selphid-2-0"
+            let selphiZipName = "fphi-selphid-widget-resources-sdk"
             return Bundle.main.path(
                 forResource: selphiZipName,
                 ofType: "zip") ?? ""
@@ -25,7 +25,6 @@ extension SdkConfigurationManager {
         configSelphID.showTutorial = false
         configSelphID.scanMode = SelphIDScanMode.MODE_SEARCH
         configSelphID.specificData = "ES|<ALL>"
-        configSelphID.fullscreen = true
         configSelphID.tokenImageQuality = 0.5
         configSelphID.documentType = SelphIDDocumentType.ID_CARD
         configSelphID.documentSide = SelphIDDocumentSide.FRONT

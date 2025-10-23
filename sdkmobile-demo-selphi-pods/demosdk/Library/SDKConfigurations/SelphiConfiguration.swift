@@ -21,7 +21,6 @@ extension SdkConfigurationManager {
         
         configSelphi.debug = false
         configSelphi.livenessMode = SelphiFaceLivenessMode.PASSIVE
-        configSelphi.locale = "ES"
         configSelphi.stabilizationMode = false
         configSelphi.templateRawOptimized = true
         configSelphi.qrMode = false

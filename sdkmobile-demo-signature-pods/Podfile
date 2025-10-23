@@ -10,14 +10,13 @@ target 'demosdk' do
   use_frameworks!
   
 ##### Remote Dependencies
-  pod 'FPHISDKLicensingComponent', '~> 2.3.0'
-  pod 'FPHISDKTrackingComponent', '~> 2.3.0'
-  pod 'FPHISDKSelphiComponent', '~> 2.3.0'
-  pod 'FPHISDKVideoIDComponent', '~> 2.3.0'
-  pod 'FPHISDKTokenizeComponent', '~> 2.3.0'
-  pod 'FPHISDKStatusComponent', '~> 2.3.0'
-  pod 'FPHISDKMainComponent', '~> 2.3.0'
-  pod 'FPHISDKStatusComponent', '~> 2.3.0'
+  pod 'FPHISDKTrackingComponent', '~> 2.4.0'
+  pod 'FPHISDKSelphiComponent', '~> 2.4.0'
+  pod 'FPHISDKVideoIDComponent', '~> 2.4.0'
+  pod 'FPHISDKTokenizeComponent', '~> 2.4.0'
+  pod 'FPHISDKStatusComponent', '~> 2.4.0'
+  pod 'FPHISDKMainComponent', '~> 2.4.0'
+  pod 'FPHISDKStatusComponent', '~> 2.4.0'
   
 
   target 'demosdkTests' do

@@ -13,7 +13,7 @@ extension SdkConfigurationManager {
         var configSelphi = SelphiConfigurationData()
         
         let resourcesSelphi: String = {
-            let selphiZipName = "resources-selphi-2-0"
+            let selphiZipName = "fphi-selphi-widget-resources-sdk"
             return Bundle.main.path(
                 forResource: selphiZipName,
                 ofType: "zip") ?? ""
