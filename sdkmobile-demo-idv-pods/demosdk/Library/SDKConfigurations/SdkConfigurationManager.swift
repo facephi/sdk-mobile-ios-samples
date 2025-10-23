@@ -10,6 +10,7 @@ import UIKit
 struct SdkConfigurationManager {
     static let APIKEY_LICENSING = ""
 
+    static let LICENSING_URL = URL(string: "LicencingURL")!
     
     static let customerId = ""
     static let onlineLicensing = true
