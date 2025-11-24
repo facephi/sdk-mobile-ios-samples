@@ -22,7 +22,7 @@ class SDKManager {
     private var flowController: FlowController?
     private var TAG = "IDV_APP"
     static var delegate: SdkManagerDelegate?
-
+    
     // MARK: - INIT
     init() {
         initializeSDK()
@@ -35,49 +35,26 @@ class SDKManager {
         
         let tokenizeController = TokenizeController()
         let statusController = StatusController()
-        
-        if SdkConfigurationManager.onlineLicensing {
-            SDKController.shared.initSdk(
-                licensingUrl: SdkConfigurationManager.LICENSING_URL,
-                apiKey: SdkConfigurationManager.APIKEY_LICENSING_IDV,
-                output: { sdkResult in
-                    if sdkResult.finishStatus == .STATUS_OK {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
-                            SDKManager.delegate?.setAvailableFlows(flows: FlowController.getFlowIntegrationData())
-                        })
-                        self.log("Licencia automática seteada correctamente")
-                    } else {
-                        self.log("Ha ocurrido un error al intentar obtener la licencia: \(sdkResult.errorType)")
-                    }
-                },
-                trackingController: trackingController,
-                tokenizeController: tokenizeController,
-                statusController: statusController,
-                analyticsOutput: { time, component, type, info  in
-                    self.log("Analytics: \(Date().getFormattedDate(format: "HH:mm:ss")) \(component) - \(type) - \(info)")
+        SDKController.shared.initSdk(
+            licensingUrl: SdkConfigurationManager.LICENSING_URL,
+            apiKey: SdkConfigurationManager.APIKEY_LICENSING,
+            output: { sdkResult in
+                if sdkResult.finishStatus == .STATUS_OK {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+                        SDKManager.delegate?.setAvailableFlows(flows: FlowController.getFlowIntegrationData())
+                    })
+                    self.log("Licencia automática seteada correctamente")
+                } else {
+                    self.log("Ha ocurrido un error al intentar obtener la licencia: \(sdkResult.errorType)")
                 }
-            )
-        } else {
-            SDKController.shared.initSdk(
-                license: SdkConfigurationManager.license,
-                output: { sdkResult in
-                    if sdkResult.finishStatus == .STATUS_OK {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
-                            SDKManager.delegate?.setAvailableFlows(flows: FlowController.getFlowIntegrationData())
-                        })
-                        self.log("Licencia manual seteada correctamente")
-                    } else {
-                        self.log("La licencia manual no es correcta")
-                    }
-                },
-                trackingController: trackingController,
-                tokenizeController: tokenizeController,
-                statusController: statusController,
-                analyticsOutput: { time, component, type, info  in
-                    self.log("Analytics: \(Date().getFormattedDate(format: "HH:mm:ss")) \(component) - \(type) - \(info)")
-                }
-            )
-        }
+            },
+            trackingController: trackingController,
+            tokenizeController: tokenizeController,
+            statusController: statusController,
+            analyticsOutput: { time, component, type, info  in
+                self.log("Analytics: \(Date().getFormattedDate(format: "HH:mm:ss")) \(component) - \(type) - \(info)")
+            }
+        )
     }
     
     public func launchFlow(flowId: String, viewController: UIViewController, output: @escaping (SdkFlowResult) -> Void) {
@@ -106,11 +83,27 @@ class SDKManager {
             controllers: controllers,
             customerId: SdkConfigurationManager.customerId)
         
-        let flowController = SdkConfigurationManager.onlineFlow ? FlowController(flowConfigurationData: flowConfigurationData, output: output): FlowOfflineController(flowConfigurationData: flowConfigurationData, output: output)
-        self.flowController = flowController
-        SDKController.shared.launch(controller: flowController)
+        let flowOutput: (SdkFlowResult) -> Void = { sdkFlowResult in
+            print("FlowController: STEP - \(sdkFlowResult.step)")
+            print("FlowController: FLOW FINISH: \(sdkFlowResult.flowFinish)")
+            print("FlowController: SDKResult: ERROR=\(sdkFlowResult.result.errorType) - DATA=\(sdkFlowResult.result.data)")
+            
+            switch (sdkFlowResult.result.data) {
+            case (let data as SelphIDResult):
+                // Do whatever you want with the result
+                break
+            case (let data as SelphiResult):
+                // Do whatever you want with the result
+                break
+            default: break
+            }
+        }
+        
+        self.flowController = FlowController(flowConfigurationData: flowConfigurationData, output: flowOutput)
+        
+        SDKController.shared.launch(controller: self.flowController!)
     }
-    
+        
     func flowNextStep() {
         self.flowController?.launchNextStep()
     }

@@ -195,6 +195,7 @@
 		13F510E7281937E3001E3CF1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1C262F7F2DDF3FE300072C32 /* DocumentReader */,
 				13F510C0281937A6001E3CF1 /* Assets.xcassets */,
 				9EFB343C2A4999E10005C31E /* Localizable.strings */,
 			);
@@ -217,6 +218,13 @@
 				13F7576A2823A2AA00A761D5 /* SDKManager.swift */,
 			);
 			path = Library;
+			sourceTree = "<group>";
+		};
+		1C262F7F2DDF3FE300072C32 /* DocumentReader */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DocumentReader;
 			sourceTree = "<group>";
 		};
 		8F76645D1138E0E4EF87244B /* Pods */ = {
@@ -348,6 +356,13 @@
 				"pt-PT",
 			);
 			mainGroup = 13F510AB281937A5001E3CF1;
+			packageReferences = (
+				1C262F512DCA55CD00072C32 /* XCRemoteSwiftPackageReference "SDK-TokenizePackage-SPM" */,
+				1C262F522DCA564700072C32 /* XCRemoteSwiftPackageReference "SDK-SdkPackage-SPM" */,
+				1C262F532DCA568D00072C32 /* XCRemoteSwiftPackageReference "SDK-TrackingPackage-SPM" */,
+				1C262F542DCA583800072C32 /* XCRemoteSwiftPackageReference "SDK-VideoIDPackage-SPM" */,
+				1C262F572DCA585500072C32 /* XCRemoteSwiftPackageReference "SDK-StatusPackage-SPM" */,
+			);
 			productRefGroup = 13F510B5281937A5001E3CF1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -809,73 +824,7 @@
 				);
 				MARKETING_VERSION = 1.4;
 				OTHER_CODE_SIGN_FLAGS = "--generate-entitlement-der";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-					"-ld_classic",
-					"-l\"c++\"",
-					"-l\"iconv\"",
-					"-l\"sqlite3\"",
-					"-l\"stdc++\"",
-					"-l\"swiftCoreGraphics\"",
-					"-l\"z\"",
-					"-framework",
-					"\"AVFoundation\"",
-					"-framework",
-					"\"Accelerate\"",
-					"-framework",
-					"\"AgoraRtcKit\"",
-					"-framework",
-					"\"AgoraSoundTouch\"",
-					"-framework",
-					"\"Agoraffmpeg\"",
-					"-framework",
-					"\"AssetsLibrary\"",
-					"-framework",
-					"\"AudioToolbox\"",
-					"-framework",
-					"\"CoreGraphics\"",
-					"-framework",
-					"\"CoreImage\"",
-					"-framework",
-					"\"CoreLocation\"",
-					"-framework",
-					"\"CoreMedia\"",
-					"-framework",
-					"\"CoreTelephony\"",
-					"-framework",
-					"\"CoreText\"",
-					"-framework",
-					"\"CoreVideo\"",
-					"-framework",
-					"\"Foundation\"",
-					"-framework",
-					"\"ImageIO\"",
-					"-framework",
-					"\"LocalAuthentication\"",
-					"-framework",
-					"\"Lottie\"",
-					"-framework",
-					"\"QuartzCore\"",
-					"-framework",
-					"\"Security\"",
-					"-framework",
-					"\"Starscream\"",
-					"-framework",
-					"\"SystemConfiguration\"",
-					"-framework",
-					"\"UIKit\"",
-					"-framework",
-					"\"core\"",
-					"-framework",
-					"\"sdk\"",
-					"-framework",
-					"\"tokenizeComponent\"",
-					"-framework",
-					"\"trackingComponent\"",
-					"-framework",
-					"\"videoidComponent\"",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.facephi.sdk.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -914,73 +863,7 @@
 				);
 				MARKETING_VERSION = 1.4;
 				OTHER_CODE_SIGN_FLAGS = "--generate-entitlement-der";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-					"-ld_classic",
-					"-l\"c++\"",
-					"-l\"iconv\"",
-					"-l\"sqlite3\"",
-					"-l\"stdc++\"",
-					"-l\"swiftCoreGraphics\"",
-					"-l\"z\"",
-					"-framework",
-					"\"AVFoundation\"",
-					"-framework",
-					"\"Accelerate\"",
-					"-framework",
-					"\"AgoraRtcKit\"",
-					"-framework",
-					"\"AgoraSoundTouch\"",
-					"-framework",
-					"\"Agoraffmpeg\"",
-					"-framework",
-					"\"AssetsLibrary\"",
-					"-framework",
-					"\"AudioToolbox\"",
-					"-framework",
-					"\"CoreGraphics\"",
-					"-framework",
-					"\"CoreImage\"",
-					"-framework",
-					"\"CoreLocation\"",
-					"-framework",
-					"\"CoreMedia\"",
-					"-framework",
-					"\"CoreTelephony\"",
-					"-framework",
-					"\"CoreText\"",
-					"-framework",
-					"\"CoreVideo\"",
-					"-framework",
-					"\"Foundation\"",
-					"-framework",
-					"\"ImageIO\"",
-					"-framework",
-					"\"LocalAuthentication\"",
-					"-framework",
-					"\"Lottie\"",
-					"-framework",
-					"\"QuartzCore\"",
-					"-framework",
-					"\"Security\"",
-					"-framework",
-					"\"Starscream\"",
-					"-framework",
-					"\"SystemConfiguration\"",
-					"-framework",
-					"\"UIKit\"",
-					"-framework",
-					"\"core\"",
-					"-framework",
-					"\"sdk\"",
-					"-framework",
-					"\"tokenizeComponent\"",
-					"-framework",
-					"\"trackingComponent\"",
-					"-framework",
-					"\"videoidComponent\"",
-				);
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.facephi.sdk.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1109,6 +992,49 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1C262F512DCA55CD00072C32 /* XCRemoteSwiftPackageReference "SDK-TokenizePackage-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:facephi-clienters/SDK-TokenizePackage-SPM.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.4.0;
+			};
+		};
+		1C262F522DCA564700072C32 /* XCRemoteSwiftPackageReference "SDK-SdkPackage-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:facephi-clienters/SDK-SdkPackage-SPM.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.4.0;
+			};
+		};
+		1C262F532DCA568D00072C32 /* XCRemoteSwiftPackageReference "SDK-TrackingPackage-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:facephi-clienters/SDK-TrackingPackage-SPM.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.4.0;
+			};
+		};
+		1C262F542DCA583800072C32 /* XCRemoteSwiftPackageReference "SDK-VideoIDPackage-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:facephi-clienters/SDK-VideoIDPackage-SPM.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.4.0;
+			};
+		};
+		1C262F572DCA585500072C32 /* XCRemoteSwiftPackageReference "SDK-StatusPackage-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:facephi-clienters/SDK-StatusPackage-SPM.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 13F510AC281937A5001E3CF1 /* Project object */;
 }

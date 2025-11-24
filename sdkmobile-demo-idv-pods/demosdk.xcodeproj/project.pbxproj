@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,9 +21,15 @@
 		1C262F3E2DC10BA800072C32 /* resources-selphid-2-0.zip in Resources */ = {isa = PBXBuildFile; fileRef = 1C262F3D2DC10BA800072C32 /* resources-selphid-2-0.zip */; };
 		1C262F3F2DC10BA800072C32 /* resources-selphi-2-0.zip in Resources */ = {isa = PBXBuildFile; fileRef = 1C262F3C2DC10BA800072C32 /* resources-selphi-2-0.zip */; };
 		1C262F412DC10BB800072C32 /* flow.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C262F402DC10BB800072C32 /* flow.json */; };
+		1CC09D962ED4661D0096EE68 /* SDK-StatusPackage-SPM in Frameworks */ = {isa = PBXBuildFile; productRef = 1CC09D952ED4661D0096EE68 /* SDK-StatusPackage-SPM */; };
+		1CC09D992ED466710096EE68 /* SDK-TrackingPackage-SPM in Frameworks */ = {isa = PBXBuildFile; productRef = 1CC09D982ED466710096EE68 /* SDK-TrackingPackage-SPM */; };
+		1CC09D9C2ED4669A0096EE68 /* tokenizeComponent in Frameworks */ = {isa = PBXBuildFile; productRef = 1CC09D9B2ED4669A0096EE68 /* tokenizeComponent */; };
+		1CC09D9F2ED466CE0096EE68 /* selphiComponent in Frameworks */ = {isa = PBXBuildFile; productRef = 1CC09D9E2ED466CE0096EE68 /* selphiComponent */; };
+		1CC09DA42ED46A050096EE68 /* selphidComponent in Frameworks */ = {isa = PBXBuildFile; productRef = 1CC09DA32ED46A050096EE68 /* selphidComponent */; };
+		1CC09DA72ED46A320096EE68 /* sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 1CC09DA62ED46A320096EE68 /* sdk */; };
+		1CC09DAC2ED46D100096EE68 /* SDK-VideoRecording-SPM in Frameworks */ = {isa = PBXBuildFile; productRef = 1CC09DAB2ED46D100096EE68 /* SDK-VideoRecording-SPM */; };
 		9E2DEB122A1B75F000E8FD9F /* SdkConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DEB112A1B75F000E8FD9F /* SdkConfigurationManager.swift */; };
 		9EFB343A2A4999E10005C31E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EFB343C2A4999E10005C31E /* Localizable.strings */; };
-		C972392B2A8FCE89C6FBD5C5 /* Pods_demosdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0408ADFD895D4F1E4F5E71D1 /* Pods_demosdk.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +50,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0408ADFD895D4F1E4F5E71D1 /* Pods_demosdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demosdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13F510B4281937A5001E3CF1 /* demosdk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demosdk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13F510B7281937A5001E3CF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13F510B9281937A5001E3CF1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,8 +68,6 @@
 		1C262F3C2DC10BA800072C32 /* resources-selphi-2-0.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "resources-selphi-2-0.zip"; sourceTree = "<group>"; };
 		1C262F3D2DC10BA800072C32 /* resources-selphid-2-0.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "resources-selphid-2-0.zip"; sourceTree = "<group>"; };
 		1C262F402DC10BB800072C32 /* flow.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = flow.json; sourceTree = "<group>"; };
-		1D2140863B10297C5AE299D2 /* Pods-demosdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demosdk.debug.xcconfig"; path = "Target Support Files/Pods-demosdk/Pods-demosdk.debug.xcconfig"; sourceTree = "<group>"; };
-		92D6DCBE3BF3BF49F85B293A /* Pods-demosdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demosdk.release.xcconfig"; path = "Target Support Files/Pods-demosdk/Pods-demosdk.release.xcconfig"; sourceTree = "<group>"; };
 		9E1ABD982A02BD6F0033F7A6 /* selphidComponent.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = selphidComponent.xcframework; path = Pods/FPHISDKSelphIDComponent/selphidComponent.xcframework; sourceTree = "<group>"; };
 		9E2DEB112A1B75F000E8FD9F /* SdkConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SdkConfigurationManager.swift; sourceTree = "<group>"; };
 		9EFB343B2A4999E10005C31E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -77,7 +80,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C972392B2A8FCE89C6FBD5C5 /* Pods_demosdk.framework in Frameworks */,
+				1CC09D9C2ED4669A0096EE68 /* tokenizeComponent in Frameworks */,
+				1CC09D992ED466710096EE68 /* SDK-TrackingPackage-SPM in Frameworks */,
+				1CC09DAC2ED46D100096EE68 /* SDK-VideoRecording-SPM in Frameworks */,
+				1CC09D962ED4661D0096EE68 /* SDK-StatusPackage-SPM in Frameworks */,
+				1CC09DA72ED46A320096EE68 /* sdk in Frameworks */,
+				1CC09DA42ED46A050096EE68 /* selphidComponent in Frameworks */,
+				1CC09D9F2ED466CE0096EE68 /* selphiComponent in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,8 +210,6 @@
 		8F76645D1138E0E4EF87244B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1D2140863B10297C5AE299D2 /* Pods-demosdk.debug.xcconfig */,
-				92D6DCBE3BF3BF49F85B293A /* Pods-demosdk.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -219,7 +226,6 @@
 			isa = PBXGroup;
 			children = (
 				9E1ABD982A02BD6F0033F7A6 /* selphidComponent.xcframework */,
-				0408ADFD895D4F1E4F5E71D1 /* Pods_demosdk.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -231,13 +237,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13F510DE281937A6001E3CF1 /* Build configuration list for PBXNativeTarget "demosdk" */;
 			buildPhases = (
-				95D9B4C68E7C279EBB338392 /* [CP] Check Pods Manifest.lock */,
 				13F510B0281937A5001E3CF1 /* Sources */,
 				13F510B1281937A5001E3CF1 /* Frameworks */,
 				13F510B2281937A5001E3CF1 /* Resources */,
 				13F78C3D2851DFCA005B7DDF /* ShellScript */,
-				43DB54E5D399ED09D65BE7D6 /* [CP] Embed Pods Frameworks */,
-				CB7596C1EABE3AF70A7B5EC0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -318,6 +321,15 @@
 				"pt-PT",
 			);
 			mainGroup = 13F510AB281937A5001E3CF1;
+			packageReferences = (
+				1CC09D942ED4661D0096EE68 /* XCRemoteSwiftPackageReference "SDK-StatusPackage-SPM" */,
+				1CC09D972ED466710096EE68 /* XCRemoteSwiftPackageReference "SDK-TrackingPackage-SPM" */,
+				1CC09D9A2ED4669A0096EE68 /* XCRemoteSwiftPackageReference "SDK-TokenizePackage-SPM" */,
+				1CC09D9D2ED466CE0096EE68 /* XCRemoteSwiftPackageReference "SDK-Selphi_component-SPM" */,
+				1CC09DA22ED46A050096EE68 /* XCLocalSwiftPackageReference "../../SDK-SelphidRGLComponent" */,
+				1CC09DA52ED46A320096EE68 /* XCRemoteSwiftPackageReference "SDK-SdkPackage-SPM" */,
+				1CC09DAA2ED46D100096EE68 /* XCLocalSwiftPackageReference "../../SDK-VideoRecording-SPM" */,
+			);
 			productRefGroup = 13F510B5281937A5001E3CF1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -377,62 +389,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
-		};
-		43DB54E5D399ED09D65BE7D6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-demosdk/Pods-demosdk-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-demosdk/Pods-demosdk-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-demosdk/Pods-demosdk-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		95D9B4C68E7C279EBB338392 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-demosdk-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CB7596C1EABE3AF70A7B5EC0 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-demosdk/Pods-demosdk-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-demosdk/Pods-demosdk-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-demosdk/Pods-demosdk-resources.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -632,7 +588,6 @@
 		};
 		13F510DF281937A6001E3CF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D2140863B10297C5AE299D2 /* Pods-demosdk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -741,7 +696,6 @@
 		};
 		13F510E0281937A6001E3CF1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92D6DCBE3BF3BF49F85B293A /* Pods-demosdk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -898,6 +852,96 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		1CC09DA22ED46A050096EE68 /* XCLocalSwiftPackageReference "../../SDK-SelphidRGLComponent" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../../SDK-SelphidRGLComponent";
+		};
+		1CC09DAA2ED46D100096EE68 /* XCLocalSwiftPackageReference "../../SDK-VideoRecording-SPM" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../../SDK-VideoRecording-SPM";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1CC09D942ED4661D0096EE68 /* XCRemoteSwiftPackageReference "SDK-StatusPackage-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:facephi-clienters/SDK-StatusPackage-SPM.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.4.0;
+			};
+		};
+		1CC09D972ED466710096EE68 /* XCRemoteSwiftPackageReference "SDK-TrackingPackage-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:facephi-clienters/SDK-TrackingPackage-SPM.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.4.0;
+			};
+		};
+		1CC09D9A2ED4669A0096EE68 /* XCRemoteSwiftPackageReference "SDK-TokenizePackage-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:facephi-clienters/SDK-TokenizePackage-SPM.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.4.0;
+			};
+		};
+		1CC09D9D2ED466CE0096EE68 /* XCRemoteSwiftPackageReference "SDK-Selphi_component-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:facephi-clienters/SDK-Selphi_component-SPM.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.4.1;
+			};
+		};
+		1CC09DA52ED46A320096EE68 /* XCRemoteSwiftPackageReference "SDK-SdkPackage-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:facephi-clienters/SDK-SdkPackage-SPM.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1CC09D952ED4661D0096EE68 /* SDK-StatusPackage-SPM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CC09D942ED4661D0096EE68 /* XCRemoteSwiftPackageReference "SDK-StatusPackage-SPM" */;
+			productName = "SDK-StatusPackage-SPM";
+		};
+		1CC09D982ED466710096EE68 /* SDK-TrackingPackage-SPM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CC09D972ED466710096EE68 /* XCRemoteSwiftPackageReference "SDK-TrackingPackage-SPM" */;
+			productName = "SDK-TrackingPackage-SPM";
+		};
+		1CC09D9B2ED4669A0096EE68 /* tokenizeComponent */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CC09D9A2ED4669A0096EE68 /* XCRemoteSwiftPackageReference "SDK-TokenizePackage-SPM" */;
+			productName = tokenizeComponent;
+		};
+		1CC09D9E2ED466CE0096EE68 /* selphiComponent */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CC09D9D2ED466CE0096EE68 /* XCRemoteSwiftPackageReference "SDK-Selphi_component-SPM" */;
+			productName = selphiComponent;
+		};
+		1CC09DA32ED46A050096EE68 /* selphidComponent */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = selphidComponent;
+		};
+		1CC09DA62ED46A320096EE68 /* sdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CC09DA52ED46A320096EE68 /* XCRemoteSwiftPackageReference "SDK-SdkPackage-SPM" */;
+			productName = sdk;
+		};
+		1CC09DAB2ED46D100096EE68 /* SDK-VideoRecording-SPM */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "SDK-VideoRecording-SPM";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 13F510AC281937A5001E3CF1 /* Project object */;
 }

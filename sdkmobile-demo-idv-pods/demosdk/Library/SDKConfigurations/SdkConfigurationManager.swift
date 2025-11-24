@@ -8,18 +8,10 @@
 import UIKit
 
 struct SdkConfigurationManager {
+    static let LICENSING_URL = URL(string: "licensing_URL")!
     static let APIKEY_LICENSING = ""
-
-    static let LICENSING_URL = URL(string: "LicencingURL")!
     
     static let customerId = ""
-    static let onlineLicensing = true
     static let onlineFlow = true
-    
-    static let license = """
-insert_here_your_offline_license_if_needed
-
-"""
+    static let FLOW_ID = "6cdf5827-df3c-4c00-8ce7-02ed8a633424"
 }
-
-
