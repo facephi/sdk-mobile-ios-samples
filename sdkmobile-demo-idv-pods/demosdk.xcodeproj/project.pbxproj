@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,13 +21,15 @@
 		1C262F3E2DC10BA800072C32 /* resources-selphid-2-0.zip in Resources */ = {isa = PBXBuildFile; fileRef = 1C262F3D2DC10BA800072C32 /* resources-selphid-2-0.zip */; };
 		1C262F3F2DC10BA800072C32 /* resources-selphi-2-0.zip in Resources */ = {isa = PBXBuildFile; fileRef = 1C262F3C2DC10BA800072C32 /* resources-selphi-2-0.zip */; };
 		1C262F412DC10BB800072C32 /* flow.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C262F402DC10BB800072C32 /* flow.json */; };
+		1CB291AC2ED733AA001CB2C0 /* SDK-VideoRecording-SPM in Frameworks */ = {isa = PBXBuildFile; productRef = 1CB291AB2ED733AA001CB2C0 /* SDK-VideoRecording-SPM */; };
 		1CC09D962ED4661D0096EE68 /* SDK-StatusPackage-SPM in Frameworks */ = {isa = PBXBuildFile; productRef = 1CC09D952ED4661D0096EE68 /* SDK-StatusPackage-SPM */; };
 		1CC09D992ED466710096EE68 /* SDK-TrackingPackage-SPM in Frameworks */ = {isa = PBXBuildFile; productRef = 1CC09D982ED466710096EE68 /* SDK-TrackingPackage-SPM */; };
-		1CC09D9C2ED4669A0096EE68 /* tokenizeComponent in Frameworks */ = {isa = PBXBuildFile; productRef = 1CC09D9B2ED4669A0096EE68 /* tokenizeComponent */; };
-		1CC09D9F2ED466CE0096EE68 /* selphiComponent in Frameworks */ = {isa = PBXBuildFile; productRef = 1CC09D9E2ED466CE0096EE68 /* selphiComponent */; };
 		1CC09DA42ED46A050096EE68 /* selphidComponent in Frameworks */ = {isa = PBXBuildFile; productRef = 1CC09DA32ED46A050096EE68 /* selphidComponent */; };
 		1CC09DA72ED46A320096EE68 /* sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 1CC09DA62ED46A320096EE68 /* sdk */; };
 		1CC09DAC2ED46D100096EE68 /* SDK-VideoRecording-SPM in Frameworks */ = {isa = PBXBuildFile; productRef = 1CC09DAB2ED46D100096EE68 /* SDK-VideoRecording-SPM */; };
+		1CE07A012ED7341A004E2EB3 /* selphidComponent in Frameworks */ = {isa = PBXBuildFile; productRef = 1CE07A002ED7341A004E2EB3 /* selphidComponent */; };
+		1CE07A032ED73430004E2EB3 /* SDK-TokenizePackage-SPM in Frameworks */ = {isa = PBXBuildFile; productRef = 1CE07A022ED73430004E2EB3 /* SDK-TokenizePackage-SPM */; };
+		1CE07A052ED7343B004E2EB3 /* SDK-Selphi_component-SPM in Frameworks */ = {isa = PBXBuildFile; productRef = 1CE07A042ED7343B004E2EB3 /* SDK-Selphi_component-SPM */; };
 		9E2DEB122A1B75F000E8FD9F /* SdkConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DEB112A1B75F000E8FD9F /* SdkConfigurationManager.swift */; };
 		9EFB343A2A4999E10005C31E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EFB343C2A4999E10005C31E /* Localizable.strings */; };
 /* End PBXBuildFile section */
@@ -80,13 +82,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CC09D9C2ED4669A0096EE68 /* tokenizeComponent in Frameworks */,
 				1CC09D992ED466710096EE68 /* SDK-TrackingPackage-SPM in Frameworks */,
 				1CC09DAC2ED46D100096EE68 /* SDK-VideoRecording-SPM in Frameworks */,
 				1CC09D962ED4661D0096EE68 /* SDK-StatusPackage-SPM in Frameworks */,
+				1CE07A032ED73430004E2EB3 /* SDK-TokenizePackage-SPM in Frameworks */,
 				1CC09DA72ED46A320096EE68 /* sdk in Frameworks */,
+				1CE07A012ED7341A004E2EB3 /* selphidComponent in Frameworks */,
 				1CC09DA42ED46A050096EE68 /* selphidComponent in Frameworks */,
-				1CC09D9F2ED466CE0096EE68 /* selphiComponent in Frameworks */,
+				1CE07A052ED7343B004E2EB3 /* SDK-Selphi_component-SPM in Frameworks */,
+				1CB291AC2ED733AA001CB2C0 /* SDK-VideoRecording-SPM in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,9 +330,9 @@
 				1CC09D972ED466710096EE68 /* XCRemoteSwiftPackageReference "SDK-TrackingPackage-SPM" */,
 				1CC09D9A2ED4669A0096EE68 /* XCRemoteSwiftPackageReference "SDK-TokenizePackage-SPM" */,
 				1CC09D9D2ED466CE0096EE68 /* XCRemoteSwiftPackageReference "SDK-Selphi_component-SPM" */,
-				1CC09DA22ED46A050096EE68 /* XCLocalSwiftPackageReference "../../SDK-SelphidRGLComponent" */,
 				1CC09DA52ED46A320096EE68 /* XCRemoteSwiftPackageReference "SDK-SdkPackage-SPM" */,
-				1CC09DAA2ED46D100096EE68 /* XCLocalSwiftPackageReference "../../SDK-VideoRecording-SPM" */,
+				1CB291AA2ED733AA001CB2C0 /* XCRemoteSwiftPackageReference "SDK-VideoRecording-SPM" */,
+				1CE079FF2ED7341A004E2EB3 /* XCRemoteSwiftPackageReference "SDK-SelphidComponentLight" */,
 			);
 			productRefGroup = 13F510B5281937A5001E3CF1 /* Products */;
 			projectDirPath = "";
@@ -853,18 +857,15 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		1CC09DA22ED46A050096EE68 /* XCLocalSwiftPackageReference "../../SDK-SelphidRGLComponent" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = "../../SDK-SelphidRGLComponent";
-		};
-		1CC09DAA2ED46D100096EE68 /* XCLocalSwiftPackageReference "../../SDK-VideoRecording-SPM" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = "../../SDK-VideoRecording-SPM";
-		};
-/* End XCLocalSwiftPackageReference section */
-
 /* Begin XCRemoteSwiftPackageReference section */
+		1CB291AA2ED733AA001CB2C0 /* XCRemoteSwiftPackageReference "SDK-VideoRecording-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:facephi-clienters/SDK-VideoRecording-SPM.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.4.0;
+			};
+		};
 		1CC09D942ED4661D0096EE68 /* XCRemoteSwiftPackageReference "SDK-StatusPackage-SPM" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:facephi-clienters/SDK-StatusPackage-SPM.git";
@@ -905,9 +906,22 @@
 				minimumVersion = 2.4.0;
 			};
 		};
+		1CE079FF2ED7341A004E2EB3 /* XCRemoteSwiftPackageReference "SDK-SelphidComponentLight" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:facephi-clienters/SDK-SelphidComponentLight.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.4.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1CB291AB2ED733AA001CB2C0 /* SDK-VideoRecording-SPM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CB291AA2ED733AA001CB2C0 /* XCRemoteSwiftPackageReference "SDK-VideoRecording-SPM" */;
+			productName = "SDK-VideoRecording-SPM";
+		};
 		1CC09D952ED4661D0096EE68 /* SDK-StatusPackage-SPM */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1CC09D942ED4661D0096EE68 /* XCRemoteSwiftPackageReference "SDK-StatusPackage-SPM" */;
@@ -917,16 +931,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1CC09D972ED466710096EE68 /* XCRemoteSwiftPackageReference "SDK-TrackingPackage-SPM" */;
 			productName = "SDK-TrackingPackage-SPM";
-		};
-		1CC09D9B2ED4669A0096EE68 /* tokenizeComponent */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1CC09D9A2ED4669A0096EE68 /* XCRemoteSwiftPackageReference "SDK-TokenizePackage-SPM" */;
-			productName = tokenizeComponent;
-		};
-		1CC09D9E2ED466CE0096EE68 /* selphiComponent */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1CC09D9D2ED466CE0096EE68 /* XCRemoteSwiftPackageReference "SDK-Selphi_component-SPM" */;
-			productName = selphiComponent;
 		};
 		1CC09DA32ED46A050096EE68 /* selphidComponent */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -940,6 +944,21 @@
 		1CC09DAB2ED46D100096EE68 /* SDK-VideoRecording-SPM */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = "SDK-VideoRecording-SPM";
+		};
+		1CE07A002ED7341A004E2EB3 /* selphidComponent */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CE079FF2ED7341A004E2EB3 /* XCRemoteSwiftPackageReference "SDK-SelphidComponentLight" */;
+			productName = selphidComponent;
+		};
+		1CE07A022ED73430004E2EB3 /* SDK-TokenizePackage-SPM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CC09D9A2ED4669A0096EE68 /* XCRemoteSwiftPackageReference "SDK-TokenizePackage-SPM" */;
+			productName = "SDK-TokenizePackage-SPM";
+		};
+		1CE07A042ED7343B004E2EB3 /* SDK-Selphi_component-SPM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CC09D9D2ED466CE0096EE68 /* XCRemoteSwiftPackageReference "SDK-Selphi_component-SPM" */;
+			productName = "SDK-Selphi_component-SPM";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
