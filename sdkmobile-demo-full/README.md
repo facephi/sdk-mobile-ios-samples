@@ -1,24 +1,29 @@
-# SDK-Mobile Cocoapods Demo VideoID Version
+# SDK-Mobile Cocoapods Demo Full Version
 
 Aplicación demo para testear internamente todos los componentes de la SDK Mobile implementados hasta la fecha (Full Version), descargando los componentes desde nuestro repositorios privados (Artifactory). 
 
-## Status:
+## Módulos:
 
- - FPHISDKLicenseCheckerComponent
- - FPHISDKCoreComponent
- - FPHISDKLicensingComponent
- - FPHISDKMainComponent
- - FPHISDKTrackingComponent
- - FPHISDKVideoIDComponent
- - FPHISDKTokenizeComponent
- - FPHISDKStatusComponent
+- FPHISDKCaptureComponent
+- FPHISDKMainComponent
+- FPHISDKNFCComponent
+- FPHISDKPhingersTFComponent
+- FPHISDKSelphiComponent
+- FPHISDKSelphIDComponent
+- FPHISDKStatusComponent
+- FPHISDKTokenizeComponent
+- FPHISDKTrackingComponent
+- FPHISDKVideoCallComponent
+- FPHISDKVideoIDComponent
+- FPHISDKVideoRecordingComponent
+- FPHISDKVoiceIDComponent
 
 ## Instalación con SPM:
 
 - Abrir demosdk.**xcodeproj**
 - Configurar en XCode una cuenta de GitHub que disponga de acceso al repositorio privado de Facephi-Clienters.
-- Si se ha utilizado previamente Cocoapods en el proyecto, para limpiar todo rastro previo podemos usar el comando `pod deintegrate`
-- En el proyecto demosdk -> TARGETS -> demosdk -> General -> Frameworks, Libraries, and Embedded Content debemos asegurarnos de que están los paquetes sdk, status, tracking, videoid y tokenize.
+- Si se ha utilizado previamente Cocoapods en el proyecto, para limpiar todo rastro previo debemos usar el comando `pod deintegrate`
+- En el proyecto demosdk -> TARGETS -> demosdk -> General -> Frameworks, Libraries, and Embedded Content debemos asegurarnos de que están referenciados todos los paquetes del listado de #Módulos.
 
 ## Instalación con Cocoapods:
 
@@ -44,7 +49,7 @@ Y una vez abiertos se copian los siguientes datos:
 
 `pod install`
 
-- Si se ha utilizado previamente SPM en el proyecto, para limpiar todo rastro previo podemos quitar las referencias SPM desde PROJECT -> demosdk -> Package Dependencies.
+- Si se ha utilizado previamente SPM en el proyecto, para limpiar todo rastro previo podemos quitar las referencias SPM desde _demosdk -> Package Dependencies_
 - Para esta demo, se puede simplemente eliminar las referencias del TARGET demosdk a los paquetes SPM en lugar de hacer lo anterior.
 
 ## Actualización de paquetes con Cocoapods:
@@ -57,4 +62,5 @@ En caso de liberarse una versión nueva de alguno de los componentes de la SDK M
 ## Posibles problemas en Cocoapods
 
 - Si cocoapods fue instalado mediante homebrew, puede dar problemas.
-- Para hacer un CI la máquina tiene que tener instalado cocoapods art (Instalarlo en Jenkins o en un Runner de GitHub)
+
+- Para hacer un CI la máquina tiene que tener instalado cocoapods art (Instalarlo en Jenkins o en un Runner de GitHub).

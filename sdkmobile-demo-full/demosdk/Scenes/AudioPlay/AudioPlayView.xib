@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="soL-nn-EWx" customClass="AudioPlayView" customModule="demosdk">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" tag="99" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFm-ld-Jsh" userLabel="ExitButton">
+                    <rect key="frame" x="12" y="40" width="62" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="vEd-NJ-j1K"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="ic_sdk_close" title=""/>
+                    <connections>
+                        <action selector="backButtonTouchUpInside:" destination="soL-nn-EWx" eventType="touchUpInside" id="Wvs-jf-PWg"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ETx-BV-4Pf">
+                    <rect key="frame" x="8" y="89" width="374" height="40"/>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="I2q-SC-Y81"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ETx-BV-4Pf" firstAttribute="top" secondItem="eFm-ld-Jsh" secondAttribute="bottom" constant="15" id="2cA-nM-EVs"/>
+                <constraint firstItem="ETx-BV-4Pf" firstAttribute="centerX" secondItem="soL-nn-EWx" secondAttribute="centerX" id="Hbe-cz-8nc"/>
+                <constraint firstItem="I2q-SC-Y81" firstAttribute="bottom" secondItem="ETx-BV-4Pf" secondAttribute="bottom" constant="681" id="Hp7-9B-Mpy"/>
+                <constraint firstItem="ETx-BV-4Pf" firstAttribute="leading" secondItem="I2q-SC-Y81" secondAttribute="leading" constant="8" id="MUv-Rl-erC"/>
+                <constraint firstItem="eFm-ld-Jsh" firstAttribute="top" secondItem="soL-nn-EWx" secondAttribute="top" constant="40" id="RJ5-0J-zAl"/>
+                <constraint firstItem="I2q-SC-Y81" firstAttribute="trailing" secondItem="ETx-BV-4Pf" secondAttribute="trailing" constant="8" id="q8b-Hl-x20"/>
+                <constraint firstItem="eFm-ld-Jsh" firstAttribute="leading" secondItem="I2q-SC-Y81" secondAttribute="leading" constant="12" id="r0A-SQ-lA9"/>
+            </constraints>
+            <connections>
+                <outlet property="backButton" destination="eFm-ld-Jsh" id="dW5-iF-1sI"/>
+                <outlet property="stackView" destination="ETx-BV-4Pf" id="SMn-oU-Usv"/>
+            </connections>
+            <point key="canvasLocation" x="-158.46153846153845" y="-405.21327014218008"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_sdk_close" width="38" height="39"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
