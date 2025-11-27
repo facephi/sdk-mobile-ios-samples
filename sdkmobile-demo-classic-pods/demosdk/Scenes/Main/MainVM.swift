@@ -25,16 +25,15 @@ protocol MainVMInput {
 protocol MainVMOutput {
     func show(msg: String)
     func showAlert(msg: String)
+    func updateImages(images: [UIImage?])
 }
 
 class MainVM {
 
     private var tokenFaceImage = " "
     private var extradataToken = " "
-    private var bestImage = " "
-    private var bestImageData: Data = Data()
-    private var ocr: [String: String] = [:]
-
+    private var selfie = " "
+    private var documentFaceData: Data = Data()
     private var delegate: MainVMOutput?
     
     private let viewController: UIViewController
@@ -79,8 +78,10 @@ extension MainVM: MainVMInput {
                 return
             }
             
-            self.bestImage = imageData.base64EncodedString()
+            self.selfie = imageData.base64EncodedString()
             self.log(msg: "Selphi Image correctly fetched")
+            self.delegate?.updateImages(images: [UIImage(data: imageData)])
+
         })
     }
 
@@ -90,22 +91,22 @@ extension MainVM: MainVMInput {
                 self.log(msg: selphIDResult.errorType.toString())
                 return
             }
-            
-            guard let result = selphIDResult.data?.ocrResults
-                    else
-            {
-                return
-            }
-            
             if let dictionary = selphIDResult.data?.ocrResults {
-                self.ocr = Dictionary(uniqueKeysWithValues: dictionary.flatMap { (key, value) -> (String, String)? in
+                let ocr = Dictionary(uniqueKeysWithValues: dictionary.flatMap { (key, value) -> (String, String)? in
                     return (key, value)
                 })
+                self.log(msg: "OCR Data:\n\(ocr)")
             } else {
-                print("el OCR es nulo.")
+                self.log(msg: "OCR Data not found")
             }
-            self.bestImageData = selphIDResult.data?.faceImageData ?? Data()
-            self.log(msg: String(result.count))
+            self.documentFaceData = selphIDResult.data?.faceImageData ?? Data()
+            let frontDocument = selphIDResult.data?.frontDocumentData ?? Data()
+            let backDocument = selphIDResult.data?.backDocumentData ?? Data()
+            self.delegate?.updateImages(images: [
+                UIImage(data: self.documentFaceData),
+                UIImage(data: frontDocument),
+                UIImage(data: backDocument)]
+            )
         })
     }
     
@@ -120,11 +121,11 @@ extension MainVM: MainVMInput {
     
     // Never used
     func setCustomerId() {
-        SDKManager.shared.setCustomerId(customerId: "nuevoCustomerId")
+        SDKManager.shared.setCustomerId(customerId: "newCustomerId")
     }
     
     func checkLiveness() {
-        self.log(msg: SDKManager.shared.launchCheckLiveness(bestImage: bestImage,
+        self.log(msg: SDKManager.shared.launchCheckLiveness(bestImage: selfie,
                                                             extradata: SDKManager.shared.launchExtradata().data ?? "",
                                                             baseUrl: SdkConfigurationManager.BASE_URL,
                                                             methodPassiveLivenesTracking: SdkConfigurationManager.METHOD_PASSIVE_LIVENES))
@@ -132,7 +133,7 @@ extension MainVM: MainVMInput {
     
     func checkAuth() {
         self.log(msg: SDKManager.shared.launchCheckAuth(tokenFaceImage: tokenFaceImage,
-                                                        bestImage: bestImage,
+                                                        bestImage: selfie,
                                                         extradata: extradataToken,
                                                         baseUrl: SdkConfigurationManager.BASE_URL,
                                                         methodAuth: SdkConfigurationManager.METHOD_AUTH_FACIAL))

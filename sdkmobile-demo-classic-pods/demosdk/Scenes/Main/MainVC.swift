@@ -16,8 +16,9 @@ class MainVC: UIViewController {
     }
 
     // MARK: - OUTLET
+    @IBOutlet weak var stackView: UIStackView!
     @IBOutlet var lbLog: UITextView!
-    @IBOutlet var btConfiguration: UIButton!
+    @IBOutlet weak var imageView: UIImageView!
 
     // MARK: - VARS
     private var viewModel: MainVMInput!
@@ -85,5 +86,18 @@ extension MainVC: MainVMOutput {
         DispatchQueue.main.async {
             self.lbLog.text = msg
         }
+    }
+    func updateImages(images: [UIImage?]) {
+        stackView.subviews.forEach {
+            if $0 is UIImageView { $0.removeFromSuperview()
+            }
+        }
+
+        images.forEach { image in
+            let imageView = UIImageView(image: image)
+            stackView.addArrangedSubview(imageView)
+        }
+        
+        self.stackView.layoutIfNeeded()
     }
 }
