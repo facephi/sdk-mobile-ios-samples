@@ -235,23 +235,23 @@ extension MainVM {
         })
     }
     
-//    func launchCaptureCUE(configuration: FileUploaderConfigurationData) {
-//        // swiftlint:disable all
-//        SDKManager.shared.launchCaptureCUE(setTracking: true, viewController: viewController, fileUploaderConfigurationData: configuration, output: { captureResult in
-//            guard captureResult.errorType == .NO_ERROR else {
-//                self.log(msg: "\(captureResult.errorType)")
-//                return
-//            }
-//            
-//            guard let result = captureResult.data
-//            else
-//            {
-//                self.log(msg: "Capture KO")
-//                return
-//            }
-//            self.log(msg: "Capture OK: " + String(result.documentImages.count))
-//        })
-//    }
+    func launchFileUploader(configuration: FileUploaderConfigurationData) {
+        // swiftlint:disable all
+        SDKManager.shared.launchFileUploader(setTracking: true, viewController: viewController, fileUploaderConfigurationData: configuration, output: { captureResult in
+            guard captureResult.errorType == .NO_ERROR else {
+                self.log(msg: "\(captureResult.errorType)")
+                return
+            }
+            
+            guard let result = captureResult.data
+            else
+            {
+                self.log(msg: "Capture KO")
+                return
+            }
+            self.log(msg: "Capture OK: " + String(result.documentImages.count))
+        })
+    }
     
     func tokenizeExtradata() {
         let result = SDKManager.shared.launchExtradata()

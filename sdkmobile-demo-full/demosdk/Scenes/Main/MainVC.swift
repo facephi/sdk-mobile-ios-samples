@@ -20,7 +20,7 @@ class MainVC: UIViewController {
         case setupEnvironment = 0, newOperation
         case initFlow = 10, flowNextStep, flowCancel
         case checkLiveness = 20, checkFaceAuth
-        case selphid = 30, nfc, videoId, signatureVideoId, launchPhacturas, gallery, launchCaptureCUE
+        case selphid = 30, nfc, videoId, signatureVideoId, launchPhacturas, gallery, launchFileUploader
         case selphi = 40, signatureSelphi
         case phingersTF = 50
         case voiceId = 60, playAudios, voiceEnrollment, voiceMatching
@@ -226,10 +226,10 @@ class MainVC: UIViewController {
             presentConfigComponent(component: .CAPTURE_COMPONENT, configType: InvoiceCaptureConfigurationData.self) {
                 self.viewModel.launchPhacturas(configuration: $0)
             }
-//        case .launchCaptureCUE:
-//            presentConfigComponent(component: .DOCUMENT_CAPTURE_COMPONENT, configType: FileUploaderConfigurationData.self) {
-//                self.viewModel.launchCaptureCUE(configuration: $0)
-//            }
+        case .launchFileUploader:
+            presentConfigComponent(component: .FILE_UPLOADER_COMPONENT, configType: FileUploaderConfigurationData.self) {
+                self.viewModel.launchFileUploader(configuration: $0)
+            }
         case .startVideoRecording:
             execute{
                 self.viewModel.startVideoRecording()

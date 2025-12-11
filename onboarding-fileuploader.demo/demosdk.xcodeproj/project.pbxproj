@@ -10,8 +10,6 @@
 		130CD5B3285A0D19005C7BB1 /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130CD5B2285A0D19005C7BB1 /* UISegmentedControl.swift */; };
 		130CD5B9285A1BC7005C7BB1 /* EnvironmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130CD5B8285A1BC7005C7BB1 /* EnvironmentVC.swift */; };
 		130CD5BB285A1C11005C7BB1 /* EnvironmentVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130CD5BA285A1C11005C7BB1 /* EnvironmentVM.swift */; };
-		13A21E58286C3BF200F96E91 /* CustomThemeVideoId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A21E57286C3BF200F96E91 /* CustomThemeVideoId.swift */; };
-		13A43FBB286A014400C56A86 /* CustomThemeVideoCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A43FBA286A014400C56A86 /* CustomThemeVideoCall.swift */; };
 		13F510B8281937A5001E3CF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F510B7281937A5001E3CF1 /* AppDelegate.swift */; };
 		13F510BA281937A5001E3CF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F510B9281937A5001E3CF1 /* SceneDelegate.swift */; };
 		13F510BC281937A5001E3CF1 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F510BB281937A5001E3CF1 /* MainVC.swift */; };
@@ -22,10 +20,12 @@
 		13F510EC281937E3001E3CF1 /* fphi-selphi-widget-resources-sdk.zip in Resources */ = {isa = PBXBuildFile; fileRef = 13F510EA281937E3001E3CF1 /* fphi-selphi-widget-resources-sdk.zip */; };
 		13F7576B2823A2AA00A761D5 /* SDKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7576A2823A2AA00A761D5 /* SDKManager.swift */; };
 		13F84C49282500A6001E26A5 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F84C48282500A6001E26A5 /* MainVM.swift */; };
-		1C34C2492E570FDA00649A4C /* flowVR.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C34C2482E570FDA00649A4C /* flowVR.json */; };
-		24C9DE6545FB27A4D375A033 /* Pods_videoRecording.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBFBF754F901C8CEC7FE3030 /* Pods_videoRecording.framework */; };
-		31FBCE79299A8EAC00CCC253 /* CustomThemeQrReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBCE78299A8EAC00CCC253 /* CustomThemeQrReader.swift */; };
-		3E4E903F2DEEE89F00CDD4C9 /* NfcConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4E903E2DEEE89F00CDD4C9 /* NfcConfiguration.swift */; };
+		1C1BCA432EDDD86500E24814 /* IdentityValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BCA422EDDD86100E24814 /* IdentityValidationService.swift */; };
+		1C1BCA452EDDDD1C00E24814 /* ValidationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BCA442EDDDD1B00E24814 /* ValidationServiceProtocol.swift */; };
+		1C1BCA472EDDDD3400E24814 /* ExtractDocumentDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BCA462EDDDD3400E24814 /* ExtractDocumentDataService.swift */; };
+		1C1BCA492EDDDD3700E24814 /* DocumentValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BCA482EDDDD3700E24814 /* DocumentValidationService.swift */; };
+		1C1BCA4B2EDDE10800E24814 /* FinishTrackingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BCA4A2EDDE10700E24814 /* FinishTrackingService.swift */; };
+		1CC827202EEAC6E30039166E /* FinishTrackingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC8271F2EEAC6E30039166E /* FinishTrackingData.swift */; };
 		3E4E904F2DEF421F00CDD4C9 /* facephi_eyes_open_detector_2_0_0_model.dat in Resources */ = {isa = PBXBuildFile; fileRef = 3E4E90402DEF421F00CDD4C9 /* facephi_eyes_open_detector_2_0_0_model.dat */; };
 		3E4E90512DEF421F00CDD4C9 /* flow_face_capture_v2_1_0.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E4E90452DEF421F00CDD4C9 /* flow_face_capture_v2_1_0.json */; };
 		3E4E90552DEF421F00CDD4C9 /* facephi_landmark_detector_2_0_1_model.dat in Resources */ = {isa = PBXBuildFile; fileRef = 3E4E90442DEF421F00CDD4C9 /* facephi_landmark_detector_2_0_1_model.dat */; };
@@ -39,45 +39,21 @@
 		3E4E90982DF9CD0D00CDD4C9 /* DocumentPP_All.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3E4E90922DF9CD0D00CDD4C9 /* DocumentPP_All.xml */; };
 		3E4E90992DF9CD0D00CDD4C9 /* DocumentVI_All.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3E4E90932DF9CD0D00CDD4C9 /* DocumentVI_All.xml */; };
 		3E4E909A2DF9CD0D00CDD4C9 /* DocumentDL_USA.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3E4E908F2DF9CD0D00CDD4C9 /* DocumentDL_USA.xml */; };
-		3E9E5EF966BCF4C09381D307 /* Pods_demosdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C541978FE7CD416113CFC1F /* Pods_demosdk.framework */; };
-		3EAFD2402CCF82FA007A831D /* flow.json in Resources */ = {isa = PBXBuildFile; fileRef = 3EAFD23F2CCF82FA007A831D /* flow.json */; };
 		3EB6E8482D5CBF37000F3A48 /* ConfigsComponentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB6E8472D5CBF1E000F3A48 /* ConfigsComponentsVC.swift */; };
+		661CA66032860D7F6E4F236A /* Pods_demosdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8284C0A91D47C78AA0A850 /* Pods_demosdk.framework */; };
 		9E2D2D622C5113FE00B5334D /* CustomThemeStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2D2D612C5113FE00B5334D /* CustomThemeStatus.swift */; };
 		9E2DEB122A1B75F000E8FD9F /* SdkConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DEB112A1B75F000E8FD9F /* SdkConfigurationManager.swift */; };
 		9E2DEB142A1B75FC00E8FD9F /* SelphiConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DEB132A1B75FC00E8FD9F /* SelphiConfiguration.swift */; };
 		9E2DEB162A1B760200E8FD9F /* SelphIDConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DEB152A1B760200E8FD9F /* SelphIDConfiguration.swift */; };
-		9E2DEB2B2A1BC1E300E8FD9F /* PhingersConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DEB2A2A1BC1E300E8FD9F /* PhingersConfiguration.swift */; };
 		9E7316EB2BC3EA4E00E210FC /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9E7316E92BC3D9E700E210FC /* PrivacyInfo.xcprivacy */; };
-		9E9061802BFE41D70016AE33 /* SampleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E90617F2BFE41D70016AE33 /* SampleHandler.swift */; };
-		9EB7A1BE2B554D8C0094CD6D /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EB7A1BD2B554D8C0094CD6D /* ReplayKit.framework */; };
-		9EB7A1C52B554D8C0094CD6D /* videoRecording.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9EB7A1BC2B554D8C0094CD6D /* videoRecording.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		9ED063FA2B752715005E175D /* resources-selphi-2-0.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9ED063F82B752715005E175D /* resources-selphi-2-0.zip */; };
 		9ED2D8A22CA47A86001EF688 /* CustomThemeSelphID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED2D8A12CA47A84001EF688 /* CustomThemeSelphID.swift */; };
 		9ED2D8A42CAA9FF6001EF688 /* CustomThemeSelphi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED2D8A32CAA9FF6001EF688 /* CustomThemeSelphi.swift */; };
-		9EE5C7752B9B11260074B436 /* resources-selphid-2-0.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9EE5C7742B9B11260074B436 /* resources-selphid-2-0.zip */; };
 		9EFB343A2A4999E10005C31E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EFB343C2A4999E10005C31E /* Localizable.strings */; };
-		D909E94F2AC2E88C0055B3CF /* VoiceIDConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D909E94E2AC2E88C0055B3CF /* VoiceIDConfiguration.swift */; };
 		D92966C52CAE9A6300F53577 /* CaptureConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92966C42CAE9A6300F53577 /* CaptureConfiguration.swift */; };
-		D95817DB2A5EAF26004A1C9B /* AudioPlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95817DA2A5EAF26004A1C9B /* AudioPlayVC.swift */; };
-		D95817DF2A5EAF6C004A1C9B /* AudioPlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D95817DE2A5EAF6C004A1C9B /* AudioPlayView.xib */; };
 		D95817E52A5EB722004A1C9B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95817E42A5EB722004A1C9B /* UIView.swift */; };
-		D95817E72A5EC074004A1C9B /* AudioPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95817E62A5EC074004A1C9B /* AudioPlayView.swift */; };
-		D95817EA2A5EC4AA004A1C9B /* LocalURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95817E92A5EC4AA004A1C9B /* LocalURLs.swift */; };
 		D9B8985D2AA76E2E000AD65F /* PrefManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B8985C2AA76E2E000AD65F /* PrefManager.swift */; };
 		D9B8985F2AA76E65000AD65F /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B8985E2AA76E65000AD65F /* Preference.swift */; };
-		D9D2E38C2AC2F08100501393 /* VideoCallConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2E38B2AC2F08100501393 /* VideoCallConfiguration.swift */; };
-		D9D2E38E2AC2FA4E00501393 /* VideoIDConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2E38D2AC2FA4E00501393 /* VideoIDConfiguration.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		9EB7A1C32B554D8C0094CD6D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 13F510AC281937A5001E3CF1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9EB7A1BB2B554D8C0094CD6D;
-			remoteInfo = videoRecording;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		9EB7A1C92B554D8C0094CD6D /* Embed Foundation Extensions */ = {
@@ -86,7 +62,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				9EB7A1C52B554D8C0094CD6D /* videoRecording.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,9 +72,6 @@
 		130CD5B2285A0D19005C7BB1 /* UISegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.swift; sourceTree = "<group>"; };
 		130CD5B8285A1BC7005C7BB1 /* EnvironmentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentVC.swift; sourceTree = "<group>"; };
 		130CD5BA285A1C11005C7BB1 /* EnvironmentVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentVM.swift; sourceTree = "<group>"; };
-		13A21E57286C3BF200F96E91 /* CustomThemeVideoId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomThemeVideoId.swift; sourceTree = "<group>"; };
-		13A43FBA286A014400C56A86 /* CustomThemeVideoCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomThemeVideoCall.swift; sourceTree = "<group>"; };
-		13CCB5B2283F7D0C005BDC3D /* demosdk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = demosdk.entitlements; sourceTree = "<group>"; };
 		13F510B4281937A5001E3CF1 /* demosdk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demosdk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13F510B7281937A5001E3CF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13F510B9281937A5001E3CF1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,9 +84,13 @@
 		13F510EA281937E3001E3CF1 /* fphi-selphi-widget-resources-sdk.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "fphi-selphi-widget-resources-sdk.zip"; sourceTree = "<group>"; };
 		13F7576A2823A2AA00A761D5 /* SDKManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKManager.swift; sourceTree = "<group>"; };
 		13F84C48282500A6001E26A5 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
-		1C34C2482E570FDA00649A4C /* flowVR.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = flowVR.json; sourceTree = "<group>"; };
-		31FBCE78299A8EAC00CCC253 /* CustomThemeQrReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomThemeQrReader.swift; sourceTree = "<group>"; };
-		3E4E903E2DEEE89F00CDD4C9 /* NfcConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NfcConfiguration.swift; sourceTree = "<group>"; };
+		1C1BCA422EDDD86100E24814 /* IdentityValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityValidationService.swift; sourceTree = "<group>"; };
+		1C1BCA442EDDDD1B00E24814 /* ValidationServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationServiceProtocol.swift; sourceTree = "<group>"; };
+		1C1BCA462EDDDD3400E24814 /* ExtractDocumentDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractDocumentDataService.swift; sourceTree = "<group>"; };
+		1C1BCA482EDDDD3700E24814 /* DocumentValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentValidationService.swift; sourceTree = "<group>"; };
+		1C1BCA4A2EDDE10700E24814 /* FinishTrackingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishTrackingService.swift; sourceTree = "<group>"; };
+		1CC8271F2EEAC6E30039166E /* FinishTrackingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishTrackingData.swift; sourceTree = "<group>"; };
+		2B8284C0A91D47C78AA0A850 /* Pods_demosdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demosdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E4E90402DEF421F00CDD4C9 /* facephi_eyes_open_detector_2_0_0_model.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = facephi_eyes_open_detector_2_0_0_model.dat; sourceTree = "<group>"; };
 		3E4E90412DEF421F00CDD4C9 /* facephi_face_detector_1_1_0_model_tflite16.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = facephi_face_detector_1_1_0_model_tflite16.dat; sourceTree = "<group>"; };
 		3E4E90422DEF421F00CDD4C9 /* facephi_face_lower_occlusion_detector_1_0_model.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = facephi_face_lower_occlusion_detector_1_0_model.dat; sourceTree = "<group>"; };
@@ -129,30 +105,20 @@
 		3E4E90922DF9CD0D00CDD4C9 /* DocumentPP_All.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DocumentPP_All.xml; sourceTree = "<group>"; };
 		3E4E90932DF9CD0D00CDD4C9 /* DocumentVI_All.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DocumentVI_All.xml; sourceTree = "<group>"; };
 		3E842CA42D43C43D00AB3CAC /* opencv2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = opencv2.xcframework; path = "../../PhingersTF-SPM/XCFrameworks/opencv2.xcframework"; sourceTree = "<group>"; };
-		3EAFD23F2CCF82FA007A831D /* flow.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = flow.json; sourceTree = "<group>"; };
 		3EB6E8472D5CBF1E000F3A48 /* ConfigsComponentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigsComponentsVC.swift; sourceTree = "<group>"; };
-		3F37A37E3F6521696D9315DE /* Pods-videoRecording.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-videoRecording.release.xcconfig"; path = "Target Support Files/Pods-videoRecording/Pods-videoRecording.release.xcconfig"; sourceTree = "<group>"; };
-		75CB47BEFC16E78DC2865EC9 /* Pods-demosdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demosdk.debug.xcconfig"; path = "Target Support Files/Pods-demosdk/Pods-demosdk.debug.xcconfig"; sourceTree = "<group>"; };
-		7C541978FE7CD416113CFC1F /* Pods_demosdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demosdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		898DD01809C0E2FD9BD2E1C6 /* Pods-videoRecording.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-videoRecording.debug.xcconfig"; path = "Target Support Files/Pods-videoRecording/Pods-videoRecording.debug.xcconfig"; sourceTree = "<group>"; };
+		4BFB43045F9C98CCC3C95371 /* Pods-demosdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demosdk.release.xcconfig"; path = "Target Support Files/Pods-demosdk/Pods-demosdk.release.xcconfig"; sourceTree = "<group>"; };
+		76D2A022A0E560D78562D1B4 /* Pods-demosdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demosdk.debug.xcconfig"; path = "Target Support Files/Pods-demosdk/Pods-demosdk.debug.xcconfig"; sourceTree = "<group>"; };
 		9E1ABD982A02BD6F0033F7A6 /* selphidComponent.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = selphidComponent.xcframework; path = Pods/FPHISDKSelphIDComponent/selphidComponent.xcframework; sourceTree = "<group>"; };
 		9E2D2D612C5113FE00B5334D /* CustomThemeStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomThemeStatus.swift; sourceTree = "<group>"; };
 		9E2DEB112A1B75F000E8FD9F /* SdkConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SdkConfigurationManager.swift; sourceTree = "<group>"; };
 		9E2DEB132A1B75FC00E8FD9F /* SelphiConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelphiConfiguration.swift; sourceTree = "<group>"; };
 		9E2DEB152A1B760200E8FD9F /* SelphIDConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelphIDConfiguration.swift; sourceTree = "<group>"; };
-		9E2DEB2A2A1BC1E300E8FD9F /* PhingersConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhingersConfiguration.swift; sourceTree = "<group>"; };
 		9E7316E92BC3D9E700E210FC /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		9E8226802CAFEC11002D3AE5 /* selphiComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = selphiComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E90617F2BFE41D70016AE33 /* SampleHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleHandler.swift; sourceTree = "<group>"; };
-		9EB7A1BC2B554D8C0094CD6D /* videoRecording.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = videoRecording.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EB7A1BD2B554D8C0094CD6D /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
-		9EB7A1C22B554D8C0094CD6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EB7A1CA2B5555950094CD6D /* AGEVideoLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AGEVideoLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9EB7A1D02B555B4E0094CD6D /* videoRecording.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = videoRecording.entitlements; sourceTree = "<group>"; };
-		9ED063F82B752715005E175D /* resources-selphi-2-0.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "resources-selphi-2-0.zip"; sourceTree = "<group>"; };
 		9ED2D8A12CA47A84001EF688 /* CustomThemeSelphID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomThemeSelphID.swift; sourceTree = "<group>"; };
 		9ED2D8A32CAA9FF6001EF688 /* CustomThemeSelphi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomThemeSelphi.swift; sourceTree = "<group>"; };
-		9EE5C7742B9B11260074B436 /* resources-selphid-2-0.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "resources-selphid-2-0.zip"; sourceTree = "<group>"; };
 		9EFB343B2A4999E10005C31E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9EFB343D2A4999ED0005C31E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9EFB343E2A499A0F0005C31E /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -179,19 +145,10 @@
 		C1AC29CC2BEFD65A00EC7C9B /* AgoraVideoQualityAnalyzerExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraVideoQualityAnalyzerExtension.xcframework; path = Pods/AgoraRtcEngine_iOS/AgoraVideoQualityAnalyzerExtension.xcframework; sourceTree = "<group>"; };
 		C1AC29CD2BEFD65A00EC7C9B /* AgoraVideoSegmentationExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraVideoSegmentationExtension.xcframework; path = Pods/AgoraRtcEngine_iOS/AgoraVideoSegmentationExtension.xcframework; sourceTree = "<group>"; };
 		C1AC2A472BF2548B00EC7C9B /* videoRecordingComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = videoRecordingComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C675B680C369878FD6AB74C9 /* Pods-demosdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demosdk.release.xcconfig"; path = "Target Support Files/Pods-demosdk/Pods-demosdk.release.xcconfig"; sourceTree = "<group>"; };
-		D909E94E2AC2E88C0055B3CF /* VoiceIDConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceIDConfiguration.swift; sourceTree = "<group>"; };
 		D92966C42CAE9A6300F53577 /* CaptureConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureConfiguration.swift; sourceTree = "<group>"; };
-		D95817DA2A5EAF26004A1C9B /* AudioPlayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayVC.swift; sourceTree = "<group>"; };
-		D95817DE2A5EAF6C004A1C9B /* AudioPlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioPlayView.xib; sourceTree = "<group>"; };
 		D95817E42A5EB722004A1C9B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		D95817E62A5EC074004A1C9B /* AudioPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayView.swift; sourceTree = "<group>"; };
-		D95817E92A5EC4AA004A1C9B /* LocalURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalURLs.swift; sourceTree = "<group>"; };
 		D9B8985C2AA76E2E000AD65F /* PrefManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefManager.swift; sourceTree = "<group>"; };
 		D9B8985E2AA76E65000AD65F /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
-		D9D2E38B2AC2F08100501393 /* VideoCallConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCallConfiguration.swift; sourceTree = "<group>"; };
-		D9D2E38D2AC2FA4E00501393 /* VideoIDConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoIDConfiguration.swift; sourceTree = "<group>"; };
-		FBFBF754F901C8CEC7FE3030 /* Pods_videoRecording.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_videoRecording.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,16 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E9E5EF966BCF4C09381D307 /* Pods_demosdk.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9EB7A1B92B554D8C0094CD6D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9EB7A1BE2B554D8C0094CD6D /* ReplayKit.framework in Frameworks */,
-				24C9DE6545FB27A4D375A033 /* Pods_videoRecording.framework in Frameworks */,
+				661CA66032860D7F6E4F236A /* Pods_demosdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,9 +195,6 @@
 			children = (
 				9ED2D8A32CAA9FF6001EF688 /* CustomThemeSelphi.swift */,
 				9ED2D8A12CA47A84001EF688 /* CustomThemeSelphID.swift */,
-				13A43FBA286A014400C56A86 /* CustomThemeVideoCall.swift */,
-				13A21E57286C3BF200F96E91 /* CustomThemeVideoId.swift */,
-				31FBCE78299A8EAC00CCC253 /* CustomThemeQrReader.swift */,
 				9E2D2D612C5113FE00B5334D /* CustomThemeStatus.swift */,
 			);
 			path = Themes;
@@ -260,7 +205,6 @@
 			children = (
 				9E7316E92BC3D9E700E210FC /* PrivacyInfo.xcprivacy */,
 				13F510B6281937A5001E3CF1 /* demosdk */,
-				9EB7A1BF2B554D8C0094CD6D /* videoRecording */,
 				13F510B5281937A5001E3CF1 /* Products */,
 				8F76645D1138E0E4EF87244B /* Pods */,
 				C5DCDE1729264840C395A787 /* Frameworks */,
@@ -271,7 +215,6 @@
 			isa = PBXGroup;
 			children = (
 				13F510B4281937A5001E3CF1 /* demosdk.app */,
-				9EB7A1BC2B554D8C0094CD6D /* videoRecording.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -279,8 +222,6 @@
 		13F510B6281937A5001E3CF1 /* demosdk */ = {
 			isa = PBXGroup;
 			children = (
-				13CCB5B2283F7D0C005BDC3D /* demosdk.entitlements */,
-				D95817E82A5EC4A2004A1C9B /* Helpers */,
 				13F7576D2824152400A761D5 /* Library */,
 				130CD5B1285A0CF8005C7BB1 /* Extensions */,
 				13F7576C2823A5F100A761D5 /* Scenes */,
@@ -298,8 +239,6 @@
 			isa = PBXGroup;
 			children = (
 				3E4E904E2DEF421F00CDD4C9 /* Reader */,
-				3EAFD23F2CCF82FA007A831D /* flow.json */,
-				1C34C2482E570FDA00649A4C /* flowVR.json */,
 				13F510C0281937A6001E3CF1 /* Assets.xcassets */,
 				13F510E8281937E3001E3CF1 /* WidgetResources */,
 				9EFB343C2A4999E10005C31E /* Localizable.strings */,
@@ -310,8 +249,6 @@
 		13F510E8281937E3001E3CF1 /* WidgetResources */ = {
 			isa = PBXGroup;
 			children = (
-				9EE5C7742B9B11260074B436 /* resources-selphid-2-0.zip */,
-				9ED063F82B752715005E175D /* resources-selphi-2-0.zip */,
 				13F510E9281937E3001E3CF1 /* fphi-selphid-widget-resources-sdk.zip */,
 				13F510EA281937E3001E3CF1 /* fphi-selphi-widget-resources-sdk.zip */,
 			);
@@ -321,7 +258,6 @@
 		13F7576C2823A5F100A761D5 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				D95817D92A5EAED2004A1C9B /* AudioPlay */,
 				13F510BD281937A5001E3CF1 /* Main.storyboard */,
 				3EB6E8472D5CBF1E000F3A48 /* ConfigsComponentsVC.swift */,
 				130CD5B7285A1B70005C7BB1 /* Environment */,
@@ -333,12 +269,25 @@
 		13F7576D2824152400A761D5 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				1C1BCA412EDDD84E00E24814 /* SDKValidations */,
 				9E2DEB102A1B75D100E8FD9F /* SDKConfigurations */,
 				13F7576A2823A2AA00A761D5 /* SDKManager.swift */,
 				D9B8985C2AA76E2E000AD65F /* PrefManager.swift */,
 				D9B8985E2AA76E65000AD65F /* Preference.swift */,
 			);
 			path = Library;
+			sourceTree = "<group>";
+		};
+		1C1BCA412EDDD84E00E24814 /* SDKValidations */ = {
+			isa = PBXGroup;
+			children = (
+				1C1BCA442EDDDD1B00E24814 /* ValidationServiceProtocol.swift */,
+				1C1BCA422EDDD86100E24814 /* IdentityValidationService.swift */,
+				1C1BCA462EDDDD3400E24814 /* ExtractDocumentDataService.swift */,
+				1C1BCA482EDDDD3700E24814 /* DocumentValidationService.swift */,
+				1C1BCA4A2EDDE10700E24814 /* FinishTrackingService.swift */,
+			);
+			path = SDKValidations;
 			sourceTree = "<group>";
 		};
 		3E4E90462DEF421F00CDD4C9 /* ReaderHelper */ = {
@@ -372,10 +321,8 @@
 		8F76645D1138E0E4EF87244B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				75CB47BEFC16E78DC2865EC9 /* Pods-demosdk.debug.xcconfig */,
-				C675B680C369878FD6AB74C9 /* Pods-demosdk.release.xcconfig */,
-				898DD01809C0E2FD9BD2E1C6 /* Pods-videoRecording.debug.xcconfig */,
-				3F37A37E3F6521696D9315DE /* Pods-videoRecording.release.xcconfig */,
+				76D2A022A0E560D78562D1B4 /* Pods-demosdk.debug.xcconfig */,
+				4BFB43045F9C98CCC3C95371 /* Pods-demosdk.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -386,24 +333,10 @@
 				9E2DEB112A1B75F000E8FD9F /* SdkConfigurationManager.swift */,
 				9E2DEB132A1B75FC00E8FD9F /* SelphiConfiguration.swift */,
 				9E2DEB152A1B760200E8FD9F /* SelphIDConfiguration.swift */,
-				3E4E903E2DEEE89F00CDD4C9 /* NfcConfiguration.swift */,
-				9E2DEB2A2A1BC1E300E8FD9F /* PhingersConfiguration.swift */,
-				D909E94E2AC2E88C0055B3CF /* VoiceIDConfiguration.swift */,
-				D9D2E38B2AC2F08100501393 /* VideoCallConfiguration.swift */,
-				D9D2E38D2AC2FA4E00501393 /* VideoIDConfiguration.swift */,
 				D92966C42CAE9A6300F53577 /* CaptureConfiguration.swift */,
+				1CC8271F2EEAC6E30039166E /* FinishTrackingData.swift */,
 			);
 			path = SDKConfigurations;
-			sourceTree = "<group>";
-		};
-		9EB7A1BF2B554D8C0094CD6D /* videoRecording */ = {
-			isa = PBXGroup;
-			children = (
-				9EB7A1D02B555B4E0094CD6D /* videoRecording.entitlements */,
-				9EB7A1C22B554D8C0094CD6D /* Info.plist */,
-				9E90617F2BFE41D70016AE33 /* SampleHandler.swift */,
-			);
-			path = videoRecording;
 			sourceTree = "<group>";
 		};
 		C5DCDE1729264840C395A787 /* Frameworks */ = {
@@ -437,28 +370,9 @@
 				9E1ABD982A02BD6F0033F7A6 /* selphidComponent.xcframework */,
 				9EB7A1BD2B554D8C0094CD6D /* ReplayKit.framework */,
 				C1AC296C2BEFC1E000EC7C9B /* UIKit.framework */,
-				7C541978FE7CD416113CFC1F /* Pods_demosdk.framework */,
-				FBFBF754F901C8CEC7FE3030 /* Pods_videoRecording.framework */,
+				2B8284C0A91D47C78AA0A850 /* Pods_demosdk.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D95817D92A5EAED2004A1C9B /* AudioPlay */ = {
-			isa = PBXGroup;
-			children = (
-				D95817DE2A5EAF6C004A1C9B /* AudioPlayView.xib */,
-				D95817DA2A5EAF26004A1C9B /* AudioPlayVC.swift */,
-				D95817E62A5EC074004A1C9B /* AudioPlayView.swift */,
-			);
-			path = AudioPlay;
-			sourceTree = "<group>";
-		};
-		D95817E82A5EC4A2004A1C9B /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				D95817E92A5EC4AA004A1C9B /* LocalURLs.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,42 +382,23 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13F510DE281937A6001E3CF1 /* Build configuration list for PBXNativeTarget "demosdk" */;
 			buildPhases = (
-				A5BB7A57599ABFBD65C83D46 /* [CP] Check Pods Manifest.lock */,
+				A3CB2C2033646935D8E6ACF9 /* [CP] Check Pods Manifest.lock */,
 				13F510B0281937A5001E3CF1 /* Sources */,
 				13F510B1281937A5001E3CF1 /* Frameworks */,
 				13F510B2281937A5001E3CF1 /* Resources */,
 				13F78C3D2851DFCA005B7DDF /* ShellScript */,
 				9EB7A1C92B554D8C0094CD6D /* Embed Foundation Extensions */,
-				A03CCA925F22A90E4AC6A712 /* [CP] Embed Pods Frameworks */,
-				F825CE7EE442F622F17CC79E /* [CP] Copy Pods Resources */,
+				9018626D4026AAC19B8964DE /* [CP] Embed Pods Frameworks */,
+				AAD62170CA0A08C05B6A8507 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9EB7A1C42B554D8C0094CD6D /* PBXTargetDependency */,
 			);
 			name = demosdk;
 			productName = demosdk;
 			productReference = 13F510B4281937A5001E3CF1 /* demosdk.app */;
 			productType = "com.apple.product-type.application";
-		};
-		9EB7A1BB2B554D8C0094CD6D /* videoRecording */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9EB7A1C62B554D8C0094CD6D /* Build configuration list for PBXNativeTarget "videoRecording" */;
-			buildPhases = (
-				F381081C1D75F559AE48A881 /* [CP] Check Pods Manifest.lock */,
-				9EB7A1B82B554D8C0094CD6D /* Sources */,
-				9EB7A1B92B554D8C0094CD6D /* Frameworks */,
-				9EB7A1BA2B554D8C0094CD6D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = videoRecording;
-			productName = videoRecording;
-			productReference = 9EB7A1BC2B554D8C0094CD6D /* videoRecording.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -517,10 +412,6 @@
 				TargetAttributes = {
 					13F510B3281937A5001E3CF1 = {
 						CreatedOnToolsVersion = 13.2.1;
-					};
-					9EB7A1BB2B554D8C0094CD6D = {
-						CreatedOnToolsVersion = 15.0.1;
-						LastSwiftMigration = 1530;
 					};
 				};
 			};
@@ -555,7 +446,6 @@
 			projectRoot = "";
 			targets = (
 				13F510B3281937A5001E3CF1 /* demosdk */,
-				9EB7A1BB2B554D8C0094CD6D /* videoRecording */,
 			);
 		};
 /* End PBXProject section */
@@ -565,17 +455,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EE5C7752B9B11260074B436 /* resources-selphid-2-0.zip in Resources */,
 				9E7316EB2BC3EA4E00E210FC /* PrivacyInfo.xcprivacy in Resources */,
 				13F510C4281937A6001E3CF1 /* LaunchScreen.storyboard in Resources */,
 				9EFB343A2A4999E10005C31E /* Localizable.strings in Resources */,
 				13F510C1281937A6001E3CF1 /* Assets.xcassets in Resources */,
 				13F510EC281937E3001E3CF1 /* fphi-selphi-widget-resources-sdk.zip in Resources */,
-				9ED063FA2B752715005E175D /* resources-selphi-2-0.zip in Resources */,
-				3EAFD2402CCF82FA007A831D /* flow.json in Resources */,
 				13F510EB281937E3001E3CF1 /* fphi-selphid-widget-resources-sdk.zip in Resources */,
 				13F510BF281937A5001E3CF1 /* Main.storyboard in Resources */,
-				D95817DF2A5EAF6C004A1C9B /* AudioPlayView.xib in Resources */,
 				3E4E904F2DEF421F00CDD4C9 /* facephi_eyes_open_detector_2_0_0_model.dat in Resources */,
 				3E4E90512DEF421F00CDD4C9 /* flow_face_capture_v2_1_0.json in Resources */,
 				3E4E90552DEF421F00CDD4C9 /* facephi_landmark_detector_2_0_1_model.dat in Resources */,
@@ -584,19 +470,11 @@
 				3E4E90952DF9CD0D00CDD4C9 /* DocumentCU_All.xml in Resources */,
 				3E4E90962DF9CD0D00CDD4C9 /* DocumentDL_All.xml in Resources */,
 				3E4E90972DF9CD0D00CDD4C9 /* DocumentID_All.xml in Resources */,
-				1C34C2492E570FDA00649A4C /* flowVR.json in Resources */,
 				3E4E90982DF9CD0D00CDD4C9 /* DocumentPP_All.xml in Resources */,
 				3E4E90992DF9CD0D00CDD4C9 /* DocumentVI_All.xml in Resources */,
 				3E4E909A2DF9CD0D00CDD4C9 /* DocumentDL_USA.xml in Resources */,
 				3E4E90572DEF421F00CDD4C9 /* facephi_face_detector_1_1_0_model_tflite16.dat in Resources */,
 				3E4E905B2DEF421F00CDD4C9 /* facephi_face_lower_occlusion_detector_1_0_model.dat in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9EB7A1BA2B554D8C0094CD6D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,7 +498,7 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
 		};
-		A03CCA925F22A90E4AC6A712 /* [CP] Embed Pods Frameworks */ = {
+		9018626D4026AAC19B8964DE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -637,7 +515,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-demosdk/Pods-demosdk-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A5BB7A57599ABFBD65C83D46 /* [CP] Check Pods Manifest.lock */ = {
+		A3CB2C2033646935D8E6ACF9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -659,29 +537,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F381081C1D75F559AE48A881 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-videoRecording-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F825CE7EE442F622F17CC79E /* [CP] Copy Pods Resources */ = {
+		AAD62170CA0A08C05B6A8507 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -705,56 +561,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C1BCA4B2EDDE10800E24814 /* FinishTrackingService.swift in Sources */,
 				9ED2D8A42CAA9FF6001EF688 /* CustomThemeSelphi.swift in Sources */,
 				9E2DEB142A1B75FC00E8FD9F /* SelphiConfiguration.swift in Sources */,
+				1C1BCA472EDDDD3400E24814 /* ExtractDocumentDataService.swift in Sources */,
+				1C1BCA452EDDDD1C00E24814 /* ValidationServiceProtocol.swift in Sources */,
 				D92966C52CAE9A6300F53577 /* CaptureConfiguration.swift in Sources */,
 				13F510BC281937A5001E3CF1 /* MainVC.swift in Sources */,
+				1CC827202EEAC6E30039166E /* FinishTrackingData.swift in Sources */,
 				D95817E52A5EB722004A1C9B /* UIView.swift in Sources */,
 				13F84C49282500A6001E26A5 /* MainVM.swift in Sources */,
+				1C1BCA432EDDD86500E24814 /* IdentityValidationService.swift in Sources */,
 				9ED2D8A22CA47A86001EF688 /* CustomThemeSelphID.swift in Sources */,
 				9E2DEB162A1B760200E8FD9F /* SelphIDConfiguration.swift in Sources */,
 				13F7576B2823A2AA00A761D5 /* SDKManager.swift in Sources */,
-				3E4E903F2DEEE89F00CDD4C9 /* NfcConfiguration.swift in Sources */,
-				9E2DEB2B2A1BC1E300E8FD9F /* PhingersConfiguration.swift in Sources */,
 				130CD5B9285A1BC7005C7BB1 /* EnvironmentVC.swift in Sources */,
 				D9B8985D2AA76E2E000AD65F /* PrefManager.swift in Sources */,
-				D95817E72A5EC074004A1C9B /* AudioPlayView.swift in Sources */,
 				130CD5BB285A1C11005C7BB1 /* EnvironmentVM.swift in Sources */,
 				9E2D2D622C5113FE00B5334D /* CustomThemeStatus.swift in Sources */,
 				9E2DEB122A1B75F000E8FD9F /* SdkConfigurationManager.swift in Sources */,
-				D9D2E38E2AC2FA4E00501393 /* VideoIDConfiguration.swift in Sources */,
-				13A21E58286C3BF200F96E91 /* CustomThemeVideoId.swift in Sources */,
 				D9B8985F2AA76E65000AD65F /* Preference.swift in Sources */,
-				13A43FBB286A014400C56A86 /* CustomThemeVideoCall.swift in Sources */,
-				D909E94F2AC2E88C0055B3CF /* VoiceIDConfiguration.swift in Sources */,
-				D95817EA2A5EC4AA004A1C9B /* LocalURLs.swift in Sources */,
-				D95817DB2A5EAF26004A1C9B /* AudioPlayVC.swift in Sources */,
-				31FBCE79299A8EAC00CCC253 /* CustomThemeQrReader.swift in Sources */,
 				13F510B8281937A5001E3CF1 /* AppDelegate.swift in Sources */,
-				D9D2E38C2AC2F08100501393 /* VideoCallConfiguration.swift in Sources */,
 				3EB6E8482D5CBF37000F3A48 /* ConfigsComponentsVC.swift in Sources */,
 				13F510BA281937A5001E3CF1 /* SceneDelegate.swift in Sources */,
 				130CD5B3285A0D19005C7BB1 /* UISegmentedControl.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9EB7A1B82B554D8C0094CD6D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9E9061802BFE41D70016AE33 /* SampleHandler.swift in Sources */,
+				1C1BCA492EDDDD3700E24814 /* DocumentValidationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		9EB7A1C42B554D8C0094CD6D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9EB7A1BB2B554D8C0094CD6D /* videoRecording */;
-			targetProxy = 9EB7A1C32B554D8C0094CD6D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		13F510BD281937A5001E3CF1 /* Main.storyboard */ = {
@@ -906,11 +741,11 @@
 		};
 		13F510DF281937A6001E3CF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75CB47BEFC16E78DC2865EC9 /* Pods-demosdk.debug.xcconfig */;
+			baseConfigurationReference = 76D2A022A0E560D78562D1B4 /* Pods-demosdk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = demosdk/demosdk.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MF6SNMX2TU;
@@ -987,7 +822,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Demo Full SDK";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
-				INFOPLIST_KEY_NFCReaderUsageDescription = "Esta app requiere el permiso para acceder NFC";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Esta app requiere el permiso para acceder a tu cámara";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Esta app requiere permisos de localización";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Esta app requiere el permiso para acceder al micrófono";
@@ -1002,13 +836,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.4.0;
+				MARKETING_VERSION = 2.5.0;
 				OTHER_CODE_SIGN_FLAGS = "--generate-entitlement-der";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ld_classic",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.facephi.sdk.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.facephi.sdk.demoproxy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -1022,11 +856,11 @@
 		};
 		13F510E0281937A6001E3CF1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C675B680C369878FD6AB74C9 /* Pods-demosdk.release.xcconfig */;
+			baseConfigurationReference = 4BFB43045F9C98CCC3C95371 /* Pods-demosdk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = demosdk/demosdk.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MF6SNMX2TU;
@@ -1037,7 +871,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Demo Full SDK";
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
-				INFOPLIST_KEY_NFCReaderUsageDescription = "Esta app requiere el permiso para acceder NFC";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Esta app requiere el permiso para acceder a tu cámara";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Esta app requiere permisos de localización";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Esta app requiere el permiso para acceder al micrófono";
@@ -1052,13 +885,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.4.0;
+				MARKETING_VERSION = 2.5.0;
 				OTHER_CODE_SIGN_FLAGS = "--generate-entitlement-der";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ld_classic",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.facephi.sdk.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.facephi.sdk.demoproxy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -1067,88 +900,6 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		9EB7A1C72B554D8C0094CD6D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 898DD01809C0E2FD9BD2E1C6 /* Pods-videoRecording.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = videoRecording/videoRecording.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MF6SNMX2TU;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = videoRecording/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = videoRecording;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/videoRecording/AgoraHelpers",
-				);
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.5;
-				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.facephi.sdk.demo.videoRecording;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		9EB7A1C82B554D8C0094CD6D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F37A37E3F6521696D9315DE /* Pods-videoRecording.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = videoRecording/videoRecording.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MF6SNMX2TU;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = videoRecording/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = videoRecording;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/videoRecording/AgoraHelpers",
-				);
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.5;
-				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = com.facephi.sdk.demo.videoRecording;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = NO;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1169,15 +920,6 @@
 			buildConfigurations = (
 				13F510DF281937A6001E3CF1 /* Debug */,
 				13F510E0281937A6001E3CF1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9EB7A1C62B554D8C0094CD6D /* Build configuration list for PBXNativeTarget "videoRecording" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9EB7A1C72B554D8C0094CD6D /* Debug */,
-				9EB7A1C82B554D8C0094CD6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1222,7 +964,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-CapturePackage-SPM.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.4.0;
+				minimumVersion = 2.4.4;
 			};
 		};
 		1C485FD02ED5BF90008E8488 /* XCRemoteSwiftPackageReference "SDK-SdkPackage-SPM" */ = {

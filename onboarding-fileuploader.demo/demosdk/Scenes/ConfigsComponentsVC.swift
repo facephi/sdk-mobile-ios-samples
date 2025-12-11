@@ -10,24 +10,13 @@ import core
 import Foundation
 import selphiComponent
 import selphidComponent
-import nfcComponent
 import captureComponent
-import phingersTFComponent
-import voiceIDComponent
-import videocallComponent
-import videoidComponent
 
 enum ConfigComponent {
     case SELPHI_COMPONENT
     case SELPHID_COMPONENT
-    case QR_COMPONENT
-    case PHINGER_COMPONENT
-    case VIDEOCALL_COMPONENT
-    case VOICE_COMPONENT
-    case VIDEOID_COMPONENT
-    case CAPTURE_COMPONENT
     case FILE_UPLOADER_COMPONENT
-    case GALLERY_COMPONENT
+    case FINISH_TRACKING
 }
 
 enum ConfigValue {
@@ -37,6 +26,7 @@ enum ConfigValue {
     case bool(value: Bool)
     case string(value: String)
     case enumValue(value: String, options: [String])
+    case enumValueCombo(value: String, options: [String])
     case enumValueInt(value: Int, options: [Int])
 }
 
@@ -55,6 +45,9 @@ class ConfigsComponentsVC: UIViewController {
     private let executeButton = UIButton(type: .system)
     private let backButton = UIButton(type: .system)
 
+    private var pickerList: [String] = []
+    private var pickerDataSources: [String: PickerDataSource] = [:]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -64,7 +57,21 @@ class ConfigsComponentsVC: UIViewController {
         setupUI()
         configureView()
     }
+    
+    @objc func donePressed() {
+        if let textField = findFirstResponder(in: self.view) as? UITextField {
+            textField.resignFirstResponder() // Oculta el picker
+        }
+    }
 
+    func findFirstResponder(in view: UIView) -> UIView? {
+        if view.isFirstResponder { return view }
+        for subview in view.subviews {
+            if let firstResponder = findFirstResponder(in: subview) { return firstResponder }
+        }
+        return nil
+    }
+    
     private func setupUI() {
         view.backgroundColor = .white
 
@@ -109,14 +116,8 @@ class ConfigsComponentsVC: UIViewController {
         let configActions: [ConfigComponent: (ConfigsComponentsVC) -> Void] = [
             .SELPHI_COMPONENT: { SdkConfigurationManager.configureSelphiFields(in: $0, with: nil) },
             .SELPHID_COMPONENT: { SdkConfigurationManager.configureSelphidFields(in: $0, with: nil) },
-            .QR_COMPONENT: { SdkConfigurationManager.configureQRFields(in: $0, with: nil) },
-            .VIDEOCALL_COMPONENT: { SdkConfigurationManager.configureVideoCallFields(in: $0, with: nil) },
-            .VIDEOID_COMPONENT: { SdkConfigurationManager.configureVideoIDFields(in: $0, with: nil) },
-            .CAPTURE_COMPONENT: { SdkConfigurationManager.configureInvoiceCaptureFields(in: $0, with: nil) },
             .FILE_UPLOADER_COMPONENT: { SdkConfigurationManager.configureFileUploaderFields(in: $0, with: nil) },
-            .VOICE_COMPONENT: { SdkConfigurationManager.configureVoiceIDFields(in: $0, with: nil) },
-            .PHINGER_COMPONENT: { SdkConfigurationManager.configurePhingersFields(in: $0, with: nil) },
-            .GALLERY_COMPONENT: { SdkConfigurationManager.configureGalleryFields(in: $0, with: nil)}
+            .FINISH_TRACKING: { SdkConfigurationManager.configureFinishTrackingFields(in: $0, with: nil) },
         ]
         configActions[component]?(self)
     }
@@ -138,6 +139,8 @@ class ConfigsComponentsVC: UIViewController {
             inputView = createSwitch(isOn: val, key: key)
         case .enumValue(let val, let options):
             inputView = createPicker(value: val, options: options, key: key)
+        case .enumValueCombo(let val, let options):
+            inputView = createPickerCombo(value: val, options: options, key: key)
         case .enumValueInt(let val, let options):
             inputView = createPicker(value: "\(val)", options: options.map { "\($0)" }, key: key)
         case .double(value: let val):
@@ -150,13 +153,17 @@ class ConfigsComponentsVC: UIViewController {
         return stack
     }
 
-    private func createTextField(value: String, key: String, keyboardType: UIKeyboardType) -> UITextField {
+    private func createTextField(value: String, key: String, keyboardType: UIKeyboardType?, addTarget: Bool = true) -> UITextField {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
-        textField.keyboardType = keyboardType
+        if let keyboardType {
+            textField.keyboardType = keyboardType
+        }
         textField.text = value
         textField.accessibilityIdentifier = key
-        textField.addTarget(self, action: #selector(updateField(_:)), for: .editingChanged)
+        if addTarget {
+            textField.addTarget(self, action: #selector(updateField(_:)), for: .allEditingEvents)
+        }
         return textField
     }
 
@@ -167,6 +174,48 @@ class ConfigsComponentsVC: UIViewController {
         segmentedControl.addTarget(self, action: #selector(updateField(_:)), for: .valueChanged)
         return segmentedControl
     }
+    
+    private func createPickerCombo(value: String, options: [String], key: String) -> UITextField {
+        let pickerView = UIPickerView()
+        let pickerSelector = createTextField(value: value, key: key, keyboardType: nil, addTarget: false)
+        let pickerDataManager = PickerDataSource(selectedElement: value, options: options, pickerSelector: pickerSelector)
+        self.pickerDataSources[key] = pickerDataManager
+        
+        pickerView.dataSource = pickerDataManager
+        pickerView.delegate = pickerDataManager
+        pickerView.translatesAutoresizingMaskIntoConstraints = false
+        
+        pickerSelector.inputView = pickerView
+        pickerSelector.translatesAutoresizingMaskIntoConstraints = false
+        pickerSelector.addTarget(self, action: #selector(updateCombo(_:)), for: .allEditingEvents)
+
+        let toolbar = UIToolbar()
+        toolbar.translatesAutoresizingMaskIntoConstraints = false
+
+        let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(donePressed))
+
+        toolbar.setItems([flexible, doneButton], animated: false)
+
+        // Force height constraint
+        NSLayoutConstraint.activate([
+            toolbar.heightAnchor.constraint(equalToConstant: 44)
+        ])
+
+        // Wrap the toolbar in a container view (important for inputAccessoryView)
+        let container = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 44))
+        container.addSubview(toolbar)
+
+        NSLayoutConstraint.activate([
+            toolbar.leadingAnchor.constraint(equalTo: container.leadingAnchor),
+            toolbar.trailingAnchor.constraint(equalTo: container.trailingAnchor),
+            toolbar.topAnchor.constraint(equalTo: container.topAnchor),
+            toolbar.bottomAnchor.constraint(equalTo: container.bottomAnchor)
+        ])
+        pickerSelector.inputAccessoryView = container
+        
+        return pickerSelector
+    }
 
     public func createSwitch(isOn: Bool, key: String) -> UISwitch {
         let switchControl = UISwitch()
@@ -176,6 +225,13 @@ class ConfigsComponentsVC: UIViewController {
         return switchControl
     }
 
+    @objc private func updateCombo(_ sender: Any) {
+        if let key = (sender as? UIView)?.accessibilityIdentifier,
+           let comboTf = sender as? UITextField {
+            configuration.values[key] = .enumValueCombo(value: comboTf.text ?? "", options: [])
+        }
+    }
+        
     @objc private func updateField(_ sender: Any) {
         guard let key = (sender as? UIView)?.accessibilityIdentifier else { return }
 
@@ -212,30 +268,12 @@ class ConfigsComponentsVC: UIViewController {
             case .SELPHID_COMPONENT:
                 let selphidConfig = SdkConfigurationManager.createSelphidConfigurationData(from: configuration)
                 action?(selphidConfig)
-            case .PHINGER_COMPONENT:
-                let phingerConfig = SdkConfigurationManager.createPhingersConfigurationData(from: configuration)
-                action?(phingerConfig)
-            case .VOICE_COMPONENT:
-                let voiceConfig = SdkConfigurationManager.createVoiceIDConfigurationData(from: configuration)
-                action?(voiceConfig)
-            case .VIDEOCALL_COMPONENT:
-                let videoCallConfig = SdkConfigurationManager.createVideoCallConfigurationData(from: configuration)
-                action?(videoCallConfig)
-            case .VIDEOID_COMPONENT:
-                let videoIdConfig = SdkConfigurationManager.createVideoIDConfigurationData(from: configuration)
-                action?(videoIdConfig)
-            case .QR_COMPONENT:
-                let qrConfig = SdkConfigurationManager.createQrCaptureConfigurationData(from: configuration)
-                action?(qrConfig)
-            case .CAPTURE_COMPONENT:
-                let captureConfig = SdkConfigurationManager.createInvoiceCaptureConfigurationData(from: configuration)
-                action?(captureConfig)
             case .FILE_UPLOADER_COMPONENT:
                 let captureConfig = SdkConfigurationManager.createFileUploaderConfigurationData(from: configuration)
                 action?(captureConfig)
-            case .GALLERY_COMPONENT:
-                let galleryConfig = SdkConfigurationManager.createGalleryConfigurationData(from: configuration)
-                action?(galleryConfig)
+            case .FINISH_TRACKING:
+                let captureConfig = SdkConfigurationManager.createFinishTrackingData(from: configuration)
+                action?(captureConfig)
             }
         }
         self.dismiss(animated: true)
@@ -243,5 +281,37 @@ class ConfigsComponentsVC: UIViewController {
 
     @objc private func goBack() {
         dismiss(animated: true)
+    }
+}
+
+
+class PickerDataSource: NSObject, UIPickerViewDataSource, UIPickerViewDelegate {
+    private var selectedElement: String
+    private var options: [String]
+    private var pickerSelector: UITextField
+
+    init(selectedElement: String, options: [String], pickerSelector: UITextField) {
+        self.selectedElement = selectedElement
+        self.options = options
+        self.pickerSelector = pickerSelector
+        super.init()
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1 // solo una columna
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return options.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return options[safe: row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        guard let element = options[safe: row] else { return }
+        pickerSelector.text = element
+        selectedElement = element
     }
 }

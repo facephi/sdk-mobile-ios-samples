@@ -250,16 +250,16 @@ class SDKManager {
         }
     }
     
-//    public func launchCaptureCUE(setTracking: Bool, viewController: UIViewController, fileUploaderConfigurationData: FileUploaderConfigurationData, output: @escaping (SdkResult<FileUploaderResult>) -> Void) {
-//        log("LAUNCH DOCUMENT CAPTURE")
-//
-//        let controller = FileUploaderController(data: fileUploaderConfigurationData, output: output, viewController: viewController)
-//        if setTracking {
-//            SDKController.shared.launch(controller: controller)
-//        } else {
-//            SDKController.shared.launchMethod(controller: controller)
-//        }
-//    }
+    public func launchFileUploader(setTracking: Bool, viewController: UIViewController, fileUploaderConfigurationData: FileUploaderConfigurationData, output: @escaping (SdkResult<FileUploaderResult>) -> Void) {
+        log("LAUNCH DOCUMENT CAPTURE")
+
+        let controller = FileUploaderController(data: fileUploaderConfigurationData, output: output, viewController: viewController)
+        if setTracking {
+            SDKController.shared.launch(controller: controller)
+        } else {
+            SDKController.shared.launchMethod(controller: controller)
+        }
+    }
     
     public func launchExtradata() -> SdkResult<String> {
         log("LAUNCH EXTRADATA")
