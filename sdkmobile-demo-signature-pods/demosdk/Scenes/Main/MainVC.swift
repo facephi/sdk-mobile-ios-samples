@@ -10,7 +10,7 @@ import UIKit
 class MainVC: UIViewController {
     // MARK: - ENUM
     private enum ButtonTag: Int {
-        case newOperation = 1, signatureSelphi, signatureVideoId, license, clearLogs
+        case newOperation = 1, signatureSelphi, signatureVideoId, clearLogs
     }
 
     // MARK: - OUTLET
@@ -47,8 +47,6 @@ class MainVC: UIViewController {
             viewModel.signatureSelphi()
         case .signatureVideoId:
             viewModel.signatureVideoId()
-        case .license:
-            viewModel.getLicense()
         case .clearLogs:
             clearText()
         default:

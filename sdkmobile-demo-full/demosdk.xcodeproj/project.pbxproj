@@ -1,0 +1,1295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		130CD5B3285A0D19005C7BB1 /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130CD5B2285A0D19005C7BB1 /* UISegmentedControl.swift */; };
+		130CD5B9285A1BC7005C7BB1 /* EnvironmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130CD5B8285A1BC7005C7BB1 /* EnvironmentVC.swift */; };
+		130CD5BB285A1C11005C7BB1 /* EnvironmentVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130CD5BA285A1C11005C7BB1 /* EnvironmentVM.swift */; };
+		13A21E58286C3BF200F96E91 /* CustomThemeVideoId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A21E57286C3BF200F96E91 /* CustomThemeVideoId.swift */; };
+		13A43FBB286A014400C56A86 /* CustomThemeVideoCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A43FBA286A014400C56A86 /* CustomThemeVideoCall.swift */; };
+		13F510B8281937A5001E3CF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F510B7281937A5001E3CF1 /* AppDelegate.swift */; };
+		13F510BA281937A5001E3CF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F510B9281937A5001E3CF1 /* SceneDelegate.swift */; };
+		13F510BC281937A5001E3CF1 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F510BB281937A5001E3CF1 /* MainVC.swift */; };
+		13F510BF281937A5001E3CF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13F510BD281937A5001E3CF1 /* Main.storyboard */; };
+		13F510C1281937A6001E3CF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13F510C0281937A6001E3CF1 /* Assets.xcassets */; };
+		13F510C4281937A6001E3CF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13F510C2281937A6001E3CF1 /* LaunchScreen.storyboard */; };
+		13F510EB281937E3001E3CF1 /* fphi-selphid-widget-resources-sdk.zip in Resources */ = {isa = PBXBuildFile; fileRef = 13F510E9281937E3001E3CF1 /* fphi-selphid-widget-resources-sdk.zip */; };
+		13F510EC281937E3001E3CF1 /* fphi-selphi-widget-resources-sdk.zip in Resources */ = {isa = PBXBuildFile; fileRef = 13F510EA281937E3001E3CF1 /* fphi-selphi-widget-resources-sdk.zip */; };
+		13F7576B2823A2AA00A761D5 /* SDKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7576A2823A2AA00A761D5 /* SDKManager.swift */; };
+		13F84C49282500A6001E26A5 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F84C48282500A6001E26A5 /* MainVM.swift */; };
+		1C34C2492E570FDA00649A4C /* flowVR.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C34C2482E570FDA00649A4C /* flowVR.json */; };
+		24C9DE6545FB27A4D375A033 /* Pods_videoRecording.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBFBF754F901C8CEC7FE3030 /* Pods_videoRecording.framework */; };
+		31FBCE79299A8EAC00CCC253 /* CustomThemeQrReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBCE78299A8EAC00CCC253 /* CustomThemeQrReader.swift */; };
+		3E4E903F2DEEE89F00CDD4C9 /* NfcConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4E903E2DEEE89F00CDD4C9 /* NfcConfiguration.swift */; };
+		3E4E904F2DEF421F00CDD4C9 /* facephi_eyes_open_detector_2_0_0_model.dat in Resources */ = {isa = PBXBuildFile; fileRef = 3E4E90402DEF421F00CDD4C9 /* facephi_eyes_open_detector_2_0_0_model.dat */; };
+		3E4E90512DEF421F00CDD4C9 /* flow_face_capture_v2_1_0.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E4E90452DEF421F00CDD4C9 /* flow_face_capture_v2_1_0.json */; };
+		3E4E90552DEF421F00CDD4C9 /* facephi_landmark_detector_2_0_1_model.dat in Resources */ = {isa = PBXBuildFile; fileRef = 3E4E90442DEF421F00CDD4C9 /* facephi_landmark_detector_2_0_1_model.dat */; };
+		3E4E90562DEF421F00CDD4C9 /* facephi_glasses_detector_1_0_model.dat in Resources */ = {isa = PBXBuildFile; fileRef = 3E4E90432DEF421F00CDD4C9 /* facephi_glasses_detector_1_0_model.dat */; };
+		3E4E90572DEF421F00CDD4C9 /* facephi_face_detector_1_1_0_model_tflite16.dat in Resources */ = {isa = PBXBuildFile; fileRef = 3E4E90412DEF421F00CDD4C9 /* facephi_face_detector_1_1_0_model_tflite16.dat */; };
+		3E4E905B2DEF421F00CDD4C9 /* facephi_face_lower_occlusion_detector_1_0_model.dat in Resources */ = {isa = PBXBuildFile; fileRef = 3E4E90422DEF421F00CDD4C9 /* facephi_face_lower_occlusion_detector_1_0_model.dat */; };
+		3E4E90942DF9CD0D00CDD4C9 /* DocumentFC_All.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3E4E90902DF9CD0D00CDD4C9 /* DocumentFC_All.xml */; };
+		3E4E90952DF9CD0D00CDD4C9 /* DocumentCU_All.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3E4E908D2DF9CD0D00CDD4C9 /* DocumentCU_All.xml */; };
+		3E4E90962DF9CD0D00CDD4C9 /* DocumentDL_All.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3E4E908E2DF9CD0D00CDD4C9 /* DocumentDL_All.xml */; };
+		3E4E90972DF9CD0D00CDD4C9 /* DocumentID_All.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3E4E90912DF9CD0D00CDD4C9 /* DocumentID_All.xml */; };
+		3E4E90982DF9CD0D00CDD4C9 /* DocumentPP_All.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3E4E90922DF9CD0D00CDD4C9 /* DocumentPP_All.xml */; };
+		3E4E90992DF9CD0D00CDD4C9 /* DocumentVI_All.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3E4E90932DF9CD0D00CDD4C9 /* DocumentVI_All.xml */; };
+		3E4E909A2DF9CD0D00CDD4C9 /* DocumentDL_USA.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3E4E908F2DF9CD0D00CDD4C9 /* DocumentDL_USA.xml */; };
+		3E9E5EF966BCF4C09381D307 /* Pods_demosdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C541978FE7CD416113CFC1F /* Pods_demosdk.framework */; };
+		3EAFD2402CCF82FA007A831D /* flow.json in Resources */ = {isa = PBXBuildFile; fileRef = 3EAFD23F2CCF82FA007A831D /* flow.json */; };
+		3EB6E8482D5CBF37000F3A48 /* ConfigsComponentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB6E8472D5CBF1E000F3A48 /* ConfigsComponentsVC.swift */; };
+		9E2D2D622C5113FE00B5334D /* CustomThemeStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2D2D612C5113FE00B5334D /* CustomThemeStatus.swift */; };
+		9E2DEB122A1B75F000E8FD9F /* SdkConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DEB112A1B75F000E8FD9F /* SdkConfigurationManager.swift */; };
+		9E2DEB142A1B75FC00E8FD9F /* SelphiConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DEB132A1B75FC00E8FD9F /* SelphiConfiguration.swift */; };
+		9E2DEB162A1B760200E8FD9F /* SelphIDConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DEB152A1B760200E8FD9F /* SelphIDConfiguration.swift */; };
+		9E2DEB2B2A1BC1E300E8FD9F /* PhingersConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DEB2A2A1BC1E300E8FD9F /* PhingersConfiguration.swift */; };
+		9E7316EB2BC3EA4E00E210FC /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9E7316E92BC3D9E700E210FC /* PrivacyInfo.xcprivacy */; };
+		9E9061802BFE41D70016AE33 /* SampleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E90617F2BFE41D70016AE33 /* SampleHandler.swift */; };
+		9EB7A1BE2B554D8C0094CD6D /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EB7A1BD2B554D8C0094CD6D /* ReplayKit.framework */; };
+		9EB7A1C52B554D8C0094CD6D /* videoRecording.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9EB7A1BC2B554D8C0094CD6D /* videoRecording.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9ED063FA2B752715005E175D /* resources-selphi-2-0.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9ED063F82B752715005E175D /* resources-selphi-2-0.zip */; };
+		9ED2D8A22CA47A86001EF688 /* CustomThemeSelphID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED2D8A12CA47A84001EF688 /* CustomThemeSelphID.swift */; };
+		9ED2D8A42CAA9FF6001EF688 /* CustomThemeSelphi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED2D8A32CAA9FF6001EF688 /* CustomThemeSelphi.swift */; };
+		9EE5C7752B9B11260074B436 /* resources-selphid-2-0.zip in Resources */ = {isa = PBXBuildFile; fileRef = 9EE5C7742B9B11260074B436 /* resources-selphid-2-0.zip */; };
+		9EFB343A2A4999E10005C31E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EFB343C2A4999E10005C31E /* Localizable.strings */; };
+		D909E94F2AC2E88C0055B3CF /* VoiceIDConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D909E94E2AC2E88C0055B3CF /* VoiceIDConfiguration.swift */; };
+		D92966C52CAE9A6300F53577 /* CaptureConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92966C42CAE9A6300F53577 /* CaptureConfiguration.swift */; };
+		D95817DB2A5EAF26004A1C9B /* AudioPlayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95817DA2A5EAF26004A1C9B /* AudioPlayVC.swift */; };
+		D95817DF2A5EAF6C004A1C9B /* AudioPlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D95817DE2A5EAF6C004A1C9B /* AudioPlayView.xib */; };
+		D95817E52A5EB722004A1C9B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95817E42A5EB722004A1C9B /* UIView.swift */; };
+		D95817E72A5EC074004A1C9B /* AudioPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95817E62A5EC074004A1C9B /* AudioPlayView.swift */; };
+		D95817EA2A5EC4AA004A1C9B /* LocalURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95817E92A5EC4AA004A1C9B /* LocalURLs.swift */; };
+		D9B8985D2AA76E2E000AD65F /* PrefManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B8985C2AA76E2E000AD65F /* PrefManager.swift */; };
+		D9B8985F2AA76E65000AD65F /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B8985E2AA76E65000AD65F /* Preference.swift */; };
+		D9D2E38C2AC2F08100501393 /* VideoCallConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2E38B2AC2F08100501393 /* VideoCallConfiguration.swift */; };
+		D9D2E38E2AC2FA4E00501393 /* VideoIDConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2E38D2AC2FA4E00501393 /* VideoIDConfiguration.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9EB7A1C32B554D8C0094CD6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 13F510AC281937A5001E3CF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9EB7A1BB2B554D8C0094CD6D;
+			remoteInfo = videoRecording;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9EB7A1C92B554D8C0094CD6D /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9EB7A1C52B554D8C0094CD6D /* videoRecording.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		130CD5B2285A0D19005C7BB1 /* UISegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.swift; sourceTree = "<group>"; };
+		130CD5B8285A1BC7005C7BB1 /* EnvironmentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentVC.swift; sourceTree = "<group>"; };
+		130CD5BA285A1C11005C7BB1 /* EnvironmentVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentVM.swift; sourceTree = "<group>"; };
+		13A21E57286C3BF200F96E91 /* CustomThemeVideoId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomThemeVideoId.swift; sourceTree = "<group>"; };
+		13A43FBA286A014400C56A86 /* CustomThemeVideoCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomThemeVideoCall.swift; sourceTree = "<group>"; };
+		13CCB5B2283F7D0C005BDC3D /* demosdk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = demosdk.entitlements; sourceTree = "<group>"; };
+		13F510B4281937A5001E3CF1 /* demosdk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demosdk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13F510B7281937A5001E3CF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		13F510B9281937A5001E3CF1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		13F510BB281937A5001E3CF1 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		13F510BE281937A5001E3CF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		13F510C0281937A6001E3CF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		13F510C3281937A6001E3CF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		13F510C5281937A6001E3CF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13F510E9281937E3001E3CF1 /* fphi-selphid-widget-resources-sdk.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "fphi-selphid-widget-resources-sdk.zip"; sourceTree = "<group>"; };
+		13F510EA281937E3001E3CF1 /* fphi-selphi-widget-resources-sdk.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "fphi-selphi-widget-resources-sdk.zip"; sourceTree = "<group>"; };
+		13F7576A2823A2AA00A761D5 /* SDKManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKManager.swift; sourceTree = "<group>"; };
+		13F84C48282500A6001E26A5 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
+		1C34C2482E570FDA00649A4C /* flowVR.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = flowVR.json; sourceTree = "<group>"; };
+		31FBCE78299A8EAC00CCC253 /* CustomThemeQrReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomThemeQrReader.swift; sourceTree = "<group>"; };
+		3E4E903E2DEEE89F00CDD4C9 /* NfcConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NfcConfiguration.swift; sourceTree = "<group>"; };
+		3E4E90402DEF421F00CDD4C9 /* facephi_eyes_open_detector_2_0_0_model.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = facephi_eyes_open_detector_2_0_0_model.dat; sourceTree = "<group>"; };
+		3E4E90412DEF421F00CDD4C9 /* facephi_face_detector_1_1_0_model_tflite16.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = facephi_face_detector_1_1_0_model_tflite16.dat; sourceTree = "<group>"; };
+		3E4E90422DEF421F00CDD4C9 /* facephi_face_lower_occlusion_detector_1_0_model.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = facephi_face_lower_occlusion_detector_1_0_model.dat; sourceTree = "<group>"; };
+		3E4E90432DEF421F00CDD4C9 /* facephi_glasses_detector_1_0_model.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = facephi_glasses_detector_1_0_model.dat; sourceTree = "<group>"; };
+		3E4E90442DEF421F00CDD4C9 /* facephi_landmark_detector_2_0_1_model.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = facephi_landmark_detector_2_0_1_model.dat; sourceTree = "<group>"; };
+		3E4E90452DEF421F00CDD4C9 /* flow_face_capture_v2_1_0.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = flow_face_capture_v2_1_0.json; sourceTree = "<group>"; };
+		3E4E908D2DF9CD0D00CDD4C9 /* DocumentCU_All.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DocumentCU_All.xml; sourceTree = "<group>"; };
+		3E4E908E2DF9CD0D00CDD4C9 /* DocumentDL_All.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DocumentDL_All.xml; sourceTree = "<group>"; };
+		3E4E908F2DF9CD0D00CDD4C9 /* DocumentDL_USA.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DocumentDL_USA.xml; sourceTree = "<group>"; };
+		3E4E90902DF9CD0D00CDD4C9 /* DocumentFC_All.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DocumentFC_All.xml; sourceTree = "<group>"; };
+		3E4E90912DF9CD0D00CDD4C9 /* DocumentID_All.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DocumentID_All.xml; sourceTree = "<group>"; };
+		3E4E90922DF9CD0D00CDD4C9 /* DocumentPP_All.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DocumentPP_All.xml; sourceTree = "<group>"; };
+		3E4E90932DF9CD0D00CDD4C9 /* DocumentVI_All.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DocumentVI_All.xml; sourceTree = "<group>"; };
+		3E842CA42D43C43D00AB3CAC /* opencv2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = opencv2.xcframework; path = "../../PhingersTF-SPM/XCFrameworks/opencv2.xcframework"; sourceTree = "<group>"; };
+		3EAFD23F2CCF82FA007A831D /* flow.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = flow.json; sourceTree = "<group>"; };
+		3EB6E8472D5CBF1E000F3A48 /* ConfigsComponentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigsComponentsVC.swift; sourceTree = "<group>"; };
+		3F37A37E3F6521696D9315DE /* Pods-videoRecording.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-videoRecording.release.xcconfig"; path = "Target Support Files/Pods-videoRecording/Pods-videoRecording.release.xcconfig"; sourceTree = "<group>"; };
+		75CB47BEFC16E78DC2865EC9 /* Pods-demosdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demosdk.debug.xcconfig"; path = "Target Support Files/Pods-demosdk/Pods-demosdk.debug.xcconfig"; sourceTree = "<group>"; };
+		7C541978FE7CD416113CFC1F /* Pods_demosdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demosdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		898DD01809C0E2FD9BD2E1C6 /* Pods-videoRecording.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-videoRecording.debug.xcconfig"; path = "Target Support Files/Pods-videoRecording/Pods-videoRecording.debug.xcconfig"; sourceTree = "<group>"; };
+		9E1ABD982A02BD6F0033F7A6 /* selphidComponent.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = selphidComponent.xcframework; path = Pods/FPHISDKSelphIDComponent/selphidComponent.xcframework; sourceTree = "<group>"; };
+		9E2D2D612C5113FE00B5334D /* CustomThemeStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomThemeStatus.swift; sourceTree = "<group>"; };
+		9E2DEB112A1B75F000E8FD9F /* SdkConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SdkConfigurationManager.swift; sourceTree = "<group>"; };
+		9E2DEB132A1B75FC00E8FD9F /* SelphiConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelphiConfiguration.swift; sourceTree = "<group>"; };
+		9E2DEB152A1B760200E8FD9F /* SelphIDConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelphIDConfiguration.swift; sourceTree = "<group>"; };
+		9E2DEB2A2A1BC1E300E8FD9F /* PhingersConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhingersConfiguration.swift; sourceTree = "<group>"; };
+		9E7316E92BC3D9E700E210FC /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		9E8226802CAFEC11002D3AE5 /* selphiComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = selphiComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E90617F2BFE41D70016AE33 /* SampleHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleHandler.swift; sourceTree = "<group>"; };
+		9EB7A1BC2B554D8C0094CD6D /* videoRecording.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = videoRecording.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EB7A1BD2B554D8C0094CD6D /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		9EB7A1C22B554D8C0094CD6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EB7A1CA2B5555950094CD6D /* AGEVideoLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AGEVideoLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EB7A1D02B555B4E0094CD6D /* videoRecording.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = videoRecording.entitlements; sourceTree = "<group>"; };
+		9ED063F82B752715005E175D /* resources-selphi-2-0.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "resources-selphi-2-0.zip"; sourceTree = "<group>"; };
+		9ED2D8A12CA47A84001EF688 /* CustomThemeSelphID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomThemeSelphID.swift; sourceTree = "<group>"; };
+		9ED2D8A32CAA9FF6001EF688 /* CustomThemeSelphi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomThemeSelphi.swift; sourceTree = "<group>"; };
+		9EE5C7742B9B11260074B436 /* resources-selphid-2-0.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "resources-selphid-2-0.zip"; sourceTree = "<group>"; };
+		9EFB343B2A4999E10005C31E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9EFB343D2A4999ED0005C31E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9EFB343E2A499A0F0005C31E /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		C1AC29582BED17C700EC7C9B /* videocallComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = videocallComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1AC296C2BEFC1E000EC7C9B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C1AC29A02BEFCA2F00EC7C9B /* AgoraReplayKitExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraReplayKitExtension.xcframework; path = Pods/AgoraRtcEngine_iOS/AgoraReplayKitExtension.xcframework; sourceTree = "<group>"; };
+		C1AC29A72BEFCBBC00EC7C9B /* AgoraRtcKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraRtcKit.xcframework; path = Pods/AgoraRtcEngine_iOS/AgoraRtcKit.xcframework; sourceTree = "<group>"; };
+		C1AC29BC2BEFD65A00EC7C9B /* AgoraAiEchoCancellationExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraAiEchoCancellationExtension.xcframework; path = Pods/AgoraRtcEngine_iOS/AgoraAiEchoCancellationExtension.xcframework; sourceTree = "<group>"; };
+		C1AC29BD2BEFD65A00EC7C9B /* AgoraAiNoiseSuppressionExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraAiNoiseSuppressionExtension.xcframework; path = Pods/AgoraRtcEngine_iOS/AgoraAiNoiseSuppressionExtension.xcframework; sourceTree = "<group>"; };
+		C1AC29BE2BEFD65A00EC7C9B /* AgoraAudioBeautyExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraAudioBeautyExtension.xcframework; path = Pods/AgoraRtcEngine_iOS/AgoraAudioBeautyExtension.xcframework; sourceTree = "<group>"; };
+		C1AC29BF2BEFD65A00EC7C9B /* AgoraClearVisionExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraClearVisionExtension.xcframework; path = Pods/AgoraRtcEngine_iOS/AgoraClearVisionExtension.xcframework; sourceTree = "<group>"; };
+		C1AC29C02BEFD65A00EC7C9B /* AgoraContentInspectExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraContentInspectExtension.xcframework; path = Pods/AgoraRtcEngine_iOS/AgoraContentInspectExtension.xcframework; sourceTree = "<group>"; };
+		C1AC29C12BEFD65A00EC7C9B /* AgoraFaceCaptureExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraFaceCaptureExtension.xcframework; path = Pods/AgoraRtcEngine_iOS/AgoraFaceCaptureExtension.xcframework; sourceTree = "<group>"; };
+		C1AC29C22BEFD65A00EC7C9B /* AgoraFaceDetectionExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraFaceDetectionExtension.xcframework; path = Pods/AgoraRtcEngine_iOS/AgoraFaceDetectionExtension.xcframework; sourceTree = "<group>"; };
+		C1AC29C32BEFD65A00EC7C9B /* Agorafdkaac.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Agorafdkaac.xcframework; path = Pods/AgoraRtcEngine_iOS/Agorafdkaac.xcframework; sourceTree = "<group>"; };
+		C1AC29C42BEFD65A00EC7C9B /* Agoraffmpeg.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Agoraffmpeg.xcframework; path = Pods/AgoraRtcEngine_iOS/Agoraffmpeg.xcframework; sourceTree = "<group>"; };
+		C1AC29C52BEFD65A00EC7C9B /* AgoraLipSyncExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraLipSyncExtension.xcframework; path = Pods/AgoraRtcEngine_iOS/AgoraLipSyncExtension.xcframework; sourceTree = "<group>"; };
+		C1AC29C62BEFD65A00EC7C9B /* AgoraSoundTouch.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraSoundTouch.xcframework; path = Pods/AgoraRtcEngine_iOS/AgoraSoundTouch.xcframework; sourceTree = "<group>"; };
+		C1AC29C72BEFD65A00EC7C9B /* AgoraSpatialAudioExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraSpatialAudioExtension.xcframework; path = Pods/AgoraRtcEngine_iOS/AgoraSpatialAudioExtension.xcframework; sourceTree = "<group>"; };
+		C1AC29C82BEFD65A00EC7C9B /* AgoraVideoAv1DecoderExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraVideoAv1DecoderExtension.xcframework; path = Pods/AgoraRtcEngine_iOS/AgoraVideoAv1DecoderExtension.xcframework; sourceTree = "<group>"; };
+		C1AC29C92BEFD65A00EC7C9B /* AgoraVideoAv1EncoderExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraVideoAv1EncoderExtension.xcframework; path = Pods/AgoraRtcEngine_iOS/AgoraVideoAv1EncoderExtension.xcframework; sourceTree = "<group>"; };
+		C1AC29CA2BEFD65A00EC7C9B /* AgoraVideoDecoderExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraVideoDecoderExtension.xcframework; path = Pods/AgoraRtcEngine_iOS/AgoraVideoDecoderExtension.xcframework; sourceTree = "<group>"; };
+		C1AC29CB2BEFD65A00EC7C9B /* AgoraVideoEncoderExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraVideoEncoderExtension.xcframework; path = Pods/AgoraRtcEngine_iOS/AgoraVideoEncoderExtension.xcframework; sourceTree = "<group>"; };
+		C1AC29CC2BEFD65A00EC7C9B /* AgoraVideoQualityAnalyzerExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraVideoQualityAnalyzerExtension.xcframework; path = Pods/AgoraRtcEngine_iOS/AgoraVideoQualityAnalyzerExtension.xcframework; sourceTree = "<group>"; };
+		C1AC29CD2BEFD65A00EC7C9B /* AgoraVideoSegmentationExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraVideoSegmentationExtension.xcframework; path = Pods/AgoraRtcEngine_iOS/AgoraVideoSegmentationExtension.xcframework; sourceTree = "<group>"; };
+		C1AC2A472BF2548B00EC7C9B /* videoRecordingComponent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = videoRecordingComponent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C675B680C369878FD6AB74C9 /* Pods-demosdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demosdk.release.xcconfig"; path = "Target Support Files/Pods-demosdk/Pods-demosdk.release.xcconfig"; sourceTree = "<group>"; };
+		D909E94E2AC2E88C0055B3CF /* VoiceIDConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceIDConfiguration.swift; sourceTree = "<group>"; };
+		D92966C42CAE9A6300F53577 /* CaptureConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureConfiguration.swift; sourceTree = "<group>"; };
+		D95817DA2A5EAF26004A1C9B /* AudioPlayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayVC.swift; sourceTree = "<group>"; };
+		D95817DE2A5EAF6C004A1C9B /* AudioPlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioPlayView.xib; sourceTree = "<group>"; };
+		D95817E42A5EB722004A1C9B /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		D95817E62A5EC074004A1C9B /* AudioPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayView.swift; sourceTree = "<group>"; };
+		D95817E92A5EC4AA004A1C9B /* LocalURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalURLs.swift; sourceTree = "<group>"; };
+		D9B8985C2AA76E2E000AD65F /* PrefManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefManager.swift; sourceTree = "<group>"; };
+		D9B8985E2AA76E65000AD65F /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
+		D9D2E38B2AC2F08100501393 /* VideoCallConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCallConfiguration.swift; sourceTree = "<group>"; };
+		D9D2E38D2AC2FA4E00501393 /* VideoIDConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoIDConfiguration.swift; sourceTree = "<group>"; };
+		FBFBF754F901C8CEC7FE3030 /* Pods_videoRecording.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_videoRecording.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13F510B1281937A5001E3CF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E9E5EF966BCF4C09381D307 /* Pods_demosdk.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EB7A1B92B554D8C0094CD6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EB7A1BE2B554D8C0094CD6D /* ReplayKit.framework in Frameworks */,
+				24C9DE6545FB27A4D375A033 /* Pods_videoRecording.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		130CD5B1285A0CF8005C7BB1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				130CD5B2285A0D19005C7BB1 /* UISegmentedControl.swift */,
+				D95817E42A5EB722004A1C9B /* UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		130CD5B6285A1B6A005C7BB1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				13F510BB281937A5001E3CF1 /* MainVC.swift */,
+				13F84C48282500A6001E26A5 /* MainVM.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		130CD5B7285A1B70005C7BB1 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				130CD5B8285A1BC7005C7BB1 /* EnvironmentVC.swift */,
+				130CD5BA285A1C11005C7BB1 /* EnvironmentVM.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		13A21E56286C3BD300F96E91 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				9ED2D8A32CAA9FF6001EF688 /* CustomThemeSelphi.swift */,
+				9ED2D8A12CA47A84001EF688 /* CustomThemeSelphID.swift */,
+				13A43FBA286A014400C56A86 /* CustomThemeVideoCall.swift */,
+				13A21E57286C3BF200F96E91 /* CustomThemeVideoId.swift */,
+				31FBCE78299A8EAC00CCC253 /* CustomThemeQrReader.swift */,
+				9E2D2D612C5113FE00B5334D /* CustomThemeStatus.swift */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		13F510AB281937A5001E3CF1 = {
+			isa = PBXGroup;
+			children = (
+				9E7316E92BC3D9E700E210FC /* PrivacyInfo.xcprivacy */,
+				13F510B6281937A5001E3CF1 /* demosdk */,
+				9EB7A1BF2B554D8C0094CD6D /* videoRecording */,
+				13F510B5281937A5001E3CF1 /* Products */,
+				8F76645D1138E0E4EF87244B /* Pods */,
+				C5DCDE1729264840C395A787 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		13F510B5281937A5001E3CF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13F510B4281937A5001E3CF1 /* demosdk.app */,
+				9EB7A1BC2B554D8C0094CD6D /* videoRecording.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		13F510B6281937A5001E3CF1 /* demosdk */ = {
+			isa = PBXGroup;
+			children = (
+				13CCB5B2283F7D0C005BDC3D /* demosdk.entitlements */,
+				D95817E82A5EC4A2004A1C9B /* Helpers */,
+				13F7576D2824152400A761D5 /* Library */,
+				130CD5B1285A0CF8005C7BB1 /* Extensions */,
+				13F7576C2823A5F100A761D5 /* Scenes */,
+				13F510E7281937E3001E3CF1 /* Resources */,
+				13A21E56286C3BD300F96E91 /* Themes */,
+				13F510B7281937A5001E3CF1 /* AppDelegate.swift */,
+				13F510B9281937A5001E3CF1 /* SceneDelegate.swift */,
+				13F510C2281937A6001E3CF1 /* LaunchScreen.storyboard */,
+				13F510C5281937A6001E3CF1 /* Info.plist */,
+			);
+			path = demosdk;
+			sourceTree = "<group>";
+		};
+		13F510E7281937E3001E3CF1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E904E2DEF421F00CDD4C9 /* Reader */,
+				3EAFD23F2CCF82FA007A831D /* flow.json */,
+				1C34C2482E570FDA00649A4C /* flowVR.json */,
+				13F510C0281937A6001E3CF1 /* Assets.xcassets */,
+				13F510E8281937E3001E3CF1 /* WidgetResources */,
+				9EFB343C2A4999E10005C31E /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		13F510E8281937E3001E3CF1 /* WidgetResources */ = {
+			isa = PBXGroup;
+			children = (
+				9EE5C7742B9B11260074B436 /* resources-selphid-2-0.zip */,
+				9ED063F82B752715005E175D /* resources-selphi-2-0.zip */,
+				13F510E9281937E3001E3CF1 /* fphi-selphid-widget-resources-sdk.zip */,
+				13F510EA281937E3001E3CF1 /* fphi-selphi-widget-resources-sdk.zip */,
+			);
+			path = WidgetResources;
+			sourceTree = "<group>";
+		};
+		13F7576C2823A5F100A761D5 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D95817D92A5EAED2004A1C9B /* AudioPlay */,
+				13F510BD281937A5001E3CF1 /* Main.storyboard */,
+				3EB6E8472D5CBF1E000F3A48 /* ConfigsComponentsVC.swift */,
+				130CD5B7285A1B70005C7BB1 /* Environment */,
+				130CD5B6285A1B6A005C7BB1 /* Main */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		13F7576D2824152400A761D5 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				9E2DEB102A1B75D100E8FD9F /* SDKConfigurations */,
+				13F7576A2823A2AA00A761D5 /* SDKManager.swift */,
+				D9B8985C2AA76E2E000AD65F /* PrefManager.swift */,
+				D9B8985E2AA76E65000AD65F /* Preference.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		3E4E90462DEF421F00CDD4C9 /* ReaderHelper */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E90402DEF421F00CDD4C9 /* facephi_eyes_open_detector_2_0_0_model.dat */,
+				3E4E90412DEF421F00CDD4C9 /* facephi_face_detector_1_1_0_model_tflite16.dat */,
+				3E4E90422DEF421F00CDD4C9 /* facephi_face_lower_occlusion_detector_1_0_model.dat */,
+				3E4E90432DEF421F00CDD4C9 /* facephi_glasses_detector_1_0_model.dat */,
+				3E4E90442DEF421F00CDD4C9 /* facephi_landmark_detector_2_0_1_model.dat */,
+				3E4E90452DEF421F00CDD4C9 /* flow_face_capture_v2_1_0.json */,
+			);
+			path = ReaderHelper;
+			sourceTree = "<group>";
+		};
+		3E4E904E2DEF421F00CDD4C9 /* Reader */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E90462DEF421F00CDD4C9 /* ReaderHelper */,
+				3E4E908D2DF9CD0D00CDD4C9 /* DocumentCU_All.xml */,
+				3E4E908E2DF9CD0D00CDD4C9 /* DocumentDL_All.xml */,
+				3E4E908F2DF9CD0D00CDD4C9 /* DocumentDL_USA.xml */,
+				3E4E90902DF9CD0D00CDD4C9 /* DocumentFC_All.xml */,
+				3E4E90912DF9CD0D00CDD4C9 /* DocumentID_All.xml */,
+				3E4E90922DF9CD0D00CDD4C9 /* DocumentPP_All.xml */,
+				3E4E90932DF9CD0D00CDD4C9 /* DocumentVI_All.xml */,
+			);
+			path = Reader;
+			sourceTree = "<group>";
+		};
+		8F76645D1138E0E4EF87244B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75CB47BEFC16E78DC2865EC9 /* Pods-demosdk.debug.xcconfig */,
+				C675B680C369878FD6AB74C9 /* Pods-demosdk.release.xcconfig */,
+				898DD01809C0E2FD9BD2E1C6 /* Pods-videoRecording.debug.xcconfig */,
+				3F37A37E3F6521696D9315DE /* Pods-videoRecording.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9E2DEB102A1B75D100E8FD9F /* SDKConfigurations */ = {
+			isa = PBXGroup;
+			children = (
+				9E2DEB112A1B75F000E8FD9F /* SdkConfigurationManager.swift */,
+				9E2DEB132A1B75FC00E8FD9F /* SelphiConfiguration.swift */,
+				9E2DEB152A1B760200E8FD9F /* SelphIDConfiguration.swift */,
+				3E4E903E2DEEE89F00CDD4C9 /* NfcConfiguration.swift */,
+				9E2DEB2A2A1BC1E300E8FD9F /* PhingersConfiguration.swift */,
+				D909E94E2AC2E88C0055B3CF /* VoiceIDConfiguration.swift */,
+				D9D2E38B2AC2F08100501393 /* VideoCallConfiguration.swift */,
+				D9D2E38D2AC2FA4E00501393 /* VideoIDConfiguration.swift */,
+				D92966C42CAE9A6300F53577 /* CaptureConfiguration.swift */,
+			);
+			path = SDKConfigurations;
+			sourceTree = "<group>";
+		};
+		9EB7A1BF2B554D8C0094CD6D /* videoRecording */ = {
+			isa = PBXGroup;
+			children = (
+				9EB7A1D02B555B4E0094CD6D /* videoRecording.entitlements */,
+				9EB7A1C22B554D8C0094CD6D /* Info.plist */,
+				9E90617F2BFE41D70016AE33 /* SampleHandler.swift */,
+			);
+			path = videoRecording;
+			sourceTree = "<group>";
+		};
+		C5DCDE1729264840C395A787 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E842CA42D43C43D00AB3CAC /* opencv2.xcframework */,
+				9E8226802CAFEC11002D3AE5 /* selphiComponent.framework */,
+				C1AC2A472BF2548B00EC7C9B /* videoRecordingComponent.framework */,
+				C1AC29BC2BEFD65A00EC7C9B /* AgoraAiEchoCancellationExtension.xcframework */,
+				C1AC29BD2BEFD65A00EC7C9B /* AgoraAiNoiseSuppressionExtension.xcframework */,
+				C1AC29BE2BEFD65A00EC7C9B /* AgoraAudioBeautyExtension.xcframework */,
+				C1AC29BF2BEFD65A00EC7C9B /* AgoraClearVisionExtension.xcframework */,
+				C1AC29C02BEFD65A00EC7C9B /* AgoraContentInspectExtension.xcframework */,
+				C1AC29C12BEFD65A00EC7C9B /* AgoraFaceCaptureExtension.xcframework */,
+				C1AC29C22BEFD65A00EC7C9B /* AgoraFaceDetectionExtension.xcframework */,
+				C1AC29C32BEFD65A00EC7C9B /* Agorafdkaac.xcframework */,
+				C1AC29C42BEFD65A00EC7C9B /* Agoraffmpeg.xcframework */,
+				C1AC29C52BEFD65A00EC7C9B /* AgoraLipSyncExtension.xcframework */,
+				C1AC29C62BEFD65A00EC7C9B /* AgoraSoundTouch.xcframework */,
+				C1AC29C72BEFD65A00EC7C9B /* AgoraSpatialAudioExtension.xcframework */,
+				C1AC29C82BEFD65A00EC7C9B /* AgoraVideoAv1DecoderExtension.xcframework */,
+				C1AC29C92BEFD65A00EC7C9B /* AgoraVideoAv1EncoderExtension.xcframework */,
+				C1AC29CA2BEFD65A00EC7C9B /* AgoraVideoDecoderExtension.xcframework */,
+				C1AC29CB2BEFD65A00EC7C9B /* AgoraVideoEncoderExtension.xcframework */,
+				C1AC29CC2BEFD65A00EC7C9B /* AgoraVideoQualityAnalyzerExtension.xcframework */,
+				C1AC29CD2BEFD65A00EC7C9B /* AgoraVideoSegmentationExtension.xcframework */,
+				C1AC29A72BEFCBBC00EC7C9B /* AgoraRtcKit.xcframework */,
+				C1AC29A02BEFCA2F00EC7C9B /* AgoraReplayKitExtension.xcframework */,
+				C1AC29582BED17C700EC7C9B /* videocallComponent.framework */,
+				9EB7A1CA2B5555950094CD6D /* AGEVideoLayout.framework */,
+				9E1ABD982A02BD6F0033F7A6 /* selphidComponent.xcframework */,
+				9EB7A1BD2B554D8C0094CD6D /* ReplayKit.framework */,
+				C1AC296C2BEFC1E000EC7C9B /* UIKit.framework */,
+				7C541978FE7CD416113CFC1F /* Pods_demosdk.framework */,
+				FBFBF754F901C8CEC7FE3030 /* Pods_videoRecording.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D95817D92A5EAED2004A1C9B /* AudioPlay */ = {
+			isa = PBXGroup;
+			children = (
+				D95817DE2A5EAF6C004A1C9B /* AudioPlayView.xib */,
+				D95817DA2A5EAF26004A1C9B /* AudioPlayVC.swift */,
+				D95817E62A5EC074004A1C9B /* AudioPlayView.swift */,
+			);
+			path = AudioPlay;
+			sourceTree = "<group>";
+		};
+		D95817E82A5EC4A2004A1C9B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D95817E92A5EC4AA004A1C9B /* LocalURLs.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		13F510B3281937A5001E3CF1 /* demosdk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13F510DE281937A6001E3CF1 /* Build configuration list for PBXNativeTarget "demosdk" */;
+			buildPhases = (
+				A5BB7A57599ABFBD65C83D46 /* [CP] Check Pods Manifest.lock */,
+				13F510B0281937A5001E3CF1 /* Sources */,
+				13F510B1281937A5001E3CF1 /* Frameworks */,
+				13F510B2281937A5001E3CF1 /* Resources */,
+				13F78C3D2851DFCA005B7DDF /* ShellScript */,
+				9EB7A1C92B554D8C0094CD6D /* Embed Foundation Extensions */,
+				A03CCA925F22A90E4AC6A712 /* [CP] Embed Pods Frameworks */,
+				F825CE7EE442F622F17CC79E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9EB7A1C42B554D8C0094CD6D /* PBXTargetDependency */,
+			);
+			name = demosdk;
+			productName = demosdk;
+			productReference = 13F510B4281937A5001E3CF1 /* demosdk.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9EB7A1BB2B554D8C0094CD6D /* videoRecording */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EB7A1C62B554D8C0094CD6D /* Build configuration list for PBXNativeTarget "videoRecording" */;
+			buildPhases = (
+				F381081C1D75F559AE48A881 /* [CP] Check Pods Manifest.lock */,
+				9EB7A1B82B554D8C0094CD6D /* Sources */,
+				9EB7A1B92B554D8C0094CD6D /* Frameworks */,
+				9EB7A1BA2B554D8C0094CD6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = videoRecording;
+			productName = videoRecording;
+			productReference = 9EB7A1BC2B554D8C0094CD6D /* videoRecording.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		13F510AC281937A5001E3CF1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					13F510B3281937A5001E3CF1 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					9EB7A1BB2B554D8C0094CD6D = {
+						CreatedOnToolsVersion = 15.0.1;
+						LastSwiftMigration = 1530;
+					};
+				};
+			};
+			buildConfigurationList = 13F510AF281937A5001E3CF1 /* Build configuration list for PBXProject "demosdk" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				es,
+				"pt-PT",
+			);
+			mainGroup = 13F510AB281937A5001E3CF1;
+			packageReferences = (
+				1C485FD52ED5CE9C008E8488 /* XCRemoteSwiftPackageReference "SDK-SelphidRGLComponent" */,
+				1CC09D942ED4661D0096EE68 /* XCRemoteSwiftPackageReference "SDK-StatusPackage-SPM" */,
+				1CC09D972ED466710096EE68 /* XCRemoteSwiftPackageReference "SDK-TrackingPackage-SPM" */,
+				1CC09D9A2ED4669A0096EE68 /* XCRemoteSwiftPackageReference "SDK-TokenizePackage-SPM" */,
+				1CC09D9D2ED466CE0096EE68 /* XCRemoteSwiftPackageReference "SDK-Selphi_component-SPM" */,
+				1C485FBE2ED5A9CB008E8488 /* XCRemoteSwiftPackageReference "SDK-PhingersTF_Component-SPM" */,
+				1C485FBF2ED5B67D008E8488 /* XCRemoteSwiftPackageReference "SDK-VideoRecording-SPM" */,
+				1C485FC52ED5B93E008E8488 /* XCRemoteSwiftPackageReference "SDK-VideoCallPackage-SPM" */,
+				1C485FC82ED5B988008E8488 /* XCRemoteSwiftPackageReference "SDK-VideoIDPackage-SPM" */,
+				1C485FCB2ED5BE08008E8488 /* XCRemoteSwiftPackageReference "SDK-CapturePackage-SPM" */,
+				1C485FD02ED5BF90008E8488 /* XCRemoteSwiftPackageReference "SDK-SdkPackage-SPM" */,
+				1C485FD82ED5D405008E8488 /* XCRemoteSwiftPackageReference "SDK-NFC_component-SPM" */,
+				1C485FDD2ED5D46B008E8488 /* XCRemoteSwiftPackageReference "SDK-VoicePackage-SPM" */,
+			);
+			productRefGroup = 13F510B5281937A5001E3CF1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13F510B3281937A5001E3CF1 /* demosdk */,
+				9EB7A1BB2B554D8C0094CD6D /* videoRecording */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		13F510B2281937A5001E3CF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EE5C7752B9B11260074B436 /* resources-selphid-2-0.zip in Resources */,
+				9E7316EB2BC3EA4E00E210FC /* PrivacyInfo.xcprivacy in Resources */,
+				13F510C4281937A6001E3CF1 /* LaunchScreen.storyboard in Resources */,
+				9EFB343A2A4999E10005C31E /* Localizable.strings in Resources */,
+				13F510C1281937A6001E3CF1 /* Assets.xcassets in Resources */,
+				13F510EC281937E3001E3CF1 /* fphi-selphi-widget-resources-sdk.zip in Resources */,
+				9ED063FA2B752715005E175D /* resources-selphi-2-0.zip in Resources */,
+				3EAFD2402CCF82FA007A831D /* flow.json in Resources */,
+				13F510EB281937E3001E3CF1 /* fphi-selphid-widget-resources-sdk.zip in Resources */,
+				13F510BF281937A5001E3CF1 /* Main.storyboard in Resources */,
+				D95817DF2A5EAF6C004A1C9B /* AudioPlayView.xib in Resources */,
+				3E4E904F2DEF421F00CDD4C9 /* facephi_eyes_open_detector_2_0_0_model.dat in Resources */,
+				3E4E90512DEF421F00CDD4C9 /* flow_face_capture_v2_1_0.json in Resources */,
+				3E4E90552DEF421F00CDD4C9 /* facephi_landmark_detector_2_0_1_model.dat in Resources */,
+				3E4E90562DEF421F00CDD4C9 /* facephi_glasses_detector_1_0_model.dat in Resources */,
+				3E4E90942DF9CD0D00CDD4C9 /* DocumentFC_All.xml in Resources */,
+				3E4E90952DF9CD0D00CDD4C9 /* DocumentCU_All.xml in Resources */,
+				3E4E90962DF9CD0D00CDD4C9 /* DocumentDL_All.xml in Resources */,
+				3E4E90972DF9CD0D00CDD4C9 /* DocumentID_All.xml in Resources */,
+				1C34C2492E570FDA00649A4C /* flowVR.json in Resources */,
+				3E4E90982DF9CD0D00CDD4C9 /* DocumentPP_All.xml in Resources */,
+				3E4E90992DF9CD0D00CDD4C9 /* DocumentVI_All.xml in Resources */,
+				3E4E909A2DF9CD0D00CDD4C9 /* DocumentDL_USA.xml in Resources */,
+				3E4E90572DEF421F00CDD4C9 /* facephi_face_detector_1_1_0_model_tflite16.dat in Resources */,
+				3E4E905B2DEF421F00CDD4C9 /* facephi_face_lower_occlusion_detector_1_0_model.dat in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EB7A1BA2B554D8C0094CD6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13F78C3D2851DFCA005B7DDF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+		A03CCA925F22A90E4AC6A712 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-demosdk/Pods-demosdk-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-demosdk/Pods-demosdk-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-demosdk/Pods-demosdk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5BB7A57599ABFBD65C83D46 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-demosdk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F381081C1D75F559AE48A881 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-videoRecording-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F825CE7EE442F622F17CC79E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-demosdk/Pods-demosdk-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-demosdk/Pods-demosdk-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-demosdk/Pods-demosdk-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13F510B0281937A5001E3CF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9ED2D8A42CAA9FF6001EF688 /* CustomThemeSelphi.swift in Sources */,
+				9E2DEB142A1B75FC00E8FD9F /* SelphiConfiguration.swift in Sources */,
+				D92966C52CAE9A6300F53577 /* CaptureConfiguration.swift in Sources */,
+				13F510BC281937A5001E3CF1 /* MainVC.swift in Sources */,
+				D95817E52A5EB722004A1C9B /* UIView.swift in Sources */,
+				13F84C49282500A6001E26A5 /* MainVM.swift in Sources */,
+				9ED2D8A22CA47A86001EF688 /* CustomThemeSelphID.swift in Sources */,
+				9E2DEB162A1B760200E8FD9F /* SelphIDConfiguration.swift in Sources */,
+				13F7576B2823A2AA00A761D5 /* SDKManager.swift in Sources */,
+				3E4E903F2DEEE89F00CDD4C9 /* NfcConfiguration.swift in Sources */,
+				9E2DEB2B2A1BC1E300E8FD9F /* PhingersConfiguration.swift in Sources */,
+				130CD5B9285A1BC7005C7BB1 /* EnvironmentVC.swift in Sources */,
+				D9B8985D2AA76E2E000AD65F /* PrefManager.swift in Sources */,
+				D95817E72A5EC074004A1C9B /* AudioPlayView.swift in Sources */,
+				130CD5BB285A1C11005C7BB1 /* EnvironmentVM.swift in Sources */,
+				9E2D2D622C5113FE00B5334D /* CustomThemeStatus.swift in Sources */,
+				9E2DEB122A1B75F000E8FD9F /* SdkConfigurationManager.swift in Sources */,
+				D9D2E38E2AC2FA4E00501393 /* VideoIDConfiguration.swift in Sources */,
+				13A21E58286C3BF200F96E91 /* CustomThemeVideoId.swift in Sources */,
+				D9B8985F2AA76E65000AD65F /* Preference.swift in Sources */,
+				13A43FBB286A014400C56A86 /* CustomThemeVideoCall.swift in Sources */,
+				D909E94F2AC2E88C0055B3CF /* VoiceIDConfiguration.swift in Sources */,
+				D95817EA2A5EC4AA004A1C9B /* LocalURLs.swift in Sources */,
+				D95817DB2A5EAF26004A1C9B /* AudioPlayVC.swift in Sources */,
+				31FBCE79299A8EAC00CCC253 /* CustomThemeQrReader.swift in Sources */,
+				13F510B8281937A5001E3CF1 /* AppDelegate.swift in Sources */,
+				D9D2E38C2AC2F08100501393 /* VideoCallConfiguration.swift in Sources */,
+				3EB6E8482D5CBF37000F3A48 /* ConfigsComponentsVC.swift in Sources */,
+				13F510BA281937A5001E3CF1 /* SceneDelegate.swift in Sources */,
+				130CD5B3285A0D19005C7BB1 /* UISegmentedControl.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EB7A1B82B554D8C0094CD6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E9061802BFE41D70016AE33 /* SampleHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9EB7A1C42B554D8C0094CD6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9EB7A1BB2B554D8C0094CD6D /* videoRecording */;
+			targetProxy = 9EB7A1C32B554D8C0094CD6D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		13F510BD281937A5001E3CF1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13F510BE281937A5001E3CF1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		13F510C2281937A6001E3CF1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				13F510C3281937A6001E3CF1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9EFB343C2A4999E10005C31E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9EFB343B2A4999E10005C31E /* en */,
+				9EFB343D2A4999ED0005C31E /* es */,
+				9EFB343E2A499A0F0005C31E /* pt-PT */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		13F510DC281937A6001E3CF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		13F510DD281937A6001E3CF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		13F510DF281937A6001E3CF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75CB47BEFC16E78DC2865EC9 /* Pods-demosdk.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = demosdk/demosdk.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MF6SNMX2TU;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				EXCLUDED_ARCHS = armv7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleDataTransport\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleToolboxForMac\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilitiesComponents\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/JWTDecode\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PromisesObjC\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Protobuf\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Starscream\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/TensorFlowLiteObjC\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/lottie-ios\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/nanopb\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/zipzap\"",
+					"\"${PODS_ROOT}/AgoraRtcEngine_iOS\"",
+					"\"${PODS_ROOT}/FPHIPhingersComponent\"/**",
+					"\"${PODS_ROOT}/FPHISDKCoreComponent\"",
+					"\"${PODS_ROOT}/FPHISDKLicensingComponent\"",
+					"\"${PODS_ROOT}/FPHISDKMainComponent\"",
+					"\"${PODS_ROOT}/FPHISDKQRComponent\"",
+					"\"${PODS_ROOT}/FPHISDKSelphiComponent\"",
+					"\"${PODS_ROOT}/FPHISDKTrackingComponent\"",
+					"\"${PODS_ROOT}/FPHISDKVideoCallComponent\"",
+					"\"${PODS_ROOT}/FPHISDKVideoIDComponent\"",
+					"\"${PODS_ROOT}/FPHISelphIDComponent\"",
+					"\"${PODS_ROOT}/FPHISelphiFrameworks\"",
+					"\"${PODS_ROOT}/FPhiMBWidgetiOS\"",
+					"\"${PODS_ROOT}/FPhiPhingersWidgetiOS/Frameworks\"",
+					"\"${PODS_ROOT}/FPhiSelphIDWidgetiOS\"",
+					"\"${PODS_ROOT}/MLImage/Frameworks\"",
+					"\"${PODS_ROOT}/MLKitCommon/Frameworks\"",
+					"\"${PODS_ROOT}/MLKitTextRecognition/Frameworks\"",
+					"\"${PODS_ROOT}/MLKitTextRecognitionCommon/Frameworks\"",
+					"\"${PODS_ROOT}/MLKitTextRecognitionKorean/Frameworks\"",
+					"\"${PODS_ROOT}/MLKitVision/Frameworks\"",
+					"\"${PODS_ROOT}/OnyxCamera/OnyxCamera/Frameworks\"",
+					"\"${PODS_ROOT}/OpenCV\"",
+					"\"${PODS_ROOT}/TensorFlowLiteC/Frameworks\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/AgoraRtcEngine_iOS/AINS\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/AgoraRtcEngine_iOS/AV1Dec\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/AgoraRtcEngine_iOS/ContentInspect\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/AgoraRtcEngine_iOS/FullAudioFormat\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/AgoraRtcEngine_iOS/ROIEnc\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/AgoraRtcEngine_iOS/ReplayKit\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/AgoraRtcEngine_iOS/RtcBasic\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/AgoraRtcEngine_iOS/SpatialAudio\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/AgoraRtcEngine_iOS/SuperResolution\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/AgoraRtcEngine_iOS/VideoPreprocess\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/AgoraRtcEngine_iOS/VirtualBackground\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHIPhingersComponent\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKCoreComponent\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKLicensingComponent\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKMainComponent\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKQRComponent\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKSelphiComponent\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKTrackingComponent\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKVideoCallComponent\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISDKVideoIDComponent\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISelphIDComponent\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/FPHISelphiFrameworks\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/FPhiMBWidgetiOS\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/FPhiSelphIDWidgetiOS\"",
+					"\"${PODS_XCFRAMEWORKS_BUILD_DIR}/TensorFlowLiteC/Core\"",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = demosdk/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Demo Full SDK";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Esta app requiere el permiso para acceder NFC";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Esta app requiere el permiso para acceder a tu cámara";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Esta app requiere permisos de localización";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Esta app requiere el permiso para acceder al micrófono";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.4.0;
+				OTHER_CODE_SIGN_FLAGS = "--generate-entitlement-der";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ld_classic",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.facephi.sdk.demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		13F510E0281937A6001E3CF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C675B680C369878FD6AB74C9 /* Pods-demosdk.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = demosdk/demosdk.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MF6SNMX2TU;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				EXCLUDED_ARCHS = armv7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = demosdk/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Demo Full SDK";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
+				INFOPLIST_KEY_NFCReaderUsageDescription = "Esta app requiere el permiso para acceder NFC";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Esta app requiere el permiso para acceder a tu cámara";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Esta app requiere permisos de localización";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Esta app requiere el permiso para acceder al micrófono";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.4.0;
+				OTHER_CODE_SIGN_FLAGS = "--generate-entitlement-der";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ld_classic",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.facephi.sdk.demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		9EB7A1C72B554D8C0094CD6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 898DD01809C0E2FD9BD2E1C6 /* Pods-videoRecording.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = videoRecording/videoRecording.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MF6SNMX2TU;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = videoRecording/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = videoRecording;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/videoRecording/AgoraHelpers",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.5;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.facephi.sdk.demo.videoRecording;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9EB7A1C82B554D8C0094CD6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F37A37E3F6521696D9315DE /* Pods-videoRecording.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = videoRecording/videoRecording.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MF6SNMX2TU;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = videoRecording/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = videoRecording;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/videoRecording/AgoraHelpers",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.5;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.facephi.sdk.demo.videoRecording;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13F510AF281937A5001E3CF1 /* Build configuration list for PBXProject "demosdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13F510DC281937A6001E3CF1 /* Debug */,
+				13F510DD281937A6001E3CF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13F510DE281937A6001E3CF1 /* Build configuration list for PBXNativeTarget "demosdk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13F510DF281937A6001E3CF1 /* Debug */,
+				13F510E0281937A6001E3CF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9EB7A1C62B554D8C0094CD6D /* Build configuration list for PBXNativeTarget "videoRecording" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EB7A1C72B554D8C0094CD6D /* Debug */,
+				9EB7A1C82B554D8C0094CD6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1C485FBE2ED5A9CB008E8488 /* XCRemoteSwiftPackageReference "SDK-PhingersTF_Component-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:facephi-clienters/SDK-PhingersTF_Component-SPM.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.2;
+			};
+		};
+		1C485FBF2ED5B67D008E8488 /* XCRemoteSwiftPackageReference "SDK-VideoRecording-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:facephi-clienters/SDK-VideoRecording-SPM.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.1;
+			};
+		};
+		1C485FC52ED5B93E008E8488 /* XCRemoteSwiftPackageReference "SDK-VideoCallPackage-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:facephi-clienters/SDK-VideoCallPackage-SPM.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.1;
+			};
+		};
+		1C485FC82ED5B988008E8488 /* XCRemoteSwiftPackageReference "SDK-VideoIDPackage-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:facephi-clienters/SDK-VideoIDPackage-SPM.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.1;
+			};
+		};
+		1C485FCB2ED5BE08008E8488 /* XCRemoteSwiftPackageReference "SDK-CapturePackage-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:facephi-clienters/SDK-CapturePackage-SPM.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.0;
+			};
+		};
+		1C485FD02ED5BF90008E8488 /* XCRemoteSwiftPackageReference "SDK-SdkPackage-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:facephi-clienters/SDK-SdkPackage-SPM.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.0;
+			};
+		};
+		1C485FD52ED5CE9C008E8488 /* XCRemoteSwiftPackageReference "SDK-SelphidRGLComponent" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:facephi-clienters/SDK-SelphidRGLComponent.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.3;
+			};
+		};
+		1C485FD82ED5D405008E8488 /* XCRemoteSwiftPackageReference "SDK-NFC_component-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:facephi-clienters/SDK-NFC_component-SPM.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.12.0;
+			};
+		};
+		1C485FDD2ED5D46B008E8488 /* XCRemoteSwiftPackageReference "SDK-VoicePackage-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:facephi-clienters/SDK-VoicePackage-SPM.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.1;
+			};
+		};
+		1CC09D942ED4661D0096EE68 /* XCRemoteSwiftPackageReference "SDK-StatusPackage-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:facephi-clienters/SDK-StatusPackage-SPM.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.4.0;
+			};
+		};
+		1CC09D972ED466710096EE68 /* XCRemoteSwiftPackageReference "SDK-TrackingPackage-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:facephi-clienters/SDK-TrackingPackage-SPM.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.4.0;
+			};
+		};
+		1CC09D9A2ED4669A0096EE68 /* XCRemoteSwiftPackageReference "SDK-TokenizePackage-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:facephi-clienters/SDK-TokenizePackage-SPM.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.4.0;
+			};
+		};
+		1CC09D9D2ED466CE0096EE68 /* XCRemoteSwiftPackageReference "SDK-Selphi_component-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:facephi-clienters/SDK-Selphi_component-SPM.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+	};
+	rootObject = 13F510AC281937A5001E3CF1 /* Project object */;
+}

@@ -87,7 +87,7 @@ class SDKManager {
         }
     }
 
-    public func launchSignatureVideoId(data: VideoIDConfigurationData, setTracking: Bool, viewController: UIViewController, output: @escaping (SdkResult<String>) -> Void)
+    public func launchSignatureVideoId(data: VideoIDConfigurationData, setTracking: Bool, viewController: UIViewController, output: @escaping (SdkResult<VideoIDResult>) -> Void)
     {
         log("LAUNCH VIDEO ID")
         

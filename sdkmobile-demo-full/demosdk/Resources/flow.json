@@ -1,0 +1,79 @@
+[
+    {
+        "id": "00000000-7ca3-4385-9198-d1913f91a3f4",
+        "automatic": true,
+        "nameFlow": "Selphi Selphid",
+        "operation": {
+            "enableTracking": true,
+            "operationType": "ONBOARDING",
+            "start": "7a8e0428-ea9f-469d-9f1e-8c8cbfa4e3c3"
+        },
+        "customization": {
+            "colors": {
+                "primaryColor": {
+                    "light": "7636FC",
+                    "dark": "7636FC"
+                },
+                "secondaryColor": {
+                    "light": "03DAC5",
+                    "dark": "03DAC5"
+                },
+                "backgroundColor": {
+                    "light": "FFFFFF",
+                    "dark": "1E1E1E"
+                },
+                "errorColor": {
+                    "light": "DD3631",
+                    "dark": "DD3631"
+                },
+                "successColor": {
+                    "light": "07A13A",
+                    "dark": "07A13A"
+                },
+                "neutralColor": {
+                    "light": "202C4B",
+                    "dark": "202C4B"
+                },
+                "accentColor": {
+                    "light": "EA7547",
+                    "dark": "EA7547"
+                },
+                "titleTextColor": {
+                    "light": "1D2C4D",
+                    "dark": "FFFFFF"
+                },
+                "bodyTextColor": {
+                    "light": "526080",
+                    "dark": "FFFFFF"
+                },
+                "topIconsColor": {
+                    "light": "243760",
+                    "dark": "F2F2F7"
+                },
+                "sdkButtonTextColor": {
+                    "light": "243760",
+                    "dark": "F2F2F7"
+                }
+            },
+            "shape": {
+                "roundedCornerShape": 5
+            }
+        },
+        "steps": [
+            {
+                "id": "7a8e0428-ea9f-469d-9f1e-8c8cbfa4e3c3",
+                "key": "SELPHID_COMPONENT",
+                "nameStep": "SELPHID_COMPONENT",
+                "data": "{\"debug\":false,\"locale\":\"\",\"params\":{},\"timeout\":\"MEDIUM\",\"scanMode\":\"MODE_SEARCH\",\"wizardMode\":true,\"documentSide\":\"FRONT\",\"documentType\":\"ID_CARD\",\"showTutorial\":true,\"specificData\":\"ES|<ALL>\",\"tutorialOnly\":false,\"viewsContent\":\"\",\"resourcesPath\":\"resources-selphid-2-0.zip\",\"documentModels\":\"\",\"showDiagnostic\":true,\"generateRawImages\":true,\"tokenImageQuality\":null,\"translationsContent\":\"\",\"showResultAfterCapture\":true,\"showPreviousTips\":true,\"vibrationEnabled\":false,\"videoFilename\":\"\"}",
+                "target": "cc38ab60-a00b-433a-bb20-a09c05ba80c6"
+            },
+            {
+                "id": "cc38ab60-a00b-433a-bb20-a09c05ba80c6",
+                "key": "SELPHI_COMPONENT",
+                "nameStep": "SELPHI_COMPONENT",
+                "data": "{\"debug\":false,\"locale\":\"\",\"params\":{},\"qrMode\":false,\"cameraId\":null,\"fullScreen\":true,\"cropPercent\":null,\"livenessMode\":\"PASSIVE\",\"showTutorial\":true,\"viewsContent\":\"\",\"resourcesPath\":\"resources-selphi-2-0.zip\",\"videoFilename\":\"\",\"showDiagnostic\":true,\"stabilizationMode\":false,\"cameraFlashEnabled\":false,\"translationsContent\":\"\",\"templateRawOptimized\":false,\"showResultAfterCapture\":true,\"showPreviousTips\":true,\"vibrationEnabled\":false}",
+                "target": "f28922be-fc0c-443f-ba96-073f0dbaede1"
+            }
+        ]
+    }
+]

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selphid-widget-conf version="1.0">
+  <DocumentID id="000" iso="000">
+    <Version id="GenericVisa_TD2" type="TD1" document_type="VIS" document_id="000-00-VIS-0000-TD2-01-00">
+      <Front>
+        <FACE/>
+        <MRZ type="TD2">
+          <field id="DocumentCode" line="1" starts="1" count="2" regex="^V"/>
+          <field id="Issuer" line="1" starts="3" count="3"/>
+          <field id="LastName+FirstName" line="1" starts="6" count="31"/>
+          <field id="DocumentNumber" line="2" starts="1" count="9"/>
+          <field id="Nationality" line="2" starts="11" count="3"/>
+          <field id="DateOfBirth" line="2" starts="14" count="6"/>
+          <field id="Gender" line="2" starts="21" count="1"/>
+          <field id="DateOfExpiry" line="2" starts="22" count="6"/>
+          <field id="Opt1" line="2" starts="29" count="14"/>
+          <field id="NfcKey" line="2" starts="1" count="9"/>
+        </MRZ>
+      </Front>
+    </Version>
+    <Version id="GenericVisa_TD3" type="TD1" document_type="VIS" document_id="000-00-VIS-0000-TD3-01-00">
+      <Front>
+        <FACE/>
+        <MRZ type="TD3">
+          <field id="DocumentCode" line="1" starts="1" count="2" regex="^V"/>
+          <field id="Issuer" line="1" starts="3" count="3"/>
+          <field id="LastName+FirstName" line="1" starts="6" count="39"/>
+          <field id="DocumentNumber" line="2" starts="1" count="9"/>
+          <field id="Nationality" line="2" starts="11" count="3"/>
+          <field id="DateOfBirth" line="2" starts="14" count="6"/>
+          <field id="Gender" line="2" starts="21" count="1"/>
+          <field id="DateOfExpiry" line="2" starts="22" count="6"/>
+          <field id="Opt1" line="2" starts="29" count="8"/>
+          <field id="NfcKey" line="2" starts="1" count="9"/>
+        </MRZ>
+      </Front>
+    </Version>
+  </DocumentID>
+
+    <Supported
+        Front="ALL"
+        Back= "ALL"
+
+        Exceptions-Front=""
+        Exceptions-Back=""
+    />
+
+</selphid-widget-conf>

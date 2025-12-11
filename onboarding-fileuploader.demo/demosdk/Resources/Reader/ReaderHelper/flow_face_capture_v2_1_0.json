@@ -1,0 +1,3105 @@
+{
+    "flow": [
+        {
+            "id": 8,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 113,
+                        "parameter": {
+                            "name": "config",
+                            "type": "Json",
+                            "value": {
+                                "min_face_width": 80,
+                                "min_h_face_rel_area": -1,
+                                "min_h_face_rel_width": 0.1,
+                                "min_h_face_rel_width_v": -1,
+                                "min_v_face_rel_area": -1,
+                                "min_v_face_rel_width": 0.2,
+                                "min_v_face_rel_width_v": -1
+                            }
+                        }
+                    },
+                    {
+                        "id": 39,
+                        "parameter": {
+                            "name": "face_collection",
+                            "type": "std::vector<LocationConfidence>"
+                        }
+                    },
+                    {
+                        "id": 112,
+                        "parameter": {
+                            "name": "input_image",
+                            "type": "Image"
+                        }
+                    },
+                    {
+                        "id": 45,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "MultiFaceShapeFilter",
+                "outputs": [
+                    {
+                        "id": 0,
+                        "parameter": {
+                            "name": "face_collection",
+                            "type": "std::vector<LocationConfidence>"
+                        }
+                    },
+                    {
+                        "id": 1,
+                        "parameter": {
+                            "name": "output_diagnostic",
+                            "type": "int16_t"
+                        }
+                    },
+                    {
+                        "id": 2,
+                        "parameter": {
+                            "name": "request_stop",
+                            "type": "Bool"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2730,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 100,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 3,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 48,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 48,
+                        "parameter": {
+                            "name": "input_location_confidence",
+                            "type": "LocationConfidence"
+                        }
+                    },
+                    {
+                        "id": 52,
+                        "parameter": {
+                            "name": "yaw_pitch_roll",
+                            "type": "YawPitchRoll"
+                        }
+                    },
+                    {
+                        "id": 53,
+                        "parameter": {
+                            "name": "interpupillary_distance",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 49,
+                        "parameter": {
+                            "name": "landmark_map",
+                            "type": "std::map<LandmarkKey, Point2f>"
+                        }
+                    },
+                    {
+                        "id": 55,
+                        "parameter": {
+                            "name": "iqa_blur",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 69,
+                        "parameter": {
+                            "name": "iqa_exposure",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 70,
+                        "parameter": {
+                            "name": "iqa_exposure_median",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 56,
+                        "parameter": {
+                            "name": "iqa_sidelight",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 112,
+                        "parameter": {
+                            "name": "input_image",
+                            "type": "Image"
+                        }
+                    },
+                    {
+                        "id": 85,
+                        "parameter": {
+                            "name": "image_score",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 87,
+                        "parameter": {
+                            "name": "best_image_index",
+                            "type": "size_t"
+                        }
+                    },
+                    {
+                        "id": 88,
+                        "parameter": {
+                            "name": "best_image",
+                            "type": "Image"
+                        }
+                    },
+                    {
+                        "id": 89,
+                        "parameter": {
+                            "name": "best_image_score",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 90,
+                        "parameter": {
+                            "name": "capturer_metadata_vector",
+                            "type": "std::vector<Face::Metadata>"
+                        }
+                    },
+                    {
+                        "id": 75,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "FaceCapturer",
+                "outputs": [
+                    {
+                        "id": 10,
+                        "parameter": {
+                            "name": "output_location_confidence",
+                            "type": "LocationConfidence"
+                        }
+                    },
+                    {
+                        "id": 11,
+                        "parameter": {
+                            "name": "yaw_pitch_roll",
+                            "type": "YawPitchRoll"
+                        }
+                    },
+                    {
+                        "id": 12,
+                        "parameter": {
+                            "name": "landmark_map",
+                            "type": "std::map<LandmarkKey, Point2f>"
+                        }
+                    },
+                    {
+                        "id": 13,
+                        "parameter": {
+                            "name": "best_image",
+                            "type": "Image"
+                        }
+                    },
+                    {
+                        "id": 14,
+                        "parameter": {
+                            "name": "best_image_score",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 15,
+                        "parameter": {
+                            "name": "best_image_index",
+                            "type": "size_t"
+                        }
+                    },
+                    {
+                        "id": 16,
+                        "parameter": {
+                            "name": "output_diagnostic",
+                            "type": "int16_t"
+                        }
+                    },
+                    {
+                        "id": 17,
+                        "parameter": {
+                            "name": "capturer_metadata_vector",
+                            "type": "std::vector<Face::Metadata>"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2658,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 45,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 18,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2723,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 95,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 19,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2659,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 18,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 20,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2677,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 97,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 21,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2678,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 116,
+                        "parameter": {
+                            "name": "config",
+                            "type": "Json",
+                            "value": {
+                                "input_height": 20,
+                                "input_range_max": 1,
+                                "input_range_min": -1,
+                                "input_width": 40
+                            }
+                        }
+                    },
+                    {
+                        "id": 27,
+                        "parameter": {
+                            "name": "inference_function",
+                            "type": "InferenceRequest"
+                        }
+                    },
+                    {
+                        "id": 48,
+                        "parameter": {
+                            "name": "face_selected",
+                            "type": "LocationConfidence"
+                        }
+                    },
+                    {
+                        "id": 112,
+                        "parameter": {
+                            "name": "original_image",
+                            "type": "Image"
+                        }
+                    },
+                    {
+                        "id": 71,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "FaceGlassesDetector",
+                "outputs": [
+                    {
+                        "id": 22,
+                        "parameter": {
+                            "name": "no_glasses_confidence",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 23,
+                        "parameter": {
+                            "name": "glasses_confidence",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 24,
+                        "parameter": {
+                            "name": "sunglasses_confidence",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 25,
+                        "parameter": {
+                            "name": "output_diagnostic",
+                            "type": "int16_t"
+                        }
+                    },
+                    {
+                        "id": 26,
+                        "parameter": {
+                            "name": "request_stop",
+                            "type": "Bool"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2681,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 31,
+                        "parameter": {
+                            "name": "backend",
+                            "type": "TFLiteBackendPtr"
+                        }
+                    },
+                    {
+                        "id": 106,
+                        "parameter": {
+                            "name": "model_data",
+                            "type": "ByteBuffer"
+                        }
+                    },
+                    {
+                        "id": 117,
+                        "parameter": {
+                            "name": "pool_size",
+                            "type": "size_t",
+                            "value": 1
+                        }
+                    },
+                    {
+                        "id": 120,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "TFLiteRegisterModel",
+                "outputs": [
+                    {
+                        "id": 27,
+                        "parameter": {
+                            "name": "inference_function",
+                            "type": "InferenceRequest"
+                        }
+                    },
+                    {
+                        "id": 28,
+                        "parameter": {
+                            "name": "error",
+                            "type": "Bool"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 15,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 31,
+                        "parameter": {
+                            "name": "backend",
+                            "type": "TFLiteBackendPtr"
+                        }
+                    },
+                    {
+                        "id": 107,
+                        "parameter": {
+                            "name": "model_data",
+                            "type": "ByteBuffer"
+                        }
+                    },
+                    {
+                        "id": 121,
+                        "parameter": {
+                            "name": "pool_size",
+                            "type": "size_t",
+                            "value": 1
+                        }
+                    },
+                    {
+                        "id": 124,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "TFLiteRegisterModel",
+                "outputs": [
+                    {
+                        "id": 29,
+                        "parameter": {
+                            "name": "inference_function",
+                            "type": "InferenceRequest"
+                        }
+                    },
+                    {
+                        "id": 30,
+                        "parameter": {
+                            "name": "error",
+                            "type": "Bool"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 1,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 125,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "TFLiteBackendProvider",
+                "outputs": [
+                    {
+                        "id": 31,
+                        "parameter": {
+                            "name": "backend",
+                            "type": "TFLiteBackendPtr"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2727,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 96,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 32,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 31,
+                        "parameter": {
+                            "name": "backend",
+                            "type": "TFLiteBackendPtr"
+                        }
+                    },
+                    {
+                        "id": 108,
+                        "parameter": {
+                            "name": "model_data",
+                            "type": "ByteBuffer"
+                        }
+                    },
+                    {
+                        "id": 126,
+                        "parameter": {
+                            "name": "pool_size",
+                            "type": "size_t",
+                            "value": 1
+                        }
+                    },
+                    {
+                        "id": 129,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "TFLiteRegisterModel",
+                "outputs": [
+                    {
+                        "id": 33,
+                        "parameter": {
+                            "name": "inference_function",
+                            "type": "InferenceRequest"
+                        }
+                    },
+                    {
+                        "id": 34,
+                        "parameter": {
+                            "name": "error",
+                            "type": "Bool"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 50,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 130,
+                        "parameter": {
+                            "name": "config",
+                            "type": "Json",
+                            "value": {
+                                "horizontal_min_face_rel_area": 0.04,
+                                "horizontal_min_face_rel_width": 0.15,
+                                "horizontal_min_face_rel_width_vertical": 0.15,
+                                "max_face_width": 100000,
+                                "min_border_distance": 0,
+                                "min_face_width": 120,
+                                "vertical_min_face_rel_area": 0.05,
+                                "vertical_min_face_rel_width": 0.15,
+                                "vertical_min_face_rel_width_vertical": 0.15
+                            }
+                        }
+                    },
+                    {
+                        "id": 48,
+                        "parameter": {
+                            "name": "face_selected",
+                            "type": "LocationConfidence"
+                        }
+                    },
+                    {
+                        "id": 112,
+                        "parameter": {
+                            "name": "original_image",
+                            "type": "Image"
+                        }
+                    },
+                    {
+                        "id": 44,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "FaceShapeEvaluator",
+                "outputs": [
+                    {
+                        "id": 35,
+                        "parameter": {
+                            "name": "face_shape_diagnostic",
+                            "type": "int16_t"
+                        }
+                    },
+                    {
+                        "id": 36,
+                        "parameter": {
+                            "name": "output_string",
+                            "type": "String"
+                        }
+                    },
+                    {
+                        "id": 37,
+                        "parameter": {
+                            "name": "output_float",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 38,
+                        "parameter": {
+                            "name": "output_float_2",
+                            "type": "float"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 0,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 131,
+                        "parameter": {
+                            "name": "config",
+                            "type": "Json",
+                            "value": {
+                                "box_center_variance": 0.5,
+                                "center_variance": 0.1,
+                                "columns_inference": 6,
+                                "input_height": 160,
+                                "input_range_max": 1,
+                                "input_range_min": -1,
+                                "input_width": 160,
+                                "iou_threshold": 0.35,
+                                "min_boxes": [
+                                    [
+                                        10,
+                                        16,
+                                        24
+                                    ],
+                                    [
+                                        32,
+                                        48
+                                    ],
+                                    [
+                                        64,
+                                        96
+                                    ],
+                                    [
+                                        128,
+                                        192,
+                                        256
+                                    ]
+                                ],
+                                "score_threshold_min": 0.98,
+                                "strides": [
+                                    8,
+                                    16,
+                                    32,
+                                    64
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": 33,
+                        "parameter": {
+                            "name": "inference_function",
+                            "type": "InferenceRequest"
+                        }
+                    },
+                    {
+                        "id": 112,
+                        "parameter": {
+                            "name": "original_image",
+                            "type": "Image"
+                        }
+                    },
+                    {
+                        "id": 46,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "FaceDetector",
+                "outputs": [
+                    {
+                        "id": 39,
+                        "parameter": {
+                            "name": "face_collection",
+                            "type": "std::vector<LocationConfidence>"
+                        }
+                    },
+                    {
+                        "id": 40,
+                        "parameter": {
+                            "name": "output_diagnostic",
+                            "type": "int16_t"
+                        }
+                    },
+                    {
+                        "id": 41,
+                        "parameter": {
+                            "name": "request_stop",
+                            "type": "Bool"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2733,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 81,
+                        "parameter": {
+                            "name": "input_diagnostic",
+                            "type": "int16_t"
+                        }
+                    },
+                    {
+                        "id": 3,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "FaceLowerOcclusionDetectorChecker",
+                "outputs": [
+                    {
+                        "id": 42,
+                        "parameter": {
+                            "name": "request_stop",
+                            "type": "Bool"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2669,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 21,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 43,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2724,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 67,
+                        "parameter": {
+                            "name": "value",
+                            "type": "Bool"
+                        }
+                    },
+                    {
+                        "id": 94,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Stop",
+                "outputs": []
+            }
+        },
+        {
+            "id": 2660,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 20,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 44,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2657,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 46,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 45,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2655,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 86,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 46,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2728,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 3,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 47,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 10,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 0,
+                        "parameter": {
+                            "name": "face_collection",
+                            "type": "std::vector<LocationConfidence>"
+                        }
+                    },
+                    {
+                        "id": 20,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "FaceSelector",
+                "outputs": [
+                    {
+                        "id": 48,
+                        "parameter": {
+                            "name": "face_selected",
+                            "type": "LocationConfidence"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 11,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 29,
+                        "parameter": {
+                            "name": "inference_function",
+                            "type": "InferenceRequest"
+                        }
+                    },
+                    {
+                        "id": 48,
+                        "parameter": {
+                            "name": "face_selected",
+                            "type": "LocationConfidence"
+                        }
+                    },
+                    {
+                        "id": 112,
+                        "parameter": {
+                            "name": "original_image",
+                            "type": "Image"
+                        }
+                    },
+                    {
+                        "id": 44,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "FaceLandmarkDetector",
+                "outputs": [
+                    {
+                        "id": 49,
+                        "parameter": {
+                            "name": "landmark_map",
+                            "type": "std::map<LandmarkKey, Point2f>"
+                        }
+                    },
+                    {
+                        "id": 50,
+                        "parameter": {
+                            "name": "request_stop",
+                            "type": "Bool"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2780,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 133,
+                        "parameter": {
+                            "name": "tag",
+                            "type": "String",
+                            "value": "facephi_face_lower_occlusion_detector_1_0_model.dat"
+                        }
+                    },
+                    {
+                        "id": 134,
+                        "parameter": {
+                            "name": "value",
+                            "type": "ByteBuffer",
+                            "value": []
+                        }
+                    },
+                    {
+                        "id": 135,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "TaggedByteBuffer",
+                "outputs": [
+                    {
+                        "id": 51,
+                        "parameter": {
+                            "name": "value",
+                            "type": "ByteBuffer"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 16,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 49,
+                        "parameter": {
+                            "name": "landmark_map",
+                            "type": "std::map<LandmarkKey, Point2f>"
+                        }
+                    },
+                    {
+                        "id": 97,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "FaceLandmarkShapeEvaluator",
+                "outputs": [
+                    {
+                        "id": 52,
+                        "parameter": {
+                            "name": "yaw_pitch_roll",
+                            "type": "YawPitchRoll"
+                        }
+                    },
+                    {
+                        "id": 53,
+                        "parameter": {
+                            "name": "interpupillary_distance",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 54,
+                        "parameter": {
+                            "name": "frontality",
+                            "type": "float"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 17,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 112,
+                        "parameter": {
+                            "name": "input_image",
+                            "type": "Image"
+                        }
+                    },
+                    {
+                        "id": 48,
+                        "parameter": {
+                            "name": "input_location_confidence",
+                            "type": "LocationConfidence"
+                        }
+                    },
+                    {
+                        "id": 49,
+                        "parameter": {
+                            "name": "landmark_map",
+                            "type": "std::map<LandmarkKey, Point2f>"
+                        }
+                    },
+                    {
+                        "id": 97,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "FaceSharpnessEstimator",
+                "outputs": [
+                    {
+                        "id": 55,
+                        "parameter": {
+                            "name": "output_float",
+                            "type": "float"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 18,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 112,
+                        "parameter": {
+                            "name": "input_image",
+                            "type": "Image"
+                        }
+                    },
+                    {
+                        "id": 48,
+                        "parameter": {
+                            "name": "input_location_confidence",
+                            "type": "LocationConfidence"
+                        }
+                    },
+                    {
+                        "id": 52,
+                        "parameter": {
+                            "name": "yaw_pitch_roll",
+                            "type": "YawPitchRoll"
+                        }
+                    },
+                    {
+                        "id": 49,
+                        "parameter": {
+                            "name": "landmark_map",
+                            "type": "std::map<LandmarkKey, Point2f>"
+                        }
+                    },
+                    {
+                        "id": 21,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "FaceUniformityEstimator",
+                "outputs": [
+                    {
+                        "id": 56,
+                        "parameter": {
+                            "name": "output_float",
+                            "type": "float"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 19,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 139,
+                        "parameter": {
+                            "name": "config",
+                            "type": "Json",
+                            "value": {
+                                "input_height": 72,
+                                "input_range_max": 1,
+                                "input_range_min": 0,
+                                "input_width": 96,
+                                "score_threshold_min": 0.18
+                            }
+                        }
+                    },
+                    {
+                        "id": 61,
+                        "parameter": {
+                            "name": "inference_function",
+                            "type": "InferenceRequest"
+                        }
+                    },
+                    {
+                        "id": 48,
+                        "parameter": {
+                            "name": "face_selected",
+                            "type": "LocationConfidence"
+                        }
+                    },
+                    {
+                        "id": 49,
+                        "parameter": {
+                            "name": "landmark_map",
+                            "type": "std::map<LandmarkKey, Point2f>"
+                        }
+                    },
+                    {
+                        "id": 112,
+                        "parameter": {
+                            "name": "original_image",
+                            "type": "Image"
+                        }
+                    },
+                    {
+                        "id": 79,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "FaceEyesOpenDetector",
+                "outputs": [
+                    {
+                        "id": 57,
+                        "parameter": {
+                            "name": "output_float",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 58,
+                        "parameter": {
+                            "name": "output_diagnostic",
+                            "type": "int16_t"
+                        }
+                    },
+                    {
+                        "id": 59,
+                        "parameter": {
+                            "name": "output_string",
+                            "type": "String"
+                        }
+                    },
+                    {
+                        "id": 60,
+                        "parameter": {
+                            "name": "request_stop",
+                            "type": "Bool"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 22,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 31,
+                        "parameter": {
+                            "name": "backend",
+                            "type": "TFLiteBackendPtr"
+                        }
+                    },
+                    {
+                        "id": 105,
+                        "parameter": {
+                            "name": "model_data",
+                            "type": "ByteBuffer"
+                        }
+                    },
+                    {
+                        "id": 140,
+                        "parameter": {
+                            "name": "pool_size",
+                            "type": "size_t",
+                            "value": 1
+                        }
+                    },
+                    {
+                        "id": 143,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "TFLiteRegisterModel",
+                "outputs": [
+                    {
+                        "id": 61,
+                        "parameter": {
+                            "name": "inference_function",
+                            "type": "InferenceRequest"
+                        }
+                    },
+                    {
+                        "id": 62,
+                        "parameter": {
+                            "name": "error",
+                            "type": "Bool"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2735,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 98,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 63,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 25,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 144,
+                        "parameter": {
+                            "name": "config",
+                            "type": "Json",
+                            "value": {
+                                "filter_reject": [
+                                    {
+                                        "diagnostic": "UNDEREXPOSED",
+                                        "op": ">=",
+                                        "threshold": 0.75,
+                                        "variable": "under_exposure"
+                                    },
+                                    {
+                                        "diagnostic": "OVEREXPOSED",
+                                        "op": ">=",
+                                        "threshold": 0.75,
+                                        "variable": "over_exposure"
+                                    },
+                                    {
+                                        "diagnostic": "FACE_SIDELIGHT",
+                                        "op": "<",
+                                        "threshold": 0.35,
+                                        "variable": "uniformity"
+                                    },
+                                    {
+                                        "diagnostic": "BLURRED",
+                                        "op": "<",
+                                        "threshold": 0.38,
+                                        "variable": "sharpness"
+                                    },
+                                    {
+                                        "diagnostic": "FACE_TOO_SMALL",
+                                        "op": "<",
+                                        "threshold": 50,
+                                        "variable": "iod"
+                                    },
+                                    {
+                                        "diagnostic": "FACE_POSE_ROLLED_LEFT",
+                                        "op": ">=",
+                                        "threshold": 45,
+                                        "variable": "roll"
+                                    },
+                                    {
+                                        "diagnostic": "FACE_POSE_ROLLED_RIGHT",
+                                        "op": "<",
+                                        "threshold": -45,
+                                        "variable": "roll"
+                                    },
+                                    {
+                                        "diagnostic": "FACE_POSE_TOO_DOWN",
+                                        "op": ">=",
+                                        "threshold": 30,
+                                        "variable": "pitch"
+                                    },
+                                    {
+                                        "diagnostic": "FACE_POSE_TOO_UP",
+                                        "op": "<",
+                                        "threshold": -30,
+                                        "variable": "pitch"
+                                    },
+                                    {
+                                        "diagnostic": "FACE_POSE_TOO_LEFT",
+                                        "op": ">=",
+                                        "threshold": 30,
+                                        "variable": "yaw"
+                                    },
+                                    {
+                                        "diagnostic": "FACE_POSE_TOO_RIGHT",
+                                        "op": "<",
+                                        "threshold": -30,
+                                        "variable": "yaw"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "id": 69,
+                        "parameter": {
+                            "name": "under_exposure",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 70,
+                        "parameter": {
+                            "name": "over_exposure",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 56,
+                        "parameter": {
+                            "name": "uniformity",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 55,
+                        "parameter": {
+                            "name": "sharpness",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 53,
+                        "parameter": {
+                            "name": "iod",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 145,
+                        "parameter": {
+                            "name": "mouth_occlusion",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 146,
+                        "parameter": {
+                            "name": "mean_eyes_occlusion",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 147,
+                        "parameter": {
+                            "name": "left_eye_occlusion",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 148,
+                        "parameter": {
+                            "name": "right_eye_occlusion",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 52,
+                        "parameter": {
+                            "name": "yaw_pitch_roll",
+                            "type": "YawPitchRoll"
+                        }
+                    },
+                    {
+                        "id": 43,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "FlowFilterer",
+                "outputs": [
+                    {
+                        "id": 64,
+                        "parameter": {
+                            "name": "rejections",
+                            "type": "std::vector<String>"
+                        }
+                    },
+                    {
+                        "id": 65,
+                        "parameter": {
+                            "name": "warnings",
+                            "type": "std::vector<String>"
+                        }
+                    },
+                    {
+                        "id": 66,
+                        "parameter": {
+                            "name": "quality_diagnostic",
+                            "type": "int16_t"
+                        }
+                    },
+                    {
+                        "id": 67,
+                        "parameter": {
+                            "name": "request_stop",
+                            "type": "Bool"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2671,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 99,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 68,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 26,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 112,
+                        "parameter": {
+                            "name": "input_image",
+                            "type": "Image"
+                        }
+                    },
+                    {
+                        "id": 48,
+                        "parameter": {
+                            "name": "input_location_confidence",
+                            "type": "LocationConfidence"
+                        }
+                    },
+                    {
+                        "id": 49,
+                        "parameter": {
+                            "name": "landmark_map",
+                            "type": "std::map<LandmarkKey, Point2f>"
+                        }
+                    },
+                    {
+                        "id": 97,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "FaceExposureEstimator",
+                "outputs": [
+                    {
+                        "id": 69,
+                        "parameter": {
+                            "name": "output_float",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 70,
+                        "parameter": {
+                            "name": "output_float_2",
+                            "type": "float"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2736,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 47,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 71,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 34,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 64,
+                        "parameter": {
+                            "name": "rejections",
+                            "type": "std::vector<String>"
+                        }
+                    },
+                    {
+                        "id": 65,
+                        "parameter": {
+                            "name": "warnings",
+                            "type": "std::vector<String>"
+                        }
+                    },
+                    {
+                        "id": 96,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "FaceLandmarkDiagnostic",
+                "outputs": [
+                    {
+                        "id": 72,
+                        "parameter": {
+                            "name": "diagnostic",
+                            "type": "int16_t"
+                        }
+                    },
+                    {
+                        "id": 73,
+                        "parameter": {
+                            "name": "message",
+                            "type": "String"
+                        }
+                    },
+                    {
+                        "id": 74,
+                        "parameter": {
+                            "name": "request_stop",
+                            "type": "Bool"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2672,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 104,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 75,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 35,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 74,
+                        "parameter": {
+                            "name": "value",
+                            "type": "Bool"
+                        }
+                    },
+                    {
+                        "id": 32,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Stop",
+                "outputs": []
+            }
+        },
+        {
+            "id": 36,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 64,
+                        "parameter": {
+                            "name": "rejections",
+                            "type": "std::vector<String>"
+                        }
+                    },
+                    {
+                        "id": 65,
+                        "parameter": {
+                            "name": "warnings",
+                            "type": "std::vector<String>"
+                        }
+                    },
+                    {
+                        "id": 99,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "FIQADiagnostic",
+                "outputs": [
+                    {
+                        "id": 76,
+                        "parameter": {
+                            "name": "diagnostic",
+                            "type": "int16_t"
+                        }
+                    },
+                    {
+                        "id": 77,
+                        "parameter": {
+                            "name": "message",
+                            "type": "String"
+                        }
+                    },
+                    {
+                        "id": 78,
+                        "parameter": {
+                            "name": "request_stop",
+                            "type": "Bool"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 37,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 78,
+                        "parameter": {
+                            "name": "value",
+                            "type": "Bool"
+                        }
+                    },
+                    {
+                        "id": 68,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Stop",
+                "outputs": []
+            }
+        },
+        {
+            "id": 2731,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 63,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 79,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 38,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 150,
+                        "parameter": {
+                            "name": "config",
+                            "type": "Json",
+                            "value": {
+                                "input_height": 50,
+                                "input_range_max": 1,
+                                "input_range_min": -1,
+                                "input_width": 25,
+                                "score_threshold_min": 0.5
+                            }
+                        }
+                    },
+                    {
+                        "id": 83,
+                        "parameter": {
+                            "name": "inference_function",
+                            "type": "InferenceRequest"
+                        }
+                    },
+                    {
+                        "id": 48,
+                        "parameter": {
+                            "name": "face_selected",
+                            "type": "LocationConfidence"
+                        }
+                    },
+                    {
+                        "id": 112,
+                        "parameter": {
+                            "name": "original_image",
+                            "type": "Image"
+                        }
+                    },
+                    {
+                        "id": 100,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "FaceLowerOcclusionDetector",
+                "outputs": [
+                    {
+                        "id": 80,
+                        "parameter": {
+                            "name": "face_occlusions_confidence",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 81,
+                        "parameter": {
+                            "name": "output_diagnostic",
+                            "type": "int16_t"
+                        }
+                    },
+                    {
+                        "id": 82,
+                        "parameter": {
+                            "name": "request_stop",
+                            "type": "Bool"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 39,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 42,
+                        "parameter": {
+                            "name": "value",
+                            "type": "Bool"
+                        }
+                    },
+                    {
+                        "id": 47,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Stop",
+                "outputs": []
+            }
+        },
+        {
+            "id": 42,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 31,
+                        "parameter": {
+                            "name": "backend",
+                            "type": "TFLiteBackendPtr"
+                        }
+                    },
+                    {
+                        "id": 51,
+                        "parameter": {
+                            "name": "model_data",
+                            "type": "ByteBuffer"
+                        }
+                    },
+                    {
+                        "id": 151,
+                        "parameter": {
+                            "name": "pool_size",
+                            "type": "size_t",
+                            "value": 1
+                        }
+                    },
+                    {
+                        "id": 154,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "TFLiteRegisterModel",
+                "outputs": [
+                    {
+                        "id": 83,
+                        "parameter": {
+                            "name": "inference_function",
+                            "type": "InferenceRequest"
+                        }
+                    },
+                    {
+                        "id": 84,
+                        "parameter": {
+                            "name": "error",
+                            "type": "Bool"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 44,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 54,
+                        "parameter": {
+                            "name": "frontality",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 69,
+                        "parameter": {
+                            "name": "iqa_exposure",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 55,
+                        "parameter": {
+                            "name": "sharpness",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 56,
+                        "parameter": {
+                            "name": "uniformity",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 57,
+                        "parameter": {
+                            "name": "open_eyes_confidence",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 104,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "FaceBestImageEvaluator",
+                "outputs": [
+                    {
+                        "id": 85,
+                        "parameter": {
+                            "name": "image_score",
+                            "type": "float"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2654,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 91,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 86,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 47,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 4,
+                        "parameter": {
+                            "name": "best_image_index",
+                            "type": "size_t"
+                        }
+                    },
+                    {
+                        "id": 5,
+                        "parameter": {
+                            "name": "best_image",
+                            "type": "Image"
+                        }
+                    },
+                    {
+                        "id": 6,
+                        "parameter": {
+                            "name": "best_image_score",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 7,
+                        "parameter": {
+                            "name": "capturer_metadata_vector",
+                            "type": "std::vector<Face::Metadata>"
+                        }
+                    },
+                    {
+                        "id": 156,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "FaceCapturerInitialise",
+                "outputs": [
+                    {
+                        "id": 87,
+                        "parameter": {
+                            "name": "best_image_index",
+                            "type": "size_t"
+                        }
+                    },
+                    {
+                        "id": 88,
+                        "parameter": {
+                            "name": "best_image",
+                            "type": "Image"
+                        }
+                    },
+                    {
+                        "id": 89,
+                        "parameter": {
+                            "name": "best_image_score",
+                            "type": "float"
+                        }
+                    },
+                    {
+                        "id": 90,
+                        "parameter": {
+                            "name": "capturer_metadata_vector",
+                            "type": "std::vector<Face::Metadata>"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2653,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 157,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 91,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 52,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 35,
+                        "parameter": {
+                            "name": "face_shape_diagnostic",
+                            "type": "int16_t"
+                        }
+                    },
+                    {
+                        "id": 95,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "FaceDiagnosticChecker",
+                "outputs": [
+                    {
+                        "id": 92,
+                        "parameter": {
+                            "name": "request_stop",
+                            "type": "Bool"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2683,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 25,
+                        "parameter": {
+                            "name": "input_diagnostic",
+                            "type": "int16_t"
+                        }
+                    },
+                    {
+                        "id": 98,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "FaceGlassesDetectorChecker",
+                "outputs": [
+                    {
+                        "id": 93,
+                        "parameter": {
+                            "name": "request_stop",
+                            "type": "Bool"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 53,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 92,
+                        "parameter": {
+                            "name": "value",
+                            "type": "Bool"
+                        }
+                    },
+                    {
+                        "id": 19,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Stop",
+                "outputs": []
+            }
+        },
+        {
+            "id": 2725,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 43,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 94,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2661,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 44,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 95,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2726,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 68,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 96,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2662,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 19,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 97,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2734,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 71,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 98,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2670,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 94,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 99,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2684,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 93,
+                        "parameter": {
+                            "name": "value",
+                            "type": "Bool"
+                        }
+                    },
+                    {
+                        "id": 63,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Stop",
+                "outputs": []
+            }
+        },
+        {
+            "id": 2686,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 2,
+                        "parameter": {
+                            "name": "value",
+                            "type": "Bool"
+                        }
+                    },
+                    {
+                        "id": 18,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Stop",
+                "outputs": []
+            }
+        },
+        {
+            "id": 2729,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 32,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 100,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2732,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 79,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 101,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2737,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 58,
+                        "parameter": {
+                            "name": "input_diagnostic",
+                            "type": "int16_t"
+                        }
+                    },
+                    {
+                        "id": 101,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "FaceEyesOpenDetectorChecker",
+                "outputs": [
+                    {
+                        "id": 102,
+                        "parameter": {
+                            "name": "request_stop",
+                            "type": "Bool"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2738,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 102,
+                        "parameter": {
+                            "name": "value",
+                            "type": "Bool"
+                        }
+                    },
+                    {
+                        "id": 103,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Stop",
+                "outputs": []
+            }
+        },
+        {
+            "id": 2739,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 101,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 103,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2740,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 103,
+                        "parameter": {
+                            "name": "in",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "Generation",
+                "outputs": [
+                    {
+                        "id": 104,
+                        "parameter": {
+                            "name": "out",
+                            "type": "TaskId"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2777,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 158,
+                        "parameter": {
+                            "name": "tag",
+                            "type": "String",
+                            "value": "facephi_eyes_open_detector_2_0_0_model.dat"
+                        }
+                    },
+                    {
+                        "id": 159,
+                        "parameter": {
+                            "name": "value",
+                            "type": "ByteBuffer",
+                            "value": []
+                        }
+                    },
+                    {
+                        "id": 160,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "TaggedByteBuffer",
+                "outputs": [
+                    {
+                        "id": 105,
+                        "parameter": {
+                            "name": "value",
+                            "type": "ByteBuffer"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2781,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 161,
+                        "parameter": {
+                            "name": "tag",
+                            "type": "String",
+                            "value": "facephi_glasses_detector_1_0_model.dat"
+                        }
+                    },
+                    {
+                        "id": 162,
+                        "parameter": {
+                            "name": "value",
+                            "type": "ByteBuffer",
+                            "value": []
+                        }
+                    },
+                    {
+                        "id": 163,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "TaggedByteBuffer",
+                "outputs": [
+                    {
+                        "id": 106,
+                        "parameter": {
+                            "name": "value",
+                            "type": "ByteBuffer"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2783,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 164,
+                        "parameter": {
+                            "name": "tag",
+                            "type": "String",
+                            "value": "facephi_landmark_detector_2_0_1_model.dat"
+                        }
+                    },
+                    {
+                        "id": 165,
+                        "parameter": {
+                            "name": "value",
+                            "type": "ByteBuffer",
+                            "value": []
+                        }
+                    },
+                    {
+                        "id": 166,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "TaggedByteBuffer",
+                "outputs": [
+                    {
+                        "id": 107,
+                        "parameter": {
+                            "name": "value",
+                            "type": "ByteBuffer"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2785,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 167,
+                        "parameter": {
+                            "name": "tag",
+                            "type": "String",
+                            "value": "facephi_face_detector_1_1_0_model_tflite16.dat"
+                        }
+                    },
+                    {
+                        "id": 168,
+                        "parameter": {
+                            "name": "value",
+                            "type": "ByteBuffer",
+                            "value": []
+                        }
+                    },
+                    {
+                        "id": 169,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "TaggedByteBuffer",
+                "outputs": [
+                    {
+                        "id": 108,
+                        "parameter": {
+                            "name": "value",
+                            "type": "ByteBuffer"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2829,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 8,
+                        "parameter": {
+                            "name": "original_image",
+                            "type": "Image"
+                        }
+                    },
+                    {
+                        "id": 170,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "ExtractTransforms",
+                "outputs": [
+                    {
+                        "id": 109,
+                        "parameter": {
+                            "name": "up_to_original",
+                            "type": "Orientation"
+                        }
+                    },
+                    {
+                        "id": 110,
+                        "parameter": {
+                            "name": "original_to_up",
+                            "type": "Orientation"
+                        }
+                    },
+                    {
+                        "id": 111,
+                        "parameter": {
+                            "name": "size",
+                            "type": "Size2f"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2830,
+            "task": {
+                "inputs": [
+                    {
+                        "id": 8,
+                        "parameter": {
+                            "name": "image",
+                            "type": "Image"
+                        }
+                    },
+                    {
+                        "id": 110,
+                        "parameter": {
+                            "name": "orientation",
+                            "type": "Orientation"
+                        }
+                    },
+                    {
+                        "id": 171,
+                        "parameter": {
+                            "name": "#order",
+                            "type": "TaskId"
+                        }
+                    }
+                ],
+                "name": "TransformImage",
+                "outputs": [
+                    {
+                        "id": 112,
+                        "parameter": {
+                            "name": "image",
+                            "type": "Image"
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "information": {
+        "description": "Processes mulitple frames and decides which one is the best",
+        "name": "FaceCapture",
+        "url": "https://redesigned-adventure-egvvn4y.pages.github.io/pipelines/FaceCapture/v2.1.0/",
+        "version": "2.1.0"
+    },
+    "inputs": [
+        {
+            "id": 4,
+            "parameter": {
+                "name": "best_image_index",
+                "type": "size_t"
+            }
+        },
+        {
+            "id": 5,
+            "parameter": {
+                "name": "best_image",
+                "type": "Image"
+            }
+        },
+        {
+            "id": 6,
+            "parameter": {
+                "name": "best_image_score",
+                "type": "float"
+            }
+        },
+        {
+            "id": 7,
+            "parameter": {
+                "name": "capturer_metadata_vector",
+                "type": "std::vector<Face::Metadata>"
+            }
+        },
+        {
+            "id": 8,
+            "parameter": {
+                "name": "original_image",
+                "type": "Image"
+            }
+        }
+    ],
+    "outputs": [
+        {
+            "id": 10,
+            "parameter": {
+                "name": "best_location_confidence",
+                "type": "LocationConfidence"
+            }
+        },
+        {
+            "id": 11,
+            "parameter": {
+                "name": "best_yaw_pitch_roll",
+                "type": "YawPitchRoll"
+            }
+        },
+        {
+            "id": 12,
+            "parameter": {
+                "name": "best_landmark_map",
+                "type": "std::map<LandmarkKey, Point2f>"
+            }
+        },
+        {
+            "id": 13,
+            "parameter": {
+                "name": "best_image",
+                "type": "Image"
+            }
+        },
+        {
+            "id": 14,
+            "parameter": {
+                "name": "best_image_score",
+                "type": "float"
+            }
+        },
+        {
+            "id": 16,
+            "parameter": {
+                "name": "capture_diagnostic",
+                "type": "int16_t"
+            }
+        },
+        {
+            "id": 76,
+            "parameter": {
+                "name": "fiqa_diagnostic",
+                "type": "int16_t"
+            }
+        },
+        {
+            "id": 72,
+            "parameter": {
+                "name": "landmark_diagnostic",
+                "type": "int16_t"
+            }
+        },
+        {
+            "id": 35,
+            "parameter": {
+                "name": "face_shape_diagnostic",
+                "type": "int16_t"
+            }
+        },
+        {
+            "id": 81,
+            "parameter": {
+                "name": "lower_occlusion_diagnostic",
+                "type": "int16_t"
+            }
+        },
+        {
+            "id": 25,
+            "parameter": {
+                "name": "glasses_diagnostic",
+                "type": "int16_t"
+            }
+        },
+        {
+            "id": 1,
+            "parameter": {
+                "name": "multi_face_diagnostic",
+                "type": "int16_t"
+            }
+        },
+        {
+            "id": 58,
+            "parameter": {
+                "name": "eyes_open_diagnostic",
+                "type": "int16_t"
+            }
+        },
+        {
+            "id": 66,
+            "parameter": {
+                "name": "quality_diagnostic",
+                "type": "int16_t"
+            }
+        },
+        {
+            "id": 15,
+            "parameter": {
+                "name": "best_image_index",
+                "type": "size_t"
+            }
+        },
+        {
+            "id": 17,
+            "parameter": {
+                "name": "capturer_metadata_vector",
+                "type": "std::vector<Face::Metadata>"
+            }
+        },
+        {
+            "id": 39,
+            "parameter": {
+                "name": "face_collection",
+                "type": "std::vector<LocationConfidence>"
+            }
+        },
+        {
+            "id": 48,
+            "parameter": {
+                "name": "face_selected",
+                "type": "LocationConfidence"
+            }
+        },
+        {
+            "id": 49,
+            "parameter": {
+                "name": "landmark_map",
+                "type": "std::map<LandmarkKey, Point2f>"
+            }
+        },
+        {
+            "id": 52,
+            "parameter": {
+                "name": "yaw_pitch_roll",
+                "type": "YawPitchRoll"
+            }
+        }
+    ],
+    "version": "3.0.0"
+}

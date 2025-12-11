@@ -1,0 +1,51 @@
+# Uncomment the next line to define a global platform for your project
+plugin 'cocoapods-art', :sources => [
+'cocoa-pro-fphi'
+]
+
+source 'https://cdn.cocoapods.org/'
+
+target 'demosdk' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  pod 'IQKeyboardManagerSwift', '~> 7.0.1'
+  pod 'SwiftLint'
+
+  pod 'FPHISDKVideoRecordingComponent', '~> 2.4.0'
+#  pod 'FPHISDKSelphIDComponent', '~> 2.4.0'
+#  pod 'FPHISDKSelphIDLightComponent', '~> 2.4.0'
+#  pod 'FPHISDKSelphIDFullComponent', '~> 2.4.0'
+  pod 'FPHISDKSelphIDMBSDRComponent', '~> 2.4.0'
+#  pod 'FPHISDKSelphIDMLRGLComponent', '~> 2.4.0'
+#  pod 'FPHISDKSelphIDRGLComponent', '~> 2.4.0'
+  pod 'FPHISDKCaptureComponent', '~> 2.4.4'
+  pod 'FPHISDKMainComponent', '~> 2.4.0'
+  pod 'FPHISDKNFCComponent', '~> 2.12.0'
+  pod 'FPHISDKSelphiComponent', '~> 2.4.0'
+  pod 'FPHISDKStatusComponent', '~> 2.4.0'
+  pod 'FPHISDKTokenizeComponent', '~> 2.4.0'
+  pod 'FPHISDKTrackingComponent', '~> 2.4.0'
+  pod 'FPHISDKVideoCallComponent', '~> 2.4.0'
+  pod 'FPHISDKVideoIDComponent', '~> 2.4.0'
+  pod 'FPHISDKVoiceIDComponent', '~> 2.4.0'
+  pod 'FPHISDKPhingersTFComponent', '~> 2.4.1'
+end
+
+target 'videoRecording' do
+  use_frameworks!
+  pod 'FPHISDKVideoRecordingComponent', '~> 2.4.0'
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      if target.name == 'zipzap'
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.0'
+      end
+      config.build_settings['EXPANDED_CODE_SIGN_IDENTITY'] = ""
+      config.build_settings['CODE_SIGNING_REQUIRED'] = "NO"
+      config.build_settings['CODE_SIGNING_ALLOWED'] = "NO"
+    end
+  end
+end

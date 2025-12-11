@@ -20,12 +20,12 @@
 		13F510DB281937A6001E3CF1 /* DemosdkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F510DA281937A6001E3CF1 /* DemosdkUITestsLaunchTests.swift */; };
 		13F7576B2823A2AA00A761D5 /* SDKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7576A2823A2AA00A761D5 /* SDKManager.swift */; };
 		13F84C49282500A6001E26A5 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F84C48282500A6001E26A5 /* MainVM.swift */; };
-		1C262F562DCA583800072C32 /* SDK-VideoIDPackage-SPM in Frameworks */ = {isa = PBXBuildFile; productRef = 1C262F552DCA583800072C32 /* SDK-VideoIDPackage-SPM */; };
-		1C262F592DCA585500072C32 /* SDK-StatusPackage-SPM in Frameworks */ = {isa = PBXBuildFile; productRef = 1C262F582DCA585500072C32 /* SDK-StatusPackage-SPM */; };
-		1C262F5B2DCA586500072C32 /* tokenizeComponent in Frameworks */ = {isa = PBXBuildFile; productRef = 1C262F5A2DCA586500072C32 /* tokenizeComponent */; };
-		1C262F5D2DCA586500072C32 /* sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 1C262F5C2DCA586500072C32 /* sdk */; };
-		1C262F5F2DCA586500072C32 /* SDK-TrackingPackage-SPM in Frameworks */ = {isa = PBXBuildFile; productRef = 1C262F5E2DCA586500072C32 /* SDK-TrackingPackage-SPM */; };
-		72304AFF12B557C51B6AD962 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		1CC09DAE2ED46E3C0096EE68 /* tokenizeComponent in Frameworks */ = {isa = PBXBuildFile; productRef = 1CC09DAD2ED46E3C0096EE68 /* tokenizeComponent */; };
+		1CC09DB02ED46E3C0096EE68 /* sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 1CC09DAF2ED46E3C0096EE68 /* sdk */; };
+		1CC09DB22ED46E3C0096EE68 /* SDK-TrackingPackage-SPM in Frameworks */ = {isa = PBXBuildFile; productRef = 1CC09DB12ED46E3C0096EE68 /* SDK-TrackingPackage-SPM */; };
+		1CC09DB42ED46E3C0096EE68 /* SDK-VideoIDPackage-SPM in Frameworks */ = {isa = PBXBuildFile; productRef = 1CC09DB32ED46E3C0096EE68 /* SDK-VideoIDPackage-SPM */; };
+		1CC09DB62ED46E3C0096EE68 /* SDK-StatusPackage-SPM in Frameworks */ = {isa = PBXBuildFile; productRef = 1CC09DB52ED46E3C0096EE68 /* SDK-StatusPackage-SPM */; };
+		72304AFF12B557C51B6AD962 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		9E2DEB122A1B75F000E8FD9F /* SdkConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DEB112A1B75F000E8FD9F /* SdkConfigurationManager.swift */; };
 		9EFB343A2A4999E10005C31E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EFB343C2A4999E10005C31E /* Localizable.strings */; };
 		D9D2E38C2AC2F08100501393 /* VideoIDConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2E38B2AC2F08100501393 /* VideoIDConfiguration.swift */; };
@@ -80,11 +80,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C262F5B2DCA586500072C32 /* tokenizeComponent in Frameworks */,
-				1C262F5F2DCA586500072C32 /* SDK-TrackingPackage-SPM in Frameworks */,
-				1C262F5D2DCA586500072C32 /* sdk in Frameworks */,
-				1C262F562DCA583800072C32 /* SDK-VideoIDPackage-SPM in Frameworks */,
-				1C262F592DCA585500072C32 /* SDK-StatusPackage-SPM in Frameworks */,
+				1CC09DAE2ED46E3C0096EE68 /* tokenizeComponent in Frameworks */,
+				1CC09DB02ED46E3C0096EE68 /* sdk in Frameworks */,
+				1CC09DB42ED46E3C0096EE68 /* SDK-VideoIDPackage-SPM in Frameworks */,
+				1CC09DB62ED46E3C0096EE68 /* SDK-StatusPackage-SPM in Frameworks */,
+				1CC09DB22ED46E3C0096EE68 /* SDK-TrackingPackage-SPM in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72304AFF12B557C51B6AD962 /* BuildFile in Frameworks */,
+				72304AFF12B557C51B6AD962 /* (null) in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,7 +399,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\n";
+			shellScript = "
+";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -865,7 +866,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-TokenizePackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.3.1;
+				minimumVersion = 2.4.0;
 			};
 		};
 		1C262F522DCA564700072C32 /* XCRemoteSwiftPackageReference "SDK-SdkPackage-SPM" */ = {
@@ -873,7 +874,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-SdkPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.3.1;
+				minimumVersion = 2.4.0;
 			};
 		};
 		1C262F532DCA568D00072C32 /* XCRemoteSwiftPackageReference "SDK-TrackingPackage-SPM" */ = {
@@ -881,7 +882,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-TrackingPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.3.3;
+				minimumVersion = 2.4.0;
 			};
 		};
 		1C262F542DCA583800072C32 /* XCRemoteSwiftPackageReference "SDK-VideoIDPackage-SPM" */ = {
@@ -889,7 +890,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-VideoIDPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.3.6;
+				minimumVersion = 2.4.0;
 			};
 		};
 		1C262F572DCA585500072C32 /* XCRemoteSwiftPackageReference "SDK-StatusPackage-SPM" */ = {
@@ -897,36 +898,36 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-StatusPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.3.4;
+				minimumVersion = 2.4.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1C262F552DCA583800072C32 /* SDK-VideoIDPackage-SPM */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1C262F542DCA583800072C32 /* XCRemoteSwiftPackageReference "SDK-VideoIDPackage-SPM" */;
-			productName = "SDK-VideoIDPackage-SPM";
-		};
-		1C262F582DCA585500072C32 /* SDK-StatusPackage-SPM */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1C262F572DCA585500072C32 /* XCRemoteSwiftPackageReference "SDK-StatusPackage-SPM" */;
-			productName = "SDK-StatusPackage-SPM";
-		};
-		1C262F5A2DCA586500072C32 /* tokenizeComponent */ = {
+		1CC09DAD2ED46E3C0096EE68 /* tokenizeComponent */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1C262F512DCA55CD00072C32 /* XCRemoteSwiftPackageReference "SDK-TokenizePackage-SPM" */;
 			productName = tokenizeComponent;
 		};
-		1C262F5C2DCA586500072C32 /* sdk */ = {
+		1CC09DAF2ED46E3C0096EE68 /* sdk */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1C262F522DCA564700072C32 /* XCRemoteSwiftPackageReference "SDK-SdkPackage-SPM" */;
 			productName = sdk;
 		};
-		1C262F5E2DCA586500072C32 /* SDK-TrackingPackage-SPM */ = {
+		1CC09DB12ED46E3C0096EE68 /* SDK-TrackingPackage-SPM */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1C262F532DCA568D00072C32 /* XCRemoteSwiftPackageReference "SDK-TrackingPackage-SPM" */;
 			productName = "SDK-TrackingPackage-SPM";
+		};
+		1CC09DB32ED46E3C0096EE68 /* SDK-VideoIDPackage-SPM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C262F542DCA583800072C32 /* XCRemoteSwiftPackageReference "SDK-VideoIDPackage-SPM" */;
+			productName = "SDK-VideoIDPackage-SPM";
+		};
+		1CC09DB52ED46E3C0096EE68 /* SDK-StatusPackage-SPM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C262F572DCA585500072C32 /* XCRemoteSwiftPackageReference "SDK-StatusPackage-SPM" */;
+			productName = "SDK-StatusPackage-SPM";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

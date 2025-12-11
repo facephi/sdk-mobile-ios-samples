@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  demosdk
+
+  Created by Jorge Poveda on 26/6/23.
+  
+*/
+
+////NFC
+//"nfc_component_start_message" = "PRUEBABring your device closer to the document";

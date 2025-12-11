@@ -1,4 +1,4 @@
-# SDK-Mobile Cocoapods Demo Full Version
+# SDK-Mobile Cocoapods Demo VideoID Version
 
 Aplicación demo para testear internamente todos los componentes de la SDK Mobile implementados hasta la fecha (Full Version), descargando los componentes desde nuestro repositorios privados (Artifactory). 
 
@@ -57,12 +57,4 @@ En caso de liberarse una versión nueva de alguno de los componentes de la SDK M
 ## Posibles problemas en Cocoapods
 
 - Si cocoapods fue instalado mediante homebrew, puede dar problemas.
-
-- A veces hacer el update no hace que el Pod install apunte a la última versión.
-
-- Para hacer un CI la máquina tiene que tener instalado cocoapods art (Instalarlo en Jenkins o en un Runner de GitHub). (Solucionado) 
-
-- Interactuar con cocoa-remote toma demasiado tiempo. (Solucionado)
-
-- No se sabe qué pasará si hay dos pods con el mismo nombre, uno en el apartado privado y otro en público. (Buscará la última versión, por lo que tendremos que crear un pod público con una versión mínima para que no roben el nombre y den problemas en el futuro)
-
+- Para hacer un CI la máquina tiene que tener instalado cocoapods art (Instalarlo en Jenkins o en un Runner de GitHub)
