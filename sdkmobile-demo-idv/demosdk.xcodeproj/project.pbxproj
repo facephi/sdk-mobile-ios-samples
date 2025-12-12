@@ -863,7 +863,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-VideoRecording-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.4.0;
+				minimumVersion = 2.5.0;
 			};
 		};
 		1CC09D942ED4661D0096EE68 /* XCRemoteSwiftPackageReference "SDK-StatusPackage-SPM" */ = {
@@ -871,7 +871,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-StatusPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.4.0;
+				minimumVersion = 2.5.0;
 			};
 		};
 		1CC09D972ED466710096EE68 /* XCRemoteSwiftPackageReference "SDK-TrackingPackage-SPM" */ = {
@@ -879,7 +879,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-TrackingPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.4.0;
+				minimumVersion = 2.5.0;
 			};
 		};
 		1CC09D9A2ED4669A0096EE68 /* XCRemoteSwiftPackageReference "SDK-TokenizePackage-SPM" */ = {
@@ -887,7 +887,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-TokenizePackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.4.0;
+				minimumVersion = 2.5.0;
 			};
 		};
 		1CC09D9D2ED466CE0096EE68 /* XCRemoteSwiftPackageReference "SDK-Selphi_component-SPM" */ = {
@@ -895,7 +895,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-Selphi_component-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.4.1;
+				minimumVersion = 2.5.0;
 			};
 		};
 		1CC09DA52ED46A320096EE68 /* XCRemoteSwiftPackageReference "SDK-SdkPackage-SPM" */ = {
@@ -903,7 +903,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-SdkPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.4.0;
+				minimumVersion = 2.5.0;
 			};
 		};
 		1CE079FF2ED7341A004E2EB3 /* XCRemoteSwiftPackageReference "SDK-SelphidComponentLight" */ = {
@@ -911,7 +911,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-SelphidComponentLight.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.4.0;
+				minimumVersion = 2.5.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
