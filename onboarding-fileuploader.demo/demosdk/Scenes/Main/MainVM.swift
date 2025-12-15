@@ -232,6 +232,10 @@ extension MainVM {
             self.log(msg: "Validation can't be started because the document's capture is not completed")
             return
         }
+        guard let operationId else {
+            self.log(msg: "No operation created")
+            return
+        }
         
         self.documentValidationService = DocumentValidationService(
             baseUrl: SdkConfigurationManager.validationsUrl,
@@ -240,7 +244,8 @@ extension MainVM {
             frontDocumentImage: frontDocumentImage,
             backDocumentImage: backDocumentImage,
             country: countryIssuer,
-            documentType: documentType)
+            documentType: documentType,
+            operationId: operationId)
         
         self.documentValidationService?.start(callback: { self.log(msg: $0) })
     }
