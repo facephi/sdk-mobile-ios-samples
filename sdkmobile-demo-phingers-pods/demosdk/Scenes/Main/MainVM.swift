@@ -65,18 +65,11 @@ extension MainVM: MainVMInput {
         phingersConfiguration.reticleOrientation = reticle
         phingersConfiguration.fingerFilter = filterFinger
         SDKManager.shared.launchPhingers(setTracking: true, viewController: viewController, phingersConfigurationData: phingersConfiguration, output: { phingersResult in
-            guard phingersResult.errorType == .NO_ERROR else {
-                self.log(msg: phingersResult.errorType.toString())
+            guard phingersResult.finishStatus == .STATUS_OK else {
+                self.log(msg: "Phingers ERROR: \(phingersResult.errorType)")
                 return
             }
-            
-            if phingersResult.finishStatus == .STATUS_OK {
-                self.log(msg: "Status OK")
-                print(phingersResult.finishStatus)
-            } else {
-                self.log(msg: phingersResult.errorType.toString())
-                print(phingersResult.errorType)
-            }
+            self.log(msg: "Status OK")
         })
     }
     
