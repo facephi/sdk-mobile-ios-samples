@@ -10,12 +10,12 @@ target 'demosdk' do
   use_frameworks!
 
   ##### Use with remote Artifactory Pods
-  pod 'FPHISDKLicenseCheckerComponent', '~> 2.4.0'
-  pod 'FPHISDKCoreComponent', '~> 2.4.0'
-  pod 'FPHISDKMainComponent', '~> 2.4.0'
-  pod 'FPHISDKTrackingComponent', '~> 2.4.0'
-  pod 'FPHISDKNFCComponent', '~> 2.12.0'
-  pod 'FPHISDKStatusComponent', '~> 2.4.0'
+  pod 'FPHISDKLicenseCheckerComponent', '~> 2.5.0'
+  pod 'FPHISDKCoreComponent', '~> 2.5.0'
+  pod 'FPHISDKMainComponent', '~> 2.5.0'
+  pod 'FPHISDKTrackingComponent', '~> 2.5.0'
+  pod 'FPHISDKNFCComponent', '~> 2.13.0'
+  pod 'FPHISDKStatusComponent', '~> 2.5.0'
 
   target 'demosdkTests' do
     inherit! :search_paths

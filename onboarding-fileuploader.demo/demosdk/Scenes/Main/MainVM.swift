@@ -132,13 +132,25 @@ extension MainVM {
     }
     
     func launchFileUploader(configuration: FileUploaderConfigurationData) {
-            SDKManager.shared.launchFileUploader(setTracking: true, viewController: viewController, fileUploaderConfigurationData: configuration, output: { captureResult in
+        SDKManager.shared.launchFileUploader(setTracking: true, viewController: viewController, fileUploaderConfigurationData: configuration, output: { captureResult in
             guard captureResult.errorType == .NO_ERROR,
-                let result = captureResult.data else {
+                  let result = captureResult.data else {
                 self.log(msg: "\(captureResult.errorType)")
                 return
             }
-            self.log(msg: "File Uploader captured: \(String(result.documentImages.count)) images")
+            var msg = ""
+            result.documentImages.forEach { element in
+                switch element.content {
+                case .uploaderDocument(let doc):
+                    msg += "Got a document\n"
+                    break
+                case .uploaderImage(let img):
+                    msg += "Got an image from \(img.source.rawValue)\n"
+                    break
+                @unknown default: break
+                }
+            }
+            self.log(msg: "File Uploader: \(msg)")
         })
     }
     
@@ -232,6 +244,10 @@ extension MainVM {
             self.log(msg: "Validation can't be started because the document's capture is not completed")
             return
         }
+        guard let operationId else {
+            self.log(msg: "No operation created")
+            return
+        }
         
         self.documentValidationService = DocumentValidationService(
             baseUrl: SdkConfigurationManager.validationsUrl,
@@ -240,7 +256,8 @@ extension MainVM {
             frontDocumentImage: frontDocumentImage,
             backDocumentImage: backDocumentImage,
             country: countryIssuer,
-            documentType: documentType)
+            documentType: documentType,
+            operationId: operationId)
         
         self.documentValidationService?.start(callback: { self.log(msg: $0) })
     }

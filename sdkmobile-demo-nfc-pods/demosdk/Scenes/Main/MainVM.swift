@@ -59,7 +59,7 @@ extension MainVM: MainVMInput {
         var nfcConfig = NfcConfigurationData(documentNumber: tfSupportNumber, birthDate: tfBirthDate, expirationDate: tfExpirationDate, issuer: tfIssuer, documentType: .ID_CARD)
         SDKManager.shared.launchNfc(setTracking: true, nfcConfigurationData: nfcConfig, output: { nfcResult in
             guard nfcResult.errorType == .NO_ERROR else {
-                self.log(msg: nfcResult.errorType.toString())
+                self.log(msg: "NFC ERROR: \(nfcResult.errorType)")
                 return
             }
             

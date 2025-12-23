@@ -25,10 +25,11 @@ class DocumentValidationService: DocumentValidationServiceProtocol {
     private let backDocumentImage: String
     private let country: String
     private let documentType: String
+    private let operationId: String
     
     private var validationStartResponse: DocumentValidationStartResponse?
 
-    init(baseUrl: String, apiKey: String, extraDataResult: SdkResult<String>, frontDocumentImage: String, backDocumentImage: String, country: String, documentType: String) {
+    init(baseUrl: String, apiKey: String, extraDataResult: SdkResult<String>, frontDocumentImage: String, backDocumentImage: String, country: String, documentType: String, operationId: String) {
         self.baseUrl = baseUrl
         self.apiKey = apiKey
         
@@ -37,6 +38,7 @@ class DocumentValidationService: DocumentValidationServiceProtocol {
         self.backDocumentImage = backDocumentImage
         self.country = country
         self.documentType = documentType
+        self.operationId = operationId
     }
     
     func start(callback: @escaping (String) -> Void) {
@@ -111,8 +113,9 @@ class DocumentValidationService: DocumentValidationServiceProtocol {
     }
     
     func data(callback: @escaping (String) -> Void) {
-        guard extraDataResult.finishStatus == .STATUS_OK else {
-            callback("LAUNCH DOCUMENT VALIDATION DATA-> KO\nFAILED TO CREATE EXTRADATA: \(extraDataResult.errorType)")
+        guard extraDataResult.finishStatus == .STATUS_OK,
+              let extraData = extraDataResult.data else {
+            callback("LAUNCH DOCUMENT EXTRACTION -> KO\nFAILED TO CREATE EXTRADATA: \(extraDataResult.errorType)")
             return
         }
         guard let validationStartResponse else {
@@ -122,7 +125,11 @@ class DocumentValidationService: DocumentValidationServiceProtocol {
         let body = """
             {
               \"scanReference\": \"\(validationStartResponse.scanReference)\",
-              \"type\": \"\(validationStartResponse.type)\"
+              \"type\": \"\(validationStartResponse.type)\",
+              \"tracking\": {
+                \"extraData\": \"\(extraData)\",
+                \"operationId\": \"\(operationId)\"
+              }
             }
             """
         

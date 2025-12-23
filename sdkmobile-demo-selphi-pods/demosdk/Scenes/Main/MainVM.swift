@@ -63,7 +63,7 @@ extension MainVM: MainVMInput {
     func selphi() {
         SDKManager.shared.launchSelphi(setTracking: true, viewController: viewController, selphiConfigurationData: SdkConfigurationManager.selphiConfiguration, output: { selphiResult in
             guard selphiResult.errorType == .NO_ERROR else {
-                self.log(msg: selphiResult.errorType.toString())
+                self.log(msg: "Selphi ERROR: \(selphiResult.errorType)")
                 return
             }
             guard let imageData = selphiResult.data?.bestImageData

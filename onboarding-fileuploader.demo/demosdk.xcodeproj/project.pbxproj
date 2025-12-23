@@ -932,7 +932,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-PhingersTF_Component-SPM.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.4.2;
+				minimumVersion = 2.5.0;
 			};
 		};
 		1C485FBF2ED5B67D008E8488 /* XCRemoteSwiftPackageReference "SDK-VideoRecording-SPM" */ = {
@@ -940,7 +940,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-VideoRecording-SPM.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.4.1;
+				minimumVersion = 2.5.0;
 			};
 		};
 		1C485FC52ED5B93E008E8488 /* XCRemoteSwiftPackageReference "SDK-VideoCallPackage-SPM" */ = {
@@ -948,7 +948,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-VideoCallPackage-SPM.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.4.1;
+				minimumVersion = 2.5.0;
 			};
 		};
 		1C485FC82ED5B988008E8488 /* XCRemoteSwiftPackageReference "SDK-VideoIDPackage-SPM" */ = {
@@ -956,7 +956,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-VideoIDPackage-SPM.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.4.1;
+				minimumVersion = 2.5.0;
 			};
 		};
 		1C485FCB2ED5BE08008E8488 /* XCRemoteSwiftPackageReference "SDK-CapturePackage-SPM" */ = {
@@ -964,7 +964,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-CapturePackage-SPM.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.4.4;
+				minimumVersion = 2.5.0;
 			};
 		};
 		1C485FD02ED5BF90008E8488 /* XCRemoteSwiftPackageReference "SDK-SdkPackage-SPM" */ = {
@@ -972,7 +972,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-SdkPackage-SPM.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.4.0;
+				minimumVersion = 2.5.0;
 			};
 		};
 		1C485FD52ED5CE9C008E8488 /* XCRemoteSwiftPackageReference "SDK-SelphidRGLComponent" */ = {
@@ -980,7 +980,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-SelphidRGLComponent.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.4.3;
+				minimumVersion = 2.5.0;
 			};
 		};
 		1C485FD82ED5D405008E8488 /* XCRemoteSwiftPackageReference "SDK-NFC_component-SPM" */ = {
@@ -988,7 +988,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-NFC_component-SPM.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.12.0;
+				minimumVersion = 2.13.0;
 			};
 		};
 		1C485FDD2ED5D46B008E8488 /* XCRemoteSwiftPackageReference "SDK-VoicePackage-SPM" */ = {
@@ -996,7 +996,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-VoicePackage-SPM.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.4.1;
+				minimumVersion = 2.5.0;
 			};
 		};
 		1CC09D942ED4661D0096EE68 /* XCRemoteSwiftPackageReference "SDK-StatusPackage-SPM" */ = {
@@ -1004,7 +1004,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-StatusPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.4.0;
+				minimumVersion = 2.5.0;
 			};
 		};
 		1CC09D972ED466710096EE68 /* XCRemoteSwiftPackageReference "SDK-TrackingPackage-SPM" */ = {
@@ -1012,7 +1012,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-TrackingPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.4.0;
+				minimumVersion = 2.5.0;
 			};
 		};
 		1CC09D9A2ED4669A0096EE68 /* XCRemoteSwiftPackageReference "SDK-TokenizePackage-SPM" */ = {
@@ -1020,7 +1020,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-TokenizePackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.4.0;
+				minimumVersion = 2.5.0;
 			};
 		};
 		1CC09D9D2ED466CE0096EE68 /* XCRemoteSwiftPackageReference "SDK-Selphi_component-SPM" */ = {
@@ -1028,7 +1028,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-Selphi_component-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.4.1;
+				minimumVersion = 2.5.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

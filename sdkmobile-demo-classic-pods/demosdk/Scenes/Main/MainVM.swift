@@ -68,7 +68,7 @@ extension MainVM: MainVMInput {
     func selphi() {
         SDKManager.shared.launchSelphi(setTracking: true, viewController: viewController, selphiConfigurationData: SdkConfigurationManager.selphiConfiguration, output: { selphiResult in
             guard selphiResult.errorType == .NO_ERROR else {
-                self.log(msg: selphiResult.errorType.toString())
+                self.log(msg: "Selphi ERROR: \(selphiResult.errorType)")
                 return
             }
             guard let imageData = selphiResult.data?.bestImageData
@@ -81,14 +81,13 @@ extension MainVM: MainVMInput {
             self.selfie = imageData.base64EncodedString()
             self.log(msg: "Selphi Image correctly fetched")
             self.delegate?.updateImages(images: [UIImage(data: imageData)])
-
         })
     }
 
     func selphID() {
         SDKManager.shared.launchSelphId(setTracking: true, viewController: viewController, selphIDConfigurationData: SdkConfigurationManager.selphIDConfiguration, output:  { selphIDResult in
             guard selphIDResult.errorType == .NO_ERROR else {
-                self.log(msg: selphIDResult.errorType.toString())
+                self.log(msg: "SelphID ERROR: \(selphIDResult.errorType)")
                 return
             }
             if let dictionary = selphIDResult.data?.ocrResults {

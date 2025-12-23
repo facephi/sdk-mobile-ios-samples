@@ -11,14 +11,14 @@ target 'demosdk' do
 
   pod 'IQKeyboardManagerSwift', '~> 7.0.1'
 
-  pod 'FPHISDKVideoRecordingComponent', '~> 2.4.0'
-  pod 'FPHISDKSelphIDMBSDRComponent', '~> 2.4.0'
-  pod 'FPHISDKCaptureComponent', '~> 2.4.4'
-  pod 'FPHISDKMainComponent', '~> 2.4.0'
-  pod 'FPHISDKSelphiComponent', '~> 2.4.0'
-  pod 'FPHISDKStatusComponent', '~> 2.4.0'
-  pod 'FPHISDKTokenizeComponent', '~> 2.4.0'
-  pod 'FPHISDKTrackingComponent', '~> 2.4.0'
+  pod 'FPHISDKVideoRecordingComponent', '~> 2.5.0'
+  pod 'FPHISDKSelphIDMBSDRComponent', '~> 2.5.0'
+  pod 'FPHISDKCaptureComponent', '~> 2.5.0'
+  pod 'FPHISDKMainComponent', '~> 2.5.0'
+  pod 'FPHISDKSelphiComponent', '~> 2.5.0'
+  pod 'FPHISDKStatusComponent', '~> 2.5.0'
+  pod 'FPHISDKTokenizeComponent', '~> 2.5.0'
+  pod 'FPHISDKTrackingComponent', '~> 2.5.0'
 end
 
 post_install do |installer|
