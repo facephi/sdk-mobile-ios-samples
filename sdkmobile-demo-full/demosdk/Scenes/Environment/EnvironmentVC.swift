@@ -46,7 +46,10 @@ class EnvironmentVC: UIViewController {
     // MARK: - OVERRIDE
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
+        
         viewModel = EnvironmentVM(delegate: self)
 
         viewModel.getConfigurationData()

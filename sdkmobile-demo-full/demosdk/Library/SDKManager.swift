@@ -251,7 +251,7 @@ class SDKManager {
     }
     
     public func launchFileUploader(setTracking: Bool, viewController: UIViewController, fileUploaderConfigurationData: FileUploaderConfigurationData, output: @escaping (SdkResult<FileUploaderResult>) -> Void) {
-        log("LAUNCH DOCUMENT CAPTURE")
+        log("LAUNCH FILE UPLOADER")
 
         let controller = FileUploaderController(data: fileUploaderConfigurationData, output: output, viewController: viewController)
         if setTracking {

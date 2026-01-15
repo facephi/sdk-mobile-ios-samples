@@ -25,6 +25,33 @@ Aplicación demo para testear internamente todos los componentes de la SDK Mobil
 - Si se ha utilizado previamente Cocoapods en el proyecto, para limpiar todo rastro previo debemos usar el comando `pod deintegrate`
 - En el proyecto demosdk -> TARGETS -> demosdk -> General -> Frameworks, Libraries, and Embedded Content debemos asegurarnos de que están referenciados todos los paquetes del listado de #Módulos.
 
+
+### SPM - Recursos de CaptureComponent
+- Los recursos gráficos del componente de Captura se copian durante la fase Build gracias a un Run Script en la sección de Build Phases:
+
+set -euo pipefail
+BUNDLE_PATH="${TARGET_BUILD_DIR}/FPHICaptureWidget-SPM_FPHICaptureWidget-SPM.bundle/compose-resources"
+DESTINATION="${TARGET_BUILD_DIR}/${TARGET_NAME}.app/compose-resources"
+if [ -d "$BUNDLE_PATH" ]; then
+  rm -rf "$DESTINATION"
+  mkdir -p "$DESTINATION"
+  cp -R "$BUNDLE_PATH/" "$DESTINATION/"
+  echo "Copied FPHICaptureWidget Compose resources to ${DESTINATION}"
+else
+  echo "FPHICaptureWidget Compose resources not found at ${BUNDLE_PATH}. If your app is not using FPHICaptureWidget Component anymore, delete the script from your Build Phases -> Run Script section"
+fi
+
+
+BUNDLE_PATH_DS="${TARGET_BUILD_DIR}/FPHIDesignSystemResources_FPHIDesignSystemResources.bundle/"
+DESTINATION="${TARGET_BUILD_DIR}/${TARGET_NAME}.app/compose-resources/composeResources"
+if [ -d "$BUNDLE_PATH_DS" ]; then
+  cp -R "$BUNDLE_PATH_DS/" "$DESTINATION/"
+  echo "Copied FPHIDesignSystemResources Compose resources to ${DESTINATION}"
+else
+  echo "FPHIDesignSystemResources Compose resources not found at ${BUNDLE_PATH_DS}. If your app is not using FacePhi Components anymore, delete the script from your Build Phases -> Run Script section"
+fi
+
+
 ## Instalación con Cocoapods:
 
 - Si es la **primera vez** que se va a utilizar el repositorio privado instalar Cocoapods para Artifactory:
