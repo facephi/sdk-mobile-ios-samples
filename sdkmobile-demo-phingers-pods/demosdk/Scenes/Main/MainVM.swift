@@ -100,8 +100,8 @@ extension MainVM: MainVMInput {
         return fingerFilter
     }
     
-    func configReticleOrientation(reticleOrientation: Int) -> CaptureOrientation {
-            var reticle: CaptureOrientation = .LEFT
+    func configReticleOrientation(reticleOrientation: Int) -> ReticleOrientation {
+            var reticle: ReticleOrientation = .LEFT
 
         switch (reticleOrientation) {
             case 1:
@@ -123,3 +123,4 @@ extension MainVM: MainVMInput {
         SDKManager.shared.closeSession()
     }
 }
+
