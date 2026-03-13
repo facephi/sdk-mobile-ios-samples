@@ -37,7 +37,7 @@ class DocumentValidationService: DocumentValidationServiceProtocol {
         self.frontDocumentImage = frontDocumentImage
         self.backDocumentImage = backDocumentImage
         self.country = country
-        self.documentType = documentType
+        self.documentType = documentType == "FOREIGN_CARD" ? "RESIDENCE_PERMIT": documentType
         self.operationId = operationId
     }
     
