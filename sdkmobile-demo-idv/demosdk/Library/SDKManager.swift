@@ -7,6 +7,7 @@
 import Foundation
 import UIKit
 import core
+import nfcComponent
 import selphiComponent
 import selphidComponent
 import sdk
@@ -66,6 +67,10 @@ class SDKManager {
             print("SelphiController output: \($0.errorType)")
         }, viewController: viewController)
         
+        let nfcController = NfcController(data: nil, viewController: viewController, output: {
+            print("NfcController output: \($0.errorType)")
+        })
+        
         let videoRecordingController = VideoRecordingController(extensionIdentifier: "com.facephi.sdk.demo.videoRecording", viewController: viewController, output: {
             print("videoRecordingController output: \($0.errorType)")
         })
@@ -76,7 +81,7 @@ class SDKManager {
         })
         
         let controllers: [IFlowableController] =
-        [selphidController, selphiController, videoRecordingController, stopVideoRecordingController]
+        [selphidController, selphiController, nfcController, videoRecordingController, stopVideoRecordingController]
         
         let flowConfigurationData = FlowConfigurationData(
             id: flowId,
@@ -93,6 +98,9 @@ class SDKManager {
                 // Do whatever you want with the result
                 break
             case (let data as SelphiResult):
+                // Do whatever you want with the result
+                break
+            case (let data as NfcResult):
                 // Do whatever you want with the result
                 break
             default: break

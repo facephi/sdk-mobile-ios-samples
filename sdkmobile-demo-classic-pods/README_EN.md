@@ -1,14 +1,15 @@
-# SDK-Mobile Cocoapods Demo Selphi Version
+# SDK-Mobile Cocoapods Demo Classic Version
 
-Demo application to internally test all the components of the Mobile SDK with facial capture, downloading the components from our private repository (Artifactory). 
+Demo application to internally test all the components of the Mobile SDK with facial capture and document capture, downloading the components from our private repository (Artifactory). 
 
 ## Dependencies
 
 - FPHISDKMainComponent
 - FPHISDKTrackingComponent
-- FPHISDKSelphiComponent
-- FPHISDKStatusComponent 
+- FPHISDKSelphIDComponent
+- FPHISDKSelphiComponent 
 - FPHISDKTokenizeComponent
+- FPHISDKStatusComponent 
 
 
 ## Installation with SPM

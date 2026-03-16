@@ -1,14 +1,14 @@
-# SDK-Mobile Cocoapods Demo Selphi Version
+# SDK-Mobile Demo NFC Version
 
-Demo application to internally test all the components of the Mobile SDK with facial capture, downloading the components from our private repository (Artifactory). 
+Demo application to internally test all the components of the Mobile SDK with NFC reading, downloading the components from our private repository (Artifactory). 
 
 ## Dependencies
 
 - FPHISDKMainComponent
-- FPHISDKTrackingComponent
-- FPHISDKSelphiComponent
-- FPHISDKStatusComponent 
+- FPHISDKNFCComponent
+- FPHISDKStatusComponent
 - FPHISDKTokenizeComponent
+- FPHISDKTrackingComponent
 
 
 ## Installation with SPM

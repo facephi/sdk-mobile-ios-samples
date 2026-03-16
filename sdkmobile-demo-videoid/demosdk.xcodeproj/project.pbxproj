@@ -67,6 +67,8 @@
 		13F510DA281937A6001E3CF1 /* DemosdkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemosdkUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		13F7576A2823A2AA00A761D5 /* SDKManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKManager.swift; sourceTree = "<group>"; };
 		13F84C48282500A6001E26A5 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
+		1C7BCFD92F67FD8A00B5C2B3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1C7BCFDA2F67FD8A00B5C2B3 /* README_EN.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README_EN.md; sourceTree = "<group>"; };
 		9E1ABD982A02BD6F0033F7A6 /* selphidComponent.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = selphidComponent.xcframework; path = Pods/FPHISDKSelphIDComponent/selphidComponent.xcframework; sourceTree = "<group>"; };
 		9E2DEB112A1B75F000E8FD9F /* SdkConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SdkConfigurationManager.swift; sourceTree = "<group>"; };
 		9EFB343B2A4999E10005C31E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -134,6 +136,8 @@
 		13F510AB281937A5001E3CF1 = {
 			isa = PBXGroup;
 			children = (
+				1C7BCFD92F67FD8A00B5C2B3 /* README.md */,
+				1C7BCFDA2F67FD8A00B5C2B3 /* README_EN.md */,
 				13F510B6281937A5001E3CF1 /* demosdk */,
 				13F510CD281937A6001E3CF1 /* demosdkTests */,
 				13F510D7281937A6001E3CF1 /* demosdkUITests */,
@@ -866,7 +870,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-TokenizePackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.5.0;
+				minimumVersion = 2.6.0;
 			};
 		};
 		1C262F522DCA564700072C32 /* XCRemoteSwiftPackageReference "SDK-SdkPackage-SPM" */ = {
@@ -874,7 +878,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-SdkPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.5.0;
+				minimumVersion = 2.6.0;
 			};
 		};
 		1C262F532DCA568D00072C32 /* XCRemoteSwiftPackageReference "SDK-TrackingPackage-SPM" */ = {
@@ -882,7 +886,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-TrackingPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.5.0;
+				minimumVersion = 2.6.0;
 			};
 		};
 		1C262F542DCA583800072C32 /* XCRemoteSwiftPackageReference "SDK-VideoIDPackage-SPM" */ = {
@@ -890,7 +894,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-VideoIDPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.5.0;
+				minimumVersion = 2.6.0;
 			};
 		};
 		1C262F572DCA585500072C32 /* XCRemoteSwiftPackageReference "SDK-StatusPackage-SPM" */ = {
@@ -898,7 +902,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-StatusPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.5.0;
+				minimumVersion = 2.6.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

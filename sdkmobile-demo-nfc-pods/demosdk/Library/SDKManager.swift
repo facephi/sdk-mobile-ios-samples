@@ -10,6 +10,7 @@ import Foundation
 import sdk
 import nfcComponent
 import trackingComponent
+import tokenizeComponent
 import UIKit
 import statusComponent
 
@@ -30,7 +31,8 @@ class SDKManager {
         })
 
         let statusController = StatusController()
-        
+        let tokenizeController = TokenizeController()
+
         if SdkConfigurationManager.onlineLicensing {
             // AUTO License
             SDKController.shared.initSdk(
@@ -44,6 +46,7 @@ class SDKManager {
                 }
             },
                 trackingController: trackingController,
+                tokenizeController: tokenizeController,
                 statusController: statusController
             )
         } else {
@@ -58,6 +61,7 @@ class SDKManager {
                 }
             },
                 trackingController: trackingController,
+                tokenizeController: tokenizeController,
                 statusController: statusController
             )
         }

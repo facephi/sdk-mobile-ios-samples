@@ -18,6 +18,7 @@ def remote_pods
   pod 'FPHISDKTokenizeComponent', '~> 2.6.0'
   pod 'FPHISDKTrackingComponent', '~> 2.6.0'
   pod 'FPHISDKVideoRecordingComponent', '~> 2.6.0'
+  pod 'FPHISDKNFCComponent', '~> 2.14.0'
 end
 
 target 'demosdk' do
