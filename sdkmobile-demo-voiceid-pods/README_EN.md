@@ -1,14 +1,14 @@
-# SDK-Mobile Cocoapods Demo Selphi Version
+# SDK-Mobile Cocoapods Demo Voice Version
 
-Demo application to internally test all the components of the Mobile SDK with facial capture, downloading the components from our private repository (Artifactory). 
+Demo application to internally test all the components of the Mobile SDK with voice identification, downloading the components from our private repository (Artifactory). 
 
 ## Dependencies
 
 - FPHISDKMainComponent
 - FPHISDKTrackingComponent
-- FPHISDKSelphiComponent
-- FPHISDKStatusComponent 
+- FPHISDKVoiceIDComponent
 - FPHISDKTokenizeComponent
+- FPHISDKStatusComponent
 
 
 ## Installation with SPM

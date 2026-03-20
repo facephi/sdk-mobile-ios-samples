@@ -35,6 +35,9 @@ extension SdkConfigurationManager {
         configSelphID.documentModels = ""
         configSelphID.resourcesPath = resourcesSelphID
         configSelphID.showDiagnostic = true
+        configSelphID.showPreviousTip = true
+        configSelphID.vibrationEnabled = true
+        configSelphID.tokenPreviousCaptureData = ""
         
         return configSelphID
     }

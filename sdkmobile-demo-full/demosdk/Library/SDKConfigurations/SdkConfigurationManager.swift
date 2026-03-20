@@ -11,7 +11,7 @@ struct SdkConfigurationManager {
     static let email = "sdk-full-clienters-ios@ejemplo"
     
     static let APIKEY_LICENSING = ""
-    static let LICENSING_URL = URL(string: "")!
+    static let LICENSING_URL = URL(string: "LICENSING_URL")!
     static let FLOW_ID = ""
     
     static let customerId = "sdk-full-clienters-ios"

@@ -10,6 +10,7 @@ import Foundation
 import sdk
 import selphiComponent
 import trackingComponent
+import tokenizeComponent
 import UIKit
 import statusComponent
 
@@ -33,6 +34,7 @@ class SDKManager {
         })
 
         let statusController = StatusController()
+        let tokenizeController = TokenizeController()
         
         if SdkConfigurationManager.onlineLicensing {
             // AUTO License
@@ -48,6 +50,7 @@ class SDKManager {
                     }
                 },
                 trackingController: trackingController,
+                tokenizeController: tokenizeController,
                 statusController: statusController
             )
         } else {
@@ -62,6 +65,7 @@ class SDKManager {
                     }
                 },
                 trackingController: trackingController,
+                tokenizeController: tokenizeController,
                 statusController: statusController
             )
         }

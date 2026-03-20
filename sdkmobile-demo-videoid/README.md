@@ -1,26 +1,26 @@
 # SDK-Mobile Cocoapods Demo VideoID Version
 
-Aplicación demo para testear internamente todos los componentes de la SDK Mobile implementados hasta la fecha (Full Version), descargando los componentes desde nuestro repositorios privados (Artifactory). 
+Aplicación demo para testear internamente todos los componentes de la SDK Mobile con video identificación, descargando los componentes desde nuestros repositorios privados (Artifactory).
 
-## Status:
+## Dependencias
 
- - FPHISDKLicenseCheckerComponent
- - FPHISDKCoreComponent
- - FPHISDKLicensingComponent
- - FPHISDKMainComponent
- - FPHISDKTrackingComponent
- - FPHISDKVideoIDComponent
- - FPHISDKTokenizeComponent
- - FPHISDKStatusComponent
+- FPHISDKMainComponent
+- FPHISDKTrackingComponent
+- FPHISDKVideoIDComponent
+- FPHISDKTokenizeComponent
+- FPHISDKStatusComponent
 
-## Instalación con SPM:
+
+## Instalación con SPM
 
 - Abrir demosdk.**xcodeproj**
 - Configurar en XCode una cuenta de GitHub que disponga de acceso al repositorio privado de Facephi-Clienters.
-- Si se ha utilizado previamente Cocoapods en el proyecto, para limpiar todo rastro previo podemos usar el comando `pod deintegrate`
-- En el proyecto demosdk -> TARGETS -> demosdk -> General -> Frameworks, Libraries, and Embedded Content debemos asegurarnos de que están los paquetes sdk, status, tracking, videoid y tokenize.
+- Añadir las dependencias SPM usando preferiblemente las URLs con SSH.
+- Si se ha utilizado previamente Cocoapods en el proyecto, para limpiar todo rastro previo debemos usar el comando `pod deintegrate`
+- En el proyecto demosdk -> TARGETS -> demosdk -> General -> Frameworks, Libraries, and Embedded Content debemos asegurarnos de que están referenciados todos los paquetes del listado de Dependencias.
 
-## Instalación con Cocoapods:
+
+## Instalación con Cocoapods
 
 - Si es la **primera vez** que se va a utilizar el repositorio privado instalar Cocoapods para Artifactory:
 
@@ -31,10 +31,12 @@ Aplicación demo para testear internamente todos los componentes de la SDK Mobil
 `nano ~/.netrc`
 
 Y una vez abiertos se copian los siguientes datos:
- 
-`machine facephicorp.jfrog.io`
-`login <USERNAME>`
-`password <TOKEN>`
+
+```
+machine facephicorp.jfrog.io
+login <USERNAME>
+password <TOKEN>
+```
 
 - Y finalmente se deberá añadir el repositorio donde se encuentran todos los paquetes:
 
@@ -44,7 +46,7 @@ Y una vez abiertos se copian los siguientes datos:
 
 `pod install`
 
-- Si se ha utilizado previamente SPM en el proyecto, para limpiar todo rastro previo podemos quitar las referencias SPM desde PROJECT -> demosdk -> Package Dependencies.
+- Si se ha utilizado previamente SPM en el proyecto, para limpiar todo rastro previo podemos quitar las referencias SPM desde _demosdk -> Package Dependencies_
 - Para esta demo, se puede simplemente eliminar las referencias del TARGET demosdk a los paquetes SPM en lugar de hacer lo anterior.
 
 ## Actualización de paquetes con Cocoapods:
@@ -56,5 +58,4 @@ En caso de liberarse una versión nueva de alguno de los componentes de la SDK M
 
 ## Posibles problemas en Cocoapods
 
-- Si cocoapods fue instalado mediante homebrew, puede dar problemas.
-- Para hacer un CI la máquina tiene que tener instalado cocoapods art (Instalarlo en Jenkins o en un Runner de GitHub)
+- Si cocoapods fue instalado mediante homebrew, puede dar problemas. Se recomienda instalación por gems.

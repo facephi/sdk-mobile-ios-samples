@@ -1,19 +1,27 @@
-# SDK-Mobile Cocoapods Demo Full Version
+# SDK-Mobile Demo Signature Version
 
-Aplicación demo para testear internamente todos los componentes de la SDK Mobile implementados hasta la fecha (Full Version), descargando los componentes desde nuestro repositorios privados (Artifactory). 
+Aplicación demo para testear internamente todos los componentes de la SDK Mobile con firma digital, descargando los componentes desde nuestros repositorios privados (Artifactory). 
 
-## Status:
+## Dependencias
 
- - FPHISDKLicensingComponent
- - FPHISDKTrackingComponent
- - FPHISDKSelphiComponent
- - FPHISDKVideoIDComponent
- - FPHISDKTokenizeComponent
- - FPHISDKStatusComponent
- - FPHISDKMainComponent
- - FPHISDKStatusComponent
+- FPHISDKMainComponent
+- FPHISDKSelphiComponent
+- FPHISDKStatusComponent
+- FPHISDKTokenizeComponent
+- FPHISDKTrackingComponent
+- FPHISDKVideoIDComponent
 
-## Instalación:
+
+## Instalación con SPM
+
+- Abrir demosdk.**xcodeproj**
+- Configurar en XCode una cuenta de GitHub que disponga de acceso al repositorio privado de Facephi-Clienters.
+- Añadir las dependencias SPM usando preferiblemente las URLs con SSH.
+- Si se ha utilizado previamente Cocoapods en el proyecto, para limpiar todo rastro previo debemos usar el comando `pod deintegrate`
+- En el proyecto demosdk -> TARGETS -> demosdk -> General -> Frameworks, Libraries, and Embedded Content debemos asegurarnos de que están referenciados todos los paquetes del listado de Dependencias.
+
+
+## Instalación con Cocoapods
 
 - Si es la **primera vez** que se va a utilizar el repositorio privado instalar Cocoapods para Artifactory:
 
@@ -24,10 +32,12 @@ Aplicación demo para testear internamente todos los componentes de la SDK Mobil
 `nano ~/.netrc`
 
 Y una vez abiertos se copian los siguientes datos:
- 
-`machine facephicorp.jfrog.io`
-`login <USERNAME>`
-`password <TOKEN>`
+
+```
+machine facephicorp.jfrog.io
+login <USERNAME>
+password <TOKEN>
+```
 
 - Y finalmente se deberá añadir el repositorio donde se encuentran todos los paquetes:
 
@@ -37,23 +47,16 @@ Y una vez abiertos se copian los siguientes datos:
 
 `pod install`
 
-## Actualización de paquetes:
+- Si se ha utilizado previamente SPM en el proyecto, para limpiar todo rastro previo podemos quitar las referencias SPM desde _demosdk -> Package Dependencies_
+- Para esta demo, se puede simplemente eliminar las referencias del TARGET demosdk a los paquetes SPM en lugar de hacer lo anterior.
+
+## Actualización de paquetes con Cocoapods:
 
 En caso de liberarse una versión nueva de alguno de los componentes de la SDK Mobile, se deberá actualizar el repositorio añadido previamente, para que se actualicen los cambios que se han realizado. Para ello, se deberá ejecutar el siguiente comando:
 
 `pod repo-art update cocoa-pro-fphi`
 
 
-## Posibles problemas
+## Posibles problemas en Cocoapods
 
-
-- Si cocoapods fue instalado mediante homebrew, puede dar problemas.
-
-- A veces hacer el update no hace que el Pod install apunte a la última versión.
-
-- Para hacer un CI la máquina tiene que tener instalado cocoapods art (Instalarlo en Jenkins o en un Runner de GitHub). (Solucionado) 
-
-- Interactuar con cocoa-remote toma demasiado tiempo. (Solucionado)
-
-- No se sabe qué pasará si hay dos pods con el mismo nombre, uno en el apartado privado y otro en público. (Buscará la última versión, por lo que tendremos que crear un pod público con una versión mínima para que no roben el nombre y den problemas en el futuro)
-
+- Si cocoapods fue instalado mediante homebrew, puede dar problemas. Se recomienda instalación por gems.

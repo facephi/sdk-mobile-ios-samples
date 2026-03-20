@@ -98,3 +98,8 @@ build/
 *.xcframework
 .swiftpm/
 
+# Generated docs and operational helpers (local use only)
+AGENTS.md
+Documentation/
+*/Documentation/
+scripts/validate_pod_versions.sh

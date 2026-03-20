@@ -1,14 +1,15 @@
-# SDK-Mobile Cocoapods Demo Selphi Version
+# SDK-Mobile Demo Signature Version
 
-Demo application to internally test all the components of the Mobile SDK with facial capture, downloading the components from our private repository (Artifactory). 
+Demo application to internally test all the components of the Mobile SDK with digital signature, downloading the components from our private repository (Artifactory). 
 
 ## Dependencies
 
 - FPHISDKMainComponent
-- FPHISDKTrackingComponent
 - FPHISDKSelphiComponent
-- FPHISDKStatusComponent 
+- FPHISDKStatusComponent
 - FPHISDKTokenizeComponent
+- FPHISDKTrackingComponent
+- FPHISDKVideoIDComponent
 
 
 ## Installation with SPM

@@ -14,7 +14,7 @@ extension SdkConfigurationManager {
         var configPhingers = PhingersConfigurationData()
         
         configPhingers.showTutorial = true
-        configPhingers.reticleOrientation = .LEFT
+        configPhingers.reticleOrientation = ReticleOrientation.LEFT
         configPhingers.templateType = .NIST_TEMPLATE
         
         return configPhingers
@@ -41,7 +41,7 @@ extension SdkConfigurationManager {
             case("showPreviousTip", .bool(let val)):
                 config.showPreviousTip = val
             case("reticleOrientation", .enumValue(let val, _)):
-                config.reticleOrientation = CaptureOrientation(rawValue: val)
+                config.reticleOrientation = ReticleOrientation(rawValue: val)
             case("showEllipses", .bool(let val)):
                 config.showEllipses = val
             case("showTutorial", .bool(let val)):
@@ -77,8 +77,8 @@ extension SdkConfigurationManager {
             "showPreviousTip": .bool(value: phingersConfigurationData?.showPreviousTip ?? true),
             "extractionTimeout": .int(value: phingersConfigurationData?.extractionTimeout ?? 50000),
             "reticleOrientation": .enumValue(
-                value: (phingersConfigurationData?.reticleOrientation ?? .LEFT).rawValue,
-                options: CaptureOrientation.allCases.map { $0.rawValue }
+                value: (phingersConfigurationData?.reticleOrientation ?? ReticleOrientation.LEFT).rawValue,
+                options: ReticleOrientation.allCases.map { $0.rawValue }
             ),
             "showEllipses": .bool(value: phingersConfigurationData?.showEllipses ?? true),
             "showTutorial": .bool(value: phingersConfigurationData?.showTutorial ?? true),
@@ -145,3 +145,4 @@ extension SdkConfigurationManager {
         }
     }
 }
+

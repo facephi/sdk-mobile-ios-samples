@@ -13,5 +13,5 @@ struct SdkConfigurationManager {
     
     static let customerId = ""
     static let onlineFlow = true
-    static let FLOW_ID = "6cdf5827-df3c-4c00-8ce7-02ed8a633424"
+    static let FLOW_ID = "6cdf5827-df3c-4c00-8ce7-02ed8a633424" // This ID references Resources/flow.json, replace if needed
 }

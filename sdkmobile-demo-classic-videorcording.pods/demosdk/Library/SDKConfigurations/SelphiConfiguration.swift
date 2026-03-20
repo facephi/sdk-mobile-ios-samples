@@ -22,10 +22,16 @@ extension SdkConfigurationManager {
         configSelphi.debug = false
         configSelphi.livenessMode = SelphiFaceLivenessMode.PASSIVE
         configSelphi.stabilizationMode = false
-        configSelphi.templateRawOptimized = true
         configSelphi.qrMode = false
         configSelphi.resourcesPath = resourcesSelphi
         configSelphi.showDiagnostic = true
+        configSelphi.showTutorial = true
+        configSelphi.showPreviousTip = true
+        configSelphi.showResultAfterCapture = true
+        configSelphi.cameraPreferred = .FRONT
+        configSelphi.moveSuccessfulAttempts = 1
+        configSelphi.moveFailedAttempts = 3
+        configSelphi.vibrationEnabled = true
         
         return configSelphi
     }

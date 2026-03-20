@@ -1,15 +1,15 @@
-# SDK-Mobile Cocoapods Demo Full Version
+# SDK-Mobile Demo Full Version
 
-Aplicación demo para testear internamente todos los componentes de la SDK Mobile implementados hasta la fecha (Full Version), descargando los componentes desde nuestro repositorios privados (Artifactory). 
+Aplicación demo para testear internamente todos los componentes de la SDK Mobile implementados hasta la fecha (Full Version), descargando los componentes desde nuestros repositorios privados (Artifactory). 
 
-## Módulos:
+## Dependencias
 
 - FPHISDKCaptureComponent
 - FPHISDKMainComponent
 - FPHISDKNFCComponent
 - FPHISDKPhingersTFComponent
 - FPHISDKSelphiComponent
-- FPHISDKSelphIDComponent
+- FPHISDKSelphIDMBSDRComponent
 - FPHISDKStatusComponent
 - FPHISDKTokenizeComponent
 - FPHISDKTrackingComponent
@@ -18,13 +18,14 @@ Aplicación demo para testear internamente todos los componentes de la SDK Mobil
 - FPHISDKVideoRecordingComponent
 - FPHISDKVoiceIDComponent
 
-## Instalación con SPM:
+
+## Instalación con SPM
 
 - Abrir demosdk.**xcodeproj**
 - Configurar en XCode una cuenta de GitHub que disponga de acceso al repositorio privado de Facephi-Clienters.
+- Añadir las dependencias SPM usando preferiblemente las URLs con SSH.
 - Si se ha utilizado previamente Cocoapods en el proyecto, para limpiar todo rastro previo debemos usar el comando `pod deintegrate`
-- En el proyecto demosdk -> TARGETS -> demosdk -> General -> Frameworks, Libraries, and Embedded Content debemos asegurarnos de que están referenciados todos los paquetes del listado de #Módulos.
-
+- En el proyecto demosdk -> TARGETS -> demosdk -> General -> Frameworks, Libraries, and Embedded Content debemos asegurarnos de que están referenciados todos los paquetes del listado de Dependencias.
 
 ### SPM - Recursos de CaptureComponent
 - Los recursos gráficos del componente de Captura se copian durante la fase Build gracias a un Run Script en la sección de Build Phases:
@@ -52,7 +53,7 @@ else
 fi
 
 
-## Instalación con Cocoapods:
+## Instalación con Cocoapods
 
 - Si es la **primera vez** que se va a utilizar el repositorio privado instalar Cocoapods para Artifactory:
 
@@ -63,10 +64,12 @@ fi
 `nano ~/.netrc`
 
 Y una vez abiertos se copian los siguientes datos:
- 
-`machine facephicorp.jfrog.io`
-`login <USERNAME>`
-`password <TOKEN>`
+
+```
+machine facephicorp.jfrog.io
+login <USERNAME>
+password <TOKEN>
+```
 
 - Y finalmente se deberá añadir el repositorio donde se encuentran todos los paquetes:
 
@@ -88,6 +91,4 @@ En caso de liberarse una versión nueva de alguno de los componentes de la SDK M
 
 ## Posibles problemas en Cocoapods
 
-- Si cocoapods fue instalado mediante homebrew, puede dar problemas.
-
-- Para hacer un CI la máquina tiene que tener instalado cocoapods art (Instalarlo en Jenkins o en un Runner de GitHub).
+- Si cocoapods fue instalado mediante homebrew, puede dar problemas. Se recomienda instalación por gems.

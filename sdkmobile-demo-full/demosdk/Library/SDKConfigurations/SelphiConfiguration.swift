@@ -23,7 +23,6 @@ extension SdkConfigurationManager {
         configSelphi.debug = false
         configSelphi.livenessMode = SelphiFaceLivenessMode.PASSIVE
         configSelphi.stabilizationMode = false
-        configSelphi.templateRawOptimized = true
         configSelphi.qrMode = false
         configSelphi.resourcesPath = resourcesSelphi
         configSelphi.showTutorial = true
@@ -59,8 +58,6 @@ extension SdkConfigurationManager {
                 config.debug = val
             case ("stabilizationMode", .bool(let val)):
                 config.stabilizationMode = val
-            case ("templateRawOptimized", .bool(let val)):
-                config.templateRawOptimized = val
             case ("qrMode", .bool(let val)):
                 config.qrMode = val
             case ("videoFilename", .string(let val)):
@@ -116,7 +113,6 @@ extension SdkConfigurationManager {
             ),
             "debug": .bool(value: selphiConfigurationData?.debug ?? false),
             "stabilizationMode": .bool(value: selphiConfigurationData?.stabilizationMode ?? true),
-            "templateRawOptimized": .bool(value: selphiConfigurationData?.templateRawOptimized ?? true),
             "qrMode": .bool(value: selphiConfigurationData?.qrMode ?? false),
             "videoFilename": .string(value: selphiConfigurationData?.videoFilename ?? ""),
             "cameraFlashEnabled": .bool(value: selphiConfigurationData?.cameraFlashEnabled ?? true),
