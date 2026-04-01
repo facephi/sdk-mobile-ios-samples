@@ -37,6 +37,8 @@
 		1CB5EEB72EEC662C003FCBC6 /* sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 1CB5EEB62EEC662C003FCBC6 /* sdk */; };
 		1CB5EEB92EEC6630003FCBC6 /* nfcComponent in Frameworks */ = {isa = PBXBuildFile; productRef = 1CB5EEB82EEC6630003FCBC6 /* nfcComponent */; };
 		1CB5EEBB2EEC6634003FCBC6 /* voiceIDComponent in Frameworks */ = {isa = PBXBuildFile; productRef = 1CB5EEBA2EEC6634003FCBC6 /* voiceIDComponent */; };
+		1CC96B652F7D12B6005A94E5 /* SDK-TrackingPackage-SPM in Frameworks */ = {isa = PBXBuildFile; productRef = 1CC96B642F7D12B6005A94E5 /* SDK-TrackingPackage-SPM */; };
+		1CC96B682F7D12FA005A94E5 /* voiceIDComponent in Frameworks */ = {isa = PBXBuildFile; productRef = 1CC96B672F7D12FA005A94E5 /* voiceIDComponent */; };
 		31FBCE79299A8EAC00CCC253 /* CustomThemeQrReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FBCE78299A8EAC00CCC253 /* CustomThemeQrReader.swift */; };
 		3E4E903F2DEEE89F00CDD4C9 /* NfcConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4E903E2DEEE89F00CDD4C9 /* NfcConfiguration.swift */; };
 		3E4E904F2DEF421F00CDD4C9 /* facephi_eyes_open_detector_2_0_0_model.dat in Resources */ = {isa = PBXBuildFile; fileRef = 3E4E90402DEF421F00CDD4C9 /* facephi_eyes_open_detector_2_0_0_model.dat */; };
@@ -213,11 +215,13 @@
 				1CB5EEB92EEC6630003FCBC6 /* nfcComponent in Frameworks */,
 				1CB5EEB32EEC6625003FCBC6 /* SDK-VideoIDPackage-SPM in Frameworks */,
 				1CB5EEAF2EEC661B003FCBC6 /* SDK-VideoRecording-SPM in Frameworks */,
+				1CC96B682F7D12FA005A94E5 /* voiceIDComponent in Frameworks */,
 				1CB5EEB72EEC662C003FCBC6 /* sdk in Frameworks */,
 				1CB5EEB52EEC6628003FCBC6 /* SDK-CapturePackage-SPM in Frameworks */,
 				1CB5EEB12EEC6620003FCBC6 /* SDK-VideoCallPackage-SPM in Frameworks */,
 				1CB5EEA52EEC65FF003FCBC6 /* SDK-StatusPackage-SPM in Frameworks */,
 				1CB5EEA72EEC6608003FCBC6 /* SDK-TrackingPackage-SPM in Frameworks */,
+				1CC96B652F7D12B6005A94E5 /* SDK-TrackingPackage-SPM in Frameworks */,
 				1CB5EEBB2EEC6634003FCBC6 /* voiceIDComponent in Frameworks */,
 				1CB5EEAD2EEC6617003FCBC6 /* SDK-PhingersTF_Component-SPM in Frameworks */,
 				1CB5EEAB2EEC6612003FCBC6 /* SDK-Selphi_component-SPM in Frameworks */,
@@ -550,7 +554,6 @@
 			packageReferences = (
 				1C485FD52ED5CE9C008E8488 /* XCRemoteSwiftPackageReference "SDK-SelphidMBSDRComponent-SPM" */,
 				1CC09D942ED4661D0096EE68 /* XCRemoteSwiftPackageReference "SDK-StatusPackage-SPM" */,
-				1CC09D972ED466710096EE68 /* XCRemoteSwiftPackageReference "SDK-TrackingPackage-SPM" */,
 				1CC09D9A2ED4669A0096EE68 /* XCRemoteSwiftPackageReference "SDK-TokenizePackage-SPM" */,
 				1CC09D9D2ED466CE0096EE68 /* XCRemoteSwiftPackageReference "SDK-Selphi_component-SPM" */,
 				1C485FBE2ED5A9CB008E8488 /* XCRemoteSwiftPackageReference "SDK-PhingersTF_Component-SPM" */,
@@ -559,8 +562,9 @@
 				1C485FCB2ED5BE08008E8488 /* XCRemoteSwiftPackageReference "SDK-CapturePackage-SPM" */,
 				1C485FD02ED5BF90008E8488 /* XCRemoteSwiftPackageReference "SDK-SdkPackage-SPM" */,
 				1C485FD82ED5D405008E8488 /* XCRemoteSwiftPackageReference "SDK-NFC_component-SPM" */,
-				1C485FDD2ED5D46B008E8488 /* XCRemoteSwiftPackageReference "SDK-VoicePackage-SPM" */,
 				1C7BCFCB2F67F7FF00B5C2B3 /* XCRemoteSwiftPackageReference "SDK-VideoRecording-SPM" */,
+				1CC96B632F7D12B6005A94E5 /* XCRemoteSwiftPackageReference "SDK-TrackingPackage-SPM" */,
+				1CC96B662F7D12FA005A94E5 /* XCRemoteSwiftPackageReference "SDK-VoicePackage-SPM" */,
 			);
 			productRefGroup = 13F510B5281937A5001E3CF1 /* Products */;
 			projectDirPath = "";
@@ -1120,7 +1124,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-PhingersTF_Component-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.6.0;
+				minimumVersion = 2.7.0;
 			};
 		};
 		1C485FBF2ED5B67D008E8488 /* XCRemoteSwiftPackageReference "SDK-VideoRecording-SPM" */ = {
@@ -1128,7 +1132,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-VideoRecording-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.6.0;
+				minimumVersion = 2.7.0;
 			};
 		};
 		1C485FC52ED5B93E008E8488 /* XCRemoteSwiftPackageReference "SDK-VideoCallPackage-SPM" */ = {
@@ -1136,7 +1140,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-VideoCallPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.6.0;
+				minimumVersion = 2.7.0;
 			};
 		};
 		1C485FC82ED5B988008E8488 /* XCRemoteSwiftPackageReference "SDK-VideoIDPackage-SPM" */ = {
@@ -1144,7 +1148,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-VideoIDPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.6.0;
+				minimumVersion = 2.7.0;
 			};
 		};
 		1C485FCB2ED5BE08008E8488 /* XCRemoteSwiftPackageReference "SDK-CapturePackage-SPM" */ = {
@@ -1152,7 +1156,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-CapturePackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.6.0;
+				minimumVersion = 2.7.0;
 			};
 		};
 		1C485FD02ED5BF90008E8488 /* XCRemoteSwiftPackageReference "SDK-SdkPackage-SPM" */ = {
@@ -1160,7 +1164,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-SdkPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.6.0;
+				minimumVersion = 2.7.0;
 			};
 		};
 		1C485FD52ED5CE9C008E8488 /* XCRemoteSwiftPackageReference "SDK-SelphidMBSDRComponent-SPM" */ = {
@@ -1168,7 +1172,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-SelphidMBSDRComponent-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.6.0;
+				minimumVersion = 2.7.0;
 			};
 		};
 		1C485FD82ED5D405008E8488 /* XCRemoteSwiftPackageReference "SDK-NFC_component-SPM" */ = {
@@ -1176,7 +1180,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-NFC_component-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.14.0;
+				minimumVersion = 2.15.0;
 			};
 		};
 		1C485FDD2ED5D46B008E8488 /* XCRemoteSwiftPackageReference "SDK-VoicePackage-SPM" */ = {
@@ -1184,7 +1188,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-VoicePackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.6.0;
+				minimumVersion = 2.7.0;
 			};
 		};
 		1C7BCFCB2F67F7FF00B5C2B3 /* XCRemoteSwiftPackageReference "SDK-VideoRecording-SPM" */ = {
@@ -1192,7 +1196,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-VideoRecording-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.6.0;
+				minimumVersion = 2.7.0;
 			};
 		};
 		1CC09D942ED4661D0096EE68 /* XCRemoteSwiftPackageReference "SDK-StatusPackage-SPM" */ = {
@@ -1200,7 +1204,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-StatusPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.6.0;
+				minimumVersion = 2.7.0;
 			};
 		};
 		1CC09D972ED466710096EE68 /* XCRemoteSwiftPackageReference "SDK-TrackingPackage-SPM" */ = {
@@ -1208,7 +1212,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-TrackingPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.6.0;
+				minimumVersion = 2.7.0;
 			};
 		};
 		1CC09D9A2ED4669A0096EE68 /* XCRemoteSwiftPackageReference "SDK-TokenizePackage-SPM" */ = {
@@ -1216,7 +1220,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-TokenizePackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.6.0;
+				minimumVersion = 2.7.0;
 			};
 		};
 		1CC09D9D2ED466CE0096EE68 /* XCRemoteSwiftPackageReference "SDK-Selphi_component-SPM" */ = {
@@ -1224,7 +1228,23 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-Selphi_component-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.6.0;
+				minimumVersion = 2.7.0;
+			};
+		};
+		1CC96B632F7D12B6005A94E5 /* XCRemoteSwiftPackageReference "SDK-TrackingPackage-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facephi-clienters/SDK-TrackingPackage-SPM";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.7.0;
+			};
+		};
+		1CC96B662F7D12FA005A94E5 /* XCRemoteSwiftPackageReference "SDK-VoicePackage-SPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:facephi-clienters/SDK-VoicePackage-SPM.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.7.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1298,6 +1318,16 @@
 		1CB5EEBA2EEC6634003FCBC6 /* voiceIDComponent */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1C485FDD2ED5D46B008E8488 /* XCRemoteSwiftPackageReference "SDK-VoicePackage-SPM" */;
+			productName = voiceIDComponent;
+		};
+		1CC96B642F7D12B6005A94E5 /* SDK-TrackingPackage-SPM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CC96B632F7D12B6005A94E5 /* XCRemoteSwiftPackageReference "SDK-TrackingPackage-SPM" */;
+			productName = "SDK-TrackingPackage-SPM";
+		};
+		1CC96B672F7D12FA005A94E5 /* voiceIDComponent */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CC96B662F7D12FA005A94E5 /* XCRemoteSwiftPackageReference "SDK-VoicePackage-SPM" */;
 			productName = voiceIDComponent;
 		};
 /* End XCSwiftPackageProductDependency section */

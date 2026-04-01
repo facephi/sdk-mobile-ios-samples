@@ -6,8 +6,15 @@
 //
 
 import selphidComponent
+import UIKit
+import Foundation
+
 class CustomThemeSelphID: ThemeSelphidProtocol {
     var name: String = "custom"
+    
+    var fonts: [selphidComponent.R.Font : String] = [:]
+    
+    var dimensions: [selphidComponent.R.Dimension : CGFloat] = [:]
     
     var animations: [selphidComponent.R.Animation : String] {
         [.selphid_anim_tuto_id_1: "animation_step_id_card_first",
