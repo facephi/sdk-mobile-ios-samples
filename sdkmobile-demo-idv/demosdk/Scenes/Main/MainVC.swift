@@ -12,7 +12,7 @@ class MainVC: UIViewController {
     // MARK: - ENUM
     private enum ButtonTag: Int {
         case launchFlow = 1,
-             nextStepFlow = 10,
+             nextStepFlow,
              cancelFlow,
              downloadFlows,
              clearLogs
