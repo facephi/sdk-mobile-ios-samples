@@ -18,7 +18,7 @@ class CustomThemeStatus: ThemeStatusProtocol {
     var colors: [R.Color: UIColor?] = [:]
 //    = [
 //        R.Color.sdkPrimaryColor: UIColor.red,
-//        R.Color.sdkBackgroundColor: .brown,
+//        R.Color.sdkBackgroundPrimaryColor: .brown,
 //        R.Color.sdkNeutralColor: UIColor.cyan,
 //        .sdkAccentColor: .systemPink]
     
