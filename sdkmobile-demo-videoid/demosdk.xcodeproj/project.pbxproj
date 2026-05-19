@@ -870,7 +870,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-TokenizePackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.7.0;
+				minimumVersion = 2.8.0;
 			};
 		};
 		1C262F522DCA564700072C32 /* XCRemoteSwiftPackageReference "SDK-SdkPackage-SPM" */ = {
@@ -878,7 +878,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-SdkPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.7.0;
+				minimumVersion = 2.8.0;
 			};
 		};
 		1C262F532DCA568D00072C32 /* XCRemoteSwiftPackageReference "SDK-TrackingPackage-SPM" */ = {
@@ -886,7 +886,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-TrackingPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.7.0;
+				minimumVersion = 2.8.0;
 			};
 		};
 		1C262F542DCA583800072C32 /* XCRemoteSwiftPackageReference "SDK-VideoIDPackage-SPM" */ = {
@@ -894,7 +894,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-VideoIDPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.7.0;
+				minimumVersion = 2.8.0;
 			};
 		};
 		1C262F572DCA585500072C32 /* XCRemoteSwiftPackageReference "SDK-StatusPackage-SPM" */ = {
@@ -902,7 +902,7 @@
 			repositoryURL = "git@github.com:facephi-clienters/SDK-StatusPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.7.0;
+				minimumVersion = 2.8.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
