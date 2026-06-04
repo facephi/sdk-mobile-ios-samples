@@ -8,6 +8,11 @@ plugin 'cocoapods-art', :sources => [
 
 source 'https://cdn.cocoapods.org/'
 
+target 'videocallExtension' do
+  use_frameworks!
+  pod 'FPHISDKVideoCallComponent', '~> 2.8.3'
+end
+
 target 'demosdk' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
@@ -15,7 +20,7 @@ target 'demosdk' do
 ##### Remote Dependencies
   pod 'FPHISDKMainComponent', '~> 2.8.0'
   pod 'FPHISDKTrackingComponent', '~> 2.8.0'
-  pod 'FPHISDKVideoCallComponent', '~> 2.8.0'
+  pod 'FPHISDKVideoCallComponent', '~> 2.8.3'
   pod 'FPHISDKTokenizeComponent', '~> 2.8.0'
   pod 'FPHISDKStatusComponent', '~> 2.8.0'
   
