@@ -18,6 +18,7 @@ Demo application to internally test all the components of the Mobile SDK with vi
 - Add the SPM dependencies, preferably using SSH URLs.
 - If Cocoapods was previously used in the project, you must use the command pod deintegrate to remove all previous traces.
 - In the project: demosdk -> TARGETS -> demosdk -> General -> Frameworks, Libraries, and Embedded Content, ensure that all packages listed in the Dependencies section are referenced.
+- In the project: demosdk -> TARGETS -> videocallExtension -> General -> Frameworks, Libraries, and Embedded Content, ensure that the VideoCall dependency is referenced.
 
 
 ## Installation with Cocoapods
@@ -48,7 +49,7 @@ password <TOKEN>
 
 - If SPM was previously used in the project, you can remove SPM references from demosdk -> Package Dependencies to clean all previous traces.
 
-- For this demo, you can simply delete the references from the demosdk TARGET to the SPM packages instead of following the step above.
+- For this demo, you can simply delete the references from the demosdk TARGET to the SPM packages instead of following the step above. Remove also the VideoCall's dependency from the target's extension.
 
 ## Updating packages with Cocoapods
 

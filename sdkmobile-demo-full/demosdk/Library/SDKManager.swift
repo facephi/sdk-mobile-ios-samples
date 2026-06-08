@@ -83,7 +83,7 @@ class SDKManager {
         let selphiController = SelphiController(data: nil, output: {
             print("SelphiController output: \($0.errorType)")
         }, viewController: viewController)
-        let startVideoRecordingController = VideoRecordingController(data: nil, extensionIdentifier: "com.facephi.sdk.demo.videoRecording", viewController: viewController, output: {
+        let startVideoRecordingController = VideoRecordingController(data: nil, viewController: viewController, output: {
             print("StartVideoRecordingController output: \($0.errorType)")
         })
         let stopVideoRecordingController = StopVideoRecordingController(videoRecordingController: startVideoRecordingController, output: {
@@ -112,7 +112,7 @@ class SDKManager {
         let invoiceReaderController = InvoiceReaderController(data: nil, output: {
             print("invoiceReaderController output: \($0.errorType)")
         }, viewController: viewController)
-        let videoCallController = VideoCallController(data: nil, extensionIdentifier: "com.facephi.sdk.demo.videoRecording", output: {
+        let videoCallController = VideoCallController(data: nil, extensionIdentifier: "com.facephi.sdk.demo.videocallExtension", output: {
             print("videoCallController output: \($0.errorType)")
         }, viewController: viewController)
         self.videoCallController = videoCallController
@@ -269,7 +269,7 @@ class SDKManager {
     public func launchVideoCall(data: VideoCallConfigurationData, setTracking: Bool, viewController: UIViewController, output: @escaping (SdkResult<VideoCallStatus>) -> Void) {
         log("LAUNCH VIDEO CALL")
         
-        let videocallController = VideoCallController(data: data, extensionIdentifier: "com.facephi.sdk.demo.videoRecording", output: output, viewController: viewController)
+        let videocallController = VideoCallController(data: data, extensionIdentifier: "com.facephi.sdk.demo.videocallExtension", output: output, viewController: viewController)
         self.videoCallController = videocallController
         SDKController.shared.launch(controller: videocallController)
     }
@@ -313,7 +313,7 @@ class SDKManager {
     
     public func launchVideoRecording(viewController: UIViewController) {
         let data = VideoRecordingConfigurationData()
-        let videoRecordingController = VideoRecordingController(data: data, extensionIdentifier: "com.facephi.sdk.demo.videoRecording", viewController: viewController, output: {
+        let videoRecordingController = VideoRecordingController(data: data, viewController: viewController, output: {
             print("videoRecordingController output: \($0.errorType)")
         })
         

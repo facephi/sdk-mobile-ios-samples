@@ -26,6 +26,7 @@ Aplicación demo para testear internamente todos los componentes de la SDK Mobil
 - Añadir las dependencias SPM usando preferiblemente las URLs con SSH.
 - Si se ha utilizado previamente Cocoapods en el proyecto, para limpiar todo rastro previo debemos usar el comando `pod deintegrate`
 - En el proyecto demosdk -> TARGETS -> demosdk -> General -> Frameworks, Libraries, and Embedded Content debemos asegurarnos de que están referenciados todos los paquetes del listado de Dependencias.
+- En el proyecto demosdk -> TARGETS -> videocallExtension -> General -> Frameworks, Libraries, and Embedded Content debemos asegurarnos de que está referenciada la dependencia de VideoCall.
 
 ### SPM - Recursos de CaptureComponent
 - Los recursos gráficos del componente de Captura se copian durante la fase Build gracias a un Run Script en la sección de Build Phases:
@@ -80,7 +81,7 @@ password <TOKEN>
 `pod install`
 
 - Si se ha utilizado previamente SPM en el proyecto, para limpiar todo rastro previo podemos quitar las referencias SPM desde _demosdk -> Package Dependencies_
-- Para esta demo, se puede simplemente eliminar las referencias del TARGET demosdk a los paquetes SPM en lugar de hacer lo anterior.
+- Para esta demo, se puede simplemente eliminar las referencias del TARGET demosdk a los paquetes SPM en lugar de hacer lo anterior. También se necesitará eliminar la dependencia de VideoCall de la Extensión.
 
 ## Actualización de paquetes con Cocoapods:
 

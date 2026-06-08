@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1530"
+   LastUpgradeVersion = "2630"
    wasCreatedForAppExtension = "YES"
    version = "2.0">
    <BuildAction
@@ -17,8 +17,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9EB7A1BB2B554D8C0094CD6D"
-               BuildableName = "videoRecording.appex"
-               BlueprintName = "videoRecording"
+               BuildableName = "videocallExtension.appex"
+               BlueprintName = "videocallExtension"
                ReferencedContainer = "container:demosdk.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

@@ -25,7 +25,6 @@
 		1CC09DB42ED46E3C0096EE68 /* SDK-VideoIDPackage-SPM in Frameworks */ = {isa = PBXBuildFile; productRef = 1CC09DB32ED46E3C0096EE68 /* SDK-VideoIDPackage-SPM */; };
 		1CC09DB62ED46E3C0096EE68 /* SDK-StatusPackage-SPM in Frameworks */ = {isa = PBXBuildFile; productRef = 1CC09DB52ED46E3C0096EE68 /* SDK-StatusPackage-SPM */; };
 		1CC96B6A2F7D1EC9005A94E5 /* SDK-TokenizePackage-SPM in Frameworks */ = {isa = PBXBuildFile; productRef = 1CC96B692F7D1EC9005A94E5 /* SDK-TokenizePackage-SPM */; };
-		72304AFF12B557C51B6AD962 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		9E2DEB122A1B75F000E8FD9F /* SdkConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DEB112A1B75F000E8FD9F /* SdkConfigurationManager.swift */; };
 		9EFB343A2A4999E10005C31E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EFB343C2A4999E10005C31E /* Localizable.strings */; };
 		D9D2E38C2AC2F08100501393 /* VideoIDConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2E38B2AC2F08100501393 /* VideoIDConfiguration.swift */; };
@@ -101,7 +100,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72304AFF12B557C51B6AD962 /* (null) in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -867,7 +865,7 @@
 /* Begin XCRemoteSwiftPackageReference section */
 		1C262F512DCA55CD00072C32 /* XCRemoteSwiftPackageReference "SDK-TokenizePackage-SPM" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:facephi-clienters/SDK-TokenizePackage-SPM.git";
+			repositoryURL = "https://github.com/facephi-clienters/SDK-TokenizePackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
 				minimumVersion = 2.8.0;
@@ -875,7 +873,7 @@
 		};
 		1C262F522DCA564700072C32 /* XCRemoteSwiftPackageReference "SDK-SdkPackage-SPM" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:facephi-clienters/SDK-SdkPackage-SPM.git";
+			repositoryURL = "https://github.com/facephi-clienters/SDK-SdkPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
 				minimumVersion = 2.8.0;
@@ -883,7 +881,7 @@
 		};
 		1C262F532DCA568D00072C32 /* XCRemoteSwiftPackageReference "SDK-TrackingPackage-SPM" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:facephi-clienters/SDK-TrackingPackage-SPM.git";
+			repositoryURL = "https://github.com/facephi-clienters/SDK-TrackingPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
 				minimumVersion = 2.8.0;
@@ -891,7 +889,7 @@
 		};
 		1C262F542DCA583800072C32 /* XCRemoteSwiftPackageReference "SDK-VideoIDPackage-SPM" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:facephi-clienters/SDK-VideoIDPackage-SPM.git";
+			repositoryURL = "https://github.com/facephi-clienters/SDK-VideoIDPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
 				minimumVersion = 2.8.0;
@@ -899,7 +897,7 @@
 		};
 		1C262F572DCA585500072C32 /* XCRemoteSwiftPackageReference "SDK-StatusPackage-SPM" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:facephi-clienters/SDK-StatusPackage-SPM.git";
+			repositoryURL = "https://github.com/facephi-clienters/SDK-StatusPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
 				minimumVersion = 2.8.0;

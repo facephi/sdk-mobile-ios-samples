@@ -863,7 +863,7 @@
 /* Begin XCRemoteSwiftPackageReference section */
 		1CC96B6B2F7D1F42005A94E5 /* XCRemoteSwiftPackageReference "SDK-SdkPackage-SPM" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/facephi-clienters/SDK-SdkPackage-SPM";
+			repositoryURL = "https://github.com/facephi-clienters/SDK-SdkPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
 				minimumVersion = 2.8.0;
@@ -871,7 +871,7 @@
 		};
 		1CC96B6E2F7D1FB3005A94E5 /* XCRemoteSwiftPackageReference "SDK-SelphidMBSDRComponent-SPM" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:facephi-clienters/SDK-SelphidMBSDRComponent-SPM.git";
+			repositoryURL = "https://github.com/facephi-clienters/SDK-SelphidMBSDRComponent-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
 				minimumVersion = 2.8.0;
@@ -879,7 +879,7 @@
 		};
 		1CC96B712F7D2017005A94E5 /* XCRemoteSwiftPackageReference "SDK-Selphi_component-SPM" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:facephi-clienters/SDK-Selphi_component-SPM.git";
+			repositoryURL = "https://github.com/facephi-clienters/SDK-Selphi_component-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
 				minimumVersion = 2.8.0;
@@ -887,7 +887,7 @@
 		};
 		1CC96B742F7D2041005A94E5 /* XCRemoteSwiftPackageReference "SDK-TrackingPackage-SPM" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/facephi-clienters/SDK-TrackingPackage-SPM";
+			repositoryURL = "https://github.com/facephi-clienters/SDK-TrackingPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
 				minimumVersion = 2.8.0;
@@ -895,7 +895,7 @@
 		};
 		1CC96B772F7D20DB005A94E5 /* XCRemoteSwiftPackageReference "SDK-VideoRecording-SPM" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:facephi-clienters/SDK-VideoRecording-SPM.git";
+			repositoryURL = "https://github.com/facephi-clienters/SDK-VideoRecording-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
 				minimumVersion = 2.8.0;
@@ -903,7 +903,7 @@
 		};
 		1CC96B7A2F7D20FE005A94E5 /* XCRemoteSwiftPackageReference "SDK-NFC_component-SPM" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:facephi-clienters/SDK-NFC_component-SPM.git";
+			repositoryURL = "https://github.com/facephi-clienters/SDK-NFC_component-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
 				minimumVersion = 2.16.0;
@@ -911,7 +911,7 @@
 		};
 		1CC96B7D2F7D212C005A94E5 /* XCRemoteSwiftPackageReference "SDK-TokenizePackage-SPM" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:facephi-clienters/SDK-TokenizePackage-SPM.git";
+			repositoryURL = "https://github.com/facephi-clienters/SDK-TokenizePackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
 				minimumVersion = 2.8.0;
@@ -919,7 +919,7 @@
 		};
 		1CC96B802F7D2141005A94E5 /* XCRemoteSwiftPackageReference "SDK-StatusPackage-SPM" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:facephi-clienters/SDK-StatusPackage-SPM.git";
+			repositoryURL = "https://github.com/facephi-clienters/SDK-StatusPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
 				minimumVersion = 2.8.0;

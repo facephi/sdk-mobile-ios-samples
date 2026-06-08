@@ -79,7 +79,7 @@ class SDKManager {
     {
         log("LAUNCH VIDEO CALL")
         
-        let videocallController = VideoCallController(data: data, extensionIdentifier: "com.facephi.sdk.demo.videoRecording", output: output, viewController: viewController)
+        let videocallController = VideoCallController(data: data, extensionIdentifier: "com.facephi.sdk.demo.videocallExtension", output: output, viewController: viewController)
         self.videoCallController = videocallController
         SDKController.shared.launch(controller: videocallController)
     }
