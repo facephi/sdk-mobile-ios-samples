@@ -949,7 +949,7 @@
 			repositoryURL = "https://github.com/facephi-clienters/SDK-VideoRecording-SPM";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.8.1;
+				minimumVersion = 2.9.0;
 			};
 		};
 		1C4F8FBA2FD03273004F1D27 /* XCRemoteSwiftPackageReference "SDK-SelphidMBSDRComponent-SPM" */ = {
@@ -957,7 +957,7 @@
 			repositoryURL = "https://github.com/facephi-clienters/SDK-SelphidMBSDRComponent-SPM";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.8.2;
+				minimumVersion = 2.9.0;
 			};
 		};
 		1C4F8FBD2FD0329C004F1D27 /* XCRemoteSwiftPackageReference "SDK-TrackingPackage-SPM" */ = {
@@ -965,7 +965,7 @@
 			repositoryURL = "https://github.com/facephi-clienters/SDK-TrackingPackage-SPM";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.8.1;
+				minimumVersion = 2.9.0;
 			};
 		};
 		1C4F8FC02FD032D0004F1D27 /* XCRemoteSwiftPackageReference "SDK-SdkPackage-SPM" */ = {
@@ -973,7 +973,7 @@
 			repositoryURL = "https://github.com/facephi-clienters/SDK-SdkPackage-SPM";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.8.1;
+				minimumVersion = 2.9.0;
 			};
 		};
 		1C4F8FC32FD03305004F1D27 /* XCRemoteSwiftPackageReference "SDK-Selphi_Component-SPM" */ = {
@@ -981,7 +981,7 @@
 			repositoryURL = "https://github.com/facephi-clienters/SDK-Selphi_Component-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.8.2;
+				minimumVersion = 2.9.0;
 			};
 		};
 		1C4F8FC62FD0374B004F1D27 /* XCRemoteSwiftPackageReference "SDK-TokenizePackage-SPM" */ = {
@@ -989,7 +989,7 @@
 			repositoryURL = "https://github.com/facephi-clienters/SDK-TokenizePackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.8.1;
+				minimumVersion = 2.9.0;
 			};
 		};
 		1C4F8FC92FD0375E004F1D27 /* XCRemoteSwiftPackageReference "SDK-CapturePackage-SPM" */ = {
@@ -997,7 +997,7 @@
 			repositoryURL = "https://github.com/facephi-clienters/SDK-CapturePackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.8.1;
+				minimumVersion = 2.9.0;
 			};
 		};
 		1C4F8FCC2FD0379B004F1D27 /* XCRemoteSwiftPackageReference "SDK-StatusPackage-SPM" */ = {
@@ -1005,7 +1005,7 @@
 			repositoryURL = "https://github.com/facephi-clienters/SDK-StatusPackage-SPM.git";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 2.8.1;
+				minimumVersion = 2.9.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
