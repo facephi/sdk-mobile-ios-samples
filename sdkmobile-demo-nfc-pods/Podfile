@@ -13,6 +13,7 @@ target 'demosdk' do
   pod 'FPHISDKMainComponent', '~> 2.9.0'
   pod 'FPHISDKTrackingComponent', '~> 2.9.0'
   pod 'FPHISDKNFCComponent', '~> 2.17.0'
+  pod 'FPHISDKDisclaimerComponent', '~> 2.9.0'
   pod 'FPHISDKStatusComponent', '~> 2.9.0'
   pod 'FPHISDKTokenizeComponent', '~> 2.9.0'
 
@@ -38,4 +39,21 @@ post_install do |installer|
       config.build_settings['CODE_SIGNING_ALLOWED'] = "NO"
     end
   end
+
+  # CocoaPods reorders build phases on pod install; keep compose copy after [CP] phases.
+  installer.aggregate_targets
+    .map(&:user_project)
+    .uniq
+    .each do |project|
+      project.targets.each do |target|
+        next unless target.name == 'demosdk'
+
+        copy_phase = target.shell_script_build_phases.find { |phase| phase.name == 'Copy compose resources' }
+        next unless copy_phase
+
+        target.build_phases.delete(copy_phase)
+        target.build_phases << copy_phase
+      end
+      project.save
+    end
 end

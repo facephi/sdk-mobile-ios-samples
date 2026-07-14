@@ -7,6 +7,7 @@
 
 import UIKit
 import captureComponent
+import disclaimerComponent
 import selphiComponent
 import selphidComponent
 
@@ -22,6 +23,7 @@ class MainVC: UIViewController {
         case launchDocumentValidationStart = 60, launchDocumentValidationStatus, launchDocumentValidationData
         case launchFinishTracking = 100
         case generateRawTemplate = 120, tokenize, license, clearLogs, closeSession
+        case launchDisclaimer = 125
     }
     
     // MARK: - OUTLET
@@ -137,6 +139,10 @@ class MainVC: UIViewController {
         case .launchFileUploader:
             presentConfigComponent(component: .FILE_UPLOADER_COMPONENT, configType: FileUploaderConfigurationData.self) {
                 self.viewModel.launchFileUploader(configuration: $0)
+            }
+        case .launchDisclaimer:
+            presentConfigComponent(component: .DISCLAIMER_COMPONENT, configType: DisclaimerConfigurationData.self) {
+                self.viewModel.launchDisclaimer(configuration: $0)
             }
         case .startVideoRecording:
             execute{

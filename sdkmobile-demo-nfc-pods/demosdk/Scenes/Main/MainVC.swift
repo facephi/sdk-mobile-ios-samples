@@ -11,6 +11,7 @@ class MainVC: UIViewController {
     // MARK: - ENUM
     private enum ButtonTag: Int {
         case newOperation = 1, nfc, closesession
+        case launchDisclaimer = 125
     }
 
     // MARK: - OUTLET
@@ -55,6 +56,8 @@ class MainVC: UIViewController {
             viewModel.nfc(tfSupportNumber: tfSupportNumber.text ?? "", tfBirthDate: tfBirthDate.text ?? "", tfExpirationDate: tfExpirationDate.text ?? "", tfIssuer: tfIssuer.text ?? "")
         case .closesession:
             viewModel.closeSession()
+        case .launchDisclaimer:
+            viewModel.launchDisclaimer()
         default:
             break
         }
