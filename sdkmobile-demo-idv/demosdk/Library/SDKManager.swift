@@ -15,6 +15,7 @@ import statusComponent
 import tokenizeComponent
 import trackingComponent
 import videoRecordingComponent
+import disclaimerComponent
 
 class SDKManager {
     // MARK: - VARS
@@ -59,6 +60,11 @@ class SDKManager {
     }
     
     public func launchFlow(flowId: String, viewController: UIViewController, output: @escaping (SdkFlowResult) -> Void) {
+        
+        let disclaimerController = DisclaimerController(data: nil, output: {
+            print("DisclaimerController output: \($0.errorType)")
+        }, viewController: viewController)
+        
         let selphidController = SelphIDController(data: nil, output: {
             print("SelphidController output: \($0.errorType)")
         }, viewController: viewController)
@@ -81,7 +87,7 @@ class SDKManager {
         })
         
         let controllers: [IFlowableController] =
-        [selphidController, selphiController, nfcController, videoRecordingController, stopVideoRecordingController]
+        [disclaimerController, selphidController, selphiController, nfcController, videoRecordingController, stopVideoRecordingController]
         
         let flowConfigurationData = FlowConfigurationData(
             id: flowId,

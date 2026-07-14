@@ -9,6 +9,7 @@ import core
 import Foundation
 import UIKit
 import AVFoundation
+import disclaimerComponent
 import selphiComponent
 import selphidComponent
 import captureComponent
@@ -153,7 +154,23 @@ extension MainVM {
             self.log(msg: "File Uploader: \(msg)")
         })
     }
-    
+
+    func launchDisclaimer(configuration: DisclaimerConfigurationData) {
+        SDKManager.shared.launchDisclaimer(setTracking: true, viewController: viewController, disclaimerConfigurationData: configuration, output: { disclaimerResult in
+            guard disclaimerResult.errorType == .NO_ERROR else {
+                self.log(msg: "\(disclaimerResult.errorType)")
+                return
+            }
+
+            guard let result = disclaimerResult.data else {
+                self.log(msg: "Disclaimer result is nil")
+                return
+            }
+
+            self.log(msg: "Disclaimer accepted: \(result.accepted)")
+        })
+    }
+
     func tokenizeExtradata() {
         let result = SDKManager.shared.getExtraDataResult()
         guard let tokenizeExtradata = result.data else {

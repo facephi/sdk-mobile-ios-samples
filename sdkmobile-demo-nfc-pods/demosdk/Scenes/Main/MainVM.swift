@@ -8,11 +8,13 @@
 import UIKit
 import sdk
 import nfcComponent
+import disclaimerComponent
 
 protocol MainVMInput {
     func getLicense()
     func newOperation()
     func nfc(tfSupportNumber: String, tfBirthDate: String, tfExpirationDate: String, tfIssuer: String)
+    func launchDisclaimer()
     func closeSession()
 }
 
@@ -70,6 +72,27 @@ extension MainVM: MainVMInput {
                 return
             }
             self.log(msg: "NFC OK")
+        })
+    }
+
+    func launchDisclaimer() {
+        let configuration = DisclaimerConfigurationData(
+            disclaimerText: "Please accept the disclaimer to continue.",
+            extractionTimeout: 30000,
+            orientation: .followSystem
+        )
+        SDKManager.shared.launchDisclaimer(setTracking: true, viewController: viewController, disclaimerConfigurationData: configuration, output: { disclaimerResult in
+            guard disclaimerResult.errorType == .NO_ERROR else {
+                self.log(msg: "\(disclaimerResult.errorType)")
+                return
+            }
+
+            guard let result = disclaimerResult.data else {
+                self.log(msg: "Disclaimer result is nil")
+                return
+            }
+
+            self.log(msg: "Disclaimer accepted: \(result.accepted)")
         })
     }
     

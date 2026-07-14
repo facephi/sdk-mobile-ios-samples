@@ -16,6 +16,7 @@ enum ConfigComponent {
     case SELPHI_COMPONENT
     case SELPHID_COMPONENT
     case FILE_UPLOADER_COMPONENT
+    case DISCLAIMER_COMPONENT
     case FINISH_TRACKING
 }
 
@@ -117,6 +118,7 @@ class ConfigsComponentsVC: UIViewController {
             .SELPHI_COMPONENT: { SdkConfigurationManager.configureSelphiFields(in: $0, with: nil) },
             .SELPHID_COMPONENT: { SdkConfigurationManager.configureSelphidFields(in: $0, with: nil) },
             .FILE_UPLOADER_COMPONENT: { SdkConfigurationManager.configureFileUploaderFields(in: $0, with: nil) },
+            .DISCLAIMER_COMPONENT: { SdkConfigurationManager.configureDisclaimerFields(in: $0, with: nil) },
             .FINISH_TRACKING: { SdkConfigurationManager.configureFinishTrackingFields(in: $0, with: nil) },
         ]
         configActions[component]?(self)
@@ -260,23 +262,29 @@ class ConfigsComponentsVC: UIViewController {
     }
     
     @objc private func executeAction() {
-        if let component = component {
-            switch component {
-            case .SELPHI_COMPONENT:
-                let selphiConfig = SdkConfigurationManager.createSelphiConfigurationData(from: configuration)
-                action?(selphiConfig)
-            case .SELPHID_COMPONENT:
-                let selphidConfig = SdkConfigurationManager.createSelphidConfigurationData(from: configuration)
-                action?(selphidConfig)
-            case .FILE_UPLOADER_COMPONENT:
-                let captureConfig = SdkConfigurationManager.createFileUploaderConfigurationData(from: configuration)
-                action?(captureConfig)
-            case .FINISH_TRACKING:
-                let captureConfig = SdkConfigurationManager.createFinishTrackingData(from: configuration)
-                action?(captureConfig)
-            }
+        guard let component = component else {
+            dismiss(animated: true)
+            return
         }
-        self.dismiss(animated: true)
+
+        let config: Any
+        switch component {
+        case .SELPHI_COMPONENT:
+            config = SdkConfigurationManager.createSelphiConfigurationData(from: configuration)
+        case .SELPHID_COMPONENT:
+            config = SdkConfigurationManager.createSelphidConfigurationData(from: configuration)
+        case .FILE_UPLOADER_COMPONENT:
+            config = SdkConfigurationManager.createFileUploaderConfigurationData(from: configuration)
+        case .DISCLAIMER_COMPONENT:
+            config = SdkConfigurationManager.createDisclaimerConfigurationData(from: configuration)
+        case .FINISH_TRACKING:
+            config = SdkConfigurationManager.createFinishTrackingData(from: configuration)
+        }
+
+        let launchAction = action
+        dismiss(animated: true) {
+            launchAction?(config)
+        }
     }
 
     @objc private func goBack() {
