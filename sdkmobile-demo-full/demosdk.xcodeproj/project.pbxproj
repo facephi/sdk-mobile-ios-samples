@@ -492,7 +492,6 @@
 				13F510B0281937A5001E3CF1 /* Sources */,
 				13F510B1281937A5001E3CF1 /* Frameworks */,
 				13F510B2281937A5001E3CF1 /* Resources */,
-				13F78C3D2851DFCA005B7DDF /* ShellScript */,
 				9EB7A1C92B554D8C0094CD6D /* Embed Foundation Extensions */,
 			);
 			buildRules = (
@@ -619,25 +618,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		13F78C3D2851DFCA005B7DDF /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -euo pipefail\nBUNDLE_PATH=\"${TARGET_BUILD_DIR}/FPHICaptureWidget-SPM_FPHICaptureWidget-SPM.bundle/compose-resources\"\nDESTINATION=\"${TARGET_BUILD_DIR}/${TARGET_NAME}.app/compose-resources\"\nif [ -d \"$BUNDLE_PATH\" ]; then\n  rm -rf \"$DESTINATION\"\n  mkdir -p \"$DESTINATION\"\n  cp -R \"$BUNDLE_PATH/\" \"$DESTINATION/\"\n  echo \"Copied FPHICaptureWidget Compose resources to ${DESTINATION}\"\nelse\n  echo \"FPHICaptureWidget Compose resources not found at ${BUNDLE_PATH}. If your app is not using FPHICaptureWidget Component anymore, delete the script from your Build Phases -> Run Script section\"\nfi\n\n\nBUNDLE_PATH_DS=\"${TARGET_BUILD_DIR}/FPHIDesignSystemResources_FPHIDesignSystemResources.bundle/\"\nDESTINATION=\"${TARGET_BUILD_DIR}/${TARGET_NAME}.app/compose-resources/composeResources\"\nif [ -d \"$BUNDLE_PATH_DS\" ]; then\n  cp -R \"$BUNDLE_PATH_DS/\" \"$DESTINATION/\"\n  echo \"Copied FPHIDesignSystemResources Compose resources to ${DESTINATION}\"\nelse\n  echo \"FPHIDesignSystemResources Compose resources not found at ${BUNDLE_PATH_DS}. If your app is not using FacePhi Components anymore, delete the script from your Build Phases -> Run Script section\"\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		13F510B0281937A5001E3CF1 /* Sources */ = {
