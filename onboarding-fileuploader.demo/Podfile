@@ -14,7 +14,7 @@ target 'demosdk' do
   pod 'FPHISDKVideoRecordingComponent', '~> 2.10.0'
   pod 'FPHISDKSelphIDMBSDRComponent', '~> 2.10.0'
   pod 'FPHISDKCaptureComponent', '~> 2.10.0'
-  pod 'FPHISDKDisclaimerComponent', '~> 2.10.0'
+  pod 'FPHISDKTermsConditionsComponent', '~> 2.10.0'
   pod 'FPHISDKMainComponent', '~> 2.10.0'
   pod 'FPHISDKSelphiComponent', '~> 2.10.0'
   pod 'FPHISDKStatusComponent', '~> 2.10.0'

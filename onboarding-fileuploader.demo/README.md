@@ -5,7 +5,7 @@ Aplicación demo con integración del SDK, descargando los componentes desde nue
 ## Dependencias
 
 - FPHISDKCaptureComponent
-- FPHISDKDisclaimerComponent
+- FPHISDKTermsConditionsComponent
 - FPHISDKMainComponent
 - FPHISDKSelphiComponent
 - FPHISDKSelphIDMBSDRComponent

@@ -22,6 +22,7 @@ import videoRecordingComponent
 import tokenizeComponent
 import voiceIDComponent
 import statusComponent
+import termsConditionsComponent
 
 protocol SDKManagerDelegate: AnyObject {
     func log(msg: String)
@@ -120,9 +121,13 @@ class SDKManager {
         let externalStepController = ExternalStepController(output: {
             print("externalStepController output")
         })
+
+        let termsConditionsController = TermsConditionsController(data: nil, output: {
+            print("TermsConditionsController output: \($0.errorType)")
+        }, viewController: viewController)
         
         let controllers: [IFlowableController] =
-        [selphidController, selphiController, startVideoRecordingController, stopVideoRecordingController, nfcController, phingersController, videoIdController, voiceController, qrReaderController, invoiceReaderController, videoCallController, externalStepController]
+        [termsConditionsController, selphidController, selphiController, startVideoRecordingController, stopVideoRecordingController, nfcController, phingersController, videoIdController, voiceController, qrReaderController, invoiceReaderController, videoCallController, externalStepController]
         
         let flowId = PrefManager.get(String.self, forKey: .KEY_FLOW_ID)
         let flowConfigurationData = FlowConfigurationData(
@@ -254,6 +259,17 @@ class SDKManager {
         log("LAUNCH FILE UPLOADER")
 
         let controller = FileUploaderController(data: fileUploaderConfigurationData, output: output, viewController: viewController)
+        if setTracking {
+            SDKController.shared.launch(controller: controller)
+        } else {
+            SDKController.shared.launchMethod(controller: controller)
+        }
+    }
+
+    public func launchTermsConditions(setTracking: Bool, viewController: UIViewController, termsConditionsConfigurationData: TermsConditionsConfigurationData, output: @escaping (SdkResult<TermsConditionsResult>) -> Void) {
+        log("LAUNCH TERMS CONDITIONS")
+
+        let controller = TermsConditionsController(data: termsConditionsConfigurationData, output: output, viewController: viewController)
         if setTracking {
             SDKController.shared.launch(controller: controller)
         } else {

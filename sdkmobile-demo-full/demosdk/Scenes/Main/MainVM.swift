@@ -16,6 +16,7 @@ import captureComponent
 import videocallComponent
 import videoidComponent
 import voiceIDComponent
+import termsConditionsComponent
 
 protocol MainVMOutput {
     func show(msg: String)
@@ -269,6 +270,22 @@ extension MainVM {
             } else {
                 self.log(msg: "Status KO \(phingersResult.errorType)")
             }
+        })
+    }
+
+    func launchTermsConditions(configuration: TermsConditionsConfigurationData) {
+        SDKManager.shared.launchTermsConditions(setTracking: true, viewController: viewController, termsConditionsConfigurationData: configuration, output: { termsConditionsResult in
+            guard termsConditionsResult.errorType == .NO_ERROR else {
+                self.log(msg: "\(termsConditionsResult.errorType)")
+                return
+            }
+
+            guard termsConditionsResult.data != nil else {
+                self.log(msg: "TermsConditions KO")
+                return
+            }
+
+            self.log(msg: "TermsConditions OK")
         })
     }
     

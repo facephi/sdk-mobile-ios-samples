@@ -11,6 +11,7 @@ Aplicación demo para testear internamente todos los componentes de la SDK Mobil
 - FPHISDKSelphiComponent
 - FPHISDKSelphIDMBSDRComponent
 - FPHISDKStatusComponent
+- FPHISDKTermsConditionsComponent
 - FPHISDKTokenizeComponent
 - FPHISDKTrackingComponent
 - FPHISDKVideoCallComponent

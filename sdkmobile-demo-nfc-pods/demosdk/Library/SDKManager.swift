@@ -13,7 +13,7 @@ import trackingComponent
 import tokenizeComponent
 import UIKit
 import statusComponent
-import disclaimerComponent
+import termsConditionsComponent
 
 protocol SDKManagerDelegate: AnyObject {
     func log(msg: String)
@@ -80,10 +80,10 @@ class SDKManager {
         }
     }
 
-    public func launchDisclaimer(setTracking: Bool, viewController: UIViewController, disclaimerConfigurationData: DisclaimerConfigurationData, output: @escaping (SdkResult<DisclaimerResult>) -> Void) {
-        log("LAUNCH DISCLAIMER")
+    public func launchTermsConditions(setTracking: Bool, viewController: UIViewController, termsConditionsConfigurationData: TermsConditionsConfigurationData, output: @escaping (SdkResult<TermsConditionsResult>) -> Void) {
+        log("LAUNCH TERMS CONDITIONS")
 
-        let controller = DisclaimerController(data: disclaimerConfigurationData, output: output, viewController: viewController)
+        let controller = TermsConditionsController(data: termsConditionsConfigurationData, output: output, viewController: viewController)
         if setTracking {
             SDKController.shared.launch(controller: controller)
         } else {

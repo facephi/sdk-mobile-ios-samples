@@ -62,12 +62,12 @@
                                                     <action selector="buttonClickListener:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cll-YH-cdB"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="125" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHF-hH-tZr" userLabel="DISCLAIMER">
+                                            <button opaque="NO" tag="125" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHF-hH-tZr" userLabel="TERMS CONDITIONS">
                                                 <rect key="frame" x="0.0" y="138" width="382" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="DISCLAIMER">
+                                                <state key="normal" title="TERMS CONDITIONS">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>

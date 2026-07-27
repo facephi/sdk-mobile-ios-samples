@@ -5,7 +5,7 @@ Demo application to internally test all the components of the Mobile SDK with fa
 ## Dependencies
 
 - FPHISDKCaptureComponent
-- FPHISDKDisclaimerComponent
+- FPHISDKTermsConditionsComponent
 - FPHISDKMainComponent
 - FPHISDKSelphiComponent
 - FPHISDKSelphIDMBSDRComponent

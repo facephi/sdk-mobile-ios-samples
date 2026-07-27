@@ -28,6 +28,7 @@ enum ConfigComponent {
     case CAPTURE_COMPONENT
     case FILE_UPLOADER_COMPONENT
     case GALLERY_COMPONENT
+    case TERMS_CONDITIONS_COMPONENT
 }
 
 enum ConfigValue {
@@ -116,7 +117,8 @@ class ConfigsComponentsVC: UIViewController {
             .FILE_UPLOADER_COMPONENT: { SdkConfigurationManager.configureFileUploaderFields(in: $0, with: nil) },
             .VOICE_COMPONENT: { SdkConfigurationManager.configureVoiceIDFields(in: $0, with: nil) },
             .PHINGER_COMPONENT: { SdkConfigurationManager.configurePhingersFields(in: $0, with: nil) },
-            .GALLERY_COMPONENT: { SdkConfigurationManager.configureGalleryFields(in: $0, with: nil)}
+            .GALLERY_COMPONENT: { SdkConfigurationManager.configureGalleryFields(in: $0, with: nil)},
+            .TERMS_CONDITIONS_COMPONENT: { SdkConfigurationManager.configureTermsConditionsFields(in: $0, with: nil) }
         ]
         configActions[component]?(self)
     }
@@ -236,6 +238,9 @@ class ConfigsComponentsVC: UIViewController {
             case .GALLERY_COMPONENT:
                 let galleryConfig = SdkConfigurationManager.createGalleryConfigurationData(from: configuration)
                 action?(galleryConfig)
+            case .TERMS_CONDITIONS_COMPONENT:
+                let termsConditionsConfig = SdkConfigurationManager.createTermsConditionsConfigurationData(from: configuration)
+                action?(termsConditionsConfig)
             }
         }
         self.dismiss(animated: true)

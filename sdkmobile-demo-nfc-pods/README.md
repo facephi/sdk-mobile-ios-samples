@@ -7,6 +7,7 @@ Aplicación demo para testear internamente todos los componentes de la SDK Mobil
 - FPHISDKMainComponent
 - FPHISDKNFCComponent
 - FPHISDKStatusComponent
+- FPHISDKTermsConditionsComponent
 - FPHISDKTokenizeComponent
 - FPHISDKTrackingComponent
 

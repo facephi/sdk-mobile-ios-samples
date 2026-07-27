@@ -17,7 +17,7 @@ import trackingComponent
 import videoRecordingComponent
 import tokenizeComponent
 import statusComponent
-import disclaimerComponent
+import termsConditionsComponent
 
 protocol SDKManagerDelegate: AnyObject {
     func log(msg: String)
@@ -116,10 +116,10 @@ class SDKManager {
         }
     }
     
-    public func launchDisclaimer(setTracking: Bool, viewController: UIViewController, disclaimerConfigurationData: DisclaimerConfigurationData, output: @escaping (SdkResult<DisclaimerResult>) -> Void) {
-        log("LAUNCH DISCLAIMER")
+    public func launchTermsConditions(setTracking: Bool, viewController: UIViewController, termsConditionsConfigurationData: TermsConditionsConfigurationData, output: @escaping (SdkResult<TermsConditionsResult>) -> Void) {
+        log("LAUNCH TERMS CONDITIONS")
 
-        let controller = DisclaimerController(data: disclaimerConfigurationData, output: output, viewController: viewController)
+        let controller = TermsConditionsController(data: termsConditionsConfigurationData, output: output, viewController: viewController)
         if setTracking {
             SDKController.shared.launch(controller: controller)
         } else {
@@ -148,8 +148,8 @@ class SDKManager {
     
     public func launchFlow(customerId: String, viewController: UIViewController, output: @escaping (SdkResult<String>) -> Void) {
 //        ThemeSelphidManager.setup(theme: CustomThemeSelphID())
-        let disclaimerController = DisclaimerController(data: nil, output: {
-            self.log("DisclaimerController output: \($0.errorType)")
+        let termsConditionsController = TermsConditionsController(data: nil, output: {
+            self.log("TermsConditionsController output: \($0.errorType)")
         }, viewController: viewController)
         
         let selphidController = SelphIDController(data: nil, output: {
@@ -178,7 +178,7 @@ class SDKManager {
         })
         
         let controllers: [IFlowableController] =
-        [disclaimerController, selphidController, selphiController, fileUploaderController, startVideoRecordingController, stopVideoRecordingController, externalStepController]
+        [termsConditionsController, selphidController, selphiController, fileUploaderController, startVideoRecordingController, stopVideoRecordingController, externalStepController]
         
         let flowId = PrefManager.get(String.self, forKey: .KEY_FLOW_ID)
         let flowConfigurationData = FlowConfigurationData(

@@ -26,6 +26,7 @@ target 'demosdk' do
   pod 'FPHISDKVideoIDComponent', '~> 2.10.0'
   pod 'FPHISDKVoiceIDComponent', '~> 2.10.0'
   pod 'FPHISDKPhingersTFComponent', '~> 2.10.0'
+  pod 'FPHISDKTermsConditionsComponent', '~> 2.10.0'
 
   pod 'FPHISDKVideoCallComponent', '~> 2.10.0'
 end
