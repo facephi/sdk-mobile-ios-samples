@@ -13,6 +13,7 @@ import trackingComponent
 import tokenizeComponent
 import UIKit
 import statusComponent
+import disclaimerComponent
 
 protocol SDKManagerDelegate: AnyObject {
     func log(msg: String)
@@ -72,6 +73,17 @@ class SDKManager {
         log("LAUNCH NFC")
         
         let controller = NfcController(data: nfcConfigurationData, output: output, stateDelegate: nil)
+        if setTracking {
+            SDKController.shared.launch(controller: controller)
+        } else {
+            SDKController.shared.launchMethod(controller: controller)
+        }
+    }
+
+    public func launchDisclaimer(setTracking: Bool, viewController: UIViewController, disclaimerConfigurationData: DisclaimerConfigurationData, output: @escaping (SdkResult<DisclaimerResult>) -> Void) {
+        log("LAUNCH DISCLAIMER")
+
+        let controller = DisclaimerController(data: disclaimerConfigurationData, output: output, viewController: viewController)
         if setTracking {
             SDKController.shared.launch(controller: controller)
         } else {
