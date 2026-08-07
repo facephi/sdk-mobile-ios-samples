@@ -9,7 +9,7 @@ import core
 import Foundation
 import UIKit
 import AVFoundation
-import disclaimerComponent
+import termsConditionsComponent
 import selphiComponent
 import selphidComponent
 import captureComponent
@@ -155,19 +155,19 @@ extension MainVM {
         })
     }
 
-    func launchDisclaimer(configuration: DisclaimerConfigurationData) {
-        SDKManager.shared.launchDisclaimer(setTracking: true, viewController: viewController, disclaimerConfigurationData: configuration, output: { disclaimerResult in
-            guard disclaimerResult.errorType == .NO_ERROR else {
-                self.log(msg: "\(disclaimerResult.errorType)")
+    func launchTermsConditions(configuration: TermsConditionsConfigurationData) {
+        SDKManager.shared.launchTermsConditions(setTracking: true, viewController: viewController, termsConditionsConfigurationData: configuration, output: { termsConditionsResult in
+            guard termsConditionsResult.errorType == .NO_ERROR else {
+                self.log(msg: "\(termsConditionsResult.errorType)")
                 return
             }
 
-            guard let result = disclaimerResult.data else {
-                self.log(msg: "Disclaimer result is nil")
+            guard termsConditionsResult.data != nil else {
+                self.log(msg: "TermsConditions result is nil")
                 return
             }
 
-            self.log(msg: "Disclaimer accepted: \(result.accepted)")
+            self.log(msg: "TermsConditions accepted")
         })
     }
 

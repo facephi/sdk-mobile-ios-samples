@@ -13,6 +13,7 @@ import videocallComponent
 import videoidComponent
 import voiceIDComponent
 import phingersTFComponent
+import termsConditionsComponent
 
 class MainVC: UIViewController {
     // MARK: - ENUM
@@ -30,6 +31,7 @@ class MainVC: UIViewController {
         case checkLivenessV5Token = 100, checkAuthV5Token, checkLivenessV5Image, checkAuthV5Image, checkLivenessV6Token, checkAuthV6Token, checkLivenessV6Image, checkAuthV6Image
         case checkAuthMapDocFaceToken = 108, checkAuthV5ImageToken, checkAuthV6ImageToken
         case generateRawTemplate = 120, tokenize, license, clearLogs, closeSession
+        case launchTermsConditions = 125
     }
     
     // MARK: - OUTLET
@@ -249,6 +251,10 @@ class MainVC: UIViewController {
         case .checkAuthMapDocFaceToken:
             execute {
                 self.viewModel.checkAuthDocFaceToken()
+            }
+        case .launchTermsConditions:
+            presentConfigComponent(component: .TERMS_CONDITIONS_COMPONENT, configType: TermsConditionsConfigurationData.self) {
+                self.viewModel.launchTermsConditions(configuration: $0)
             }
         default:
             break

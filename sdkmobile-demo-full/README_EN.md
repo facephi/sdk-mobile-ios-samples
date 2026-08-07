@@ -11,6 +11,7 @@ Demo application to internally test all the components of the Mobile SDK, downlo
 - FPHISDKSelphiComponent
 - FPHISDKSelphIDMBSDRComponent
 - FPHISDKStatusComponent
+- FPHISDKTermsConditionsComponent
 - FPHISDKTokenizeComponent
 - FPHISDKTrackingComponent
 - FPHISDKVideoCallComponent
@@ -27,31 +28,6 @@ Demo application to internally test all the components of the Mobile SDK, downlo
 - If Cocoapods was previously used in the project, you must use the command pod deintegrate to remove all previous traces.
 - In the project: demosdk -> TARGETS -> demosdk -> General -> Frameworks, Libraries, and Embedded Content, ensure that all packages listed in the Dependencies section are referenced.
 - In the project: demosdk -> TARGETS -> videocallExtension -> General -> Frameworks, Libraries, and Embedded Content, ensure that the VideoCall dependency is referenced.
-
-### SPM - CaptureComponent's resources
-- The UI resources of this component are copied during the `Build` thanks to a `Run Script` that needs to be added in the Build Phases section of our target:
-
-set -euo pipefail
-BUNDLE_PATH="${TARGET_BUILD_DIR}/FPHICaptureWidget-SPM_FPHICaptureWidget-SPM.bundle/compose-resources"
-DESTINATION="${TARGET_BUILD_DIR}/${TARGET_NAME}.app/compose-resources"
-if [ -d "$BUNDLE_PATH" ]; then
-  rm -rf "$DESTINATION"
-  mkdir -p "$DESTINATION"
-  cp -R "$BUNDLE_PATH/" "$DESTINATION/"
-  echo "Copied FPHICaptureWidget Compose resources to ${DESTINATION}"
-else
-  echo "FPHICaptureWidget Compose resources not found at ${BUNDLE_PATH}. If your app is not using FPHICaptureWidget Component anymore, delete the script from your Build Phases -> Run Script section"
-fi
-
-
-BUNDLE_PATH_DS="${TARGET_BUILD_DIR}/FPHIDesignSystemResources_FPHIDesignSystemResources.bundle/"
-DESTINATION="${TARGET_BUILD_DIR}/${TARGET_NAME}.app/compose-resources/composeResources"
-if [ -d "$BUNDLE_PATH_DS" ]; then
-  cp -R "$BUNDLE_PATH_DS/" "$DESTINATION/"
-  echo "Copied FPHIDesignSystemResources Compose resources to ${DESTINATION}"
-else
-  echo "FPHIDesignSystemResources Compose resources not found at ${BUNDLE_PATH_DS}. If your app is not using FacePhi Components anymore, delete the script from your Build Phases -> Run Script section"
-fi
 
 
 ## Installation with Cocoapods

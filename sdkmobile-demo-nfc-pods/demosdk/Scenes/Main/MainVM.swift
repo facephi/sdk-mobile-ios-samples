@@ -8,13 +8,13 @@
 import UIKit
 import sdk
 import nfcComponent
-import disclaimerComponent
+import termsConditionsComponent
 
 protocol MainVMInput {
     func getLicense()
     func newOperation()
     func nfc(tfSupportNumber: String, tfBirthDate: String, tfExpirationDate: String, tfIssuer: String)
-    func launchDisclaimer()
+    func launchTermsConditions()
     func closeSession()
 }
 
@@ -75,24 +75,24 @@ extension MainVM: MainVMInput {
         })
     }
 
-    func launchDisclaimer() {
-        let configuration = DisclaimerConfigurationData(
-            disclaimerText: "Please accept the disclaimer to continue.",
+    func launchTermsConditions() {
+        let configuration = TermsConditionsConfigurationData(
+            termsConditions: "Please accept the terms and conditions to continue.",
             extractionTimeout: 30000,
             orientation: .followSystem
         )
-        SDKManager.shared.launchDisclaimer(setTracking: true, viewController: viewController, disclaimerConfigurationData: configuration, output: { disclaimerResult in
-            guard disclaimerResult.errorType == .NO_ERROR else {
-                self.log(msg: "\(disclaimerResult.errorType)")
+        SDKManager.shared.launchTermsConditions(setTracking: true, viewController: viewController, termsConditionsConfigurationData: configuration, output: { termsConditionsResult in
+            guard termsConditionsResult.errorType == .NO_ERROR else {
+                self.log(msg: "\(termsConditionsResult.errorType)")
                 return
             }
 
-            guard let result = disclaimerResult.data else {
-                self.log(msg: "Disclaimer result is nil")
+            guard termsConditionsResult.data != nil else {
+                self.log(msg: "TermsConditions result is nil")
                 return
             }
 
-            self.log(msg: "Disclaimer accepted: \(result.accepted)")
+            self.log(msg: "TermsConditions accepted")
         })
     }
     

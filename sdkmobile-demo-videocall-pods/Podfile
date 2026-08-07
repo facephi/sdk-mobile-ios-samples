@@ -10,7 +10,7 @@ source 'https://cdn.cocoapods.org/'
 
 target 'videocallExtension' do
   use_frameworks!
-  pod 'FPHISDKVideoCallComponent', '~> 2.9.0'
+  pod 'FPHISDKVideoCallComponent', '~> 2.10.0'
 end
 
 target 'demosdk' do
@@ -18,11 +18,11 @@ target 'demosdk' do
   use_frameworks!
   
 ##### Remote Dependencies
-  pod 'FPHISDKMainComponent', '~> 2.9.0'
-  pod 'FPHISDKTrackingComponent', '~> 2.9.0'
-  pod 'FPHISDKVideoCallComponent', '~> 2.9.0'
-  pod 'FPHISDKTokenizeComponent', '~> 2.9.0'
-  pod 'FPHISDKStatusComponent', '~> 2.9.0'
+  pod 'FPHISDKMainComponent', '~> 2.10.0'
+  pod 'FPHISDKTrackingComponent', '~> 2.10.0'
+  pod 'FPHISDKVideoCallComponent', '~> 2.10.0'
+  pod 'FPHISDKTokenizeComponent', '~> 2.10.0'
+  pod 'FPHISDKStatusComponent', '~> 2.10.0'
   
   target 'demosdkTests' do
     inherit! :search_paths
