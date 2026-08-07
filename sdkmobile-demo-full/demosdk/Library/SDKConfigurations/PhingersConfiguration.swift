@@ -14,8 +14,14 @@ extension SdkConfigurationManager {
         var configPhingers = PhingersConfigurationData()
         
         configPhingers.showTutorial = true
-        configPhingers.reticleOrientation = ReticleOrientation.LEFT
+        configPhingers.showPreviousTip = true
+        configPhingers.showDiagnostic = true
+        configPhingers.vibrationEnabled = true
+        configPhingers.showEllipses = true
+        configPhingers.useLiveness = true
+        configPhingers.reticleOrientation = .LEFT
         configPhingers.templateType = .NIST_TEMPLATE
+        configPhingers.extractionTimeout = 60000
         
         return configPhingers
     }
@@ -40,14 +46,14 @@ extension SdkConfigurationManager {
                 config.cropWidth = val
             case("showPreviousTip", .bool(let val)):
                 config.showPreviousTip = val
+            case("extractionTimeout", .int(let val)):
+                config.extractionTimeout = val
             case("reticleOrientation", .enumValue(let val, _)):
                 config.reticleOrientation = ReticleOrientation(rawValue: val)
             case("showEllipses", .bool(let val)):
                 config.showEllipses = val
             case("showTutorial", .bool(let val)):
                 config.showTutorial = val
-            case("threshold", .float(let val)):
-                config.threshold = val
             case("useLiveness", .bool(let val)):
                 config.useLiveness = val
             case("templateType", .enumValue(let val, _)):
@@ -73,7 +79,7 @@ extension SdkConfigurationManager {
                 options: FingerFilter.allCases.map { $0.rawValue }
             ),
             "cropHeight": .int(value: phingersConfigurationData?.cropHeight ?? Int()),
-            "cropWidth": .int(value: phingersConfigurationData?.cropHeight ?? Int()),
+            "cropWidth": .int(value: phingersConfigurationData?.cropWidth ?? Int()),
             "showPreviousTip": .bool(value: phingersConfigurationData?.showPreviousTip ?? true),
             "extractionTimeout": .int(value: phingersConfigurationData?.extractionTimeout ?? 50000),
             "reticleOrientation": .enumValue(
@@ -82,7 +88,6 @@ extension SdkConfigurationManager {
             ),
             "showEllipses": .bool(value: phingersConfigurationData?.showEllipses ?? true),
             "showTutorial": .bool(value: phingersConfigurationData?.showTutorial ?? true),
-            "threshold": .float(value: phingersConfigurationData?.threshold ?? Float()),
             "useLiveness": .bool(value: phingersConfigurationData?.useLiveness ?? true),
             "templateType": .enumValue(
                 value: (phingersConfigurationData?.templateType ?? .NIST_TEMPLATE).rawValue,
@@ -103,7 +108,6 @@ extension SdkConfigurationManager {
             "cropWidth",
             "extractionTimeout",
             "showEllipses",
-            "threshold",
             "useLiveness"
         ]
 
