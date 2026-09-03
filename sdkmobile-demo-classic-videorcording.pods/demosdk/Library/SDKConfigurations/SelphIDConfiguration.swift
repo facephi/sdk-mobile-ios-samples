@@ -30,6 +30,7 @@ extension SdkConfigurationManager {
         configSelphID.documentSide = SelphIDDocumentSide.FRONT
         configSelphID.timeout = SelphIDTimeout.LONG
         configSelphID.generateRawImages = true
+        configSelphID.encodedDataFocusEnabled = true
         configSelphID.translationsContent = ""
         configSelphID.viewsContent = ""
         configSelphID.documentModels = ""
