@@ -1,0 +1,168 @@
+{
+  "originHash": "8fc96a95ac02adb14fd3737c0910496a1c5d0456e255a94d881f51c306e74442",
+  "pins": [
+    {
+      "identity": "fpbrecognition-spm",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/facephi-clienters/FPBRecognition-SPM.git",
+      "state": {
+        "revision": "208374b46a0592dda7f5d7882ec7f5b8fa75b1b5",
+        "version": "6.1.3"
+      }
+    },
+    {
+      "identity": "fpbtokenizer-spm",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/facephi-clienters/FPBTokenizer-SPM.git",
+      "state": {
+        "revision": "722c8898bb92932cbd5bda3d89d615238bc5a87d",
+        "version": "4.0.4"
+      }
+    },
+    {
+      "identity": "fphilicensemanager-spm",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/facephi-clienters/FPHILicenseManager-SPM.git",
+      "state": {
+        "revision": "0e064d1ab3a74081fd5fa7b06b532162a8c2c99c",
+        "version": "0.5.7"
+      }
+    },
+    {
+      "identity": "fphimbwidgetios-framework",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/facephi-clienters/FPhiMBWidgetiOS-framework.git",
+      "state": {
+        "revision": "c9e6f9e6e7f60e286d3f39e17d27b73bca5be3d0",
+        "version": "6.13.1"
+      }
+    },
+    {
+      "identity": "fphirecognitionhelper-spm",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/facephi-clienters/FPHIRecognitionHelper-SPM.git",
+      "state": {
+        "revision": "34208055317b039381be7252b00351113db533f8",
+        "version": "6.1.9"
+      }
+    },
+    {
+      "identity": "fphitrackingwidget-spm",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/facephi-clienters/FPHITrackingWidget-SPM.git",
+      "state": {
+        "revision": "cc9b7fb5675c10027d6bdd5a42c3aca26e1b9773",
+        "version": "1.4.9"
+      }
+    },
+    {
+      "identity": "lottie-spm",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/airbnb/lottie-spm.git",
+      "state": {
+        "revision": "1d29eccc24cc8b75bff9f6804155112c0ffc9605",
+        "version": "4.4.3"
+      }
+    },
+    {
+      "identity": "sdk-corepackage-spm",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/facephi-clienters/SDK-CorePackage-SPM.git",
+      "state": {
+        "revision": "12fe02e197c6ef434722a7fd21525f348898fd0f",
+        "version": "2.11.0"
+      }
+    },
+    {
+      "identity": "sdk-licensecheckerpackage-spm",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/facephi-clienters/SDK-LicenseCheckerPackage-SPM.git",
+      "state": {
+        "revision": "41a4379787c12e63db613da5c8cb03fe7a48f8d8",
+        "version": "2.9.0"
+      }
+    },
+    {
+      "identity": "sdk-sdkpackage-spm",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/facephi-clienters/SDK-SdkPackage-SPM.git",
+      "state": {
+        "revision": "b8f3b17e3491316a58d6ea63e892a45d50a18727",
+        "version": "2.11.0"
+      }
+    },
+    {
+      "identity": "sdk-selphi_component-spm",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/facephi-clienters/SDK-Selphi_component-SPM.git",
+      "state": {
+        "revision": "3bb48514b7a3a4afba1b3b7a5367618369d12cb9",
+        "version": "2.11.0"
+      }
+    },
+    {
+      "identity": "sdk-selphidcomponentlight",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/facephi-clienters/SDK-SelphidComponentLight.git",
+      "state": {
+        "revision": "cdb0d74e53293889a621b3b3e78d699744319004",
+        "version": "2.11.0"
+      }
+    },
+    {
+      "identity": "sdk-statuspackage-spm",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/facephi-clienters/SDK-StatusPackage-SPM.git",
+      "state": {
+        "revision": "fe7ed55cff28918033d8e5f0b61e4c8d376f7fed",
+        "version": "2.11.0"
+      }
+    },
+    {
+      "identity": "sdk-tokenizepackage-spm",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/facephi-clienters/SDK-TokenizePackage-SPM.git",
+      "state": {
+        "revision": "5c4ef32bdafbed3af058063b41d83c9bf37b3b99",
+        "version": "2.11.0"
+      }
+    },
+    {
+      "identity": "sdk-trackingpackage-spm",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/facephi-clienters/SDK-TrackingPackage-SPM.git",
+      "state": {
+        "revision": "788711f81adda7387f68da6574bd57f4c3854542",
+        "version": "2.11.0"
+      }
+    },
+    {
+      "identity": "sdk-zipzap-spm",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/facephi-clienters/SDK-ZipZap-SPM.git",
+      "state": {
+        "revision": "befd61f9e6f0f6c8011cdec3a16dcee302ffb0ad",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "identity": "selphi-spm",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/facephi-clienters/Selphi-SPM.git",
+      "state": {
+        "revision": "dfed7d9bb3ff34239997b49754da9b094533cb72",
+        "version": "6.4.0"
+      }
+    },
+    {
+      "identity": "selphidnoml-framework",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/facephi-clienters/selphidnoml-framework.git",
+      "state": {
+        "revision": "74595b20e3fad97ef19f296e3a4b7578e57e0c5b",
+        "version": "1.41.4"
+      }
+    }
+  ],
+  "version": 3
+}

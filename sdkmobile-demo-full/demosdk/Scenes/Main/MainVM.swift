@@ -181,7 +181,22 @@ extension MainVM {
             self.saveNfcParameters(data: selphIDResult.data)
             
             self.log(msg: String(result.count))
+            self.logEncodedData(from: selphIDResult.data)
         })
+    }
+
+    private func logEncodedData(from result: SelphIDResult?) {
+        guard let result else { return }
+        if result.encodedDataImages.isEmpty {
+            self.log(msg: "No encoded data images")
+            return
+        }
+        for (index, encoded) in result.encodedDataImages.enumerated() {
+            let token = result.tokenEncodedDataImages.indices.contains(index)
+                ? result.tokenEncodedDataImages[index].token
+                : ""
+            self.log(msg: "EncodedData[\(index)] format=\(encoded.format) side=\(encoded.side.rawValue) token=\(token)")
+        }
     }
     
     func nfc() {

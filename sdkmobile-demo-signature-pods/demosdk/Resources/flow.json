@@ -19,7 +19,7 @@
             {
                 "index": 0,
                 "key": "SELPHID_COMPONENT",
-                "data": "{\"debug\":true,\"wizardMode\":false,\"showResultAfterCapture\":false,\"showTutorial\":false,\"tutorialOnly\":false,\"scanMode\":\"MODE_SEARCH\",\"specificData\":\"ES|<ALL>\",\"fullscreen\":true,\"tokenImageQuality\":null,\"locale\":null,\"documentType\":\"ID_CARD\",\"documentSide\":\"BACK\",\"timeout\":\"LONG\",\"generateRawImages\":false,\"translationsContent\":null,\"viewsContent\":null,\"documentModels\":null,\"resourcesPath\":\"fphi-selphid-widget-resources-SelphID-1.2\",\"cameraId\":null,\"videoFilename\":null,\"tokenPreviousCaptureData\":null,\"params\":null}"
+                "data": "{\"debug\":true,\"wizardMode\":false,\"showResultAfterCapture\":false,\"showTutorial\":false,\"tutorialOnly\":false,\"scanMode\":\"MODE_SEARCH\",\"specificData\":\"ES|<ALL>\",\"fullscreen\":true,\"tokenImageQuality\":null,\"locale\":null,\"documentType\":\"ID_CARD\",\"documentSide\":\"BACK\",\"timeout\":\"LONG\",\"generateRawImages\":false,\"encodedDataFocusEnabled\":true,\"translationsContent\":null,\"viewsContent\":null,\"documentModels\":null,\"resourcesPath\":\"fphi-selphid-widget-resources-SelphID-1.2\",\"cameraId\":null,\"videoFilename\":null,\"tokenPreviousCaptureData\":null,\"params\":null}"
             },
             {
                 "index": 1,
@@ -29,7 +29,7 @@
             {
                 "index": 2,
                 "key": "SELPHID_COMPONENT",
-                "data": "{\"debug\":false,\"wizardMode\":false,\"showResultAfterCapture\":true,\"showTutorial\":true,\"tutorialOnly\":false,\"scanMode\":\"MODE_GENERIC\",\"specificData\":\"ES|<ALL>\",\"fullscreen\":true,\"tokenImageQuality\":null,\"locale\":null,\"documentType\":\"PASSPORT\",\"documentSide\":\"FRONT\",\"timeout\":\"LONG\",\"generateRawImages\":false,\"translationsContent\":null,\"viewsContent\":null,\"documentModels\":null,\"resourcesPath\":\"fphi-selphid-widget-resources-SelphID-1.2\",\"cameraId\":null,\"videoFilename\":null,\"tokenPreviousCaptureData\":null,\"params\":null}"
+                "data": "{\"debug\":false,\"wizardMode\":false,\"showResultAfterCapture\":true,\"showTutorial\":true,\"tutorialOnly\":false,\"scanMode\":\"MODE_GENERIC\",\"specificData\":\"ES|<ALL>\",\"fullscreen\":true,\"tokenImageQuality\":null,\"locale\":null,\"documentType\":\"PASSPORT\",\"documentSide\":\"FRONT\",\"timeout\":\"LONG\",\"generateRawImages\":false,\"encodedDataFocusEnabled\":true,\"translationsContent\":null,\"viewsContent\":null,\"documentModels\":null,\"resourcesPath\":\"fphi-selphid-widget-resources-SelphID-1.2\",\"cameraId\":null,\"videoFilename\":null,\"tokenPreviousCaptureData\":null,\"params\":null}"
             },
             {
                 "index": 3,
@@ -81,7 +81,7 @@
             {
                 "index": 1,
                 "key": "SELPHID_COMPONENT",
-                "data": "{\"debug\":false,\"wizardMode\":true,\"showResultAfterCapture\":true,\"showTutorial\":false,\"tutorialOnly\":false,\"scanMode\":\"MODE_SEARCH\",\"specificData\":\"ES|<ALL>\",\"fullscreen\":true,\"tokenImageQuality\":null,\"locale\":null,\"documentType\":\"ID_CARD\",\"documentSide\":\"FRONT\",\"timeout\":\"LONG\",\"generateRawImages\":false,\"translationsContent\":null,\"viewsContent\":null,\"documentModels\":null,\"resourcesPath\":\"fphi-selphid-widget-resources-SelphID-1.2\",\"cameraId\":null,\"videoFilename\":null,\"tokenPreviousCaptureData\":null,\"params\":null}"
+                "data": "{\"debug\":false,\"wizardMode\":true,\"showResultAfterCapture\":true,\"showTutorial\":false,\"tutorialOnly\":false,\"scanMode\":\"MODE_SEARCH\",\"specificData\":\"ES|<ALL>\",\"fullscreen\":true,\"tokenImageQuality\":null,\"locale\":null,\"documentType\":\"ID_CARD\",\"documentSide\":\"FRONT\",\"timeout\":\"LONG\",\"generateRawImages\":false,\"encodedDataFocusEnabled\":true,\"translationsContent\":null,\"viewsContent\":null,\"documentModels\":null,\"resourcesPath\":\"fphi-selphid-widget-resources-SelphID-1.2\",\"cameraId\":null,\"videoFilename\":null,\"tokenPreviousCaptureData\":null,\"params\":null}"
             }
         ]
     },
@@ -99,7 +99,7 @@
             {
                 "index": 0,
                 "key": "SELPHID_COMPONENT",
-                "data": "{\"debug\":false,\"wizardMode\":true,\"showResultAfterCapture\":true,\"showTutorial\":false,\"tutorialOnly\":false,\"scanMode\":\"MODE_SEARCH\",\"specificData\":\"ES|<ALL>\",\"fullscreen\":true,\"tokenImageQuality\":null,\"locale\":null,\"documentType\":\"ID_CARD\",\"documentSide\":\"FRONT\",\"timeout\":\"LONG\",\"generateRawImages\":false,\"translationsContent\":null,\"viewsContent\":null,\"documentModels\":null,\"resourcesPath\":\"fphi-selphid-widget-resources-SelphID-1.2\",\"cameraId\":null,\"videoFilename\":null,\"tokenPreviousCaptureData\":null,\"params\":null}"
+                "data": "{\"debug\":false,\"wizardMode\":true,\"showResultAfterCapture\":true,\"showTutorial\":false,\"tutorialOnly\":false,\"scanMode\":\"MODE_SEARCH\",\"specificData\":\"ES|<ALL>\",\"fullscreen\":true,\"tokenImageQuality\":null,\"locale\":null,\"documentType\":\"ID_CARD\",\"documentSide\":\"FRONT\",\"timeout\":\"LONG\",\"generateRawImages\":false,\"encodedDataFocusEnabled\":true,\"translationsContent\":null,\"viewsContent\":null,\"documentModels\":null,\"resourcesPath\":\"fphi-selphid-widget-resources-SelphID-1.2\",\"cameraId\":null,\"videoFilename\":null,\"tokenPreviousCaptureData\":null,\"params\":null}"
             },
             {
                 "index": 1,
@@ -133,7 +133,7 @@
             {
                 "index": 1,
                 "key": "SELPHID_COMPONENT",
-                "data": "{\"debug\":false,\"wizardMode\":true,\"showResultAfterCapture\":true,\"showTutorial\":false,\"tutorialOnly\":false,\"scanMode\":\"MODE_SEARCH\",\"specificData\":\"ES|<ALL>\",\"fullscreen\":true,\"tokenImageQuality\":null,\"locale\":null,\"documentType\":\"ID_CARD\",\"documentSide\":\"FRONT\",\"timeout\":\"LONG\",\"generateRawImages\":false,\"translationsContent\":null,\"viewsContent\":null,\"documentModels\":null,\"resourcesPath\":\"fphi-selphid-widget-resources-SelphID-1.2\",\"cameraId\":null,\"videoFilename\":null,\"tokenPreviousCaptureData\":null,\"params\":null}"
+                "data": "{\"debug\":false,\"wizardMode\":true,\"showResultAfterCapture\":true,\"showTutorial\":false,\"tutorialOnly\":false,\"scanMode\":\"MODE_SEARCH\",\"specificData\":\"ES|<ALL>\",\"fullscreen\":true,\"tokenImageQuality\":null,\"locale\":null,\"documentType\":\"ID_CARD\",\"documentSide\":\"FRONT\",\"timeout\":\"LONG\",\"generateRawImages\":false,\"encodedDataFocusEnabled\":true,\"translationsContent\":null,\"viewsContent\":null,\"documentModels\":null,\"resourcesPath\":\"fphi-selphid-widget-resources-SelphID-1.2\",\"cameraId\":null,\"videoFilename\":null,\"tokenPreviousCaptureData\":null,\"params\":null}"
             },
             {
                 "index": 2,
@@ -161,7 +161,7 @@
             {
                 "index": 1,
                 "key": "SELPHID_COMPONENT",
-                "data": "{\"debug\":false,\"wizardMode\":true,\"showResultAfterCapture\":true,\"showTutorial\":false,\"tutorialOnly\":false,\"scanMode\":\"MODE_SEARCH\",\"specificData\":\"ES|<ALL>\",\"fullscreen\":true,\"tokenImageQuality\":null,\"locale\":null,\"documentType\":\"ID_CARD\",\"documentSide\":\"FRONT\",\"timeout\":\"LONG\",\"generateRawImages\":false,\"translationsContent\":null,\"viewsContent\":null,\"documentModels\":null,\"resourcesPath\":\"fphi-selphid-widget-resources-SelphID-1.2\",\"cameraId\":null,\"videoFilename\":null,\"tokenPreviousCaptureData\":null,\"params\":null}"
+                "data": "{\"debug\":false,\"wizardMode\":true,\"showResultAfterCapture\":true,\"showTutorial\":false,\"tutorialOnly\":false,\"scanMode\":\"MODE_SEARCH\",\"specificData\":\"ES|<ALL>\",\"fullscreen\":true,\"tokenImageQuality\":null,\"locale\":null,\"documentType\":\"ID_CARD\",\"documentSide\":\"FRONT\",\"timeout\":\"LONG\",\"generateRawImages\":false,\"encodedDataFocusEnabled\":true,\"translationsContent\":null,\"viewsContent\":null,\"documentModels\":null,\"resourcesPath\":\"fphi-selphid-widget-resources-SelphID-1.2\",\"cameraId\":null,\"videoFilename\":null,\"tokenPreviousCaptureData\":null,\"params\":null}"
             },
             {
                 "index": 2,
@@ -194,7 +194,7 @@
           {
             "index": 2,
             "key": "SELPHID_COMPONENT",
-            "data": "{\"debug\":false,\"wizardMode\":true,\"showResultAfterCapture\":true,\"showTutorial\":false,\"tutorialOnly\":false,\"scanMode\":\"MODE_SEARCH\",\"specificData\":\"ES|<ALL>\",\"fullscreen\":true,\"tokenImageQuality\":null,\"locale\":null,\"documentType\":\"ID_CARD\",\"documentSide\":\"FRONT\",\"timeout\":\"LONG\",\"generateRawImages\":false,\"translationsContent\":null,\"viewsContent\":null,\"documentModels\":null,\"resourcesPath\":\"resources-selphid-2-0.zip\",\"cameraId\":null,\"videoFilename\":null,\"tokenPreviousCaptureData\":null,\"params\":null}"
+            "data": "{\"debug\":false,\"wizardMode\":true,\"showResultAfterCapture\":true,\"showTutorial\":false,\"tutorialOnly\":false,\"scanMode\":\"MODE_SEARCH\",\"specificData\":\"ES|<ALL>\",\"fullscreen\":true,\"tokenImageQuality\":null,\"locale\":null,\"documentType\":\"ID_CARD\",\"documentSide\":\"FRONT\",\"timeout\":\"LONG\",\"generateRawImages\":false,\"encodedDataFocusEnabled\":true,\"translationsContent\":null,\"viewsContent\":null,\"documentModels\":null,\"resourcesPath\":\"resources-selphid-2-0.zip\",\"cameraId\":null,\"videoFilename\":null,\"tokenPreviousCaptureData\":null,\"params\":null}"
           },
           {
             "index": 3,

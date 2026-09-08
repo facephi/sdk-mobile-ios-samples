@@ -129,6 +129,16 @@ extension MainVM {
             self.backDocumentImage = result.backDocumentImage
 
             self.log(msg: String("Found \(result.ocrResults?.count ?? 0) ocr results"))
+            if result.encodedDataImages.isEmpty {
+                self.log(msg: "No encoded data images")
+            } else {
+                for (index, encoded) in result.encodedDataImages.enumerated() {
+                    let token = result.tokenEncodedDataImages.indices.contains(index)
+                        ? result.tokenEncodedDataImages[index].token
+                        : ""
+                    self.log(msg: "EncodedData[\(index)] format=\(encoded.format) side=\(encoded.side.rawValue) token=\(token)")
+                }
+            }
         })
     }
     

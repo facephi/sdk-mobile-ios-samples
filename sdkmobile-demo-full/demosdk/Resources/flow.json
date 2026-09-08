@@ -64,7 +64,7 @@
                 "id": "7a8e0428-ea9f-469d-9f1e-8c8cbfa4e3c3",
                 "key": "SELPHID_COMPONENT",
                 "nameStep": "SELPHID_COMPONENT",
-                "data": "{\"debug\":false,\"locale\":\"\",\"params\":{},\"timeout\":\"MEDIUM\",\"scanMode\":\"MODE_SEARCH\",\"wizardMode\":true,\"documentSide\":\"FRONT\",\"documentType\":\"ID_CARD\",\"showTutorial\":true,\"specificData\":\"ES|<ALL>\",\"tutorialOnly\":false,\"viewsContent\":\"\",\"resourcesPath\":\"resources-selphid-2-0.zip\",\"documentModels\":\"\",\"showDiagnostic\":true,\"generateRawImages\":true,\"tokenImageQuality\":null,\"translationsContent\":\"\",\"showResultAfterCapture\":true,\"showPreviousTips\":true,\"vibrationEnabled\":false,\"videoFilename\":\"\"}",
+                "data": "{\"debug\":false,\"locale\":\"\",\"params\":{},\"timeout\":\"MEDIUM\",\"scanMode\":\"MODE_SEARCH\",\"wizardMode\":true,\"documentSide\":\"FRONT\",\"documentType\":\"ID_CARD\",\"showTutorial\":true,\"specificData\":\"ES|<ALL>\",\"tutorialOnly\":false,\"viewsContent\":\"\",\"resourcesPath\":\"resources-selphid-2-0.zip\",\"documentModels\":\"\",\"showDiagnostic\":true,\"generateRawImages\":true,\"encodedDataFocusEnabled\":true,\"tokenImageQuality\":null,\"translationsContent\":\"\",\"showResultAfterCapture\":true,\"showPreviousTips\":true,\"vibrationEnabled\":false,\"videoFilename\":\"\"}",
                 "target": "cc38ab60-a00b-433a-bb20-a09c05ba80c6"
             },
             {

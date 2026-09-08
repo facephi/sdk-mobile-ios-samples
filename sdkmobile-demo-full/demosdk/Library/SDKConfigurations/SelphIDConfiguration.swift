@@ -31,6 +31,7 @@ extension SdkConfigurationManager {
         configSelphID.documentSide = SelphIDDocumentSide.FRONT
         configSelphID.timeout = SelphIDTimeout.LONG
         configSelphID.generateRawImages = true
+        configSelphID.encodedDataFocusEnabled = true
         configSelphID.translationsContent = ""
         configSelphID.viewsContent = ""
         configSelphID.documentModels = ""
@@ -75,6 +76,8 @@ extension SdkConfigurationManager {
                 config.timeout = SelphIDTimeout(rawValue: val) ?? .MEDIUM
             case ("generateRawImages", .bool(let val)):
                 config.generateRawImages = val
+            case ("encodedDataFocusEnabled", .bool(let val)):
+                config.encodedDataFocusEnabled = val
             case ("videoFilename", .string(let val)):
                 config.videoFilename = val
             case ("tokenPreviousCaptureData", .string(let val)):
@@ -132,6 +135,7 @@ extension SdkConfigurationManager {
                 options: SelphIDTimeout.allCases.map { $0.rawValue }
             ),
             "generateRawImages": .bool(value: selphidConfigurationData?.generateRawImages ?? true),
+            "encodedDataFocusEnabled": .bool(value: selphidConfigurationData?.encodedDataFocusEnabled ?? true),
             "vibrationEnabled": .bool(value: selphidConfigurationData?.vibrationEnabled ?? true),
             "videoFilename": .string(value: selphidConfigurationData?.videoFilename ?? ""),
             "tokenPreviousCaptureData": .string(value: selphidConfigurationData?.tokenPreviousCaptureData ?? "")
@@ -149,7 +153,8 @@ extension SdkConfigurationManager {
             "showResultAfterCapture",
             "wizardMode",
             "debug",
-            "generateRawImages"
+            "generateRawImages",
+            "encodedDataFocusEnabled"
         ]
 
         var rowStackView: UIStackView = UIStackView()
