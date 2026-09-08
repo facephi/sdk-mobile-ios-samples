@@ -104,14 +104,14 @@ class SDKManager {
             print("videoIdController output: \($0.errorType)")
         }, viewController: viewController)
         let voiceController = VoiceController(data: nil, output: {
-            print("invoiceReaderController output: \($0.errorType)")
+            print("voiceController output: \($0.errorType)")
         }, viewController: viewController)
         
         let qrReaderController = QrReaderController(data: nil, output: {
             print("qrReaderController output: \($0.errorType)")
         }, viewController: viewController)
-        let invoiceReaderController = InvoiceReaderController(data: nil, output: {
-            print("invoiceReaderController output: \($0.errorType)")
+        let fileUploaderController = FileUploaderController(data: nil, output: {
+            print("fileUploaderController output: \($0.errorType)")
         }, viewController: viewController)
         let videoCallController = VideoCallController(data: nil, extensionIdentifier: "com.facephi.sdk.demo.videocallExtension", output: {
             print("videoCallController output: \($0.errorType)")
@@ -127,7 +127,7 @@ class SDKManager {
         }, viewController: viewController)
         
         let controllers: [IFlowableController] =
-        [termsConditionsController, selphidController, selphiController, startVideoRecordingController, stopVideoRecordingController, nfcController, phingersController, videoIdController, voiceController, qrReaderController, invoiceReaderController, videoCallController, externalStepController]
+        [termsConditionsController, selphidController, selphiController, startVideoRecordingController, stopVideoRecordingController, nfcController, phingersController, videoIdController, voiceController, qrReaderController, fileUploaderController, videoCallController, externalStepController]
         
         let flowId = PrefManager.get(String.self, forKey: .KEY_FLOW_ID)
         let flowConfigurationData = FlowConfigurationData(
@@ -243,18 +243,6 @@ class SDKManager {
         }
     }
     
-    // swiftlint:disable all
-    public func launchPhacturas(setTracking: Bool, viewController: UIViewController, invoiceCaptureConfigurationData: InvoiceCaptureConfigurationData, output: @escaping (SdkResult<InvoiceResult>) -> Void) {
-        log("LAUNCH INVOICE")
-
-        let controller = InvoiceReaderController(data: invoiceCaptureConfigurationData, output: output, viewController: viewController)
-        if setTracking {
-            SDKController.shared.launch(controller: controller)
-        } else {
-            SDKController.shared.launchMethod(controller: controller)
-        }
-    }
-    
     public func launchFileUploader(setTracking: Bool, viewController: UIViewController, fileUploaderConfigurationData: FileUploaderConfigurationData, output: @escaping (SdkResult<FileUploaderResult>) -> Void) {
         log("LAUNCH FILE UPLOADER")
 
@@ -292,13 +280,6 @@ class SDKManager {
     
     public func hangoutVideoCall() {
         self.videoCallController?.hangout()
-    }
-    
-    public func launchGallery(data: PhotoFromGalleryConfigurationData, setTracking: Bool, viewController: UIViewController, output: @escaping (SdkResult<InvoiceResult>) -> Void) {
-        log("LAUNCH GALLERY")
-        
-        let galleryController = PhotoFromGalleryController(data: data, output: output, viewController: viewController)
-        SDKController.shared.launch(controller: galleryController)
     }
     
     public func launchVideoId(data: VideoIDConfigurationData, setTracking: Bool, viewController: UIViewController, output: @escaping (SdkResult<VideoIDResult>) -> Void) {

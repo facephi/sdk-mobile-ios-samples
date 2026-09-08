@@ -25,9 +25,7 @@ enum ConfigComponent {
     case VIDEOCALL_COMPONENT
     case VOICE_COMPONENT
     case VIDEOID_COMPONENT
-    case CAPTURE_COMPONENT
     case FILE_UPLOADER_COMPONENT
-    case GALLERY_COMPONENT
     case TERMS_CONDITIONS_COMPONENT
 }
 
@@ -113,11 +111,9 @@ class ConfigsComponentsVC: UIViewController {
             .QR_COMPONENT: { SdkConfigurationManager.configureQRFields(in: $0, with: nil) },
             .VIDEOCALL_COMPONENT: { SdkConfigurationManager.configureVideoCallFields(in: $0, with: nil) },
             .VIDEOID_COMPONENT: { SdkConfigurationManager.configureVideoIDFields(in: $0, with: nil) },
-            .CAPTURE_COMPONENT: { SdkConfigurationManager.configureInvoiceCaptureFields(in: $0, with: nil) },
             .FILE_UPLOADER_COMPONENT: { SdkConfigurationManager.configureFileUploaderFields(in: $0, with: nil) },
             .VOICE_COMPONENT: { SdkConfigurationManager.configureVoiceIDFields(in: $0, with: nil) },
             .PHINGER_COMPONENT: { SdkConfigurationManager.configurePhingersFields(in: $0, with: nil) },
-            .GALLERY_COMPONENT: { SdkConfigurationManager.configureGalleryFields(in: $0, with: nil)},
             .TERMS_CONDITIONS_COMPONENT: { SdkConfigurationManager.configureTermsConditionsFields(in: $0, with: nil) }
         ]
         configActions[component]?(self)
@@ -229,15 +225,9 @@ class ConfigsComponentsVC: UIViewController {
             case .QR_COMPONENT:
                 let qrConfig = SdkConfigurationManager.createQrCaptureConfigurationData(from: configuration)
                 action?(qrConfig)
-            case .CAPTURE_COMPONENT:
-                let captureConfig = SdkConfigurationManager.createInvoiceCaptureConfigurationData(from: configuration)
-                action?(captureConfig)
             case .FILE_UPLOADER_COMPONENT:
                 let captureConfig = SdkConfigurationManager.createFileUploaderConfigurationData(from: configuration)
                 action?(captureConfig)
-            case .GALLERY_COMPONENT:
-                let galleryConfig = SdkConfigurationManager.createGalleryConfigurationData(from: configuration)
-                action?(galleryConfig)
             case .TERMS_CONDITIONS_COMPONENT:
                 let termsConditionsConfig = SdkConfigurationManager.createTermsConditionsConfigurationData(from: configuration)
                 action?(termsConditionsConfig)
