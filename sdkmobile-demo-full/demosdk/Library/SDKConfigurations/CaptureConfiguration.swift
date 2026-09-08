@@ -28,19 +28,6 @@ extension SdkConfigurationManager {
         return QrGeneratorConfigurationData(source: "", width: 200, height: 200)
     }
     
-    static var invoiceCaptureConfiguration: InvoiceCaptureConfigurationData {
-        return InvoiceCaptureConfigurationData(
-            vibrationEnabled: true,
-            showDiagnostic: true,
-            showTutorial: true,
-            timePreview: Constants.timePreview,
-            previewAfterCapture: true,
-            maxScannedDocs: Constants.maxScannedDocs,
-            showPreviousTip: true,
-            autoCapture: true
-        )
-    }
-    
     static var fileUploaderConfigurationData: FileUploaderConfigurationData {
         return FileUploaderConfigurationData()
     }
@@ -143,51 +130,6 @@ extension SdkConfigurationManager {
 }
 
 extension SdkConfigurationManager {
-    static func createInvoiceCaptureConfigurationData(from configuration: Configuration) -> InvoiceCaptureConfigurationData {
-        var vibrationEnabled: Bool = true
-        var showDiagnostic: Bool = true
-        var showTutorial: Bool = true
-        var timePreview: Int = Constants.timePreview
-        var previewAfterCapture: Bool = true
-        var maxScannedDocs: Int = Constants.maxScannedDocs
-        var showPreviousTip: Bool = true
-        var autoCapture: Bool = false
-
-        for (key, value) in configuration.values {
-            switch (key, value) {
-            case ("vibrationEnabled", .bool(let val)):
-                vibrationEnabled = val
-            case ("showDiagnostic", .bool(let val)):
-                showDiagnostic = val
-            case ("showTutorial", .bool(let val)):
-                showTutorial = val
-            case ("timePreview", .int(let val)):
-                timePreview = val
-            case ("previewAfterCapture", .bool(let val)):
-                previewAfterCapture = val
-            case ("maxScannedDocs", .int(let val)):
-                maxScannedDocs = val
-            case ("showPreviousTip", .bool(let val)):
-                showPreviousTip = val
-            case ("autoCapture", .bool(let val)):
-                autoCapture = val
-            default:
-                break
-            }
-        }
-
-        return InvoiceCaptureConfigurationData(
-            vibrationEnabled: vibrationEnabled,
-            showDiagnostic: showDiagnostic,
-            showTutorial: showTutorial,
-            timePreview: timePreview,
-            previewAfterCapture: previewAfterCapture,
-            maxScannedDocs: maxScannedDocs,
-            showPreviousTip: showPreviousTip,
-            autoCapture: autoCapture
-        )
-    }
-    
     static func createFileUploaderConfigurationData(from configuration: Configuration) -> FileUploaderConfigurationData {
         var vibrationEnabled: Bool = true
         var showDiagnostic: Bool = true
@@ -225,79 +167,6 @@ extension SdkConfigurationManager {
         )
     }
 
-    static func configureInvoiceCaptureFields(in viewController: ConfigsComponentsVC,
-                                              with invoiceConfigurationData: InvoiceCaptureConfigurationData?) {
-        if viewController.configuration == nil {
-            viewController.configuration = Configuration(configType: .CAPTURE_COMPONENT, values: [:])
-        }
-
-        let values: [String: ConfigValue] = [
-            "vibrationEnabled": .bool(value: invoiceConfigurationData?.vibrationEnabled ?? true),
-            "showDiagnostic": .bool(value: invoiceConfigurationData?.showDiagnostic ?? true),
-            "showTutorial": .bool(value: invoiceConfigurationData?.showTutorial ?? true),
-            "timePreview": .int(value: invoiceConfigurationData?.timePreview ?? Constants.timePreview),
-            "previewAfterCapture": .bool(value: invoiceConfigurationData?.previewAfterCapture ?? true),
-            "maxScannedDocs": .int(value: invoiceConfigurationData?.maxScannedDocs ?? Constants.maxScannedDocs),
-            "showPreviousTip": .bool(value: invoiceConfigurationData?.showPreviousTip ?? true),
-            "autoCapture": .bool(value: invoiceConfigurationData?.autoCapture ?? true)
-        ]
-
-        viewController.configuration!.values.merge(values) { (_, new) in new }
-
-        let stackView = viewController.stackView
-
-        // Crear switches agrupados en filas
-        let switchKeys: [String] = [
-            "showPreviousTip",
-            "showTutorial",
-            "showDiagnostic",
-            "vibrationEnabled",
-            "previewAfterCapture",
-            "autoCapture"
-        ]
-
-        var rowStackView: UIStackView = UIStackView()
-        rowStackView.axis = .horizontal
-        rowStackView.alignment = .fill
-        rowStackView.distribution = .fillEqually
-        rowStackView.spacing = 16
-
-        for (index, key) in switchKeys.enumerated() {
-            if let value = viewController.configuration!.values[key] {
-                let switchField = viewController.createField(key: key, value: value)
-                rowStackView.addArrangedSubview(switchField)
-
-                // Cuando la fila alcanza 2 elementos o es el último elemento, agrégala al stackView
-                if (index + 1) % 2 == 0 || index == switchKeys.count - 1 {
-                    stackView.addArrangedSubview(rowStackView)
-                    
-                    // Crear una nueva fila solo si no es el último elemento
-                    if index != switchKeys.count - 1 {
-                        rowStackView = UIStackView()
-                        rowStackView.axis = .horizontal
-                        rowStackView.alignment = .fill
-                        rowStackView.distribution = .fillEqually
-                        rowStackView.spacing = 16
-                    }
-                }
-            }
-        }
-
-        stackView.addArrangedSubview(rowStackView)
-
-        // Agregar los campos generados con `createField`
-        let fields: [String] = [
-            ("timePreview"),
-            ("maxScannedDocs")
-        ]
-
-        for (key) in fields {
-            if let value = viewController.configuration!.values[key] {
-                stackView.addArrangedSubview(viewController.createField(key: key, value: value))
-            }
-        }
-    }
-    
     static func configureFileUploaderFields(in viewController: ConfigsComponentsVC,
                                               with fileUploaderConfigurationData: FileUploaderConfigurationData?) {
         if viewController.configuration == nil {
@@ -491,100 +360,6 @@ extension SdkConfigurationManager {
         ]
 
         for key in fields {
-            if let value = viewController.configuration!.values[key] {
-                stackView.addArrangedSubview(viewController.createField(key: key, value: value))
-            }
-        }
-    }
-}
-
-extension SdkConfigurationManager {
-    static func createGalleryConfigurationData(from configuration: Configuration) -> PhotoFromGalleryConfigurationData {
-        var vibrationEnabled: Bool? = true
-        var showDiagnostic: Bool? = true
-        var previewAfterAdd: Bool? = true
-        var maxScannedDocs: Int? = 5
-
-        for (key, value) in configuration.values {
-            switch (key, value) {
-            case ("vibrationEnabled", .bool(let val)):
-                vibrationEnabled = val
-            case ("showDiagnostic", .bool(let val)):
-                showDiagnostic = val
-            case ("previewAfterAdd", .bool(let val)):
-                previewAfterAdd = val
-            case ("maxScannedDocs", .int(let val)):
-                maxScannedDocs = val
-            default:
-                break
-            }
-        }
-
-        return PhotoFromGalleryConfigurationData(
-            vibrationEnabled: vibrationEnabled ?? true,
-            showDiagnostic: showDiagnostic ?? true,
-            previewAfterAdd: previewAfterAdd ?? true
-        )
-    }
-
-    static func configureGalleryFields(in viewController: ConfigsComponentsVC,
-                                              with photoFromGalleryConfigurationData: PhotoFromGalleryConfigurationData?) {
-        if viewController.configuration == nil {
-            viewController.configuration = Configuration(configType: .CAPTURE_COMPONENT, values: [:])
-        }
-
-        let values: [String: ConfigValue] = [
-            "vibrationEnabled": .bool(value: photoFromGalleryConfigurationData?.vibrationEnabled ?? true),
-            "showDiagnostic": .bool(value: photoFromGalleryConfigurationData?.showDiagnostic ?? true),
-            "previewAfterAdd": .bool(value: photoFromGalleryConfigurationData?.previewAfterAdd ?? true)
-        ]
-
-        viewController.configuration!.values.merge(values) { (_, new) in new }
-
-        let stackView = viewController.stackView
-
-        // Crear switches agrupados en filas
-        let switchKeys: [String] = [
-            "vibrationEnabled",
-            "previewAfterAdd",
-            "showDiagnostic"
-        ]
-
-        var rowStackView: UIStackView = UIStackView()
-        rowStackView.axis = .horizontal
-        rowStackView.alignment = .fill
-        rowStackView.distribution = .fillEqually
-        rowStackView.spacing = 16
-
-        for (index, key) in switchKeys.enumerated() {
-            if let value = viewController.configuration!.values[key] {
-                let switchField = viewController.createField(key: key, value: value)
-                rowStackView.addArrangedSubview(switchField)
-
-                // Cuando la fila alcanza 2 elementos o es el último elemento, agrégala al stackView
-                if (index + 1) % 2 == 0 || index == switchKeys.count - 1 {
-                    stackView.addArrangedSubview(rowStackView)
-                    
-                    // Crear una nueva fila solo si no es el último elemento
-                    if index != switchKeys.count - 1 {
-                        rowStackView = UIStackView()
-                        rowStackView.axis = .horizontal
-                        rowStackView.alignment = .fill
-                        rowStackView.distribution = .fillEqually
-                        rowStackView.spacing = 16
-                    }
-                }
-            }
-        }
-
-        stackView.addArrangedSubview(rowStackView)
-
-        // Agregar los campos generados con `createField`
-        let fields: [String] = [
-            ("maxScannedDocs")
-        ]
-
-        for (key) in fields {
             if let value = viewController.configuration!.values[key] {
                 stackView.addArrangedSubview(viewController.createField(key: key, value: value))
             }

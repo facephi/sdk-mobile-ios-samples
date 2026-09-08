@@ -21,7 +21,7 @@ class MainVC: UIViewController {
         case setupEnvironment = 0, newOperation
         case initFlow = 10, flowNextStep, flowCancel
         case checkLiveness = 20, checkFaceAuth
-        case selphid = 30, nfc, videoId, signatureVideoId, launchPhacturas, gallery, launchFileUploader
+        case selphid = 30, nfc, videoId, signatureVideoId, launchFileUploader = 36
         case selphi = 40, signatureSelphi
         case phingersTF = 50
         case voiceId = 60, playAudios, voiceEnrollment, voiceMatching
@@ -172,10 +172,6 @@ class MainVC: UIViewController {
             execute{
                 self.viewModel.hangout()
             }
-        case .gallery:
-            presentConfigComponent(component: .GALLERY_COMPONENT, configType: PhotoFromGalleryConfigurationData.self){
-                self.viewModel.gallery(configuration: $0)
-            }
         case .videoId:
             presentConfigComponent(component: .VIDEOID_COMPONENT, configType: VideoIDConfigurationData.self) {
                 self.viewModel.videoId(configuration: $0)
@@ -223,10 +219,6 @@ class MainVC: UIViewController {
         case .launchQr:
             presentConfigComponent(component: .QR_COMPONENT, configType: QrCaptureConfigurationData.self) {
                 self.viewModel.launchQr(configuration: $0)
-            }
-        case .launchPhacturas:
-            presentConfigComponent(component: .CAPTURE_COMPONENT, configType: InvoiceCaptureConfigurationData.self) {
-                self.viewModel.launchPhacturas(configuration: $0)
             }
         case .launchFileUploader:
             presentConfigComponent(component: .FILE_UPLOADER_COMPONENT, configType: FileUploaderConfigurationData.self) {

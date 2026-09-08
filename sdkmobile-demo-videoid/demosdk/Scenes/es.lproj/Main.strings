@@ -65,9 +65,6 @@
 /* Class = "UILabel"; text = "OTROS MÉTODOS"; ObjectID = "SF0-Pw-Z3C"; */
 "SF0-Pw-Z3C.text" = "OTROS MÉTODOS";
 
-/* Class = "UIButton"; normalTitle = "PHACTURAS READER"; ObjectID = "T9L-HQ-RD3"; */
-"T9L-HQ-RD3.normalTitle" = "PHACTURAS READER";
-
 /* Class = "UILabel"; text = "Operación"; ObjectID = "V9L-d4-Vvd"; */
 "V9L-d4-Vvd.text" = "Operación";
 

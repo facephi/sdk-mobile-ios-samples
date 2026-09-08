@@ -13,7 +13,7 @@ class MainVC: UIViewController {
         case setupEnvironment = 0, newOperation
         case initFlow = 10, flowNextStep, flowCancel
         case checkLiveness = 20, checkFaceAuth
-        case selphi = 30, selphid, nfc, launchPhacturas, videoCall, videoId, signatureSelphi, signatureVideoId
+        case selphi = 30, selphid, nfc, videoCall, videoId, signatureSelphi, signatureVideoId
         case phingers = 40, matchPhingers
         case voiceId = 50, playAudios, voiceEnrollment, voiceMatching
         case generateQr = 60, launchQr

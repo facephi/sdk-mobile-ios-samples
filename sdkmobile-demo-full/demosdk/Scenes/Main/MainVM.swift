@@ -233,24 +233,6 @@ extension MainVM {
         })
     }
     
-    func launchPhacturas(configuration: InvoiceCaptureConfigurationData) {
-        // swiftlint:disable all
-        SDKManager.shared.launchPhacturas(setTracking: true, viewController: viewController, invoiceCaptureConfigurationData: configuration, output: { phacturasResult in
-            guard phacturasResult.errorType == .NO_ERROR else {
-                self.log(msg: "\(phacturasResult.errorType)")
-                return
-            }
-            
-            guard let result = phacturasResult.data
-            else
-            {
-                self.log(msg: "Phacturas KO")
-                return
-            }
-            self.log(msg: "Phacturas OK: " + String(result.scannedDocs.count))
-        })
-    }
-    
     func launchFileUploader(configuration: FileUploaderConfigurationData) {
         // swiftlint:disable all
         SDKManager.shared.launchFileUploader(setTracking: true, viewController: viewController, fileUploaderConfigurationData: configuration, output: { captureResult in
@@ -316,16 +298,6 @@ extension MainVM {
     
     func hangout() {
         SDKManager.shared.hangoutVideoCall()
-    }
-    
-    func gallery(configuration: PhotoFromGalleryConfigurationData) {
-        SDKManager.shared.launchGallery(data: configuration, setTracking: true, viewController: viewController, output: { galleryResult in
-            if galleryResult.errorType == .NO_ERROR {
-                self.log(msg: "Status OK \(galleryResult.finishStatus)")
-            } else {
-                self.log(msg: "Status KO \(galleryResult.errorType)")
-            }
-        })
     }
     
     func videoId(configuration: VideoIDConfigurationData) {
