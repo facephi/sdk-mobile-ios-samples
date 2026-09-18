@@ -1,5 +1,7 @@
 # SDK-Mobile Demo IDV Version
 
+> **SDK version:** 2.12.0 (CocoaPods `~> 2.12.0`; NFC component `~> 2.20.0` where applicable).
+
 Demo application to internally test all the components of the Mobile SDK - IDV, downloading the components from our private repository (Artifactory). 
 
 ## Dependencies
