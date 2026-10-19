@@ -1,5 +1,7 @@
 # SDK-Mobile Onboarding with FileUploader Version
 
+> **Versión SDK:** 2.12.0 (CocoaPods `~> 2.12.0`; componente NFC `~> 2.20.0` donde aplique).
+
 Aplicación demo con integración del SDK, descargando los componentes desde nuestros repositorios privados (Artifactory). 
 
 ## Dependencias

@@ -9,31 +9,31 @@ target 'demosdk' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-#  pod 'FPHISDKSelphIDComponent', '~> 2.11.0'
-#  pod 'FPHISDKSelphIDLightComponent', '~> 2.11.0'
-#  pod 'FPHISDKSelphIDFullComponent', '~> 2.11.0'
-  pod 'FPHISDKSelphIDMBSDRComponent', '~> 2.11.0'
-#  pod 'FPHISDKSelphIDMLRGLComponent', '~> 2.11.0'
-#  pod 'FPHISDKSelphIDRGLComponent', '~> 2.11.0'
-  pod 'FPHISDKCaptureComponent', '~> 2.11.0'
-  pod 'FPHISDKMainComponent', '~> 2.11.0'
-  pod 'FPHISDKNFCComponent', '~> 2.19.0'
-  pod 'FPHISDKSelphiComponent', '~> 2.11.0'
-  pod 'FPHISDKStatusComponent', '~> 2.11.0'
-  pod 'FPHISDKTokenizeComponent', '~> 2.11.0'
-  pod 'FPHISDKTrackingComponent', '~> 2.11.0'
-  pod 'FPHISDKVideoRecordingComponent', '~> 2.11.0'
-  pod 'FPHISDKVideoIDComponent', '~> 2.11.0'
-  pod 'FPHISDKVoiceIDComponent', '~> 2.11.0'
-  pod 'FPHISDKPhingersTFComponent', '~> 2.11.0'
-  pod 'FPHISDKTermsConditionsComponent', '~> 2.11.0'
+#  pod 'FPHISDKSelphIDComponent', '~> 2.12.0'
+#  pod 'FPHISDKSelphIDLightComponent', '~> 2.12.0'
+#  pod 'FPHISDKSelphIDFullComponent', '~> 2.12.0'
+  pod 'FPHISDKSelphIDMBSDRComponent', '~> 2.12.0'
+#  pod 'FPHISDKSelphIDMLRGLComponent', '~> 2.12.0'
+#  pod 'FPHISDKSelphIDRGLComponent', '~> 2.12.0'
+  pod 'FPHISDKCaptureComponent', '~> 2.12.0'
+  pod 'FPHISDKMainComponent', '~> 2.12.0'
+  pod 'FPHISDKNFCComponent', '~> 2.20.0'
+  pod 'FPHISDKSelphiComponent', '~> 2.12.0'
+  pod 'FPHISDKStatusComponent', '~> 2.12.0'
+  pod 'FPHISDKTokenizeComponent', '~> 2.12.0'
+  pod 'FPHISDKTrackingComponent', '~> 2.12.0'
+  pod 'FPHISDKVideoRecordingComponent', '~> 2.12.0'
+  pod 'FPHISDKVideoIDComponent', '~> 2.12.0'
+  pod 'FPHISDKVoiceIDComponent', '~> 2.12.0'
+  pod 'FPHISDKPhingersTFComponent', '~> 2.12.0'
+  pod 'FPHISDKTermsConditionsComponent', '~> 2.12.0'
 
-  pod 'FPHISDKVideoCallComponent', '~> 2.11.0'
+  pod 'FPHISDKVideoCallComponent', '~> 2.12.0'
 end
 
 target 'videocallExtension' do
    use_frameworks!
-  pod 'FPHISDKVideoCallComponent', '~> 2.11.0'
+  pod 'FPHISDKVideoCallComponent', '~> 2.12.0'
 end
 
 post_install do |installer|

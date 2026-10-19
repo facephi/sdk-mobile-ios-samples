@@ -97,7 +97,7 @@
       "location" : "https://github.com/facephi-clienters/SDK-CorePackage-SPM.git",
       "state" : {
         "revision" : "12fe02e197c6ef434722a7fd21525f348898fd0f",
-        "version" : "2.11.0"
+        "version" : "2.12.0"
       }
     },
     {
@@ -115,7 +115,7 @@
       "location" : "https://github.com/facephi-clienters/SDK-SdkPackage-SPM.git",
       "state" : {
         "revision" : "b8f3b17e3491316a58d6ea63e892a45d50a18727",
-        "version" : "2.11.0"
+        "version" : "2.12.0"
       }
     },
     {
@@ -124,7 +124,7 @@
       "location" : "https://github.com/facephi-clienters/SDK-StatusPackage-SPM.git",
       "state" : {
         "revision" : "fe7ed55cff28918033d8e5f0b61e4c8d376f7fed",
-        "version" : "2.11.0"
+        "version" : "2.12.0"
       }
     },
     {
@@ -133,7 +133,7 @@
       "location" : "https://github.com/facephi-clienters/SDK-TokenizePackage-SPM.git",
       "state" : {
         "revision" : "5c4ef32bdafbed3af058063b41d83c9bf37b3b99",
-        "version" : "2.11.0"
+        "version" : "2.12.0"
       }
     },
     {
@@ -142,7 +142,7 @@
       "location" : "https://github.com/facephi-clienters/SDK-TrackingPackage-SPM.git",
       "state" : {
         "revision" : "788711f81adda7387f68da6574bd57f4c3854542",
-        "version" : "2.11.0"
+        "version" : "2.12.0"
       }
     },
     {
@@ -151,7 +151,7 @@
       "location" : "https://github.com/facephi-clienters/SDK-VideoIDPackage-SPM.git",
       "state" : {
         "revision" : "47a9f4f209485d01fc2b4c5c96683829866810dc",
-        "version" : "2.11.0"
+        "version" : "2.12.0"
       }
     },
     {
