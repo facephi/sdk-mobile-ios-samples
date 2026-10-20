@@ -30,7 +30,7 @@ class MainVC: UIViewController {
         case voiceId = 60, playAudios, voiceEnrollment, voiceMatching
         case generateQr = 70, launchQr
         case startVideoRecording = 80, stopVideoRecording
-        case videoCall = 90, hangout
+        case videoCall = 90, hangout, videoCallResume, videoCallReturnToCall, videoCallStopSharing
         case launchExtractDocument = 100, launchIdentityValidation
         case launchDocumentValidationStart = 110, launchDocumentValidationStatus, launchDocumentValidationData
         case launchFinishTracking = 120, launchTermsConditions = 125
@@ -149,6 +149,18 @@ class MainVC: UIViewController {
         case .hangout:
             execute{
                 self.viewModel.hangout()
+            }
+        case .videoCallResume:
+            execute {
+                self.viewModel.resumeVideoCall()
+            }
+        case .videoCallReturnToCall:
+            execute {
+                self.viewModel.returnToVideoCall()
+            }
+        case .videoCallStopSharing:
+            execute {
+                self.viewModel.stopVideoCallScreenSharing()
             }
         case .videoId:
             presentConfigComponent(component: .VIDEOID_COMPONENT, configType: VideoIDConfigurationData.self) {

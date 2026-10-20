@@ -206,18 +206,21 @@ extension MainVM {
             self.backDocumentImage = result.backDocumentImage
             self.saveNfcParameters(data: result)
 
-            self.log(msg: String("Found \(result.ocrResults?.count ?? 0) ocr results"))
-            if result.encodedDataImages.isEmpty {
-                self.log(msg: "No encoded data images")
-            } else {
-                for (index, encoded) in result.encodedDataImages.enumerated() {
-                    let token = result.tokenEncodedDataImages.indices.contains(index)
-                        ? result.tokenEncodedDataImages[index].token
-                        : ""
-                    self.log(
-                        msg: "EncodedData[\(index)] format=\(encoded.format) side=\(encoded.side.rawValue) token=\(token)"
-                    )
-                }
+            self.log(msg: "Found \(result.ocrResults?.count ?? 0) OCR fields")
+            if let vendor = result.extractorVendor {
+                self.log(msg: "Extractor vendor: \(vendor.rawValue)")
+            }
+            if !result.parallelResults.isEmpty {
+                let keys = result.parallelResults.keys.sorted().joined(separator: ", ")
+                self.log(msg: "Parallel extractor results: \(keys)")
+            }
+            for (index, encoded) in result.encodedDataImages.enumerated() {
+                let token = result.tokenEncodedDataImages.indices.contains(index)
+                    ? result.tokenEncodedDataImages[index].token
+                    : ""
+                self.log(
+                    msg: "Encoded data crop[\(index)] format=\(encoded.format) side=\(encoded.side.rawValue) token=\(token)"
+                )
             }
         })
     }
@@ -302,18 +305,60 @@ extension MainVM {
         })
     }
     
-    func videoCall(configuration: VideoCallConfigurationData){
+    func videoCall(configuration: VideoCallConfigurationData) {
         SDKManager.shared.launchVideoCall(data: configuration, setTracking: true, viewController: viewController, output: { videocallResult in
-            if videocallResult.errorType == .NO_ERROR {
-                self.log(msg: "Status OK \(videocallResult.finishStatus)")
-            } else {
-                self.log(msg: "Status KO \(videocallResult.errorType)")
+            guard videocallResult.errorType == .NO_ERROR else {
+                self.log(msg: "VideoCall ERROR: \(videocallResult.errorType)")
+                return
             }
+            self.log(msg: "VideoCall OK — \(Self.describeVideoCallStatus(videocallResult.data))")
         })
+    }
+
+    func resumeVideoCall() {
+        SDKManager.shared.resumeVideoCall()
+        log(msg: "resume() invoked (use after MINIMIZED)")
+    }
+
+    func returnToVideoCall() {
+        SDKManager.shared.returnToVideoCall()
+        log(msg: "returnToCall() invoked (use during screen sharing)")
+    }
+
+    func stopVideoCallScreenSharing() {
+        SDKManager.shared.stopVideoCallScreenSharing { [weak self] state in
+            self?.log(msg: "stopScreenSharing: \(Self.describeScreenSharingState(state))")
+        }
+    }
+
+    private static func describeVideoCallStatus(_ status: VideoCallStatus?) -> String {
+        switch status {
+        case .RECORDING_SCREEN:
+            return "RECORDING_SCREEN — try Return to call or Stop sharing"
+        case .MINIMIZED:
+            return "MINIMIZED — try Resume call"
+        case .VIDEOCALL_FINISHED:
+            return "VIDEOCALL_FINISHED"
+        case nil:
+            return "finish OK (no VideoCallStatus payload)"
+        }
+    }
+
+    private static func describeScreenSharingState(_ state: VideoCallScreenSharingState) -> String {
+        switch state {
+        case .sharing: return "sharing (still active)"
+        case .finish: return "finish (stopped OK)"
+        case .cancelByUser: return "cancelByUser (stopped OK)"
+        case .permissionError: return "permissionError"
+        case .networkConnectionError: return "networkConnectionError"
+        case .agentHangup: return "agentHangup"
+        case .unknownError: return "unknownError"
+        }
     }
     
     func hangout() {
         SDKManager.shared.hangoutVideoCall()
+        log(msg: "hangout() invoked")
     }
     
     func videoId(configuration: VideoIDConfigurationData) {

@@ -347,7 +347,24 @@ class SDKManager {
     public func hangoutVideoCall() {
         self.videoCallController?.hangout()
     }
-    
+
+    public func resumeVideoCall() {
+        self.log("VIDEO CALL RESUME")
+        videoCallController?.resume()
+    }
+
+    public func returnToVideoCall() {
+        self.log("VIDEO CALL RETURN TO CALL")
+        videoCallController?.returnToCall()
+    }
+
+    public func stopVideoCallScreenSharing(
+        output: @escaping (VideoCallScreenSharingState) -> Void
+    ) {
+        self.log("VIDEO CALL STOP SCREEN SHARING")
+        videoCallController?.stopScreenSharing(output: output)
+    }
+
     public func launchVideoId(data: VideoIDConfigurationData, setTracking: Bool, viewController: UIViewController, output: @escaping (SdkResult<VideoIDResult>) -> Void) {
         self.log("LAUNCH VIDEO ID")
         
