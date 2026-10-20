@@ -84,7 +84,7 @@ extension MainVM {
     }
     
     func flowCancel() {
-        SDKManager.shared.cancelFlow()
+        SDKManager.shared.cancelLaunch()
     }
     
     func selphi(configuration: SelphiConfigurationData) {

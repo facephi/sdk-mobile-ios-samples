@@ -1,6 +1,6 @@
 # SDK-Mobile Cocoapods Demo Selphi Version
 
-> **Versión SDK:** 2.12.0 (CocoaPods `~> 2.12.0`; componente NFC `~> 2.20.0` donde aplique).
+> **Versión SDK:** 4.0.0 (CocoaPods `~> 4.0.0`)
 
 Aplicación demo para testear internamente todos los componentes de la SDK Mobile con captura de biometría facial, descargando los componentes desde nuestros repositorios privados (Artifactory). 
 

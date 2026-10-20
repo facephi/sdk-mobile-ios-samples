@@ -1,6 +1,6 @@
 # SDK-Mobile Demo NFC Version
 
-> **SDK version:** 2.12.0 (CocoaPods `~> 2.12.0`; NFC component `~> 2.20.0` where applicable).
+> **SDK version:** 4.0.0 (CocoaPods `~> 4.0.0`)
 
 Demo application to internally test all the components of the Mobile SDK with NFC reading, downloading the components from our private repository (Artifactory). 
 

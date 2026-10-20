@@ -27,7 +27,7 @@ protocol MainVMOutput {
 class MainVM {
    
     //VOICE Constants
-    private let baseVoiceUrl = "https://external-voice-sdk.facephi.dev/"
+    private let baseVoiceUrl = "VOICE_SDK_BASE_URL"
     private let methodVoiceEnrollment = "api/v1/enrollment"
     private let methodVoiceMatching = "api/v1/authentication"
     private let liveness_threshold: Double = 0.5

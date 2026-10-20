@@ -1,0 +1,72 @@
+platform :ios, '16.0'
+
+plugin 'cocoapods-art', :sources => [
+  'cocoa-dev-fphi',
+  'cocoa-snapshot-fphi'
+]
+
+source 'https://cdn.cocoapods.org/'
+
+# fphi_pods = "remote"
+fphi_pods = "local"
+# fphi_pods = "local_frameworks"
+
+def selphid_classic_remote_pods
+  pod 'FPHISDKMainComponent', '~> 4.0.0'
+  pod 'FPHISDKTrackingComponent', '~> 4.0.0'
+  pod 'FPHISDKSelphIDClassicComponent', '4.0.0'
+  pod 'FPHISDKStatusComponent', '~> 4.0.0'
+  pod 'FPHISDKTokenizeComponent', '~> 4.0.0'
+end
+
+def selphid_classic_local_pods
+  pod 'FPHISDKLicenseCheckerComponent', :path => '../../SDK-LicenseChecker-SPM/FPHISDKLicenseCheckerComponent-Test.podspec'
+  pod 'FPHISDKCoreComponent', :path => '../../SDK-Core-SPM/FPHISDKCoreComponent-Test.podspec'
+  pod 'FPHISDKMainComponent', :path => '../../SDK-Sdk-SPM/FPHISDKMainComponent-Test.podspec'
+  pod 'FPHISDKTrackingComponent', :path => '../../SDK-Tracking_component-SPM/FPHISDKTrackingComponent-Test.podspec'
+  pod 'FPHISDKSelphIDClassicComponent', :path => '../../SDK-SelphidComponent/FPHISDKSelphIDClassicComponent-Test.podspec'
+  pod 'FPHISDKStatusComponent', :path => '../../SDK-StatusComponent-SPM/FPHISDKStatusComponent-Test.podspec'
+  pod 'FPHISDKTokenizeComponent', :path => '../../SDK-Tokenize-SPM/FPHISDKTokenizeComponent-Test.podspec'
+end
+
+def selphid_classic_local_frameworks_pods
+  pod 'FPHISDKLicenseCheckerComponent', :path => '../../SDK-LicenseChecker-SPM/FPHISDKLicenseCheckerComponent-template.podspec'
+  pod 'FPHISDKCoreComponent', :path => '../../SDK-Core-SPM/FPHISDKCoreComponent-template.podspec'
+  pod 'FPHISDKMainComponent', :path => '../../SDK-Sdk-SPM/FPHISDKMainComponent-template.podspec'
+  pod 'FPHISDKTrackingComponent', :path => '../../SDK-Tracking_component-SPM/FPHISDKTrackingComponent-template.podspec'
+  pod 'FPHISDKSelphIDClassicComponent', :path => '../../SDK-SelphidComponent/FPHISDKSelphIDClassicComponent-template.podspec'
+  pod 'FPHISDKStatusComponent', :path => '../../SDK-StatusComponent-SPM/FPHISDKStatusComponent-template.podspec'
+  pod 'FPHISDKTokenizeComponent', :path => '../../SDK-Tokenize-SPM/FPHISDKTokenizeComponent-template.podspec'
+end
+
+target 'demosdk' do
+  use_frameworks!
+
+  if fphi_pods == 'remote'
+    selphid_classic_remote_pods
+  end
+  if fphi_pods == 'local'
+    selphid_classic_local_pods
+  end
+  if fphi_pods == 'local_frameworks'
+    selphid_classic_local_frameworks_pods
+  end
+
+  target 'demosdkTests' do
+    inherit! :search_paths
+  end
+
+  target 'demosdkUITests' do
+  end
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '16.0'
+      config.build_settings['EXPANDED_CODE_SIGN_IDENTITY'] = ''
+      config.build_settings['CODE_SIGNING_REQUIRED'] = 'NO'
+      config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
+    end
+  end
+end

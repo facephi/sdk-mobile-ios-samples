@@ -14,10 +14,8 @@ extension SdkConfigurationManager {
         return QrCaptureConfigurationData(
             extractionTimeout: 50000,
             cameraPreferred: .BACK,
-            cameraShape: .SQUARE,
             vibrationEnabled: true,
             showStroke: false,
-            transparentBackground: false,
             showDiagnostic: true,
             showTutorial: true,
             showPreviousTip: true
@@ -25,7 +23,7 @@ extension SdkConfigurationManager {
     }
     
     static var qrGeneratorConfiguration: QrGeneratorConfigurationData {
-        return QrGeneratorConfigurationData(source: "", width: 200, height: 200)
+        return QrGeneratorConfigurationData(source: "QR_GENERATOR_SOURCE_URL", width: 200, height: 200)
     }
     
     static var fileUploaderConfigurationData: FileUploaderConfigurationData {
@@ -38,7 +36,6 @@ extension SdkConfigurationManager {
         var source: String?
         var width: Int = 200
         var height: Int = 200
-        var showDiagnostic: Bool = false
 
         for (key, value) in configuration.values {
             switch (key, value) {
@@ -48,18 +45,15 @@ extension SdkConfigurationManager {
                 width = val
             case ("height", .int(let val)):
                 height = val
-            case ("showDiagnostic", .bool(let val)):
-                showDiagnostic = val
             default:
                 break
             }
         }
 
         return QrGeneratorConfigurationData(
-            source: source,
+            source: (source?.isEmpty == false) ? source : "QR_GENERATOR_SOURCE_URL",
             width: width,
-            height: height,
-            showDiagnostic: showDiagnostic
+            height: height
         )
     }
 
@@ -70,51 +64,15 @@ extension SdkConfigurationManager {
         }
 
         let values: [String: ConfigValue] = [
-            "source": .string(value: qrGeneratorConfigurationData?.source ?? ""),
+            "source": .string(value: qrGeneratorConfigurationData?.source ?? "QR_GENERATOR_SOURCE_URL"),
             "width": .int(value: qrGeneratorConfigurationData?.width ?? 200),
-            "height": .int(value: qrGeneratorConfigurationData?.height ?? 200),
-            "showDiagnostic": .bool(value: qrGeneratorConfigurationData?.showDiagnostic ?? false)
+            "height": .int(value: qrGeneratorConfigurationData?.height ?? 200)
         ]
 
         viewController.configuration!.values.merge(values) { (_, new) in new }
 
         let stackView = viewController.stackView
 
-        // Crear switches agrupados en filas
-        let switchKeys: [String] = [
-            "showDiagnostic"
-        ]
-
-        var rowStackView: UIStackView = UIStackView()
-        rowStackView.axis = .horizontal
-        rowStackView.alignment = .fill
-        rowStackView.distribution = .fillEqually
-        rowStackView.spacing = 16
-
-        for (index, key) in switchKeys.enumerated() {
-            if let value = viewController.configuration!.values[key] {
-                let switchField = viewController.createField(key: key, value: value)
-                rowStackView.addArrangedSubview(switchField)
-
-                // Cuando la fila alcanza 2 elementos o es el último elemento, agrégala al stackView
-                if (index + 1) % 2 == 0 || index == switchKeys.count - 1 {
-                    stackView.addArrangedSubview(rowStackView)
-                    
-                    // Crear una nueva fila solo si no es el último elemento
-                    if index != switchKeys.count - 1 {
-                        rowStackView = UIStackView()
-                        rowStackView.axis = .horizontal
-                        rowStackView.alignment = .fill
-                        rowStackView.distribution = .fillEqually
-                        rowStackView.spacing = 16
-                    }
-                }
-            }
-        }
-
-        stackView.addArrangedSubview(rowStackView)
-
-        // Agregar los campos generados con `createField`
         let fields: [String] = [
             "source",
             "width",
@@ -137,6 +95,8 @@ extension SdkConfigurationManager {
         var maxScannedDocs: Int = Constants.maxScannedDocs
         var showPreviousTip: Bool = true
         var allowGallery: Bool = true
+        var onlyGalleryMode: Bool = true
+        var maxGalleryImageSizeKb: Int = 2048
 
         for (key, value) in configuration.values {
             switch (key, value) {
@@ -152,6 +112,10 @@ extension SdkConfigurationManager {
                 showPreviousTip = val
             case ("allowGallery", .bool(let val)):
                 allowGallery = val
+            case ("onlyGalleryMode", .bool(let val)):
+                onlyGalleryMode = val
+            case ("maxGalleryImageSizeKb", .int(let val)):
+                maxGalleryImageSizeKb = val
             default:
                 break
             }
@@ -163,14 +127,16 @@ extension SdkConfigurationManager {
             showDiagnostic: showDiagnostic,
             showPreviousTip: showPreviousTip,
             maxScannedDocs: maxScannedDocs,
-            allowGallery: allowGallery
+            allowGallery: allowGallery,
+            onlyGalleryMode: onlyGalleryMode,
+            maxGalleryImageSizeKb: maxGalleryImageSizeKb
         )
     }
 
-    static func configureFileUploaderFields(in viewController: ConfigsComponentsVC,
+    static func configureDocumentCaptureFields(in viewController: ConfigsComponentsVC,
                                               with fileUploaderConfigurationData: FileUploaderConfigurationData?) {
         if viewController.configuration == nil {
-            viewController.configuration = Configuration(configType: .FILE_UPLOADER_COMPONENT, values: [:])
+            viewController.configuration = Configuration(configType: .DOCUMENT_CAPTURE_COMPONENT, values: [:])
         }
 
         let values: [String: ConfigValue] = [
@@ -179,7 +145,9 @@ extension SdkConfigurationManager {
             "extractionTimeout": .int(value: fileUploaderConfigurationData?.extractionTimeout ?? Constants.defaultExtractionTimeout),
             "maxScannedDocs": .int(value: fileUploaderConfigurationData?.maxScannedDocs ?? Constants.maxScannedDocs),
             "showPreviousTip": .bool(value: fileUploaderConfigurationData?.showPreviousTip ?? true),
-            "allowGallery": .bool(value: fileUploaderConfigurationData?.allowGallery ?? true)
+            "allowGallery": .bool(value: fileUploaderConfigurationData?.allowGallery ?? true),
+            "onlyGalleryMode": .bool(value: fileUploaderConfigurationData?.onlyGalleryMode ?? true),
+            "maxGalleryImageSizeKb": .int(value: fileUploaderConfigurationData?.maxGalleryImageSizeKb ?? 2048)
         ]
 
         viewController.configuration!.values.merge(values) { (_, new) in new }
@@ -191,7 +159,8 @@ extension SdkConfigurationManager {
             "showPreviousTip",
             "showDiagnostic",
             "vibrationEnabled",
-            "allowGallery"
+            "allowGallery",
+            "onlyGalleryMode"
         ]
 
         var rowStackView: UIStackView = UIStackView()
@@ -226,7 +195,8 @@ extension SdkConfigurationManager {
         // Agregar los campos generados con `createField`
         let fields: [String] = [
             ("extractionTimeout"),
-            ("maxScannedDocs")
+            ("maxScannedDocs"),
+            ("maxGalleryImageSizeKb")
         ]
 
         for (key) in fields {
@@ -242,10 +212,8 @@ extension SdkConfigurationManager {
     static func createQrCaptureConfigurationData(from configuration: Configuration) -> QrCaptureConfigurationData {
         var extractionTimeout: Int = 50000
         var cameraPreferred: Camera = .BACK
-        var cameraShape: CameraShape = .SQUARE
         var vibrationEnabled: Bool = true
         var showStroke: Bool = false
-        var transparentBackground: Bool = false
         var showDiagnostic: Bool = true
         var showTutorial: Bool = true
         var showPreviousTip: Bool = true
@@ -262,14 +230,10 @@ extension SdkConfigurationManager {
                 showPreviousTip = val
             case ("showStroke", .bool(let val)):
                 showStroke = val
-            case ("transparentBackground", .bool(let val)):
-                transparentBackground = val
             case ("extractionTimeout", .int(let val)):
                 extractionTimeout = val
             case ("cameraPreferred", .enumValue(let val, _)):
                 cameraPreferred = Camera(rawValue: val) ?? .BACK
-            case ("cameraShape", .enumValue(let val, _)):
-                cameraShape = CameraShape(rawValue: val) ?? .SQUARE
             default:
                 break
             }
@@ -278,10 +242,8 @@ extension SdkConfigurationManager {
         return QrCaptureConfigurationData(
             extractionTimeout: extractionTimeout,
             cameraPreferred: cameraPreferred,
-            cameraShape: cameraShape,
             vibrationEnabled: vibrationEnabled,
             showStroke: showStroke,
-            transparentBackground: transparentBackground,
             showDiagnostic: showDiagnostic,
             showTutorial: showTutorial,
             showPreviousTip: showPreviousTip
@@ -300,15 +262,10 @@ extension SdkConfigurationManager {
             "showTutorial": .bool(value: qrConfigurationData?.showTutorial ?? true),
             "showPreviousTip": .bool(value: qrConfigurationData?.showPreviousTip ?? true),
             "showStroke": .bool(value: qrConfigurationData?.showStroke ?? false),
-            "transparentBackground": .bool(value: qrConfigurationData?.transparentBackground ?? false),
-            "extractionTimeout": .int(value: qrConfigurationData?.extractionTimeout ?? 10000),
+            "extractionTimeout": .int(value: qrConfigurationData?.extractionTimeout ?? 50_000),
             "cameraPreferred": .enumValue(
-                value: (qrConfigurationData?.cameraPreferred ?? .FRONT).rawValue,
+                value: (qrConfigurationData?.cameraPreferred ?? .BACK).rawValue,
                 options: Camera.allCases.map { $0.rawValue }
-            ),
-            "cameraShape": .enumValue(
-                value: (qrConfigurationData?.cameraShape ?? .SQUARE).rawValue,
-                options: CameraShape.allCases.map { $0.rawValue }
             )
         ]
 
@@ -322,8 +279,7 @@ extension SdkConfigurationManager {
             "showTutorial",
             "showDiagnostic",
             "vibrationEnabled",
-            "showStroke",
-            "transparentBackground"
+            "showStroke"
         ]
 
         var rowStackView: UIStackView = UIStackView()
@@ -355,8 +311,7 @@ extension SdkConfigurationManager {
 
         let fields: [String] = [
             "extractionTimeout",
-            "cameraPreferred",
-            "cameraShape"
+            "cameraPreferred"
         ]
 
         for key in fields {

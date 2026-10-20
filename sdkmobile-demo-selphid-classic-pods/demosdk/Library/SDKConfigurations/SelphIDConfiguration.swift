@@ -1,0 +1,45 @@
+//
+//  SelphIDConfiguration.swift
+//  demosdk
+//
+//  Created by Jorge Poveda on 22/5/23.
+//
+
+import Foundation
+import selphidClassicComponent
+
+extension SdkConfigurationManager {
+    static var selphIDConfiguration: SelphIDConfigurationData {
+        var configSelphID = SelphIDConfigurationData()
+        
+        let resourcesSelphID: String = {
+            let selphiZipName = "fphi-selphid-widget-resources-sdk"
+            return Bundle.main.path(
+                forResource: selphiZipName,
+                ofType: "zip") ?? ""
+        }()
+        
+        configSelphID.debug = false
+        configSelphID.wizardMode = true
+        configSelphID.showResultAfterCapture = false
+        configSelphID.showTutorial = false
+        configSelphID.scanMode = SelphIDScanMode.MODE_SEARCH
+        configSelphID.specificData = "ES|<ALL>"
+        configSelphID.tokenImageQuality = 0.5
+        configSelphID.documentType = SelphIDDocumentType.ID_CARD
+        configSelphID.documentSide = SelphIDDocumentSide.FRONT
+        configSelphID.timeout = SelphIDTimeout.LONG
+        configSelphID.generateRawImages = true
+        configSelphID.encodedDataFocusEnabled = true
+        configSelphID.translationsContent = ""
+        configSelphID.viewsContent = ""
+        configSelphID.documentModels = ""
+        configSelphID.resourcesPath = resourcesSelphID
+        configSelphID.showDiagnostic = true
+        configSelphID.showPreviousTip = true
+        configSelphID.vibrationEnabled = true
+        configSelphID.tokenPreviousCaptureData = ""
+        
+        return configSelphID
+    }
+}

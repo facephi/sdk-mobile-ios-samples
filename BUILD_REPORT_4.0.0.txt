@@ -1,0 +1,171 @@
+==== sdkmobile-demo-selphi-pods ====
+/var/folders/ny/pq7k4_b55p9d65kt009v1dbm0000gp/T/cursor-sandbox-cache/f91e8baf65b3502c434783f8dedaed38/cocoapods/repos-art/cocoa-pro-fphi/.artpodrc
+Updating local specs repositories
+Analyzing dependencies
+[!] CocoaPods could not find compatible versions for pod "FPHISDKMainComponent":
+  In Podfile:
+    FPHISDKMainComponent (~> 4.0.0)
+
+None of your spec sources contain a spec satisfying the dependency: `FPHISDKMainComponent (~> 4.0.0)`.
+
+You have either:
+ * mistyped the name or version.
+ * not added the source repo that hosts the Podspec to your Podfile.
+FAIL pod install
+
+==== sdkmobile-demo-nfc-pods ====
+/var/folders/ny/pq7k4_b55p9d65kt009v1dbm0000gp/T/cursor-sandbox-cache/f91e8baf65b3502c434783f8dedaed38/cocoapods/repos-art/cocoa-pro-fphi/.artpodrc
+Updating local specs repositories
+Analyzing dependencies
+[!] CocoaPods could not find compatible versions for pod "FPHISDKMainComponent":
+  In Podfile:
+    FPHISDKMainComponent (~> 4.0.0)
+
+None of your spec sources contain a spec satisfying the dependency: `FPHISDKMainComponent (~> 4.0.0)`.
+
+You have either:
+ * mistyped the name or version.
+ * not added the source repo that hosts the Podspec to your Podfile.
+FAIL pod install
+
+==== sdkmobile-demo-videoid ====
+/var/folders/ny/pq7k4_b55p9d65kt009v1dbm0000gp/T/cursor-sandbox-cache/f91e8baf65b3502c434783f8dedaed38/cocoapods/repos-art/cocoa-pro-fphi/.artpodrc
+Updating local specs repositories
+Analyzing dependencies
+[!] CocoaPods could not find compatible versions for pod "FPHISDKMainComponent":
+  In Podfile:
+    FPHISDKMainComponent (~> 4.0.0)
+
+None of your spec sources contain a spec satisfying the dependency: `FPHISDKMainComponent (~> 4.0.0)`.
+
+You have either:
+ * mistyped the name or version.
+ * not added the source repo that hosts the Podspec to your Podfile.
+FAIL pod install
+
+==== sdkmobile-demo-videocall-pods ====
+/var/folders/ny/pq7k4_b55p9d65kt009v1dbm0000gp/T/cursor-sandbox-cache/f91e8baf65b3502c434783f8dedaed38/cocoapods/repos-art/cocoa-pro-fphi/.artpodrc
+Updating local specs repositories
+Cloning spec repo `livekit-podspecs` from `https://github.com/livekit/podspecs.git`
+  $ /opt/homebrew/bin/git -C /var/folders/ny/pq7k4_b55p9d65kt009v1dbm0000gp/T/cursor-sandbox-cache/f91e8baf65b3502c434783f8dedaed38/cocoapods/repos/livekit-podspecs fetch origin --progress
+  $ /opt/homebrew/bin/git -C /var/folders/ny/pq7k4_b55p9d65kt009v1dbm0000gp/T/cursor-sandbox-cache/f91e8baf65b3502c434783f8dedaed38/cocoapods/repos/livekit-podspecs rev-parse --abbrev-ref HEAD
+  main
+  $ /opt/homebrew/bin/git -C /var/folders/ny/pq7k4_b55p9d65kt009v1dbm0000gp/T/cursor-sandbox-cache/f91e8baf65b3502c434783f8dedaed38/cocoapods/repos/livekit-podspecs reset --hard origin/main
+  HEAD is now at 24cc671 [Update] LiveKitClient-XCFramework (2.18.0) (#71)
+Analyzing dependencies
+[!] CocoaPods could not find compatible versions for pod "FPHISDKVideoCallComponent":
+  In Podfile:
+    FPHISDKVideoCallComponent (~> 4.0.0)
+
+None of your spec sources contain a spec satisfying the dependency: `FPHISDKVideoCallComponent (~> 4.0.0)`.
+
+You have either:
+ * mistyped the name or version.
+ * not added the source repo that hosts the Podspec to your Podfile.
+FAIL pod install
+
+==== sdkmobile-demo-voiceid-pods ====
+/var/folders/ny/pq7k4_b55p9d65kt009v1dbm0000gp/T/cursor-sandbox-cache/f91e8baf65b3502c434783f8dedaed38/cocoapods/repos-art/cocoa-pro-fphi/.artpodrc
+Updating local specs repositories
+Analyzing dependencies
+[!] CocoaPods could not find compatible versions for pod "FPHISDKTrackingComponent":
+  In Podfile:
+    FPHISDKTrackingComponent (~> 4.0.0)
+
+None of your spec sources contain a spec satisfying the dependency: `FPHISDKTrackingComponent (~> 4.0.0)`.
+
+You have either:
+ * mistyped the name or version.
+ * not added the source repo that hosts the Podspec to your Podfile.
+FAIL pod install
+
+==== sdkmobile-demo-phingers-pods ====
+/var/folders/ny/pq7k4_b55p9d65kt009v1dbm0000gp/T/cursor-sandbox-cache/f91e8baf65b3502c434783f8dedaed38/cocoapods/repos-art/cocoa-pro-fphi/.artpodrc
+Updating local specs repositories
+Analyzing dependencies
+[!] CocoaPods could not find compatible versions for pod "FPHISDKMainComponent":
+  In Podfile:
+    FPHISDKMainComponent (~> 4.0.0)
+
+None of your spec sources contain a spec satisfying the dependency: `FPHISDKMainComponent (~> 4.0.0)`.
+
+You have either:
+ * mistyped the name or version.
+ * not added the source repo that hosts the Podspec to your Podfile.
+FAIL pod install
+
+==== sdkmobile-demo-signature-pods ====
+/var/folders/ny/pq7k4_b55p9d65kt009v1dbm0000gp/T/cursor-sandbox-cache/f91e8baf65b3502c434783f8dedaed38/cocoapods/repos-art/cocoa-pro-fphi/.artpodrc
+Updating local specs repositories
+Analyzing dependencies
+[!] CocoaPods could not find compatible versions for pod "FPHISDKTrackingComponent":
+  In Podfile:
+    FPHISDKTrackingComponent (~> 4.0.0)
+
+None of your spec sources contain a spec satisfying the dependency: `FPHISDKTrackingComponent (~> 4.0.0)`.
+
+You have either:
+ * mistyped the name or version.
+ * not added the source repo that hosts the Podspec to your Podfile.
+FAIL pod install
+
+==== sdkmobile-demo-classic-pods ====
+/var/folders/ny/pq7k4_b55p9d65kt009v1dbm0000gp/T/cursor-sandbox-cache/f91e8baf65b3502c434783f8dedaed38/cocoapods/repos-art/cocoa-pro-fphi/.artpodrc
+Updating local specs repositories
+Analyzing dependencies
+[!] Unable to find a specification for `FPHISelphIDExtractorV1 (~> 1.2.4)`
+
+You have either:
+ * mistyped the name or version.
+ * not added the source repo that hosts the Podspec to your Podfile.
+FAIL pod install
+
+==== sdkmobile-demo-classic-videorcording.pods ====
+/var/folders/ny/pq7k4_b55p9d65kt009v1dbm0000gp/T/cursor-sandbox-cache/f91e8baf65b3502c434783f8dedaed38/cocoapods/repos-art/cocoa-pro-fphi/.artpodrc
+Updating local specs repositories
+Analyzing dependencies
+[!] Unable to find a specification for `FPHISelphIDExtractorV1 (~> 1.2.4)`
+
+You have either:
+ * mistyped the name or version.
+ * not added the source repo that hosts the Podspec to your Podfile.
+FAIL pod install
+
+==== sdkmobile-demo-idv ====
+/var/folders/ny/pq7k4_b55p9d65kt009v1dbm0000gp/T/cursor-sandbox-cache/f91e8baf65b3502c434783f8dedaed38/cocoapods/repos-art/cocoa-pro-fphi/.artpodrc
+Updating local specs repositories
+Analyzing dependencies
+[!] Unable to find a specification for `FPHISelphIDExtractorV1 (~> 1.2.4)`
+
+You have either:
+ * mistyped the name or version.
+ * not added the source repo that hosts the Podspec to your Podfile.
+FAIL pod install
+
+==== onboarding-fileuploader.demo ====
+/var/folders/ny/pq7k4_b55p9d65kt009v1dbm0000gp/T/cursor-sandbox-cache/f91e8baf65b3502c434783f8dedaed38/cocoapods/repos-art/cocoa-pro-fphi/.artpodrc
+Updating local specs repositories
+Analyzing dependencies
+[!] Unable to find a specification for `FPHISelphIDExtractorV1 (~> 1.2.4)`
+
+You have either:
+ * mistyped the name or version.
+ * not added the source repo that hosts the Podspec to your Podfile.
+FAIL pod install
+
+==== sdkmobile-demo-full ====
+/var/folders/ny/pq7k4_b55p9d65kt009v1dbm0000gp/T/cursor-sandbox-cache/f91e8baf65b3502c434783f8dedaed38/cocoapods/repos-art/cocoa-pro-fphi/.artpodrc
+Updating local specs repositories
+  $ /opt/homebrew/bin/git -C /var/folders/ny/pq7k4_b55p9d65kt009v1dbm0000gp/T/cursor-sandbox-cache/f91e8baf65b3502c434783f8dedaed38/cocoapods/repos/livekit-podspecs fetch origin --progress
+  $ /opt/homebrew/bin/git -C /var/folders/ny/pq7k4_b55p9d65kt009v1dbm0000gp/T/cursor-sandbox-cache/f91e8baf65b3502c434783f8dedaed38/cocoapods/repos/livekit-podspecs rev-parse --abbrev-ref HEAD
+  main
+  $ /opt/homebrew/bin/git -C /var/folders/ny/pq7k4_b55p9d65kt009v1dbm0000gp/T/cursor-sandbox-cache/f91e8baf65b3502c434783f8dedaed38/cocoapods/repos/livekit-podspecs reset --hard origin/main
+  HEAD is now at 24cc671 [Update] LiveKitClient-XCFramework (2.18.0) (#71)
+Analyzing dependencies
+[!] Unable to find a specification for `FPHISelphIDExtractorV1 (~> 1.2.4)`
+
+You have either:
+ * mistyped the name or version.
+ * not added the source repo that hosts the Podspec to your Podfile.
+FAIL pod install
+

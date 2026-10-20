@@ -63,7 +63,7 @@ extension MainVM: MainVMInput {
     }
     
     func cancelFlow() {
-        SDKManager.shared.cancelFlow()
+        SDKManager.shared.cancelLaunch()
     }
     
     func downloadFlows() {
