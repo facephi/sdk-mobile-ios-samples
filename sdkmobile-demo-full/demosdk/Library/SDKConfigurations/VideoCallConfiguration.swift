@@ -10,22 +10,26 @@ import Foundation
 import UIKit
 
 extension SdkConfigurationManager {
-    static var videoCallConfiguration: VideoCallConfigurationData{
-        var configVideoCall = VideoCallConfigurationData(vibrationEnabled: true,
-                                                         activateScreenSharing: true,
-                                                         timeout: 8000)        
-        return configVideoCall
+    static var videoCallConfiguration: VideoCallConfigurationData {
+        VideoCallConfigurationData(
+            vibrationEnabled: true,
+            activateScreenSharing: false,
+            timeout: 60_000
+        )
     }
 }
 
 extension SdkConfigurationManager {
     static func createVideoCallConfigurationData(from configuration: Configuration) -> VideoCallConfigurationData {
-        var activateScreenSharing: Bool? = false
-        var vibrationEnabled: Bool? = true
+        var activateScreenSharing: Bool?
+        var vibrationEnabled: Bool?
         var url: String?
         var apiKey: String?
         var tenantId: String?
-        var timeout: Int? = 60000
+        var timeout: Int?
+        var debug: Bool?
+        var customerId: String?
+        var email: String?
 
         for (key, value) in configuration.values {
             switch (key, value) {
@@ -41,46 +45,56 @@ extension SdkConfigurationManager {
                 tenantId = val
             case ("timeout", .int(let val)):
                 timeout = val
+            case ("debug", .bool(let val)):
+                debug = val
+            case ("customerId", .string(let val)):
+                customerId = val.isEmpty ? nil : val
+            case ("email", .string(let val)):
+                email = val.isEmpty ? nil : val
             default:
                 break
             }
         }
 
         return VideoCallConfigurationData(
-            url: url == "" ? nil : url,
-            apiKey: apiKey == "" ? nil : apiKey,
-            tenantId: tenantId == "" ? nil : tenantId,
+            url: url?.isEmpty == false ? url : nil,
+            apiKey: apiKey?.isEmpty == false ? apiKey : nil,
+            tenantId: tenantId?.isEmpty == false ? tenantId : nil,
             vibrationEnabled: vibrationEnabled ?? true,
             activateScreenSharing: activateScreenSharing ?? false,
-            timeout: timeout ?? 60000
+            timeout: timeout ?? 60_000,
+            debug: debug ?? false,
+            customerId: customerId,
+            email: email
         )
     }
 
     static func configureVideoCallFields(in viewController: ConfigsComponentsVC,
                                          with videoCallConfigurationData: VideoCallConfigurationData?) {
-        // Asegurar que `configuration` está inicializado
         if viewController.configuration == nil {
             viewController.configuration = Configuration(configType: .VIDEOCALL_COMPONENT, values: [:])
         }
 
         let values: [String: ConfigValue] = [
-            "activateScreenSharing": .bool(value: videoCallConfigurationData?.activateScreenSharing ?? true),
+            "activateScreenSharing": .bool(value: videoCallConfigurationData?.activateScreenSharing ?? false),
             "vibrationEnabled": .bool(value: videoCallConfigurationData?.vibrationEnabled ?? true),
+            "debug": .bool(value: videoCallConfigurationData?.debug ?? false),
             "url": .string(value: videoCallConfigurationData?.url ?? ""),
             "apiKey": .string(value: videoCallConfigurationData?.apiKey ?? ""),
             "tenantId": .string(value: videoCallConfigurationData?.tenantId ?? ""),
-            "timeout": .int(value: videoCallConfigurationData?.timeout ?? 6000)
+            "customerId": .string(value: videoCallConfigurationData?.customerId ?? ""),
+            "email": .string(value: videoCallConfigurationData?.email ?? ""),
+            "timeout": .int(value: videoCallConfigurationData?.timeout ?? 60_000)
         ]
 
-        // Modificar directamente la configuración en `viewController`
         viewController.configuration!.values.merge(values) { (_, new) in new }
 
         let stackView = viewController.stackView
 
-        // Crear switches en una fila horizontal
         let switchKeys: [String] = [
             "activateScreenSharing",
-            "vibrationEnabled"
+            "vibrationEnabled",
+            "debug"
         ]
 
         var rowStackView: UIStackView = UIStackView()
@@ -94,11 +108,9 @@ extension SdkConfigurationManager {
                 let switchField = viewController.createField(key: key, value: value)
                 rowStackView.addArrangedSubview(switchField)
 
-                // Cuando la fila alcanza 2 elementos o es el último elemento, agrégala al stackView
                 if (index + 1) % 2 == 0 || index == switchKeys.count - 1 {
                     stackView.addArrangedSubview(rowStackView)
-                    
-                    // Crear una nueva fila solo si no es el último elemento
+
                     if index != switchKeys.count - 1 {
                         rowStackView = UIStackView()
                         rowStackView.axis = .horizontal
@@ -110,13 +122,12 @@ extension SdkConfigurationManager {
             }
         }
 
-        stackView.addArrangedSubview(rowStackView)
-
-        // Agregar los campos generados con `createField`
         let fields: [String] = [
             "url",
             "apiKey",
             "tenantId",
+            "customerId",
+            "email",
             "timeout"
         ]
 
@@ -127,4 +138,3 @@ extension SdkConfigurationManager {
         }
     }
 }
-

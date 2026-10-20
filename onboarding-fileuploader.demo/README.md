@@ -1,6 +1,6 @@
 # SDK-Mobile Onboarding with FileUploader Version
 
-> **Versión SDK:** 2.12.0 (CocoaPods `~> 2.12.0`; componente NFC `~> 2.20.0` donde aplique).
+> **Versión SDK:** 4.0.0 (CocoaPods `~> 4.0.0`)
 
 Aplicación demo con integración del SDK, descargando los componentes desde nuestros repositorios privados (Artifactory). 
 
@@ -10,7 +10,7 @@ Aplicación demo con integración del SDK, descargando los componentes desde nue
 - FPHISDKTermsConditionsComponent
 - FPHISDKMainComponent
 - FPHISDKSelphiComponent
-- FPHISDKSelphIDMBSDRComponent
+- FPHISDKSelphIDComponent (+ FPHISelphIDExtractorV1/V2/V3)
 - FPHISDKStatusComponent
 - FPHISDKTokenizeComponent
 - FPHISDKTrackingComponent

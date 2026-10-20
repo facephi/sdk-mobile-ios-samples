@@ -36,12 +36,15 @@ class SDKManager {
 
         let tokenizeController = TokenizeController()
         let statusController = StatusController()
-        
+        ThemeStatusManager.setup(theme: CustomThemeStatus())
+
         if SdkConfigurationManager.onlineLicensing {
             // AUTO License
             SDKController.shared.initSdk(
                 licensingUrl: SdkConfigurationManager.LICENSING_URL,
                 apiKey: SdkConfigurationManager.APIKEY_LICENSING,
+                locale: "es",
+                sessionVisualOptions: nil,
                 output: { sdkResult in
                     if sdkResult.finishStatus == .STATUS_OK {
                         self.sdkData = sdkResult.data ?? ""
@@ -52,12 +55,15 @@ class SDKManager {
                 },
                 trackingController: trackingController,
                 tokenizeController: tokenizeController,
+                behaviorController: nil,
                 statusController: statusController
             )
         } else {
             // MANUAL License
             SDKController.shared.initSdk(
                 license: SdkConfigurationManager.license,
+                locale: "es",
+                sessionVisualOptions: nil,
                 output: { sdkResult in
                     if sdkResult.finishStatus == .STATUS_OK {
                         self.log("Licencia manual seteada correctamente")
@@ -67,6 +73,7 @@ class SDKManager {
                 },
                 trackingController: trackingController,
                 tokenizeController: tokenizeController,
+                behaviorController: nil,
                 statusController: statusController
             )
         }
@@ -86,7 +93,12 @@ class SDKManager {
     public func launchSelphId(setTracking: Bool, viewController: UIViewController, selphIDConfigurationData: SelphIDConfigurationData, output: @escaping (SdkResult<SelphIDResult>) -> Void) {
         log("LAUNCH SELPHID")
         
-        let controller = SelphIDController(data: selphIDConfigurationData, output: output, viewController: viewController)
+        let controller = SelphIDController(
+            data: selphIDConfigurationData,
+            extractors: SelphIDExtractorProvider.makeAllExtractors(),
+            output: output,
+            viewController: viewController
+        )
         if setTracking {
             SDKController.shared.launch(controller: controller)
         } else {

@@ -15,7 +15,9 @@ import selphidComponent
 import captureComponent
 import videocallComponent
 import videoidComponent
+import videoRecordingComponent
 import voiceIDComponent
+import nfcComponent
 import termsConditionsComponent
 
 protocol MainVMOutput {
@@ -24,48 +26,48 @@ protocol MainVMOutput {
 }
 
 class MainVM {
-    // MARK: - VARS
-    private let baseUrlV5 = "https://external-selphid-sdk.facephi.dev/v5/"
-    private let baseUrlV6 = "https://external-selphid-sdk.facephi.dev/v6/"
-    private let methodPassiveLivenesTrackingToken = "api/v1/selphid/passive-liveness/evaluate/token"
-    private let methodPassiveLivenesTrackingImage = "api/v1/selphid/passive-liveness/evaluate"
-    private let methodAuthenticateFacialToken = "/api/v1/selphid/authenticate-facial/templates"
-    private let methodAuthenticateFacialImage = "/api/v1/selphid/authenticate-facial/images"
-    private let methodAuthenticateFacialImageToken = "/api/v1/selphid/authenticate-facial/image/template"
-    private let methodAuthenticateDocumentFacialToken = "/api/v1/selphid/authenticate-facial/document/face-template"
-    
     //VOICE Constants
-    private let baseVoiceUrl = "https://external-voice-sdk.facephi.dev/"
+    private let baseVoiceUrl = "VOICE_SDK_BASE_URL"
     private let methodVoiceEnrollment = "api/v1/enrollment"
     private let methodVoiceMatching = "api/v1/authentication"
     private let liveness_threshold: Double = 0.5
     
     // TODO: Check what is this?
-    
     private var imageToken = " "
-    private var OCRToken = " "
     private var bestImageBase64: String = " "
-    private var bestImageData: Data = Data()
     private var encodedReference: String = " "
     private var encodedProbe: Data = Data()
-    private var ocr: [String: String] = [:]
     private var audios: [Data]?
     private var audioTemplate: String?
     private var generatedQrImage: UIImage = UIImage()
-    private var bestImageTokenize: String = " "
-    
-    private var tokenFaceImage: String = " "
-    private var documentFaceImageMapTokenized: String = " "
     private var base64FaceImage: String = " "
+    private var documentFaceImageMapTokenized: String?
     // TODO: Check what is this?
     
     private var delegate: MainVMOutput?
     private let viewController: UIViewController
     
+    
+    //IDAPI
+    private var validationDataResponse: DocumentValidationDataResponse?
+    private var documentValidationService: DocumentValidationServiceProtocol?
+    private var operationId: String?
+    private var tokenFaceImage: String?
+    private var bestImageData: Data?
+    private var bestImageToken: String?
+    private var tokenOcr: String?
+    private var frontDocumentImage: String?
+    private var backDocumentImage: String?
+    private var requestedScanReference: String?
+    private var status: String?
+    private var documentType: String?
+    private var countryIssuer: String?
+    private var ocr: [String: String]?
+    
     init(viewController: UIViewController, delegate: MainVMOutput) {
         self.delegate = delegate
         self.viewController = viewController
-        SDKManager.shared.mainVC = delegate
+        SDKManager.mainVC = delegate
         getLicense()
     }
     
@@ -77,6 +79,23 @@ class MainVM {
 
 // MARK: - Inputs
 extension MainVM {
+    private var
+    validationsBaseUrl: String {
+        let configuredValue = PrefManager.get(String.self, forKey: .KEY_VALIDATION_URL)?.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard let configuredValue, !configuredValue.isEmpty else {
+            return SdkConfigurationManager.validationsUrl
+        }
+        return configuredValue
+    }
+    
+    private var validationsApiKey: String {
+        let configuredValue = PrefManager.get(String.self, forKey: .KEY_VALIDATION_API_KEY)?.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard let configuredValue, !configuredValue.isEmpty else {
+            return SdkConfigurationManager.validationsApiKey
+        }
+        return configuredValue
+    }
+    
     func generateQr() {
         SDKManager.shared.launchQrGenerator(setTracking: true,
                                             viewController: viewController,
@@ -104,7 +123,9 @@ extension MainVM {
     }
     
     func newOperation() {
+        self.documentValidationService = nil
         SDKManager.shared.newOperation(operationType: .ONBOARDING, customerId: SdkConfigurationManager.customerId, output: { sdkResult in
+            self.operationId = sdkResult.data
             self.log(msg: sdkResult.data != nil ? "New Operation with ID: \(sdkResult.data)": "ERROR: \(sdkResult.errorType)")
         })
     }
@@ -115,12 +136,26 @@ extension MainVM {
         })
     }
     
+    func initFlowOffline() {
+        SDKManager.shared.launchFlow(customerId: SdkConfigurationManager.customerId, viewController: viewController, output: {
+            self.log(msg: $0.data ?? "No data")
+        }, offline: true)
+    }
+    
     func flowNextStep() {
         SDKManager.shared.flowNextStep()
     }
     
-    func flowCancel() {
-        SDKManager.shared.cancelFlow()
+    func cancelLaunch() {
+        SDKManager.shared.cancelLaunch()
+    }
+
+    func enableVolumeUpCancelLaunch() {
+        SDKManager.shared.enableVolumeUpCancelLaunch()
+    }
+
+    func disableVolumeUpCancelLaunch() {
+        SDKManager.shared.disableVolumeUpCancelLaunch()
     }
     
     func selphi(configuration: SelphiConfigurationData) {
@@ -140,16 +175,12 @@ extension MainVM {
             self.log(msg: "\(selphiResult.errorType)")
             return
         }
-        guard let imageData = selphiResult.data?.bestImageData
-        else
-        {
-            self.log(msg: "bestImage is nil")
+        guard let result = selphiResult.data else {
+            self.log(msg: "SelphiResult is nil")
             return
         }
-        self.bestImageData = imageData
-        
-        self.bestImageBase64 = imageData.base64EncodedString()
-        self.bestImageTokenize = selphiResult.data?.bestImageTokenized ?? " "
+        self.bestImageData = result.bestImageData
+        self.bestImageToken = result.bestImageTokenized
         
         self.log(msg: "Image correctly fetched")
     }
@@ -161,46 +192,39 @@ extension MainVM {
                 return
             }
             
-            guard let result = selphIDResult.data?.ocrResults else {
-                self.log(msg: "ocrResults is nil")
+            guard let result = selphIDResult.data else {
+                self.log(msg: "SelphIDResult is nil")
                 return
             }
             
-            guard let imageData = selphIDResult.data?.faceImageData
-            else
-            {
-                self.log(msg: "imageData is nil")
-                return
+            self.ocr = result.ocrResults
+            self.tokenOcr = result.tokenOCR
+            self.tokenFaceImage = result.tokenFaceImage
+            self.countryIssuer = result.countryCaptured
+            self.documentType = result.documentTypeCaptured?.rawValue
+            self.frontDocumentImage = result.frontDocumentImage
+            self.backDocumentImage = result.backDocumentImage
+            self.saveNfcParameters(data: result)
+
+            self.log(msg: String("Found \(result.ocrResults?.count ?? 0) ocr results"))
+            if result.encodedDataImages.isEmpty {
+                self.log(msg: "No encoded data images")
+            } else {
+                for (index, encoded) in result.encodedDataImages.enumerated() {
+                    let token = result.tokenEncodedDataImages.indices.contains(index)
+                        ? result.tokenEncodedDataImages[index].token
+                        : ""
+                    self.log(
+                        msg: "EncodedData[\(index)] format=\(encoded.format) side=\(encoded.side.rawValue) token=\(token)"
+                    )
+                }
             }
-            
-            self.ocr = Dictionary(uniqueKeysWithValues: result.flatMap { (key, value) -> (String, String)? in
-                return (key, value)
-            })
-            self.tokenFaceImage = selphIDResult.data?.tokenFaceImage ?? ""
-            self.base64FaceImage = imageData.base64EncodedString()
-            self.saveNfcParameters(data: selphIDResult.data)
-            
-            self.log(msg: String(result.count))
-            self.logEncodedData(from: selphIDResult.data)
         })
     }
-
-    private func logEncodedData(from result: SelphIDResult?) {
-        guard let result else { return }
-        if result.encodedDataImages.isEmpty {
-            self.log(msg: "No encoded data images")
-            return
-        }
-        for (index, encoded) in result.encodedDataImages.enumerated() {
-            let token = result.tokenEncodedDataImages.indices.contains(index)
-                ? result.tokenEncodedDataImages[index].token
-                : ""
-            self.log(msg: "EncodedData[\(index)] format=\(encoded.format) side=\(encoded.side.rawValue) token=\(token)")
-        }
-    }
     
-    func nfc() {
-        SDKManager.shared.launchNfc(setTracking: true, viewController: viewController, nfcConfigurationData: SdkConfigurationManager.nfcConfiguration, output: { nfcResult in
+    func nfc(configuration: NfcConfigurationData) {
+        SdkConfigurationManager.persistNfcConfigurationData(configuration)
+        SDKManager.shared.launchNfc(setTracking: true, viewController: viewController, nfcConfigurationData: configuration, output: { nfcResult in
             guard nfcResult.errorType == .NO_ERROR else {
                 self.log(msg: "\(nfcResult.errorType)")
                 return
@@ -229,23 +253,31 @@ extension MainVM {
                 self.log(msg: "QRReader KO")
                 return
             }
-            self.log(msg: "QRReader OK: " + result.description)
+            self.log(msg: "QRReader OK: " + result.qrText)
         })
     }
     
-    func launchFileUploader(configuration: FileUploaderConfigurationData) {
+    func launchCaptureCUE(configuration: FileUploaderConfigurationData) {
         // swiftlint:disable all
-        SDKManager.shared.launchFileUploader(setTracking: true, viewController: viewController, fileUploaderConfigurationData: configuration, output: { captureResult in
+        SDKManager.shared.launchCaptureCUE(setTracking: true, viewController: viewController, fileUploaderConfigurationData: configuration, output: { captureResult in
             guard captureResult.errorType == .NO_ERROR else {
                 self.log(msg: "\(captureResult.errorType)")
                 return
             }
             
-            guard let result = captureResult.data
-            else
-            {
+            guard let result = captureResult.data else {
                 self.log(msg: "Capture KO")
                 return
+            }
+            switch result.documentImages.first?.content {
+            case .uploaderDocument(let doc):
+                print(doc.bytes)
+                break
+            case .uploaderImage(let image):
+                print(image.image)
+                break
+            case .none:
+                break
             }
             self.log(msg: "Capture OK: " + String(result.documentImages.count))
         })
@@ -269,22 +301,6 @@ extension MainVM {
             }
         })
     }
-
-    func launchTermsConditions(configuration: TermsConditionsConfigurationData) {
-        SDKManager.shared.launchTermsConditions(setTracking: true, viewController: viewController, termsConditionsConfigurationData: configuration, output: { termsConditionsResult in
-            guard termsConditionsResult.errorType == .NO_ERROR else {
-                self.log(msg: "\(termsConditionsResult.errorType)")
-                return
-            }
-
-            guard termsConditionsResult.data != nil else {
-                self.log(msg: "TermsConditions KO")
-                return
-            }
-
-            self.log(msg: "TermsConditions OK")
-        })
-    }
     
     func videoCall(configuration: VideoCallConfigurationData){
         SDKManager.shared.launchVideoCall(data: configuration, setTracking: true, viewController: viewController, output: { videocallResult in
@@ -303,7 +319,7 @@ extension MainVM {
     func videoId(configuration: VideoIDConfigurationData) {
         SDKManager.shared.launchVideoId(data: configuration, setTracking: true, viewController: viewController, output: { videoIdResult in
             if videoIdResult.errorType == .NO_ERROR {
-                self.bestImageTokenize = videoIdResult.data?.faceImageTokenized ?? ""
+                self.bestImageToken = videoIdResult.data?.faceImageTokenized ?? ""
                 self.tokenFaceImage = videoIdResult.data?.documentFaceImageTokenized ?? ""
                 self.documentFaceImageMapTokenized = videoIdResult.data?.documentFaceImageMapTokenized ?? ""
                 self.log(msg: "Status OK \(videoIdResult.finishStatus)")
@@ -316,7 +332,7 @@ extension MainVM {
     func signatureVideoId(configuration: VideoIDConfigurationData) {
         SDKManager.shared.launchSignatureVideoId(data: configuration, setTracking: true, viewController: viewController, output: { videoIdResult in
             if videoIdResult.errorType == .NO_ERROR {
-                self.bestImageTokenize = videoIdResult.data?.faceImageTokenized ?? ""
+                self.bestImageToken = videoIdResult.data?.faceImageTokenized ?? ""
                 self.tokenFaceImage = videoIdResult.data?.documentFaceImageTokenized ?? ""
                 self.documentFaceImageMapTokenized = videoIdResult.data?.documentFaceImageMapTokenized ?? ""
                 self.log(msg: "Status OK \(videoIdResult.finishStatus)")
@@ -374,8 +390,6 @@ extension MainVM {
     func setCustomerId() {
         SDKManager.shared.setCustomerId(customerId: "nuevoCustomerId")
     }
-    
-    
     
     func voiceEnrollment() {
         var config = SdkConfigurationManager.voiceIDConfiguration
@@ -439,11 +453,15 @@ extension MainVM {
     }
     
     func generateRawTemplate() {
+        guard let bestImageData else {
+            self.log(msg: "Can't generateRawTemplate because bestImageData is nil")
+            return
+        }
         SDKManager.shared.launchGenerateRawTemplate(data: bestImageData)
     }
     
-    func startVideoRecording() {
-        SDKManager.shared.launchVideoRecording(viewController: viewController)
+    func startVideoRecording(configuration: VideoRecordingConfigurationData) {
+        SDKManager.shared.launchVideoRecording(viewController: viewController, configuration: configuration)
     }
     
     func stopVideoRecording() {
@@ -455,144 +473,111 @@ extension MainVM {
         SDKManager.shared.closeSession()
     }
     
-    func checkLivenessV5Token() {
-        log(msg: "LAUNCH LIVENESS V5 TOKEN")
-        SDKManager.shared.launchCheckLiveness(
-            bestImage: bestImageTokenize,
-            baseUrl: baseUrlV5,
-            methodPassiveLivenesTracking: methodPassiveLivenesTrackingToken,
-            param: "tokenImage") {
-                self.log(msg: $0)
-            }
-    }
-    
-    func checkAuthDocFaceToken() {
-        log(msg: "LAUNCH AUTH DOC FACE TOKEN")
+    func launchIdentityValidation() {
+        guard let operationId else {
+            self.log(msg: "No operation created")
+            return
+        }
+        guard let tokenFaceImage else {
+            self.log(msg: "SelphID document face image not found")
+            return
+        }
+        guard let bestImageToken else {
+            self.log(msg: "Selphi image not found")
+            return
+        }
         
-        print("tokenFaceImage: \(tokenFaceImage)")
-        print("bestImageTokenize: \(bestImageTokenize)")
+        let service = IdentityValidationService(
+            baseUrl: validationsBaseUrl,
+            apiKey: validationsApiKey,
+            extraDataResult: SDKManager.shared.getExtraDataResult(),
+            tokenFaceImage: tokenFaceImage,
+            bestImageToken: bestImageToken,
+            operationId: operationId)
         
-        SDKManager.shared.launchMatchingFacial(
-            faceParam1: documentFaceImageMapTokenized,
-            faceParam2: bestImageTokenize,
-            baseUrl: baseUrlV5,
-            methodAuth: methodAuthenticateDocumentFacialToken,
-            param1: "documentTemplate",
-            param2: "faceTemplate1") {
-                self.log(msg: $0)
-            }
+        service.execute(callback: { self.log(msg: $0) })
     }
     
-    func checkAuthV5Token() {
-        log(msg: "LAUNCH AUTH V5 TOKEN")
-        SDKManager.shared.launchMatchingFacial(
-            faceParam1: tokenFaceImage,
-            faceParam2: bestImageTokenize,
-            baseUrl: baseUrlV5,
-            methodAuth: methodAuthenticateFacialToken,
-            param1: "faceTemplate1",
-            param2: "faceTemplate2") {
-                self.log(msg: $0)
+    func launchExtractDocument() {
+        guard let operationId else {
+            self.log(msg: "No operation created")
+            return
+        }
+        guard let tokenOcr else {
+            self.log(msg: "Ocr not found")
+            return
+        }
+        
+        let service = ExtractDocumentDataService(
+            baseUrl: validationsBaseUrl,
+            apiKey: validationsApiKey,
+            extraDataResult: SDKManager.shared.getExtraDataResult(),
+            tokenOcr: tokenOcr, //?
+            operationId: operationId)
+
+        service.execute(callback: { self.log(msg: $0) })
+    }
+
+    func launchTermsConditions(configuration: TermsConditionsConfigurationData) {
+        SDKManager.shared.launchTermsConditions(setTracking: true, viewController: viewController, termsConditionsConfigurationData: configuration, output: { termsConditionsResult in
+            guard termsConditionsResult.errorType == .NO_ERROR else {
+                self.log(msg: "\(termsConditionsResult.errorType)")
+                return
             }
+
+            guard termsConditionsResult.data != nil else {
+                self.log(msg: "TermsConditions KO")
+                return
+            }
+
+            self.log(msg: "TermsConditions OK")
+        })
     }
     
-    func checkLivenessV5Image() {
-        log(msg: "LAUNCH LIVENESS V5 IMAGE")
-        SDKManager.shared.launchCheckLiveness(
-            bestImage: bestImageBase64,
-            baseUrl: baseUrlV5,
-            methodPassiveLivenesTracking: methodPassiveLivenesTrackingImage,
-            param: "image") {
-                self.log(msg: $0)
-            }
+    func launchDocumentValidationStart() {
+        guard let frontDocumentImage, let backDocumentImage, let countryIssuer, let documentType else {
+            self.log(msg: "Validation can't be started because the document's capture is not completed")
+            return
+        }
+        guard let operationId else {
+            self.log(msg: "No operation created")
+            return
+        }
+        
+        self.documentValidationService = DocumentValidationService(
+            baseUrl: validationsBaseUrl,
+            apiKey: validationsApiKey,
+            extraDataResult: SDKManager.shared.getExtraDataResult(),
+            frontDocumentImage: frontDocumentImage,
+            backDocumentImage: backDocumentImage,
+            country: countryIssuer,
+            documentType: documentType,
+            operationId: operationId)
+        
+        self.documentValidationService?.start(callback: { self.log(msg: $0) })
     }
     
-    func checkAuthV5Image() {
-        log(msg: "LAUNCH AUTH V5 IMAGE")
-        SDKManager.shared.launchMatchingFacial(
-            faceParam1: base64FaceImage,
-            faceParam2: bestImageBase64,
-            baseUrl: baseUrlV5,
-            methodAuth: methodAuthenticateFacialImage,
-            param1: "image1",
-            param2: "image2") {
-                self.log(msg: $0)
-            }
+    func launchDocumentValidationStatus() {
+        self.documentValidationService?.status(callback: { self.log(msg: $0) })
+    }
+    func launchDocumentValidationData() {
+        self.documentValidationService?.data(callback: { dataResult in
+            self.validationDataResponse = dataResult.decodeJsonString()
+            self.log(msg: dataResult)
+        })
     }
     
-    func checkLivenessV6Token() {
-        log(msg: "LAUNCH LIVENESS V6 TOKEN")
-        SDKManager.shared.launchCheckLiveness(
-            bestImage: bestImageTokenize,
-            baseUrl: baseUrlV6,
-            methodPassiveLivenesTracking: methodPassiveLivenesTrackingToken,
-            param: "tokenImage") {
-                self.log(msg: $0)
-            }
+    func launchFinishTracking(configuration: FinishTrackingData) {
+        let service = FinishTrackingService(
+            baseUrl: validationsBaseUrl,
+            apiKey: validationsApiKey,
+            extraDataResult: SDKManager.shared.getExtraDataResult(),
+            finishTrackingData: configuration
+        )
+        
+        service.execute(callback: { self.log(msg: $0) })
     }
     
-    func checkAuthV6Token() {
-        log(msg: "LAUNCH AUTH V6 TOKEN")
-        SDKManager.shared.launchMatchingFacial(
-            faceParam1: tokenFaceImage,
-            faceParam2: bestImageTokenize,
-            baseUrl: baseUrlV6,
-            methodAuth: methodAuthenticateFacialToken,
-            param1: "faceTemplate1",
-            param2: "faceTemplate2") {
-                self.log(msg: $0)
-            }
-    }
-    
-    func checkLivenessV6Image() {
-        log(msg: "LAUNCH LIVENESS V6 IMAGE")
-        SDKManager.shared.launchCheckLiveness(
-            bestImage: bestImageBase64,
-            baseUrl: baseUrlV6,
-            methodPassiveLivenesTracking: methodPassiveLivenesTrackingImage,
-            param: "image") {
-                self.log(msg: $0)
-            }
-    }
-    
-    func checkAuthV6Image() {
-        log(msg: "LAUNCH AUTH V6 IMAGE")
-        SDKManager.shared.launchMatchingFacial(
-            faceParam1: base64FaceImage,
-            faceParam2: bestImageBase64,
-            baseUrl: baseUrlV6,
-            methodAuth: methodAuthenticateFacialImage,
-            param1: "image1",
-            param2: "image2") {
-                self.log(msg: $0)
-            }
-    }
-    
-    func checkAuthV5ImageToken() {
-        log(msg: "LAUNCH AUTH V5 IMAGE/TOKEN")
-        SDKManager.shared.launchMatchingFacial(
-            faceParam1: bestImageBase64,
-            faceParam2: bestImageTokenize,
-            baseUrl: baseUrlV5,
-            methodAuth: methodAuthenticateFacialImageToken,
-            param1: "image1",
-            param2: "faceTemplate1") {
-                self.log(msg: $0)
-            }
-    }
-    
-    func checkAuthV6ImageToken() {
-        log(msg: "LAUNCH AUTH V6 IMAGE/TOKEN")
-        SDKManager.shared.launchMatchingFacial(
-            faceParam1: bestImageBase64,
-            faceParam2: bestImageTokenize,
-            baseUrl: baseUrlV6,
-            methodAuth: methodAuthenticateFacialImageToken,
-            param1: "image1",
-            param2: "faceTemplate1") {
-                self.log(msg: $0)
-            }
-    }
     
     private func saveNfcParameters(data: SelphIDResult?) {
         guard let data else { return }

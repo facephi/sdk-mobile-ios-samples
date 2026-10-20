@@ -2,39 +2,58 @@
 
 Repositorio de aplicaciones de ejemplo (demos) para integrar y probar **SDK Mobile iOS** vía **CocoaPods** (Artifactory `cocoa-pro-fphi`) o **SPM** según cada proyecto.
 
-## Release actual: SDK 2.12.0
+## Release actual: SDK 4.0.0
 
 | Ámbito | Versión |
 |--------|---------|
-| Componentes core / mayoría de pods | `~> 2.12.0` |
-| `FPHISDKNFCComponent` | `~> 2.20.0` (alineado con core 2.12.0) |
+| Componentes CocoaPods (`FPHISDK*`) | `~> 4.0.0` |
+| SelphID KMP (host) | `FPHISelphIDExtractorV1/V2/V3` (ver Podfile de cada demo) |
+
+Migración e integración: ver **[IMPLEMENTATION_REPORT_4.0.0.md](./IMPLEMENTATION_REPORT_4.0.0.md)**.
 
 ### Actualizar dependencias (CocoaPods)
 
 1. Credenciales en `~/.netrc` para `facephicorp.jfrog.io` (ver README de cada demo).
-2. Actualizar índice: `pod repo-art update cocoa-pro-fphi`
+2. Registrar / actualizar índice:
+   ```bash
+   pod repo-art add cocoa-pro-fphi "https://facephicorp.jfrog.io/artifactory/api/pods/cocoa-pro-fphi"
+   pod repo-art update cocoa-pro-fphi
+   ```
 3. En la carpeta de la demo: `pod install` o `pod update`
+
+**iOS mínimo:** 16.0.
+
+### Validar todas las demos (build)
+
+```bash
+./scripts/build_all_samples.sh
+```
+
+Informe de builds: `BUILD_REPORT_4.0.0.txt` (requiere pods 4.0.0 publicados en Artifactory).
 
 ### SPM
 
-Los `Podfile` y los `Package.resolved` incluidos en el repo declaran pins **2.12.0** (NFC **2.20.0**). Tras publicar los tags en Clienters, conviene volver a resolver en Xcode (**File → Packages → Resolve Package Versions**) para alinear `revision` con el tag publicado:
+Tras publicar tags 4.0.0 en Clienters, resolver en Xcode (**File → Packages → Resolve Package Versions**) o:
 
 ```bash
 xcodebuild -resolvePackageDependencies -project demosdk.xcodeproj -scheme demosdk
 ```
 
-### Notas release 2.12.0
+### Notas release 4.0.0
 
-- Alineación con la release [EST-780](https://facephicorporative.atlassian.net/browse/EST-780) (iOS SDK Mobile 2.12.0).
-- Tras el bump, validar al menos la demo **full** y las demos de componentes que uses en QA.
-- Conocido: `FPHISDKPhingersTFComponent` 2.12.0 puede advertir falta de slice **arm64** en simulador; probar en dispositivo físico si el build de simulador falla.
+- Referencia de integración: `sdkmobile-demos-ios/sdkmobile-demo-full-pods`.
+- SelphID: `FPHISDKSelphIDComponent` + extractors en la app; ya no `FPHISDKSelphIDComponent (+ FPHISelphIDExtractorV1/V2/V3)`.
+- `SDKController.initSdk`: `locale`, `sessionVisualOptions`, `behaviorController`; cancelación con `cancelLaunch()`.
+- VideoCall: source LiveKit en Podfile donde aplique.
 
 ## Demos incluidas
 
 | Carpeta | Descripción |
 |---------|-------------|
 | `sdkmobile-demo-full` | Todos los componentes (Full) |
-| `sdkmobile-demo-classic-pods` | Selphi + SelphID clásico |
+| `sdkmobile-demo-classic-pods` | Selphi + SelphID KMP (legacy name) |
+| `sdkmobile-demo-selphi-classic-pods` | Selphi **Classic** pod `4.0.0-classic` |
+| `sdkmobile-demo-selphid-classic-pods` | SelphID **Classic** pod `4.0.0-classic` |
 | `sdkmobile-demo-classic-videorcording.pods` | Classic + VideoRecording |
 | `sdkmobile-demo-selphi-pods` | Selphi |
 | `sdkmobile-demo-nfc-pods` | NFC |
@@ -47,7 +66,3 @@ xcodebuild -resolvePackageDependencies -project demosdk.xcodeproj -scheme demosd
 | `onboarding-fileuploader.demo` | Onboarding + file uploader |
 
 Cada subcarpeta tiene `README.md` / `README_EN.md` con instrucciones de instalación.
-
-## Jira
-
-- [EST-825](https://facephicorporative.atlassian.net/browse/EST-825) — Samples release 2.12.0

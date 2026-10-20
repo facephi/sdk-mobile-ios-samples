@@ -13,14 +13,26 @@ protocol Preference {
 
 protocol PreferencesProtocol {
     associatedtype Enumeration: Preference
-    static func set<T>(_ value: T, forKey key: Enumeration)
+    static func set<T>(_ value: T?, forKey key: Enumeration)
     static func get<T>(_ value: T.Type, forKey key: Enumeration) -> T?
     static func removeValue(forKey key: Enumeration)
 }
 
 extension PreferencesProtocol {
-    static func set<T>(_ value: T, forKey key: Enumeration) {
+    static func set<T>(_ value: T?, forKey key: Enumeration) {
         let userDefaults = UserDefaults.standard
+        
+        guard let value else {
+            userDefaults.removeObject(forKey: key.rawValue)
+            return
+        }
+        
+        guard !(value is NSNull),
+              PropertyListSerialization.propertyList(value, isValidFor: .binary) else {
+            userDefaults.removeObject(forKey: key.rawValue)
+            return
+        }
+        
         userDefaults.set(value, forKey: key.rawValue)
     }
 

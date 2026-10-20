@@ -7,31 +7,34 @@
 
 import UIKit
 import captureComponent
+import nfcComponent
+import phingersTFComponent
 import selphiComponent
 import selphidComponent
 import videocallComponent
 import videoidComponent
+import videoRecordingComponent
 import voiceIDComponent
-import phingersTFComponent
 import termsConditionsComponent
 
 class MainVC: UIViewController {
     // MARK: - ENUM
     private enum ButtonTag: Int {
         case setupEnvironment = 0, newOperation
-        case initFlow = 10, flowNextStep, flowCancel
+        case initFlow = 10, initFlowOffline, flowNextStep, cancelLaunch
+        case enableVolumeUpCancel = 15, disableVolumeUpCancel
         case checkLiveness = 20, checkFaceAuth
-        case selphid = 30, nfc, videoId, signatureVideoId, launchFileUploader = 36
+        case selphid = 30, nfc, videoId, signatureVideoId, launchCaptureCUE = 36
         case selphi = 40, signatureSelphi
         case phingersTF = 50
         case voiceId = 60, playAudios, voiceEnrollment, voiceMatching
         case generateQr = 70, launchQr
         case startVideoRecording = 80, stopVideoRecording
         case videoCall = 90, hangout
-        case checkLivenessV5Token = 100, checkAuthV5Token, checkLivenessV5Image, checkAuthV5Image, checkLivenessV6Token, checkAuthV6Token, checkLivenessV6Image, checkAuthV6Image
-        case checkAuthMapDocFaceToken = 108, checkAuthV5ImageToken, checkAuthV6ImageToken
-        case generateRawTemplate = 120, tokenize, license, clearLogs, closeSession
-        case launchTermsConditions = 125
+        case launchExtractDocument = 100, launchIdentityValidation
+        case launchDocumentValidationStart = 110, launchDocumentValidationStatus, launchDocumentValidationData
+        case launchFinishTracking = 120, launchTermsConditions = 125
+        case generateRawTemplate = 130, tokenize, license, clearLogs, closeSession
     }
     
     // MARK: - OUTLET
@@ -74,7 +77,9 @@ class MainVC: UIViewController {
             let configVC = ConfigsComponentsVC()
             configVC.action = { config in
                 if let typedConfig = config as? T {
-                    actionHandler(typedConfig)
+                    self.execute {
+                        actionHandler(typedConfig)
+                    }
                 }
             }
             configVC.component = component
@@ -101,53 +106,26 @@ class MainVC: UIViewController {
             execute{
                 self.viewModel.initFlow()
             }
+        case .initFlowOffline:
+            execute{
+                self.viewModel.initFlowOffline()
+            }
         case .flowNextStep:
             execute{
                 self.viewModel.flowNextStep()
             }
-        case .flowCancel:
+        case .cancelLaunch:
             execute{
-                self.viewModel.flowCancel()
+                self.viewModel.cancelLaunch()
             }
-        case .checkLivenessV5Token:
-            execute{
-                self.viewModel.checkLivenessV5Token()
+        case .enableVolumeUpCancel:
+            DispatchQueue.main.async {
+                self.viewModel.enableVolumeUpCancelLaunch()
             }
-        case .checkAuthV5Token:
-            execute{
-                self.viewModel.checkAuthV5Token()
+        case .disableVolumeUpCancel:
+            DispatchQueue.main.async {
+                self.viewModel.disableVolumeUpCancelLaunch()
             }
-        case .checkLivenessV5Image:
-            execute{
-                self.viewModel.checkLivenessV5Image()
-            }
-        case .checkAuthV5Image:
-            execute{
-                self.viewModel.checkAuthV5Image()
-            }
-        case .checkLivenessV6Token:
-            execute{
-                self.viewModel.checkLivenessV6Token()
-            }
-        case .checkAuthV6Token:
-            execute{
-                self.viewModel.checkAuthV6Token()
-            }
-        case .checkLivenessV6Image:
-            execute{
-                self.viewModel.checkLivenessV6Image()
-            }
-        case .checkAuthV6Image:
-            execute{
-                self.viewModel.checkAuthV6Image()
-            }
-        case .checkAuthV5ImageToken:
-            execute{
-                self.viewModel.checkAuthV5ImageToken()
-            }
-        case .checkAuthV6ImageToken:
-            execute{
-                self.viewModel.checkAuthV6ImageToken()}
         case .selphi:
             self.presentConfigComponent(component: .SELPHI_COMPONENT, configType: SelphiConfigurationData.self) {
                 self.viewModel.selphi(configuration: $0)
@@ -157,8 +135,8 @@ class MainVC: UIViewController {
                 self.viewModel.selphID(configuration: $0)
             }
         case .nfc:
-            execute{
-                self.viewModel.nfc()
+            presentConfigComponent(component: .NFC_COMPONENT, configType: NfcConfigurationData.self) {
+                self.viewModel.nfc(configuration: $0)
             }
         case .phingersTF:
             presentConfigComponent(component: .PHINGER_COMPONENT, configType: PhingersConfigurationData.self) {
@@ -220,13 +198,13 @@ class MainVC: UIViewController {
             presentConfigComponent(component: .QR_COMPONENT, configType: QrCaptureConfigurationData.self) {
                 self.viewModel.launchQr(configuration: $0)
             }
-        case .launchFileUploader:
-            presentConfigComponent(component: .FILE_UPLOADER_COMPONENT, configType: FileUploaderConfigurationData.self) {
-                self.viewModel.launchFileUploader(configuration: $0)
+        case .launchCaptureCUE:
+            presentConfigComponent(component: .DOCUMENT_CAPTURE_COMPONENT, configType: FileUploaderConfigurationData.self) {
+                self.viewModel.launchCaptureCUE(configuration: $0)
             }
         case .startVideoRecording:
-            execute{
-                self.viewModel.startVideoRecording()
+            presentConfigComponent(component: .START_VIDEO_RECORDING_COMPONENT, configType: VideoRecordingConfigurationData.self) {
+                self.viewModel.startVideoRecording(configuration: $0)
             }
         case .stopVideoRecording:
             execute{
@@ -240,14 +218,35 @@ class MainVC: UIViewController {
             execute{
                 self.viewModel.closeSession()
             }
-        case .checkAuthMapDocFaceToken:
-            execute {
-                self.viewModel.checkAuthDocFaceToken()
+        case .launchDocumentValidationStart:
+            execute{
+                self.viewModel.launchDocumentValidationStart()
+            }
+        case .launchDocumentValidationStatus:
+            execute{
+                self.viewModel.launchDocumentValidationStatus()
+            }
+        case .launchDocumentValidationData:
+            execute{
+                self.viewModel.launchDocumentValidationData()
+            }
+        case .launchFinishTracking:
+            self.presentConfigComponent(component: .FINISH_TRACKING, configType: FinishTrackingData.self) {
+                self.viewModel.launchFinishTracking(configuration: $0)
+            }
+        case .launchIdentityValidation:
+            execute{
+                self.viewModel.launchIdentityValidation()
+            }
+        case .launchExtractDocument:
+            execute{
+                self.viewModel.launchExtractDocument()
             }
         case .launchTermsConditions:
             presentConfigComponent(component: .TERMS_CONDITIONS_COMPONENT, configType: TermsConditionsConfigurationData.self) {
                 self.viewModel.launchTermsConditions(configuration: $0)
             }
+
         default:
             break
         }

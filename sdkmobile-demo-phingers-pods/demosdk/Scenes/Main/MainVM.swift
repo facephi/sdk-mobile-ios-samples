@@ -25,7 +25,7 @@ protocol MainVMOutput {
 
 class MainVM {
     // MARK: - VARS
-    private let baseUrl = "https://external-selphid-sdk.facephi.dev/"
+    private let baseUrl = "EXTERNAL_SDK_BASE_URL"
     private let methodPassiveLivenesTracking = "api/v1/selphid/passive-liveness/evaluate"
     private let methodAuthenticateFacial = "api/v1/selphid/authenticate-facial/document/face-image"
 
