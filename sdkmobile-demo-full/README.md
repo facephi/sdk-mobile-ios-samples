@@ -1,6 +1,6 @@
 # SDK-Mobile Demo Full Version
 
-> **Versión SDK:** 2.12.0 (CocoaPods `~> 2.12.0`; componente NFC `~> 2.20.0` donde aplique).
+> **Versión SDK:** 4.0.0 (CocoaPods `~> 4.0.0`)
 
 Aplicación demo para testear internamente todos los componentes de la SDK Mobile implementados hasta la fecha (Full Version), descargando los componentes desde nuestros repositorios privados (Artifactory). 
 
@@ -11,7 +11,7 @@ Aplicación demo para testear internamente todos los componentes de la SDK Mobil
 - FPHISDKNFCComponent
 - FPHISDKPhingersTFComponent
 - FPHISDKSelphiComponent
-- FPHISDKSelphIDMBSDRComponent
+- FPHISDKSelphIDComponent (+ FPHISelphIDExtractorV1/V2/V3)
 - FPHISDKStatusComponent
 - FPHISDKTermsConditionsComponent
 - FPHISDKTokenizeComponent

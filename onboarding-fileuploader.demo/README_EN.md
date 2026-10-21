@@ -1,6 +1,6 @@
 # SDK-Mobile Onboarding with FileUploader Version
 
-> **SDK version:** 2.12.0 (CocoaPods `~> 2.12.0`; NFC component `~> 2.20.0` where applicable).
+> **SDK version:** 4.0.0 (CocoaPods `~> 4.0.0`)
 
 Demo application to internally test all the components of the Mobile SDK with facial capture, downloading the components from our private repository (Artifactory). 
 
@@ -10,7 +10,7 @@ Demo application to internally test all the components of the Mobile SDK with fa
 - FPHISDKTermsConditionsComponent
 - FPHISDKMainComponent
 - FPHISDKSelphiComponent
-- FPHISDKSelphIDMBSDRComponent
+- FPHISDKSelphIDComponent (+ FPHISelphIDExtractorV1/V2/V3)
 - FPHISDKStatusComponent
 - FPHISDKTokenizeComponent
 - FPHISDKTrackingComponent
