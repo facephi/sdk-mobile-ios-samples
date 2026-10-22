@@ -34,6 +34,7 @@
 		9EFB343A2A4999E10005C31E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EFB343C2A4999E10005C31E /* Localizable.strings */; };
 		C937AFD8E5B4FF67D961DFC2 /* Pods_demosdkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F37FA8CD98F647A5C1889E /* Pods_demosdkTests.framework */; };
 		D9D2E38E2AC2FA4E00501393 /* VideoIDConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2E38D2AC2FA4E00501393 /* VideoIDConfiguration.swift */; };
+		355991A6964C466CB469D6A6 /* CustomThemeStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DE678F7301471EB54F5750 /* CustomThemeStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		D9D2E38D2AC2FA4E00501393 /* VideoIDConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoIDConfiguration.swift; sourceTree = "<group>"; };
 		E49D364F8CF838F62CC51808 /* Pods-demosdkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demosdkTests.debug.xcconfig"; path = "Target Support Files/Pods-demosdkTests/Pods-demosdkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC6D077BF1BAFC84A54C48BE /* Pods_demosdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demosdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41DE678F7301471EB54F5750 /* CustomThemeStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomThemeStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,7 +205,8 @@
 				13F510B9281937A5001E3CF1 /* SceneDelegate.swift */,
 				13F510C2281937A6001E3CF1 /* LaunchScreen.storyboard */,
 				13F510C5281937A6001E3CF1 /* Info.plist */,
-			);
+			
+				134EC744E44340929D8C81F6 /* Themes */,);
 			path = demosdk;
 			sourceTree = "<group>";
 		};
@@ -296,6 +299,14 @@
 				57F37FA8CD98F647A5C1889E /* Pods_demosdkTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		134EC744E44340929D8C81F6 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				41DE678F7301471EB54F5750 /* CustomThemeStatus.swift */,
+			);
+			path = Themes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -611,7 +622,8 @@
 				13F510B8281937A5001E3CF1 /* AppDelegate.swift in Sources */,
 				13F510BA281937A5001E3CF1 /* SceneDelegate.swift in Sources */,
 				130CD5B3285A0D19005C7BB1 /* UISegmentedControl.swift in Sources */,
-			);
+			
+				355991A6964C466CB469D6A6 /* CustomThemeStatus.swift in Sources */,);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		13F510C6281937A6001E3CF1 /* Sources */ = {

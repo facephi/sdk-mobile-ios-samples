@@ -34,16 +34,18 @@ class SDKManager {
         let trackingController = TrackingController(trackingError: { trackingError in
             self.log("TRACKING ERROR: \(trackingError)")
         })
-        
+
         let tokenizeController = TokenizeController()
         let statusController = StatusController()
-        
-        
+        ThemeStatusManager.setup(theme: CustomThemeStatus())
+
         if SdkConfigurationManager.onlineLicensing {
             // AUTO License
             SDKController.shared.initSdk(
                 licensingUrl: SdkConfigurationManager.LICENSING_URL,
                 apiKey: SdkConfigurationManager.APIKEY_LICENSING,
+                locale: "es",
+                sessionVisualOptions: nil,
                 output: { sdkResult in
                     if sdkResult.finishStatus == .STATUS_OK {
                         self.sdkData = sdkResult.data ?? ""
@@ -54,12 +56,15 @@ class SDKManager {
                 },
                 trackingController: trackingController,
                 tokenizeController: tokenizeController,
+                behaviorController: nil,
                 statusController: statusController
             )
         } else {
             // MANUAL License
             SDKController.shared.initSdk(
                 license: SdkConfigurationManager.license,
+                locale: "es",
+                sessionVisualOptions: nil,
                 output: { sdkResult in
                     if sdkResult.finishStatus == .STATUS_OK {
                         self.log("Licencia manual seteada correctamente")
@@ -69,13 +74,14 @@ class SDKManager {
                 },
                 trackingController: trackingController,
                 tokenizeController: tokenizeController,
+                behaviorController: nil,
                 statusController: statusController
             )
         }
     }
-    
+
     private var selphiResults: [SelphiResult] = []
-    
+
     public func launchSignatureSelphi(setTracking: Bool, viewController: UIViewController, selphiConfigurationData: SelphiConfigurationData, output: @escaping (SdkResult<SelphiResult>) -> Void) {
         log("LAUNCH SIGNATURE SELPHI")
 
@@ -90,7 +96,7 @@ class SDKManager {
     public func launchSignatureVideoId(data: VideoIDConfigurationData, setTracking: Bool, viewController: UIViewController, output: @escaping (SdkResult<VideoIDResult>) -> Void)
     {
         log("LAUNCH VIDEO ID")
-        
+
         let videoidController = SignatureVideoIdController(data: data, output: output, viewController: viewController)
         SDKController.shared.launch(controller: videoidController)
     }
@@ -100,23 +106,23 @@ class SDKManager {
 
         SDKController.shared.newOperation(operationType: operationType, customerId: customerId, output: output)
     }
-    
+
     public func closeSession() {
         log("closeSession")
         SDKController.shared.closeSession()
     }
-    
+
     private func log(_ msg: String) {
         let totalMsg = TAG + " - " + msg
         print(totalMsg)
     }
-    
+
     private func showSdkResult(msg: String, sdkResultDict: [String: Any?]) {
         var finalMsg = "\(msg): \n"
         for item in sdkResultDict {
             finalMsg += "\(item.key): \(item.value ?? "") \n"
         }
-        
+
         log(finalMsg)
     }
 
