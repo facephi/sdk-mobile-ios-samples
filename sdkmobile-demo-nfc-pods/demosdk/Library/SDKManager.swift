@@ -32,6 +32,7 @@ class SDKManager {
         })
 
         let statusController = StatusController()
+        ThemeStatusManager.setup(theme: CustomThemeStatus())
         let tokenizeController = TokenizeController()
 
         if SdkConfigurationManager.onlineLicensing {
@@ -39,6 +40,8 @@ class SDKManager {
             SDKController.shared.initSdk(
                 licensingUrl: SdkConfigurationManager.LICENSING_URL,
                 apiKey: SdkConfigurationManager.APIKEY_LICENSING,
+                locale: "es",
+                sessionVisualOptions: nil,
                 output: { sdkResult in
                 if sdkResult.finishStatus == .STATUS_OK {
                     self.log("Licencia automática seteada correctamente")
@@ -48,12 +51,15 @@ class SDKManager {
             },
                 trackingController: trackingController,
                 tokenizeController: tokenizeController,
+                behaviorController: nil,
                 statusController: statusController
             )
         } else {
             // MANUAL License
             SDKController.shared.initSdk(
                 license: SdkConfigurationManager.LICENSE,
+                locale: "es",
+                sessionVisualOptions: nil,
                 output: { sdkResult in
                 if sdkResult.finishStatus == .STATUS_OK {
                     self.log("Licencia manual seteada correctamente")
@@ -63,16 +69,27 @@ class SDKManager {
             },
                 trackingController: trackingController,
                 tokenizeController: tokenizeController,
+                behaviorController: nil,
                 statusController: statusController
             )
         }
     }
     
     // MARK: - LAUNCH FUNCS
-    public func launchNfc(setTracking: Bool, nfcConfigurationData: NfcConfigurationData, output: @escaping (SdkResult<NfcResult>) -> Void) {
+    public func launchNfc(
+        setTracking: Bool,
+        viewController: UIViewController,
+        nfcConfigurationData: NfcConfigurationData,
+        output: @escaping (SdkResult<NfcResult>) -> Void
+    ) {
         log("LAUNCH NFC")
-        
-        let controller = NfcController(data: nfcConfigurationData, output: output, stateDelegate: nil)
+
+        let controller = NfcController(
+            data: nfcConfigurationData,
+            viewController: viewController,
+            output: output,
+            stateDelegate: nil
+        )
         if setTracking {
             SDKController.shared.launch(controller: controller)
         } else {
