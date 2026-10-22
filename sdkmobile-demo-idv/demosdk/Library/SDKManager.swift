@@ -37,9 +37,12 @@ class SDKManager {
         
         let tokenizeController = TokenizeController()
         let statusController = StatusController()
+        ThemeStatusManager.setup(theme: CustomThemeStatus())
         SDKController.shared.initSdk(
             licensingUrl: SdkConfigurationManager.LICENSING_URL,
             apiKey: SdkConfigurationManager.APIKEY_LICENSING,
+            locale: "es",
+            sessionVisualOptions: nil,
             output: { sdkResult in
                 if sdkResult.finishStatus == .STATUS_OK {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
@@ -52,6 +55,7 @@ class SDKManager {
             },
             trackingController: trackingController,
             tokenizeController: tokenizeController,
+            behaviorController: nil,
             statusController: statusController,
             analyticsOutput: { time, component, type, info  in
                 self.log("Analytics: \(Date().getFormattedDate(format: "HH:mm:ss")) \(component) - \(type) - \(info)")
@@ -65,7 +69,10 @@ class SDKManager {
             print("TermsConditionsController output: \($0.errorType)")
         }, viewController: viewController)
         
-        let selphidController = SelphIDController(data: nil, output: {
+        let selphidController = SelphIDController(
+            data: nil,
+            extractors: SelphIDExtractorProvider.makeAllExtractors(),
+            output: {
             print("SelphidController output: \($0.errorType)")
         }, viewController: viewController)
         
@@ -122,8 +129,8 @@ class SDKManager {
         self.flowController?.launchNextStep()
     }
     
-    func cancelFlow() {
-        self.flowController?.cancelFlow()
+    func cancelLaunch() {
+        SDKController.shared.cancelLaunch()
         self.flowController = nil
     }
     
