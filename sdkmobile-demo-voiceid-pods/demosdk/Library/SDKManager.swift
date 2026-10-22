@@ -27,22 +27,24 @@ class SDKManager {
     private var sdkData: String = ""
     private let TAG = "APP_MANAGER"
     public var mainVC: MainVMOutput!
-    
-    let tokenizeController = TokenizeController()
-    let statusController = StatusController()
 
     // MARK: - INIT
     init() {
         let trackingController = TrackingController(trackingError: { trackingError in
             self.log("TRACKING ERROR: \(trackingError)")
         })
-        
+
         let tokenizeController = TokenizeController()
+        let statusController = StatusController()
+        ThemeStatusManager.setup(theme: CustomThemeStatus())
+
         if SdkConfigurationManager.onlineLicensing {
             // AUTO License
             SDKController.shared.initSdk(
                 licensingUrl: SdkConfigurationManager.LICENSING_URL,
                 apiKey: SdkConfigurationManager.APIKEY_LICENSING,
+                locale: "es",
+                sessionVisualOptions: nil,
                 output: { sdkResult in
                     if sdkResult.finishStatus == .STATUS_OK {
                         self.sdkData = sdkResult.data ?? ""
@@ -53,12 +55,15 @@ class SDKManager {
                 },
                 trackingController: trackingController,
                 tokenizeController: tokenizeController,
+                behaviorController: nil,
                 statusController: statusController
             )
         } else {
             // MANUAL License
             SDKController.shared.initSdk(
                 license: SdkConfigurationManager.license,
+                locale: "es",
+                sessionVisualOptions: nil,
                 output: { sdkResult in
                     if sdkResult.finishStatus == .STATUS_OK {
                         self.log("Licencia manual seteada correctamente")
@@ -68,35 +73,35 @@ class SDKManager {
                 },
                 trackingController: trackingController,
                 tokenizeController: tokenizeController,
+                behaviorController: nil,
                 statusController: statusController
             )
         }
     }
-        
+
     public func launchVoiceId(data: VoiceConfigurationData, setTracking: Bool, viewController: UIViewController, output: @escaping (SdkResult<VoiceResult>) -> Void)
     {
         log("LAUNCH VOICE ID")
-        
+
         let controller = VoiceController(
             data: data,
             output: { sdkResult in
                 let voiceIdSdkResult = SdkResult(finishStatus: sdkResult.finishStatus, errorType: sdkResult.errorType, data: sdkResult.data)
                 output(voiceIdSdkResult)
             }, viewController: viewController)
-        if setTracking{
+        if setTracking {
             SDKController.shared.launch(controller: controller)
-        }else{
+        } else {
             SDKController.shared.launchMethod(controller: controller)
         }
-        
     }
-    
+
     public func launchVoiceEnrollment(audios: [String], baseVoiceUrl: String, methodAuth: String, output: @escaping (SdkResult<VoiceEnrollmentResult>) -> Void) {
         log("LAUNCH VOICE MATCHING")
         let voiceEnrollmentController = VoiceEnrollmentController(audios: audios, baseVoiceUrl: baseVoiceUrl, methodAuth: methodAuth, output: output)
         SDKController.shared.launchMethod(controller: voiceEnrollmentController)
     }
-    
+
     public func launchVoiceMatching(audio: String, template: String, liveness_threshold: Double, baseVoiceUrl: String, methodAuth: String, output: @escaping (String) -> Void) {
         log("LAUNCH VOICE MATCHING")
         let voiceMatchingController = VoiceMatchingController(audio: audio,
@@ -113,29 +118,29 @@ class SDKManager {
         })
         SDKController.shared.launchMethod(controller: voiceMatchingController)
     }
-    
+
     public func newOperation(operationType: OperationType, customerId: String, output: @escaping (SdkResult<String>) -> Void) {
         log("newOperation - start, device, coordinates, customerId - \(customerId)")
 
         SDKController.shared.newOperation(operationType: operationType, customerId: customerId, output: output)
     }
-    
+
     public func closeSession() {
         log("closeSession")
         SDKController.shared.closeSession()
     }
-    
+
     private func log(_ msg: String) {
         let totalMsg = TAG + " - " + msg
         print(totalMsg)
     }
-    
+
     private func showSdkResult(msg: String, sdkResultDict: [String: Any?]) {
         var finalMsg = "\(msg): \n"
         for item in sdkResultDict {
             finalMsg += "\(item.key): \(item.value ?? "") \n"
         }
-        
+
         log(finalMsg)
     }
 

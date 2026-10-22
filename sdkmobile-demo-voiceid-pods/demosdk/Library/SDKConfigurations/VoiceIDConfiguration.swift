@@ -9,15 +9,14 @@ import voiceIDComponent
 
 extension SdkConfigurationManager {
     static var voiceIDConfiguration: VoiceConfigurationData {
-        var configVoiceID = VoiceConfigurationData(
+        VoiceConfigurationData(
             phrases: ["Facephi Biometria"],
-            showTutorial: true)
-        configVoiceID.showDiagnostic = true
-        configVoiceID.vibrationEnabled = true
-        configVoiceID.enableQualityCheck = true
-        configVoiceID.showPreviousTip = true
-        configVoiceID.extractionTimeout = 5000
-        
-        return configVoiceID
+            showTutorial: true,
+            extractionTimeout: 5000,
+            showDiagnostic: true,
+            vibrationEnabled: true,
+            enableQualityCheck: true,
+            showPreviousTip: true
+        )
     }
 }
