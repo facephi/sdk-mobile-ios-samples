@@ -4,6 +4,10 @@
 
 Aplicación demo para testear internamente todos los componentes de la SDK Mobile con captura de biometría facial, descargando los componentes desde nuestros repositorios privados (Artifactory). 
 
+## Custom views KMP (Selphi)
+
+La demo incluye **vistas custom** de ejemplo (previous tip, tutorial y overlay de cámara), alineadas con `sdkmobile-demo-full-pods`. Actívalas con el switch **KMP custom views** en la pantalla principal (desactivado por defecto).
+
 ## Dependencias
 
 - FPHISDKMainComponent
@@ -41,7 +45,9 @@ password <TOKEN>
 
 - Y finalmente se deberá añadir el repositorio donde se encuentran todos los paquetes:
 
-`pod repo-art add cocoa-pro-fphi "https://facephicorp.jfrog.io/artifactory/api/pods/cocoa-pro-fphi"`
+`pod repo-art add cocoa-dev-fphi "https://facephicorp.jfrog.io/artifactory/api/pods/cocoa-dev-fphi"`
+
+(Opcional snapshot: `pod repo-art add cocoa-snapshot-fphi "https://facephicorp.jfrog.io/artifactory/api/pods/cocoa-snapshot-fphi"`)
 
 - Tras esto, ya se podrían instalar e integrar los paquetes en la app, ejecutando el Podfile y el siguiente comando:
 
@@ -54,7 +60,7 @@ password <TOKEN>
 
 En caso de liberarse una versión nueva de alguno de los componentes de la SDK Mobile, se deberá actualizar el repositorio añadido previamente, para que se actualicen los cambios que se han realizado. Para ello, se deberá ejecutar el siguiente comando:
 
-`pod repo-art update cocoa-pro-fphi`
+`pod repo-art update cocoa-dev-fphi`
 
 
 ## Posibles problemas en Cocoapods

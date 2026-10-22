@@ -34,6 +34,7 @@ class SDKManager {
         })
 
         let statusController = StatusController()
+        ThemeStatusManager.setup(theme: CustomThemeStatus())
         let tokenizeController = TokenizeController()
         
         if SdkConfigurationManager.onlineLicensing {
@@ -41,6 +42,8 @@ class SDKManager {
             SDKController.shared.initSdk(
                 licensingUrl: SdkConfigurationManager.LICENSING_URL,
                 apiKey: SdkConfigurationManager.APIKEY_LICENSING,
+                locale: "es",
+                sessionVisualOptions: nil,
                 output: { sdkResult in
                     if sdkResult.finishStatus == .STATUS_OK {
                         self.sdkData = sdkResult.data ?? ""
@@ -51,12 +54,15 @@ class SDKManager {
                 },
                 trackingController: trackingController,
                 tokenizeController: tokenizeController,
+                behaviorController: nil,
                 statusController: statusController
             )
         } else {
             // MANUAL License
             SDKController.shared.initSdk(
                 license: SdkConfigurationManager.license,
+                locale: "es",
+                sessionVisualOptions: nil,
                 output: { sdkResult in
                     if sdkResult.finishStatus == .STATUS_OK {
                         self.log("Licencia manual seteada correctamente")
@@ -66,6 +72,7 @@ class SDKManager {
                 },
                 trackingController: trackingController,
                 tokenizeController: tokenizeController,
+                behaviorController: nil,
                 statusController: statusController
             )
         }
@@ -74,7 +81,15 @@ class SDKManager {
     public func launchSelphi(setTracking: Bool, viewController: UIViewController, selphiConfigurationData: SelphiConfigurationData, output: @escaping (SdkResult<SelphiResult>) -> Void) {
         log("LAUNCH SELPHI")
 
-        let controller = SelphiController(data: selphiConfigurationData, output: output, viewController: viewController)
+        let customViews = SdkConfigurationManager.useDemoKmpCustomCameraOverlay
+            ? DemoKmpCustomViewsFactory.makeSelphiCustomViews()
+            : nil
+        let controller = SelphiController(
+            data: selphiConfigurationData,
+            customViews: customViews,
+            output: output,
+            viewController: viewController
+        )
         if setTracking {
             SDKController.shared.launch(controller: controller)
         } else {

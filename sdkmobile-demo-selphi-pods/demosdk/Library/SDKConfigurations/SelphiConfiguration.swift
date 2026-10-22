@@ -9,30 +9,20 @@ import Foundation
 import selphiComponent
 
 extension SdkConfigurationManager {
+    /// Default Selphi KMP configuration aligned with sdkmobile-demo-full-pods (SDK 4.0.0).
     static var selphiConfiguration: SelphiConfigurationData {
         var configSelphi = SelphiConfigurationData()
-        
-        let resourcesSelphi: String = {
-            let selphiZipName = "fphi-selphi-widget-resources-sdk"
-            return Bundle.main.path(
-                forResource: selphiZipName,
-                ofType: "zip") ?? ""
-        }()
-        
-        configSelphi.debug = false
-        configSelphi.livenessMode = SelphiFaceLivenessMode.PASSIVE
-        configSelphi.stabilizationMode = false
-        configSelphi.qrMode = false
-        configSelphi.resourcesPath = resourcesSelphi
-        configSelphi.showDiagnostic = true
-        configSelphi.showTutorial = true
-        configSelphi.showPreviousTip = true
-        configSelphi.showResultAfterCapture = true
-        configSelphi.cameraPreferred = .FRONT
-        configSelphi.moveSuccessfulAttempts = 1
-        configSelphi.moveFailedAttempts = 3
+
+        configSelphi.livenessMode = .LIVENESS_PASSIVE
+        configSelphi.qrConfiguration.enableQrReader = false
+        configSelphi.facialConfiguration.selphiCameraConfiguration.showTutorial = true
+        configSelphi.facialConfiguration.selphiCameraConfiguration.showPreviousTip = true
+        configSelphi.facialConfiguration.selphiCameraConfiguration.showDiagnostic = true
+        configSelphi.facialConfiguration.showAfterCapture = true
+        configSelphi.facialConfiguration.selphiCameraConfiguration.cameraPreferred = .FRONT
+        configSelphi.maxAttempts = 3
         configSelphi.vibrationEnabled = true
-        
+
         return configSelphi
     }
 }

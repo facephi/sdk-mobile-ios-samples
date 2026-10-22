@@ -17,6 +17,9 @@ struct SdkConfigurationManager {
     static let METHOD_AUTH_FACIAL = ""
     static let CUSTOM_TENANT_ID = ""
     static let onlineLicensing = true
+
+    /// When true, `SDKManager.launchSelphi` passes demo KMP custom views (previous tip, tutorial, camera overlay).
+    static var useDemoKmpCustomCameraOverlay = false
     
     // swiftlint:disable all
     static let license = ""

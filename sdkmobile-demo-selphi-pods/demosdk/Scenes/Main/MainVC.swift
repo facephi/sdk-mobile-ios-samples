@@ -21,11 +21,38 @@ class MainVC: UIViewController {
 
     // MARK: - VARS
     private var viewModel: MainVMInput!
+    private let customViewsSwitch = UISwitch()
 
     // MARK: - OVERRIDE
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = MainVM(viewController: self, delegate: self)
+        setupCustomViewsToggle()
+    }
+
+    private func setupCustomViewsToggle() {
+        customViewsSwitch.isOn = SdkConfigurationManager.useDemoKmpCustomCameraOverlay
+        customViewsSwitch.addTarget(self, action: #selector(customViewsSwitchChanged(_:)), for: .valueChanged)
+
+        let label = UILabel()
+        label.text = "KMP custom views"
+        label.font = .systemFont(ofSize: 14)
+
+        let stack = UIStackView(arrangedSubviews: [label, customViewsSwitch])
+        stack.axis = .horizontal
+        stack.spacing = 8
+        stack.alignment = .center
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(stack)
+
+        NSLayoutConstraint.activate([
+            stack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
+            stack.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
+        ])
+    }
+
+    @objc private func customViewsSwitchChanged(_ sender: UISwitch) {
+        SdkConfigurationManager.useDemoKmpCustomCameraOverlay = sender.isOn
     }
 
     // MARK: - FUNC
