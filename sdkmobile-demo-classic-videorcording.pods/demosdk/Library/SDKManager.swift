@@ -16,7 +16,6 @@ import tokenizeComponent
 import statusComponent
 import videoRecordingComponent
 
-
 protocol SDKManagerDelegate: AnyObject {
     func log(msg: String)
 }
@@ -25,7 +24,7 @@ protocol SDKManagerDelegate: AnyObject {
 class SDKManager {
     // MARK: - VARS
     private var videoRecordingController: VideoRecordingController?
-    
+
     public static var shared: SDKManager = SDKManager()
     private var sdkData: String = ""
     private let TAG = "APP_MANAGER"
@@ -39,12 +38,15 @@ class SDKManager {
 
         let tokenizeController = TokenizeController()
         let statusController = StatusController()
-        
+        ThemeStatusManager.setup(theme: CustomThemeStatus())
+
         if SdkConfigurationManager.onlineLicensing {
             // AUTO License
             SDKController.shared.initSdk(
                 licensingUrl: SdkConfigurationManager.LICENSING_URL,
                 apiKey: SdkConfigurationManager.APIKEY_LICENSING,
+                locale: "es",
+                sessionVisualOptions: nil,
                 output: { sdkResult in
                     if sdkResult.finishStatus == .STATUS_OK {
                         self.sdkData = sdkResult.data ?? ""
@@ -55,12 +57,15 @@ class SDKManager {
                 },
                 trackingController: trackingController,
                 tokenizeController: tokenizeController,
+                behaviorController: nil,
                 statusController: statusController
             )
         } else {
             // MANUAL License
             SDKController.shared.initSdk(
                 license: SdkConfigurationManager.license,
+                locale: "es",
+                sessionVisualOptions: nil,
                 output: { sdkResult in
                     if sdkResult.finishStatus == .STATUS_OK {
                         self.log("Licencia manual seteada correctamente")
@@ -70,6 +75,7 @@ class SDKManager {
                 },
                 trackingController: trackingController,
                 tokenizeController: tokenizeController,
+                behaviorController: nil,
                 statusController: statusController
             )
         }
@@ -89,28 +95,33 @@ class SDKManager {
     public func launchSelphId(setTracking: Bool, viewController: UIViewController, selphIDConfigurationData: SelphIDConfigurationData, output: @escaping (SdkResult<SelphIDResult>) -> Void) {
         log("LAUNCH SELPHID")
         
-        let controller = SelphIDController(data: selphIDConfigurationData, output: output, viewController: viewController)
+        let controller = SelphIDController(
+            data: selphIDConfigurationData,
+            extractors: SelphIDExtractorProvider.makeAllExtractors(),
+            output: output,
+            viewController: viewController
+        )
         if setTracking {
             SDKController.shared.launch(controller: controller)
         } else {
             SDKController.shared.launchMethod(controller: controller)
         }
     }
-    
+
     public func launchVideoRecording(viewController: UIViewController) {
         let data = VideoRecordingConfigurationData()
         let videoRecordingController = VideoRecordingController(data: data, extensionIdentifier: "com.facephi.sdk.demo.videoRecording", viewController: viewController, output: {
             print("videoRecordingController output: \($0.errorType)")
         })
-        
+
         SDKController.shared.launch(controller: videoRecordingController)
         self.videoRecordingController = videoRecordingController
     }
-    
+
     public func stopVideoRecording() {
         self.videoRecordingController?.stopVideoRecording()
     }
-    
+
     public func launchExtradata() -> SdkResult<String> {
         SDKController.shared.getExtraData()
     }
