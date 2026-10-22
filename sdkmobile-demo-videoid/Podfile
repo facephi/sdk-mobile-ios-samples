@@ -8,6 +8,7 @@ plugin 'cocoapods-art', :sources => [
 ]
 
 source 'https://cdn.cocoapods.org/'
+source 'https://github.com/livekit/podspecs.git'
 
 target 'demosdk' do
   # Comment the next line if you don't want to use dynamic frameworks

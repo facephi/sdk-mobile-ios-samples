@@ -8,9 +8,8 @@
 import videoidComponent
 
 extension SdkConfigurationManager {
-    static var videoIDConfiguration: VideoIDConfigurationData{
-        var configVideoID = VideoIDConfigurationData(showCompletedTutorial: true)
-        
-        return configVideoID
+    /// Default VideoID config aligned with sdkmobile-demo-full-pods (SDK 4.0.0).
+    static var videoIDConfiguration: VideoIDConfigurationData {
+        VideoIDConfigurationData(showCompletedTutorial: true)
     }
 }
