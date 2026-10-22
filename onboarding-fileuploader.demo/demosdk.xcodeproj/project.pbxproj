@@ -54,6 +54,13 @@
 		D95817E52A5EB722004A1C9B /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95817E42A5EB722004A1C9B /* UIView.swift */; };
 		D9B8985D2AA76E2E000AD65F /* PrefManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B8985C2AA76E2E000AD65F /* PrefManager.swift */; };
 		D9B8985F2AA76E65000AD65F /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B8985E2AA76E65000AD65F /* Preference.swift */; };
+		F1BCC7F2B3BB422B8BF4DB0D /* SelphIDDocumentExtractorV1Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED538DDA8F34AB786E86F79 /* SelphIDDocumentExtractorV1Adapter.swift */; };
+		A271DE0897AF440CA5077FDB /* SelphIDDocumentExtractorV2Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92A6DFFB8CB40959996CC6B /* SelphIDDocumentExtractorV2Adapter.swift */; };
+		FEE6A49BEDB2432FACE13BAE /* SelphIDDocumentExtractorV3Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D11919463246EFAC35F81D /* SelphIDDocumentExtractorV3Adapter.swift */; };
+		CF18638D2C7346B498CD2A98 /* SelphIDExtractorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D762A71CF11146CBA4A57E51 /* SelphIDExtractorProvider.swift */; };
+		BE6243CD7BF74FB793BD1F15 /* SelphIDExtractorV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAFF585C18D4C53B3508C5A /* SelphIDExtractorV1.swift */; };
+		4859A939A5DB40DDA18939BB /* SelphIDExtractorV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1D9478110349058374F798 /* SelphIDExtractorV2.swift */; };
+		3429E3783F95451DA63DA352 /* SelphIDExtractorV3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DCC3B48C7C413BA8DA05E3 /* SelphIDExtractorV3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -152,6 +159,13 @@
 		D9B8985C2AA76E2E000AD65F /* PrefManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrefManager.swift; sourceTree = "<group>"; };
 		D9B8985E2AA76E65000AD65F /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
 		EF56571DD5FCCEC3A58A5782 /* Pods-demosdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demosdk.debug.xcconfig"; path = "Target Support Files/Pods-demosdk/Pods-demosdk.debug.xcconfig"; sourceTree = "<group>"; };
+		3ED538DDA8F34AB786E86F79 /* SelphIDDocumentExtractorV1Adapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelphIDDocumentExtractorV1Adapter.swift; sourceTree = "<group>"; };
+		C92A6DFFB8CB40959996CC6B /* SelphIDDocumentExtractorV2Adapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelphIDDocumentExtractorV2Adapter.swift; sourceTree = "<group>"; };
+		11D11919463246EFAC35F81D /* SelphIDDocumentExtractorV3Adapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelphIDDocumentExtractorV3Adapter.swift; sourceTree = "<group>"; };
+		D762A71CF11146CBA4A57E51 /* SelphIDExtractorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelphIDExtractorProvider.swift; sourceTree = "<group>"; };
+		7DAFF585C18D4C53B3508C5A /* SelphIDExtractorV1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelphIDExtractorV1.swift; sourceTree = "<group>"; };
+		5C1D9478110349058374F798 /* SelphIDExtractorV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelphIDExtractorV2.swift; sourceTree = "<group>"; };
+		32DCC3B48C7C413BA8DA05E3 /* SelphIDExtractorV3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelphIDExtractorV3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,7 +355,8 @@
 				D92966C42CAE9A6300F53577 /* CaptureConfiguration.swift */,
 				1CE74C132FFC15FE00DC9BA3 /* TermsConditionsConfiguration.swift */,
 				1CC8271F2EEAC6E30039166E /* FinishTrackingData.swift */,
-			);
+			
+				34B1FB0621784FF597E9467D /* Extractors */,);
 			path = SDKConfigurations;
 			sourceTree = "<group>";
 		};
@@ -378,6 +393,20 @@
 				684C3E3C326A2A0985C50882 /* Pods_demosdk.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		34B1FB0621784FF597E9467D /* Extractors */ = {
+			isa = PBXGroup;
+			children = (
+				3ED538DDA8F34AB786E86F79 /* SelphIDDocumentExtractorV1Adapter.swift */,
+				C92A6DFFB8CB40959996CC6B /* SelphIDDocumentExtractorV2Adapter.swift */,
+				11D11919463246EFAC35F81D /* SelphIDDocumentExtractorV3Adapter.swift */,
+				D762A71CF11146CBA4A57E51 /* SelphIDExtractorProvider.swift */,
+				7DAFF585C18D4C53B3508C5A /* SelphIDExtractorV1.swift */,
+				5C1D9478110349058374F798 /* SelphIDExtractorV2.swift */,
+				32DCC3B48C7C413BA8DA05E3 /* SelphIDExtractorV3.swift */,
+			);
+			path = Extractors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -559,7 +588,14 @@
 				13F510BA281937A5001E3CF1 /* SceneDelegate.swift in Sources */,
 				130CD5B3285A0D19005C7BB1 /* UISegmentedControl.swift in Sources */,
 				1C1BCA492EDDDD3700E24814 /* DocumentValidationService.swift in Sources */,
-			);
+			
+				F1BCC7F2B3BB422B8BF4DB0D /* SelphIDDocumentExtractorV1Adapter.swift in Sources */,
+				A271DE0897AF440CA5077FDB /* SelphIDDocumentExtractorV2Adapter.swift in Sources */,
+				FEE6A49BEDB2432FACE13BAE /* SelphIDDocumentExtractorV3Adapter.swift in Sources */,
+				CF18638D2C7346B498CD2A98 /* SelphIDExtractorProvider.swift in Sources */,
+				BE6243CD7BF74FB793BD1F15 /* SelphIDExtractorV1.swift in Sources */,
+				4859A939A5DB40DDA18939BB /* SelphIDExtractorV2.swift in Sources */,
+				3429E3783F95451DA63DA352 /* SelphIDExtractorV3.swift in Sources */,);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */

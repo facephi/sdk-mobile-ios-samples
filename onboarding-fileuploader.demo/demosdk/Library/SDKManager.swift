@@ -59,6 +59,7 @@ class SDKManager {
             licensingUrl: SdkConfigurationManager.LICENSING_URL,
             apiKey: SdkConfigurationManager.APIKEY_LICENSING,
             locale: locale.rawValue,
+            sessionVisualOptions: nil,
             output: { sdkResult in
                 if sdkResult.finishStatus == .STATUS_OK {
                     self.log("License correctly fetched")
@@ -97,7 +98,10 @@ class SDKManager {
     public func launchSelphId(setTracking: Bool, viewController: UIViewController, selphIDConfigurationData: SelphIDConfigurationData, output: @escaping (SdkResult<SelphIDResult>) -> Void) {
         log("LAUNCH SELPHID")
         
-        let controller = SelphIDController(data: selphIDConfigurationData, output: output, viewController: viewController)
+        let controller = SelphIDController(
+            data: selphIDConfigurationData,
+            extractors: SelphIDExtractorProvider.makeAllExtractors(),
+            output: output, viewController: viewController)
         if setTracking {
             SDKController.shared.launch(controller: controller)
         } else {
@@ -152,7 +156,10 @@ class SDKManager {
             self.log("TermsConditionsController output: \($0.errorType)")
         }, viewController: viewController)
         
-        let selphidController = SelphIDController(data: nil, output: {
+        let selphidController = SelphIDController(
+            data: nil,
+            extractors: SelphIDExtractorProvider.makeAllExtractors(),
+            output: {
             self.log("SelphidController output: \($0.errorType)")
         }, viewController: viewController)
         
@@ -212,8 +219,8 @@ class SDKManager {
         self.flowController?.launchNextStep()
     }
     
-    func cancelFlow() {
-        self.flowController?.cancelFlow()
+    func cancelLaunch() {
+        SDKController.shared.cancelLaunch()
         self.flowController = nil
     }
     
