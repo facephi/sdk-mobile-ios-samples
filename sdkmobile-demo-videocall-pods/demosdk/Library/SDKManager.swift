@@ -26,21 +26,24 @@ class SDKManager {
     private let TAG = "APP_MANAGER"
     public var mainVC: MainVMOutput!
     private var videoCallController: VideoCallController?
-   
+
     // MARK: - INIT
     init() {
         let trackingController = TrackingController(trackingError: { trackingError in
             self.log("TRACKING ERROR: \(trackingError)")
         })
-        
+
         let tokenizeController = TokenizeController()
         let statusController = StatusController()
-        
+        ThemeStatusManager.setup(theme: CustomThemeStatus())
+
         if SdkConfigurationManager.onlineLicensing {
             // AUTO License
             SDKController.shared.initSdk(
                 licensingUrl: SdkConfigurationManager.LICENSING_URL,
                 apiKey: SdkConfigurationManager.APIKEY_LICENSING,
+                locale: "es",
+                sessionVisualOptions: nil,
                 output: { sdkResult in
                     if sdkResult.finishStatus == .STATUS_OK {
                         self.sdkData = sdkResult.data ?? ""
@@ -51,12 +54,15 @@ class SDKManager {
                 },
                 trackingController: trackingController,
                 tokenizeController: tokenizeController,
+                behaviorController: nil,
                 statusController: statusController
             )
         } else {
             // MANUAL License
             SDKController.shared.initSdk(
                 license: SdkConfigurationManager.license,
+                locale: "es",
+                sessionVisualOptions: nil,
                 output: { sdkResult in
                     if sdkResult.finishStatus == .STATUS_OK {
                         self.log("Licencia manual seteada correctamente")
@@ -66,49 +72,50 @@ class SDKManager {
                 },
                 trackingController: trackingController,
                 tokenizeController: tokenizeController,
+                behaviorController: nil,
                 statusController: statusController
             )
         }
     }
-    
+
     public func launchExtradata() -> SdkResult<String> {
         SDKController.shared.getExtraData()
     }
-    
+
     public func launchVideoCall(data: VideoCallConfigurationData, setTracking: Bool, viewController: UIViewController, output: @escaping (SdkResult<VideoCallStatus>) -> Void)
     {
         log("LAUNCH VIDEO CALL")
-        
+
         let videocallController = VideoCallController(data: data, extensionIdentifier: "com.facephi.sdk.demo.videocallExtension", output: output, viewController: viewController)
         self.videoCallController = videocallController
         SDKController.shared.launch(controller: videocallController)
     }
-    
+
     public func closeSession() {
         log("closeSession")
         SDKController.shared.closeSession()
     }
-    
+
     private func log(_ msg: String) {
         let totalMsg = TAG + " - " + msg
         print(totalMsg)
     }
-    
+
     private func showSdkResult(msg: String, sdkResultDict: [String: Any?]) {
         var finalMsg = "\(msg): \n"
         for item in sdkResultDict {
             finalMsg += "\(item.key): \(item.value ?? "") \n"
         }
-        
+
         log(finalMsg)
     }
-    
+
     public func newOperation(operationType: OperationType, customerId: String, output: @escaping (SdkResult<String>) -> Void) {
         log("newOperation - start, device, coordinates, customerId - \(customerId)")
 
         SDKController.shared.newOperation(operationType: operationType, customerId: customerId, output: output)
     }
-    
+
     func setCustomerId(customerId: String) {
         SDKController.shared.setCustomerId(customerId: customerId)
     }
