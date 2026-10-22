@@ -11,23 +11,23 @@ import UIKit
 
 extension SdkConfigurationManager {
     static var voiceIDConfiguration: VoiceConfigurationData {
-        
-        let configVoiceID = VoiceConfigurationData(
+        VoiceConfigurationData(
             phrases: PrefManager.get(String.self, forKey: .KEY_VOICE_ID_PHRASES)?.components(separatedBy: ",") ?? ["Facephi Biometria"],
-            showTutorial: PrefManager.get(Bool.self, forKey: .KEY_VOICE_ID_SHOW_TUTORIAL) ?? true)
-        return configVoiceID
+            showTutorial: PrefManager.get(Bool.self, forKey: .KEY_VOICE_ID_SHOW_TUTORIAL) ?? true
+        )
     }
 }
 
 extension SdkConfigurationManager {
     static func createVoiceIDConfigurationData(from configuration: Configuration) -> VoiceConfigurationData {
         var phrases: [String] = []
-        var showTutorial: Bool? = true
-        var vibrationEnabled: Bool? = true
-        var showDiagnostic: Bool? = true
-        var showPreviousTip: Bool? = true
-        var extractionTimeout: Int? = 5000
-        var enableQualityCheck: Bool? = true
+        var showTutorial: Bool?
+        var vibrationEnabled: Bool?
+        var showDiagnostic: Bool?
+        var showPreviousTip: Bool?
+        var extractionTimeout: Int?
+        var enableQualityCheck: Bool?
+        var maxAttempts: Int?
 
         for (key, value) in configuration.values {
             switch (key, value) {
@@ -45,23 +45,25 @@ extension SdkConfigurationManager {
                 extractionTimeout = val
             case ("enableQualityCheck", .bool(let val)):
                 enableQualityCheck = val
+            case ("maxAttempts", .int(let val)):
+                maxAttempts = val
             default:
                 break
             }
         }
 
         return VoiceConfigurationData(
-            phrases: phrases.count == 0 ? ["Facephi Biometria"] : phrases,
+            phrases: phrases.isEmpty ? ["Facephi Biometria"] : phrases,
             showTutorial: showTutorial ?? true,
-            extractionTimeout: extractionTimeout ?? 5000,
+            extractionTimeout: extractionTimeout ?? 50_000,
             showDiagnostic: showDiagnostic ?? true,
             vibrationEnabled: vibrationEnabled ?? true,
             enableQualityCheck: enableQualityCheck ?? true,
-            showPreviousTip: showPreviousTip ?? true
+            showPreviousTip: showPreviousTip ?? true,
+            maxAttempts: maxAttempts ?? 3
         )
     }
 
-    
     static func configureVoiceIDFields(in viewController: ConfigsComponentsVC,
                                        with voiceIDConfigurationData: VoiceConfigurationData?) {
         if viewController.configuration == nil {
@@ -74,15 +76,15 @@ extension SdkConfigurationManager {
             "vibrationEnabled": .bool(value: voiceIDConfigurationData?.vibrationEnabled ?? true),
             "showDiagnostic": .bool(value: voiceIDConfigurationData?.showDiagnostic ?? true),
             "showPreviousTip": .bool(value: voiceIDConfigurationData?.showPreviousTip ?? true),
-            "extractionTimeout": .int(value: voiceIDConfigurationData?.extractionTimeout ?? 5000),
-            "enableQualityCheck": .bool(value: voiceIDConfigurationData?.enableQualityCheck ?? true)
+            "extractionTimeout": .int(value: voiceIDConfigurationData?.extractionTimeout ?? 50_000),
+            "enableQualityCheck": .bool(value: voiceIDConfigurationData?.enableQualityCheck ?? true),
+            "maxAttempts": .int(value: voiceIDConfigurationData?.maxAttempts ?? 3)
         ]
 
         viewController.configuration!.values.merge(values) { (_, new) in new }
 
         let stackView = viewController.stackView
 
-        // Crear switches agrupados en filas
         let switchKeys: [String] = [
             "showPreviousTip",
             "showTutorial",
@@ -102,11 +104,9 @@ extension SdkConfigurationManager {
                 let switchField = viewController.createField(key: key, value: value)
                 rowStackView.addArrangedSubview(switchField)
 
-                // Cuando la fila alcanza 2 elementos o es el último elemento, agrégala al stackView
                 if (index + 1) % 2 == 0 || index == switchKeys.count - 1 {
                     stackView.addArrangedSubview(rowStackView)
-                    
-                    // Crear una nueva fila solo si no es el último elemento
+
                     if index != switchKeys.count - 1 {
                         rowStackView = UIStackView()
                         rowStackView.axis = .horizontal
@@ -118,11 +118,10 @@ extension SdkConfigurationManager {
             }
         }
 
-        // Agregar los campos generados con `createField`
         let fields: [String] = [
             "phrases",
-            "minSpeechLength",
-            "extractionTimeout"
+            "extractionTimeout",
+            "maxAttempts"
         ]
 
         for key in fields {
@@ -131,5 +130,4 @@ extension SdkConfigurationManager {
             }
         }
     }
-
 }

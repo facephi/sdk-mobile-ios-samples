@@ -8,10 +8,10 @@
 import Foundation
 
 enum EnvironmentPreferences: String, Preference {
-    case KEY_ENVIRONMENT
     case KEY_CUSTOMER_ID
     case KEY_FLOW_ID
     case KEY_OPERATION_TYPE
+    case KEY_TRACKING_VERSION
     case KEY_LOCALE
     case KEY_NFC_SUPPORT_NUMBER
     case KEY_NFC_BIRTH_DATE
@@ -29,6 +29,13 @@ enum EnvironmentPreferences: String, Preference {
     case KEY_VOICE_ID_SHOW_TUTORIAL
     
     case KEY_LAUNCH_MAIN_BACKGROUND
+    case KEY_VALIDATION_URL
+    case KEY_VALIDATION_API_KEY
+    case KEY_DEMO_KMP_CUSTOM_CAMERA_OVERLAY
+
+    case KEY_SESSION_VISUAL_DEBUG
+    case KEY_SESSION_VISUAL_ROUNDED_CORNER
+    case KEY_SESSION_VISUAL_OPACITY_PERCENT
 
 }
 
@@ -45,4 +52,3 @@ class PrefManager: PreferencesProtocol {
         return newValue
     }
 }
-

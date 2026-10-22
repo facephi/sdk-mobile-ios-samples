@@ -21,113 +21,145 @@ import videoidComponent
 import videoRecordingComponent
 import tokenizeComponent
 import voiceIDComponent
-import statusComponent
 import termsConditionsComponent
+import statusComponent
 
-protocol SDKManagerDelegate: AnyObject {
-    func log(msg: String)
-}
-
+// swiftlint:disable type_body_length
 class SDKManager {
     // MARK: - VARS
     public static var shared: SDKManager = SDKManager(
-        locale: PrefManager.get(SdkLocale.self, forKey: .KEY_LOCALE) ?? SdkLocale.es
-    )
+        trackingVersion: PrefManager.get(.midapi, forKey: .KEY_TRACKING_VERSION),
+        locale: PrefManager.get(.en, forKey: .KEY_LOCALE))
     private var sdkData: String = ""
     private var TAG = "APP_MANAGER"
-    public var mainVC: MainVMOutput!
+    public static var mainVC: MainVMOutput?
     
     private var videoRecordingController: VideoRecordingController?
     private var videoCallController: VideoCallController?
     
     private var flowController: FlowController?
-    private var flowId: String = SdkConfigurationManager.FLOW_ID
     
+    private var apiKey: String = ""
+    private var licensingUrl: URL!
+    private var flowId: String = SdkConfigurationManager.FLOW_ID_IDV
+    private var offlineLicense: String = SdkConfigurationManager.license_IDV
+    private let trackingVersion: TrackingVersion
+
     // MARK: - INIT
-    init(locale: SdkLocale) {
-        let trackingController = TrackingController(trackingError: { trackingError in
-            self.log("TRACKING ERROR: \(trackingError)")
-        })
-        
+    init(trackingVersion: TrackingVersion, locale: SdkLocale) {
+        self.trackingVersion = trackingVersion
+        setTrackingVersion(trackingVersion: trackingVersion)
+
+        let midapiSession = trackingVersion == .midapi
+        let trackingController: TrackingController? = midapiSession
+            ? nil
+            : TrackingController(trackingError: { trackingError in
+                self.log("TRACKING ERROR: \(trackingError)")
+            }, debug: true)
+
         let tokenizeController = TokenizeController()
         let statusController = StatusController()
         ThemeStatusManager.setup(theme: CustomThemeStatus())
-        
-        SDKController.shared.initSdk(
-            licensingUrl: SdkConfigurationManager.LICENSING_URL,
-            apiKey: SdkConfigurationManager.APIKEY_LICENSING,
-            locale: locale.rawValue,
-            output: { sdkResult in
-                if sdkResult.finishStatus == .STATUS_OK {
-                    self.sdkData = sdkResult.data ?? ""
-                    self.log("Licencia automática seteada correctamente")
-                } else {
-                    self.log("Ha ocurrido un error al intentar obtener la licencia: \(sdkResult.errorType)")
-                }
-            },
-            trackingController: trackingController,
-            tokenizeController: tokenizeController, // review - remove
-            behaviorController: nil,
-            statusController: statusController,
-            analyticsOutput: { time, component, type, info  in
-                self.log("Analytics: \(Date().getFormattedDate(format: "HH:mm:ss")) \(component) - \(type) - \(info)")
+
+        let initOutput: (SdkResult<String>) -> Void = { sdkResult in
+            if sdkResult.finishStatus == .STATUS_OK {
+                self.sdkData = sdkResult.data ?? ""
+                self.log(midapiSession ? "SDK MidApi iniciado correctamente" : "Licencia seteada correctamente")
+            } else {
+                self.log("Error init SDK: \(sdkResult.errorType)")
             }
-        )
+        }
+
+        let analyticsOutput: AnalyticsOutput = { time, component, type, info in
+            self.log("Analytics: \(Date().getFormattedDate(format: "HH:mm:ss")) \(component) - \(type) - \(info)", show: false)
+        }
+
+        if SdkConfigurationManager.onlineLicensing {
+            SDKController.shared.initSdk(
+                licensingUrl: licensingUrl,
+                apiKey: apiKey,
+                locale: locale.rawValue,
+                sessionVisualOptions: SdkConfigurationManager.demoSessionVisualOptions,
+                output: initOutput,
+                trackingController: trackingController,
+                tokenizeController: tokenizeController,
+                behaviorController: nil,
+                statusController: statusController,
+                analyticsOutput: analyticsOutput
+            )
+        } else {
+            SDKController.shared.initSdk(
+                license: offlineLicense,
+                locale: locale.rawValue,
+                sessionVisualOptions: SdkConfigurationManager.demoSessionVisualOptions,
+                output: initOutput,
+                trackingController: trackingController,
+                tokenizeController: tokenizeController,
+                behaviorController: nil,
+                statusController: statusController,
+                analyticsOutput: analyticsOutput
+            )
+        }
+    }
+
+    private var enableTrackingForOperations: Bool {
+        trackingVersion != .midapi
     }
     
     private var selphiResults: [SelphiResult] = []
-    public func launchFlow(customerId: String, viewController: UIViewController, output: @escaping (SdkResult<String>) -> Void) {
+    public func launchFlow(customerId: String, viewController: UIViewController, output: @escaping (SdkResult<String>) -> Void, offline: Bool = false) {
         //        ThemeSelphidManager.setup(theme: CustomThemeSelphID())
-        let selphidController = SelphIDController(data: nil, output: {
-            print("SelphidController output: \($0.errorType)")
-        }, viewController: viewController)
+        let selphidController = SelphIDController(
+            data: nil,
+            extractors: SelphIDExtractorProvider.makeAllExtractors(),
+            output: {
+                self.log("SelphidController output: \($0.errorType)")
+            },
+            viewController: viewController
+        )
         let selphiController = SelphiController(data: nil, output: {
-            print("SelphiController output: \($0.errorType)")
+            self.log("SelphiController output: \($0.errorType)")
         }, viewController: viewController)
         let startVideoRecordingController = VideoRecordingController(data: nil, viewController: viewController, output: {
-            print("StartVideoRecordingController output: \($0.errorType)")
+            self.log("StartVideoRecordingController output: \($0.errorType)")
         })
         let stopVideoRecordingController = StopVideoRecordingController(videoRecordingController: startVideoRecordingController, output: {
-            print("StopVideoRecordingController output: \($0.errorType)")
+            self.log("StopVideoRecordingController output: \($0.errorType)")
         })
         self.videoRecordingController = startVideoRecordingController
         
         let nfcController = NfcController(data: nil, viewController: viewController, output: {
-            print("NfcController output: \($0.errorType)")
+            self.log("NfcController output: \($0.errorType)")
         })
         let phingersController = PhingersController(data: nil, output: {
-            print("phingersReaderController output: \($0.errorType)")
+            self.log("phingersReaderController output: \($0.errorType)")
         }, viewController: viewController)
-        
         
         let videoIdController = VideoIdController(data: nil, output: {
-            print("videoIdController output: \($0.errorType)")
+            self.log("videoIdController output: \($0.errorType)")
         }, viewController: viewController)
         let voiceController = VoiceController(data: nil, output: {
-            print("voiceController output: \($0.errorType)")
+            self.log("voiceController output: \($0.errorType)")
         }, viewController: viewController)
         
         let qrReaderController = QrReaderController(data: nil, output: {
-            print("qrReaderController output: \($0.errorType)")
+            self.log("qrReaderController output: \($0.errorType)")
         }, viewController: viewController)
-        let fileUploaderController = FileUploaderController(data: nil, output: {
-            print("fileUploaderController output: \($0.errorType)")
-        }, viewController: viewController)
-        let videoCallController = VideoCallController(data: nil, extensionIdentifier: "com.facephi.sdk.demo.videocallExtension", output: {
-            print("videoCallController output: \($0.errorType)")
+        let videoCallController = VideoCallController(data: nil, extensionIdentifier: "com.facephi.sdk.demo.videoRecording", output: {
+            self.log("videoCallController output: \($0.errorType)")
         }, viewController: viewController)
         self.videoCallController = videoCallController
         
         let externalStepController = ExternalStepController(output: {
-            print("externalStepController output")
+            self.log("externalStepController output")
         })
-
-        let termsConditionsController = TermsConditionsController(data: nil, output: {
-            print("TermsConditionsController output: \($0.errorType)")
-        }, viewController: viewController)
         
         let controllers: [IFlowableController] =
-        [termsConditionsController, selphidController, selphiController, startVideoRecordingController, stopVideoRecordingController, nfcController, phingersController, videoIdController, voiceController, qrReaderController, fileUploaderController, videoCallController, externalStepController]
+        [selphidController, selphiController, startVideoRecordingController, stopVideoRecordingController, nfcController, phingersController, videoIdController, voiceController, qrReaderController, videoCallController, externalStepController]
+        
+        // PRO - f764dd36-8249-48a9-a7fd-9ddca9bfea88
+        // PRO - 7359277b-505e-40df-8e52-a6f0c37cd40b -> selphid, externo, phacturas
+        // 910099cf-a988-4b47-8ae7-9d7d063d9472 -> Phingers, External and VideoID
         
         let flowId = PrefManager.get(String.self, forKey: .KEY_FLOW_ID)
         let flowConfigurationData = FlowConfigurationData(
@@ -136,9 +168,7 @@ class SDKManager {
             customerId: customerId)
         
         let flowOutput: (SdkFlowResult) -> Void = { sdkFlowResult in
-            print("FlowController: STEP - \(sdkFlowResult.step)")
-            print("FlowController: FLOW FINISH: \(sdkFlowResult.flowFinish)")
-            print("FlowController: SDKResult: ERROR=\(sdkFlowResult.result.errorType)")
+            self.log("FlowController: STEP - \(sdkFlowResult.step)\nFlowController: FLOW FINISH: \(sdkFlowResult.flowFinish)\nFlowController: SDKResult: ERROR=\(sdkFlowResult.result.errorType)")
             
             switch (sdkFlowResult.result.data) {
             case (let data as SelphIDResult):
@@ -159,15 +189,35 @@ class SDKManager {
         self.flowController?.launchNextStep()
     }
     
-    func cancelFlow() {
-        self.flowController?.cancelFlow()
+    func cancelLaunch() {
+        self.log("CANCEL LAUNCH")
+        SDKController.shared.cancelLaunch()
         self.flowController = nil
+    }
+
+    func enableVolumeUpCancelLaunch() {
+        CancelLaunchVolumeTrigger.shared.enable(
+            onLog: { self.log($0) },
+            onCancelLaunch: { self.cancelLaunch() }
+        )
+    }
+
+    func disableVolumeUpCancelLaunch() {
+        CancelLaunchVolumeTrigger.shared.disable(onLog: { self.log($0) })
     }
     
     public func launchSelphi(setTracking: Bool, viewController: UIViewController, selphiConfigurationData: SelphiConfigurationData, output: @escaping (SdkResult<SelphiResult>) -> Void) {
-        log("LAUNCH SELPHI")
+        self.log("LAUNCH SELPHI")
 
-        let controller = SelphiController(data: selphiConfigurationData, output: output, viewController: viewController)
+        let customViews = SdkConfigurationManager.useDemoKmpCustomCameraOverlay
+            ? DemoKmpCustomViewsFactory.makeSelphiCustomViews()
+            : nil
+        let controller = SelphiController(
+            data: selphiConfigurationData,
+            customViews: customViews,
+            output: output,
+            viewController: viewController
+        )
         if setTracking {
             SDKController.shared.launch(controller: controller)
         } else {
@@ -179,7 +229,7 @@ class SDKManager {
                                       viewController: UIViewController,
                                       selphiConfigurationData: SelphiConfigurationData,
                                       output: @escaping (SdkResult<SelphiResult>) -> Void) {
-        log("LAUNCH SIGNATURE SELPHI")
+        self.log("LAUNCH SIGNATURE SELPHI")
 
         let controller = SignatureSelphiController(data: selphiConfigurationData, output: output, viewController: viewController)
         if setTracking {
@@ -190,9 +240,14 @@ class SDKManager {
     }
     
     public func launchSelphId(setTracking: Bool, viewController: UIViewController, selphIDConfigurationData: SelphIDConfigurationData, output: @escaping (SdkResult<SelphIDResult>) -> Void) {
-        log("LAUNCH SELPHID")
+        self.log("LAUNCH SELPHID")
         
-        let controller = SelphIDController(data: selphIDConfigurationData, output: output, viewController: viewController)
+        let controller = SelphIDController(
+            data: selphIDConfigurationData,
+            extractors: SelphIDExtractorProvider.makeAllExtractors(),
+            output: output,
+            viewController: viewController
+        )
         if setTracking {
             SDKController.shared.launch(controller: controller)
         } else {
@@ -201,9 +256,17 @@ class SDKManager {
     }
     
     public func launchPhingers(setTracking: Bool, viewController: UIViewController, phingersConfigurationData: PhingersConfigurationData, output: @escaping (SdkResult<PhingersResult>) -> Void) {
-        log("LAUNCH PHINGERS")
-        
-        let controller = PhingersController(data: phingersConfigurationData, output: output, viewController: viewController)
+        self.log("LAUNCH PHINGERS")
+
+        let customViews = SdkConfigurationManager.useDemoKmpCustomCameraOverlay
+            ? DemoKmpCustomViewsFactory.makePhingersCustomViews()
+            : nil
+        let controller = PhingersController(
+            data: phingersConfigurationData,
+            customViews: customViews,
+            output: output,
+            viewController: viewController
+        )
         if setTracking {
             SDKController.shared.launch(controller: controller)
         } else {
@@ -212,7 +275,7 @@ class SDKManager {
     }
     
     public func launchNfc(setTracking: Bool, viewController: UIViewController, nfcConfigurationData: NfcConfigurationData, output: @escaping (SdkResult<NfcResult>) -> Void) {
-        log("LAUNCH NFC")
+        self.log("LAUNCH NFC")
         
         let controller = NfcController(data: nfcConfigurationData, viewController: viewController, output: output, stateDelegate: nil)
         if setTracking {
@@ -223,7 +286,7 @@ class SDKManager {
     }
     
     public func launchQrGenerator(setTracking: Bool, viewController: UIViewController, qrGeneratorConfigurationData: QrGeneratorConfigurationData, output: @escaping (SdkResult<UIImage>) -> Void) {
-        log("LAUNCH QR GENERATOR")
+        self.log("LAUNCH QR GENERATOR")
         let controller = QrGeneratorController(data: qrGeneratorConfigurationData, output: output, viewController: viewController)
         if setTracking {
             SDKController.shared.launch(controller: controller)
@@ -232,8 +295,8 @@ class SDKManager {
         }
     }
     
-    public func launchQrReader(setTracking: Bool, viewController: UIViewController, qrReaderConfigurationData: QrCaptureConfigurationData, output: @escaping (SdkResult<String>) -> Void) {
-        log("LAUNCH QR READER")
+    public func launchQrReader(setTracking: Bool, viewController: UIViewController, qrReaderConfigurationData: QrCaptureConfigurationData, output: @escaping (SdkResult<QrResult>) -> Void) {
+        self.log("LAUNCH QR READER")
         
         let controller = QrReaderController(data: qrReaderConfigurationData, output: output, viewController: viewController)
         if setTracking {
@@ -243,8 +306,8 @@ class SDKManager {
         }
     }
     
-    public func launchFileUploader(setTracking: Bool, viewController: UIViewController, fileUploaderConfigurationData: FileUploaderConfigurationData, output: @escaping (SdkResult<FileUploaderResult>) -> Void) {
-        log("LAUNCH FILE UPLOADER")
+    public func launchCaptureCUE(setTracking: Bool, viewController: UIViewController, fileUploaderConfigurationData: FileUploaderConfigurationData, output: @escaping (SdkResult<FileUploaderResult>) -> Void) {
+        self.log("LAUNCH DOCUMENT CAPTURE")
 
         let controller = FileUploaderController(data: fileUploaderConfigurationData, output: output, viewController: viewController)
         if setTracking {
@@ -255,8 +318,8 @@ class SDKManager {
     }
 
     public func launchTermsConditions(setTracking: Bool, viewController: UIViewController, termsConditionsConfigurationData: TermsConditionsConfigurationData, output: @escaping (SdkResult<TermsConditionsResult>) -> Void) {
-        log("LAUNCH TERMS CONDITIONS")
-
+        self.log("LAUNCH TERMS CONDITIONS")
+        
         let controller = TermsConditionsController(data: termsConditionsConfigurationData, output: output, viewController: viewController)
         if setTracking {
             SDKController.shared.launch(controller: controller)
@@ -266,14 +329,17 @@ class SDKManager {
     }
     
     public func launchExtradata() -> SdkResult<String> {
-        log("LAUNCH EXTRADATA")
+        self.log("LAUNCH EXTRADATA")
         return SDKController.shared.getExtraData()
+//    public func launchExtraData(output: @escaping (SdkResult<String>) -> Void) {
+//        let extraDataController = ExtraDataController(output: output)
+//        SDKController.shared.launch(controller: extraDataController)
     }
     
     public func launchVideoCall(data: VideoCallConfigurationData, setTracking: Bool, viewController: UIViewController, output: @escaping (SdkResult<VideoCallStatus>) -> Void) {
-        log("LAUNCH VIDEO CALL")
+        self.log("LAUNCH VIDEO CALL")
         
-        let videocallController = VideoCallController(data: data, extensionIdentifier: "com.facephi.sdk.demo.videocallExtension", output: output, viewController: viewController)
+        let videocallController = VideoCallController(data: data, extensionIdentifier: "com.facephi.sdk.demo.videoRecording", output: output, viewController: viewController)
         self.videoCallController = videocallController
         SDKController.shared.launch(controller: videocallController)
     }
@@ -281,23 +347,40 @@ class SDKManager {
     public func hangoutVideoCall() {
         self.videoCallController?.hangout()
     }
-    
+
+    public func resumeVideoCall() {
+        self.log("VIDEO CALL RESUME")
+        videoCallController?.resume()
+    }
+
+    public func returnToVideoCall() {
+        self.log("VIDEO CALL RETURN TO CALL")
+        videoCallController?.returnToCall()
+    }
+
+    public func stopVideoCallScreenSharing(
+        output: @escaping (VideoCallScreenSharingState) -> Void
+    ) {
+        self.log("VIDEO CALL STOP SCREEN SHARING")
+        videoCallController?.stopScreenSharing(output: output)
+    }
+
     public func launchVideoId(data: VideoIDConfigurationData, setTracking: Bool, viewController: UIViewController, output: @escaping (SdkResult<VideoIDResult>) -> Void) {
-        log("LAUNCH VIDEO ID")
+        self.log("LAUNCH VIDEO ID")
         
         let videoidController = VideoIdController(data: data, output: output, viewController: viewController)
         SDKController.shared.launch(controller: videoidController)
     }
     
     public func launchSignatureVideoId(data: VideoIDConfigurationData, setTracking: Bool, viewController: UIViewController, output: @escaping (SdkResult<VideoIDResult>) -> Void) {
-        log("LAUNCH VIDEO ID")
+        self.log("LAUNCH SIGNATURE VIDEO ID")
         
         let videoidController = SignatureVideoIdController(data: data, output: output, viewController: viewController)
         SDKController.shared.launch(controller: videoidController)
     }
         
     public func launchVoiceId(data: VoiceConfigurationData, setTracking: Bool, viewController: UIViewController, output: @escaping (SdkResult<VoiceResult>) -> Void) {
-        log("LAUNCH VOICE ID")
+        self.log("LAUNCH VOICE ID")
         
         let controller = VoiceController(
             data: data,
@@ -308,10 +391,9 @@ class SDKManager {
         SDKController.shared.launch(controller: controller)
     }
     
-    public func launchVideoRecording(viewController: UIViewController) {
-        let data = VideoRecordingConfigurationData()
-        let videoRecordingController = VideoRecordingController(data: data, viewController: viewController, output: {
-            print("videoRecordingController output: \($0.errorType)")
+    public func launchVideoRecording(viewController: UIViewController, configuration: VideoRecordingConfigurationData) {
+        let videoRecordingController = VideoRecordingController(data: configuration, extensionIdentifier: "com.facephi.sdk.demo.videoRecording", viewController: viewController, output: {
+            self.log("videoRecordingController output: \($0.errorType)")
         })
         
         SDKController.shared.launch(controller: videoRecordingController)
@@ -319,76 +401,20 @@ class SDKManager {
     }
     
     public func stopVideoRecording() {
+        self.log("VIDEO RECORDING STOPPED")
+
         self.videoRecordingController?.stopVideoRecording()
-    }
-    
-    public func launchCheckLiveness(bestImage: String, baseUrl: String, methodPassiveLivenesTracking: String, param: String, callback: @escaping (String) -> Void) {
-        
-        var result = " "
-        let extraDataResult = SDKController.shared.getExtraData()
-        
-        guard extraDataResult.finishStatus == .STATUS_OK,
-              let data = extraDataResult.data else {
-            callback("LAUNCH CHECK LIVENESS -> KO\nFAILED TO CREATE EXTRADATA: \(extraDataResult.errorType)")
-            return
-        }
-        let parameters = "{\n\"\(param)\": \"\(bestImage)\" ,\n \"extraData\": \"\(data)\"\n}"
-        
-        var request = URLRequest(url: URL(string: baseUrl + methodPassiveLivenesTracking)!, timeoutInterval: Double.infinity)
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "POST"
-        request.httpBody = parameters.data
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data else {
-                callback(String(describing: error))
-                return
-            }
-            print("REQUEST CHECKLIVENESS")
-            result = String(data: data, encoding: .utf8)!
-            callback(result)
-        }
-        
-        task.resume()
-    }
-    
-    public func launchMatchingFacial(faceParam1: String, faceParam2: String, baseUrl: String, methodAuth: String, param1: String, param2: String, callback: @escaping (String) -> Void) {
-        
-        var result = ""
-        let extraDataResult = SDKController.shared.getExtraData()
-        
-        guard extraDataResult.finishStatus == .STATUS_OK,
-              let data = extraDataResult.data else {
-            callback("LAUNCH MATCHING FACIAL -> KO\nFAILED TO CREATE EXTRADATA: \(extraDataResult.errorType)")
-            return
-        }
-        let parameters = "{\n\t\"\(param1)\": \"\(faceParam1)\",\n\"\(param2)\": \"\(faceParam2)\",\n    \"extraData\": \"\(data)\"\n}"
-        
-        var request = URLRequest(url: URL(string: baseUrl + methodAuth)!,timeoutInterval: Double.infinity)
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "POST"
-        request.httpBody = parameters.data
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data else {
-                callback(String(describing: error))
-                return
-            }
-            print("REQUEST AUTHENTICATION")
-            result = String(data: data, encoding: .utf8)!
-            callback(result)
-        }
-        task.resume()
+        self.videoRecordingController = nil
     }
     
     public func launchVoiceEnrollment(audios: [String], baseVoiceUrl: String, methodAuth: String, output: @escaping (SdkResult<VoiceEnrollmentResult>) -> Void) {
-        log("LAUNCH VOICE MATCHING")
+        self.log("LAUNCH VOICE MATCHING")
         let voiceEnrollmentController = VoiceEnrollmentController(audios: audios, baseVoiceUrl: baseVoiceUrl, methodAuth: methodAuth, output: output)
         SDKController.shared.launchMethod(controller: voiceEnrollmentController)
     }
     
     public func launchVoiceMatching(audio: String, template: String, liveness_threshold: Double, baseVoiceUrl: String, methodAuth: String, output: @escaping (String) -> Void) {
-        log("LAUNCH VOICE MATCHING")
+        self.log("LAUNCH VOICE MATCHING")
         let voiceMatchingController = VoiceMatchingController(audio: audio,
                                                               template: template,
                                                               liveness_threshold: liveness_threshold,
@@ -405,42 +431,75 @@ class SDKManager {
     }
     
     public func newOperation(operationType: OperationType, customerId: String, output: @escaping (SdkResult<String>) -> Void) {
-        log("newOperation - start, device, coordinates, customerId - \(customerId)")
-        
-        SDKController.shared.newOperation(operationType: operationType, customerId: customerId, output: output)
+        self.log("newOperation - start, device, coordinates, customerId - \(customerId)")
+
+        SDKController.shared.newOperation(
+            operationType: operationType,
+            customerId: customerId,
+            enableTracking: enableTrackingForOperations,
+            output: output
+        )
     }
     
     public func closeSession() {
-        log("Closed Session: \(SDKController.shared.getSessionId())\nCreated new Session: \(SDKController.shared.closeSession().data)")
+        self.log("Closed Session: \(SDKController.shared.getSessionId())\nCreated new Session: \(SDKController.shared.closeSession().data)")
     }
     
-    private func log(_ msg: String) {
+    private func log(_ msg: String, show: Bool = true) {
         let totalMsg = TAG + " - " + msg
+        if show {
+            SDKManager.mainVC?.show(msg: totalMsg)
+        }
         print(totalMsg)
     }
     
-    private func showSdkResult(msg: String, sdkResultDict: [String: Any?]) {
-        var finalMsg = "\(msg): \n"
-        for item in sdkResultDict {
-            finalMsg += "\(item.key): \(item.value ?? "") \n"
-        }
-        
-        log(finalMsg)
+    public func getExtraDataResult() -> SdkResult<String> {
+        log("LAUNCH EXTRADATA")
+        return SDKController.shared.getExtraData()
     }
     
     public func launchGenerateRawTemplate(data: Data) {
-        log("LAUNCH GENERATE RAW TEMPLATE")
+        self.log("LAUNCH GENERATE RAW TEMPLATE")
         
         let controller = RawTemplateController(
             base64: data.base64EncodedString(),
             output: { sdkResult in
                     guard let result = sdkResult.data else {return}
-                print(result)
+                self.log(result)
             })
         SDKController.shared.launchMethod(controller: controller)
     }
     
     func setCustomerId(customerId: String) {
         SDKController.shared.setCustomerId(customerId: customerId)
+    }
+    
+    func setTrackingVersion(trackingVersion: TrackingVersion) {
+        switch trackingVersion {
+        case .midapi:
+            TAG = "MIDAPI"
+            apiKey = SdkConfigurationManager.APIKEY_LICENSING_V2_MIDAPI
+            licensingUrl = SdkConfigurationManager.LICENSING_URL_STG
+            flowId = SdkConfigurationManager.FLOW_ID_V2_STG
+            offlineLicense = SdkConfigurationManager.license_MIDAPI
+        case .IDV:
+            TAG = "IDV"
+            apiKey = SdkConfigurationManager.APIKEY_LICENSING_IDV_STG
+            licensingUrl = SdkConfigurationManager.LICENSING_URL_IDV_STG
+            flowId = SdkConfigurationManager.FLOW_ID_IDV
+            offlineLicense = SdkConfigurationManager.license_IDV
+        case .v2_LIVEKIT:
+            TAG = "V2_LIVEKIT"
+            apiKey = SdkConfigurationManager.APIKEY_LICENSING_V2_LIVEKIT
+            licensingUrl = SdkConfigurationManager.LICENSING_URL_STG
+            flowId = SdkConfigurationManager.FLOW_ID_V2_STG
+            offlineLicense = SdkConfigurationManager.licenseSTG
+        case .v2_STG:
+            TAG = "V2_STG"
+            apiKey = SdkConfigurationManager.APIKEY_LICENSING_V2_STG
+            licensingUrl = SdkConfigurationManager.LICENSING_URL_STG
+            flowId = SdkConfigurationManager.FLOW_ID_V2_STG
+            offlineLicense = SdkConfigurationManager.licenseSTG
+        }
     }
 }
