@@ -43,7 +43,7 @@ password <TOKEN>
 
 - Y finalmente se deberá añadir el repositorio donde se encuentran todos los paquetes:
 
-`pod repo-art add cocoa-dev-fphi "https://facephicorp.jfrog.io/artifactory/api/pods/cocoa-dev-fphi"`
+`pod repo-art add cocoa-pro-fphi "https://facephicorp.jfrog.io/artifactory/api/pods/cocoa-pro-fphi"`
 
 - Tras esto, ya se podrían instalar e integrar los paquetes en la app, ejecutando el Podfile y el siguiente comando:
 
@@ -56,7 +56,7 @@ password <TOKEN>
 
 En caso de liberarse una versión nueva de alguno de los componentes de la SDK Mobile, se deberá actualizar el repositorio añadido previamente, para que se actualicen los cambios que se han realizado. Para ello, se deberá ejecutar el siguiente comando:
 
-`pod repo-art update cocoa-dev-fphi`
+`pod repo-art update cocoa-pro-fphi`
 
 
 ## Posibles problemas en Cocoapods

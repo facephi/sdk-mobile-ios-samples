@@ -4,10 +4,6 @@
 
 Demo application to internally test all the components of the Mobile SDK with facial capture, downloading the components from our private repository (Artifactory). 
 
-## Selphi KMP custom views
-
-This sample ships demo **custom views** (previous tip, tutorial, camera overlay), aligned with `sdkmobile-demo-full-pods`. Toggle them with **KMP custom views** on the main screen (off by default).
-
 ## Dependencies
 
 - FPHISDKMainComponent
@@ -46,9 +42,7 @@ password <TOKEN>
 
 - Finally, you must add the repository where all the packages are located:
 
-`pod repo-art add cocoa-dev-fphi "https://facephicorp.jfrog.io/artifactory/api/pods/cocoa-dev-fphi"`
-
-(Optional snapshot: `pod repo-art add cocoa-snapshot-fphi "https://facephicorp.jfrog.io/artifactory/api/pods/cocoa-snapshot-fphi"`)
+`pod repo-art add cocoa-pro-fphi "https://facephicorp.jfrog.io/artifactory/api/pods/cocoa-pro-fphi"`
 
 - After this, you can install and integrate the packages into the app by running the Podfile and the following command:
 
@@ -62,7 +56,7 @@ password <TOKEN>
 
 In the event that a new version of any Mobile SDK component is released, the previously added repository must be updated so that the changes made are synchronized. To do this, run the following command:
 
-`pod repo-art update cocoa-dev-fphi`
+`pod repo-art update cocoa-pro-fphi`
 
 ## Possible Cocoapods issues
 
