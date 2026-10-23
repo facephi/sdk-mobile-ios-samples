@@ -9,37 +9,42 @@ import Foundation
 import selphidClassicComponent
 
 extension SdkConfigurationManager {
-    static var selphIDConfiguration: SelphIDConfigurationData {
+    /// Same as Android SdkData.SELPHID_RESOURCES: widget resources zip bundled with the app.
+    static let SELPHID_RESOURCES: String = Bundle.main.path(
+        forResource: "fphi-selphid-widget-resources-sdk",
+        ofType: "zip"
+    ) ?? ""
+
+    /// Equivalent of Android DemoSelphIDClassic SdkData.getSelphIDConfiguration.
+    /// Note: the iOS classic SelphIDConfigurationData has no `fullscreen` field, so that option is not applied.
+    static func selphIDConfiguration(
+        showTutorial: Bool,
+        showPreviousTip: Bool,
+        showDiagnostic: Bool,
+        wizardMode: Bool,
+        showResultAfterCapture: Bool,
+        scanMode: SelphIDScanMode,
+        specificData: String,
+        fullscreen: Bool,
+        documentType: SelphIDDocumentType,
+        documentSide: SelphIDDocumentSide,
+        generateRawImages: Bool
+    ) -> SelphIDConfigurationData {
         var configSelphID = SelphIDConfigurationData()
-        
-        let resourcesSelphID: String = {
-            let selphiZipName = "fphi-selphid-widget-resources-sdk"
-            return Bundle.main.path(
-                forResource: selphiZipName,
-                ofType: "zip") ?? ""
-        }()
-        
-        configSelphID.debug = false
-        configSelphID.wizardMode = true
-        configSelphID.showResultAfterCapture = false
-        configSelphID.showTutorial = false
-        configSelphID.scanMode = SelphIDScanMode.MODE_SEARCH
-        configSelphID.specificData = "ES|<ALL>"
-        configSelphID.tokenImageQuality = 0.5
-        configSelphID.documentType = SelphIDDocumentType.ID_CARD
-        configSelphID.documentSide = SelphIDDocumentSide.FRONT
-        configSelphID.timeout = SelphIDTimeout.LONG
-        configSelphID.generateRawImages = true
-        configSelphID.encodedDataFocusEnabled = true
-        configSelphID.translationsContent = ""
-        configSelphID.viewsContent = ""
-        configSelphID.documentModels = ""
-        configSelphID.resourcesPath = resourcesSelphID
-        configSelphID.showDiagnostic = true
-        configSelphID.showPreviousTip = true
-        configSelphID.vibrationEnabled = true
-        configSelphID.tokenPreviousCaptureData = ""
-        
+
+        configSelphID.showTutorial = showTutorial
+        configSelphID.showPreviousTip = showPreviousTip
+        configSelphID.showDiagnostic = showDiagnostic
+        configSelphID.wizardMode = wizardMode
+        configSelphID.showResultAfterCapture = showResultAfterCapture
+        configSelphID.scanMode = scanMode
+        configSelphID.specificData = specificData
+        configSelphID.documentType = documentType
+        configSelphID.documentSide = documentSide
+        configSelphID.timeout = .LONG
+        configSelphID.generateRawImages = generateRawImages
+        configSelphID.resourcesPath = SELPHID_RESOURCES
+
         return configSelphID
     }
 }

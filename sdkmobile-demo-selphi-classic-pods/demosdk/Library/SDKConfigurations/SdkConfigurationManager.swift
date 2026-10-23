@@ -1,18 +1,25 @@
 //
 //  SdkConfigurationManager.swift
-//  Classic Selphi component sample.
+//  demosdk
+//
+//  Created by Jorge Poveda on 22/5/23.
+//
+//  Equivalent of Android SdkData.kt (DemoSelphiClassic).
 //
 
 import Foundation
+import sdk
 
 struct SdkConfigurationManager {
-    static let email = "sdk-selphi-classic-ios@ejemplo"
-    static let CUSTOMER_ID = email
-    static let APIKEY_LICENSING = ""
-    static let LICENSING_URL = URL(string: "LicensingURL")!
-    /// Set `false` to test offline envelope in `license` below.
+    // ************** LICENSE **************
     static let onlineLicensing = true
+    static let APIKEY_LICENSING = "licensingApiKey"
+    static let LICENSING_URL = URL(string: "licensingUrl")!
 
-    /// Offline license JSON (fill locally; do not commit real envelopes to the public repo).
+    // swiftlint:disable all
     static let license = ""
+
+    // ************** DATA **************
+    static let CUSTOMER_ID = "demo_selphi@email.com"
+    static let OPERATION_TYPE: OperationType = .ONBOARDING
 }

@@ -7,137 +7,136 @@
 
 import core
 import Foundation
-import sdk
 import nfcComponent
-import trackingComponent
-import tokenizeComponent
-import UIKit
+import sdk
+import selphidComponent
 import statusComponent
 import termsConditionsComponent
-
-protocol SDKManagerDelegate: AnyObject {
-    func log(msg: String)
-}
+import tokenizeComponent
+import trackingComponent
+import UIKit
 
 class SDKManager {
     // MARK: - VARS
     public static var shared: SDKManager = SDKManager()
-    
     private let TAG = "APP_MANAGER"
-    
-    // MARK: - INIT
-    init() {
-        let trackingController = TrackingController(trackingError: { trackingError in
-            self.log("TRACKING ERROR: \(trackingError)")
-        })
+    private var nfcStateObserver: NfcStateObserver?
 
-        let statusController = StatusController()
-        ThemeStatusManager.setup(theme: CustomThemeStatus())
+    // MARK: - INIT SDK
+    func initSdk(output: @escaping (SdkResult<String>) -> Void) {
+        let trackingController = TrackingController(trackingError: { [weak self] trackingError in
+            self?.log("Tracking Error: \(trackingError)")
+        })
         let tokenizeController = TokenizeController()
+        let statusController = StatusController()
+
+        let analyticsOutput: AnalyticsOutput = { time, componentName, eventType, info in
+            print("APP - *** \(Date(timeIntervalSince1970: time / 1000)) - \(componentName) - \(eventType) - \(info)")
+        }
 
         if SdkConfigurationManager.onlineLicensing {
-            // AUTO License
             SDKController.shared.initSdk(
                 licensingUrl: SdkConfigurationManager.LICENSING_URL,
                 apiKey: SdkConfigurationManager.APIKEY_LICENSING,
-                locale: "es",
-                sessionVisualOptions: nil,
-                output: { sdkResult in
-                if sdkResult.finishStatus == .STATUS_OK {
-                    self.log("Licencia automática seteada correctamente")
-                } else {
-                    self.log("Ha ocurrido un error al intentar obtener la licencia: \(sdkResult.errorType)")
-                }
-            },
+                output: output,
                 trackingController: trackingController,
                 tokenizeController: tokenizeController,
-                behaviorController: nil,
-                statusController: statusController
+                statusController: statusController,
+                analyticsOutput: analyticsOutput
             )
         } else {
-            // MANUAL License
             SDKController.shared.initSdk(
-                license: SdkConfigurationManager.LICENSE,
-                locale: "es",
-                sessionVisualOptions: nil,
-                output: { sdkResult in
-                if sdkResult.finishStatus == .STATUS_OK {
-                    self.log("Licencia manual seteada correctamente")
-                } else {
-                    self.log("La licencia manual no es correcta")
-                }
-            },
+                license: SdkConfigurationManager.license,
+                output: output,
                 trackingController: trackingController,
                 tokenizeController: tokenizeController,
-                behaviorController: nil,
-                statusController: statusController
+                statusController: statusController,
+                analyticsOutput: analyticsOutput
             )
         }
     }
-    
-    // MARK: - LAUNCH FUNCS
+
+    // MARK: - OPERATION
+    public func newOperation(output: @escaping (SdkResult<String>) -> Void) {
+        log("newOperation - customerId - \(SdkConfigurationManager.CUSTOMER_ID)")
+        SDKController.shared.newOperation(
+            operationType: SdkConfigurationManager.OPERATION_TYPE,
+            customerId: SdkConfigurationManager.CUSTOMER_ID,
+            output: output
+        )
+    }
+
+    // MARK: - COMPONENTS
+    public func launchTermsConditions(
+        viewController: UIViewController,
+        text: String,
+        output: @escaping (SdkResult<TermsConditionsResult>) -> Void
+    ) {
+        log("LAUNCH TERMS CONDITIONS")
+        let controller = TermsConditionsController(
+            data: TermsConditionsConfigurationData(termsConditions: text),
+            output: output,
+            viewController: viewController
+        )
+        SDKController.shared.launch(controller: controller)
+    }
+
+    public func launchSelphId(
+        viewController: UIViewController,
+        selphIDConfigurationData: SelphIDConfigurationData,
+        output: @escaping (SdkResult<SelphIDResult>) -> Void
+    ) {
+        log("LAUNCH SELPHID")
+        let controller = SelphIDController(
+            data: selphIDConfigurationData,
+            extractors: SelphIDExtractorProvider.makeAllExtractors(),
+            output: output,
+            viewController: viewController
+        )
+        SDKController.shared.launch(controller: controller)
+    }
+
+    /// Android NfcController exposes `debugLogs` and `state` callbacks; on iOS the widget
+    /// events are received through `stateDelegate` (NfcWidgetDelegateProtocol).
     public func launchNfc(
-        setTracking: Bool,
         viewController: UIViewController,
         nfcConfigurationData: NfcConfigurationData,
+        state: @escaping (String) -> Void,
         output: @escaping (SdkResult<NfcResult>) -> Void
     ) {
         log("LAUNCH NFC")
-
+        let observer = NfcStateObserver(state: state)
+        nfcStateObserver = observer
         let controller = NfcController(
             data: nfcConfigurationData,
             viewController: viewController,
             output: output,
-            stateDelegate: nil
+            stateDelegate: observer
         )
-        if setTracking {
-            SDKController.shared.launch(controller: controller)
-        } else {
-            SDKController.shared.launchMethod(controller: controller)
-        }
+        SDKController.shared.launch(controller: controller)
     }
 
-    public func launchTermsConditions(setTracking: Bool, viewController: UIViewController, termsConditionsConfigurationData: TermsConditionsConfigurationData, output: @escaping (SdkResult<TermsConditionsResult>) -> Void) {
-        log("LAUNCH TERMS CONDITIONS")
-
-        let controller = TermsConditionsController(data: termsConditionsConfigurationData, output: output, viewController: viewController)
-        if setTracking {
-            SDKController.shared.launch(controller: controller)
-        } else {
-            SDKController.shared.launchMethod(controller: controller)
-        }
-    }
-    
-    public func newOperation(operationType: sdk.OperationType, customerId: String, output: @escaping (SdkResult<String>) -> ()) {
-        log("newOperation - start, device, coordinates, customerId - \(customerId)")
-        
-        SDKController.shared.newOperation(operationType: operationType, customerId: customerId, output: output)
-    }
-    
+    // MARK: - SESSION
     public func closeSession() {
         log("closeSession")
-        SDKController.shared.closeSession()
+        _ = SDKController.shared.closeSession()
     }
-    
+
     private func log(_ msg: String) {
-        let totalMsg = TAG + " - " + msg
-        print(totalMsg)
+        print(TAG + " - " + msg)
     }
-    
-    private func showSdkResult(msg: String, sdkResultDict: [String: Any?]) {
-        var finalMsg = "\(msg): \n"
-        for item in sdkResultDict {
-            finalMsg += "\(item.key): \(item.value ?? "") \n"
-        }
-        
-        log(finalMsg)
+}
+
+private final class NfcStateObserver: NfcWidgetDelegateProtocol {
+    private let state: (String) -> Void
+
+    init(state: @escaping (String) -> Void) {
+        self.state = state
     }
-    
-    func setCustomerId(customerId: String) {
-        SDKController.shared.setCustomerId(customerId: customerId)
-    }
-    
-    func launchExtraData() -> SdkResult<String> {
-        SDKController.shared.getExtraData()
-    }
+
+    func captureFinished() { state("CAPTURE_FINISHED") }
+    func captureCancelled() { state("CAPTURE_CANCELLED") }
+    func captureTimeout() { state("CAPTURE_TIMEOUT") }
+    func captureFailed(_ error: (any Error)!) { state("CAPTURE_FAILED \(error.map { "\($0)" } ?? "")") }
+    func onEvent(_ time: Date!, type: String!, info: String!) { state("\(type ?? "") \(info ?? "")") }
 }

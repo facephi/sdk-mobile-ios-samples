@@ -1,7 +1,13 @@
-/* 
+/*
   Localizable.strings
   demosdk
 
-  Created by Jorge Poveda on 26/6/23.
-  
+  Keys and texts mirror Android DemoIDV res/values-es/strings.xml.
 */
+
+"onboarding_init_message" = "Inicializando SDK...";
+"onboarding_init_error" = "ERROR inicializando SDK: ";
+"onboarding_launch_idv" = "Lanzar IDV";
+"onboarding_show_previous_tip" = "Pantalla previa";
+"onboarding_show_tutorial" = "Tutorial";
+"onboarding_show_diagnostic" = "Diagnóstico";

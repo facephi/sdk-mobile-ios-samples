@@ -1,0 +1,22 @@
+/*
+  Localizable.strings
+  demosdk
+
+  Keys and texts mirror Android DemoSelphID res/values/strings.xml.
+*/
+
+"onboarding_init_message" = "SDK initialization...";
+"onboarding_init_error" = "SDK initialization ERROR: ";
+"onboarding_title_operation" = "Operation";
+"onboarding_desc_operation" = "Create a new operation and finish it";
+"onboarding_init_operation" = "Create";
+"onboarding_title_selphid" = "SelphID";
+"onboarding_desc_selphid" = "Document Capture";
+"onboarding_launch_selphid" = "Launch";
+"onboarding_launch_template" = "Launch generate template";
+"onboarding_show_previous_tip" = "Previous tip";
+"onboarding_show_tutorial" = "Tutorial";
+"onboarding_show_diagnostic" = "Diagnostic";
+"onboarding_result_ok" = "Result OK";
+"onboarding_result_error" = "Result error";
+"onboarding_configuration" = "Advanced configuration";

@@ -2,19 +2,35 @@
   Localizable.strings
   demosdk
 
-  Created by Jorge Poveda on 26/6/23.
-  
+  Keys and texts mirror Android DemoPhingers res/values/strings.xml.
 */
 
-//// VIDEOID
-//"video_id_record_init_button"="PRUEBA START RECORDING";
-//
-//
-////VIDEO CALL
-//
-//
-////NFC
-//"nfc_component_start_message" = "PRUEBABring your device closer to the document";
+"onboarding_title_operation" = "Operación";
+"onboarding_desc_operation" = "Nueva operación del SDK";
+"onboarding_init_operation" = "Crear";
+"onboarding_launch_phinger" = "Lanzar";
+"onboarding_title_phinger" = "Phingers";
+"onboarding_desc_phinger" = "Captura de huellas dactilares";
+"onboarding_show_previous_tip" = "Pantalla previa";
+"onboarding_show_tutorial" = "Tutorial";
+"onboarding_show_diagnostic" = "Diagnóstico";
+"onboarding_show_selector_screen" = "Pantalla de selección";
+"onboarding_left" = "Izquierda";
+"onboarding_right" = "Derecha";
+"onboarding_choose_hand" = "Elige mano";
+"onboarding_choose_filter" = "Selecciona filtro";
+"onboarding_result_ok" = "Resultado correcto";
+"onboarding_result_error" = "Resultado erróneo";
+"onboarding_fingerfilter_slap" = "Mano completa";
+"onboarding_fingerfilter_all_4_fingers_one_by_one" = "4 dedos uno por uno";
+"onboarding_fingerfilter_all_5_fingers_one_by_one" = "5 dedos uno por uno";
+"onboarding_fingerfilter_index_finger" = "Dedo índice";
+"onboarding_fingerfilter_middle_finger" = "Dedo corazón";
+"onboarding_fingerfilter_ring_finger" = "Dedo anular";
+"onboarding_fingerfilter_little_finger" = "Dedo meñique";
+"onboarding_fingerfilter_thumb_finger" = "Pulgar";
+
+/* Phingers widget texts */
 "label.frame" = "Mantenga los dedos firmes";
 "label.morethan_expected_fingers" = "Más de %d %@";
 "label.fingers" = "Dedos";

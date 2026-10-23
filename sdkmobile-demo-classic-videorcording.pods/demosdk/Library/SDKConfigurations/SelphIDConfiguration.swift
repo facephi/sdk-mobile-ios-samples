@@ -9,37 +9,40 @@ import Foundation
 import selphidComponent
 
 extension SdkConfigurationManager {
+    /// Defaults aligned with Android DemoOnboarding (SdkData.getSelphIDConfiguration / SelphIDComponentCard).
     static var selphIDConfiguration: SelphIDConfigurationData {
+        selphIDConfiguration()
+    }
+
+    static func selphIDConfiguration(
+        showTutorial: Bool = true,
+        showPreviousTip: Bool = true,
+        showDiagnostic: Bool = true,
+        showDocumentSelector: Bool = true,
+        showResultAfterCapture: Bool = true,
+        documentType: SelphIDDocumentType = .ALL,
+        captureMode: SelphIDCaptureMode = .STANDARD,
+        generateRawImages: Bool = false,
+        maxAttempts: Int = 3
+    ) -> SelphIDConfigurationData {
         var configSelphID = SelphIDConfigurationData()
-        
-        let resourcesSelphID: String = {
-            let selphiZipName = "fphi-selphid-widget-resources-sdk"
-            return Bundle.main.path(
-                forResource: selphiZipName,
-                ofType: "zip") ?? ""
-        }()
-        
-        configSelphID.debug = false
-        configSelphID.wizardMode = true
-        configSelphID.showResultAfterCapture = false
-        configSelphID.showTutorial = false
-        configSelphID.scanMode = SelphIDScanMode.MODE_SEARCH
-        configSelphID.specificData = "ES|<ALL>"
-        configSelphID.tokenImageQuality = 0.5
-        configSelphID.documentType = SelphIDDocumentType.ID_CARD
-        configSelphID.documentSide = SelphIDDocumentSide.FRONT
-        configSelphID.timeout = SelphIDTimeout.LONG
-        configSelphID.generateRawImages = true
-        configSelphID.encodedDataFocusEnabled = true
-        configSelphID.translationsContent = ""
-        configSelphID.viewsContent = ""
-        configSelphID.documentModels = ""
-        configSelphID.resourcesPath = resourcesSelphID
-        configSelphID.showDiagnostic = true
-        configSelphID.showPreviousTip = true
-        configSelphID.vibrationEnabled = true
-        configSelphID.tokenPreviousCaptureData = ""
-        
+
+        configSelphID.timeout = SelphIDTimeout.LONG.milliseconds
+        configSelphID.maxAttempts = maxAttempts
+
+        configSelphID.uiConfiguration.showTutorial = showTutorial
+        configSelphID.uiConfiguration.showPreviousTip = showPreviousTip
+        configSelphID.uiConfiguration.showDiagnostic = showDiagnostic
+        configSelphID.uiConfiguration.showAfterCapture = showResultAfterCapture
+        configSelphID.uiConfiguration.showDocumentSelector = showDocumentSelector
+        // Required so the selector's continue button isn't stuck disabled (same as Android).
+        configSelphID.uiConfiguration.defaultCountry = "ES"
+        configSelphID.uiConfiguration.defaultDocumentType = documentType
+
+        configSelphID.extractionConfiguration.captureMode = captureMode
+        configSelphID.extractionConfiguration.documentTypes = [documentType]
+        configSelphID.extractionConfiguration.generateRawImages = generateRawImages
+
         return configSelphID
     }
 }

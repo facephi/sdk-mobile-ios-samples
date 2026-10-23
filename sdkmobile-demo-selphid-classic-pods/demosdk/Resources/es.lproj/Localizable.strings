@@ -1,7 +1,22 @@
-/* 
+/*
   Localizable.strings
   demosdk
 
-  Created by Jorge Poveda on 26/6/23.
-  
+  Keys and texts mirror Android DemoSelphIDClassic res/values-es/strings.xml.
 */
+
+"onboarding_init_message" = "Inicializando SDK...";
+"onboarding_init_error" = "ERROR inicializando SDK: ";
+"onboarding_title_operation" = "Operación";
+"onboarding_desc_operation" = "Nueva operación del SDK";
+"onboarding_init_operation" = "Crear";
+"onboarding_title_selphid" = "SelphID";
+"onboarding_desc_selphid" = "Captura de documentos";
+"onboarding_launch_selphid" = "Lanzar";
+"onboarding_launch_template" = "Lanzar generación plantilla";
+"onboarding_show_previous_tip" = "Pantalla previa";
+"onboarding_show_tutorial" = "Tutorial";
+"onboarding_show_diagnostic" = "Diagnóstico";
+"onboarding_result_ok" = "Resultado correcto";
+"onboarding_result_error" = "Resultado erróneo";
+"onboarding_configuration" = "Configuración avanzada";

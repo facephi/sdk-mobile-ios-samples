@@ -1,10 +1,34 @@
-/* 
+/*
   Localizable.strings
   demosdk
 
-  Created by Jorge Poveda on 26/6/23.
-  
+  Keys and texts mirror Android DemoOnboardingFileUploader res/values-es/strings.xml.
 */
 
-////NFC
-//"nfc_component_start_message" = "PRUEBABring your device closer to the document";
+"onboarding_init_message" = "Inicializando SDK...";
+"onboarding_init_error" = "ERROR inicializando SDK: ";
+"onboarding_title_videorecording" = "Video Recording";
+"onboarding_desc_videorecording" = "Proceso de grabación de pantalla";
+"onboarding_launch_videorecording" = "Iniciar";
+"onboarding_launch_stop_videorecording" = "Parar";
+"onboarding_title_operation" = "Operación";
+"onboarding_desc_operation" = "Nueva operación del SDK";
+"onboarding_init_operation" = "Crear";
+"onboarding_launch_selphi" = "Lanzar";
+"onboarding_title_selphi" = "Selphi";
+"onboarding_desc_selphi" = "Captura facial";
+"onboarding_launch_selphid" = "Lanzar";
+"onboarding_title_selphid" = "SelphID";
+"onboarding_desc_selphid" = "Captura de documentos";
+"onboarding_launch_file_uploader" = "Lanzar";
+"onboarding_title_file_uploader" = "File Uploader";
+"onboarding_desc_file_uploader" = "Subida de ficheros (cámara o galería)";
+"onboarding_max_file_uploader" = "Max. documentos a capturar";
+"onboarding_launch_template" = "Lanzar generación plantilla";
+"onboarding_show_previous_tip" = "Pantalla previa";
+"onboarding_show_tutorial" = "Tutorial";
+"onboarding_allow_gallery" = "Habilitar galería";
+"onboarding_show_diagnostic" = "Diagnóstico";
+"onboarding_result_ok" = "Resultado correcto";
+"onboarding_result_error" = "Resultado erróneo";
+"onboarding_configuration" = "Configuración avanzada";

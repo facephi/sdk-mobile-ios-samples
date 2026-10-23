@@ -9,19 +9,29 @@ import Foundation
 import selphiComponent
 
 extension SdkConfigurationManager {
-    /// Default Selphi KMP configuration aligned with sdkmobile-demo-full-pods (SDK 4.0.0).
+    /// Defaults aligned with Android DemoSelphi (SdkData.getSelphiConfiguration / SelphiComponentCard).
     static var selphiConfiguration: SelphiConfigurationData {
+        selphiConfiguration()
+    }
+
+    static func selphiConfiguration(
+        showTutorial: Bool = true,
+        showPreviousTip: Bool = true,
+        showDiagnostic: Bool = true,
+        cameraPreferred: SelphiCamera = .FRONT,
+        livenessMode: SelphiFaceLivenessMode = .LIVENESS_PASSIVE,
+        maxAttempts: Int = 3,
+        iadEnabled: Bool = false
+    ) -> SelphiConfigurationData {
         var configSelphi = SelphiConfigurationData()
 
-        configSelphi.livenessMode = .LIVENESS_PASSIVE
-        configSelphi.qrConfiguration.enableQrReader = false
-        configSelphi.facialConfiguration.selphiCameraConfiguration.showTutorial = true
-        configSelphi.facialConfiguration.selphiCameraConfiguration.showPreviousTip = true
-        configSelphi.facialConfiguration.selphiCameraConfiguration.showDiagnostic = true
-        configSelphi.facialConfiguration.showAfterCapture = true
-        configSelphi.facialConfiguration.selphiCameraConfiguration.cameraPreferred = .FRONT
-        configSelphi.maxAttempts = 3
-        configSelphi.vibrationEnabled = true
+        configSelphi.livenessMode = livenessMode
+        configSelphi.maxAttempts = maxAttempts
+        configSelphi.facialConfiguration.selphiCameraConfiguration.cameraPreferred = cameraPreferred
+        configSelphi.facialConfiguration.selphiCameraConfiguration.showTutorial = showTutorial
+        configSelphi.facialConfiguration.selphiCameraConfiguration.showPreviousTip = showPreviousTip
+        configSelphi.facialConfiguration.selphiCameraConfiguration.showDiagnostic = showDiagnostic
+        configSelphi.iadConfiguration.enabled = iadEnabled
 
         return configSelphi
     }

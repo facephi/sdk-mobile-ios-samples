@@ -1,8 +1,29 @@
-/* 
+/*
   Localizable.strings
   demosdk
 
-  Created by Jorge Poveda on 26/6/23.
-  
+  Keys and texts mirror Android DemoRecordingOnboarding res/values/strings.xml.
 */
 
+"onboarding_init_message" = "SDK initialization...";
+"onboarding_init_error" = "SDK initialization ERROR: ";
+"onboarding_title_videorecording" = "Video Recording";
+"onboarding_desc_videorecording" = "Screen recording process";
+"onboarding_launch_videorecording" = "Start";
+"onboarding_launch_stop_videorecording" = "Stop";
+"onboarding_title_operation" = "Operation";
+"onboarding_desc_operation" = "Create a new operation and finish it";
+"onboarding_init_operation" = "Create";
+"onboarding_launch_selphi" = "Launch";
+"onboarding_title_selphi" = "Selphi";
+"onboarding_desc_selphi" = "Facial Capture";
+"onboarding_launch_selphid" = "Launch";
+"onboarding_title_selphid" = "SelphID";
+"onboarding_desc_selphid" = "Document Capture";
+"onboarding_launch_template" = "Launch generate template";
+"onboarding_show_previous_tip" = "Previous tip";
+"onboarding_show_tutorial" = "Tutorial";
+"onboarding_show_diagnostic" = "Diagnostic";
+"onboarding_result_ok" = "Result OK";
+"onboarding_result_error" = "Result error";
+"onboarding_configuration" = "Advanced configuration";

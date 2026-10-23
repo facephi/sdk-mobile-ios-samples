@@ -1,8 +1,6 @@
-platform :ios, '16.0'
 
 plugin 'cocoapods-art', :sources => [
-  'cocoa-dev-fphi',
-  'cocoa-snapshot-fphi'
+  'cocoa-pro-fphi'
 ]
 
 source 'https://cdn.cocoapods.org/'
@@ -23,8 +21,8 @@ def selphi_classic_local_pods
   pod 'FPHISDKLicenseCheckerComponent', :path => '../../SDK-LicenseChecker-SPM/FPHISDKLicenseCheckerComponent-Test.podspec'
   pod 'FPHISDKCoreComponent', :path => '../../SDK-Core-SPM/FPHISDKCoreComponent-Test.podspec'
   pod 'FPHISDKMainComponent', :path => '../../SDK-Sdk-SPM/FPHISDKMainComponent-Test.podspec'
-  pod 'FPHISDKTrackingComponent', :path => '../../SDK-Tracking_component-SPM/FPHISDKTrackingComponent-Test.podspec'
   pod 'FPHISDKSelphiClassicComponent', :path => '../../SDK-Selphi_component-SPM/FPHISDKSelphiClassicComponent-Test.podspec'
+  pod 'FPHISDKTrackingComponent', :path => '../../SDK-Tracking_component-SPM/FPHISDKTrackingComponent-Test.podspec'
   pod 'FPHISDKStatusComponent', :path => '../../SDK-StatusComponent-SPM/FPHISDKStatusComponent-Test.podspec'
   pod 'FPHISDKTokenizeComponent', :path => '../../SDK-Tokenize-SPM/FPHISDKTokenizeComponent-Test.podspec'
 end
@@ -33,8 +31,8 @@ def selphi_classic_local_frameworks_pods
   pod 'FPHISDKLicenseCheckerComponent', :path => '../../SDK-LicenseChecker-SPM/FPHISDKLicenseCheckerComponent-template.podspec'
   pod 'FPHISDKCoreComponent', :path => '../../SDK-Core-SPM/FPHISDKCoreComponent-template.podspec'
   pod 'FPHISDKMainComponent', :path => '../../SDK-Sdk-SPM/FPHISDKMainComponent-template.podspec'
-  pod 'FPHISDKTrackingComponent', :path => '../../SDK-Tracking_component-SPM/FPHISDKTrackingComponent-template.podspec'
   pod 'FPHISDKSelphiClassicComponent', :path => '../../SDK-Selphi_component-SPM/FPHISDKSelphiClassicComponent-template.podspec'
+  pod 'FPHISDKTrackingComponent', :path => '../../SDK-Tracking_component-SPM/FPHISDKTrackingComponent-template.podspec'
   pod 'FPHISDKStatusComponent', :path => '../../SDK-StatusComponent-SPM/FPHISDKStatusComponent-template.podspec'
   pod 'FPHISDKTokenizeComponent', :path => '../../SDK-Tokenize-SPM/FPHISDKTokenizeComponent-template.podspec'
 end
@@ -63,7 +61,9 @@ end
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
-      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '16.0'
+      if target.name == 'zipzap'
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.0'
+      end
       config.build_settings['EXPANDED_CODE_SIGN_IDENTITY'] = ''
       config.build_settings['CODE_SIGNING_REQUIRED'] = 'NO'
       config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'

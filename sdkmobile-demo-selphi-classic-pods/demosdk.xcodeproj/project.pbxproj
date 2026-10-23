@@ -7,11 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		130CD5B3285A0D19005C7BB1 /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130CD5B2285A0D19005C7BB1 /* UISegmentedControl.swift */; };
 		13F510B8281937A5001E3CF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F510B7281937A5001E3CF1 /* AppDelegate.swift */; };
 		13F510BA281937A5001E3CF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F510B9281937A5001E3CF1 /* SceneDelegate.swift */; };
-		13F510BC281937A5001E3CF1 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F510BB281937A5001E3CF1 /* MainVC.swift */; };
-		13F510BF281937A5001E3CF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13F510BD281937A5001E3CF1 /* Main.storyboard */; };
 		13F510C1281937A6001E3CF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13F510C0281937A6001E3CF1 /* Assets.xcassets */; };
 		13F510C4281937A6001E3CF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13F510C2281937A6001E3CF1 /* LaunchScreen.storyboard */; };
 		13F510CF281937A6001E3CF1 /* DemosdkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F510CE281937A6001E3CF1 /* DemosdkTests.swift */; };
@@ -19,15 +16,22 @@
 		13F510DB281937A6001E3CF1 /* DemosdkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F510DA281937A6001E3CF1 /* DemosdkUITestsLaunchTests.swift */; };
 		13F510EC281937E3001E3CF1 /* fphi-selphi-widget-resources-sdk.zip in Resources */ = {isa = PBXBuildFile; fileRef = 13F510EA281937E3001E3CF1 /* fphi-selphi-widget-resources-sdk.zip */; };
 		13F7576B2823A2AA00A761D5 /* SDKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7576A2823A2AA00A761D5 /* SDKManager.swift */; };
-		13F84C49282500A6001E26A5 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F84C48282500A6001E26A5 /* MainVM.swift */; };
+		152CA022BDD88CA041114EC5 /* sdk_font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B1267CD38A75A4762E8F2B3C /* sdk_font.ttf */; };
+		2B7408BB2AB703644A079DC4 /* sdk_font_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0C0D1A7466E52927FEA69C2 /* sdk_font_light.ttf */; };
 		3B1A1DA3201A492462BBD58C /* Pods_demosdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA9B6201CF75B089EB461BE /* Pods_demosdk.framework */; };
+		40A6D41F843C79AF6CA37CAD /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9310333928374A289FF3F3 /* MainViewModel.swift */; };
 		72304AFF12B557C51B6AD962 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		732AA7575F2C1D5899BEF405 /* sdk_font_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8EFDF04FDD93732569DAD771 /* sdk_font_bold.ttf */; };
+		7871BCAE7DA4A32ED1B19463 /* DemoTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DE9901358BC505A6A4D990 /* DemoTheme.swift */; };
 		865D546BEE1DCFDE367676A4 /* Pods_demosdk_demosdkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A75EFEB1BE2372557D2AB8D9 /* Pods_demosdk_demosdkUITests.framework */; };
 		9E2DEB122A1B75F000E8FD9F /* SdkConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DEB112A1B75F000E8FD9F /* SdkConfigurationManager.swift */; };
 		9E2DEB142A1B75FC00E8FD9F /* SelphiConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DEB132A1B75FC00E8FD9F /* SelphiConfiguration.swift */; };
 		9EFB343A2A4999E10005C31E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EFB343C2A4999E10005C31E /* Localizable.strings */; };
 		A323A7DA4EAF4E81E86142B4 /* Pods_demosdkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46C686D27D05917D763C04D5 /* Pods_demosdkTests.framework */; };
-		E4D859ABC3EE47378DBF9260 /* CustomThemeStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF890000F81B401EACE95E89 /* CustomThemeStatus.swift */; };
+		D7CE8D247A4A4539146C06AE /* DemoComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF432BE0563DC13D5653E46 /* DemoComponents.swift */; };
+		D910878C73012C68CE89E3C5 /* BaseComponentCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACD59C56978D389C9035997 /* BaseComponentCard.swift */; };
+		E05D4A9A8086348996508A86 /* sdk_font_semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EAF32A9B5BEDDA218D28F10B /* sdk_font_semibold.ttf */; };
+		FD536098B5D6BECA9215B409 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B45F32D58EF998D17E872B7 /* MainScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,13 +53,10 @@
 
 /* Begin PBXFileReference section */
 		006E42832D3CB658220A9CDB /* Pods-demosdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demosdk.release.xcconfig"; path = "Target Support Files/Pods-demosdk/Pods-demosdk.release.xcconfig"; sourceTree = "<group>"; };
-		130CD5B2285A0D19005C7BB1 /* UISegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.swift; sourceTree = "<group>"; };
 		13CCB5B2283F7D0C005BDC3D /* demosdk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = demosdk.entitlements; sourceTree = "<group>"; };
 		13F510B4281937A5001E3CF1 /* demosdk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demosdk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13F510B7281937A5001E3CF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13F510B9281937A5001E3CF1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		13F510BB281937A5001E3CF1 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		13F510BE281937A5001E3CF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13F510C0281937A6001E3CF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13F510C3281937A6001E3CF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13F510C5281937A6001E3CF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,32 +67,28 @@
 		13F510DA281937A6001E3CF1 /* DemosdkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemosdkUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		13F510EA281937E3001E3CF1 /* fphi-selphi-widget-resources-sdk.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "fphi-selphi-widget-resources-sdk.zip"; sourceTree = "<group>"; };
 		13F7576A2823A2AA00A761D5 /* SDKManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKManager.swift; sourceTree = "<group>"; };
-		13F84C48282500A6001E26A5 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
 		1ABF8BC0B399DB00E9116245 /* Pods-demosdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demosdk.debug.xcconfig"; path = "Target Support Files/Pods-demosdk/Pods-demosdk.debug.xcconfig"; sourceTree = "<group>"; };
-		1C7BCFD12F67F95C00B5C2B3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		1C7BCFD22F67F95C00B5C2B3 /* README_EN.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README_EN.md; sourceTree = "<group>"; };
-		1C82A2E62F75640F001E1EA4 /* sdk_font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sdk_font.ttf; sourceTree = "<group>"; };
-		1C82A2E72F75640F001E1EA4 /* sdk_font_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sdk_font_bold.ttf; sourceTree = "<group>"; };
-		1C82A2E82F75640F001E1EA4 /* sdk_font_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sdk_font_light.ttf; sourceTree = "<group>"; };
-		1C82A2E92F75640F001E1EA4 /* sdk_font_semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sdk_font_semibold.ttf; sourceTree = "<group>"; };
 		225A981FE54C286B9E2CB6A9 /* Pods-demosdkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demosdkTests.debug.xcconfig"; path = "Target Support Files/Pods-demosdkTests/Pods-demosdkTests.debug.xcconfig"; sourceTree = "<group>"; };
-		3E6802B63087732B00BDD74C /* sdk_font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sdk_font.ttf; sourceTree = "<group>"; };
-		3E6802B73087732B00BDD74C /* sdk_font_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sdk_font_bold.ttf; sourceTree = "<group>"; };
-		3E6802B83087732B00BDD74C /* sdk_font_light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sdk_font_light.ttf; sourceTree = "<group>"; };
-		3E6802B93087732B00BDD74C /* sdk_font_semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sdk_font_semibold.ttf; sourceTree = "<group>"; };
+		2B45F32D58EF998D17E872B7 /* MainScreen.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		46C686D27D05917D763C04D5 /* Pods_demosdkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demosdkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4910F40E6B912B10FF9C7E90 /* Pods-demosdk-demosdkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demosdk-demosdkUITests.release.xcconfig"; path = "Target Support Files/Pods-demosdk-demosdkUITests/Pods-demosdk-demosdkUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4ACD59C56978D389C9035997 /* BaseComponentCard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BaseComponentCard.swift; sourceTree = "<group>"; };
+		6A9310333928374A289FF3F3 /* MainViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		8C3A71D9F405D3A2253D2B38 /* Pods-demosdk-demosdkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demosdk-demosdkUITests.debug.xcconfig"; path = "Target Support Files/Pods-demosdk-demosdkUITests/Pods-demosdk-demosdkUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8EFDF04FDD93732569DAD771 /* sdk_font_bold.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = sdk_font_bold.ttf; sourceTree = "<group>"; };
+		93DE9901358BC505A6A4D990 /* DemoTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DemoTheme.swift; sourceTree = "<group>"; };
 		9E1ABD982A02BD6F0033F7A6 /* selphidComponent.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = selphidComponent.xcframework; path = Pods/FPHISDKSelphIDComponent/selphidComponent.xcframework; sourceTree = "<group>"; };
 		9E2DEB112A1B75F000E8FD9F /* SdkConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SdkConfigurationManager.swift; sourceTree = "<group>"; };
 		9E2DEB132A1B75FC00E8FD9F /* SelphiConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelphiConfiguration.swift; sourceTree = "<group>"; };
 		9EFB343B2A4999E10005C31E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9EFB343D2A4999ED0005C31E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		9EFB343E2A499A0F0005C31E /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		A200010E4D59A89BC67BA9EE /* Pods-demosdkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demosdkTests.release.xcconfig"; path = "Target Support Files/Pods-demosdkTests/Pods-demosdkTests.release.xcconfig"; sourceTree = "<group>"; };
 		A75EFEB1BE2372557D2AB8D9 /* Pods_demosdk_demosdkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demosdk_demosdkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABA9B6201CF75B089EB461BE /* Pods_demosdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demosdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF890000F81B401EACE95E89 /* CustomThemeStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomThemeStatus.swift; sourceTree = "<group>"; };
+		B1267CD38A75A4762E8F2B3C /* sdk_font.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = sdk_font.ttf; sourceTree = "<group>"; };
+		D0C0D1A7466E52927FEA69C2 /* sdk_font_light.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = sdk_font_light.ttf; sourceTree = "<group>"; };
+		EAF32A9B5BEDDA218D28F10B /* sdk_font_semibold.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = sdk_font_semibold.ttf; sourceTree = "<group>"; };
+		ECF432BE0563DC13D5653E46 /* DemoComponents.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DemoComponents.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,35 +120,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		130CD5B1285A0CF8005C7BB1 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				130CD5B2285A0D19005C7BB1 /* UISegmentedControl.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		130CD5B6285A1B6A005C7BB1 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				13F510BB281937A5001E3CF1 /* MainVC.swift */,
-				13F84C48282500A6001E26A5 /* MainVM.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
 		13F510AB281937A5001E3CF1 = {
 			isa = PBXGroup;
 			children = (
-				1C7BCFD12F67F95C00B5C2B3 /* README.md */,
-				1C7BCFD22F67F95C00B5C2B3 /* README_EN.md */,
 				13F510B6281937A5001E3CF1 /* demosdk */,
 				13F510CD281937A6001E3CF1 /* demosdkTests */,
 				13F510D7281937A6001E3CF1 /* demosdkUITests */,
 				13F510B5281937A5001E3CF1 /* Products */,
 				8F76645D1138E0E4EF87244B /* Pods */,
 				C5DCDE1729264840C395A787 /* Frameworks */,
-				3E6802AC308770A100BDD74C /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,14 +147,12 @@
 			children = (
 				13CCB5B2283F7D0C005BDC3D /* demosdk.entitlements */,
 				13F7576D2824152400A761D5 /* Library */,
-				130CD5B1285A0CF8005C7BB1 /* Extensions */,
-				13F7576C2823A5F100A761D5 /* Scenes */,
 				13F510E7281937E3001E3CF1 /* Resources */,
 				13F510B7281937A5001E3CF1 /* AppDelegate.swift */,
 				13F510B9281937A5001E3CF1 /* SceneDelegate.swift */,
 				13F510C2281937A6001E3CF1 /* LaunchScreen.storyboard */,
 				13F510C5281937A6001E3CF1 /* Info.plist */,
-				B2DF18AF2E104C0D844686E0 /* Themes */,
+				2E3923721630068DBE0149F1 /* UI */,
 			);
 			path = demosdk;
 			sourceTree = "<group>";
@@ -202,10 +177,10 @@
 		13F510E7281937E3001E3CF1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3E6802BA3087732B00BDD74C /* CustomFonts */,
 				13F510C0281937A6001E3CF1 /* Assets.xcassets */,
 				13F510E8281937E3001E3CF1 /* WidgetResources */,
 				9EFB343C2A4999E10005C31E /* Localizable.strings */,
+				B08D5C371C76C6A41F7C2677 /* Fonts */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -218,15 +193,6 @@
 			path = WidgetResources;
 			sourceTree = "<group>";
 		};
-		13F7576C2823A5F100A761D5 /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				13F510BD281937A5001E3CF1 /* Main.storyboard */,
-				130CD5B6285A1B6A005C7BB1 /* Main */,
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
 		13F7576D2824152400A761D5 /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,26 +202,25 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
-		3E6802AC308770A100BDD74C /* Recovered References */ = {
+		2488D881DF521202D7A44853 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				1C82A2E62F75640F001E1EA4 /* sdk_font.ttf */,
-				1C82A2E72F75640F001E1EA4 /* sdk_font_bold.ttf */,
-				1C82A2E82F75640F001E1EA4 /* sdk_font_light.ttf */,
-				1C82A2E92F75640F001E1EA4 /* sdk_font_semibold.ttf */,
+				4ACD59C56978D389C9035997 /* BaseComponentCard.swift */,
+				2B45F32D58EF998D17E872B7 /* MainScreen.swift */,
+				6A9310333928374A289FF3F3 /* MainViewModel.swift */,
 			);
-			name = "Recovered References";
+			name = Main;
+			path = Main;
 			sourceTree = "<group>";
 		};
-		3E6802BA3087732B00BDD74C /* CustomFonts */ = {
+		2E3923721630068DBE0149F1 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				3E6802B63087732B00BDD74C /* sdk_font.ttf */,
-				3E6802B73087732B00BDD74C /* sdk_font_bold.ttf */,
-				3E6802B83087732B00BDD74C /* sdk_font_light.ttf */,
-				3E6802B93087732B00BDD74C /* sdk_font_semibold.ttf */,
+				F21E722FB999D2D7FC9C2B1F /* Kit */,
+				2488D881DF521202D7A44853 /* Main */,
 			);
-			path = CustomFonts;
+			name = UI;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		8F76645D1138E0E4EF87244B /* Pods */ = {
@@ -280,12 +245,16 @@
 			path = SDKConfigurations;
 			sourceTree = "<group>";
 		};
-		B2DF18AF2E104C0D844686E0 /* Themes */ = {
+		B08D5C371C76C6A41F7C2677 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				BF890000F81B401EACE95E89 /* CustomThemeStatus.swift */,
+				B1267CD38A75A4762E8F2B3C /* sdk_font.ttf */,
+				8EFDF04FDD93732569DAD771 /* sdk_font_bold.ttf */,
+				D0C0D1A7466E52927FEA69C2 /* sdk_font_light.ttf */,
+				EAF32A9B5BEDDA218D28F10B /* sdk_font_semibold.ttf */,
 			);
-			path = Themes;
+			name = Fonts;
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		C5DCDE1729264840C395A787 /* Frameworks */ = {
@@ -297,6 +266,16 @@
 				46C686D27D05917D763C04D5 /* Pods_demosdkTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F21E722FB999D2D7FC9C2B1F /* Kit */ = {
+			isa = PBXGroup;
+			children = (
+				ECF432BE0563DC13D5653E46 /* DemoComponents.swift */,
+				93DE9901358BC505A6A4D990 /* DemoTheme.swift */,
+			);
+			name = Kit;
+			path = Kit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,7 +373,6 @@
 				en,
 				Base,
 				es,
-				"pt-PT",
 			);
 			mainGroup = 13F510AB281937A5001E3CF1;
 			productRefGroup = 13F510B5281937A5001E3CF1 /* Products */;
@@ -417,7 +395,10 @@
 				9EFB343A2A4999E10005C31E /* Localizable.strings in Resources */,
 				13F510C1281937A6001E3CF1 /* Assets.xcassets in Resources */,
 				13F510EC281937E3001E3CF1 /* fphi-selphi-widget-resources-sdk.zip in Resources */,
-				13F510BF281937A5001E3CF1 /* Main.storyboard in Resources */,
+				152CA022BDD88CA041114EC5 /* sdk_font.ttf in Resources */,
+				732AA7575F2C1D5899BEF405 /* sdk_font_bold.ttf in Resources */,
+				2B7408BB2AB703644A079DC4 /* sdk_font_light.ttf in Resources */,
+				E05D4A9A8086348996508A86 /* sdk_font_semibold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,14 +578,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E2DEB142A1B75FC00E8FD9F /* SelphiConfiguration.swift in Sources */,
-				13F510BC281937A5001E3CF1 /* MainVC.swift in Sources */,
-				13F84C49282500A6001E26A5 /* MainVM.swift in Sources */,
 				13F7576B2823A2AA00A761D5 /* SDKManager.swift in Sources */,
 				9E2DEB122A1B75F000E8FD9F /* SdkConfigurationManager.swift in Sources */,
 				13F510B8281937A5001E3CF1 /* AppDelegate.swift in Sources */,
 				13F510BA281937A5001E3CF1 /* SceneDelegate.swift in Sources */,
-				130CD5B3285A0D19005C7BB1 /* UISegmentedControl.swift in Sources */,
-				E4D859ABC3EE47378DBF9260 /* CustomThemeStatus.swift in Sources */,
+				D7CE8D247A4A4539146C06AE /* DemoComponents.swift in Sources */,
+				7871BCAE7DA4A32ED1B19463 /* DemoTheme.swift in Sources */,
+				D910878C73012C68CE89E3C5 /* BaseComponentCard.swift in Sources */,
+				FD536098B5D6BECA9215B409 /* MainScreen.swift in Sources */,
+				40A6D41F843C79AF6CA37CAD /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,14 +623,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		13F510BD281937A5001E3CF1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				13F510BE281937A5001E3CF1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		13F510C2281937A6001E3CF1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -662,7 +636,6 @@
 			children = (
 				9EFB343B2A4999E10005C31E /* en */,
 				9EFB343D2A4999ED0005C31E /* es */,
-				9EFB343E2A499A0F0005C31E /* pt-PT */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -867,6 +840,7 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = demosdk/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DemoSelphiClassic;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_NFCReaderUsageDescription = "Esta app requiere el permiso para acceder NFC";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Esta app requiere el permiso para acceder a tu cámara";
@@ -874,7 +848,6 @@
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Esta app requiere el permiso para acceder al micrófono";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -907,6 +880,7 @@
 				EXCLUDED_ARCHS = armv7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = demosdk/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DemoSelphiClassic;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_NFCReaderUsageDescription = "Esta app requiere el permiso para acceder NFC";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Esta app requiere el permiso para acceder a tu cámara";
@@ -914,7 +888,6 @@
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Esta app requiere el permiso para acceder al micrófono";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

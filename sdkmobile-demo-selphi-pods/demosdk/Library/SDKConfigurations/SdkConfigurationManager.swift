@@ -4,25 +4,22 @@
 //
 //  Created by Jorge Poveda on 22/5/23.
 //
+//  Equivalent of Android SdkData.kt (DemoSelphi).
+//
 
 import Foundation
+import sdk
 
 struct SdkConfigurationManager {
-    static let base64 = " "
-    static let CUSTOMER_ID = "sdk-full-ios@ejemplo"
-    static let APIKEY_LICENSING = ""
-    static let LICENSING_URL = URL(string: "LicencingURL")!
-    static let BASE_URL = ""
-    static let METHOD_PASSIVE_LIVENES = ""
-    static let METHOD_AUTH_FACIAL = ""
-    static let CUSTOM_TENANT_ID = ""
+    // ************** LICENSE **************
     static let onlineLicensing = true
+    static let APIKEY_LICENSING = "licensingApiKey"
+    static let LICENSING_URL = URL(string: "licensingUrl")!
 
-    /// When true, `SDKManager.launchSelphi` passes demo KMP custom views (previous tip, tutorial, camera overlay).
-    static var useDemoKmpCustomCameraOverlay = false
-    
     // swiftlint:disable all
     static let license = ""
+
+    // ************** DATA **************
+    static let CUSTOMER_ID = "demo_selphi@email.com"
+    static let OPERATION_TYPE: OperationType = .ONBOARDING
 }
-
-

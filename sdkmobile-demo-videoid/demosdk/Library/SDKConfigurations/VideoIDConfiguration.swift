@@ -8,8 +8,13 @@
 import videoidComponent
 
 extension SdkConfigurationManager {
-    /// Default VideoID config aligned with sdkmobile-demo-full-pods (SDK 4.0.0).
-    static var videoIDConfiguration: VideoIDConfigurationData {
-        VideoIDConfigurationData(showCompletedTutorial: true)
+    /// Same parameters as Android DemoVideoId SdkData.getVideoIdConfiguration.
+    static func videoIDConfiguration(autoFace: Bool) -> VideoIDConfigurationData {
+        VideoIDConfigurationData(
+            mode: .FACE_DOCUMENT_FRONT_BACK,
+            sectionTimeout: 20000,
+            autoFaceDetection: autoFace,
+            customerId: CUSTOMER_ID
+        )
     }
 }

@@ -9,19 +9,24 @@ import Foundation
 import phingersTFComponent
 
 extension SdkConfigurationManager {
-    static var phingersConfiguration: PhingersConfigurationData{
+    /// Same parameters as Android DemoPhingers SdkData.getConfiguration.
+    static func phingersConfiguration(
+        showPreviousTip: Bool,
+        showDiagnostic: Bool,
+        liveness: Bool,
+        captureOrientation: ReticleOrientation,
+        fingerFilter: FingerFilter,
+        showPreviousFingerSelector: Bool
+    ) -> PhingersConfigurationData {
         var configPhingers = PhingersConfigurationData()
-        
-        configPhingers.showTutorial = true
-        configPhingers.showPreviousTip = true
-        configPhingers.showDiagnostic = true
-        configPhingers.vibrationEnabled = true
-        configPhingers.showEllipses = true
-        configPhingers.useLiveness = true
-        configPhingers.reticleOrientation = .LEFT
-        configPhingers.templateType = .NIST_TEMPLATE
-        configPhingers.extractionTimeout = 60000
-        
+
+        configPhingers.showPreviousTip = showPreviousTip
+        configPhingers.showPreviousFingerSelector = showPreviousFingerSelector
+        configPhingers.useLiveness = liveness
+        configPhingers.showDiagnostic = showDiagnostic
+        configPhingers.reticleOrientation = captureOrientation
+        configPhingers.fingerFilter = fingerFilter
+
         return configPhingers
     }
 }

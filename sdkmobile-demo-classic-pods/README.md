@@ -1,63 +1,288 @@
-# SDK-Mobile Cocoapods Demo Classic Version
+# DEMO CLASSIC ONBOARDING
 
-> **Versión SDK:** 4.0.0 (CocoaPods `~> 4.0.0`)
+## 1. Introduction
 
-Aplicación demo para testear internamente todos los componentes de la SDK Mobile con captura facial y de documento, descargando los componentes desde nuestros repositorios privados (Artifactory). 
+In this demo you can carry out an onboarding process using the Facephi SDK.
+The components used are:
 
-## Dependencias
+- Core
+- Sdk
+- Selphi
+- SelphID
+- Tracking
+- Status
 
-- FPHISDKMainComponent
-- FPHISDKTrackingComponent
-- FPHISDKSelphIDComponent
-- FPHISDKSelphiComponent 
-- FPHISDKTokenizeComponent
-- FPHISDKStatusComponent 
+## 2. Demo App Detail
 
+### 2.1 Dependencies
 
-## Instalación con SPM
+The demo downloads the Facephi libraries with CocoaPods from the private Artifactory repository. Minimum iOS version: iOS 15.0+. SDK version: 4.0.0.
 
-- Abrir demosdk.**xcodeproj**
-- Configurar en XCode una cuenta de GitHub que disponga de acceso al repositorio privado de Facephi-Clienters.
-- Añadir las dependencias SPM usando preferiblemente las URLs con SSH.
-- Si se ha utilizado previamente Cocoapods en el proyecto, para limpiar todo rastro previo debemos usar el comando `pod deintegrate`
-- En el proyecto demosdk -> TARGETS -> demosdk -> General -> Frameworks, Libraries, and Embedded Content debemos asegurarnos de que están referenciados todos los paquetes del listado de Dependencias.
-
-## Instalación con Cocoapods
-
-- Si es la **primera vez** que se va a utilizar el repositorio privado instalar Cocoapods para Artifactory:
-
-`sudo gem install cocoapods-art`
-
-- Para acceder a los repos privados, se necesitará añadir el repositorio y las credenciales del usuario en la lista del fichero **netrc**:
- 
-`nano ~/.netrc`
-
-Y una vez abiertos se copian los siguientes datos:
+1. Credentials provided by Facephi must be included in the `~/.netrc` file:
 
 ```
 machine facephicorp.jfrog.io
-login <USERNAME>
-password <TOKEN>
+login YOUR_ARTIFACTORY_USER
+password YOUR_ARTIFACTORY_TOKEN
 ```
 
-- Y finalmente se deberá añadir el repositorio donde se encuentran todos los paquetes:
+2. Install the CocoaPods plugin for Artifactory (only the first time):
 
-`pod repo-art add cocoa-pro-fphi "https://facephicorp.jfrog.io/artifactory/api/pods/cocoa-pro-fphi"`
+```
+sudo gem install cocoapods-art
+```
 
-- Tras esto, ya se podrían instalar e integrar los paquetes en la app, ejecutando el Podfile y el siguiente comando:
+3. Add the repository that hosts the packages and keep it updated (run the update command whenever a new SDK version is published):
 
-`pod install`
+```
+pod repo-art add cocoa-pro-fphi "https://facephicorp.jfrog.io/artifactory/api/pods/cocoa-pro-fphi"
+pod repo-art update cocoa-pro-fphi
+```
 
-- Si se ha utilizado previamente SPM en el proyecto, para limpiar todo rastro previo podemos quitar las referencias SPM desde _demosdk -> Package Dependencies_
-- Para esta demo, se puede simplemente eliminar las referencias del TARGET demosdk a los paquetes SPM en lugar de hacer lo anterior.
+4. The Podfile must declare the repository as a source:
 
-## Actualización de paquetes con Cocoapods:
+```ruby
+plugin 'cocoapods-art', :sources => ['cocoa-pro-fphi']
+```
 
-En caso de liberarse una versión nueva de alguno de los componentes de la SDK Mobile, se deberá actualizar el repositorio añadido previamente, para que se actualicen los cambios que se han realizado. Para ello, se deberá ejecutar el siguiente comando:
+5. The library dependencies are declared in the Podfile:
 
-`pod repo-art update cocoa-pro-fphi`
+```ruby
+pod 'FPHISDKMainComponent', '~> 4.0.0'
+pod 'FPHISDKTrackingComponent', '~> 4.0.0'
+pod 'FPHISDKSelphIDComponent', '~> 4.0.0'
+pod 'FPHISelphIDExtractorV1', '~> 1.2.4'
+pod 'FPHISelphIDExtractorV3', '~> 1.2.6'
+pod 'FPHISDKSelphiComponent', '~> 4.0.0'
+pod 'FPHISDKTokenizeComponent', '~> 4.0.0'
+pod 'FPHISDKStatusComponent', '~> 4.0.0'
+```
 
+6. Install the pods and open the workspace (not the `.xcodeproj`):
 
-## Posibles problemas en Cocoapods
+```
+pod install
+open demosdk.xcworkspace
+```
 
-- Si cocoapods fue instalado mediante homebrew, puede dar problemas. Se recomienda instalación por gems.
+#### 2.1.1 Possible CocoaPods issues
+
+- If CocoaPods was installed with Homebrew it may cause problems; installation through gems is recommended.
+- If the pods are not resolved after a new release, clean the cache and reinstall:
+
+```
+pod cache clean --all
+pod repo-art update cocoa-pro-fphi
+pod install --repo-update
+```
+
+### 2.2 Using the SDK
+
+The SDK documentation:
+
+https://docs.facephi.com/sdks/sdk-mobile/ios-sdk
+
+#### 2.2.1 SDK Initialization
+
+The SDK is used through the `SDKController.shared` object. This object needs to be initialized only once (see `SDKManager.initSdk`).
+1. It is decided whether the license will be provided through a String or with a remote licensing service (`SdkConfigurationManager.onlineLicensing`).
+2. The `output` closure reports the result of the initialization.
+3. If the initialization returns `STATUS_OK` the SDK driver will be ready for use.
+
+```swift
+let trackingController = TrackingController(trackingError: { trackingError in
+    log("Tracking Error: \(trackingError)")
+})
+
+let statusController = StatusController()
+ThemeStatusManager.setup(theme: CustomThemeStatus())
+
+let output: (SdkResult<String>) -> Void = { sdkResult in
+    if sdkResult.finishStatus == .STATUS_OK {
+        log("INIT SDK OK")
+    } else {
+        log("INIT SDK ERROR: \(sdkResult.errorType)")
+    }
+}
+
+if SdkConfigurationManager.onlineLicensing {
+    SDKController.shared.initSdk(
+        licensingUrl: SdkConfigurationManager.LICENSING_URL,
+        apiKey: SdkConfigurationManager.APIKEY_LICENSING,
+        output: output,
+        trackingController: trackingController,
+        statusController: statusController
+    )
+} else {
+    SDKController.shared.initSdk(
+        license: SdkConfigurationManager.license,
+        output: output,
+        trackingController: trackingController,
+        statusController: statusController
+    )
+}
+```
+
+The `TrackingController` reports tracking errors through its `trackingError` closure (see the snippet above).
+
+The **SdkConfigurationManager** struct stores all the necessary data for the SDK. (Section 2.2.6)
+
+#### 2.2.2 Creating an operation
+
+To start an ONBOARDING or AUTHENTICATION operation, a new operation must be created. To do this, the function `SDKController.shared.newOperation` is used. It has these input parameters:
+
+1. operationType: Indicates whether an ONBOARDING or AUTHENTICATION process is going to be carried out
+2. customerId: User ID if available
+3. output: Closure that returns the result of the operation
+
+In this demo the process is launched from a button in `MainViewModel`:
+
+```swift
+SDKManager.shared.newOperation(
+    operationType: SdkConfigurationManager.OPERATION_TYPE,
+    customerId: SdkConfigurationManager.CUSTOMER_ID
+) { result in
+    if result.errorType == .NO_ERROR {
+        log("NEW OPERATION: OK")
+    } else {
+        log("NEW OPERATION: Error - \(result.errorType)")
+    }
+}
+```
+
+#### 2.2.3 Face capture
+
+Facial capture is done through Selphi.
+In this demo the process is launched from a button in `MainViewModel`:
+
+```swift
+var configSelphi = SelphiConfigurationData()
+configSelphi.livenessMode = .LIVENESS_PASSIVE
+configSelphi.maxAttempts = 3
+configSelphi.facialConfiguration.selphiCameraConfiguration.cameraPreferred = .FRONT
+configSelphi.facialConfiguration.selphiCameraConfiguration.showTutorial = true
+configSelphi.facialConfiguration.selphiCameraConfiguration.showPreviousTip = true
+configSelphi.facialConfiguration.selphiCameraConfiguration.showDiagnostic = true
+configSelphi.iadConfiguration.enabled = false
+```
+
+```swift
+let controller = SelphiController(data: configSelphi, output: output, viewController: viewController)
+SDKController.shared.launch(controller: controller)
+
+// output:
+// result.errorType == .NO_ERROR -> log("Selphi: OK")
+// otherwise                     -> log("Selphi: Error - \(result.errorType)")
+```
+
+#### 2.2.4 Document Capture
+
+Document capture is done through SelphID. Since SDK 4.0.0, `SelphIDController` also needs the list of document extractors to use (`SelphIDExtractorProvider.makeAllExtractors()`).
+In this demo the process is launched from a button in `MainViewModel`:
+
+```swift
+var configSelphID = SelphIDConfigurationData()
+configSelphID.timeout = SelphIDTimeout.LONG.milliseconds
+configSelphID.maxAttempts = 3
+configSelphID.uiConfiguration.showTutorial = true
+configSelphID.uiConfiguration.showPreviousTip = true
+configSelphID.uiConfiguration.showDiagnostic = true
+configSelphID.uiConfiguration.showAfterCapture = true
+configSelphID.uiConfiguration.showDocumentSelector = true
+configSelphID.uiConfiguration.defaultCountry = "ES"
+configSelphID.uiConfiguration.defaultDocumentType = .ALL
+configSelphID.extractionConfiguration.captureMode = .STANDARD
+configSelphID.extractionConfiguration.documentTypes = [.ALL]
+configSelphID.extractionConfiguration.generateRawImages = false
+```
+
+```swift
+let controller = SelphIDController(
+    data: configSelphID,
+    extractors: SelphIDExtractorProvider.makeAllExtractors(),
+    output: output,
+    viewController: viewController
+)
+SDKController.shared.launch(controller: controller)
+
+// output:
+// result.errorType == .NO_ERROR -> log("SelphID: OK")
+// otherwise                     -> log("SelphID: Error - \(result.errorType)")
+```
+
+#### 2.2.5 Log out
+
+When you finish using the SDK, you must log out:
+
+```swift
+_ = SDKController.shared.closeSession()
+```
+
+#### 2.2.6 Data necessary for the use of the SDK
+
+For the application to work correctly, the following information must be filled out.
+
+In the `SdkConfigurationManager` struct:
+
+- Data needed if a service is going to be used to obtain licenses (`onlineLicensing = true`):
+
+```swift
+static let onlineLicensing = true
+static let APIKEY_LICENSING = "YOUR_API_KEY"
+static let LICENSING_URL = URL(string: "https://license.identity-platform.io")!
+```
+
+- License string if a service is not going to be used (`onlineLicensing = false`):
+
+```swift
+static let license = "YOUR_LICENSE"
+```
+
+- Client identifier and type of operation to use in `newOperation`:
+
+```swift
+static let CUSTOMER_ID = "demo_onboarding@email.com"
+static let OPERATION_TYPE: OperationType = .ONBOARDING
+```
+
+- Since SDK 4.0.0, `SelphiConfigurationData` is grouped in blocks (`facialConfiguration`, `iadConfiguration`...) instead of a flat list of fields. It no longer uses a resources ZIP: visual customization is done through the SDK's general personalization system.
+
+- Since SDK 4.0.0, `SelphIDConfigurationData` is grouped in blocks (`uiConfiguration`, `extractionConfiguration`...) instead of a flat list of fields. It no longer uses a resources ZIP: visual customization is done through the SDK's general personalization system.
+- SelphID also needs the list of document extractors to use, passed to the controller as `extractors`. This demo uses `FPHISelphIDExtractorV1` and `FPHISelphIDExtractorV3` (`SelphIDExtractorProvider.makeAllExtractors()`).
+
+- In the case of using the verification services (liveness and matching), the call to the service must be entered
+
+- IMPORTANT: The bundle identifier of the application must match the one requested in the license
+
+### 2.3 Verification services
+
+If the client has access to the verification service, they can use Liveness and MatchingFacial. To do this, it will be necessary to have previously done facial and document recognition.
+
+### 2.4 Steps to start the demo
+
+The steps to follow to start the demo are:
+
+1. In Xcode (target `demosdk` -> Signing & Capabilities), set the Bundle Identifier to the one for which the license has been requested.
+
+2. In the `~/.netrc` file add the Artifactory credentials provided by Facephi (see section 2.1).
+
+3. Run `pod install` and open `demosdk.xcworkspace`.
+
+4. In the `SdkConfigurationManager.swift` file add either the data of the service from which the license is to be obtained or the license in String:
+
+```swift
+static let APIKEY_LICENSING = "YOUR_API_KEY"
+static let LICENSING_URL = URL(string: "https://license.identity-platform.io")!
+```
+
+or
+
+```swift
+static let license = "YOUR_LICENSE"
+```
+
+5. Depending on how the license was added, adapt the value of the variable:
+
+```swift
+static let onlineLicensing = true // false if the license String is used
+```

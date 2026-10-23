@@ -1,0 +1,54 @@
+/*
+  Localizable.strings
+  demosdk
+
+  Keys and texts mirror Android DemoNFC res/values-es/strings.xml.
+*/
+
+"nfc_new_operation" = "Nueva operación";
+"nfc_simple_launch" = "Lectura simple";
+"nfc_complex_launch" = "Lectura compleja";
+"nfc_num_support" = "Num. Soporte";
+"nfc_birth_date" = "Fecha de nacimiento (dd/MM/yyyy)";
+"nfc_expiry_date" = "Fecha de expiración (dd/MM/yyyy)";
+"nfc_select_document" = "Selecciona el tipo de documento:";
+"nfc_cancel" = "Cancelar";
+"nfc_read_with_capture" = "Lectura con SelphID";
+"nfc_read_with_data" = "Lectura con datos";
+"nfc_agree" = "Aceptar";
+"nfc_close_session" = "Cerrar sesion";
+"nfc_close_session_title" = "Declinar RGPD";
+"nfc_close_session_desc" = "Declinando el RGPD provocará el cierre de la sesión actual. ¿Desea cerrar la sesión?";
+"nfc_gdpr_title" = "REGLAMENTO GENERAL DE PROTECCION DE DATOS";
+"nfc_gdpr_text" = "<h4>REGLAMENTO GENERAL DE PROTECCION DE DATOS</h4><p>De conformidad con lo establecido en Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo de 27 de abril de 2016 (en adelante, \"RGPD”) y la Ley Orgánica 3/2018 de Protección de Datos Personales y garantía de los derechos digitales, FacePhi, como Responsable del tratamiento ha adaptado sus protocolos, políticas de privacidad y obtención del consentimiento de los interesados.</p>                                    <p><strong>Quién es el Responsable de Tratamiento</strong> – El responsable del tratamiento de los datos personales y datos biométricos recogidos por medio de esta Demo es FacePhi Biometría S.A. Avenida Perfecto Palacio, 6, 03003, Alicante, tlf 965 108 008.</p>                                    <p><strong>Delegado de Protección de Datos.</strong> - La empresa ha nombrado un Delegado de Protección de Datos, nombramiento debidamente notificado a la Autoridad de Control. El domicilio de contacto es Avenida Perfecto Palacio, 6, 03003, Alicante, tlf 965 108 008 y la dirección de correo electrónico es <a href=\"mailto:dpo@facephi.com\">dpo@facephi.com</a></p>                                    <p><strong>Datos biométricos.</strong> -  El Reglamento General de Protección de Datos europeo (RGPD), define a los datos biométricos de la siguiente manera (artículo 4.14). “Datos personales obtenidos a partir de un tratamiento técnico específico, relativos a las características físicas, fisiológicas o conductuales de una persona física que permitan o confirme la identificación única de dicha persona, como imágenes faciales o datos dactiloscópicos”</p>                                    <p>Requisitos: El RGPD, en su artículo 9, eleva estos datos personales a la característica de “Especialmente Protegidos”, por lo que se deberán cumplir con una serie de requisitos para su tratamiento conforme a la normativa.</p>                                    <p>Consentimiento explícito: El interesado deberá dar su consentimiento explícito al tratamiento de dichos datos, con la finalidad de dicho tratamiento especificada.</p>                                    <p><strong>Fines del tratamiento.</strong> - Dichos datos serán tratados, única y exclusivamente, con la finalidad de servir de prueba para que el usuario compruebe la eficacia del software y del procedimiento de Onboarding en que consiste la Demo, así como soporte de trabajo para la mejora tanto de la tecnología de identificación biométrica como la experiencia de usuario desarrollada.</p>                                    <p><strong>Seguridad de los Datos.</strong> - El acceso a la Demo y, por tanto, la aportación de datos biométricos contempla la identificación real del usuario, y su cotejo con la imagen obtenida del documento o documentos de identidad. Esta identificación se realiza con la exclusiva finalidad recogida en el apartado anterior. Los datos recabados por este medio serán encriptados y almacenados en un servidor seguro, al que sólo accederá el Responsable de tratamiento</p>                                    <p><strong>Medidas de seguridad.</strong> - Las medidas técnicas y organizativas serán notificadas al propietario de los datos que lo solicite. Para ello, el usuario conoce la obligación que tiene de proporcionar los datos reales solicitados y las consecuencias de no aportarlos.</p>                                    <p>Asimismo, FACEPHI garantiza que ha implementado mecanismos para:</p>                                    <ul>                                        <li>Garantizar la confidencialidad, integridad, disponibilidad y resiliencia permanentes de los sistemas y servicios de tratamiento.</li>                                        <li>Restaurar la disponibilidad y el acceso a los datos personales de forma rápida, en caso de incidente físico o técnico.</li>                                        <li>Verificar, evaluar y valorar, de forma regular, la eficacia de las medidas técnicas y organizativas implantadas para garantizar la seguridad del tratamiento.</li>                                        <li>Pseudonimizar y cifrar los datos personales, en su caso.</li>                                    </ul>                                    <p>Derechos que asisten al usuario. - El usuario declara estar informado de que, previa presentación de su documento nacional de identidad o pasaporte podrá ejercer sus derechos de:</p>                                    <ul>                                        <li>Acceso.</li>                                        <li>Rectificación y supresión.</li>                                        <li>Limitación del tratamiento.</li>                                        <li>Portabilidad.</li>                                        <li>Oposición.</li>                                    </ul>                                    <p>Tales derechos podrán ser ejercidos mediante una comunicación escrita dirigida a FACEPHI BIOMETRIA S.A., o por e-mail a la dirección <a href=\"mailto:dpo@facephi.com\">dpo@facephi.com</a>.</p>                                    <p><strong>Comunicaciones de Datos.</strong> - Se informa de que NO habrá comunicaciones de datos a terceros, ni siquiera internacionalmente.</p>                                    <p><strong>Plazo de tratamiento de los Datos.</strong> - El plazo previsto para la supresión de los datos es de 1 año después obtenido el consentimiento.</p>                                    <h5>Cambios en la política de seguridad y de protección de datos</h5>                                    <p>FACEPHI se reserva el derecho de modificar su política de seguridad y protección de datos con el objeto de adaptarlo a las novedades legislativas o jurisprudenciales, así como las que pudieran derivarse de códigos tipo existentes en la materia, o por decisiones corporativas estratégicas, con efectos de la fecha de publicación de dicha modificación en la página Web de FACEPHI.</p>                                    <h5>Comunicaciones de datos efectuadas por el propio Usuario</h5>                                    <p>Antes de facilitar en el Sitio Web datos personales relativos a terceras personas, el Usuario deberá obtener su previo y expreso consentimiento, habiéndoles informado de los términos contenidos en esta Política de privacidad. El Usuario se obliga a mantener indemne a FACEPHI ante cualquier posible reclamación, multa o sanción que pueda venir obligada a soportar como consecuencia del incumplimiento por parte del Usuario del deber descrito en este párrafo</p>                                    <h4>CONSENTIMIENTO DEL USUARIO:</h4>                                    <p>He sido informado y declaro haber entendido los derechos que me asisten como usuario de esta Demo. Con la prestación explícita de mi consentimiento, acepto que mis datos biométricos sean tratados por la empresa Facephi Biometría SA, con arreglo a los fines, plazo y condiciones explicadas en este apartado. Declaro, asimismo ser mayor de 14 años, de conformidad con el artículo 7 de la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales.</p>";
+"nfc_extract_face" = "Extraer cara";
+"nfc_extract_signature" = "Extraer firma";
+"nfc_info_title" = "Información personal";
+"nfc_info_name" = "Nombre";
+"nfc_info_surname" = "Apellidos";
+"nfc_info_number" = "Número personal";
+"nfc_info_nationality" = "Nacionalidad";
+"nfc_info_birth_date" = "Fecha de nacimiento";
+"nfc_info_birth_place" = "Lugar de nacimiento";
+"nfc_info_address" = "Dirección";
+"nfc_info_gender" = "Género";
+"nfc_passport" = "Pasaporte";
+"nfc_id_card" = "DNI";
+"nfc_select_progress" = "Selecciona vista:";
+"nfc_foreign_card" = "Tarjeta de residencia";
+"nfc_dots" = "Puntos";
+"nfc_percentage" = "Porcentaje";
+"nfc_data_desc" = "Rellena los campos tal y como aparecen en el documento.";
+"nfc_data_mandatory" = "Este campo es obligatorio.";
+"nfc_data_date_error" = "Fecha inválida. Revisa el formato.";
+"nfc_data_selphid_desc" = "SelphID leerá la parte del documento que contenga el MRZ. Esta opción se puede utilizar para capturar cualquier pasaporte, para capturar IDs, hay que verificar el país en la configuración.";
+"onboarding_title_nfc" = "NFC";
+"onboarding_show_previous_tip" = "Pantalla previa";
+"onboarding_show_tutorial" = "Tutorial";
+"onboarding_show_diagnostic" = "Diagnóstico";
+"onboarding_result_ok" = "Resultado correcto";
+"onboarding_result_error" = "Resultado erróneo";
+"onboarding_configuration" = "Configuración avanzada";
+"onboarding_title_operation" = "Operación";
+"onboarding_desc_operation" = "Nueva operación del SDK";
+"onboarding_init_operation" = "Crear";

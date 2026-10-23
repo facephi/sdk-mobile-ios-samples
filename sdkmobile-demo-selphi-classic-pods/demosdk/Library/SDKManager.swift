@@ -9,147 +9,79 @@ import core
 import Foundation
 import sdk
 import selphiClassicComponent
-import trackingComponent
-import tokenizeComponent
-import UIKit
 import statusComponent
+import tokenizeComponent
+import trackingComponent
+import UIKit
 
-
-protocol SDKManagerDelegate: AnyObject {
-    func log(msg: String)
-}
-
-// swiftlint:disable type_body_length
 class SDKManager {
     // MARK: - VARS
     public static var shared: SDKManager = SDKManager()
-    private var sdkData: String = ""
     private let TAG = "APP_MANAGER"
-    public var mainVC: MainVMOutput!
-   
-    // MARK: - INIT
-    init() {
-        let trackingController = TrackingController(trackingError: { trackingError in
-            self.log("TRACKING ERROR: \(trackingError)")
-        })
 
-        let statusController = StatusController()
-        ThemeStatusManager.setup(theme: CustomThemeStatus())
+    // MARK: - INIT SDK
+    func initSdk(log: @escaping (String) -> Void) {
+        let trackingController = TrackingController(trackingError: { trackingError in
+            log("Tracking Error: \(trackingError)")
+        })
         let tokenizeController = TokenizeController()
-        
+        let statusController = StatusController()
+
+        let output: (SdkResult<String>) -> Void = { sdkResult in
+            if sdkResult.finishStatus == .STATUS_OK {
+                log("INIT SDK OK")
+            } else {
+                log("INIT SDK ERROR: \(sdkResult.errorType)")
+            }
+        }
+
+        let analyticsOutput: AnalyticsOutput = { time, componentName, eventType, info in
+            print("APP - *** \(Date(timeIntervalSince1970: time / 1000)) - \(componentName) - \(eventType) - \(info)")
+        }
+
         if SdkConfigurationManager.onlineLicensing {
-            // AUTO License
             SDKController.shared.initSdk(
                 licensingUrl: SdkConfigurationManager.LICENSING_URL,
                 apiKey: SdkConfigurationManager.APIKEY_LICENSING,
-                locale: "es",
-                sessionVisualOptions: nil,
-                output: { sdkResult in
-                    if sdkResult.finishStatus == .STATUS_OK {
-                        self.sdkData = sdkResult.data ?? ""
-                        self.log("Licencia automática seteada correctamente")
-                    } else {
-                        self.log("Ha ocurrido un error al intentar obtener la licencia: \(sdkResult.errorType)")
-                    }
-                },
+                output: output,
                 trackingController: trackingController,
                 tokenizeController: tokenizeController,
-                behaviorController: nil,
-                statusController: statusController
+                statusController: statusController,
+                analyticsOutput: analyticsOutput
             )
         } else {
-            // MANUAL License
             SDKController.shared.initSdk(
                 license: SdkConfigurationManager.license,
-                locale: "es",
-                sessionVisualOptions: nil,
-                output: { sdkResult in
-                    if sdkResult.finishStatus == .STATUS_OK {
-                        self.log("Licencia manual seteada correctamente")
-                    } else {
-                        self.log("La licencia manual no es correcta")
-                    }
-                },
+                output: output,
                 trackingController: trackingController,
                 tokenizeController: tokenizeController,
-                behaviorController: nil,
-                statusController: statusController
+                statusController: statusController,
+                analyticsOutput: analyticsOutput
             )
         }
     }
-    
-    public func launchSelphi(setTracking: Bool, viewController: UIViewController, selphiConfigurationData: SelphiConfigurationData, output: @escaping (SdkResult<SelphiResult>) -> Void) {
+
+    // MARK: - OPERATION
+    public func newOperation(operationType: OperationType, customerId: String, output: @escaping (SdkResult<String>) -> Void) {
+        log("newOperation - customerId - \(customerId)")
+        SDKController.shared.newOperation(operationType: operationType, customerId: customerId, output: output)
+    }
+
+    // MARK: - COMPONENTS
+    public func launchSelphi(viewController: UIViewController, selphiConfigurationData: SelphiConfigurationData, output: @escaping (SdkResult<SelphiResult>) -> Void) {
         log("LAUNCH SELPHI")
 
         let controller = SelphiController(data: selphiConfigurationData, output: output, viewController: viewController)
-        if setTracking {
-            SDKController.shared.launch(controller: controller)
-        } else {
-            SDKController.shared.launchMethod(controller: controller)
-        }
+        SDKController.shared.launch(controller: controller)
     }
 
-    public func launchCheckLiveness(bestImage: String, extradata: String, baseUrl: String, methodPassiveLivenesTracking: String) -> String {
-        log("LAUNCH CHECKLIVENESS")
-        
-        var result = " "
-        let extraDataResult = SDKController.shared.getExtraData()
-        
-        if extraDataResult.finishStatus == .STATUS_OK,
-           let data = extraDataResult.data {
-            let parameters = "{\n\"image\": \"\(bestImage)\" ,\n \"extraData\": \"\(extradata)\"\n}"
-            let postData = parameters.data(using: .utf8)
-            
-            var request = URLRequest(url: URL(string: baseUrl + methodPassiveLivenesTracking)!, timeoutInterval: Double.infinity)
-            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.httpMethod = "POST"
-            request.httpBody = postData
-            
-            let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                guard let data = data else {
-                    print(String(describing: error))
-                    return
-                }
-                print("REQUEST CHECKLIVENESS")
-                print(String(data: data, encoding: .utf8)!)
-                result = String(data: data, encoding: .utf8)!
-            }
-            
-            task.resume()
-            
-            return result
-        } else {
-            log("LAUNCH CHECK LIVENESS -> KO")
-        }
-        return "Not implemented"
-    }
-    
-    public func newOperation(operationType: OperationType, customerId: String, output: @escaping (SdkResult<String>) -> Void) {
-        log("newOperation - start, device, coordinates, customerId - \(customerId)")
-
-        SDKController.shared.newOperation(operationType: operationType, customerId: customerId, output: output)
-    }
-    
+    // MARK: - SESSION
     public func closeSession() {
         log("closeSession")
-        SDKController.shared.closeSession()
+        _ = SDKController.shared.closeSession()
     }
-    
+
     private func log(_ msg: String) {
-        let totalMsg = TAG + " - " + msg
-        print(totalMsg)
-    }
-    
-    private func showSdkResult(msg: String, sdkResultDict: [String: Any?]) {
-        var finalMsg = "\(msg): \n"
-        for item in sdkResultDict {
-            finalMsg += "\(item.key): \(item.value ?? "") \n"
-        }
-        
-        log(finalMsg)
-    }
-    
-    func setCustomerId(customerId: String) {
-        SDKController.shared.setCustomerId(customerId: customerId)
+        print(TAG + " - " + msg)
     }
 }

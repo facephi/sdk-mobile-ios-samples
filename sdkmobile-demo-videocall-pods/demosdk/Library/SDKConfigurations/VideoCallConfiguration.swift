@@ -8,11 +8,11 @@
 import videocallComponent
 
 extension SdkConfigurationManager {
+    /// Same parameters as Android DemoVideoCall SdkData.videoCallConfiguration.
     static var videoCallConfiguration: VideoCallConfigurationData {
         VideoCallConfigurationData(
-            vibrationEnabled: true,
-            activateScreenSharing: true,
-            timeout: 60_000
+            customerId: CUSTOMER_ID,
+            email: CUSTOMER_ID
         )
     }
 }

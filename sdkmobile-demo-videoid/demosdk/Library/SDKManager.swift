@@ -8,113 +8,66 @@
 import core
 import Foundation
 import sdk
-import trackingComponent
 import UIKit
 import videoidComponent
-import tokenizeComponent
-import statusComponent
 
-protocol SDKManagerDelegate: AnyObject {
-    func log(msg: String)
-}
-
-// swiftlint:disable type_body_length
 class SDKManager {
     // MARK: - VARS
     public static var shared: SDKManager = SDKManager()
-    private var sdkData: String = ""
     private let TAG = "APP_MANAGER"
-    public var mainVC: MainVMOutput!
-   
-    // MARK: - INIT
-    init() {
-        let trackingController = TrackingController(trackingError: { trackingError in
-            self.log("TRACKING ERROR: \(trackingError)")
-        })
-        
-        let tokenizeController = TokenizeController()
-        let statusController = StatusController()
-        ThemeStatusManager.setup(theme: CustomThemeStatus())
-        
+
+    // MARK: - INIT SDK
+    func initSdk(log: @escaping (String) -> Void) {
+        let output: (SdkResult<String>) -> Void = { sdkResult in
+            if sdkResult.finishStatus == .STATUS_OK {
+                log("INIT SDK OK")
+            } else {
+                log("INIT SDK ERROR: \(sdkResult.errorType)")
+            }
+        }
+
+        let analyticsOutput: AnalyticsOutput = { time, componentName, eventType, info in
+            print("APP - *** \(Date(timeIntervalSince1970: time / 1000)) - \(componentName) - \(eventType) - \(info)")
+        }
+
+        // Same as Android SdkData: trackingController = null
         if SdkConfigurationManager.onlineLicensing {
-            // AUTO License
             SDKController.shared.initSdk(
                 licensingUrl: SdkConfigurationManager.LICENSING_URL,
                 apiKey: SdkConfigurationManager.APIKEY_LICENSING,
-                locale: "es",
-                sessionVisualOptions: nil,
-                output: { sdkResult in
-                    if sdkResult.finishStatus == .STATUS_OK {
-                        self.sdkData = sdkResult.data ?? ""
-                        self.log("Licencia automática seteada correctamente")
-                    } else {
-                        self.log("Ha ocurrido un error al intentar obtener la licencia: \(sdkResult.errorType)")
-                    }
-                },
-                trackingController: trackingController,
-                tokenizeController: tokenizeController,
-                behaviorController: nil,
-                statusController: statusController
+                output: output,
+                analyticsOutput: analyticsOutput
             )
         } else {
-            // MANUAL License
             SDKController.shared.initSdk(
                 license: SdkConfigurationManager.license,
-                locale: "es",
-                sessionVisualOptions: nil,
-                output: { sdkResult in
-                    if sdkResult.finishStatus == .STATUS_OK {
-                        self.log("Licencia manual seteada correctamente")
-                    } else {
-                        self.log("La licencia manual no es correcta")
-                    }
-                },
-                trackingController: trackingController,
-                tokenizeController: tokenizeController,
-                behaviorController: nil,
-                statusController: statusController
+                output: output,
+                analyticsOutput: analyticsOutput
             )
         }
     }
-    
-    public func launchExtradata() -> SdkResult<String> {
-        SDKController.shared.getExtraData()
-    }
-    
-    public func launchVideoId(data: VideoIDConfigurationData, setTracking: Bool, viewController: UIViewController, output: @escaping (SdkResult<VideoIDResult>) -> Void)
-    {
-        log("LAUNCH VIDEO ID")
-        
-        let videoidController = VideoIdController(data: data, output: output, viewController: viewController)
-        SDKController.shared.launch(controller: videoidController)
-    }
-    
-    public func closeSession() {
-        log("closeSession")
-        SDKController.shared.closeSession()
-    }
-    
-    private func log(_ msg: String) {
-        let totalMsg = TAG + " - " + msg
-        print(totalMsg)
-    }
-    
-    private func showSdkResult(msg: String, sdkResultDict: [String: Any?]) {
-        var finalMsg = "\(msg): \n"
-        for item in sdkResultDict {
-            finalMsg += "\(item.key): \(item.value ?? "") \n"
-        }
-        
-        log(finalMsg)
-    }
-    
-    public func newOperation(operationType: OperationType, customerId: String, output: @escaping (SdkResult<String>) -> Void) {
-        log("newOperation - start, device, coordinates, customerId - \(customerId)")
 
+    // MARK: - OPERATION
+    public func newOperation(operationType: OperationType, customerId: String, output: @escaping (SdkResult<String>) -> Void) {
+        log("newOperation - customerId - \(customerId)")
         SDKController.shared.newOperation(operationType: operationType, customerId: customerId, output: output)
     }
-    
-    func setCustomerId(customerId: String) {
-        SDKController.shared.setCustomerId(customerId: customerId)
+
+    // MARK: - COMPONENTS
+    public func launchVideoId(viewController: UIViewController, videoIDConfigurationData: VideoIDConfigurationData, output: @escaping (SdkResult<VideoIDResult>) -> Void) {
+        log("LAUNCH VIDEO ID")
+
+        let controller = VideoIdController(data: videoIDConfigurationData, output: output, viewController: viewController)
+        SDKController.shared.launch(controller: controller)
+    }
+
+    // MARK: - SESSION
+    public func closeSession() {
+        log("closeSession")
+        _ = SDKController.shared.closeSession()
+    }
+
+    private func log(_ msg: String) {
+        print(TAG + " - " + msg)
     }
 }

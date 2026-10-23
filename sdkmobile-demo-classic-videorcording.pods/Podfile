@@ -1,15 +1,12 @@
-platform :ios, '16.0'
 
 plugin 'cocoapods-art', :sources => [
   'cocoa-pro-fphi'
 ]
 
 source 'https://cdn.cocoapods.org/'
-source 'https://github.com/livekit/podspecs.git'
 
 def kmp_selphid_host_extractors
   pod 'FPHISelphIDExtractorV1', '~> 1.2.4'
-  pod 'FPHISelphIDExtractorV2', '~> 1.2.3'
   pod 'FPHISelphIDExtractorV3', '~> 1.2.6'
 end
 
@@ -17,12 +14,9 @@ target 'demosdk' do
   use_frameworks!
 
   pod 'FPHISDKMainComponent', '~> 4.0.0'
-  pod 'FPHISDKTrackingComponent', '~> 4.0.0'
   pod 'FPHISDKSelphIDComponent', '~> 4.0.0'
   kmp_selphid_host_extractors
   pod 'FPHISDKSelphiComponent', '~> 4.0.0'
-  pod 'FPHISDKTokenizeComponent', '~> 4.0.0'
-  pod 'FPHISDKStatusComponent', '~> 4.0.0'
   pod 'FPHISDKVideoRecordingComponent', '~> 4.0.0'
 
   target 'demosdkTests' do

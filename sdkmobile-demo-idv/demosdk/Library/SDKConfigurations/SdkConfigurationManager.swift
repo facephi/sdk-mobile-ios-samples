@@ -1,17 +1,19 @@
 //
 //  SdkConfigurationManager.swift
-//  idv.demo
+//  demosdk
 //
 //  Created by Jorge Poveda on 22/5/23.
 //
+//  Equivalent of Android SdkData.kt (DemoIDV).
+//
 
-import UIKit
+import Foundation
 
 struct SdkConfigurationManager {
-    static let LICENSING_URL = URL(string: "licensing_URL")!
-    static let APIKEY_LICENSING = ""
-    
-    static let customerId = ""
-    static let onlineFlow = true
-    static let FLOW_ID = "6cdf5827-df3c-4c00-8ce7-02ed8a633424" // This ID references Resources/flow.json, replace if needed
+    // ************** LICENSE **************
+    static let APIKEY_LICENSING = "licensingApiKey"
+    static let LICENSING_URL = URL(string: "licensingUrl")!
+
+    // ************** DATA **************
+    static let CUSTOMER_ID = "demo_onboarding_idv@email.com"
 }

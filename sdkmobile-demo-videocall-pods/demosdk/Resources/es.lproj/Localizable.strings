@@ -1,17 +1,16 @@
-/* 
+/*
   Localizable.strings
   demosdk
 
-  Created by Jorge Poveda on 26/6/23.
-  
+  Keys and texts mirror Android DemoVideoCall res/values/strings.xml.
 */
 
-//// VIDEOID
-//"video_id_record_init_button"="PRUEBA START RECORDING";
-//
-//
-////VIDEO CALL
-//
-//
-////NFC
-//"text_intro_chip_state_waiting_tag_text" = "PRUEBABring your device closer to the document";
+"demo_title_operation" = "Operación";
+"demo_desc_operation" = "Nueva operación del SDK";
+"demo_init_operation" = "Crear";
+"demo_launch_video" = "Llamar";
+"demo_title_video" = "Videollamada";
+"demo_desc_video" = "Contactar con un asistente";
+"demo_stop_video" = "Colgar";
+"demo_result_ok" = "Resultado correcto";
+"demo_result_error" = "Resultado erróneo";

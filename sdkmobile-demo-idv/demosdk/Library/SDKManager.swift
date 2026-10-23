@@ -4,139 +4,89 @@
 //
 //  Created by Faustino Flores García on 5/5/22.
 //
-import Foundation
-import UIKit
+
 import core
-import nfcComponent
+import Foundation
+import sdk
 import selphiComponent
 import selphidComponent
-import sdk
-import statusComponent
-import tokenizeComponent
 import trackingComponent
+import UIKit
 import videoRecordingComponent
-import termsConditionsComponent
 
 class SDKManager {
     // MARK: - VARS
     public static var shared: SDKManager = SDKManager()
-    private var videoRecordingController: VideoRecordingController?
+    private let TAG = "APP_MANAGER"
     private var flowController: FlowController?
-    private var TAG = "IDV_APP"
-    static var delegate: SdkManagerDelegate?
-    
-    // MARK: - INIT
-    init() {
-        initializeSDK()
-    }
-    
-    func initializeSDK() {
-        let trackingController = TrackingController(trackingError: { trackingError in
-            self.log("TRACKING ERROR: \(trackingError)")
-        })
-        
-        let tokenizeController = TokenizeController()
-        let statusController = StatusController()
-        ThemeStatusManager.setup(theme: CustomThemeStatus())
+
+    // MARK: - INIT SDK
+    /// Same as Android SdkData.getInitConfiguration (trackingController = TrackingController()).
+    /// `trackingError` replaces Android's TrackingErrorController (iOS reports tracking errors through TrackingController).
+    func initSdk(trackingError: @escaping (String) -> Void, output: @escaping (SdkResult<String>) -> Void) {
+        let trackingController = TrackingController(trackingError: trackingError)
+
+        let analyticsOutput: AnalyticsOutput = { time, componentName, eventType, info in
+            print("APP - *** \(Date(timeIntervalSince1970: time / 1000)) - \(componentName) - \(eventType) - \(info)")
+        }
+
         SDKController.shared.initSdk(
             licensingUrl: SdkConfigurationManager.LICENSING_URL,
             apiKey: SdkConfigurationManager.APIKEY_LICENSING,
-            locale: "es",
-            sessionVisualOptions: nil,
-            output: { sdkResult in
-                if sdkResult.finishStatus == .STATUS_OK {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
-                        SDKManager.delegate?.setAvailableFlows(flows: FlowController.getFlowIntegrationData())
-                    })
-                    self.log("Licencia automática seteada correctamente")
-                } else {
-                    self.log("Ha ocurrido un error al intentar obtener la licencia: \(sdkResult.errorType)")
-                }
-            },
+            output: output,
             trackingController: trackingController,
-            tokenizeController: tokenizeController,
-            behaviorController: nil,
-            statusController: statusController,
-            analyticsOutput: { time, component, type, info  in
-                self.log("Analytics: \(Date().getFormattedDate(format: "HH:mm:ss")) \(component) - \(type) - \(info)")
-            }
+            analyticsOutput: analyticsOutput
         )
     }
-    
-    public func launchFlow(flowId: String, viewController: UIViewController, output: @escaping (SdkFlowResult) -> Void) {
-        
-        let termsConditionsController = TermsConditionsController(data: nil, output: {
-            print("TermsConditionsController output: \($0.errorType)")
-        }, viewController: viewController)
-        
-        let selphidController = SelphIDController(
+
+    // MARK: - FLOWS
+    func getFlowIntegrationData() -> [IntegrationFlowData] {
+        FlowController.getFlowIntegrationData()
+    }
+
+    /// Same as Android SdkData.getIDVFlowConfigurationData:
+    /// FSelphiController, FSelphIDController(extractors), FStopVideoRecordingController, FVideoRecordingController.
+    func launchFlow(flowId: String, viewController: UIViewController, output: @escaping (SdkFlowResult) -> Void) {
+        log("LAUNCH FLOW \(flowId)")
+
+        let selphiController = SelphiController(data: nil, output: { _ in }, viewController: viewController)
+        let selphIdController = SelphIDController(
             data: nil,
             extractors: SelphIDExtractorProvider.makeAllExtractors(),
-            output: {
-            print("SelphidController output: \($0.errorType)")
-        }, viewController: viewController)
-        
-        let selphiController = SelphiController(data: nil, output: {
-            print("SelphiController output: \($0.errorType)")
-        }, viewController: viewController)
-        
-        let nfcController = NfcController(data: nil, viewController: viewController, output: {
-            print("NfcController output: \($0.errorType)")
-        })
-        
-        let videoRecordingController = VideoRecordingController(extensionIdentifier: "com.facephi.sdk.demo.videoRecording", viewController: viewController, output: {
-            print("videoRecordingController output: \($0.errorType)")
-        })
-        self.videoRecordingController = videoRecordingController
-        
-        let stopVideoRecordingController = StopVideoRecordingController(videoRecordingController: videoRecordingController, output: {
-            print("stopVideoRecordingController output: \($0.errorType)")
-        })
-        
-        let controllers: [IFlowableController] =
-        [termsConditionsController, selphidController, selphiController, nfcController, videoRecordingController, stopVideoRecordingController]
-        
+            output: { _ in },
+            viewController: viewController
+        )
+        let videoRecordingController = VideoRecordingController(viewController: viewController, output: { _ in })
+        let stopVideoRecordingController = StopVideoRecordingController(
+            videoRecordingController: videoRecordingController,
+            output: { _ in }
+        )
+
+        let controllers: [IFlowableController] = [
+            selphiController,
+            selphIdController,
+            stopVideoRecordingController,
+            videoRecordingController,
+        ]
+
         let flowConfigurationData = FlowConfigurationData(
             id: flowId,
             controllers: controllers,
-            customerId: SdkConfigurationManager.customerId)
-        
-        let flowOutput: (SdkFlowResult) -> Void = { sdkFlowResult in
-            print("FlowController: STEP - \(sdkFlowResult.step)")
-            print("FlowController: FLOW FINISH: \(sdkFlowResult.flowFinish)")
-            print("FlowController: SDKResult: ERROR=\(sdkFlowResult.result.errorType) - DATA=\(sdkFlowResult.result.data)")
-            
-            switch (sdkFlowResult.result.data) {
-            case (let data as SelphIDResult):
-                // Do whatever you want with the result
-                break
-            case (let data as SelphiResult):
-                // Do whatever you want with the result
-                break
-            case (let data as NfcResult):
-                // Do whatever you want with the result
-                break
-            default: break
-            }
-        }
-        
-        self.flowController = FlowController(flowConfigurationData: flowConfigurationData, output: flowOutput)
-        
-        SDKController.shared.launch(controller: self.flowController!)
+            customerId: SdkConfigurationManager.CUSTOMER_ID
+        )
+
+        let flowController = FlowController(flowConfigurationData: flowConfigurationData, output: output)
+        self.flowController = flowController
+        SDKController.shared.launch(controller: flowController)
     }
-        
-    func flowNextStep() {
-        self.flowController?.launchNextStep()
+
+    // MARK: - SESSION
+    public func closeSession() {
+        log("closeSession")
+        _ = SDKController.shared.closeSession()
     }
-    
-    func cancelLaunch() {
-        SDKController.shared.cancelLaunch()
-        self.flowController = nil
-    }
-    
+
     private func log(_ msg: String) {
-        let totalMsg = TAG + " - " + msg
-        print(totalMsg)
-        SDKManager.delegate?.show(msg: msg)
+        print(TAG + " - " + msg)
     }
 }

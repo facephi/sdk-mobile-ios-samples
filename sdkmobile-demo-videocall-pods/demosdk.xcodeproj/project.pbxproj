@@ -7,30 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		130CD5B3285A0D19005C7BB1 /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130CD5B2285A0D19005C7BB1 /* UISegmentedControl.swift */; };
-		13A43FBB286A014400C56A86 /* CustomThemeVideoCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A43FBA286A014400C56A86 /* CustomThemeVideoCall.swift */; };
+		0962F9059CEF03163A7CCEE9 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB0171A32369490D402AC01 /* MainScreen.swift */; };
 		13F510B8281937A5001E3CF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F510B7281937A5001E3CF1 /* AppDelegate.swift */; };
 		13F510BA281937A5001E3CF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F510B9281937A5001E3CF1 /* SceneDelegate.swift */; };
-		13F510BC281937A5001E3CF1 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F510BB281937A5001E3CF1 /* MainVC.swift */; };
-		13F510BF281937A5001E3CF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13F510BD281937A5001E3CF1 /* Main.storyboard */; };
 		13F510C1281937A6001E3CF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13F510C0281937A6001E3CF1 /* Assets.xcassets */; };
 		13F510C4281937A6001E3CF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13F510C2281937A6001E3CF1 /* LaunchScreen.storyboard */; };
 		13F510CF281937A6001E3CF1 /* DemosdkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F510CE281937A6001E3CF1 /* DemosdkTests.swift */; };
 		13F510D9281937A6001E3CF1 /* DemosdkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F510D8281937A6001E3CF1 /* DemosdkUITests.swift */; };
 		13F510DB281937A6001E3CF1 /* DemosdkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F510DA281937A6001E3CF1 /* DemosdkUITestsLaunchTests.swift */; };
-		13F510EB281937E3001E3CF1 /* fphi-selphid-widget-resources-sdk.zip in Resources */ = {isa = PBXBuildFile; fileRef = 13F510E9281937E3001E3CF1 /* fphi-selphid-widget-resources-sdk.zip */; };
-		13F510EC281937E3001E3CF1 /* fphi-selphi-widget-resources-sdk.zip in Resources */ = {isa = PBXBuildFile; fileRef = 13F510EA281937E3001E3CF1 /* fphi-selphi-widget-resources-sdk.zip */; };
 		13F7576B2823A2AA00A761D5 /* SDKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F7576A2823A2AA00A761D5 /* SDKManager.swift */; };
-		13F84C49282500A6001E26A5 /* MainVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F84C48282500A6001E26A5 /* MainVM.swift */; };
-		1C4F8F9C2FC57EFF004F1D27 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4F8F9B2FC57EFF004F1D27 /* ReplayKit.framework */; };
-		1C4F8FA32FC57EFF004F1D27 /* videocallExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1C4F8F9A2FC57EFF004F1D27 /* videocallExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		1C4F8FAF2FC58200004F1D27 /* SampleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4F8FAB2FC58200004F1D27 /* SampleHandler.swift */; };
+		33B0EA9668EAD56C9E71FC8A /* DemoComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D67422D78180206C984125 /* DemoComponents.swift */; };
 		4C249FB3AC4BBBB2C3759F69 /* Pods_demosdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319E8A6CF51CFD57A2686B29 /* Pods_demosdk.framework */; };
+		519E5DEAC5EEAB828408F29C /* sdk_font_semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70E10B09DAE2C35963C55423 /* sdk_font_semibold.ttf */; };
+		55CEC72DEA200021037D5CCC /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E33C7DFB0F9D7AE9C2F44C /* MainViewModel.swift */; };
+		573E4CB56C0E983EE2DF24C3 /* sdk_font_light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7508C7573B25F7582906A092 /* sdk_font_light.ttf */; };
 		72304AFF12B557C51B6AD962 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
-		8927218DA9D8453FA28F8ADB /* CustomThemeStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0B8B00B7F240FE9D2E1B45 /* CustomThemeStatus.swift */; };
+		74B200A6165FC4B106D951A9 /* sdk_font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D3794FA451929FE0437AEAD /* sdk_font.ttf */; };
+		9D02B07BCBE3A4F10DECC219 /* DemoTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45625F45B5A074ADE2F92A48 /* DemoTheme.swift */; };
 		9E2DEB122A1B75F000E8FD9F /* SdkConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2DEB112A1B75F000E8FD9F /* SdkConfigurationManager.swift */; };
 		9EFB343A2A4999E10005C31E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EFB343C2A4999E10005C31E /* Localizable.strings */; };
-		AC6ACB200053822697DE247A /* Pods_videocallExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F47567473D46A87B04FA8A0 /* Pods_videocallExtension.framework */; };
+		C538E26CB7F8AD3A9AFA100C /* sdk_font_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 285AB6D2A4CE9A23B65F9238 /* sdk_font_bold.ttf */; };
 		D9D2E38C2AC2F08100501393 /* VideoCallConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2E38B2AC2F08100501393 /* VideoCallConfiguration.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,40 +45,14 @@
 			remoteGlobalIDString = 13F510B3281937A5001E3CF1;
 			remoteInfo = demosdk;
 		};
-		1C4F8FA12FC57EFF004F1D27 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 13F510AC281937A5001E3CF1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1C4F8F992FC57EFF004F1D27;
-			remoteInfo = videocallExtension;
-		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		1C4F8FA42FC57EFF004F1D27 /* Embed Foundation Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				1C4F8FA32FC57EFF004F1D27 /* videocallExtension.appex in Embed Foundation Extensions */,
-			);
-			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		057A8537DA43905CF7E1953E /* Pods-videocallExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-videocallExtension.release.xcconfig"; path = "Target Support Files/Pods-videocallExtension/Pods-videocallExtension.release.xcconfig"; sourceTree = "<group>"; };
 		0D52B9542BB6D55C7B30A4BB /* Pods-demosdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demosdk.release.xcconfig"; path = "Target Support Files/Pods-demosdk/Pods-demosdk.release.xcconfig"; sourceTree = "<group>"; };
-		130CD5B2285A0D19005C7BB1 /* UISegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.swift; sourceTree = "<group>"; };
-		13A43FBA286A014400C56A86 /* CustomThemeVideoCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomThemeVideoCall.swift; sourceTree = "<group>"; };
 		13CCB5B2283F7D0C005BDC3D /* demosdk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = demosdk.entitlements; sourceTree = "<group>"; };
 		13F510B4281937A5001E3CF1 /* demosdk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demosdk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13F510B7281937A5001E3CF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13F510B9281937A5001E3CF1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		13F510BB281937A5001E3CF1 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		13F510BE281937A5001E3CF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13F510C0281937A6001E3CF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13F510C3281937A6001E3CF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13F510C5281937A6001E3CF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,25 +61,19 @@
 		13F510D4281937A6001E3CF1 /* demosdkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = demosdkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13F510D8281937A6001E3CF1 /* DemosdkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemosdkUITests.swift; sourceTree = "<group>"; };
 		13F510DA281937A6001E3CF1 /* DemosdkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemosdkUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		13F510E9281937E3001E3CF1 /* fphi-selphid-widget-resources-sdk.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "fphi-selphid-widget-resources-sdk.zip"; sourceTree = "<group>"; };
-		13F510EA281937E3001E3CF1 /* fphi-selphi-widget-resources-sdk.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "fphi-selphi-widget-resources-sdk.zip"; sourceTree = "<group>"; };
 		13F7576A2823A2AA00A761D5 /* SDKManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDKManager.swift; sourceTree = "<group>"; };
-		13F84C48282500A6001E26A5 /* MainVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVM.swift; sourceTree = "<group>"; };
-		1C4F8F9A2FC57EFF004F1D27 /* videocallExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = videocallExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C4F8F9B2FC57EFF004F1D27 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
-		1C4F8FAA2FC58200004F1D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1C4F8FAB2FC58200004F1D27 /* SampleHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleHandler.swift; sourceTree = "<group>"; };
-		1C4F8FAC2FC58200004F1D27 /* videocallExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = videocallExtension.entitlements; sourceTree = "<group>"; };
-		1C7BCFD72F67FD1400B5C2B3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		1C7BCFD82F67FD1400B5C2B3 /* README_EN.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README_EN.md; sourceTree = "<group>"; };
+		1FB0171A32369490D402AC01 /* MainScreen.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		285AB6D2A4CE9A23B65F9238 /* sdk_font_bold.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = sdk_font_bold.ttf; sourceTree = "<group>"; };
 		319E8A6CF51CFD57A2686B29 /* Pods_demosdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demosdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E0B8B00B7F240FE9D2E1B45 /* CustomThemeStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomThemeStatus.swift; sourceTree = "<group>"; };
-		7FE9180C3546E7CACD6DFCE2 /* Pods-videocallExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-videocallExtension.debug.xcconfig"; path = "Target Support Files/Pods-videocallExtension/Pods-videocallExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		45625F45B5A074ADE2F92A48 /* DemoTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DemoTheme.swift; sourceTree = "<group>"; };
+		5D3794FA451929FE0437AEAD /* sdk_font.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = sdk_font.ttf; sourceTree = "<group>"; };
+		70E10B09DAE2C35963C55423 /* sdk_font_semibold.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = sdk_font_semibold.ttf; sourceTree = "<group>"; };
+		7508C7573B25F7582906A092 /* sdk_font_light.ttf */ = {isa = PBXFileReference; includeInIndex = 1; path = sdk_font_light.ttf; sourceTree = "<group>"; };
 		9E2DEB112A1B75F000E8FD9F /* SdkConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SdkConfigurationManager.swift; sourceTree = "<group>"; };
 		9EFB343B2A4999E10005C31E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9EFB343D2A4999ED0005C31E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		9EFB343E2A499A0F0005C31E /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		9F47567473D46A87B04FA8A0 /* Pods_videocallExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_videocallExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0D67422D78180206C984125 /* DemoComponents.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DemoComponents.swift; sourceTree = "<group>"; };
+		B4E33C7DFB0F9D7AE9C2F44C /* MainViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		C58F98F0DBD9B06AD9A95B8B /* Pods-demosdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demosdk.debug.xcconfig"; path = "Target Support Files/Pods-demosdk/Pods-demosdk.debug.xcconfig"; sourceTree = "<group>"; };
 		D9D2E38B2AC2F08100501393 /* VideoCallConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCallConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,52 +102,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1C4F8F972FC57EFF004F1D27 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1C4F8F9C2FC57EFF004F1D27 /* ReplayKit.framework in Frameworks */,
-				AC6ACB200053822697DE247A /* Pods_videocallExtension.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		130CD5B1285A0CF8005C7BB1 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				130CD5B2285A0D19005C7BB1 /* UISegmentedControl.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		130CD5B6285A1B6A005C7BB1 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				13F510BB281937A5001E3CF1 /* MainVC.swift */,
-				13F84C48282500A6001E26A5 /* MainVM.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		13A21E56286C3BD300F96E91 /* Themes */ = {
-			isa = PBXGroup;
-			children = (
-				13A43FBA286A014400C56A86 /* CustomThemeVideoCall.swift */,
-			);
-			path = Themes;
-			sourceTree = "<group>";
-		};
 		13F510AB281937A5001E3CF1 = {
 			isa = PBXGroup;
 			children = (
-				1C7BCFD72F67FD1400B5C2B3 /* README.md */,
-				1C7BCFD82F67FD1400B5C2B3 /* README_EN.md */,
 				13F510B6281937A5001E3CF1 /* demosdk */,
 				13F510CD281937A6001E3CF1 /* demosdkTests */,
 				13F510D7281937A6001E3CF1 /* demosdkUITests */,
-				1C4F8FAD2FC58200004F1D27 /* videocallExtension */,
 				13F510B5281937A5001E3CF1 /* Products */,
 				8F76645D1138E0E4EF87244B /* Pods */,
 				C5DCDE1729264840C395A787 /* Frameworks */,
@@ -196,7 +123,6 @@
 				13F510B4281937A5001E3CF1 /* demosdk.app */,
 				13F510CA281937A6001E3CF1 /* demosdkTests.xctest */,
 				13F510D4281937A6001E3CF1 /* demosdkUITests.xctest */,
-				1C4F8F9A2FC57EFF004F1D27 /* videocallExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -206,15 +132,12 @@
 			children = (
 				13CCB5B2283F7D0C005BDC3D /* demosdk.entitlements */,
 				13F7576D2824152400A761D5 /* Library */,
-				130CD5B1285A0CF8005C7BB1 /* Extensions */,
-				13F7576C2823A5F100A761D5 /* Scenes */,
 				13F510E7281937E3001E3CF1 /* Resources */,
-				13A21E56286C3BD300F96E91 /* Themes */,
 				13F510B7281937A5001E3CF1 /* AppDelegate.swift */,
 				13F510B9281937A5001E3CF1 /* SceneDelegate.swift */,
 				13F510C2281937A6001E3CF1 /* LaunchScreen.storyboard */,
 				13F510C5281937A6001E3CF1 /* Info.plist */,
-				92454C3E7BD8436F82EF1728 /* Themes */,
+				7B5EAC5BB6009B259AA811C2 /* UI */,
 			);
 			path = demosdk;
 			sourceTree = "<group>";
@@ -240,28 +163,10 @@
 			isa = PBXGroup;
 			children = (
 				13F510C0281937A6001E3CF1 /* Assets.xcassets */,
-				13F510E8281937E3001E3CF1 /* WidgetResources */,
 				9EFB343C2A4999E10005C31E /* Localizable.strings */,
+				216CED6BA76111E9EFF7E514 /* Fonts */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		13F510E8281937E3001E3CF1 /* WidgetResources */ = {
-			isa = PBXGroup;
-			children = (
-				13F510E9281937E3001E3CF1 /* fphi-selphid-widget-resources-sdk.zip */,
-				13F510EA281937E3001E3CF1 /* fphi-selphi-widget-resources-sdk.zip */,
-			);
-			path = WidgetResources;
-			sourceTree = "<group>";
-		};
-		13F7576C2823A5F100A761D5 /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				13F510BD281937A5001E3CF1 /* Main.storyboard */,
-				130CD5B6285A1B6A005C7BB1 /* Main */,
-			);
-			path = Scenes;
 			sourceTree = "<group>";
 		};
 		13F7576D2824152400A761D5 /* Library */ = {
@@ -273,14 +178,36 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
-		1C4F8FAD2FC58200004F1D27 /* videocallExtension */ = {
+		216CED6BA76111E9EFF7E514 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				1C4F8FAA2FC58200004F1D27 /* Info.plist */,
-				1C4F8FAB2FC58200004F1D27 /* SampleHandler.swift */,
-				1C4F8FAC2FC58200004F1D27 /* videocallExtension.entitlements */,
+				5D3794FA451929FE0437AEAD /* sdk_font.ttf */,
+				285AB6D2A4CE9A23B65F9238 /* sdk_font_bold.ttf */,
+				7508C7573B25F7582906A092 /* sdk_font_light.ttf */,
+				70E10B09DAE2C35963C55423 /* sdk_font_semibold.ttf */,
 			);
-			path = videocallExtension;
+			name = Fonts;
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		7B5EAC5BB6009B259AA811C2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				EB78302D0FDBE3E553782D18 /* Kit */,
+				8D41D479B534C85D306003E7 /* Main */,
+			);
+			name = UI;
+			path = UI;
+			sourceTree = "<group>";
+		};
+		8D41D479B534C85D306003E7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1FB0171A32369490D402AC01 /* MainScreen.swift */,
+				B4E33C7DFB0F9D7AE9C2F44C /* MainViewModel.swift */,
+			);
+			name = Main;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		8F76645D1138E0E4EF87244B /* Pods */ = {
@@ -288,18 +215,8 @@
 			children = (
 				C58F98F0DBD9B06AD9A95B8B /* Pods-demosdk.debug.xcconfig */,
 				0D52B9542BB6D55C7B30A4BB /* Pods-demosdk.release.xcconfig */,
-				7FE9180C3546E7CACD6DFCE2 /* Pods-videocallExtension.debug.xcconfig */,
-				057A8537DA43905CF7E1953E /* Pods-videocallExtension.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		92454C3E7BD8436F82EF1728 /* Themes */ = {
-			isa = PBXGroup;
-			children = (
-				5E0B8B00B7F240FE9D2E1B45 /* CustomThemeStatus.swift */,
-			);
-			path = Themes;
 			sourceTree = "<group>";
 		};
 		9E2DEB102A1B75D100E8FD9F /* SDKConfigurations */ = {
@@ -314,11 +231,19 @@
 		C5DCDE1729264840C395A787 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1C4F8F9B2FC57EFF004F1D27 /* ReplayKit.framework */,
 				319E8A6CF51CFD57A2686B29 /* Pods_demosdk.framework */,
-				9F47567473D46A87B04FA8A0 /* Pods_videocallExtension.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB78302D0FDBE3E553782D18 /* Kit */ = {
+			isa = PBXGroup;
+			children = (
+				A0D67422D78180206C984125 /* DemoComponents.swift */,
+				45625F45B5A074ADE2F92A48 /* DemoTheme.swift */,
+			);
+			name = Kit;
+			path = Kit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,14 +258,12 @@
 				13F510B1281937A5001E3CF1 /* Frameworks */,
 				13F510B2281937A5001E3CF1 /* Resources */,
 				13F78C3D2851DFCA005B7DDF /* ShellScript */,
-				1C4F8FA42FC57EFF004F1D27 /* Embed Foundation Extensions */,
 				2A88822DB7A81CDA5A5CF9E6 /* [CP] Embed Pods Frameworks */,
 				61F4056D7D54B7F0E3C35848 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1C4F8FA22FC57EFF004F1D27 /* PBXTargetDependency */,
 			);
 			name = demosdk;
 			productName = demosdk;
@@ -383,25 +306,6 @@
 			productReference = 13F510D4281937A6001E3CF1 /* demosdkUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		1C4F8F992FC57EFF004F1D27 /* videocallExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1C4F8FA82FC57EFF004F1D27 /* Build configuration list for PBXNativeTarget "videocallExtension" */;
-			buildPhases = (
-				4D6A05C68974519A720B4500 /* [CP] Check Pods Manifest.lock */,
-				1C4F8F962FC57EFF004F1D27 /* Sources */,
-				1C4F8F972FC57EFF004F1D27 /* Frameworks */,
-				1C4F8F982FC57EFF004F1D27 /* Resources */,
-				0127510AA866CC63365813CC /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = videocallExtension;
-			productName = videocallExtension;
-			productReference = 1C4F8F9A2FC57EFF004F1D27 /* videocallExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -423,9 +327,6 @@
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = 13F510B3281937A5001E3CF1;
 					};
-					1C4F8F992FC57EFF004F1D27 = {
-						CreatedOnToolsVersion = 26.3;
-					};
 				};
 			};
 			buildConfigurationList = 13F510AF281937A5001E3CF1 /* Build configuration list for PBXProject "demosdk" */;
@@ -436,7 +337,6 @@
 				en,
 				Base,
 				es,
-				"pt-PT",
 			);
 			mainGroup = 13F510AB281937A5001E3CF1;
 			productRefGroup = 13F510B5281937A5001E3CF1 /* Products */;
@@ -446,7 +346,6 @@
 				13F510B3281937A5001E3CF1 /* demosdk */,
 				13F510C9281937A6001E3CF1 /* demosdkTests */,
 				13F510D3281937A6001E3CF1 /* demosdkUITests */,
-				1C4F8F992FC57EFF004F1D27 /* videocallExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -459,9 +358,10 @@
 				13F510C4281937A6001E3CF1 /* LaunchScreen.storyboard in Resources */,
 				9EFB343A2A4999E10005C31E /* Localizable.strings in Resources */,
 				13F510C1281937A6001E3CF1 /* Assets.xcassets in Resources */,
-				13F510EC281937E3001E3CF1 /* fphi-selphi-widget-resources-sdk.zip in Resources */,
-				13F510EB281937E3001E3CF1 /* fphi-selphid-widget-resources-sdk.zip in Resources */,
-				13F510BF281937A5001E3CF1 /* Main.storyboard in Resources */,
+				74B200A6165FC4B106D951A9 /* sdk_font.ttf in Resources */,
+				C538E26CB7F8AD3A9AFA100C /* sdk_font_bold.ttf in Resources */,
+				573E4CB56C0E983EE2DF24C3 /* sdk_font_light.ttf in Resources */,
+				519E5DEAC5EEAB828408F29C /* sdk_font_semibold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,33 +379,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1C4F8F982FC57EFF004F1D27 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0127510AA866CC63365813CC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-videocallExtension/Pods-videocallExtension-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-videocallExtension/Pods-videocallExtension-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-videocallExtension/Pods-videocallExtension-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		13F78C3D2851DFCA005B7DDF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -538,28 +414,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-demosdk/Pods-demosdk-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4D6A05C68974519A720B4500 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-videocallExtension-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		61F4056D7D54B7F0E3C35848 /* [CP] Copy Pods Resources */ = {
@@ -608,16 +462,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13F510BC281937A5001E3CF1 /* MainVC.swift in Sources */,
-				13F84C49282500A6001E26A5 /* MainVM.swift in Sources */,
 				13F7576B2823A2AA00A761D5 /* SDKManager.swift in Sources */,
 				9E2DEB122A1B75F000E8FD9F /* SdkConfigurationManager.swift in Sources */,
-				13A43FBB286A014400C56A86 /* CustomThemeVideoCall.swift in Sources */,
 				13F510B8281937A5001E3CF1 /* AppDelegate.swift in Sources */,
 				D9D2E38C2AC2F08100501393 /* VideoCallConfiguration.swift in Sources */,
 				13F510BA281937A5001E3CF1 /* SceneDelegate.swift in Sources */,
-				130CD5B3285A0D19005C7BB1 /* UISegmentedControl.swift in Sources */,
-				8927218DA9D8453FA28F8ADB /* CustomThemeStatus.swift in Sources */,
+				33B0EA9668EAD56C9E71FC8A /* DemoComponents.swift in Sources */,
+				9D02B07BCBE3A4F10DECC219 /* DemoTheme.swift in Sources */,
+				0962F9059CEF03163A7CCEE9 /* MainScreen.swift in Sources */,
+				55CEC72DEA200021037D5CCC /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,14 +491,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1C4F8F962FC57EFF004F1D27 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1C4F8FAF2FC58200004F1D27 /* SampleHandler.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -659,22 +504,9 @@
 			target = 13F510B3281937A5001E3CF1 /* demosdk */;
 			targetProxy = 13F510D5281937A6001E3CF1 /* PBXContainerItemProxy */;
 		};
-		1C4F8FA22FC57EFF004F1D27 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1C4F8F992FC57EFF004F1D27 /* videocallExtension */;
-			targetProxy = 1C4F8FA12FC57EFF004F1D27 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		13F510BD281937A5001E3CF1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				13F510BE281937A5001E3CF1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		13F510C2281937A6001E3CF1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -688,7 +520,6 @@
 			children = (
 				9EFB343B2A4999E10005C31E /* en */,
 				9EFB343D2A4999ED0005C31E /* es */,
-				9EFB343E2A499A0F0005C31E /* pt-PT */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -893,13 +724,13 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = demosdk/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DemoVideoCall;
 				INFOPLIST_KEY_NFCReaderUsageDescription = "Esta app requiere el permiso para acceder NFC";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Esta app requiere el permiso para acceder a tu cámara";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Esta app requiere permisos de localización";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Esta app requiere el permiso para acceder al micrófono";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -932,13 +763,13 @@
 				EXCLUDED_ARCHS = armv7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = demosdk/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DemoVideoCall;
 				INFOPLIST_KEY_NFCReaderUsageDescription = "Esta app requiere el permiso para acceder NFC";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Esta app requiere el permiso para acceder a tu cámara";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Esta app requiere permisos de localización";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Esta app requiere el permiso para acceder al micrófono";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1030,79 +861,6 @@
 			};
 			name = Release;
 		};
-		1C4F8FA52FC57EFF004F1D27 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7FE9180C3546E7CACD6DFCE2 /* Pods-videocallExtension.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_ENTITLEMENTS = videocallExtension/videocallExtension.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MF6SNMX2TU;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = videocallExtension/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = videocallExtension;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.facephi.sdk.demo.videocallExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		1C4F8FA62FC57EFF004F1D27 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 057A8537DA43905CF7E1953E /* Pods-videocallExtension.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_ENTITLEMENTS = videocallExtension/videocallExtension.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MF6SNMX2TU;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = videocallExtension/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = videocallExtension;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.facephi.sdk.demo.videocallExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1138,15 +896,6 @@
 			buildConfigurations = (
 				13F510E5281937A6001E3CF1 /* Debug */,
 				13F510E6281937A6001E3CF1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1C4F8FA82FC57EFF004F1D27 /* Build configuration list for PBXNativeTarget "videocallExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1C4F8FA52FC57EFF004F1D27 /* Debug */,
-				1C4F8FA62FC57EFF004F1D27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

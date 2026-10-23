@@ -2,19 +2,35 @@
   Localizable.strings
   demosdk
 
-  Created by Jorge Poveda on 26/6/23.
-  
+  Keys and texts mirror Android DemoPhingers res/values/strings.xml.
 */
 
-//// VIDEOID
-//"video_id_record_init_button"="PRUEBA START RECORDING";
-//
-//
-////VIDEO CALL
-//
-//
-////NFC
-//"nfc_component_start_message" = "PRUEBABring your device closer to the document";
+"onboarding_title_operation" = "Operation";
+"onboarding_desc_operation" = "Create a new operation";
+"onboarding_init_operation" = "Create";
+"onboarding_launch_phinger" = "Launch";
+"onboarding_title_phinger" = "Phingers";
+"onboarding_desc_phinger" = "Fingerprint capture";
+"onboarding_show_previous_tip" = "Previous tip";
+"onboarding_show_tutorial" = "Tutorial";
+"onboarding_show_diagnostic" = "Diagnostic";
+"onboarding_show_selector_screen" = "Show selection screen";
+"onboarding_left" = "Left";
+"onboarding_right" = "Right";
+"onboarding_choose_hand" = "Choose hand";
+"onboarding_choose_filter" = "Select filter";
+"onboarding_result_ok" = "Result OK";
+"onboarding_result_error" = "Result error";
+"onboarding_fingerfilter_slap" = "Slap";
+"onboarding_fingerfilter_all_4_fingers_one_by_one" = "4 fingers one by one";
+"onboarding_fingerfilter_all_5_fingers_one_by_one" = "5 fingers one by one";
+"onboarding_fingerfilter_index_finger" = "Index finger";
+"onboarding_fingerfilter_middle_finger" = "Middle finger";
+"onboarding_fingerfilter_ring_finger" = "Ring finger";
+"onboarding_fingerfilter_little_finger" = "Little finger";
+"onboarding_fingerfilter_thumb_finger" = "Thumb";
+
+/* Phingers widget texts */
 "label.frame" = "Keep your fingers steady";
 "label.morethan_expected_fingers" = "More than %d %@";
 "label.fingers" = "Fingers";

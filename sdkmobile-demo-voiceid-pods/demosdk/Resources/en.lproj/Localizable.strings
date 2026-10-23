@@ -1,17 +1,26 @@
-/* 
+/*
   Localizable.strings
   demosdk
 
-  Created by Jorge Poveda on 26/6/23.
-  
+  Keys and texts mirror Android DemoVoice res/values/strings.xml.
 */
 
-//// VIDEOID
-//"video_id_record_init_button"="PRUEBA START RECORDING";
-//
-//
-////VIDEO CALL
-//
-//
-////NFC
-//"text_intro_chip_state_waiting_tag_text" = "PRUEBABring your device closer to the document";
+"onboarding_title_operation" = "Operation";
+"onboarding_desc_operation" = "Create a new operation and finish it";
+"onboarding_init_operation" = "Create";
+"onboarding_launch_enroll" = "Enrollment";
+"onboarding_launch_auth" = "Authentication";
+"onboarding_title_voice" = "Voice ID";
+"onboarding_desc_voice" = "Voice Capture";
+"onboarding_show_previous_tip" = "Previous tip";
+"onboarding_show_tutorial" = "Tutorial";
+"onboarding_show_diagnostic" = "Diagnostic";
+"onboarding_result_ok" = "Result OK";
+"onboarding_result_error" = "Result error";
+"onboarding_clear_logs" = "Clear logs";
+"onboarding_play" = "Play";
+"onboarding_verifications" = "Launch verifications";
+"onboarding_phrase_1" = "Full ID card number";
+"onboarding_phrase_2" = "Repeat your ID card number";
+"onboarding_title_media" = "Media";
+"onboarding_desc_media" = "Play audio files";

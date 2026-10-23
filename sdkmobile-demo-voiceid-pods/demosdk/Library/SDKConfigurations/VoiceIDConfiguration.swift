@@ -8,15 +8,20 @@
 import voiceIDComponent
 
 extension SdkConfigurationManager {
-    static var voiceIDConfiguration: VoiceConfigurationData {
+    /// Same parameters as the VoiceConfigurationData built in Android DemoVoice MainScreen.kt.
+    static func voiceIDConfiguration(
+        phrases: [String],
+        showPreviousTip: Bool,
+        showTutorial: Bool,
+        showDiagnostic: Bool,
+        maxAttempts: Int
+    ) -> VoiceConfigurationData {
         VoiceConfigurationData(
-            phrases: ["Facephi Biometria"],
-            showTutorial: true,
-            extractionTimeout: 5000,
-            showDiagnostic: true,
-            vibrationEnabled: true,
-            enableQualityCheck: true,
-            showPreviousTip: true
+            phrases: phrases,
+            showTutorial: showTutorial,
+            showDiagnostic: showDiagnostic,
+            showPreviousTip: showPreviousTip,
+            maxAttempts: maxAttempts
         )
     }
 }

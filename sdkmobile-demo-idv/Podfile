@@ -9,7 +9,6 @@ source 'https://github.com/livekit/podspecs.git'
 
 def kmp_selphid_host_extractors
   pod 'FPHISelphIDExtractorV1', '~> 1.2.4'
-  pod 'FPHISelphIDExtractorV2', '~> 1.2.3'
   pod 'FPHISelphIDExtractorV3', '~> 1.2.6'
 end
 
@@ -20,12 +19,8 @@ target 'demosdk' do
   pod 'FPHISDKSelphIDComponent', '~> 4.0.0'
   kmp_selphid_host_extractors
   pod 'FPHISDKSelphiComponent', '~> 4.0.0'
-  pod 'FPHISDKStatusComponent', '~> 4.0.0'
-  pod 'FPHISDKTokenizeComponent', '~> 4.0.0'
   pod 'FPHISDKTrackingComponent', '~> 4.0.0'
   pod 'FPHISDKVideoRecordingComponent', '~> 4.0.0'
-  pod 'FPHISDKNFCComponent', '~> 4.0.0'
-  pod 'FPHISDKTermsConditionsComponent', '~> 4.0.0'
 end
 
 post_install do |installer|

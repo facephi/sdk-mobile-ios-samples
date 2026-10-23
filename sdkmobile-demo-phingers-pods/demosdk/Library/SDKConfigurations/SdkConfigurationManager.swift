@@ -4,18 +4,22 @@
 //
 //  Created by Jorge Poveda on 22/5/23.
 //
+//  Equivalent of Android SdkData.kt (DemoPhingers).
+//
 
 import Foundation
+import sdk
 
 struct SdkConfigurationManager {
-    static let base64 = " "
-    static let CUSTOMER_ID = "sdk-phingers-ios@ejemplo"
-    static let APIKEY_LICENSING = ""
-    static let LICENSING_URL = URL(string: "LicenseUrl")!
-    static let CUSTOM_TENANT_ID = ""
+    // ************** LICENSE **************
+    static let onlineLicensing = true
+    static let APIKEY_LICENSING = "licensingApiKey"
+    static let LICENSING_URL = URL(string: "licensingUrl")!
+
     // swiftlint:disable all
     static let license = ""
-    static let onlineLicensing = true
+
+    // ************** DATA **************
+    static let CUSTOMER_ID = "demo-phingers-android@email.com"
+    static let OPERATION_TYPE: OperationType = .ONBOARDING
 }
-
-

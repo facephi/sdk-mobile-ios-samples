@@ -1,4 +1,3 @@
-platform :ios, '16.0'
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
@@ -14,11 +13,11 @@ target 'demosdk' do
   use_frameworks!
   
 ##### Remote Dependencies
-  pod 'FPHISDKTrackingComponent', '~> 4.0.0'
-  pod 'FPHISDKVoiceIDComponent', '~> 4.0.0'
   pod 'FPHISDKMainComponent', '~> 4.0.0'
-  pod 'FPHISDKTokenizeComponent', '~> 4.0.0'
+  pod 'FPHISDKTrackingComponent', '~> 4.0.0'
   pod 'FPHISDKStatusComponent', '~> 4.0.0'
+  pod 'FPHISDKTokenizeComponent', '~> 4.0.0'
+  pod 'FPHISDKVoiceIDComponent', '~> 4.0.0'
 
   target 'demosdkTests' do
     inherit! :search_paths
