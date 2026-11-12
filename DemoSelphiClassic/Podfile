@@ -1,0 +1,38 @@
+platform :ios, '14.0'
+
+plugin 'cocoapods-art', :sources => [
+  'cocoa-pro-fphi'
+]
+
+source 'https://cdn.cocoapods.org/'
+
+def selphi_classic_remote_pods
+  pod 'FPHISDKMainComponent', '~> 4.0.0'
+  pod 'FPHISDKTrackingComponent', '~> 4.0.0'
+  pod 'FPHISDKSelphiClassicComponent', '~> 4.0.0'
+  pod 'FPHISDKStatusComponent', '~> 4.0.0'
+  pod 'FPHISDKTokenizeComponent', '~> 4.0.0'
+end
+
+target 'demosdk' do
+  use_frameworks!
+
+  selphi_classic_remote_pods
+
+  target 'demosdkTests' do
+    inherit! :search_paths
+  end
+
+  target 'demosdkUITests' do
+  end
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['EXPANDED_CODE_SIGN_IDENTITY'] = ''
+      config.build_settings['CODE_SIGNING_REQUIRED'] = 'NO'
+      config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
+    end
+  end
+end

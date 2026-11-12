@@ -1,0 +1,54 @@
+/*
+  Localizable.strings
+  demosdk
+
+  Keys and texts mirror Android DemoNFC res/values/strings.xml.
+*/
+
+"nfc_new_operation" = "New operation";
+"nfc_simple_launch" = "Simple reading";
+"nfc_complex_launch" = "Complex reading";
+"nfc_num_support" = "Num. Support";
+"nfc_birth_date" = "Birth date (dd/MM/yyyy)";
+"nfc_expiry_date" = "Expiration date (dd/MM/yyyy)";
+"nfc_select_document" = "Select document type:";
+"nfc_cancel" = "Cancel";
+"nfc_read_with_capture" = "Capture with SelphID";
+"nfc_read_with_data" = "Capture with data";
+"nfc_agree" = "Agree";
+"nfc_close_session" = "Close session";
+"nfc_close_session_title" = "Decline GDPR";
+"nfc_close_session_desc" = "Declining the GDPR will cause the current session to be closed. Do you want to log out?";
+"nfc_gdpr_title" = "GENERAL DATA PROTECTION REGULATION";
+"nfc_gdpr_text" = "<h4>GENERAL DATA PROTECTION REGULATION</h4><p>In accordance with the provisions of Regulation (EU) 2016/679 of the European Parliament and the Council of April 27, 2016 (hereinafter, \"RGPD\") and the Organic Law 3/2018, December the 5th on Personal Data protection and digital rights guarantee, we have updated our protocols and privacy policies, in compliance with security and protection of personal data we are managing.</p>                                    <p><strong>Responsible of Treatment</strong> – Biometrics Data collected via this App, will be under the responsibility of FacePhi Biometría S.A. Avenida Perfecto Palacio, 6, 03003, Alicante, tlf 965 108 008.</p>                                    <p><strong>Data Protection Officer</strong> - FacePhi Biometría has appointed a Data Protection Officer, duly notified to the Authority of Control. Contact details are Avenida Perfecto Palacio, 6, 03003, Alicante, tlf 965 108 008 and email <a href=\"mailto:dpo@facephi.com\">dpo@facephi.com</a></p>                                    <p><strong>Biometric Data</strong> -  The European General Data Protection Regulation (GDPR) defines biometric data as follows (Article 4.14). “Personal data obtained from a specific technical treatment, related to the physical, physiological or behavioral characteristics of a natural person that allow or confirm the unique identification of said person, such as facial images or fingerprint data”</p>                                    <p>Requirements: The GDPR, in its article 9, appoints this personal data to the characteristic of “Specially Protected”. Due to the above, several requirements for its treatment in accordance with the regulations must be applied.</p>                                    <p>Explicit consent: The interested party must give explicit consent to the processing of said data, with the purpose of said specified treatment.</p>                                    <p><strong>Purposes of the treatment.</strong> - These data will be treated, solely and exclusively, in order to serve as a test for the user to verify the effectiveness of the software, as well as work support for the improvement of facial recognition technology.</p>                                    <p><strong>Data Security</strong> - Access to the App and, therefore, biometric data provided, contemplates the real identification of the user, and its comparison with the image obtained from the document or identity documents. This identification is made with the exclusive purpose set out in the previous section. Collected Data through this way will be encrypted and stored on a secure server, which will only be accessed by the Data Controller</p>                                    <p><strong>Security measures.</strong> - Technical and organizational measures will be notified to the owner of the data upon request. For that purpose, the user knows the obligation to provide the requested real data and the consequences of not providing them.</p>                                    <p>Likewise, FACEPHI guarantees that it has implemented mechanisms to:</p>                                    <ul>                                        <li>Guarantee the confidentiality, integrity, availability and permanent resilience of the treatment systems and services.</li>                                        <li>Restore availability and access to personal data quickly, in case of physical or technical incident.</li>                                        <li>Verify, evaluate and assess, on a regular basis, the effectiveness of the technical and organizational measures implemented to guarantee the safety of the treatment.</li>                                        <li>Pseudonymize and encrypt personal data, if applicable.</li>                                    </ul>                                    <p><strong>Users Rights.</strong> - Users declare their acknowledgement of their rights and know that, upon presentation of their national identity document or passport, they may exercise their rights of:</p>                                    <ul>                                        <li>Access.</li>                                        <li>Rectification and cancellation.</li>                                        <li>Limitation of treatment.</li>                                        <li>Portability.</li>                                        <li>Opposition.</li>                                    </ul>                                    <p>Such rights may be exercised through a written communication addressed to FACEPHI BIOMETRIA S.A., or by e-mail to the address <a href=\"mailto:dpo@facephi.com\">dpo@facephi.com</a>.</p>                                    <p><strong>Data Communications.</strong> - There will NOT be data communications to third parties, even internationally.</p>                                    <p><strong>Data treatment term.</strong> - The deadline for the deleting of data is 2 years after obtaining the consent.</p>                                    <h5>Changes in the security and data protection policy</h5>                                    <p>FACEPHI reserves the right to modify its security and data protection policy to adapt it to legislative or jurisprudential developments, as well as those that may arise from standard codes existing in the matter, or by strategic corporate decisions, with effects of the date of publication of said modification on the FACEPHI website.</p>                                    <h5>Data communications made by the User</h5>                                    <p>Before providing personal information about third parties, the User must obtain their prior and express consent, having informed them of the terms contained in this Privacy Policy. The User undertakes to hold FACEPHI harmless against any possible claim, fine or sanction that may be required to be borne because of the User's failure to comply with the duty described in this paragraph.</p>                                    <h4>USER CONSENT:</h4>                                    <p>Accepting the use of this App, the User declares and expressly accepts this Privacy Policy when registering with FACEPHI, granting his unequivocal and express consent to FACEPHI, to the processing of the data in accordance with the purposes and services herein reflected.</p>                                    <p>I have been informed and I declare that I have understood the rights that assist me as a user of this App. With the explicit provision of my consent, I accept that my biometric data is processed by the company Facephi Biometría SA, in accordance with the purposes, term and conditions explained in this document. I also declare that I am over 14 years old, in accordance with article 7 of Organic Law 3/2018, of December 5, on the Protection of Personal Data and guarantee of digital rights.</p>";
+"nfc_extract_face" = "Extract face image";
+"nfc_extract_signature" = "Extract signature";
+"nfc_info_title" = "Personal information";
+"nfc_info_name" = "Name";
+"nfc_info_surname" = "Surname";
+"nfc_info_number" = "Personal number";
+"nfc_info_nationality" = "Nationality";
+"nfc_info_birth_date" = "Birth date";
+"nfc_info_birth_place" = "Birth place";
+"nfc_info_address" = "Address";
+"nfc_info_gender" = "Gender";
+"nfc_passport" = "Passport";
+"nfc_id_card" = "ID Card";
+"nfc_select_progress" = "Progress view:";
+"nfc_foreign_card" = "Foreign Card";
+"nfc_dots" = "Dots";
+"nfc_percentage" = "Percentage";
+"nfc_data_desc" = "Fill in the fields as they appear in the document.";
+"nfc_data_mandatory" = "This field is required.";
+"nfc_data_date_error" = "Invalid date. Check the format.";
+"nfc_data_selphid_desc" = "SelphID will read the part of the document containing the MRZ. This option can be used to capture any passport. To capture IDs, you must verify the country in the settings.";
+"onboarding_title_nfc" = "NFC";
+"onboarding_show_previous_tip" = "Previous tip";
+"onboarding_show_tutorial" = "Tutorial";
+"onboarding_show_diagnostic" = "Diagnostic";
+"onboarding_result_ok" = "Result OK";
+"onboarding_result_error" = "Result error";
+"onboarding_configuration" = "Advanced configuration";
+"onboarding_title_operation" = "Operation";
+"onboarding_desc_operation" = "Create a new operation";
+"onboarding_init_operation" = "Create";

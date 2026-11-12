@@ -1,0 +1,13 @@
+/*
+  Localizable.strings
+  demosdk
+
+  Keys and texts mirror Android DemoIDV res/values/strings.xml.
+*/
+
+"onboarding_init_message" = "SDK initialization...";
+"onboarding_init_error" = "SDK initialization ERROR: ";
+"onboarding_launch_idv" = "Launch IDV";
+"onboarding_show_previous_tip" = "Previous tip";
+"onboarding_show_tutorial" = "Tutorial";
+"onboarding_show_diagnostic" = "Diagnostic";

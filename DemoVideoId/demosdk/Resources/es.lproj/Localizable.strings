@@ -1,0 +1,18 @@
+/*
+  Localizable.strings
+  demosdk
+
+  Keys and texts mirror Android DemoVideoId res/values/strings.xml.
+*/
+
+"onboarding_init_message" = "Inicializando SDK...";
+"onboarding_init_error" = "ERROR inicializando SDK: ";
+"onboarding_title_operation" = "Operación";
+"onboarding_desc_operation" = "Nueva operación del SDK";
+"onboarding_init_operation" = "Crear";
+"onboarding_launch_video" = "Lanzar";
+"onboarding_title_video" = "Video ID";
+"onboarding_desc_video" = "Captura facial";
+"onboarding_show_auto_face" = "Detección de cara automática";
+"onboarding_result_ok" = "Resultado correcto";
+"onboarding_result_error" = "Resultado erróneo";
