@@ -202,38 +202,37 @@ class ConfigsComponentsVC: UIViewController {
     }
     
     @objc private func executeAction() {
-        if let component = component {
-            switch component {
-            case .SELPHI_COMPONENT:
-                let selphiConfig = SdkConfigurationManager.createSelphiConfigurationData(from: configuration)
-                action?(selphiConfig)
-            case .SELPHID_COMPONENT:
-                let selphidConfig = SdkConfigurationManager.createSelphidConfigurationData(from: configuration)
-                action?(selphidConfig)
-            case .PHINGER_COMPONENT:
-                let phingerConfig = SdkConfigurationManager.createPhingersConfigurationData(from: configuration)
-                action?(phingerConfig)
-            case .VOICE_COMPONENT:
-                let voiceConfig = SdkConfigurationManager.createVoiceIDConfigurationData(from: configuration)
-                action?(voiceConfig)
-            case .VIDEOCALL_COMPONENT:
-                let videoCallConfig = SdkConfigurationManager.createVideoCallConfigurationData(from: configuration)
-                action?(videoCallConfig)
-            case .VIDEOID_COMPONENT:
-                let videoIdConfig = SdkConfigurationManager.createVideoIDConfigurationData(from: configuration)
-                action?(videoIdConfig)
-            case .QR_COMPONENT:
-                let qrConfig = SdkConfigurationManager.createQrCaptureConfigurationData(from: configuration)
-                action?(qrConfig)
-            case .FILE_UPLOADER_COMPONENT:
-                let captureConfig = SdkConfigurationManager.createFileUploaderConfigurationData(from: configuration)
-                action?(captureConfig)
-            case .TERMS_CONDITIONS_COMPONENT:
-                let termsConditionsConfig = SdkConfigurationManager.createTermsConditionsConfigurationData(from: configuration)
-                action?(termsConditionsConfig)
-            }
+        guard let component = component else {
+            dismiss(animated: true)
+            return
         }
-        self.dismiss(animated: true)
+
+        let config: Any
+        switch component {
+        case .SELPHI_COMPONENT:
+            config = SdkConfigurationManager.createSelphiConfigurationData(from: configuration)
+        case .SELPHID_COMPONENT:
+            config = SdkConfigurationManager.createSelphidConfigurationData(from: configuration)
+        case .PHINGER_COMPONENT:
+            config = SdkConfigurationManager.createPhingersConfigurationData(from: configuration)
+        case .VOICE_COMPONENT:
+            config = SdkConfigurationManager.createVoiceIDConfigurationData(from: configuration)
+        case .VIDEOCALL_COMPONENT:
+            config = SdkConfigurationManager.createVideoCallConfigurationData(from: configuration)
+        case .VIDEOID_COMPONENT:
+            config = SdkConfigurationManager.createVideoIDConfigurationData(from: configuration)
+        case .QR_COMPONENT:
+            config = SdkConfigurationManager.createQrCaptureConfigurationData(from: configuration)
+        case .FILE_UPLOADER_COMPONENT:
+            config = SdkConfigurationManager.createFileUploaderConfigurationData(from: configuration)
+        case .TERMS_CONDITIONS_COMPONENT:
+            config = SdkConfigurationManager.createTermsConditionsConfigurationData(from: configuration)
+        }
+
+        let launchAction = action
+        dismiss(animated: true) {
+            launchAction?(config)
+        }
     }
 
     @objc private func goBack() {
