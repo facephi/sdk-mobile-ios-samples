@@ -69,10 +69,11 @@ class SDKManager {
     }
     
     // MARK: - LAUNCH FUNCS
-    public func launchNfc(setTracking: Bool, nfcConfigurationData: NfcConfigurationData, output: @escaping (SdkResult<NfcResult>) -> Void) {
+    public func launchNfc(setTracking: Bool, viewController: UIViewController, nfcConfigurationData: NfcConfigurationData, output: @escaping (SdkResult<NfcResult>) -> Void) {
         log("LAUNCH NFC")
-        
-        let controller = NfcController(data: nfcConfigurationData, output: output, stateDelegate: nil)
+
+        // viewController is required to show the previous tip and the diagnostic screens
+        let controller = NfcController(data: nfcConfigurationData, viewController: viewController, output: output, stateDelegate: nil)
         if setTracking {
             SDKController.shared.launch(controller: controller)
         } else {
